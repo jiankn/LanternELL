@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #4F46E5;
+  --color-secondary: #818CF8;
+  --color-cta: #F97316;
+  --color-background: #EEF2FF;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #1E1B4B;
+  --color-text-muted: #6366F1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Pro', serif;
+}
+
+@layer components {
+  .clay-card {
+    @apply bg-white rounded-[20px] border-[3px] border-white/60 shadow-clay;
+  }
+  
+  .clay-card-sm {
+    @apply bg-white rounded-[16px] border-[2px] border-white/60 shadow-clay-sm;
+  }
+  
+  .clay-button {
+    @apply bg-gradient-to-br from-primary to-[#4545d4] text-white font-semibold py-3 px-6 rounded-[12px] border-[2px] border-white/30 shadow-clay-button transition-all duration-200 ease-out;
+  }
+  
+  .clay-button:hover {
+    @apply shadow-clay-button-hover -translate-y-0.5;
+  }
+  
+  .clay-button:active {
+    @apply shadow-clay-button-pressed translate-y-0;
+  }
+  
+  .clay-button-cta {
+    @apply bg-gradient-to-br from-cta to-[#ea580c] text-white font-bold py-4 px-8 rounded-[12px] border-[2px] border-white/30 shadow-clay-button transition-all duration-200 ease-out;
+  }
+  
+  .clay-button-cta:hover {
+    @apply shadow-clay-button-hover -translate-y-0.5;
+  }
+  
+  .clay-input {
+    @apply bg-white rounded-[12px] border-[2px] border-white/60 shadow-clay-sm px-4 py-3 outline-none transition-all duration-200;
+  }
+  
+  .clay-input:focus {
+    @apply border-primary/50 ring-2 ring-primary/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .clay-inset {
+    box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

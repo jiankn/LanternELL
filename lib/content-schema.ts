@@ -1,0 +1,134 @@
+// LanternELL Content Schema Types
+// Based on PRD Section 9.4
+
+export type PackType = 'vocabulary_pack' | 'sentence_frames' | 'classroom_labels' | 'parent_communication';
+export type AgeBand = 'K-2' | '3-5' | '6-8';
+export type LanguagePair = 'en-es' | 'en-zh' | 'en-fr' | 'en-vi' | 'en-ar';
+export type PackStatus = 'draft' | 'review' | 'published' | 'archived';
+
+export interface VocabularyItem {
+  en: string;
+  l2: string; // Second language translation
+  image_prompt?: string; // For AI image generation
+}
+
+export interface SentenceFrame {
+  frame: string; // e.g., "This is a ___."
+  translation?: string;
+}
+
+export interface WorksheetItem {
+  type: 'matching' | 'tracing' | 'writing' | 'coloring' | 'cutting' | 'fill-blank';
+  instructions_en: string;
+  instructions_l2?: string;
+  items: WorksheetItemData[];
+}
+
+export interface WorksheetItemData {
+  id: string;
+  content: string;
+  content_l2?: string;
+  image_url?: string;
+  correct_answer?: string;
+}
+
+export interface MiniBookPage {
+  page_number: number;
+  text_en: string;
+  text_l2?: string;
+  image_prompt?: string;
+}
+
+export interface MiniBook {
+  title: string;
+  pages: MiniBookPage[];
+}
+
+export interface TeacherNotes {
+  objective: string;
+  suggested_use: string;
+  materials_needed?: string[];
+  differentiation_tips?: string[];
+  assessment_ideas?: string[];
+}
+
+export interface AnswerKey {
+  worksheet_id: string;
+  answers: Record<string, string>;
+}
+
+export interface ClassroomLabel {
+  en: string;
+  l2: string;
+  category: string; // e.g., "supplies", "furniture", "areas"
+  plural_form?: string;
+}
+
+export interface ParentNote {
+  type: 'homework' | 'behavior' | 'progress' | 'general';
+  title_en: string;
+  title_l2: string;
+  content_en: string;
+  content_l2: string;
+  signature_required: boolean;
+}
+
+export interface PackContent {
+  pack_id: string;
+  pack_type: PackType;
+  topic: string;
+  age_band: AgeBand;
+  language_pair: LanguagePair;
+  target_user: string;
+  title: string;
+  description: string;
+  
+  // Vocabulary pack fields
+  vocabulary?: VocabularyItem[];
+  
+  // Sentence frames fields
+  sentence_frames?: SentenceFrame[];
+  
+  // Worksheets
+  worksheets?: WorksheetItem[];
+  
+  // Mini book (for vocabulary packs)
+  mini_book?: MiniBook;
+  
+  // Classroom labels
+  labels?: ClassroomLabel[];
+  
+  // Parent communication
+  parent_notes?: ParentNote[];
+  
+  // Common fields
+  teacher_notes?: TeacherNotes;
+  answer_key?: AnswerKey[];
+  license: string;
+  version: string;
+  created_at: string;
+  updated_at: string;
+}
+
+// Content generation request
+export interface ContentGenerationRequest {
+  topic: string;
+  pack_type: PackType;
+  language_pair: LanguagePair;
+  age_band: AgeBand;
+  vocabulary_count?: number; // For vocabulary packs: 10-20
+  worksheet_count?: number;  // For worksheets: 3-10
+  label_count?: number;       // For labels: 20-50
+}
+
+// Content generation job
+export interface ContentJob {
+  id: string;
+  job_id: string;
+  status: 'pending' | 'processing' | 'completed' | 'failed';
+  request: ContentGenerationRequest;
+  result?: PackContent;
+  error_message?: string;
+  created_at: string;
+  updated_at: string;
+}

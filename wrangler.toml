@@ -1,0 +1,113 @@
+# ============================================
+# LanternELL Wrangler Configuration
+# ============================================
+
+name = "lanternell-web"
+main = ".open-next/worker.js"
+compatibility_date = "2026-03-06"
+compatibility_flags = ["nodejs_compat"]
+preview_urls = true
+observability = { enabled = true }
+
+# ------------------
+# Database (D1)
+# ------------------
+[[d1_databases]]
+binding = "DB"
+database_name = "lanternell-prod"
+database_id = "<prod-d1-id>"
+preview_database_id = "<preview-d1-id>"
+migrations_dir = "migrations"
+
+# ------------------
+# R2 Storage
+# ------------------
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "lanternell-files-prod"
+preview_bucket_name = "lanternell-files-preview"
+experimental_remote = true
+
+# ------------------
+# Queues
+# ------------------
+[queues]
+producers = [
+  { binding = "CONTENT_QUEUE", queue = "lanternell-content" },
+  { binding = "RENDER_QUEUE", queue = "lanternell-render" },
+  { binding = "EMAIL_QUEUE", queue = "lanternell-email" },
+  { binding = "WEBHOOK_QUEUE", queue = "lanternell-webhook" }
+]
+
+# ------------------
+# Environment Variables
+# ------------------
+[vars]
+APP_ENV = "production"
+APP_URL = "https://lanternell.com"
+AI_ACTIVE_PROVIDER = "zhipuai"
+AI_FALLBACK_PROVIDER = "openai"
+ZHIPUAI_MODEL = "glm-4.7"
+ZHIPUAI_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"
+OPENAI_MODEL = "gpt-4o"
+OPENAI_BASE_URL = "https://api.openai.com/v1"
+
+[secrets]
+# Add your secrets here using: npx wrangler secret put NAME
+# Example: npx wrangler secret put ZHIPUAI_API_KEY
+
+# ------------------
+# AI Providers
+# ------------------
+# Configure provider selection with vars:
+#   AI_ACTIVE_PROVIDER = "zhipuai"
+#   AI_FALLBACK_PROVIDER = "openai"
+#   ZHIPUAI_MODEL = "glm-4.7"
+#   ZHIPUAI_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"
+#   OPENAI_MODEL = "gpt-4o"
+#   OPENAI_BASE_URL = "https://api.openai.com/v1"
+#
+# Configure API keys with secrets:
+#   npx wrangler secret put ZHIPUAI_API_KEY
+#   npx wrangler secret put OPENAI_API_KEY
+
+# ------------------
+# Stripe
+# ------------------
+# STRIPE_SECRET_KEY = ""      # Set via: npx wrangler secret put STRIPE_SECRET_KEY
+# STRIPE_WEBHOOK_SECRET = ""  # Set via: npx wrangler secret put STRIPE_WEBHOOK_SECRET
+
+# ------------------
+# Email
+# ------------------
+# RESEND_API_KEY = ""  # Set via: npx wrangler secret put RESEND_API_KEY
+
+# ------------------
+# Auth
+# ------------------
+# ADMIN_EMAIL_ALLOWLIST = ""  # Set via: npx wrangler secret put ADMIN_EMAIL_ALLOWLIST
+
+# ============================================
+# Deploy Instructions
+# ============================================
+# 
+# 1. Install dependencies
+#    npm install
+#
+# 2. Set secrets (replace with your actual keys)
+#    npx wrangler secret put ZHIPUAI_API_KEY
+#    npx wrangler secret put OPENAI_API_KEY
+#    npx wrangler secret put STRIPE_SECRET_KEY
+#    npx wrangler secret put RESEND_API_KEY
+#
+# 3. Create D1 database
+#    npx wrangler d1 create lanternell-prod
+#    # Copy the database_id to this file
+#
+# 4. Run migrations
+#    npx wrangler d1 migrations apply lanternell-prod --local
+#    npx wrangler d1 migrations apply lanternell-prod --remote
+#
+# 5. Deploy
+#    npm run deploy
+#
