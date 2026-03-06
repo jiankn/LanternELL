@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { execute, generateId, queryOne } from '@/lib/db';
 import { getCurrentUser } from '@/lib/auth';
+import { createCheckoutSession, isStripeConfigured } from '@/lib/stripe';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,7 +9,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { productId } = body;
+    const { productId, successPath, cancelPath } = body;
 
     if (!productId) {
       return NextResponse.json({
@@ -23,7 +24,7 @@ export async function POST(request: NextRequest) {
       id: string;
       slug: string;
       name: string;
-      type: string;
+      type: 'single' | 'bundle' | 'membership' | 'license';
       price_cents: number;
       stripe_price_id: string | null;
       stripe_product_id: string | null;
@@ -42,13 +43,63 @@ export async function POST(request: NextRequest) {
 
     // Get current user (optional - can checkout as guest)
     const user = await getCurrentUser(request);
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'http://localhost:3000';
 
-    // In production, create Stripe checkout session
-    // For now, simulate with a mock response
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    // ----------------------------
+    // Real Stripe Integration
+    // ----------------------------
+    if (isStripeConfigured() && product.stripe_price_id) {
+      const result = await createCheckoutSession({
+        priceId: product.stripe_price_id,
+        productType: product.type,
+        appProductId: product.id,
+        appUserId: user?.id || null,
+        customerEmail: user?.email || null,
+        successUrl: `${baseUrl}${successPath || '/checkout/success'}?session_id={CHECKOUT_SESSION_ID}`,
+        cancelUrl: `${baseUrl}${cancelPath || `/shop/${product.slug}`}`,
+      });
+
+      if (!result) {
+        return NextResponse.json({
+          ok: false,
+          data: null,
+          error: { code: 'STRIPE_ERROR', message: 'Failed to create checkout session' }
+        }, { status: 500 });
+      }
+
+      // Create local order record
+      const orderId = generateId('ord');
+      await execute(
+        `INSERT INTO orders (id, user_id, stripe_checkout_session_id, order_type, status, amount_total_cents, customer_email)
+         VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [
+          orderId,
+          user?.id || null,
+          result.sessionId,
+          product.type,
+          'checkout_created',
+          product.price_cents,
+          user?.email || '',
+        ]
+      );
+
+      return NextResponse.json({
+        ok: true,
+        data: {
+          checkoutUrl: result.url,
+          sessionId: result.sessionId,
+          amount: product.price_cents,
+          currency: 'usd',
+        },
+        error: null,
+      });
+    }
+
+    // ----------------------------
+    // Fallback: Mock checkout (dev mode without Stripe keys)
+    // ----------------------------
     const mockSessionId = `cs_test_${crypto.randomUUID()}`;
 
-    // Create order record
     const orderId = generateId('ord');
     await execute(
       `INSERT INTO orders (id, user_id, stripe_checkout_session_id, order_type, status, amount_total_cents, customer_email)
@@ -60,12 +111,11 @@ export async function POST(request: NextRequest) {
         product.type,
         'checkout_created',
         product.price_cents,
-        user?.email || ''
+        user?.email || '',
       ]
     );
 
-    // Mock checkout URL (in production, this would be Stripe's URL)
-    const checkoutUrl = `${baseUrl}/shop/${product.slug}/checkout?session=${mockSessionId}`;
+    const checkoutUrl = `${baseUrl}/checkout/success?session_id=${mockSessionId}`;
 
     return NextResponse.json({
       ok: true,
@@ -73,9 +123,10 @@ export async function POST(request: NextRequest) {
         checkoutUrl,
         sessionId: mockSessionId,
         amount: product.price_cents,
-        currency: 'usd'
+        currency: 'usd',
+        mock: true,
       },
-      error: null
+      error: null,
     });
 
   } catch (error) {

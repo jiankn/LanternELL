@@ -1,19 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query, queryOne, execute, generateId, toISOString } from '@/lib/db';
+import { verifyWebhookSignature } from '@/lib/stripe';
 
 export const dynamic = 'force-dynamic';
 
 // Stripe webhook handler
-// In production, verify the Stripe signature
 export async function POST(request: NextRequest) {
   try {
     const body = await request.text();
-    let event;
+    let event: any;
 
-    try {
-      event = JSON.parse(body);
-    } catch {
-      return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+    // Attempt Stripe signature verification if configured
+    const signature = request.headers.get('stripe-signature');
+    if (signature) {
+      const verified = verifyWebhookSignature(body, signature);
+      if (!verified) {
+        return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
+      }
+      event = verified;
+    } else {
+      // Fallback for dev mode without signatures
+      try {
+        event = JSON.parse(body);
+      } catch {
+        return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+      }
     }
 
     // Check for duplicate event (idempotency)
@@ -23,7 +34,6 @@ export async function POST(request: NextRequest) {
     );
 
     if (existingEvent) {
-      // Already processed
       return NextResponse.json({ received: true, status: 'duplicate' });
     }
 
@@ -104,6 +114,13 @@ async function handleCheckoutComplete(session: any) {
       );
     } else {
       userId = user.id;
+      // Update stripe_customer_id if missing
+      if (customer) {
+        await execute(
+          'UPDATE users SET stripe_customer_id = ? WHERE id = ? AND stripe_customer_id IS NULL',
+          [customer, userId]
+        );
+      }
     }
   }
 
