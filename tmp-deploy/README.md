@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "lanternell-web" generated at 2026-03-06T18:30:04.615Z.
