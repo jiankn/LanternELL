@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import {
@@ -62,7 +62,7 @@ const languageOptions = [
   { value: 'en-pt', label: 'English-Portuguese' },
 ]
 
-export default function ShopPage() {
+function ShopPageInner() {
   const searchParams = useSearchParams()
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
@@ -285,5 +285,13 @@ export default function ShopPage() {
 
       <Footer minimal />
     </main>
+  )
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense>
+      <ShopPageInner />
+    </Suspense>
   )
 }
