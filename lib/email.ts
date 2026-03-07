@@ -1,0 +1,148 @@
+// Email service using Resend API (fetch-based, no SDK needed for CF Workers)
+
+const RESEND_API_URL = 'https://api.resend.com/emails'
+
+interface SendEmailParams {
+  to: string
+  subject: string
+  html: string
+  from?: string
+  replyTo?: string
+}
+
+interface SendEmailResult {
+  ok: boolean
+  id?: string
+  error?: string
+}
+
+function getResendApiKey(): string | null {
+  return process.env.RESEND_API_KEY || null
+}
+
+function getFromAddress(): string {
+  return process.env.EMAIL_FROM || 'LanternELL <noreply@lanternell.com>'
+}
+
+export function isEmailConfigured(): boolean {
+  return !!getResendApiKey()
+}
+
+export async function sendEmail(params: SendEmailParams): Promise<SendEmailResult> {
+  const apiKey = getResendApiKey()
+
+  if (!apiKey) {
+    console.warn('[email] RESEND_API_KEY not configured, logging email instead')
+    console.log(`[email] To: ${params.to} | Subject: ${params.subject}`)
+    return { ok: true, id: 'dev-' + Date.now() }
+  }
+
+  try {
+    const res = await fetch(RESEND_API_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: params.from || getFromAddress(),
+        to: [params.to],
+        subject: params.subject,
+        html: params.html,
+        reply_to: params.replyTo,
+      }),
+    })
+
+    if (!res.ok) {
+      const err = await res.text()
+      console.error('[email] Resend API error:', res.status, err)
+      return { ok: false, error: `Resend API error: ${res.status}` }
+    }
+
+    const data = await res.json() as { id: string }
+    return { ok: true, id: data.id }
+  } catch (error) {
+    console.error('[email] Send failed:', error)
+    return { ok: false, error: 'Email send failed' }
+  }
+}
+
+// ============================================
+// Email Templates
+// ============================================
+
+export function magicLinkEmail(magicLink: string): { subject: string; html: string } {
+  return {
+    subject: 'Sign in to LanternELL',
+    html: `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#EEF2FF;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:480px;margin:40px auto;background:#fff;border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.6);box-shadow:4px 4px 8px rgba(163,177,198,0.4),-4px -4px 8px rgba(255,255,255,0.6);">
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:inline-block;width:48px;height:48px;background:linear-gradient(135deg,#4F46E5,#818CF8);border-radius:12px;line-height:48px;color:#fff;font-size:24px;font-weight:bold;">L</div>
+    </div>
+    <h1 style="font-family:Georgia,serif;font-size:24px;color:#1E1B4B;text-align:center;margin:0 0 8px;">Sign in to LanternELL</h1>
+    <p style="color:#6366F1;text-align:center;margin:0 0 24px;font-size:14px;">Click the button below to sign in. No password needed.</p>
+    <div style="text-align:center;margin-bottom:24px;">
+      <a href="${magicLink}" style="display:inline-block;background:linear-gradient(135deg,#F97316,#ea580c);color:#fff;font-weight:bold;padding:14px 32px;border-radius:12px;text-decoration:none;font-size:16px;">Sign In</a>
+    </div>
+    <p style="color:#6366F1;text-align:center;font-size:12px;margin:0;">This link expires in 20 minutes. If you didn't request this, you can safely ignore it.</p>
+  </div>
+</body>
+</html>`,
+  }
+}
+
+export function orderConfirmationEmail(params: {
+  productName: string
+  amountFormatted: string
+  libraryUrl: string
+}): { subject: string; html: string } {
+  return {
+    subject: `Order Confirmed: ${params.productName}`,
+    html: `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#EEF2FF;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:480px;margin:40px auto;background:#fff;border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.6);box-shadow:4px 4px 8px rgba(163,177,198,0.4),-4px -4px 8px rgba(255,255,255,0.6);">
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:inline-block;width:48px;height:48px;background:linear-gradient(135deg,#10B981,#059669);border-radius:50%;line-height:48px;color:#fff;font-size:24px;">✓</div>
+    </div>
+    <h1 style="font-family:Georgia,serif;font-size:24px;color:#1E1B4B;text-align:center;margin:0 0 8px;">Thank You!</h1>
+    <p style="color:#1E1B4B;text-align:center;margin:0 0 24px;">Your purchase of <strong>${params.productName}</strong> (${params.amountFormatted}) was successful.</p>
+    <div style="text-align:center;margin-bottom:24px;">
+      <a href="${params.libraryUrl}" style="display:inline-block;background:linear-gradient(135deg,#4F46E5,#4545d4);color:#fff;font-weight:bold;padding:14px 32px;border-radius:12px;text-decoration:none;font-size:16px;">Go to My Downloads</a>
+    </div>
+    <p style="color:#6366F1;text-align:center;font-size:12px;margin:0;">Your resources are ready to download from your library.</p>
+  </div>
+</body>
+</html>`,
+  }
+}
+
+export function downloadReadyEmail(params: {
+  resourceTitle: string
+  downloadUrl: string
+}): { subject: string; html: string } {
+  return {
+    subject: `Your download is ready: ${params.resourceTitle}`,
+    html: `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#EEF2FF;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:480px;margin:40px auto;background:#fff;border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.6);box-shadow:4px 4px 8px rgba(163,177,198,0.4),-4px -4px 8px rgba(255,255,255,0.6);">
+    <h1 style="font-family:Georgia,serif;font-size:24px;color:#1E1B4B;text-align:center;margin:0 0 8px;">Download Ready</h1>
+    <p style="color:#1E1B4B;text-align:center;margin:0 0 24px;"><strong>${params.resourceTitle}</strong> is ready to download.</p>
+    <div style="text-align:center;margin-bottom:24px;">
+      <a href="${params.downloadUrl}" style="display:inline-block;background:linear-gradient(135deg,#F97316,#ea580c);color:#fff;font-weight:bold;padding:14px 32px;border-radius:12px;text-decoration:none;font-size:16px;">Download Now</a>
+    </div>
+    <p style="color:#6366F1;text-align:center;font-size:12px;margin:0;">You can also access all your downloads from your <a href="https://lanternell.com/account/library" style="color:#4F46E5;">library</a>.</p>
+  </div>
+</body>
+</html>`,
+  }
+}

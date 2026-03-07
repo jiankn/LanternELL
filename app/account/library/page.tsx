@@ -2,16 +2,19 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { 
-  Sparkles,
+import {
   Download,
   Package,
   LogOut,
   FileText,
-  User
+  User,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react'
+import { Navbar } from '@/components/ui/navbar'
+import { LibraryItemSkeleton } from '@/components/ui/skeleton'
 
-interface User {
+interface UserData {
   id: string
   email: string
   name: string | null
@@ -28,7 +31,7 @@ interface EntitledResource {
 }
 
 export default function LibraryPage() {
-  const [user, setUser] = useState<User | null>(null)
+  const [user, setUser] = useState<UserData | null>(null)
   const [loading, setLoading] = useState(true)
   const [entitledResources, setEntitledResources] = useState<EntitledResource[]>([])
   const [downloadingId, setDownloadingId] = useState<string | null>(null)
@@ -46,7 +49,6 @@ export default function LibraryPage() {
     try {
       const res = await fetch('/api/account/me')
       const data = await res.json()
-      
       if (data.ok && data.data.authenticated) {
         setUser(data.data.user)
         await fetchLibrary()
@@ -62,9 +64,7 @@ export default function LibraryPage() {
     try {
       const res = await fetch('/api/account/library')
       const data = await res.json()
-      if (data.ok) {
-        setEntitledResources(data.data.items)
-      }
+      if (data.ok) setEntitledResources(data.data.items)
     } catch (error) {
       console.error('Failed to fetch library:', error)
     }
@@ -89,14 +89,12 @@ export default function LibraryPage() {
         body: JSON.stringify({ resourceId })
       })
       const data = await res.json()
-      
       if (data.ok && data.data.downloadUrl) {
         window.open(data.data.downloadUrl, '_blank')
       } else {
         alert(data.error?.message || 'Download failed')
       }
-    } catch (error) {
-      console.error('Download failed:', error)
+    } catch {
       alert('Download failed')
     } finally {
       setDownloadingId(null)
@@ -105,32 +103,42 @@ export default function LibraryPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full"></div>
-      </div>
+      <main className="min-h-screen bg-background">
+        <Navbar links={[{ href: '/shop', label: 'Shop' }]} />
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <LibraryItemSkeleton />
+            <LibraryItemSkeleton />
+            <LibraryItemSkeleton />
+          </div>
+        </section>
+      </main>
     )
   }
 
   if (!user) {
     return (
       <main className="min-h-screen bg-background">
-        <div className="max-w-md mx-auto pt-32 px-4">
-          <div className="clay-card p-8 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-clay-button">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="font-heading text-2xl font-bold text-text-primary mb-4">
-              Sign In to Access Your Library
-            </h1>
-            <p className="text-text-primary/70 mb-6">
-              Enter your email to receive a magic link for instant access.
-            </p>
-            {authError && (
-              <p className="mb-4 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
-                {getAuthErrorMessage(authError)}
+        <Navbar static links={[{ href: '/shop', label: 'Browse Shop' }]} />
+        <div className="flex-1 flex items-center justify-center px-4 py-16">
+          <div className="max-w-md w-full">
+            <div className="clay-card p-8 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-clay-button">
+                <User className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="font-heading text-2xl font-bold text-text-primary mb-4">
+                Sign In to Access Your Library
+              </h1>
+              <p className="text-text-primary/70 mb-6">
+                Enter your email to receive a magic link for instant access.
               </p>
-            )}
-            <LoginForm />
+              {authError && (
+                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700" role="alert">
+                  {getAuthErrorMessage(authError)}
+                </div>
+              )}
+              <LoginForm />
+            </div>
           </div>
         </div>
       </main>
@@ -139,52 +147,40 @@ export default function LibraryPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-clay-sm">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <span className="font-heading text-xl font-bold text-text-primary">LanternELL</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <Link href="/shop" className="text-text-primary hover:text-primary transition-colors">Shop</Link>
-              <button 
-                onClick={handleLogout}
-                className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors"
-              >
-                <LogOut className="w-4 h-4" />
-                Logout
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar
+        links={[
+          { href: '/shop', label: 'Shop' },
+          { href: '/account/library', label: 'My Library', active: true },
+        ]}
+        rightSlot={
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors cursor-pointer text-sm"
+          >
+            <LogOut className="w-4 h-4" />
+            <span className="hidden sm:inline">Logout</span>
+          </button>
+        }
+      />
 
-      {/* Content */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* User Info */}
           <div className="clay-card p-6 mb-8">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl shrink-0">
                 {user.email.charAt(0).toUpperCase()}
               </div>
-              <div>
-                <h2 className="font-heading text-xl font-semibold text-text-primary">
+              <div className="min-w-0">
+                <h2 className="font-heading text-xl font-semibold text-text-primary truncate">
                   {user.name || 'Teacher'}
                 </h2>
-                <p className="text-text-muted">{user.email}</p>
+                <p className="text-text-muted truncate">{user.email}</p>
               </div>
             </div>
           </div>
 
-          {/* Library */}
-          <h1 className="font-heading text-2xl font-bold text-text-primary mb-6">
-            My Downloads
-          </h1>
+          <h1 className="font-heading text-2xl font-bold text-text-primary mb-6">My Downloads</h1>
 
           {entitledResources.length === 0 ? (
             <div className="clay-card p-12 text-center">
@@ -195,20 +191,20 @@ export default function LibraryPage() {
               <p className="text-text-muted mb-6">
                 Purchase a teaching pack to start building your library.
               </p>
-              <Link href="/shop" className="clay-button-cta">
-                Browse Shop
+              <Link href="/shop" className="clay-button-cta cursor-pointer inline-flex items-center gap-2">
+                Browse Shop <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ) : (
             <div className="space-y-4">
               {entitledResources.map((resource) => (
-                <div key={resource.resourceId} className="clay-card p-4 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <div key={resource.resourceId} className="clay-card p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                       <FileText className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-text-primary">{resource.title}</h3>
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-text-primary truncate">{resource.title}</h3>
                       <p className="text-sm text-text-muted">
                         {resource.packType.replace('_', ' ')} • {resource.languagePair.toUpperCase()}
                       </p>
@@ -217,10 +213,10 @@ export default function LibraryPage() {
                   <button
                     onClick={() => handleDownload(resource.resourceId)}
                     disabled={downloadingId === resource.resourceId || !resource.downloadable}
-                    className="clay-button flex items-center gap-2"
+                    className="clay-button flex items-center gap-2 shrink-0 cursor-pointer w-full sm:w-auto justify-center"
                   >
                     {downloadingId === resource.resourceId ? (
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     ) : (
                       <Download className="w-4 h-4" />
                     )}
@@ -255,7 +251,6 @@ function LoginForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    
     try {
       const res = await fetch('/api/auth/request-link', {
         method: 'POST',
@@ -263,19 +258,15 @@ function LoginForm() {
         body: JSON.stringify({ email, redirectTo: '/account/library' })
       })
       const data = await res.json()
-      
       if (data.ok) {
         setSent(true)
-        // In development, show the magic link
         if (data.data.devLink) {
           console.log('Magic link:', data.data.devLink)
-          alert(`Dev mode: Check console for magic link\n\n${data.data.devLink}`)
         }
       } else {
         alert(data.error?.message || 'Failed to send magic link')
       }
-    } catch (error) {
-      console.error('Login failed:', error)
+    } catch {
       alert('Login failed')
     } finally {
       setLoading(false)
@@ -284,31 +275,27 @@ function LoginForm() {
 
   if (sent) {
     return (
-      <div className="text-center">
-        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-green-600 text-xl">✓</span>
-        </div>
-        <p className="text-text-primary font-medium">Check your email!</p>
-        <p className="text-sm text-text-muted">We sent you a magic link to sign in.</p>
+      <div className="flex items-center justify-center gap-2 text-green-600 font-medium py-4">
+        <CheckCircle className="w-5 h-5" />
+        Check your email for the magic link.
       </div>
     )
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <label htmlFor="library-email" className="sr-only">Email address</label>
       <input
+        id="library-email"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
         required
         className="clay-input w-full"
+        autoComplete="email"
       />
-      <button 
-        type="submit" 
-        disabled={loading}
-        className="clay-button-cta w-full"
-      >
+      <button type="submit" disabled={loading} className="clay-button-cta w-full cursor-pointer">
         {loading ? 'Sending...' : 'Send Magic Link'}
       </button>
     </form>

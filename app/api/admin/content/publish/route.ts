@@ -33,6 +33,30 @@ export async function POST(request: NextRequest) {
       [status, toISOString(new Date()), packId]
     );
 
+    // When publishing, auto-activate the linked product
+    if (status === 'published') {
+      await execute(
+        `UPDATE products SET active = 1 WHERE id IN (
+          SELECT pr.product_id FROM product_resources pr
+          JOIN packs_json p ON p.resource_id = pr.resource_id
+          WHERE p.id = ?
+        )`,
+        [packId]
+      );
+    }
+
+    // When archiving, deactivate the linked product
+    if (status === 'archived') {
+      await execute(
+        `UPDATE products SET active = 0 WHERE id IN (
+          SELECT pr.product_id FROM product_resources pr
+          JOIN packs_json p ON p.resource_id = pr.resource_id
+          WHERE p.id = ?
+        )`,
+        [packId]
+      );
+    }
+
     return NextResponse.json({
       ok: true,
       data: { packId, status },

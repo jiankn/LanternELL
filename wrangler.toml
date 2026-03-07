@@ -28,16 +28,27 @@ migrations_dir = "migrations"
 binding = "FILES"
 bucket_name = "lanternell-files-prod"
 
+[[r2_buckets]]
+binding = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "lanternell-cache-prod"
+
 # ------------------
-# Queues (enable after creating queues via: npx wrangler queues create <name>)
+# Queues
 # ------------------
-# [queues]
-# producers = [
-#   { binding = "CONTENT_QUEUE", queue = "lanternell-content" },
-#   { binding = "RENDER_QUEUE", queue = "lanternell-render" },
-#   { binding = "EMAIL_QUEUE", queue = "lanternell-email" },
-#   { binding = "WEBHOOK_QUEUE", queue = "lanternell-webhook" }
-# ]
+[queues]
+producers = [
+  { binding = "CONTENT_QUEUE", queue = "lanternell-content" },
+  { binding = "RENDER_QUEUE", queue = "lanternell-render" },
+  { binding = "EMAIL_QUEUE", queue = "lanternell-email" },
+  { binding = "WEBHOOK_QUEUE", queue = "lanternell-webhook" }
+]
+
+# Note: Queue consumers are handled via the Next.js API routes
+# Create queues before deploying:
+#   npx wrangler queues create lanternell-content
+#   npx wrangler queues create lanternell-render
+#   npx wrangler queues create lanternell-email
+#   npx wrangler queues create lanternell-webhook
 
 # ------------------
 # Environment Variables
@@ -45,19 +56,44 @@ bucket_name = "lanternell-files-prod"
 [vars]
 APP_ENV = "production"
 APP_URL = "https://lanternell.com"
-AI_ACTIVE_PROVIDER = "zhipuai"
-AI_FALLBACK_PROVIDER = "openai"
+AI_ACTIVE_PROVIDER = "gemini"
+AI_FALLBACK_PROVIDER = "deepseek"
 ZHIPUAI_MODEL = "glm-4.7"
 ZHIPUAI_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"
 OPENAI_MODEL = "gpt-4o"
 OPENAI_BASE_URL = "https://api.openai.com/v1"
+DEEPSEEK_MODEL = "deepseek-chat"
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
+GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
 
 # ------------------
 # Secrets (set via wrangler CLI)
 # ------------------
 # npx wrangler secret put ZHIPUAI_API_KEY
 # npx wrangler secret put OPENAI_API_KEY
+# npx wrangler secret put DEEPSEEK_API_KEY
+# npx wrangler secret put GEMINI_API_KEY
 # npx wrangler secret put STRIPE_SECRET_KEY
 # npx wrangler secret put STRIPE_WEBHOOK_SECRET
 # npx wrangler secret put RESEND_API_KEY
 # npx wrangler secret put ADMIN_EMAIL_ALLOWLIST
+
+# ============================================
+# Preview Environment
+# ============================================
+[env.preview]
+name = "lanternell-preview"
+[env.preview.vars]
+APP_ENV = "preview"
+APP_URL = "https://lanternell-preview.workers.dev"
+
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "lanternell-preview"
+database_id = "REPLACE_WITH_PREVIEW_DB_ID"
+migrations_dir = "migrations"
+
+[[env.preview.r2_buckets]]
+binding = "FILES"
+bucket_name = "lanternell-files-preview"

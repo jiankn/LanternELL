@@ -3,21 +3,16 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { 
-  Sparkles,
   Plus,
   Play,
   CheckCircle,
   XCircle,
   Clock,
-  AlertCircle,
   RefreshCw,
-  Package,
   FileText,
   Eye,
-  Edit,
-  Trash2,
-  ArrowRight
 } from 'lucide-react'
+import { AdminLayout } from '@/components/ui/admin-layout'
 
 interface ContentJob {
   id: string
@@ -45,7 +40,9 @@ const packTypeLabels: Record<string, string> = {
   vocabulary_pack: 'Vocabulary Pack',
   sentence_frames: 'Sentence Frames',
   classroom_labels: 'Classroom Labels',
-  parent_communication: 'Parent Communication'
+  parent_communication: 'Parent Communication',
+  visual_supports: 'Visual Supports (ELL/SPED)',
+  assessment_tools: 'Assessment Tools',
 }
 
 const statusColors: Record<string, string> = {
@@ -214,34 +211,10 @@ export default function AdminContentPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-4">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-clay-sm">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <span className="font-heading text-xl font-bold text-text-primary">LanternELL</span>
-              </Link>
-              <span className="text-text-muted">/</span>
-              <span className="font-medium text-text-primary">Admin</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/" className="text-text-primary hover:text-primary transition-colors">Back to Site</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Content */}
-      <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-heading text-3xl font-bold text-text-primary mb-8">
-            Content Management
-          </h1>
+    <AdminLayout>
+      <h1 className="font-heading text-3xl font-bold text-text-primary mb-8">
+        Content Management
+      </h1>
 
           {/* Tabs */}
           <div className="flex gap-4 mb-8">
@@ -312,6 +285,8 @@ export default function AdminContentPage() {
                         <option value="sentence_frames">Sentence Frames</option>
                         <option value="classroom_labels">Classroom Labels</option>
                         <option value="parent_communication">Parent Communication</option>
+                        <option value="visual_supports">Visual Supports (ELL/SPED)</option>
+                        <option value="assessment_tools">Assessment Tools</option>
                       </select>
                     </div>
                     <div>
@@ -325,9 +300,10 @@ export default function AdminContentPage() {
                       >
                         <option value="en-es">English - Spanish</option>
                         <option value="en-zh">English - Chinese</option>
-                        <option value="en-fr">English - French</option>
-                        <option value="en-vi">English - Vietnamese</option>
                         <option value="en-ar">English - Arabic</option>
+                        <option value="en-vi">English - Vietnamese</option>
+                        <option value="en-fr">English - French</option>
+                        <option value="en-pt">English - Portuguese</option>
                       </select>
                     </div>
                   </div>
@@ -342,9 +318,11 @@ export default function AdminContentPage() {
                         onChange={(e) => setFormData({ ...formData, age_band: e.target.value })}
                         className="clay-input w-full"
                       >
+                        <option value="Pre-K">Pre-K</option>
                         <option value="K-2">K-2</option>
                         <option value="3-5">3-5</option>
                         <option value="6-8">6-8</option>
+                        <option value="9-12">9-12</option>
                       </select>
                     </div>
                     {formData.pack_type === 'vocabulary_pack' && (
@@ -520,8 +498,6 @@ export default function AdminContentPage() {
               )}
             </div>
           )}
-        </div>
-      </section>
-    </main>
+    </AdminLayout>
   )
 }

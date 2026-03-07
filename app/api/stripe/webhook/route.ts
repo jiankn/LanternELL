@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query, queryOne, execute, generateId, toISOString } from '@/lib/db';
 import { verifyWebhookSignature } from '@/lib/stripe';
+import { enqueueEmail } from '@/lib/queues';
+import { sendEmail, orderConfirmationEmail } from '@/lib/email';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,7 +15,7 @@ export async function POST(request: NextRequest) {
     // Attempt Stripe signature verification if configured
     const signature = request.headers.get('stripe-signature');
     if (signature) {
-      const verified = verifyWebhookSignature(body, signature);
+      const verified = await verifyWebhookSignature(body, signature);
       if (!verified) {
         return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
       }
@@ -134,6 +136,31 @@ async function handleCheckoutComplete(session: any) {
   const productId = metadata?.app_product_id;
   if (productId && userId) {
     await createEntitlementsForProduct(userId, productId, 'purchase', sessionId);
+  }
+
+  // Send order confirmation email
+  if (customer_email && productId) {
+    const product = await queryOne<{ name: string; price_cents: number }>(
+      'SELECT name, price_cents FROM products WHERE id = ?',
+      [productId]
+    );
+    if (product) {
+      const baseUrl = process.env.APP_URL || 'https://lanternell.com';
+      const emailData = {
+        type: 'order_confirmation' as const,
+        to: customer_email.toLowerCase(),
+        data: {
+          productName: product.name,
+          amountFormatted: `$${(product.price_cents / 100).toFixed(2)}`,
+          libraryUrl: `${baseUrl}/account/library`,
+        },
+      };
+      const queued = await enqueueEmail(emailData);
+      if (!queued) {
+        const tpl = orderConfirmationEmail(emailData.data);
+        await sendEmail({ to: emailData.to, subject: tpl.subject, html: tpl.html });
+      }
+    }
   }
 }
 

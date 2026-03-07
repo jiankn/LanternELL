@@ -6,6 +6,7 @@ import { PackDocument } from '@/components/pdf/pack-document';
 import type { RenderablePack } from '@/lib/rendering/load-pack';
 
 export type RenderTarget = 'final_pdf' | 'sample_pdf' | 'preview_images';
+export type PageFormat = 'letter' | 'a4';
 
 export interface RenderArtifact {
   assetType: 'final_pdf' | 'sample_pdf' | 'preview_image' | 'cover';
@@ -40,8 +41,9 @@ export async function renderPackArtifacts(options: {
   pack: RenderablePack;
   renderTargets: RenderTarget[];
   sampleWatermarkText?: string;
+  pageFormat?: PageFormat;
 }) {
-  const { pack, renderTargets, sampleWatermarkText = 'Sample Only' } = options;
+  const { pack, renderTargets, sampleWatermarkText = 'Sample Only', pageFormat = 'letter' } = options;
   const finalHtml = await renderPackHtmlDocument({ pack, mode: 'final' });
   const sampleHtml = await renderPackHtmlDocument({
     pack,
@@ -71,11 +73,11 @@ export async function renderPackArtifacts(options: {
     if (renderTargets.includes('final_pdf')) {
       await page.setContent(finalHtml, { waitUntil: 'networkidle0' });
       const pdfBuffer = await page.pdf({
-        format: 'Letter',
+        format: pageFormat === 'a4' ? 'A4' : 'Letter',
         printBackground: true,
         preferCSSPageSize: true,
       });
-      const objectKey = buildObjectKey(pack, 'final.pdf');
+      const objectKey = buildObjectKey(pack, pageFormat === 'a4' ? 'final-a4.pdf' : 'final.pdf');
       await filesBinding.put(objectKey, pdfBuffer, {
         httpMetadata: { contentType: 'application/pdf' },
       });
@@ -90,11 +92,11 @@ export async function renderPackArtifacts(options: {
     if (renderTargets.includes('sample_pdf')) {
       await page.setContent(sampleHtml, { waitUntil: 'networkidle0' });
       const pdfBuffer = await page.pdf({
-        format: 'Letter',
+        format: pageFormat === 'a4' ? 'A4' : 'Letter',
         printBackground: true,
         preferCSSPageSize: true,
       });
-      const objectKey = buildObjectKey(pack, 'sample.pdf');
+      const objectKey = buildObjectKey(pack, pageFormat === 'a4' ? 'sample-a4.pdf' : 'sample.pdf');
       await filesBinding.put(objectKey, pdfBuffer, {
         httpMetadata: { contentType: 'application/pdf' },
       });

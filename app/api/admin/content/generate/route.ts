@@ -131,6 +131,24 @@ export async function POST(request: NextRequest) {
         [packId, resourceId, JSON.stringify(content), createdAt, createdAt]
       );
 
+      // Auto-create product so it's ready to sell after review/publish
+      const productId = generateId('prod');
+      const productSlug = resourceSlug;
+      const defaultPriceCents = pack_type === 'parent_communication' ? 399 : pack_type === 'classroom_labels' ? 499 : 599;
+      await execute(
+        `INSERT INTO products (id, slug, type, name, description, price_cents, active, created_at)
+         VALUES (?, ?, 'single', ?, ?, ?, 0, ?)`,
+        [productId, productSlug, content.title || topic, content.description || `Printable ${pack_type} pack for ${topic}`, defaultPriceCents, createdAt]
+      );
+
+      // Link product to resource
+      const prId = generateId('pr');
+      await execute(
+        `INSERT INTO product_resources (id, product_id, resource_id, created_at)
+         VALUES (?, ?, ?, ?)`,
+        [prId, productId, resourceId, createdAt]
+      );
+
       // Update job status
       await execute(
         `UPDATE content_jobs SET status = 'completed', result_json = ?, updated_at = ? WHERE id = ?`,
@@ -146,6 +164,7 @@ export async function POST(request: NextRequest) {
           packId,
           resourceId,
           resourceSlug,
+          productId,
           provider: getCurrentProvider(),
           fallbackProvider: config.FALLBACK_PROVIDER || null,
         },

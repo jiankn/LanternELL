@@ -1,9 +1,9 @@
 // LanternELL Content Schema Types
 // Based on PRD Section 9.4
 
-export type PackType = 'vocabulary_pack' | 'sentence_frames' | 'classroom_labels' | 'parent_communication';
-export type AgeBand = 'K-2' | '3-5' | '6-8';
-export type LanguagePair = 'en-es' | 'en-zh' | 'en-fr' | 'en-vi' | 'en-ar';
+export type PackType = 'vocabulary_pack' | 'sentence_frames' | 'classroom_labels' | 'parent_communication' | 'visual_supports' | 'assessment_tools';
+export type AgeBand = 'Pre-K' | 'K-2' | '3-5' | '6-8' | '9-12';
+export type LanguagePair = 'en-es' | 'en-zh' | 'en-fr' | 'en-vi' | 'en-ar' | 'en-pt';
 export type PackStatus = 'draft' | 'review' | 'published' | 'archived';
 
 export interface VocabularyItem {
@@ -15,6 +15,21 @@ export interface VocabularyItem {
 export interface SentenceFrame {
   frame: string; // e.g., "This is a ___."
   translation?: string;
+}
+
+export interface DialogueStrip {
+  speaker_a_en: string;
+  speaker_b_en: string;
+  speaker_a_l2?: string;
+  speaker_b_l2?: string;
+  context?: string; // e.g., "At the cafeteria"
+}
+
+export interface SpeakingPrompt {
+  prompt_en: string;
+  prompt_l2?: string;
+  expected_response?: string;
+  visual_cue?: string;
 }
 
 export interface WorksheetItem {
@@ -62,15 +77,30 @@ export interface ClassroomLabel {
   l2: string;
   category: string; // e.g., "supplies", "furniture", "areas"
   plural_form?: string;
+  size?: 'full' | 'small'; // For large vs small label rendering
+}
+
+export interface VisualRoutineCard {
+  routine_en: string;
+  routine_l2: string;
+  time_of_day?: string; // e.g., "morning", "afternoon"
+  icon_prompt?: string;
+}
+
+export interface ClassroomRule {
+  rule_en: string;
+  rule_l2: string;
+  icon_prompt?: string;
 }
 
 export interface ParentNote {
-  type: 'homework' | 'behavior' | 'progress' | 'general';
+  type: 'homework' | 'behavior' | 'progress' | 'general' | 'supply_request' | 'attendance' | 'welcome';
   title_en: string;
   title_l2: string;
   content_en: string;
   content_l2: string;
   signature_required: boolean;
+  response_section?: boolean; // Parent can write back
 }
 
 export interface PackContent {
@@ -88,6 +118,8 @@ export interface PackContent {
   
   // Sentence frames fields
   sentence_frames?: SentenceFrame[];
+  dialogue_strips?: DialogueStrip[];
+  speaking_prompts?: SpeakingPrompt[];
   
   // Worksheets
   worksheets?: WorksheetItem[];
@@ -97,10 +129,25 @@ export interface PackContent {
   
   // Classroom labels
   labels?: ClassroomLabel[];
+  visual_routine_cards?: VisualRoutineCard[];
+  classroom_rules?: ClassroomRule[];
   
   // Parent communication
   parent_notes?: ParentNote[];
   
+  // Visual supports (ELL/SPED)
+  visual_schedule?: { activity_en: string; activity_l2: string; time?: string; icon_prompt?: string }[];
+  social_story?: { page: number; text_en: string; text_l2?: string; image_prompt?: string }[];
+  emotion_cards?: { emotion_en: string; emotion_l2: string; icon_prompt?: string }[];
+  behavior_visuals?: { expectation_en: string; expectation_l2: string; icon_prompt?: string }[];
+  transition_cues?: { cue_en: string; cue_l2: string; icon_prompt?: string }[];
+
+  // Assessment tools
+  mastery_checklist?: { skill_en: string; skill_l2?: string; level?: string }[];
+  self_assessment?: { statement_en: string; statement_l2?: string }[];
+  observation_guide?: { behavior: string; indicators: string[] }[];
+  rubric?: { levels: string[]; criteria: { criterion: string; beginning: string; developing: string; proficient: string }[] };
+
   // Common fields
   teacher_notes?: TeacherNotes;
   answer_key?: AnswerKey[];

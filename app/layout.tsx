@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | LanternELL',
   },
   description:
-    'Print-ready bilingual & ELL resources for real classrooms. Save hours of prep time with ready-to-print teaching packs designed for K-2 ELL and newcomer students.',
+    'Print-ready bilingual & ELL resources for real classrooms. Save hours of prep time with ready-to-print teaching packs designed for Pre-K–8 ELL, bilingual, and SPED students in 6 languages.',
   keywords: [
     'ELL worksheets',
     'bilingual classroom labels',
@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     'ESL worksheets for beginners',
     'ELL newcomer worksheets',
     'bilingual teaching resources',
+    'visual supports SPED',
+    'multilingual classroom resources',
+    'English Chinese worksheets',
+    'English Arabic printables',
+    'special education visual aids',
+    'homeschool ELL resources',
+    'ESL printable activities Pre-K 8',
   ],
   metadataBase: new URL(BASE_URL),
   openGraph: {
@@ -73,8 +80,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
+          <script
+            defer
+            data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+            src="https://plausible.io/js/script.js"
+          />
+        )}
       </head>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen font-body">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        <div id="main-content">{children}</div>
+      </body>
     </html>
   )
 }

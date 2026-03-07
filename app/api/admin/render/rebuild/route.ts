@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
     const packId = body.packId as string | undefined;
     const resourceId = body.resourceId as string | undefined;
     const renderTargets = normaliseRenderTargets(body.renderTargets);
+    const pageFormat = body.pageFormat === 'a4' ? 'a4' as const : 'letter' as const;
 
     const pack = await getRenderablePack({ packId, resourceId });
     if (!pack) {
@@ -45,6 +46,7 @@ export async function POST(request: NextRequest) {
         pack,
         renderTargets,
         sampleWatermarkText: process.env.FREE_SAMPLE_WATERMARK_TEXT || 'Sample Only',
+        pageFormat,
       });
 
       await execute('DELETE FROM preview_assets WHERE resource_id = ?', [pack.resource.id]);

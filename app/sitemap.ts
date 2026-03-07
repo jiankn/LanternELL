@@ -29,6 +29,42 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             changeFrequency: 'monthly',
             priority: 0.3,
         },
+        {
+            url: `${BASE_URL}/teaching-tips`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${BASE_URL}/contact`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.4,
+        },
+        {
+            url: `${BASE_URL}/terms`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        },
+        {
+            url: `${BASE_URL}/privacy`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        },
+        {
+            url: `${BASE_URL}/refund-policy`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        },
+        {
+            url: `${BASE_URL}/ell-worksheets`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
     ]
 
     try {
@@ -43,6 +79,20 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
                 lastModified: new Date(product.created_at),
                 changeFrequency: 'weekly',
                 priority: 0.8,
+            })
+        }
+
+        // Add teaching tips posts
+        const blogPosts = await query<{ slug: string; published_at: string }>(
+            "SELECT slug, published_at FROM blog_posts WHERE status = 'published' ORDER BY published_at DESC"
+        )
+
+        for (const post of blogPosts) {
+            entries.push({
+                url: `${BASE_URL}/teaching-tips/${post.slug}`,
+                lastModified: new Date(post.published_at),
+                changeFrequency: 'monthly',
+                priority: 0.7,
             })
         }
 

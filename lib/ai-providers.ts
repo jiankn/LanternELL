@@ -3,7 +3,7 @@
 
 import type { PackContent } from './content-schema';
 
-export const SUPPORTED_AI_PROVIDERS = ['zhipuai', 'openai'] as const;
+export const SUPPORTED_AI_PROVIDERS = ['zhipuai', 'openai', 'deepseek', 'gemini'] as const;
 export type AIProvider = (typeof SUPPORTED_AI_PROVIDERS)[number];
 
 const PROVIDER_METADATA: Record<
@@ -32,6 +32,22 @@ const PROVIDER_METADATA: Record<
     baseUrlEnvKey: 'OPENAI_BASE_URL',
     defaultModel: 'gpt-4o',
     defaultBaseUrl: 'https://api.openai.com/v1',
+  },
+  deepseek: {
+    label: 'DeepSeek',
+    envKey: 'DEEPSEEK_API_KEY',
+    modelEnvKey: 'DEEPSEEK_MODEL',
+    baseUrlEnvKey: 'DEEPSEEK_BASE_URL',
+    defaultModel: 'deepseek-chat',
+    defaultBaseUrl: 'https://api.deepseek.com',
+  },
+  gemini: {
+    label: 'Gemini',
+    envKey: 'GEMINI_API_KEY',
+    modelEnvKey: 'GEMINI_MODEL',
+    baseUrlEnvKey: 'GEMINI_BASE_URL',
+    defaultModel: 'gemini-2.5-flash',
+    defaultBaseUrl: 'https://generativelanguage.googleapis.com/v1beta',
   },
 };
 
@@ -84,6 +100,12 @@ export interface AIConfig {
   ZHIPUAI_API_KEY?: string;
   ZHIPUAI_MODEL?: string;
   ZHIPUAI_BASE_URL?: string;
+  DEEPSEEK_API_KEY?: string;
+  DEEPSEEK_MODEL?: string;
+  DEEPSEEK_BASE_URL?: string;
+  GEMINI_API_KEY?: string;
+  GEMINI_MODEL?: string;
+  GEMINI_BASE_URL?: string;
 }
 
 export function getAIConfig(): AIConfig {
@@ -96,6 +118,12 @@ export function getAIConfig(): AIConfig {
     ZHIPUAI_API_KEY: process.env.ZHIPUAI_API_KEY,
     ZHIPUAI_MODEL: process.env.ZHIPUAI_MODEL || PROVIDER_METADATA.zhipuai.defaultModel,
     ZHIPUAI_BASE_URL: process.env.ZHIPUAI_BASE_URL || PROVIDER_METADATA.zhipuai.defaultBaseUrl,
+    DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY,
+    DEEPSEEK_MODEL: process.env.DEEPSEEK_MODEL || PROVIDER_METADATA.deepseek.defaultModel,
+    DEEPSEEK_BASE_URL: process.env.DEEPSEEK_BASE_URL || PROVIDER_METADATA.deepseek.defaultBaseUrl,
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+    GEMINI_MODEL: process.env.GEMINI_MODEL || PROVIDER_METADATA.gemini.defaultModel,
+    GEMINI_BASE_URL: process.env.GEMINI_BASE_URL || PROVIDER_METADATA.gemini.defaultBaseUrl,
   };
 }
 
@@ -127,6 +155,26 @@ export function getProviderConfigForType(provider: AIProvider): AIProviderConfig
         baseUrl: config.ZHIPUAI_BASE_URL,
         model: config.ZHIPUAI_MODEL || PROVIDER_METADATA.zhipuai.defaultModel,
       };
+    case 'deepseek':
+      if (!config.DEEPSEEK_API_KEY) {
+        throw new Error('DEEPSEEK_API_KEY is not configured');
+      }
+      return {
+        provider: 'deepseek',
+        apiKey: config.DEEPSEEK_API_KEY,
+        baseUrl: config.DEEPSEEK_BASE_URL,
+        model: config.DEEPSEEK_MODEL || PROVIDER_METADATA.deepseek.defaultModel,
+      };
+    case 'gemini':
+      if (!config.GEMINI_API_KEY) {
+        throw new Error('GEMINI_API_KEY is not configured');
+      }
+      return {
+        provider: 'gemini',
+        apiKey: config.GEMINI_API_KEY,
+        baseUrl: config.GEMINI_BASE_URL,
+        model: config.GEMINI_MODEL || PROVIDER_METADATA.gemini.defaultModel,
+      };
     default:
       throw new Error(`Unknown provider: ${provider}`);
   }
@@ -139,6 +187,10 @@ export function getConfiguredProviders(config = getAIConfig()): AIProvider[] {
         return Boolean(config.OPENAI_API_KEY);
       case 'zhipuai':
         return Boolean(config.ZHIPUAI_API_KEY);
+      case 'deepseek':
+        return Boolean(config.DEEPSEEK_API_KEY);
+      case 'gemini':
+        return Boolean(config.GEMINI_API_KEY);
       default:
         return false;
     }

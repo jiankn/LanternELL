@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { execute, generateId, generateSessionToken, hashToken, addMinutes, queryOne, toISOString } from '@/lib/db';
+import { sendEmail, magicLinkEmail, isEmailConfigured } from '@/lib/email';
 
 export const dynamic = 'force-dynamic';
 
@@ -45,18 +46,29 @@ export async function POST(request: NextRequest) {
       [magicLinkId, email.toLowerCase(), tokenHash, safeRedirectTo, toISOString(expiresAt)]
     );
 
-    // In production, send email here
-    // For now, return the token for testing
+    // Send magic link email
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'http://localhost:3000';
     const magicLink = `${baseUrl}/api/auth/verify?token=${token}&email=${encodeURIComponent(email)}`;
 
-    console.log('Magic link (dev):', magicLink);
+    const emailTemplate = magicLinkEmail(magicLink);
+    const emailResult = await sendEmail({
+      to: email.toLowerCase(),
+      subject: emailTemplate.subject,
+      html: emailTemplate.html,
+    });
+
+    if (!emailResult.ok) {
+      console.error('Failed to send magic link email:', emailResult.error);
+    }
+
+    // In dev mode, also return the link directly
+    const isDev = !isEmailConfigured() || process.env.APP_ENV === 'development';
 
     return NextResponse.json({
       ok: true,
       data: {
         sent: true,
-        devLink: magicLink // Remove in production
+        ...(isDev ? { devLink: magicLink } : {})
       },
       error: null
     });

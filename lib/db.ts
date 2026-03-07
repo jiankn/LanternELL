@@ -1,4 +1,5 @@
-import { createClient, type Client, type InValue } from '@libsql/client';
+// @libsql/client is imported dynamically to avoid bundling Node.js-only
+// modules (node:stream, node:async_hooks) into the Cloudflare Worker.
 
 type QueryRow = Record<string, unknown>;
 
@@ -40,6 +41,11 @@ async function createDefaultDb(): Promise<DatabaseAdapter | null> {
     return null;
   }
 
+  // Use a runtime-evaluated module path to prevent the bundler from statically
+  // resolving and including @libsql/client (which brings in node:stream etc.)
+  const libsqlModule = '@libsql' + '/client';
+  const { createClient } = await import(/* webpackIgnore: true */ libsqlModule);
+
   const url = process.env.DATABASE_URL || 'file:local.db';
   const authToken = process.env.DATABASE_AUTH_TOKEN || undefined;
   const client = createClient({ url, authToken });
@@ -50,7 +56,7 @@ async function createDefaultDb(): Promise<DatabaseAdapter | null> {
     async execute(sql: string, params: unknown[] = []) {
       const result = await client.execute({
         sql,
-        args: params as InValue[],
+        args: params as any[],
       });
 
       return {
@@ -96,7 +102,7 @@ async function createCloudflareDb(): Promise<DatabaseAdapter | null> {
   }
 }
 
-async function applyMigrations(client: Client, url: string) {
+async function applyMigrations(client: any, url: string) {
   if (!url.startsWith('file:')) {
     return;
   }
