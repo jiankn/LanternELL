@@ -3,14 +3,14 @@
 # ============================================
 
 name = "lanternell-web"
-main = ".worker-next/index.mjs"
+main = ".open-next/worker.js"
 compatibility_date = "2026-03-06"
 compatibility_flags = ["nodejs_compat"]
 preview_urls = true
 observability = { enabled = true }
 
 [assets]
-directory = ".worker-next/assets"
+directory = ".open-next/assets"
 
 # ------------------
 # Database (D1)
