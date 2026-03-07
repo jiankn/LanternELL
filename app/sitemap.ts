@@ -65,6 +65,12 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             changeFrequency: 'weekly',
             priority: 0.9,
         },
+        {
+            url: `${BASE_URL}/pricing`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
     ]
 
     try {
@@ -103,7 +109,7 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
 
         for (const resource of resources) {
             entries.push({
-                url: `${BASE_URL}/resources/${resource.slug}`,
+                url: `${BASE_URL}/free/${resource.slug}`,
                 lastModified: new Date(resource.created_at),
                 changeFrequency: 'monthly',
                 priority: 0.7,

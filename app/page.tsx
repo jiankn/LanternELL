@@ -91,7 +91,7 @@ export default function LandingPage() {
         links={[
           { href: '/shop', label: 'Packs' },
           { href: '/teaching-tips', label: 'Teaching Tips' },
-          { href: '#testimonials', label: 'Reviews' },
+          { href: '/pricing', label: 'Pricing' },
           { href: '/login', label: 'Sign In' },
         ]}
       />
@@ -241,7 +241,7 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $19/mo</Link>
-              <Link href="/shop" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
+              <Link href="/pricing" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
               <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> 30-Day Guarantee</span>

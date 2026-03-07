@@ -1,0 +1,3 @@
+-- Migration 005: Webhook events table (already exists from 001, this is a no-op)
+-- The webhook_events table uses event_id (not stripe_event_id)
+-- Schema: id, provider, event_id, event_type, payload_json, status, processed_at, created_at

@@ -43,12 +43,41 @@ producers = [
   { binding = "WEBHOOK_QUEUE", queue = "lanternell-webhook" }
 ]
 
-# Note: Queue consumers are handled via the Next.js API routes
-# Create queues before deploying:
-#   npx wrangler queues create lanternell-content
-#   npx wrangler queues create lanternell-render
-#   npx wrangler queues create lanternell-email
-#   npx wrangler queues create lanternell-webhook
+[[queues.consumers]]
+queue = "lanternell-email"
+max_batch_size = 5
+max_retries = 3
+dead_letter_queue = "lanternell-dlq"
+
+[[queues.consumers]]
+queue = "lanternell-content"
+max_batch_size = 1
+max_retries = 2
+
+[[queues.consumers]]
+queue = "lanternell-render"
+max_batch_size = 1
+max_retries = 2
+
+[[queues.consumers]]
+queue = "lanternell-webhook"
+max_batch_size = 10
+max_retries = 3
+
+# ------------------
+# Browser Rendering (for PDF generation)
+# ------------------
+[browser]
+binding = "BROWSER"
+
+# ------------------
+# Cron Triggers
+# ------------------
+[triggers]
+crons = [
+  "0 3 * * *",   # Daily 3 AM UTC — cleanup stale rate limits + expired tokens
+  "0 6 * * 1"    # Weekly Monday 6 AM UTC — sitemap ping
+]
 
 # ------------------
 # Environment Variables

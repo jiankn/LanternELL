@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { execute, generateId, generateSessionToken, hashToken, addMinutes, queryOne, toISOString } from '@/lib/db';
 import { sendEmail, magicLinkEmail, isEmailConfigured } from '@/lib/email';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,6 +19,24 @@ export async function POST(request: NextRequest) {
         data: null,
         error: { code: 'INVALID_EMAIL', message: 'Valid email is required' }
       }, { status: 400 });
+    }
+
+    // Rate limit: 5 requests per email per 15 minutes
+    const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-forwarded-for') || 'unknown';
+    const emailKey = `auth:${email.toLowerCase()}`;
+    const ipKey = `auth-ip:${ip}`;
+
+    const [emailLimit, ipLimit] = await Promise.all([
+      checkRateLimit(emailKey, 5, 900),
+      checkRateLimit(ipKey, 10, 900),
+    ]);
+
+    if (!emailLimit.allowed || !ipLimit.allowed) {
+      return NextResponse.json({
+        ok: false,
+        data: null,
+        error: { code: 'RATE_LIMITED', message: 'Too many requests. Please try again later.' }
+      }, { status: 429 });
     }
 
     // Check if user exists, create if not

@@ -1,35 +1,20 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import {
-  BookOpen,
-  Star,
-  ArrowRight,
-  Sparkles,
-  Globe,
-  Heart,
-  Package,
-  Eye,
-  ClipboardCheck
+  BookOpen, Star, ArrowRight, Sparkles, Globe, Heart,
+  Package, Eye, ClipboardCheck, Search, X,
 } from 'lucide-react'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { ProductGridSkeleton } from '@/components/ui/skeleton'
 
 interface Product {
-  id: string
-  slug: string
-  name: string
-  description: string
-  type: string
-  price_cents: number
-  price_formatted: string
-  resources?: Array<{
-    id: string
-    title: string
-    pack_type: string
-  }>
+  id: string; slug: string; name: string; description: string
+  type: string; price_cents: number; price_formatted: string
+  resources?: Array<{ id: string; title: string; pack_type: string; age_band: string; language_pair: string }>
 }
 
 const packTypeIcons: Record<string, React.ReactNode> = {
@@ -50,25 +35,50 @@ const packTypeColors: Record<string, string> = {
   assessment_tools: 'bg-cyan-100',
 }
 
-const filters = [
+const typeFilters = [
   { key: 'all', label: 'All Products' },
   { key: 'single', label: 'Singles' },
   { key: 'bundle', label: 'Bundles' },
   { key: 'membership', label: 'Memberships' },
 ]
 
+const packTypeOptions = [
+  { value: '', label: 'All Types' },
+  { value: 'vocabulary_pack', label: 'Vocabulary' },
+  { value: 'sentence_frames', label: 'Sentence Frames' },
+  { value: 'classroom_labels', label: 'Labels' },
+  { value: 'parent_communication', label: 'Parent Comm.' },
+  { value: 'visual_supports', label: 'Visual Supports' },
+  { value: 'assessment_tools', label: 'Assessment' },
+]
+
+const languageOptions = [
+  { value: '', label: 'All Languages' },
+  { value: 'en-es', label: 'English-Spanish' },
+  { value: 'en-zh', label: 'English-Chinese' },
+  { value: 'en-ar', label: 'English-Arabic' },
+  { value: 'en-vi', label: 'English-Vietnamese' },
+  { value: 'en-fr', label: 'English-French' },
+  { value: 'en-pt', label: 'English-Portuguese' },
+]
+
 export default function ShopPage() {
+  const searchParams = useSearchParams()
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState(searchParams.get('filter') || 'all')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [packType, setPackType] = useState(searchParams.get('type') || '')
+  const [language, setLanguage] = useState('')
 
-  useEffect(() => {
-    fetchProducts()
-  }, [])
-
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
+    setLoading(true)
     try {
-      const res = await fetch('/api/products?active=true')
+      const params = new URLSearchParams({ active: 'true' })
+      if (searchQuery) params.set('q', searchQuery)
+      if (packType) params.set('pack_type', packType)
+      if (language) params.set('language', language)
+      const res = await fetch(`/api/products?${params}`)
       const data = await res.json()
       if (data.ok) setProducts(data.data.products)
     } catch (error) {
@@ -76,7 +86,9 @@ export default function ShopPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [searchQuery, packType, language])
+
+  useEffect(() => { fetchProducts() }, [fetchProducts])
 
   const filteredProducts = products.filter(p => {
     if (filter === 'all') return true
@@ -85,35 +97,64 @@ export default function ShopPage() {
     return p.type === 'single'
   })
 
+  const hasActiveFilters = searchQuery || packType || language || filter !== 'all'
+
+  const clearFilters = () => {
+    setSearchQuery('')
+    setPackType('')
+    setLanguage('')
+    setFilter('all')
+  }
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar
         links={[
           { href: '/', label: 'Home' },
           { href: '/shop', label: 'Shop', active: true },
+          { href: '/pricing', label: 'Pricing' },
           { href: '/account/library', label: 'My Library' },
         ]}
         showCart
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             Teaching Packs & Resources
           </h1>
-          <p className="text-lg text-text-primary/70 max-w-2xl mx-auto">
+          <p className="text-lg text-text-primary/70 max-w-2xl mx-auto mb-8">
             Ready-to-use printable resources for your Pre-K–8 ELL, bilingual, and SPED classroom.
-            Just print and start teaching.
           </p>
+
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto relative">
+            <label htmlFor="shop-search" className="sr-only">Search packs</label>
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted pointer-events-none" />
+            <input
+              id="shop-search"
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search by topic, grade, or language..."
+              className="clay-input w-full pl-12 pr-10"
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer" aria-label="Clear search">
+                <X className="w-4 h-4 text-text-muted hover:text-text-primary" />
+              </button>
+            )}
+          </div>
         </div>
       </section>
 
       {/* Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {filters.map((f) => (
+          {/* Type tabs */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+            {typeFilters.map((f) => (
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
@@ -127,6 +168,31 @@ export default function ShopPage() {
               </button>
             ))}
           </div>
+
+          {/* Dropdown filters */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <select
+              value={packType}
+              onChange={(e) => setPackType(e.target.value)}
+              className="clay-input py-2 px-4 text-sm cursor-pointer"
+              aria-label="Filter by pack type"
+            >
+              {packTypeOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              className="clay-input py-2 px-4 text-sm cursor-pointer"
+              aria-label="Filter by language"
+            >
+              {languageOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+            {hasActiveFilters && (
+              <button onClick={clearFilters} className="text-sm text-cta hover:underline cursor-pointer">
+                Clear all filters
+              </button>
+            )}
+          </div>
         </div>
       </section>
 
@@ -139,10 +205,10 @@ export default function ShopPage() {
             <div className="text-center py-20">
               <Package className="w-16 h-16 text-text-muted mx-auto mb-4" />
               <h3 className="font-heading text-lg font-semibold text-text-primary mb-2">No products found</h3>
-              <p className="text-text-muted mb-6">Try a different filter or check back later.</p>
-              {filter !== 'all' && (
-                <button onClick={() => setFilter('all')} className="clay-button cursor-pointer">
-                  View All Products
+              <p className="text-text-muted mb-6">Try a different search or filter.</p>
+              {hasActiveFilters && (
+                <button onClick={clearFilters} className="clay-button cursor-pointer">
+                  Clear All Filters
                 </button>
               )}
             </div>
@@ -154,7 +220,6 @@ export default function ShopPage() {
                   href={`/shop/${product.slug}`}
                   className="clay-card p-6 hover:-translate-y-1 transition-all duration-200 cursor-pointer group block"
                 >
-                  {/* Product Type Badge */}
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                       product.type === 'bundle'
@@ -170,7 +235,6 @@ export default function ShopPage() {
                     )}
                   </div>
 
-                  {/* Icon */}
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 text-primary ${
                     packTypeColors[product.resources?.[0]?.pack_type || 'vocabulary_pack']
                   }`}>

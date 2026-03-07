@@ -37,34 +37,51 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
     return { ok: true, id: 'dev-' + Date.now() }
   }
 
-  try {
-    const res = await fetch(RESEND_API_URL, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: params.from || getFromAddress(),
-        to: [params.to],
-        subject: params.subject,
-        html: params.html,
-        reply_to: params.replyTo,
-      }),
-    })
+  const maxRetries = 3
+  let lastError = ''
 
-    if (!res.ok) {
-      const err = await res.text()
-      console.error('[email] Resend API error:', res.status, err)
-      return { ok: false, error: `Resend API error: ${res.status}` }
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const res = await fetch(RESEND_API_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: params.from || getFromAddress(),
+          to: [params.to],
+          subject: params.subject,
+          html: params.html,
+          reply_to: params.replyTo,
+        }),
+      })
+
+      if (res.ok) {
+        const data = await res.json() as { id: string }
+        return { ok: true, id: data.id }
+      }
+
+      lastError = `Resend API error: ${res.status}`
+      const errBody = await res.text()
+      console.error(`[email] Attempt ${attempt}/${maxRetries} failed:`, res.status, errBody)
+
+      // Don't retry on 4xx client errors (except 429 rate limit)
+      if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+        return { ok: false, error: lastError }
+      }
+    } catch (error) {
+      lastError = 'Email send failed'
+      console.error(`[email] Attempt ${attempt}/${maxRetries} exception:`, error)
     }
 
-    const data = await res.json() as { id: string }
-    return { ok: true, id: data.id }
-  } catch (error) {
-    console.error('[email] Send failed:', error)
-    return { ok: false, error: 'Email send failed' }
+    // Wait before retry: 500ms, 1500ms
+    if (attempt < maxRetries) {
+      await new Promise(r => setTimeout(r, attempt * 500))
+    }
   }
+
+  return { ok: false, error: lastError }
 }
 
 // ============================================
