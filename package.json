@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "preview": "wrangler dev",
-    "deploy": "node scripts/build-cf.mjs && wrangler deploy",
+    "deploy": "node scripts/build-cf.cjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run",

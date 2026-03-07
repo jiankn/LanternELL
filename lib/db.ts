@@ -32,39 +32,45 @@ export function setDb(database: DatabaseAdapter | null) {
 }
 
 async function createDefaultDb(): Promise<DatabaseAdapter | null> {
+  // In production (Cloudflare Workers), always use D1 binding
   const cloudflareDb = await createCloudflareDb();
   if (cloudflareDb) {
     return cloudflareDb;
   }
 
+  // Local dev fallback — dynamically import @libsql/client via new Function
+  // to completely hide it from static analysis by Next.js and esbuild
   if (typeof process === 'undefined') {
     return null;
   }
 
-  // Use a runtime-evaluated module path to prevent the bundler from statically
-  // resolving and including @libsql/client (which brings in node:stream etc.)
-  const libsqlModule = '@libsql' + '/client';
-  const { createClient } = await import(/* webpackIgnore: true */ libsqlModule);
+  try {
+    const dynamicImport = new Function('specifier', 'return import(specifier)');
+    const { createClient } = await dynamicImport('@libsql/client');
 
-  const url = process.env.DATABASE_URL || 'file:local.db';
-  const authToken = process.env.DATABASE_AUTH_TOKEN || undefined;
-  const client = createClient({ url, authToken });
+    const url = process.env.DATABASE_URL || 'file:local.db';
+    const authToken = process.env.DATABASE_AUTH_TOKEN || undefined;
+    const client = createClient({ url, authToken });
 
-  await applyMigrations(client, url);
+    await applyMigrations(client, url);
 
-  return {
-    async execute(sql: string, params: unknown[] = []) {
-      const result = await client.execute({
-        sql,
-        args: params as any[],
-      });
+    return {
+      async execute(sql: string, params: unknown[] = []) {
+        const result = await client.execute({
+          sql,
+          args: params as any[],
+        });
 
-      return {
-        rows: result.rows as QueryRow[],
-        rowsAffected: Number(result.rowsAffected ?? 0),
-      };
-    },
-  };
+        return {
+          rows: result.rows as QueryRow[],
+          rowsAffected: Number(result.rowsAffected ?? 0),
+        };
+      },
+    };
+  } catch {
+    // @libsql/client not available (production build) — this is expected
+    return null;
+  }
 }
 
 async function createCloudflareDb(): Promise<DatabaseAdapter | null> {
