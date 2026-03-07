@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  Check,
-  Star,
   Sparkles,
-  ArrowRight,
   Download,
   Users,
   Zap,
@@ -13,13 +10,14 @@ import {
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { FaqAccordion } from '@/components/ui/faq-accordion'
+import { PricingCards } from '@/components/ui/pricing-cards'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
   title: 'Pricing — ELL Teaching Packs & Membership Plans',
   description:
-    'Choose the right plan for your classroom. Single packs from $3.99, bundles from $19, or get unlimited access with All Access membership starting at $9/mo.',
+    'Choose the right plan for your classroom. Single packs from $3.99, bundles from $19, or get unlimited access with All Access membership — $9/mo or $89/year.',
   alternates: { canonical: `${BASE_URL}/pricing` },
   openGraph: {
     title: 'LanternELL Pricing — Plans for Every Teacher',
@@ -29,84 +27,6 @@ export const metadata: Metadata = {
   },
 }
 
-const tiers = [
-  {
-    name: 'Single Packs',
-    description: 'Perfect for trying out or targeting a specific topic',
-    price: '$3.99',
-    priceNote: '– $9.99 per pack',
-    period: '',
-    cta: 'Browse Packs',
-    ctaHref: '/shop',
-    highlight: false,
-    icon: <Download className="w-6 h-6" />,
-    features: [
-      'One printable teaching pack',
-      'PDF instant download',
-      '6 language pairs available',
-      'Pre-K through Grade 8',
-      'Lifetime access to purchased pack',
-      'Print unlimited copies for your class',
-    ],
-  },
-  {
-    name: 'All Access',
-    description: 'Unlimited access to every resource in the library',
-    price: '$9',
-    priceNote: '/mo',
-    period: 'or $99/year (save 8%)',
-    cta: 'Start All Access',
-    ctaHref: '/shop?filter=membership',
-    highlight: true,
-    badge: 'Most Popular',
-    icon: <Sparkles className="w-6 h-6" />,
-    features: [
-      'Unlimited downloads — every pack',
-      'New packs added weekly',
-      'All 6 language pairs',
-      'SPED visual supports included',
-      'Assessment tools included',
-      'High-resolution, no watermark',
-      'Cancel anytime',
-    ],
-  },
-  {
-    name: 'Bundles',
-    description: 'Curated sets of packs grouped by theme or grade',
-    price: '$19',
-    priceNote: '– $79 per bundle',
-    period: '',
-    cta: 'View Bundles',
-    ctaHref: '/shop?filter=bundle',
-    highlight: false,
-    icon: <Users className="w-6 h-6" />,
-    features: [
-      '4–10 packs per bundle',
-      'Save up to 40% vs singles',
-      'Themed collections (Back to School, etc.)',
-      'Grade-level starter kits',
-      'Lifetime access to all packs in bundle',
-      'Print unlimited copies for your class',
-    ],
-  },
-]
-
-const comparisonFeatures = [
-  { name: 'Printable PDF packs', single: true, bundle: true, membership: true },
-  { name: '6 language pairs (ES, ZH, AR, VI, FR, PT)', single: true, bundle: true, membership: true },
-  { name: 'Pre-K through Grade 8', single: true, bundle: true, membership: true },
-  { name: 'Unlimited classroom printing', single: true, bundle: true, membership: true },
-  { name: 'Vocabulary packs', single: true, bundle: true, membership: true },
-  { name: 'Sentence frames', single: true, bundle: true, membership: true },
-  { name: 'Classroom labels', single: true, bundle: true, membership: true },
-  { name: 'Parent communication sheets', single: true, bundle: true, membership: true },
-  { name: 'SPED visual supports', single: false, bundle: 'Some', membership: true },
-  { name: 'Assessment tools', single: false, bundle: 'Some', membership: true },
-  { name: 'New weekly packs', single: false, bundle: false, membership: true },
-  { name: 'High-res / no watermark', single: true, bundle: true, membership: true },
-  { name: 'Bundle discount (up to 40%)', single: false, bundle: true, membership: 'N/A' },
-]
-
 const faqs = [
   {
     question: 'Can I try before I buy?',
@@ -114,9 +34,14 @@ const faqs = [
       'Yes. We offer free sample packs on our shop page so you can see the quality before purchasing. No credit card required.',
   },
   {
+    question: 'What is the difference between monthly and annual billing?',
+    answer:
+      'Monthly billing is $9/mo. Annual billing is $89/year — that\'s 2 months free, saving you $19 compared to paying monthly. You can switch plans or cancel anytime from your account settings.',
+  },
+  {
     question: 'What formats are the packs in?',
     answer:
-      'All packs are delivered as print-ready PDF files. Just download, print, and use in your classroom. Some packs include multiple page sizes (Letter and A4).',
+      'All packs are delivered as print-ready PDF files. Just download, print, and use in your classroom. Some packs include both US Letter and A4 sizes.',
   },
   {
     question: 'Can I share packs with other teachers?',
@@ -126,7 +51,7 @@ const faqs = [
   {
     question: 'How does the All Access membership work?',
     answer:
-      'With All Access, you get unlimited downloads of every pack in our library for as long as your subscription is active. New packs are added weekly. You can cancel anytime.',
+      'With All Access, you get unlimited downloads of every pack in our library for as long as your subscription is active. New packs are added weekly. You can cancel anytime from your account settings.',
   },
   {
     question: 'What is your refund policy?',
@@ -139,18 +64,6 @@ const faqs = [
       'Yes. Contact us at support@lanternell.com for custom pricing for schools, districts, and tutoring centers.',
   },
 ]
-
-function CheckIcon() {
-  return <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-}
-
-function XIcon() {
-  return (
-    <svg className="w-5 h-5 text-gray-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
-    </svg>
-  )
-}
 
 export default function PricingPage() {
   const jsonLd = {
@@ -180,7 +93,7 @@ export default function PricingPage() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-6">
             <Zap className="w-4 h-4 text-cta" />
@@ -195,111 +108,10 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
+      {/* Pricing Cards (client — billing toggle) */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
-            {tiers.map((tier) => (
-              <div
-                key={tier.name}
-                className={`clay-card p-8 relative ${
-                  tier.highlight
-                    ? 'ring-2 ring-cta md:-mt-4 md:mb-0 md:pb-10'
-                    : ''
-                }`}
-              >
-                {tier.badge && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 px-4 py-1 bg-gradient-to-r from-cta to-[#ea580c] text-white text-xs font-bold rounded-full shadow-clay-sm">
-                      <Star className="w-3 h-3 fill-white" /> {tier.badge}
-                    </span>
-                  </div>
-                )}
-
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                  tier.highlight ? 'bg-cta/10 text-cta' : 'bg-primary/10 text-primary'
-                }`}>
-                  {tier.icon}
-                </div>
-
-                <h3 className="font-heading text-2xl font-bold text-text-primary mb-1">
-                  {tier.name}
-                </h3>
-                <p className="text-sm text-text-primary/60 mb-6">{tier.description}</p>
-
-                <div className="mb-6">
-                  <span className={`font-heading text-4xl font-bold ${
-                    tier.highlight ? 'text-cta' : 'text-primary'
-                  }`}>
-                    {tier.price}
-                  </span>
-                  <span className="text-text-primary/60 text-sm">{tier.priceNote}</span>
-                  {tier.period && (
-                    <p className="text-xs text-text-muted mt-1">{tier.period}</p>
-                  )}
-                </div>
-
-                <Link
-                  href={tier.ctaHref}
-                  className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 ${
-                    tier.highlight
-                      ? 'clay-button-cta w-full justify-center'
-                      : 'clay-button w-full justify-center'
-                  }`}
-                >
-                  {tier.cta} <ArrowRight className="w-4 h-4 inline ml-1" />
-                </Link>
-
-                <ul className="space-y-3">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-text-primary/80">
-                      <CheckIcon />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Comparison Table */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl font-bold text-text-primary text-center mb-10">
-            Compare Plans
-          </h2>
-          <div className="clay-card overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-100">
-                    <th className="text-left py-4 px-6 font-heading font-semibold text-text-primary">Feature</th>
-                    <th className="text-center py-4 px-4 font-heading font-semibold text-text-primary">Single</th>
-                    <th className="text-center py-4 px-4 font-heading font-semibold text-text-primary">Bundle</th>
-                    <th className="text-center py-4 px-4 font-heading font-semibold text-cta">All Access</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonFeatures.map((row, i) => (
-                    <tr key={row.name} className={i % 2 === 0 ? 'bg-background/30' : ''}>
-                      <td className="py-3 px-6 text-text-primary/80">{row.name}</td>
-                      <td className="py-3 px-4 text-center">
-                        {row.single === true ? <CheckIcon /> : row.single === false ? <XIcon /> : <span className="text-xs text-text-muted">{row.single}</span>}
-                      </td>
-                      <td className="py-3 px-4 text-center">
-                        {row.bundle === true ? <CheckIcon /> : row.bundle === false ? <XIcon /> : <span className="text-xs text-text-muted">{row.bundle}</span>}
-                      </td>
-                      <td className="py-3 px-4 text-center">
-                        {row.membership === true ? <CheckIcon /> : row.membership === false ? <XIcon /> : <span className="text-xs text-text-muted">{row.membership}</span>}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <PricingCards />
         </div>
       </section>
 
@@ -318,6 +130,33 @@ export default function PricingPage() {
                 <span className="text-xs font-medium text-text-primary/70">{badge.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Annual value callout */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="clay-card p-6 sm:p-8 bg-gradient-to-br from-primary/5 to-cta/5">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center shrink-0">
+                <Sparkles className="w-8 h-8 text-green-600" />
+              </div>
+              <div>
+                <h2 className="font-heading text-xl font-bold text-text-primary mb-2">
+                  Annual plan — the smart choice for full-year teachers
+                </h2>
+                <p className="text-text-primary/70 text-sm leading-relaxed">
+                  Pay $89 once and get unlimited access for the entire school year. That's less than $7.50/month — 2 months free compared to monthly billing. Perfect for teachers who use resources throughout the year.
+                </p>
+              </div>
+              <Link
+                href="/shop?filter=membership"
+                className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
+              >
+                Get Annual — $89/yr
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -351,6 +190,9 @@ export default function PricingPage() {
                 Browse Free Samples
               </Link>
             </div>
+            <p className="text-xs text-text-muted mt-4">
+              Or save $19 with <Link href="/shop?filter=membership" className="text-primary hover:underline">annual billing at $89/year</Link>
+            </p>
           </div>
         </div>
       </section>
