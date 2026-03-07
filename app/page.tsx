@@ -58,7 +58,7 @@ const faqs = [
   { question: 'Can I use these for special education students?', answer: 'Yes. Our visual supports packs are designed for both ELL newcomers and students with IEPs/504 plans. The visual scaffolding, simplified language, and structured formats work well across both populations.' },
   { question: 'What file formats do you offer?', answer: 'All resources are delivered as PDF files, formatted for US Letter (8.5" x 11") and A4, ready to print.' },
   { question: 'Can I use these bilingual resources in my classroom?', answer: 'Yes. Single-teacher licenses allow use in one classroom. School-wide licenses are also available for districts and programs.' },
-  { question: 'Do you offer refunds?', answer: 'Yes, we offer a 30-day money-back guarantee if you are not satisfied with your purchase.' },
+  { question: 'Do you offer refunds?', answer: 'All digital download sales are final. We offer free sample packs so you can try before you buy. Exceptions apply for duplicate charges, corrupted files, or content materially different from the description — contact us within 7 days of purchase.' },
 ]
 
 export default function LandingPage() {
@@ -244,7 +244,7 @@ export default function LandingPage() {
               <Link href="/pricing" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> 30-Day Guarantee</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Free Samples Available</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Cancel Anytime</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Instant Download</span>
             </div>

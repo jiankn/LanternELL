@@ -49,7 +49,7 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-heading text-lg font-semibold text-text-primary mb-2">Refunds</h3>
-                <p className="text-text-primary/80 leading-relaxed">We offer a 30-day money-back guarantee on all purchases. See our <a href="/refund-policy" className="text-primary hover:underline">refund policy</a> for details.</p>
+                <p className="text-text-primary/80 leading-relaxed">All digital download sales are final. We offer free samples on every product page so you can try before you buy. If you were charged twice, received a corrupted file, or the content is materially different from the description, email us within 7 days. See our <a href="/refund-policy" className="text-primary hover:underline">refund policy</a> for details.</p>
               </div>
 
               <div>

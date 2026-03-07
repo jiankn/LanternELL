@@ -131,7 +131,7 @@ const faqs = [
   {
     question: 'What is your refund policy?',
     answer:
-      'We offer a 30-day money-back guarantee on all purchases. If you are not satisfied, contact us for a full refund. No questions asked.',
+      'All sales are final on digital downloads. We encourage you to download our free samples before purchasing. Exceptions apply for duplicate charges, corrupted files, or content materially different from the description — report within 7 days of purchase.',
   },
   {
     question: 'Do you offer school or district pricing?',
@@ -184,7 +184,7 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-6">
             <Zap className="w-4 h-4 text-cta" />
-            <span className="text-sm font-medium text-text-primary">30-Day Money-Back Guarantee</span>
+            <span className="text-sm font-medium text-text-primary">Free Samples Before You Buy</span>
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             Simple Pricing for <span className="text-gradient">Every Classroom</span>
@@ -308,7 +308,7 @@ export default function PricingPage() {
         <div className="max-w-3xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: <Shield className="w-6 h-6" />, label: '30-Day Guarantee' },
+              { icon: <Shield className="w-6 h-6" />, label: 'Free Samples Available' },
               { icon: <Download className="w-6 h-6" />, label: 'Instant Download' },
               { icon: <Zap className="w-6 h-6" />, label: 'Cancel Anytime' },
               { icon: <Users className="w-6 h-6" />, label: '10,000+ Teachers' },

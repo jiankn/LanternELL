@@ -286,7 +286,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
                 <div className="flex items-center justify-center gap-2 text-sm text-text-muted mb-6">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  30-day money-back guarantee
+                  Free samples available before you buy
                 </div>
 
                 <div className="border-t border-text-primary/10 pt-6 space-y-4">
