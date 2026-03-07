@@ -42,27 +42,9 @@ producers = [
   { binding = "EMAIL_QUEUE", queue = "lanternell-email" },
   { binding = "WEBHOOK_QUEUE", queue = "lanternell-webhook" }
 ]
-
-[[queues.consumers]]
-queue = "lanternell-email"
-max_batch_size = 5
-max_retries = 3
-dead_letter_queue = "lanternell-dlq"
-
-[[queues.consumers]]
-queue = "lanternell-content"
-max_batch_size = 1
-max_retries = 2
-
-[[queues.consumers]]
-queue = "lanternell-render"
-max_batch_size = 1
-max_retries = 2
-
-[[queues.consumers]]
-queue = "lanternell-webhook"
-max_batch_size = 10
-max_retries = 3
+# Note: Queue consumers require a separate worker with queue() export.
+# OpenNext workers only export fetch(). Async processing is handled
+# via internal API routes called from the queue producer side.
 
 # ------------------
 # Browser Rendering (for PDF generation)
