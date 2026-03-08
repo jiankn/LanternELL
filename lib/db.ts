@@ -35,12 +35,16 @@ async function createDefaultDb(): Promise<DatabaseAdapter | null> {
   // In production (Cloudflare Workers), always use D1 binding
   const cloudflareDb = await createCloudflareDb();
   if (cloudflareDb) {
+    console.log('[db] Using Cloudflare D1 database');
     return cloudflareDb;
   }
+
+  console.log('[db] Cloudflare D1 not available, trying local database...');
 
   // Local dev fallback — dynamically import @libsql/client via new Function
   // to completely hide it from static analysis by Next.js and esbuild
   if (typeof process === 'undefined') {
+    console.log('[db] process is undefined, cannot use local database');
     return null;
   }
 
@@ -50,9 +54,11 @@ async function createDefaultDb(): Promise<DatabaseAdapter | null> {
 
     const url = process.env.DATABASE_URL || 'file:local.db';
     const authToken = process.env.DATABASE_AUTH_TOKEN || undefined;
+    console.log(`[db] Creating libsql client with url=${url}`);
     const client = createClient({ url, authToken });
 
     await applyMigrations(client, url);
+    console.log('[db] Local database initialized successfully');
 
     return {
       async execute(sql: string, params: unknown[] = []) {
@@ -67,8 +73,8 @@ async function createDefaultDb(): Promise<DatabaseAdapter | null> {
         };
       },
     };
-  } catch {
-    // @libsql/client not available (production build) — this is expected
+  } catch (err) {
+    console.error('[db] Failed to initialize local database:', err);
     return null;
   }
 }
@@ -81,6 +87,7 @@ async function createCloudflareDb(): Promise<DatabaseAdapter | null> {
     const d1 = env.DB;
 
     if (!d1) {
+      console.log('[db] No D1 binding found in Cloudflare context');
       return null;
     }
 
@@ -110,11 +117,14 @@ async function createCloudflareDb(): Promise<DatabaseAdapter | null> {
 
 async function applyMigrations(client: any, url: string) {
   if (!url.startsWith('file:')) {
+    console.log(`[db] Skipping migrations for non-file database: ${url}`);
     return;
   }
 
   const fs = await import('node:fs/promises');
   const path = await import('node:path');
+
+  console.log('[db] Applying migrations...');
 
   await client.execute(`
     CREATE TABLE IF NOT EXISTS _lanternell_migrations (
@@ -124,9 +134,16 @@ async function applyMigrations(client: any, url: string) {
   `);
 
   const migrationsDir = path.join(process.cwd(), 'migrations');
-  const migrationFiles = (await fs.readdir(migrationsDir))
-    .filter((file) => file.endsWith('.sql'))
-    .sort();
+  let migrationFiles: string[];
+  try {
+    migrationFiles = (await fs.readdir(migrationsDir))
+      .filter((file) => file.endsWith('.sql'))
+      .sort();
+    console.log(`[db] Found ${migrationFiles.length} migration files`);
+  } catch (err) {
+    console.error(`[db] Failed to read migrations directory: ${migrationsDir}`, err);
+    return;
+  }
 
   for (const file of migrationFiles) {
     const existing = await client.execute({

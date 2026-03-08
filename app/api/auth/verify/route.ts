@@ -14,8 +14,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(fallbackRedirect);
   }
 
+  console.log(`[auth:verify] Verifying token for email=${email}`);
+
   try {
     const tokenHash = await hashToken(token);
+    console.log(`[auth:verify] Token hash=${tokenHash.substring(0, 16)}...`);
 
     // Find the magic link
     const magicLink = await queryOne<{
@@ -37,6 +40,19 @@ export async function GET(request: NextRequest) {
     );
 
     if (!magicLink) {
+      console.log(`[auth:verify] Magic link not found for email=${email}, hash=${tokenHash.substring(0, 16)}...`);
+      
+      // Debug: check if any magic link exists for this email
+      const anyLink = await queryOne<{ id: string; token_hash: string; expires_at: string; used_at: string | null }>(
+        'SELECT id, token_hash, expires_at, used_at FROM auth_magic_links WHERE email = ? ORDER BY created_at DESC LIMIT 1',
+        [email.toLowerCase()]
+      );
+      if (anyLink) {
+        console.log(`[auth:verify] Found latest link: hash=${anyLink.token_hash?.substring(0, 16)}..., expires=${anyLink.expires_at}, used=${anyLink.used_at}`);
+      } else {
+        console.log(`[auth:verify] No magic links found for this email`);
+      }
+      
       return NextResponse.redirect(new URL('/account/library?error=invalid_or_expired', request.url));
     }
 
