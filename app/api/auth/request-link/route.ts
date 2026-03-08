@@ -81,7 +81,8 @@ export async function POST(request: NextRequest) {
     }
 
     // In dev mode, also return the link directly
-    const isDev = !isEmailConfigured() || process.env.APP_ENV === 'development';
+    const isEmailOk = await isEmailConfigured();
+    const isDev = !isEmailOk || process.env.APP_ENV === 'development';
 
     return NextResponse.json({
       ok: true,

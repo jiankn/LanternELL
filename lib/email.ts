@@ -16,20 +16,43 @@ interface SendEmailResult {
   error?: string
 }
 
-function getResendApiKey(): string | null {
-  return process.env.RESEND_API_KEY || null
+async function getResendApiKey(): Promise<string | null> {
+  // Try process.env first (for local dev)
+  if (process.env.RESEND_API_KEY) {
+    return process.env.RESEND_API_KEY
+  }
+  // Try Cloudflare context (for production)
+  try {
+    const { getCloudflareContext } = await import('@opennextjs/cloudflare')
+    const context = await getCloudflareContext()
+    const env = (context?.env || {}) as Record<string, any>
+    return env.RESEND_API_KEY || null
+  } catch {
+    return null
+  }
 }
 
-function getFromAddress(): string {
-  return process.env.EMAIL_FROM || 'LanternELL <noreply@lanternell.com>'
+async function getFromAddress(): Promise<string> {
+  if (process.env.EMAIL_FROM) {
+    return process.env.EMAIL_FROM
+  }
+  try {
+    const { getCloudflareContext } = await import('@opennextjs/cloudflare')
+    const context = await getCloudflareContext()
+    const env = (context?.env || {}) as Record<string, any>
+    return env.EMAIL_FROM || 'LanternELL <noreply@lanternell.com>'
+  } catch {
+    return 'LanternELL <noreply@lanternell.com>'
+  }
 }
 
-export function isEmailConfigured(): boolean {
-  return !!getResendApiKey()
+export async function isEmailConfigured(): Promise<boolean> {
+  const key = await getResendApiKey()
+  return !!key
 }
 
 export async function sendEmail(params: SendEmailParams): Promise<SendEmailResult> {
-  const apiKey = getResendApiKey()
+  const apiKey = await getResendApiKey()
 
   if (!apiKey) {
     console.warn('[email] RESEND_API_KEY not configured, logging email instead')
@@ -39,6 +62,7 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
 
   const maxRetries = 3
   let lastError = ''
+  const fromAddress = await getFromAddress()
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -49,7 +73,7 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: params.from || getFromAddress(),
+          from: params.from || fromAddress,
           to: [params.to],
           subject: params.subject,
           html: params.html,
