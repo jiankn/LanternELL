@@ -46,8 +46,8 @@ describe('sendEmail', () => {
 
   it('logs email when RESEND_API_KEY is not set', async () => {
     vi.stubEnv('RESEND_API_KEY', '')
-    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
-    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => { })
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => { })
 
     const result = await sendEmail({ to: 'test@example.com', subject: 'Test', html: '<p>Hi</p>' })
     expect(result.ok).toBe(true)
@@ -59,8 +59,8 @@ describe('sendEmail', () => {
 })
 
 describe('isEmailConfigured', () => {
-  it('returns false when no API key', () => {
+  it('returns false when no API key', async () => {
     vi.stubEnv('RESEND_API_KEY', '')
-    expect(isEmailConfigured()).toBe(false)
+    expect(await isEmailConfigured()).toBe(false)
   })
 })
