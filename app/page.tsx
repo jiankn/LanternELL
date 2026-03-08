@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   BookOpen,
   Download,
@@ -32,10 +33,10 @@ export const metadata: Metadata = {
 }
 
 const packs = [
-  { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$8.99', badge: 'Bestseller', icon: <Sparkles className="w-6 h-6" />, color: 'bg-amber-100', href: '/shop' },
-  { id: 2, title: 'Classroom Labels — English-Spanish', description: 'Bilingual labels for classroom furniture, supplies, areas, and daily routines', price: '$3.99', badge: 'Popular', icon: <Globe className="w-6 h-6" />, color: 'bg-emerald-100', href: '/shop' },
-  { id: 3, title: 'Visual Supports Pack', description: 'Visual schedules, emotion cards, and behavior charts for ELL & SPED students', price: '$5.99', badge: 'New', icon: <BookOpen className="w-6 h-6" />, color: 'bg-blue-100', href: '/shop' },
-  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication in multiple languages', price: '$3.99', badge: null, icon: <Heart className="w-6 h-6" />, color: 'bg-rose-100', href: '/shop' },
+  { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$8.99', badge: 'Bestseller', image: '/images/categories/cat-vocabulary.webp', href: '/shop' },
+  { id: 2, title: 'Classroom Labels — English-Spanish', description: 'Bilingual labels for classroom furniture, supplies, areas, and daily routines', price: '$3.99', badge: 'Popular', image: '/images/categories/cat-labels.webp', href: '/shop' },
+  { id: 3, title: 'Sentence Frames Pack', description: 'Bilingual sentence starters, dialogue strips, and speaking prompts for ELL newcomers', price: '$5.99', badge: 'New', image: '/images/categories/cat-sentence.webp', href: '/shop' },
+  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication — welcome letters, homework notes, progress reports', price: '$3.99', badge: null, image: '/images/categories/cat-parents.webp', href: '/shop' },
 ]
 
 const testimonials = [
@@ -147,14 +148,18 @@ export default function LandingPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {packs.map((pack) => (
-              <Link key={pack.id} href={pack.href} className="clay-card p-6 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
-                <div className={`w-12 h-12 ${pack.color} rounded-xl flex items-center justify-center mb-4 text-primary`}>{pack.icon}</div>
-                {pack.badge && <span className="inline-block px-3 py-1 bg-cta/10 text-cta text-xs font-semibold rounded-full mb-3">{pack.badge}</span>}
-                <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">{pack.title}</h3>
-                <p className="text-sm text-text-primary/70 mb-4">{pack.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-heading text-xl font-bold text-primary">{pack.price}</span>
-                  <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <ArrowRight className="w-4 h-4" /></span>
+              <Link key={pack.id} href={pack.href} className="clay-card overflow-hidden hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col">
+                <div className="relative h-48 w-full bg-slate-100">
+                  <Image src={pack.image} alt={pack.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  {pack.badge && <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full shadow-sm">{pack.badge}</span>}
+                </div>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-1">{pack.title}</h3>
+                  <p className="text-sm text-text-primary/70 mb-4 flex-grow line-clamp-2">{pack.description}</p>
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="font-heading text-xl font-bold text-primary">{pack.price}</span>
+                    <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">View Pack <ArrowRight className="w-4 h-4" /></span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -229,24 +234,31 @@ export default function LandingPage() {
       {/* H2: Bilingual Classroom Labels & Sentence Frames */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="clay-card p-8 sm:p-12 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-cta to-[#ea580c] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-clay-button">
-              <Download className="w-8 h-8 text-white" />
+          <div className="clay-card overflow-hidden">
+            <div className="relative h-64 w-full">
+              <Image
+                src="/images/mockups/bundle-showcase.webp"
+                alt="Complete K-8 ELL Teaching Pack bundle showcase"
+                fill
+                className="object-cover"
+              />
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-              Bilingual Classroom Labels & Sentence Frames
-            </h2>
-            <p className="text-lg text-text-primary/70 mb-8 max-w-xl mx-auto">
-              Get instant access to our complete library of <Link href="/shop" className="text-primary hover:underline">printable ELL resources</Link>. New packs added weekly.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $9/mo</Link>
-              <Link href="/pricing" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Free Samples Available</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Cancel Anytime</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Instant Download</span>
+            <div className="p-8 sm:p-12 text-center">
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                Bilingual Classroom Labels & Sentence Frames
+              </h2>
+              <p className="text-lg text-text-primary/70 mb-8 max-w-xl mx-auto">
+                Get instant access to our complete library of <Link href="/shop" className="text-primary hover:underline">printable ELL resources</Link>. New packs added weekly.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $9/mo</Link>
+                <Link href="/pricing" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
+                <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Free Samples Available</span>
+                <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Cancel Anytime</span>
+                <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-500" /> Instant Download</span>
+              </div>
             </div>
           </div>
         </div>
