@@ -1,44 +1,53 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { queryOne } from '@/lib/db'
+import { getCurrentUser } from '@/lib/auth'
 import { createPortalSession } from '@/lib/stripe'
+
+export const dynamic = 'force-dynamic'
 
 export async function POST(request: NextRequest) {
   try {
-    const sessionToken = request.cookies.get('session_token')?.value
-    if (!sessionToken) {
-      return NextResponse.json({ ok: false, error: { message: 'Not authenticated' } }, { status: 401 })
+    const user = await getCurrentUser(request)
+    if (!user) {
+      return NextResponse.json(
+        { ok: false, data: null, error: { code: 'UNAUTHORIZED', message: 'Not authenticated' } },
+        { status: 401 }
+      )
     }
 
-    const { hashToken } = await import('@/lib/db')
-    const tokenHash = await hashToken(sessionToken)
-
-    const session = await queryOne<{ user_id: string }>(
-      'SELECT user_id FROM sessions WHERE token_hash = ? AND expires_at > datetime(\'now\')',
-      [tokenHash]
-    )
-    if (!session) {
-      return NextResponse.json({ ok: false, error: { message: 'Session expired' } }, { status: 401 })
+    if (!user.stripe_customer_id) {
+      return NextResponse.json(
+        { ok: false, data: null, error: { code: 'NO_SUBSCRIPTION', message: 'No subscription found' } },
+        { status: 400 }
+      )
     }
 
-    const user = await queryOne<{ stripe_customer_id: string | null }>(
-      'SELECT stripe_customer_id FROM users WHERE id = ?',
-      [session.user_id]
-    )
-
-    if (!user?.stripe_customer_id) {
-      return NextResponse.json({ ok: false, error: { message: 'No subscription found' } }, { status: 400 })
+    let baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || ''
+    if (!baseUrl) {
+      try {
+        const { getCloudflareContext } = await import('@opennextjs/cloudflare')
+        const context = await getCloudflareContext()
+        const env = (context?.env || {}) as Record<string, any>
+        baseUrl = env.NEXT_PUBLIC_SITE_URL || env.APP_URL || 'https://lanternell.com'
+      } catch {
+        baseUrl = 'https://lanternell.com'
+      }
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'https://lanternell.com'
-    const portalUrl = await createPortalSession(user.stripe_customer_id, `${baseUrl}/account/library`)
+    const portalUrl = await createPortalSession(user.stripe_customer_id, `${baseUrl}/account`)
 
     if (!portalUrl) {
-      return NextResponse.json({ ok: false, error: { message: 'Failed to create portal session' } }, { status: 500 })
+      return NextResponse.json(
+        { ok: false, data: null, error: { code: 'PORTAL_ERROR', message: 'Failed to create portal session' } },
+        { status: 500 }
+      )
     }
 
-    return NextResponse.json({ ok: true, data: { portalUrl } })
+    return NextResponse.json({ ok: true, data: { portalUrl }, error: null })
   } catch (error) {
     console.error('Portal session error:', error)
-    return NextResponse.json({ ok: false, error: { message: 'Internal error' } }, { status: 500 })
+    return NextResponse.json(
+      { ok: false, data: null, error: { code: 'SERVER_ERROR', message: 'Internal error' } },
+      { status: 500 }
+    )
   }
 }

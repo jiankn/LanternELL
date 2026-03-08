@@ -67,6 +67,8 @@ crons = [
 [vars]
 APP_ENV = "production"
 APP_URL = "https://lanternell.com"
+NEXT_PUBLIC_SITE_URL = "https://lanternell.com"
+EMAIL_FROM = "LanternELL <noreply@lanternell.com>"
 AI_ACTIVE_PROVIDER = "gemini"
 AI_FALLBACK_PROVIDER = "deepseek"
 ZHIPUAI_MODEL = "glm-4.7"

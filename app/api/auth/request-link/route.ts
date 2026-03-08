@@ -66,8 +66,20 @@ export async function POST(request: NextRequest) {
     );
 
     // Send magic link email
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'http://localhost:3000';
+    let baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || '';
+    if (!baseUrl) {
+      try {
+        const { getCloudflareContext } = await import('@opennextjs/cloudflare');
+        const context = await getCloudflareContext();
+        const env = (context?.env || {}) as Record<string, any>;
+        baseUrl = env.NEXT_PUBLIC_SITE_URL || env.APP_URL || 'http://localhost:3000';
+      } catch {
+        baseUrl = 'http://localhost:3000';
+      }
+    }
     const magicLink = `${baseUrl}/api/auth/verify?token=${token}&email=${encodeURIComponent(email)}`;
+
+    console.log(`[auth] Sending magic link to ${email.toLowerCase()}, baseUrl=${baseUrl}`);
 
     const emailTemplate = magicLinkEmail(magicLink);
     const emailResult = await sendEmail({
@@ -77,7 +89,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (!emailResult.ok) {
-      console.error('Failed to send magic link email:', emailResult.error);
+      console.error('[auth] Failed to send magic link email:', emailResult.error);
+    } else {
+      console.log(`[auth] Magic link email sent successfully, id=${emailResult.id}`);
     }
 
     // In dev mode, also return the link directly
