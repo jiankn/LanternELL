@@ -121,7 +121,7 @@ export function PricingCards() {
         <BillingToggle onChange={setIsAnnual} />
         {isAnnual && (
           <p className="text-center text-sm text-green-600 font-medium mt-3">
-            Annual plan active — you save $19 per year on All Access
+            Annual plan active — you save $29 per year on All Access
           </p>
         )}
       </div>
@@ -132,8 +132,8 @@ export function PricingCards() {
           <div
             key={tier.name}
             className={`clay-card p-8 relative transition-all duration-200 ${tier.highlight
-                ? 'ring-2 ring-cta md:-mt-4 md:pb-10'
-                : ''
+              ? 'ring-2 ring-cta md:-mt-4 md:pb-10'
+              : ''
               }`}
           >
             {tier.badge && (
@@ -170,8 +170,8 @@ export function PricingCards() {
             <Link
               href={tier.ctaHref}
               className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 ${tier.highlight
-                  ? 'clay-button-cta w-full justify-center'
-                  : 'clay-button w-full justify-center'
+                ? 'clay-button-cta w-full justify-center'
+                : 'clay-button w-full justify-center'
                 }`}
             >
               {tier.cta} <ArrowRight className="w-4 h-4 inline ml-1" />

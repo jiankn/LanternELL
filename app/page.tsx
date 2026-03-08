@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 }
 
 const packs = [
-  { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$9.99', badge: 'Bestseller', icon: <Sparkles className="w-6 h-6" />, color: 'bg-amber-100', href: '/shop' },
+  { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$8.99', badge: 'Bestseller', icon: <Sparkles className="w-6 h-6" />, color: 'bg-amber-100', href: '/shop' },
   { id: 2, title: 'Classroom Labels — 6 Languages', description: 'Bilingual labels in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese', price: '$5.99', badge: 'Popular', icon: <Globe className="w-6 h-6" />, color: 'bg-emerald-100', href: '/shop' },
-  { id: 3, title: 'Visual Supports Pack', description: 'Visual schedules, emotion cards, and behavior charts for ELL & SPED students', price: '$7.99', badge: 'New', icon: <BookOpen className="w-6 h-6" />, color: 'bg-blue-100', href: '/shop' },
-  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication in multiple languages', price: '$4.99', badge: null, icon: <Heart className="w-6 h-6" />, color: 'bg-rose-100', href: '/shop' },
+  { id: 3, title: 'Visual Supports Pack', description: 'Visual schedules, emotion cards, and behavior charts for ELL & SPED students', price: '$5.99', badge: 'New', icon: <BookOpen className="w-6 h-6" />, color: 'bg-blue-100', href: '/shop' },
+  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication in multiple languages', price: '$3.99', badge: null, icon: <Heart className="w-6 h-6" />, color: 'bg-rose-100', href: '/shop' },
 ]
 
 const testimonials = [
@@ -240,7 +240,7 @@ export default function LandingPage() {
               Get instant access to our complete library of <Link href="/shop" className="text-primary hover:underline">printable ELL resources</Link>. New packs added weekly.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $19/mo</Link>
+              <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $9/mo</Link>
               <Link href="/pricing" className="clay-button text-lg cursor-pointer">View Pricing Options</Link>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
