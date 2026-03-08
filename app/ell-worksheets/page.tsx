@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { query } from '@/lib/db'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
@@ -27,12 +28,10 @@ interface Product {
 }
 
 const categories = [
-  { key: 'vocabulary_pack', label: 'Vocabulary Packs', icon: Sparkles, description: 'Picture word cards, tracing activities, and matching exercises for building core vocabulary. English-Spanish bilingual.' },
-  { key: 'sentence_frames', label: 'Sentence Frames', icon: BookOpen, description: 'Structured sentence starters that help ELL students form complete sentences. Designed for K-5 classrooms.' },
-  { key: 'classroom_labels', label: 'Classroom Labels', icon: Globe, description: 'Bilingual English-Spanish labels for classroom furniture, areas, routines, and daily schedules.' },
-  { key: 'visual_supports', label: 'Visual Supports', icon: Eye, description: 'Visual schedules, emotion cards, social stories, and behavior charts for ELL newcomers. Also helpful for students with IEPs.' },
-  { key: 'parent_communication', label: 'Parent Communication', icon: Heart, description: 'Bilingual notes, newsletters, and forms for home-school communication with multilingual families.' },
-  { key: 'assessment_tools', label: 'Assessment Tools', icon: ClipboardCheck, description: 'Progress checklists, self-assessment cards, observation guides, and rubrics for ELL learners.' },
+  { key: 'vocabulary_pack', label: 'Vocabulary Packs', icon: Sparkles, image: '/images/categories/cat-vocabulary.webp', description: 'Picture word cards, tracing activities, and matching exercises for building core vocabulary. English-Spanish bilingual.' },
+  { key: 'sentence_frames', label: 'Sentence Frames', icon: BookOpen, image: '/images/categories/cat-sentence.webp', description: 'Structured sentence starters that help ELL students form complete sentences. Designed for K-5 classrooms.' },
+  { key: 'classroom_labels', label: 'Classroom Labels', icon: Globe, image: '/images/categories/cat-labels.webp', description: 'Bilingual English-Spanish labels for classroom furniture, areas, routines, and daily schedules.' },
+  { key: 'parent_communication', label: 'Parent Communication', icon: Heart, image: '/images/categories/cat-parents.webp', description: 'Bilingual notes, newsletters, and forms for home-school communication with multilingual families.' },
 ]
 
 export default async function EllWorksheetsPage() {
@@ -88,10 +87,18 @@ export default async function EllWorksheetsPage() {
             {categories.map(cat => {
               const Icon = cat.icon
               return (
-                <Link key={cat.key} href={`/shop?type=${cat.key}`} className="clay-card p-6 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
-                  <Icon className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">{cat.label}</h3>
-                  <p className="text-sm text-text-primary/70">{cat.description}</p>
+                <Link key={cat.key} href={`/shop?type=${cat.key}`} className="clay-card overflow-hidden hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col">
+                  <div className="relative h-40 w-full bg-slate-100">
+                    <Image src={cat.image} alt={cat.label} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Icon className="w-5 h-5 text-primary" />
+                      <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors">{cat.label}</h3>
+                    </div>
+                    <p className="text-sm text-text-primary/70 mb-4 flex-grow">{cat.description}</p>
+                    <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Browse Packs <ArrowRight className="w-4 h-4" /></span>
+                  </div>
                 </Link>
               )
             })}
@@ -108,12 +115,17 @@ export default async function EllWorksheetsPage() {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.slice(0, 6).map(p => (
-                <Link key={p.id} href={`/shop/${p.slug}`} className="clay-card p-6 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
-                  <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">{p.name}</h3>
-                  <p className="text-sm text-text-primary/70 mb-4 line-clamp-2">{p.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-heading text-xl font-bold text-primary">${(p.price_cents / 100).toFixed(2)}</span>
-                    <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">View <ArrowRight className="w-4 h-4" /></span>
+                <Link key={p.id} href={`/shop/${p.slug}`} className="clay-card overflow-hidden hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col">
+                  <div className="relative h-48 w-full bg-slate-100">
+                    <Image src="/images/products/placeholder-pack.webp" alt={p.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow">
+                    <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-1">{p.name}</h3>
+                    <p className="text-sm text-text-primary/70 mb-4 flex-grow line-clamp-2">{p.description}</p>
+                    <div className="flex items-center justify-between mt-auto">
+                      <span className="font-heading text-xl font-bold text-primary">${(p.price_cents / 100).toFixed(2)}</span>
+                      <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">View <ArrowRight className="w-4 h-4" /></span>
+                    </div>
                   </div>
                 </Link>
               ))}

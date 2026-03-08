@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   Check,
@@ -116,8 +117,21 @@ export function PricingCards() {
 
   return (
     <>
+      {/* Hero Image / Showcase */}
+      <div className="max-w-4xl mx-auto mb-10 overflow-hidden rounded-2xl shadow-clay-card border-2 border-primary/20">
+        <div className="relative aspect-[21/9] w-full">
+          <Image
+            src="/images/mockups/bundle-showcase.webp"
+            alt="Complete collection of LanternELL teaching resources"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+
       {/* Billing Toggle */}
-      <div className="mb-10">
+      <div className="mb-10 mt-8">
         <BillingToggle onChange={setIsAnnual} />
         {isAnnual && (
           <p className="text-center text-sm text-green-600 font-medium mt-3">
