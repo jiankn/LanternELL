@@ -184,3 +184,36 @@ export async function createPortalSession(
   const session = await res.json();
   return session.url;
 }
+
+// ============================================
+// Cancel All Subscriptions (for account deletion)
+// ============================================
+
+export async function cancelAllSubscriptions(customerId: string): Promise<void> {
+  if (!isStripeConfigured()) return;
+
+  // List active subscriptions
+  const res = await fetch(
+    `${STRIPE_API}/subscriptions?customer=${encodeURIComponent(customerId)}&status=active&limit=100`,
+    { headers: stripeHeaders() }
+  );
+
+  if (!res.ok) {
+    console.error('Failed to list subscriptions:', await res.text());
+    return;
+  }
+
+  const data = await res.json();
+  const subscriptions = data.data || [];
+
+  // Cancel each subscription immediately
+  for (const sub of subscriptions) {
+    const cancelRes = await fetch(`${STRIPE_API}/subscriptions/${sub.id}`, {
+      method: 'DELETE',
+      headers: stripeHeaders(),
+    });
+    if (!cancelRes.ok) {
+      console.error(`Failed to cancel subscription ${sub.id}:`, await cancelRes.text());
+    }
+  }
+}

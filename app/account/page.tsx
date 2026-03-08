@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getProductImage } from '@/lib/product-images'
 import {
     Library,
     Receipt,
@@ -60,19 +61,6 @@ const packTypeColors: Record<string, string> = {
     assessment_tools: 'bg-cyan-100 text-cyan-600',
 }
 
-function getProductImage(type: string, packType?: string, ageBand?: string): string {
-    if (type === 'membership') return '/images/membership.png'
-    if (type === 'bundle') return '/images/bundle.png'
-    const typeImages: Record<string, string> = {
-        vocabulary_pack: '/images/vocab.png',
-        sentence_frames: '/images/sentence.png',
-        classroom_labels: '/images/labels.png',
-        parent_communication: '/images/parent.png',
-        visual_supports: '/images/visual.png',
-        assessment_tools: '/images/assessment.png',
-    }
-    return typeImages[packType || 'vocabulary_pack'] || '/images/vocab.png'
-}
 
 export default function AccountDashboard() {
     const { user } = useAccount()
@@ -90,15 +78,16 @@ export default function AccountDashboard() {
 
     const fetchStats = async () => {
         try {
-            const [libRes, ordRes] = await Promise.all([
+            const [libRes, ordRes, favRes] = await Promise.all([
                 fetch('/api/account/library'),
                 fetch('/api/account/orders'),
+                fetch('/api/account/favorites'),
             ])
-            const [libData, ordData] = await Promise.all([libRes.json(), ordRes.json()])
+            const [libData, ordData, favData] = await Promise.all([libRes.json(), ordRes.json(), favRes.json()])
             setStats({
                 downloads: libData.ok ? (libData.data.items?.length || 0) : 0,
                 orders: ordData.ok ? (ordData.data.orders?.length || 0) : 0,
-                favorites: Math.floor(Math.random() * 5),
+                favorites: favData.ok ? (favData.data.count || 0) : 0,
             })
         } catch {
             // ignore
@@ -290,10 +279,10 @@ export default function AccountDashboard() {
                                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                             <span className={`absolute top-2 left-2 px-2 py-0.5 text-xs font-semibold rounded-full ${product.type === 'bundle'
-                                                    ? 'bg-purple-100/90 text-purple-700'
-                                                    : product.type === 'membership'
-                                                        ? 'bg-cta/10 text-cta bg-white/90'
-                                                        : 'bg-primary/10 text-primary bg-white/90'
+                                                ? 'bg-purple-100/90 text-purple-700'
+                                                : product.type === 'membership'
+                                                    ? 'bg-cta/10 text-cta bg-white/90'
+                                                    : 'bg-primary/10 text-primary bg-white/90'
                                                 }`}>
                                                 {product.type === 'membership' ? 'MEMBER' : product.type.toUpperCase()}
                                             </span>
@@ -444,7 +433,7 @@ export default function AccountDashboard() {
                             Have questions about your resources or account?
                         </p>
                         <Link
-                                            href="mailto:support@lanternell.com"
+                            href="mailto:support@lanternell.com"
                             className="text-sm text-primary hover:underline font-medium"
                         >
                             Contact Support →

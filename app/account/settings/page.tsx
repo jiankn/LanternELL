@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
-    Settings,
     User,
     Mail,
     Bell,
@@ -10,11 +9,12 @@ import {
     Shield,
     CreditCard,
     Download,
-    Trash2,
     Check,
-    ChevronRight,
     Save,
     ExternalLink,
+    AlertTriangle,
+    X,
+    Trash2,
 } from 'lucide-react'
 import { useAccount } from '../use-account'
 
@@ -49,6 +49,7 @@ export default function SettingsPage() {
     const { user, logout } = useAccount()
     const [saving, setSaving] = useState(false)
     const [saved, setSaved] = useState(false)
+    const [editName, setEditName] = useState('')
     const [preferences, setPreferences] = useState<UserPreferences>({
         emailNotifications: true,
         marketingEmails: false,
@@ -56,23 +57,94 @@ export default function SettingsPage() {
         timezone: 'America/New_York',
         downloadFormat: 'pdf',
     })
+    const [portalLoading, setPortalLoading] = useState(false)
+    const [showDeleteModal, setShowDeleteModal] = useState(false)
+    const [deleteEmail, setDeleteEmail] = useState('')
+    const [deleting, setDeleting] = useState(false)
+    const [deleteError, setDeleteError] = useState('')
 
     useEffect(() => {
-        const savedPrefs = localStorage.getItem('user-preferences')
-        if (savedPrefs) {
-            setPreferences(JSON.parse(savedPrefs))
-        }
+        fetchSettings()
     }, [])
+
+    useEffect(() => {
+        if (user?.name) setEditName(user.name)
+    }, [user?.name])
+
+    const fetchSettings = async () => {
+        try {
+            const res = await fetch('/api/account/settings')
+            const data = await res.json()
+            if (data.ok && data.data.preferences) {
+                setPreferences(data.data.preferences)
+            }
+        } catch {
+            // use defaults
+        }
+    }
 
     const handleSave = async () => {
         setSaving(true)
         try {
-            localStorage.setItem('user-preferences', JSON.stringify(preferences))
-            await new Promise((resolve) => setTimeout(resolve, 500))
-            setSaved(true)
-            setTimeout(() => setSaved(false), 2000)
+            const res = await fetch('/api/account/settings', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    preferences,
+                    name: editName.trim() || null,
+                }),
+            })
+            const data = await res.json()
+            if (data.ok) {
+                setSaved(true)
+                setTimeout(() => setSaved(false), 2000)
+            }
         } finally {
             setSaving(false)
+        }
+    }
+
+    const handlePortal = async () => {
+        setPortalLoading(true)
+        try {
+            const res = await fetch('/api/account/portal', { method: 'POST' })
+            const data = await res.json()
+            if (data.ok && data.data.portalUrl) {
+                window.location.href = data.data.portalUrl
+            } else {
+                alert(data.error?.message || 'Unable to open billing portal')
+            }
+        } catch {
+            alert('Failed to open billing portal')
+        } finally {
+            setPortalLoading(false)
+        }
+    }
+
+    const handleDeleteAccount = async () => {
+        if (!user || deleteEmail.toLowerCase() !== user.email.toLowerCase()) {
+            setDeleteError('Email does not match your account email.')
+            return
+        }
+
+        setDeleting(true)
+        setDeleteError('')
+        try {
+            const res = await fetch('/api/account/delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ confirmEmail: deleteEmail }),
+            })
+            const data = await res.json()
+            if (data.ok) {
+                window.location.href = '/'
+            } else {
+                setDeleteError(data.error?.message || 'Failed to delete account')
+            }
+        } catch {
+            setDeleteError('An unexpected error occurred')
+        } finally {
+            setDeleting(false)
         }
     }
 
@@ -118,6 +190,7 @@ export default function SettingsPage() {
                 </button>
             </div>
 
+            {/* Profile Information */}
             <div className="clay-card p-6">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
@@ -137,9 +210,10 @@ export default function SettingsPage() {
                             </label>
                             <input
                                 type="text"
-                                value={user.name || ''}
-                                disabled
-                                className="clay-input w-full bg-gray-50 cursor-not-allowed"
+                                value={editName}
+                                onChange={(e) => setEditName(e.target.value)}
+                                placeholder="Your name"
+                                className="clay-input w-full"
                             />
                         </div>
                         <div>
@@ -157,12 +231,10 @@ export default function SettingsPage() {
                             </div>
                         </div>
                     </div>
-                    <p className="text-xs text-text-muted">
-                        Contact support to update your profile information.
-                    </p>
                 </div>
             </div>
 
+            {/* Notifications */}
             <div className="clay-card p-6">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -211,6 +283,7 @@ export default function SettingsPage() {
                 </div>
             </div>
 
+            {/* Regional Settings */}
             <div className="clay-card p-6">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
@@ -258,6 +331,7 @@ export default function SettingsPage() {
                 </div>
             </div>
 
+            {/* Download Preferences */}
             <div className="clay-card p-6">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
@@ -296,6 +370,7 @@ export default function SettingsPage() {
                 </div>
             </div>
 
+            {/* Billing & Subscription */}
             <div className="clay-card p-6">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
@@ -307,18 +382,24 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
-                <a
-                    href="/api/account/portal"
-                    className="flex items-center justify-between p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer group"
+                <button
+                    onClick={handlePortal}
+                    disabled={portalLoading}
+                    className="flex items-center justify-between w-full p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer group disabled:opacity-50"
                 >
-                    <div>
+                    <div className="text-left">
                         <p className="font-medium text-text-primary">Stripe Customer Portal</p>
                         <p className="text-sm text-text-muted">Update payment methods, view invoices, manage subscription</p>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
-                </a>
+                    {portalLoading ? (
+                        <div className="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                        <ExternalLink className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
+                    )}
+                </button>
             </div>
 
+            {/* Danger Zone */}
             <div className="clay-card p-6 border-red-200">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
@@ -330,19 +411,131 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-red-50 border border-red-100">
-                    <div>
-                        <p className="font-medium text-text-primary">Sign Out</p>
-                        <p className="text-sm text-text-muted">Sign out of your account on this device</p>
+                <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-gray-50 border border-gray-200">
+                        <div>
+                            <p className="font-medium text-text-primary">Sign Out</p>
+                            <p className="text-sm text-text-muted">Sign out of your account on this device</p>
+                        </div>
+                        <button
+                            onClick={logout}
+                            className="px-4 py-2 rounded-xl bg-gray-600 text-white font-medium hover:bg-gray-700 transition-colors cursor-pointer shrink-0"
+                        >
+                            Sign Out
+                        </button>
                     </div>
-                    <button
-                        onClick={logout}
-                        className="px-4 py-2 rounded-xl bg-red-600 text-white font-medium hover:bg-red-700 transition-colors cursor-pointer"
-                    >
-                        Sign Out
-                    </button>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-red-50 border border-red-200">
+                        <div>
+                            <p className="font-medium text-red-700">Delete Account</p>
+                            <p className="text-sm text-red-600/80">Permanently delete your account and all associated data</p>
+                        </div>
+                        <button
+                            onClick={() => setShowDeleteModal(true)}
+                            className="px-4 py-2 rounded-xl bg-red-600 text-white font-medium hover:bg-red-700 transition-colors cursor-pointer shrink-0 inline-flex items-center gap-2"
+                        >
+                            <Trash2 className="w-4 h-4" />
+                            Delete Account
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            {/* Delete Account Modal */}
+            {showDeleteModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setShowDeleteModal(false)} />
+                    <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 animate-in fade-in zoom-in-95">
+                        <button
+                            onClick={() => {
+                                setShowDeleteModal(false)
+                                setDeleteEmail('')
+                                setDeleteError('')
+                            }}
+                            className="absolute top-4 right-4 text-text-muted hover:text-text-primary cursor-pointer"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                                <AlertTriangle className="w-6 h-6 text-red-600" />
+                            </div>
+                            <div>
+                                <h3 className="font-heading text-lg font-bold text-text-primary">Delete Account</h3>
+                                <p className="text-sm text-text-muted">This action cannot be undone</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-5">
+                            <p className="text-sm font-semibold text-red-700 mb-3">Deleting your account will permanently:</p>
+                            <ul className="space-y-2 text-sm text-red-600">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-red-500 font-bold mt-0.5">✕</span>
+                                    <span>Remove all purchased resources and download access</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-red-500 font-bold mt-0.5">✕</span>
+                                    <span>Delete your order history and saved favorites</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-red-500 font-bold mt-0.5">✕</span>
+                                    <span>Cancel any active subscriptions immediately (no refund)</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-red-500 font-bold mt-0.5">✕</span>
+                                    <span className="font-semibold">This action is irreversible — all data will be lost forever</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="mb-5">
+                            <label className="block text-sm font-medium text-text-primary mb-2">
+                                Type <strong>{user.email}</strong> to confirm:
+                            </label>
+                            <input
+                                type="email"
+                                value={deleteEmail}
+                                onChange={(e) => {
+                                    setDeleteEmail(e.target.value)
+                                    setDeleteError('')
+                                }}
+                                placeholder="Enter your email address"
+                                className="clay-input w-full"
+                                autoComplete="off"
+                            />
+                            {deleteError && (
+                                <p className="text-sm text-red-500 mt-2">{deleteError}</p>
+                            )}
+                        </div>
+
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => {
+                                    setShowDeleteModal(false)
+                                    setDeleteEmail('')
+                                    setDeleteError('')
+                                }}
+                                className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 text-text-primary font-medium hover:bg-gray-50 transition-colors cursor-pointer"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleDeleteAccount}
+                                disabled={deleting || deleteEmail.toLowerCase() !== user.email.toLowerCase()}
+                                className="flex-1 px-4 py-2.5 rounded-xl bg-red-600 text-white font-medium hover:bg-red-700 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
+                            >
+                                {deleting ? (
+                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                ) : (
+                                    <Trash2 className="w-4 h-4" />
+                                )}
+                                Permanently Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

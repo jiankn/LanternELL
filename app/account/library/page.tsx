@@ -24,6 +24,7 @@ import {
     ChevronDown,
 } from 'lucide-react'
 import { LibraryItemSkeleton } from '@/components/ui/skeleton'
+import { getProductImage } from '@/lib/product-images'
 import { useAccount } from '../use-account'
 
 interface EntitledResource {
@@ -97,17 +98,6 @@ const sortOptions = [
     { value: 'type', label: 'Type' },
 ]
 
-function getResourceImage(packType?: string): string {
-    const typeImages: Record<string, string> = {
-        vocabulary_pack: '/images/vocab.png',
-        sentence_frames: '/images/sentence.png',
-        classroom_labels: '/images/labels.png',
-        parent_communication: '/images/parent.png',
-        visual_supports: '/images/visual.png',
-        assessment_tools: '/images/assessment.png',
-    }
-    return typeImages[packType || 'vocabulary_pack'] || '/images/vocab.png'
-}
 
 export default function LibraryPage() {
     const { user } = useAccount()
@@ -124,10 +114,7 @@ export default function LibraryPage() {
 
     useEffect(() => {
         fetchLibrary()
-        const savedFavorites = localStorage.getItem('library-favorites')
-        if (savedFavorites) {
-            setFavorites(new Set(JSON.parse(savedFavorites)))
-        }
+        fetchFavorites()
     }, [])
 
     const fetchLibrary = async () => {
@@ -139,6 +126,18 @@ export default function LibraryPage() {
             console.error('Failed to fetch library:', error)
         } finally {
             setLoading(false)
+        }
+    }
+
+    const fetchFavorites = async () => {
+        try {
+            const res = await fetch('/api/account/favorites')
+            const data = await res.json()
+            if (data.ok) {
+                setFavorites(new Set(data.data.items.map((f: { resourceId: string }) => f.resourceId)))
+            }
+        } catch {
+            // ignore
         }
     }
 
@@ -163,17 +162,30 @@ export default function LibraryPage() {
         }
     }
 
-    const toggleFavorite = (resourceId: string) => {
+    const toggleFavorite = async (resourceId: string) => {
+        const isFavorited = favorites.has(resourceId)
+        // Optimistic update
         setFavorites((prev) => {
-            const newFavorites = new Set(prev)
-            if (newFavorites.has(resourceId)) {
-                newFavorites.delete(resourceId)
-            } else {
-                newFavorites.add(resourceId)
-            }
-            localStorage.setItem('library-favorites', JSON.stringify(Array.from(newFavorites)))
-            return newFavorites
+            const next = new Set(prev)
+            if (isFavorited) next.delete(resourceId)
+            else next.add(resourceId)
+            return next
         })
+        try {
+            await fetch('/api/account/favorites', {
+                method: isFavorited ? 'DELETE' : 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ resourceId }),
+            })
+        } catch {
+            // Revert on error
+            setFavorites((prev) => {
+                const next = new Set(prev)
+                if (isFavorited) next.add(resourceId)
+                else next.delete(resourceId)
+                return next
+            })
+        }
     }
 
     const filteredAndSortedResources = useMemo(() => {
@@ -380,7 +392,7 @@ export default function LibraryPage() {
                         >
                             <div className="relative h-36 w-full bg-slate-50">
                                 <Image
-                                    src={getResourceImage(resource.packType)}
+                                    src={getProductImage('single', resource.packType)}
                                     alt={resource.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -444,7 +456,7 @@ export default function LibraryPage() {
                         >
                             <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-slate-50 shrink-0">
                                 <Image
-                                    src={getResourceImage(resource.packType)}
+                                    src={getProductImage('single', resource.packType)}
                                     alt={resource.title}
                                     fill
                                     className="object-cover"

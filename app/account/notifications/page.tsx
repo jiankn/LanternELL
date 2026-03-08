@@ -6,27 +6,19 @@ import {
     Bell,
     Package,
     Download,
-    Gift,
     AlertCircle,
-    CheckCircle,
-    Info,
-    Sparkles,
     Filter,
-    Check,
-    Trash2,
-    X,
     ChevronRight,
     Clock,
-    ExternalLink,
+    Info,
 } from 'lucide-react'
 import { useAccount } from '../use-account'
 
 interface Notification {
     id: string
-    type: 'order' | 'resource' | 'system' | 'promo'
+    type: 'order' | 'resource' | 'system'
     title: string
     message: string
-    read: boolean
     createdAt: string
     actionUrl?: string
     actionLabel?: string
@@ -35,73 +27,20 @@ interface Notification {
 const notificationIcons: Record<string, React.ReactNode> = {
     order: <Package className="w-5 h-5" />,
     resource: <Download className="w-5 h-5" />,
-    system: <AlertCircle className="w-5 h-5" />,
-    promo: <Gift className="w-5 h-5" />,
+    system: <Info className="w-5 h-5" />,
 }
 
 const notificationColors: Record<string, string> = {
     order: 'bg-blue-100 text-blue-600',
     resource: 'bg-green-100 text-green-600',
     system: 'bg-amber-100 text-amber-600',
-    promo: 'bg-purple-100 text-purple-600',
 }
 
 const filterOptions = [
-    { value: '', label: 'All Notifications' },
-    { value: 'unread', label: 'Unread' },
+    { value: '', label: 'All' },
     { value: 'order', label: 'Orders' },
     { value: 'resource', label: 'Resources' },
     { value: 'system', label: 'System' },
-    { value: 'promo', label: 'Promotions' },
-]
-
-const mockNotifications: Notification[] = [
-    {
-        id: '1',
-        type: 'resource',
-        title: 'New Resource Available',
-        message: 'Your Vocabulary Pack - Spanish Basics is ready for download.',
-        read: false,
-        createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
-        actionUrl: '/account/library',
-        actionLabel: 'View Library',
-    },
-    {
-        id: '2',
-        type: 'order',
-        title: 'Order Confirmed',
-        message: 'Your order #ORD-2024-001 has been successfully processed.',
-        read: false,
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(),
-        actionUrl: '/account/orders',
-        actionLabel: 'View Order',
-    },
-    {
-        id: '3',
-        type: 'promo',
-        title: 'Special Offer: 20% Off',
-        message: 'Enjoy 20% off your next purchase with code TEACHER20. Valid until end of month.',
-        read: true,
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(),
-        actionUrl: '/shop',
-        actionLabel: 'Shop Now',
-    },
-    {
-        id: '4',
-        type: 'system',
-        title: 'Account Security Update',
-        message: 'Your account security settings have been updated successfully.',
-        read: true,
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2).toISOString(),
-    },
-    {
-        id: '5',
-        type: 'resource',
-        title: 'Bundle Download Complete',
-        message: 'All 12 resources in your ELL Starter Bundle have been downloaded.',
-        read: true,
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3).toISOString(),
-    },
 ]
 
 function formatRelativeTime(dateStr: string): string {
@@ -132,7 +71,11 @@ export default function NotificationsPage() {
 
     const fetchNotifications = async () => {
         try {
-            setNotifications(mockNotifications)
+            const res = await fetch('/api/account/notifications')
+            const data = await res.json()
+            if (data.ok) {
+                setNotifications(data.data.notifications)
+            }
         } catch (error) {
             console.error('Failed to fetch notifications:', error)
         } finally {
@@ -142,40 +85,11 @@ export default function NotificationsPage() {
 
     const filteredNotifications = useMemo(() => {
         let result = [...notifications]
-
-        if (filter === 'unread') {
-            result = result.filter((n) => !n.read)
-        } else if (filter) {
+        if (filter) {
             result = result.filter((n) => n.type === filter)
         }
-
-        result.sort((a, b) => {
-            if (a.read !== b.read) return a.read ? 1 : -1
-            return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        })
-
         return result
     }, [notifications, filter])
-
-    const unreadCount = notifications.filter((n) => !n.read).length
-
-    const markAsRead = (id: string) => {
-        setNotifications((prev) =>
-            prev.map((n) => (n.id === id ? { ...n, read: true } : n))
-        )
-    }
-
-    const markAllAsRead = () => {
-        setNotifications((prev) => prev.map((n) => ({ ...n, read: true })))
-    }
-
-    const deleteNotification = (id: string) => {
-        setNotifications((prev) => prev.filter((n) => n.id !== id))
-    }
-
-    const clearAllRead = () => {
-        setNotifications((prev) => prev.filter((n) => !n.read))
-    }
 
     if (!user) return null
 
@@ -185,50 +99,39 @@ export default function NotificationsPage() {
                 <div>
                     <h1 className="font-heading text-2xl font-bold text-text-primary">Notifications</h1>
                     <p className="text-text-muted mt-1">
-                        {unreadCount > 0 ? `${unreadCount} unread` : 'All caught up!'}
+                        {notifications.length} {notifications.length === 1 ? 'update' : 'updates'}
                     </p>
                 </div>
-                <div className="flex items-center gap-2">
-                    {unreadCount > 0 && (
-                        <button
-                            onClick={markAllAsRead}
-                            className="clay-button-secondary cursor-pointer inline-flex items-center gap-2 text-sm"
-                        >
-                            <Check className="w-4 h-4" />
-                            Mark all read
-                        </button>
+                <div className="relative">
+                    <button
+                        onClick={() => setShowFilterMenu(!showFilterMenu)}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-colors cursor-pointer ${showFilterMenu ? 'bg-primary text-white border-primary' : 'border-gray-200 hover:border-primary/50 text-text-primary'}`}
+                    >
+                        <Filter className="w-4 h-4" />
+                        <span className="hidden sm:inline">Filter</span>
+                    </button>
+                    {showFilterMenu && (
+                        <>
+                            <div
+                                className="fixed inset-0 z-10"
+                                onClick={() => setShowFilterMenu(false)}
+                            />
+                            <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-20">
+                                {filterOptions.map((opt) => (
+                                    <button
+                                        key={opt.value}
+                                        onClick={() => {
+                                            setFilter(opt.value)
+                                            setShowFilterMenu(false)
+                                        }}
+                                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 cursor-pointer ${filter === opt.value ? 'text-primary font-medium bg-primary/5' : 'text-text-primary'}`}
+                                    >
+                                        {opt.label}
+                                    </button>
+                                ))}
+                            </div>
+                        </>
                     )}
-                    <div className="relative">
-                        <button
-                            onClick={() => setShowFilterMenu(!showFilterMenu)}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-colors cursor-pointer ${showFilterMenu ? 'bg-primary text-white border-primary' : 'border-gray-200 hover:border-primary/50 text-text-primary'}`}
-                        >
-                            <Filter className="w-4 h-4" />
-                            <span className="hidden sm:inline">Filter</span>
-                        </button>
-                        {showFilterMenu && (
-                            <>
-                                <div
-                                    className="fixed inset-0 z-10"
-                                    onClick={() => setShowFilterMenu(false)}
-                                />
-                                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-20">
-                                    {filterOptions.map((opt) => (
-                                        <button
-                                            key={opt.value}
-                                            onClick={() => {
-                                                setFilter(opt.value)
-                                                setShowFilterMenu(false)
-                                            }}
-                                            className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 cursor-pointer ${filter === opt.value ? 'text-primary font-medium bg-primary/5' : 'text-text-primary'}`}
-                                        >
-                                            {opt.label}
-                                        </button>
-                                    ))}
-                                </div>
-                            </>
-                        )}
-                    </div>
                 </div>
             </div>
 
@@ -252,12 +155,12 @@ export default function NotificationsPage() {
                         <Bell className="w-8 h-8 text-text-muted" />
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-text-primary mb-2">
-                        {filter ? 'No matching notifications' : 'No notifications'}
+                        {filter ? 'No matching notifications' : 'No notifications yet'}
                     </h3>
                     <p className="text-text-muted mb-4">
                         {filter
                             ? 'Try adjusting your filter settings.'
-                            : "You're all caught up! Check back later for updates."}
+                            : 'Notifications will appear here when you make purchases or get new resources.'}
                     </p>
                     {filter && (
                         <button
@@ -277,7 +180,7 @@ export default function NotificationsPage() {
                         return (
                             <div
                                 key={notification.id}
-                                className={`clay-card p-5 transition-all ${!notification.read ? 'border-l-4 border-l-primary bg-primary/5' : ''}`}
+                                className="clay-card p-5 transition-all hover:shadow-clay-button"
                             >
                                 <div className="flex gap-4">
                                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${iconBg}`}>
@@ -286,66 +189,35 @@ export default function NotificationsPage() {
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-start justify-between gap-3">
                                             <div className="min-w-0">
-                                                <div className="flex items-center gap-2">
-                                                    <h3 className="font-semibold text-text-primary truncate">
-                                                        {notification.title}
-                                                    </h3>
-                                                    {!notification.read && (
-                                                        <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                                                    )}
-                                                </div>
+                                                <h3 className="font-semibold text-text-primary truncate">
+                                                    {notification.title}
+                                                </h3>
                                                 <p className="text-sm text-text-muted mt-1 line-clamp-2">
                                                     {notification.message}
                                                 </p>
                                             </div>
-                                            <span className="text-xs text-text-muted whitespace-nowrap shrink-0">
+                                            <span className="text-xs text-text-muted whitespace-nowrap shrink-0 flex items-center gap-1">
+                                                <Clock className="w-3 h-3" />
                                                 {formatRelativeTime(notification.createdAt)}
                                             </span>
                                         </div>
 
-                                        <div className="flex items-center gap-3 mt-3">
-                                            {notification.actionUrl && (
+                                        {notification.actionUrl && (
+                                            <div className="mt-3">
                                                 <Link
                                                     href={notification.actionUrl}
-                                                    onClick={() => markAsRead(notification.id)}
                                                     className="inline-flex items-center gap-1 text-sm text-primary hover:underline cursor-pointer"
                                                 >
                                                     {notification.actionLabel || 'View'}
                                                     <ChevronRight className="w-4 h-4" />
                                                 </Link>
-                                            )}
-                                            {!notification.read && (
-                                                <button
-                                                    onClick={() => markAsRead(notification.id)}
-                                                    className="text-sm text-text-muted hover:text-primary cursor-pointer"
-                                                >
-                                                    Mark as read
-                                                </button>
-                                            )}
-                                            <button
-                                                onClick={() => deleteNotification(notification.id)}
-                                                className="text-sm text-text-muted hover:text-red-500 cursor-pointer ml-auto"
-                                            >
-                                                <Trash2 className="w-4 h-4" />
-                                            </button>
-                                        </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
                         )
                     })}
-                </div>
-            )}
-
-            {notifications.some((n) => n.read) && (
-                <div className="flex justify-center">
-                    <button
-                        onClick={clearAllRead}
-                        className="text-sm text-text-muted hover:text-red-500 cursor-pointer inline-flex items-center gap-1.5"
-                    >
-                        <Trash2 className="w-4 h-4" />
-                        Clear all read notifications
-                    </button>
                 </div>
             )}
         </div>
