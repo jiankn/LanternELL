@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { GraduationCap, Menu, X, ShoppingCart } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X, ShoppingCart } from 'lucide-react'
 
 interface NavLink {
   href: string
@@ -33,11 +34,11 @@ export function Navbar({ links = defaultLinks, showCart = false, static: isStati
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-clay-sm">
-              <GraduationCap className="w-6 h-6 text-white" />
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
+            <div className="relative w-10 h-10 overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+              <Image src="/images/logo.webp" alt="LanternELL Logo" fill className="object-contain" priority />
             </div>
-            <span className="font-heading text-xl font-bold text-text-primary">LanternELL</span>
+            <span className="font-heading text-xl font-bold text-text-primary tracking-tight">LanternELL</span>
           </Link>
 
           {/* Desktop links */}
@@ -46,9 +47,8 @@ export function Navbar({ links = defaultLinks, showCart = false, static: isStati
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors cursor-pointer ${
-                  link.active ? 'text-primary font-medium' : 'text-text-primary hover:text-primary'
-                }`}
+                className={`transition-colors cursor-pointer ${link.active ? 'text-primary font-medium' : 'text-text-primary hover:text-primary'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -81,9 +81,8 @@ export function Navbar({ links = defaultLinks, showCart = false, static: isStati
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-                  link.active ? 'bg-primary/10 text-primary font-medium' : 'text-text-primary hover:bg-primary/5'
-                }`}
+                className={`px-4 py-3 rounded-xl transition-colors cursor-pointer ${link.active ? 'bg-primary/10 text-primary font-medium' : 'text-text-primary hover:bg-primary/5'
+                  }`}
               >
                 {link.label}
               </Link>

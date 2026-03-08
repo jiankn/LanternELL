@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { GraduationCap } from 'lucide-react'
+import Image from 'next/image'
 
 interface FooterProps {
   /** Minimal footer with just copyright */
@@ -22,12 +22,12 @@ export function Footer({ minimal = false }: FooterProps) {
       <div className="max-w-7xl mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-clay-sm">
-                <GraduationCap className="w-6 h-6 text-white" />
+            <Link href="/" className="flex items-center gap-3 mb-4 group inline-flex">
+              <div className="relative w-10 h-10 overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+                <Image src="/images/logo.webp" alt="LanternELL Logo" fill className="object-contain" />
               </div>
-              <span className="font-heading text-xl font-bold text-text-primary">LanternELL</span>
-            </div>
+              <span className="font-heading text-xl font-bold text-text-primary tracking-tight">LanternELL</span>
+            </Link>
             <p className="text-sm text-text-primary/70">
               Print-ready bilingual & ELL resources for real classrooms.
             </p>
