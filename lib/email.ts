@@ -98,7 +98,7 @@ export function magicLinkEmail(magicLink: string): { subject: string; html: stri
 <body style="margin:0;padding:0;background:#EEF2FF;font-family:Arial,Helvetica,sans-serif;">
   <div style="max-width:480px;margin:40px auto;background:#fff;border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.6);box-shadow:4px 4px 8px rgba(163,177,198,0.4),-4px -4px 8px rgba(255,255,255,0.6);">
     <div style="text-align:center;margin-bottom:24px;">
-      <div style="display:inline-block;width:48px;height:48px;background:linear-gradient(135deg,#4F46E5,#818CF8);border-radius:12px;line-height:48px;color:#fff;font-size:24px;font-weight:bold;">L</div>
+      <img src="${process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'}/images/logo.webp" alt="LanternELL Logo" width="64" height="64" style="display:inline-block;border-radius:12px;">
     </div>
     <h1 style="font-family:Georgia,serif;font-size:24px;color:#1E1B4B;text-align:center;margin:0 0 8px;">Sign in to LanternELL</h1>
     <p style="color:#6366F1;text-align:center;margin:0 0 24px;font-size:14px;">Click the button below to sign in. No password needed.</p>
