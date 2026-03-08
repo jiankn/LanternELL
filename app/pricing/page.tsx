@@ -17,7 +17,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 export const metadata: Metadata = {
   title: 'Pricing — ELL Teaching Packs & Membership Plans',
   description:
-    'Choose the right plan for your classroom. Single packs from $3.99, bundles from $19, or get unlimited access with All Access membership — $9/mo or $89/year.',
+    'Choose the right plan for your classroom. Single packs from $3.99, bundles from $14.99, or get unlimited access with All Access membership — $9/mo or $79/year.',
   alternates: { canonical: `${BASE_URL}/pricing` },
   openGraph: {
     title: 'LanternELL Pricing — Plans for Every Teacher',
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'What is the difference between monthly and annual billing?',
     answer:
-      'Monthly billing is $9/mo. Annual billing is $89/year — that\'s 2 months free, saving you $19 compared to paying monthly. You can switch plans or cancel anytime from your account settings.',
+      'Monthly billing is $9/mo. Annual billing is $79/year — that\'s 3+ months free, saving you $29 compared to paying monthly. You can switch plans or cancel anytime from your account settings.',
   },
   {
     question: 'What formats are the packs in?',
@@ -147,14 +147,14 @@ export default function PricingPage() {
                   Annual plan — the smart choice for full-year teachers
                 </h2>
                 <p className="text-text-primary/70 text-sm leading-relaxed">
-                  Pay $89 once and get unlimited access for the entire school year. That's less than $7.50/month — 2 months free compared to monthly billing. Perfect for teachers who use resources throughout the year.
+                  Pay $79 once and get unlimited access for the entire school year. That's less than $6.60/month — 3+ months free compared to monthly billing. Perfect for teachers who use resources throughout the year.
                 </p>
               </div>
               <Link
                 href="/shop?filter=membership"
                 className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
               >
-                Get Annual — $89/yr
+                Get Annual — $79/yr
               </Link>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function PricingPage() {
               </Link>
             </div>
             <p className="text-xs text-text-muted mt-4">
-              Or save $19 with <Link href="/shop?filter=membership" className="text-primary hover:underline">annual billing at $89/year</Link>
+              Or save $29 with <Link href="/shop?filter=membership" className="text-primary hover:underline">annual billing at $79/year</Link>
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     const all = request.nextUrl.searchParams.get('all') === 'true'
     const where = all ? '' : 'WHERE active = 1'
     const products = await query(
-      `SELECT id, slug, name, description, type, price_cents, active, created_at FROM products ${where} ORDER BY created_at DESC`
+      `SELECT id, slug, name, description, type, price_cents, price_tier, active, created_at FROM products ${where} ORDER BY created_at DESC`
     )
     return NextResponse.json({ ok: true, data: { products } })
   } catch (error) {

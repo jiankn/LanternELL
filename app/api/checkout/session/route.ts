@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { execute, generateId, queryOne } from '@/lib/db';
 import { getCurrentUser } from '@/lib/auth';
 import { createCheckoutSession, isStripeConfigured } from '@/lib/stripe';
+import { getStripePriceId, PRICE_TIERS, type PriceTier } from '@/lib/pricing-tiers';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,6 +29,7 @@ export async function POST(request: NextRequest) {
       price_cents: number;
       stripe_price_id: string | null;
       stripe_product_id: string | null;
+      price_tier: PriceTier | null;
     }>(
       'SELECT * FROM products WHERE id = ? AND active = 1',
       [productId]
@@ -48,9 +50,18 @@ export async function POST(request: NextRequest) {
     // ----------------------------
     // Real Stripe Integration
     // ----------------------------
-    if (isStripeConfigured() && product.stripe_price_id) {
+    // Resolve Stripe Price ID: prefer explicit stripe_price_id, then fall back to tier-based lookup
+    const resolvedPriceId = product.stripe_price_id
+      || (product.price_tier ? getStripePriceId(product.price_tier) : null);
+
+    // Determine product price from tier if available
+    const priceCents = product.price_tier && PRICE_TIERS[product.price_tier]
+      ? PRICE_TIERS[product.price_tier].priceCents
+      : product.price_cents;
+
+    if (isStripeConfigured() && resolvedPriceId) {
       const result = await createCheckoutSession({
-        priceId: product.stripe_price_id,
+        priceId: resolvedPriceId,
         productType: product.type,
         appProductId: product.id,
         appUserId: user?.id || null,
@@ -78,7 +89,7 @@ export async function POST(request: NextRequest) {
           result.sessionId,
           product.type,
           'checkout_created',
-          product.price_cents,
+          priceCents,
           user?.email || '',
         ]
       );
@@ -88,7 +99,7 @@ export async function POST(request: NextRequest) {
         data: {
           checkoutUrl: result.url,
           sessionId: result.sessionId,
-          amount: product.price_cents,
+          amount: priceCents,
           currency: 'usd',
         },
         error: null,

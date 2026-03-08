@@ -4,21 +4,29 @@ import { useState, useEffect } from 'react'
 import { AdminLayout } from '@/components/ui/admin-layout'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Plus, Pencil, Trash2, X } from 'lucide-react'
+import { PRICE_TIERS, type PriceTier } from '@/lib/pricing-tiers'
 
 interface Product {
   id: string; slug: string; name: string; description: string; type: string
   price_cents: number; active: number; stripe_price_id: string | null
-  resource_count: number; created_at: string
+  price_tier: string | null; resource_count: number; created_at: string
 }
 
 const typeOptions = ['single', 'bundle', 'membership', 'license']
+const tierOptions: { value: string; label: string }[] = [
+  { value: '', label: '— No tier (custom price) —' },
+  ...Object.entries(PRICE_TIERS).map(([key, info]) => ({
+    value: key,
+    label: `${info.label} (${info.priceDisplay})`,
+  })),
+]
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
   const [editId, setEditId] = useState<string | null>(null)
-  const [form, setForm] = useState({ name: '', description: '', type: 'single', priceCents: 0, stripePriceId: '', stripeProductId: '' })
+  const [form, setForm] = useState({ name: '', description: '', type: 'single', priceCents: 0, priceTier: '', stripePriceId: '', stripeProductId: '' })
   const [saving, setSaving] = useState(false)
 
   useEffect(() => { fetchProducts() }, [])
@@ -47,14 +55,14 @@ export default function AdminProductsPage() {
         })
       }
       setShowForm(false); setEditId(null)
-      setForm({ name: '', description: '', type: 'single', priceCents: 0, stripePriceId: '', stripeProductId: '' })
+      setForm({ name: '', description: '', type: 'single', priceCents: 0, priceTier: '', stripePriceId: '', stripeProductId: '' })
       fetchProducts()
     } catch { alert('Save failed') } finally { setSaving(false) }
   }
 
   const handleEdit = (p: Product) => {
     setEditId(p.id)
-    setForm({ name: p.name, description: p.description || '', type: p.type, priceCents: p.price_cents, stripePriceId: p.stripe_price_id || '', stripeProductId: '' })
+    setForm({ name: p.name, description: p.description || '', type: p.type, priceCents: p.price_cents, priceTier: p.price_tier || '', stripePriceId: p.stripe_price_id || '', stripeProductId: '' })
     setShowForm(true)
   }
 
@@ -76,7 +84,7 @@ export default function AdminProductsPage() {
     <AdminLayout>
       <div className="flex items-center justify-between mb-6">
         <h1 className="font-heading text-2xl font-bold text-text-primary">Products</h1>
-        <button onClick={() => { setShowForm(true); setEditId(null); setForm({ name: '', description: '', type: 'single', priceCents: 0, stripePriceId: '', stripeProductId: '' }) }} className="clay-button text-sm flex items-center gap-2 cursor-pointer">
+        <button onClick={() => { setShowForm(true); setEditId(null); setForm({ name: '', description: '', type: 'single', priceCents: 0, priceTier: '', stripePriceId: '', stripeProductId: '' }) }} className="clay-button text-sm flex items-center gap-2 cursor-pointer">
           <Plus className="w-4 h-4" /> New Product
         </button>
       </div>
@@ -103,8 +111,18 @@ export default function AdminProductsPage() {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-text-primary mb-1">Price (cents)</label>
-              <input type="number" value={form.priceCents} onChange={e => setForm({ ...form, priceCents: parseInt(e.target.value) || 0 })} className="clay-input w-full" />
+              <label className="block text-sm font-medium text-text-primary mb-1">Price Tier</label>
+              <select value={form.priceTier} onChange={e => {
+                const tier = e.target.value as PriceTier | ''
+                const info = tier ? PRICE_TIERS[tier as PriceTier] : null
+                setForm({ ...form, priceTier: tier, priceCents: info ? info.priceCents : form.priceCents })
+              }} className="clay-input w-full">
+                {tierOptions.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-text-primary mb-1">Price (cents){form.priceTier ? ' — auto-set by tier' : ''}</label>
+              <input type="number" value={form.priceCents} onChange={e => setForm({ ...form, priceCents: parseInt(e.target.value) || 0 })} disabled={!!form.priceTier} className="clay-input w-full" />
             </div>
             <div>
               <label className="block text-sm font-medium text-text-primary mb-1">Stripe Price ID</label>
@@ -135,7 +153,7 @@ export default function AdminProductsPage() {
                   <span className={`text-xs px-2 py-0.5 rounded-full ${p.active ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>{p.active ? 'Active' : 'Inactive'}</span>
                   <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary">{p.type}</span>
                 </div>
-                <p className="text-sm text-text-muted">${(p.price_cents / 100).toFixed(2)} · {p.resource_count} resources · {p.stripe_price_id ? 'Stripe linked' : 'No Stripe'}</p>
+                <p className="text-sm text-text-muted">${(p.price_cents / 100).toFixed(2)}{p.price_tier ? ` · ${p.price_tier}` : ''} · {p.resource_count} resources · {p.stripe_price_id ? 'Stripe linked' : p.price_tier ? 'Tier-based' : 'No Stripe'}</p>
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 <button onClick={() => handleToggle(p)} className="text-xs px-3 py-1.5 rounded-lg bg-white border border-text-primary/10 hover:bg-primary/5 cursor-pointer">{p.active ? 'Deactivate' : 'Activate'}</button>

@@ -43,16 +43,16 @@ const comparisonFeatures = [
 export function PricingCards() {
   const [isAnnual, setIsAnnual] = useState(false)
 
-  const allAccessPrice = isAnnual ? '$89' : '$9'
+  const allAccessPrice = isAnnual ? '$79' : '$9'
   const allAccessNote = isAnnual ? '/year' : '/mo'
-  const allAccessSub = isAnnual ? 'Billed annually — save $19 vs monthly' : 'or $89/year — save $19'
+  const allAccessSub = isAnnual ? 'Billed annually — save $29 vs monthly' : 'or $79/year — save $29'
 
   const tiers = [
     {
       name: 'Single Packs',
       description: 'Perfect for targeting a specific topic or trying us out',
       price: '$3.99',
-      priceNote: '– $9.99',
+      priceNote: '– $8.99',
       period: 'per pack, one-time',
       cta: 'Browse Packs',
       ctaHref: '/shop',
@@ -88,7 +88,7 @@ export function PricingCards() {
         'Cancel anytime',
       ],
       annualPerks: isAnnual ? [
-        '2 months free vs monthly',
+        '3+ months free vs monthly',
         'Priority email support',
         'Early access to new packs',
       ] : [],
@@ -96,8 +96,8 @@ export function PricingCards() {
     {
       name: 'Bundles',
       description: 'Curated sets grouped by theme or grade — great one-time value',
-      price: '$19',
-      priceNote: '– $79',
+      price: '$14.99',
+      priceNote: '– $29.99',
       period: 'per bundle, one-time',
       cta: 'View Bundles',
       ctaHref: '/shop?filter=bundle',
@@ -131,11 +131,10 @@ export function PricingCards() {
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className={`clay-card p-8 relative transition-all duration-200 ${
-              tier.highlight
+            className={`clay-card p-8 relative transition-all duration-200 ${tier.highlight
                 ? 'ring-2 ring-cta md:-mt-4 md:pb-10'
                 : ''
-            }`}
+              }`}
           >
             {tier.badge && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -145,9 +144,8 @@ export function PricingCards() {
               </div>
             )}
 
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-              tier.highlight ? 'bg-cta/10 text-cta' : 'bg-primary/10 text-primary'
-            }`}>
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${tier.highlight ? 'bg-cta/10 text-cta' : 'bg-primary/10 text-primary'
+              }`}>
               {tier.icon}
             </div>
 
@@ -165,17 +163,16 @@ export function PricingCards() {
             {/* Annual savings callout */}
             {tier.highlight && isAnnual && (
               <div className="mb-4 px-3 py-2 bg-green-50 border border-green-200 rounded-xl text-xs text-green-700 font-medium text-center">
-                2 months free — save $19 vs monthly billing
+                3+ months free — save $29 vs monthly billing
               </div>
             )}
 
             <Link
               href={tier.ctaHref}
-              className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 ${
-                tier.highlight
+              className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 ${tier.highlight
                   ? 'clay-button-cta w-full justify-center'
                   : 'clay-button w-full justify-center'
-              }`}
+                }`}
             >
               {tier.cta} <ArrowRight className="w-4 h-4 inline ml-1" />
             </Link>

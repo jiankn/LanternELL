@@ -29,7 +29,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 
     const { id } = await params;
     const body = await request.json();
-    const { name, description, priceCents, active, stripePriceId, stripeProductId } = body;
+    const { name, description, priceCents, active, stripePriceId, stripeProductId, priceTier } = body;
 
     const sets: string[] = [];
     const values: unknown[] = [];
@@ -40,6 +40,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     if (active !== undefined) { sets.push('active = ?'); values.push(active ? 1 : 0); }
     if (stripePriceId !== undefined) { sets.push('stripe_price_id = ?'); values.push(stripePriceId); }
     if (stripeProductId !== undefined) { sets.push('stripe_product_id = ?'); values.push(stripeProductId); }
+    if (priceTier !== undefined) { sets.push('price_tier = ?'); values.push(priceTier || null); }
 
     if (sets.length === 0) {
       return NextResponse.json({ ok: false, data: null, error: { code: 'NO_CHANGES', message: 'Nothing to update' } }, { status: 400 });
