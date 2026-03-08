@@ -1,7 +1,7 @@
 /**
  * LanternELL — Product Catalog Seed Script
  *
- * Seeds 30 single packs + 3 bundles + 1 membership into the products table.
+ * Seeds 45 single packs + 5 bundles + 1 membership into the products table.
  * Uses the SEED_TOPICS from lib/seed-topics.ts as the source of truth.
  *
  * Usage:
@@ -87,7 +87,6 @@ const BUNDLES: BundleDef[] = [
         description:
             'Everything a newcomer student needs in their first weeks: classroom objects, colors, numbers, basic greetings, and asking for help. 5 printable packs, English-Spanish.',
         price_tier: 'mini_bundle',
-        // Classroom Objects, Colors, Numbers, Basic Greetings, Asking for Help
         topicIndices: [0, 1, 2, 15, 16],
     },
     {
@@ -96,16 +95,30 @@ const BUNDLES: BundleDef[] = [
         description:
             'Set up your bilingual classroom with all 5 label packs: furniture, supplies, areas, days & months, and time. Print, cut, and display. English-Spanish.',
         price_tier: 'mini_bundle',
-        // All 5 classroom labels
         topicIndices: [10, 11, 12, 13, 14],
     },
     {
-        name: 'Complete K-5 ELL Teaching Pack',
-        slug: 'complete-k5-ell-pack-bundle-en-es',
+        name: 'Grade 3-5 Academic Pack',
+        slug: 'grade-3-5-academic-pack-bundle-en-es',
         description:
-            'All 30 printable teaching packs in one bundle — vocabulary, labels, sentence frames, and parent communication for K-5 ELL and bilingual classrooms. English-Spanish. Best value.',
+            'All 12 teaching packs designed for grades 3-5 — science, math, social studies, reading, writing, and academic discussion. English-Spanish.',
+        price_tier: 'mini_bundle',
+        topicIndices: Array.from({ length: 12 }, (_, i) => 25 + i),
+    },
+    {
+        name: 'Middle School Newcomer Pack',
+        slug: 'middle-school-newcomer-pack-bundle-en-es',
+        description:
+            'Academic vocabulary, literary analysis, research skills, and career readiness for grades 6-8 ELL newcomers. 5 printable packs, English-Spanish.',
+        price_tier: 'mini_bundle',
+        topicIndices: Array.from({ length: 5 }, (_, i) => 37 + i),
+    },
+    {
+        name: 'Complete K-8 ELL Teaching Pack',
+        slug: 'complete-k8-ell-pack-bundle-en-es',
+        description:
+            'All 45 printable teaching packs in one bundle — vocabulary, labels, sentence frames, and parent communication for K-8 ELL and bilingual classrooms. English-Spanish. Best value.',
         price_tier: 'full_bundle',
-        // All 30 packs
         topicIndices: Array.from({ length: SEED_TOPICS.length }, (_, i) => i),
     },
 ];
@@ -128,7 +141,7 @@ function main() {
 
     lines.push('-- ============================================');
     lines.push('-- LanternELL Product Catalog Seed');
-    lines.push('-- 30 single packs + 3 bundles + 1 membership');
+    lines.push('-- 45 single packs + 5 bundles + 1 membership');
     lines.push(`-- Generated: ${now}`);
     lines.push('-- ============================================');
     lines.push('');
@@ -136,7 +149,7 @@ function main() {
     lines.push('');
 
     // --- Single packs ---
-    lines.push('-- === Single Packs (30) ===');
+    lines.push(`-- === Single Packs (${SEED_TOPICS.length}) ===`);
     const productIds: string[] = [];
 
     for (let i = 0; i < SEED_TOPICS.length; i++) {
@@ -149,15 +162,15 @@ function main() {
         const tierInfo = PRICE_TIERS[t.price_tier];
 
         lines.push(
-            `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at, updated_at)` +
-            ` VALUES ('${id}', '${slug}', '${name}', '${desc}', 'single', ${tierInfo.priceCents}, '${t.price_tier}', 1, '${now}', '${now}');`
+            `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at)` +
+            ` VALUES ('${id}', '${slug}', '${name}', '${desc}', 'single', ${tierInfo.priceCents}, '${t.price_tier}', 1, '${now}');`
         );
     }
 
     lines.push('');
 
     // --- Bundles ---
-    lines.push('-- === Bundles (3) ===');
+    lines.push(`-- === Bundles (${BUNDLES.length}) ===`);
     const bundleIds: string[] = [];
 
     for (const b of BUNDLES) {
@@ -168,8 +181,8 @@ function main() {
         const desc = escapeSQL(b.description);
 
         lines.push(
-            `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at, updated_at)` +
-            ` VALUES ('${id}', '${b.slug}', '${name}', '${desc}', 'bundle', ${tierInfo.priceCents}, '${b.price_tier}', 1, '${now}', '${now}');`
+            `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at)` +
+            ` VALUES ('${id}', '${b.slug}', '${name}', '${desc}', 'bundle', ${tierInfo.priceCents}, '${b.price_tier}', 1, '${now}');`
         );
     }
 
@@ -179,10 +192,10 @@ function main() {
     lines.push('-- === Membership (1) ===');
     const membershipId = generateId('prod');
     lines.push(
-        `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at, updated_at)` +
+        `INSERT INTO products (id, slug, name, description, type, price_cents, price_tier, active, created_at)` +
         ` VALUES ('${membershipId}', 'all-access-membership', 'LanternELL All Access', ` +
         `'Unlimited downloads of every pack in the LanternELL library. New packs added regularly. Cancel anytime.', ` +
-        `'membership', 900, 'monthly', 1, '${now}', '${now}');`
+        `'membership', 900, 'monthly', 1, '${now}');`
     );
 
     lines.push('');

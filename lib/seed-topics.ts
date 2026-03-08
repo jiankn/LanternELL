@@ -1,6 +1,6 @@
 // Seed topics for content generation
 // These topics will be used to generate packs via AI
-// Plan B: 30 packs covering K-5 core grades
+// Plan C: 45 packs covering K-5 core + 6-8 extended
 
 export interface SeedTopic {
   topic: string;
@@ -16,7 +16,7 @@ export interface SeedTopic {
 
 export const SEED_TOPICS: SeedTopic[] = [
   // =====================================================
-  // K-2  en-es  (20 packs)
+  // K-2  en-es  (25 packs)
   // =====================================================
 
   // --- P1: Core K-2 Vocabulary (10 packs) ---
@@ -45,30 +45,57 @@ export const SEED_TOPICS: SeedTopic[] = [
   { topic: 'Classroom Instructions', pack_type: 'sentence_frames', age_band: 'K-2', language_pair: 'en-es', priority: 3, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'plus' },
   { topic: 'Sharing & Taking Turns', pack_type: 'sentence_frames', age_band: 'K-2', language_pair: 'en-es', priority: 3, status: 'pending', estimated_vocabulary_count: 8, price_tier: 'standard' },
 
+  // --- P5: Extended K-2 Vocabulary (5 packs) ---
+  { topic: 'Transportation', pack_type: 'vocabulary_pack', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'standard' },
+  { topic: 'Places in Community', pack_type: 'vocabulary_pack', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'plus' },
+  { topic: 'Feelings & Emotions', pack_type: 'vocabulary_pack', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 10, price_tier: 'plus' },
+  { topic: 'Action Verbs', pack_type: 'vocabulary_pack', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 15, price_tier: 'plus' },
+  { topic: 'Opposites', pack_type: 'vocabulary_pack', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 10, price_tier: 'standard' },
+
   // =====================================================
-  // 3-5  en-es  (7 packs)
+  // 3-5  en-es  (12 packs)
   // =====================================================
 
-  // --- P4: 3-5 Vocabulary (5 packs) ---
+  // --- P4: 3-5 Vocabulary (8 packs) ---
   { topic: 'Science Vocabulary', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 20, price_tier: 'plus' },
   { topic: 'Math Vocabulary', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 18, price_tier: 'plus' },
   { topic: 'Social Studies', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 16, price_tier: 'plus' },
   { topic: 'Reading & Writing', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 15, price_tier: 'premium' },
   { topic: 'Health & Safety', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 14, price_tier: 'plus' },
+  { topic: 'Geography & Maps', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 15, price_tier: 'plus' },
+  { topic: 'Technology & Computers', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 14, price_tier: 'plus' },
+  { topic: 'Arts & Music', pack_type: 'vocabulary_pack', age_band: '3-5', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'standard' },
 
-  // --- P4: 3-5 Sentence Frames (2 packs) ---
+  // --- P4: 3-5 Sentence Frames (3 packs) ---
   { topic: 'Academic Discussion', pack_type: 'sentence_frames', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'premium' },
   { topic: 'Writing Prompts & Responses', pack_type: 'sentence_frames', age_band: '3-5', language_pair: 'en-es', priority: 4, status: 'pending', estimated_vocabulary_count: 10, price_tier: 'premium' },
+  { topic: 'Book Reports & Reading Logs', pack_type: 'sentence_frames', age_band: '3-5', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 10, price_tier: 'premium' },
+
+  // --- P5: 3-5 Classroom Labels (1 pack) ---
+  { topic: 'Science Lab Labels', pack_type: 'classroom_labels', age_band: '3-5', language_pair: 'en-es', priority: 5, status: 'pending', estimated_vocabulary_count: 15, price_tier: 'standard' },
 
   // =====================================================
-  // Universal  en-es  (3 packs — shared across K-5)
+  // 6-8  en-es  (5 packs)
+  // =====================================================
+
+  // --- P6: 6-8 Vocabulary (3 packs) ---
+  { topic: 'Academic Vocabulary', pack_type: 'vocabulary_pack', age_band: '6-8', language_pair: 'en-es', priority: 6, status: 'pending', estimated_vocabulary_count: 20, price_tier: 'premium' },
+  { topic: 'Lab Reports & Scientific Method', pack_type: 'vocabulary_pack', age_band: '6-8', language_pair: 'en-es', priority: 6, status: 'pending', estimated_vocabulary_count: 18, price_tier: 'premium' },
+  { topic: 'Career & Life Skills', pack_type: 'vocabulary_pack', age_band: '6-8', language_pair: 'en-es', priority: 6, status: 'pending', estimated_vocabulary_count: 15, price_tier: 'plus' },
+
+  // --- P6: 6-8 Sentence Frames (2 packs) ---
+  { topic: 'Literary Analysis', pack_type: 'sentence_frames', age_band: '6-8', language_pair: 'en-es', priority: 6, status: 'pending', estimated_vocabulary_count: 12, price_tier: 'premium' },
+  { topic: 'Research & Citation', pack_type: 'sentence_frames', age_band: '6-8', language_pair: 'en-es', priority: 6, status: 'pending', estimated_vocabulary_count: 10, price_tier: 'premium' },
+
+  // =====================================================
+  // Universal  en-es  (3 packs — shared across K-8)
   // =====================================================
   { topic: 'Welcome Letter', pack_type: 'parent_communication', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', price_tier: 'standard' },
   { topic: 'Homework Note', pack_type: 'parent_communication', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', price_tier: 'standard' },
   { topic: 'Progress Report', pack_type: 'parent_communication', age_band: 'K-2', language_pair: 'en-es', priority: 5, status: 'pending', price_tier: 'standard' },
 ];
 
-// Total: 30 packs (20 K-2 + 7 3-5 + 3 universal)
+// Total: 45 packs (25 K-2 + 12 3-5 + 5 6-8 + 3 universal)
 
 // Topics for other language pairs (Phase 2+)
 export const TOPICS_ES: SeedTopic[] = SEED_TOPICS; // Start with Spanish
