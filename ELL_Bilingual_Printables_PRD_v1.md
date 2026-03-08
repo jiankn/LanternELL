@@ -167,31 +167,43 @@
 ## 4. 目标用户（ICP）
 
 ### 4.1 核心用户
-#### 用户 A：美国 K-5 教师 / ESL 教师 / newcomer teacher
+#### 用户 A：美国 K-5 ESL/ELL 教师 / newcomer teacher
 需求：
 - 明天上课就要用
 - 需要 printable
 - 需要 visual + bilingual supports
 - 需要成套资源，不想东拼西凑
+- K-5 是核心年级段，ELL newcomer 支持需求最集中
 
-#### 用户 B：双语班 / Dual-language / Spanish-English 教师
+#### 用户 B：双语班 / Dual-language / Spanish-English 教师（K-8）
 需求：
 - Classroom labels
 - Vocabulary cards
 - bilingual supports
 - parent communication printables
+- 双语项目通常延伸到初中，因此覆盖 K-8
 
 #### 用户 C：家长 / homeschool 家长 / newcomer 家庭
 需求：
 - 在家补充练习
 - 低门槛 printable
 - 能立即下载、打印、使用
+- 实际需求集中在 K-5，但无严格年级限制
 
 ### 4.2 次级用户
+- Pre-K 教师（学前班，内容覆盖但非营销重心）
+- 6-8 年级教师（初中，双语项目和 newcomer 支持场景）
 - paraprofessional / intervention staff
+- SPED 教育者（视觉支持类资源与 ELL 有交叉，但不作为核心定位）
 - speech/language support staff（仅做教育支持，不碰诊断）
 - tutoring / after-school program
 - 学校或机构采购者（后续）
+
+### 4.3 用户定位边界
+- 核心购买者：K-5 ESL/ELL 教师、双语教师、homeschool 家长
+- 扩展购买者：Pre-K 教师、6-8 年级教师、SPED 教育者
+- 内容覆盖范围：Pre-K–8（资源可以做这么宽，但营销重心在 K-5）
+- 不做：成人英语学习、高中及以上、医疗/诊断类产品
 
 ---
 

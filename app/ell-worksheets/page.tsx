@@ -8,13 +8,13 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'ELL Worksheets — Free & Printable ESL Resources for Pre-K–8',
+  title: 'ELL Worksheets — Free & Printable ESL Resources for K-5 Classrooms',
   description:
-    'Browse printable ELL worksheets for newcomer, bilingual, and SPED students from Pre-K through 8th grade. Vocabulary packs, visual supports, sentence frames, and classroom labels in 6 languages.',
+    'Browse printable ELL worksheets for newcomer and bilingual students in K-5 classrooms. Vocabulary packs, visual supports, sentence frames, and classroom labels in 6 languages. Pre-K and middle school resources also available.',
   alternates: { canonical: '/ell-worksheets' },
   openGraph: {
     title: 'ELL Worksheets — Free & Printable ESL Resources',
-    description: 'Printable ELL worksheets for Pre-K–8 newcomer, bilingual, and SPED students in 6 languages.',
+    description: 'Printable ELL worksheets for K-5 newcomer and bilingual classrooms in 6 languages.',
     url: `${BASE_URL}/ell-worksheets`,
   },
 }
@@ -28,9 +28,9 @@ interface Product {
 
 const categories = [
   { key: 'vocabulary_pack', label: 'Vocabulary Packs', icon: Sparkles, description: 'Picture word cards, tracing activities, and matching exercises for building core vocabulary in 6 languages.' },
-  { key: 'sentence_frames', label: 'Sentence Frames', icon: BookOpen, description: 'Structured sentence starters that help ELL students form complete sentences. Pre-K through 8th grade.' },
+  { key: 'sentence_frames', label: 'Sentence Frames', icon: BookOpen, description: 'Structured sentence starters that help ELL students form complete sentences. Designed for K-5 classrooms.' },
   { key: 'classroom_labels', label: 'Classroom Labels', icon: Globe, description: 'Bilingual labels in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese.' },
-  { key: 'visual_supports', label: 'Visual Supports', icon: Eye, description: 'Visual schedules, emotion cards, social stories, and behavior charts for ELL and SPED students.' },
+  { key: 'visual_supports', label: 'Visual Supports', icon: Eye, description: 'Visual schedules, emotion cards, social stories, and behavior charts for ELL newcomers. Also helpful for students with IEPs.' },
   { key: 'parent_communication', label: 'Parent Communication', icon: Heart, description: 'Bilingual notes, newsletters, and forms for home-school communication with multilingual families.' },
   { key: 'assessment_tools', label: 'Assessment Tools', icon: ClipboardCheck, description: 'Progress checklists, self-assessment cards, observation guides, and rubrics for ELL learners.' },
 ]
@@ -47,7 +47,7 @@ export default async function EllWorksheetsPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'ELL Worksheets',
-    description: 'Printable ELL worksheets for Pre-K–8 newcomer, bilingual, and SPED students in 6 languages.',
+    description: 'Printable ELL worksheets for K-5 newcomer and bilingual classrooms in 6 languages.',
     url: `${BASE_URL}/ell-worksheets`,
     publisher: { '@type': 'Organization', name: 'LanternELL' },
   }
@@ -64,11 +64,11 @@ export default async function EllWorksheetsPage() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-text-primary mb-6 text-center">
-            ELL Worksheets for Pre-K–8 Newcomer & Bilingual Students
+            ELL Worksheets for K-5 Newcomer & Bilingual Classrooms
           </h1>
           <p className="text-lg text-text-primary/70 max-w-3xl mx-auto text-center mb-4">
-            Print-ready ELL worksheets designed for English Language Learners from Pre-K through 8th grade.
-            Each worksheet pack includes bilingual content in 6 languages, visual supports for SPED students, and teacher guides.
+            Print-ready ELL worksheets designed for English Language Learners in K-5 classrooms.
+            Each worksheet pack includes bilingual content in 6 languages, visual supports, and teacher guides. Resources for Pre-K and grades 6-8 also available.
           </p>
           <p className="text-center mb-12">
             <Link href="/" className="text-primary hover:underline">LanternELL</Link> creates resources that help
@@ -154,7 +154,7 @@ export default async function EllWorksheetsPage() {
           <p className="text-text-primary/80 leading-relaxed mb-6">
             Every LanternELL worksheet pack is designed with input from experienced ELL and bilingual educators.
             Our packs include teacher guides, student self-assessment tools, and progress tracking templates.
-            All content is available in 6 language pairs — Spanish, Chinese, Arabic, Vietnamese, French, and Portuguese — with visual supports designed for both ELL newcomers and SPED students.
+            All content is available in 6 language pairs — Spanish, Chinese, Arabic, Vietnamese, French, and Portuguese — with visual supports designed for ELL newcomers in K-5 classrooms.
             Read our <Link href="/teaching-tips" className="text-primary hover:underline">teaching tips</Link> for
             strategies on using these resources effectively in your classroom.
           </p>

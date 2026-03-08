@@ -125,7 +125,7 @@ function ShopPageInner() {
             Teaching Packs & Resources
           </h1>
           <p className="text-lg text-text-primary/70 max-w-2xl mx-auto mb-8">
-            Ready-to-use printable resources for your Pre-K–8 ELL, bilingual, and SPED classroom.
+            Ready-to-use printable resources for your K-5 ELL and bilingual classroom. Pre-K and middle school packs also available.
           </p>
 
           {/* Search Bar */}

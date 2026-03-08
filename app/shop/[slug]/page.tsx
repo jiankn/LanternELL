@@ -67,7 +67,7 @@ const packTypeLabels: Record<string, string> = {
 const features = [
   { icon: <Printer className="w-5 h-5" />, text: 'Print-ready PDF format' },
   { icon: <Globe className="w-5 h-5" />, text: '6 language pairs available' },
-  { icon: <Users className="w-5 h-5" />, text: 'Pre-K–8 ELL, SPED & bilingual' },
+  { icon: <Users className="w-5 h-5" />, text: 'Designed for K-5 ELL & bilingual classrooms' },
   { icon: <Download className="w-5 h-5" />, text: 'Instant digital download' },
 ]
 
@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: 'Product Not Found' }
 
   const title = `${product.name} — Printable ELL Teaching Pack`
-  const description = product.description || `Download ${product.name} — a print-ready multilingual teaching pack for Pre-K–8 ELL, bilingual, and SPED students.`
+  const description = product.description || `Download ${product.name} — a print-ready multilingual teaching pack for K-5 ELL and bilingual classrooms.`
 
   return {
     title,
@@ -125,7 +125,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
-    description: product.description || `Printable ELL teaching pack for Pre-K–8 students.`,
+    description: product.description || `Printable ELL teaching pack for K-5 classrooms.`,
     url: `${BASE_URL}/shop/${slug}`,
     brand: { '@type': 'Brand', name: 'LanternELL' },
     offers: {
@@ -206,7 +206,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                       {product.name}
                     </h1>
                     <p className="text-text-primary/70 leading-relaxed">
-                      {product.description || 'A comprehensive printable teaching pack designed for Pre-K–8 ELL, bilingual, and SPED students.'}
+                      {product.description || 'A comprehensive printable teaching pack designed for K-5 ELL and bilingual classrooms. Also suitable for Pre-K and middle school.'}
                     </p>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               <div className="clay-card p-6">
                 <h2 className="font-heading text-xl font-semibold text-text-primary mb-4">Perfect For</h2>
                 <div className="flex flex-wrap gap-3 mb-6">
-                  {['ELL Newcomers', 'Bilingual Classrooms', 'Pre-K–8 Students', 'ESL Teachers', 'SPED Classrooms', 'Homeschool Families'].map((tag) => (
+                  {['ELL Newcomers', 'K-5 Classrooms', 'Bilingual Teachers', 'ESL Teachers', 'Dual Language Programs', 'Homeschool Families'].map((tag) => (
                     <span key={tag} className="px-4 py-2 bg-background rounded-full text-sm text-text-primary font-medium">{tag}</span>
                   ))}
                 </div>

@@ -22,11 +22,11 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 export const metadata: Metadata = {
   title: 'LanternELL — Printable ELL Worksheets & Bilingual Classroom Resources',
   description:
-    'Print-ready ELL worksheets, bilingual classroom labels, visual supports, and multilingual teaching packs for Pre-K–8 teachers, SPED educators, and homeschool families. 6 languages. Just print and use today.',
+    'Print-ready ELL worksheets, bilingual classroom labels, visual supports, and multilingual teaching packs for K-5 ESL teachers, bilingual educators, and homeschool families. 6 languages. Just print and use today.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'LanternELL — Printable ELL Worksheets & Bilingual Resources',
-    description: 'Print-ready bilingual & ELL resources for Pre-K–8 classrooms. 6 language pairs. Just print and use today.',
+    description: 'Print-ready bilingual & ELL resources for K-5 classrooms. 6 language pairs. Just print and use today.',
     url: BASE_URL,
   },
 }
@@ -48,14 +48,14 @@ const testimonials = [
 const stats = [
   { value: '50+', label: 'Printable Packs' },
   { value: '6', label: 'Language Pairs' },
-  { value: 'Pre-K–8', label: 'Grade Levels' },
+  { value: 'K–5', label: 'Core Grades' },
   { value: 'Free', label: 'Sample Downloads' },
 ]
 
 const faqs = [
-  { question: 'What grade levels are these ELL worksheets for?', answer: 'Our printable packs cover Pre-K through 8th grade. Each pack is labeled with the target age band so you can find the right level for your students.' },
+  { question: 'What grade levels are these ELL worksheets for?', answer: 'Our core packs are designed for K-5 classrooms — the grades where ELL and newcomer support is most needed. We also have resources for Pre-K and grades 6-8. Each pack is labeled with the target age band so you can find the right level.' },
   { question: 'What languages do you support?', answer: 'We currently offer resources in 6 language pairs: English-Spanish, English-Chinese, English-Arabic, English-Vietnamese, English-French, and English-Portuguese — the top languages spoken by ELL students in the US.' },
-  { question: 'Can I use these for special education students?', answer: 'Yes. Our visual supports packs are designed for both ELL newcomers and students with IEPs/504 plans. The visual scaffolding, simplified language, and structured formats work well across both populations.' },
+  { question: 'Can I use these for special education students?', answer: 'Yes. Many of our visual supports packs work well for students with IEPs/504 plans alongside ELL newcomers. The visual scaffolding, simplified language, and structured formats are helpful across both populations.' },
   { question: 'What file formats do you offer?', answer: 'All resources are delivered as PDF files, formatted for US Letter (8.5" x 11") and A4, ready to print.' },
   { question: 'Can I use these bilingual resources in my classroom?', answer: 'Yes. Single-teacher licenses allow use in one classroom. School-wide licenses are also available for districts and programs.' },
   { question: 'Do you offer refunds?', answer: 'All digital download sales are final. We offer free sample packs so you can try before you buy. Exceptions apply for duplicate charges, corrupted files, or content materially different from the description — contact us within 7 days of purchase.' },
@@ -110,7 +110,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-text-primary/80 max-w-2xl mx-auto mb-10">
-            Save hours of prep time with ready-to-print ELL worksheets, visual supports, and bilingual teaching packs for Pre-K–8 classrooms. Available in 6 languages. Just print and use today.
+            Save hours of prep time with ready-to-print ELL worksheets, visual supports, and bilingual teaching packs designed for K-5 classrooms. Available in 6 languages. Resources also available for Pre-K and middle school.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -141,7 +141,7 @@ export default function LandingPage() {
               Multilingual Printable Teaching Packs
             </h2>
             <p className="text-lg text-text-primary/70 max-w-2xl mx-auto">
-              Ready-to-use <Link href="/shop" className="text-primary hover:underline">bilingual classroom resources</Link> in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese for newcomer, ELL, and SPED students
+              Ready-to-use <Link href="/shop" className="text-primary hover:underline">bilingual classroom resources</Link> in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese — designed for K-5 ESL teachers, bilingual educators, and homeschool families
             </p>
           </div>
 
@@ -173,10 +173,10 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                Visual Supports for ELL & Special Education
+                Visual Supports for ELL Newcomers
               </h2>
               <p className="text-lg text-text-primary/70 mb-8">
-                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for both <Link href="/teaching-tips" className="text-primary hover:underline">ELL newcomers</Link> and students with IEPs. Used by ESL teachers, SPED educators, paraprofessionals, and homeschool families across the US.
+                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for <Link href="/teaching-tips" className="text-primary hover:underline">ELL newcomers</Link> in K-5 classrooms. Also used by SPED educators, paraprofessionals, and homeschool families across the US.
               </p>
               <div className="space-y-4">
                 {['Vocabulary checklists for each pack', 'Student self-assessment cards', 'Teacher observation guides', 'Progress report templates'].map((f, i) => (

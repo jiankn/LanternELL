@@ -27,7 +27,7 @@ function XIcon() {
 const comparisonFeatures = [
   { name: 'Printable PDF packs', single: true, bundle: true, membership: true },
   { name: '6 language pairs (ES, ZH, AR, VI, FR, PT)', single: true, bundle: true, membership: true },
-  { name: 'Pre-K through Grade 8', single: true, bundle: true, membership: true },
+  { name: 'K-5 core grades + Pre-K & middle school', single: true, bundle: true, membership: true },
   { name: 'Unlimited classroom printing', single: true, bundle: true, membership: true },
   { name: 'Vocabulary packs', single: true, bundle: true, membership: true },
   { name: 'Sentence frames', single: true, bundle: true, membership: true },
@@ -62,7 +62,7 @@ export function PricingCards() {
         'One printable teaching pack',
         'PDF instant download',
         '6 language pairs available',
-        'Pre-K through Grade 8',
+        'K-5 core grades + Pre-K & middle school',
         'Lifetime access to purchased pack',
         'Print unlimited copies for your class',
       ],
