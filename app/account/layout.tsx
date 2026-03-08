@@ -1,12 +1,11 @@
 'use client'
 
-import { useState, useEffect, createContext, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
     Library,
     Receipt,
-    Settings,
     LogOut,
     User,
     Mail,
@@ -14,40 +13,8 @@ import {
     CheckCircle,
 } from 'lucide-react'
 import { Navbar } from '@/components/ui/navbar'
-
-// ============================================
-// Auth Context (shared across /account pages)
-// ============================================
-
-interface UserData {
-    id: string
-    email: string
-    name: string | null
-    role: string
-    subscription?: {
-        status: string
-        currentPeriodEnd: string | null
-        cancelAtPeriodEnd: boolean
-    } | null
-}
-
-interface AccountContextType {
-    user: UserData | null
-    loading: boolean
-    refreshUser: () => Promise<void>
-    logout: () => Promise<void>
-}
-
-const AccountContext = createContext<AccountContextType>({
-    user: null,
-    loading: true,
-    refreshUser: async () => { },
-    logout: async () => { },
-})
-
-export function useAccount() {
-    return useContext(AccountContext)
-}
+import { AccountContext } from './account-context'
+import type { UserData } from './account-context'
 
 // ============================================
 // Nav tabs

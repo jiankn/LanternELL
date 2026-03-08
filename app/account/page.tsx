@@ -10,7 +10,7 @@ import {
     Package,
     CreditCard,
 } from 'lucide-react'
-import { useAccount } from './layout'
+import { useAccount } from './account-context'
 
 export default function AccountDashboard() {
     const { user } = useAccount()
