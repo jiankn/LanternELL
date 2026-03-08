@@ -55,9 +55,8 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
   const apiKey = await getResendApiKey()
 
   if (!apiKey) {
-    console.warn('[email] RESEND_API_KEY not configured, logging email instead')
-    console.log(`[email] To: ${params.to} | Subject: ${params.subject}`)
-    return { ok: true, id: 'dev-' + Date.now() }
+    console.error('[email] RESEND_API_KEY not configured, cannot send email')
+    return { ok: false, error: 'Email service not configured' }
   }
 
   const maxRetries = 3

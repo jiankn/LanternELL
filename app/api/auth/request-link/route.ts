@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { execute, generateId, generateSessionToken, hashToken, addMinutes, queryOne, toISOString } from '@/lib/db';
-import { sendEmail, magicLinkEmail, isEmailConfigured } from '@/lib/email';
+import { sendEmail, magicLinkEmail } from '@/lib/email';
 import { checkRateLimit } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
@@ -90,20 +90,18 @@ export async function POST(request: NextRequest) {
 
     if (!emailResult.ok) {
       console.error('[auth] Failed to send magic link email:', emailResult.error);
-    } else {
-      console.log(`[auth] Magic link email sent successfully, id=${emailResult.id}`);
+      return NextResponse.json({
+        ok: false,
+        data: null,
+        error: { code: 'EMAIL_FAILED', message: 'Failed to send magic link email. Please try again later.' }
+      }, { status: 500 });
     }
 
-    // In dev mode, also return the link directly
-    const isEmailOk = await isEmailConfigured();
-    const isDev = !isEmailOk || process.env.APP_ENV === 'development';
+    console.log(`[auth] Magic link email sent successfully, id=${emailResult.id}`);
 
     return NextResponse.json({
       ok: true,
-      data: {
-        sent: true,
-        ...(isDev ? { devLink: magicLink } : {})
-      },
+      data: { sent: true },
       error: null
     });
 

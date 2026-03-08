@@ -9,7 +9,6 @@ export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [sent, setSent] = useState(false)
-  const [devLink, setDevLink] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -27,7 +26,6 @@ export default function LoginPage() {
 
       if (data.ok) {
         setSent(true)
-        if (data.data.devLink) setDevLink(data.data.devLink)
       } else {
         setError(data.error?.message || 'Failed to send magic link')
       }
@@ -63,20 +61,12 @@ export default function LoginPage() {
                 <p className="text-sm text-text-muted">
                   Didn't receive it? Check your spam folder or{' '}
                   <button
-                    onClick={() => { setSent(false); setDevLink(null); setError(null) }}
+                    onClick={() => { setSent(false); setError(null) }}
                     className="text-primary hover:underline font-medium cursor-pointer"
                   >
                     try again
                   </button>.
                 </p>
-                {devLink && (
-                  <div className="mt-6 p-4 bg-amber-50 rounded-xl border border-amber-200">
-                    <p className="text-xs text-amber-700 font-medium mb-2">Dev Mode Only</p>
-                    <a href={devLink} className="text-xs text-primary break-all hover:underline">
-                      {devLink}
-                    </a>
-                  </div>
-                )}
               </div>
             ) : (
               <>

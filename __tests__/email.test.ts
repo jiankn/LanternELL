@@ -44,17 +44,15 @@ describe('sendEmail', () => {
     vi.unstubAllEnvs()
   })
 
-  it('logs email when RESEND_API_KEY is not set', async () => {
+  it('returns error when RESEND_API_KEY is not set', async () => {
     vi.stubEnv('RESEND_API_KEY', '')
-    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => { })
-    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => { })
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => { })
 
     const result = await sendEmail({ to: 'test@example.com', subject: 'Test', html: '<p>Hi</p>' })
-    expect(result.ok).toBe(true)
-    expect(result.id).toMatch(/^dev-/)
+    expect(result.ok).toBe(false)
+    expect(result.error).toBeDefined()
 
-    consoleSpy.mockRestore()
-    warnSpy.mockRestore()
+    errorSpy.mockRestore()
   })
 })
 
