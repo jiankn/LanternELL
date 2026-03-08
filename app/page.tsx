@@ -40,10 +40,10 @@ const packs = [
 ]
 
 const testimonials = [
-  { id: 1, name: 'Sarah M.', role: '2nd Grade ESL Teacher', avatar: 'SM', content: 'These packs saved me hours of prep time. My newcomer students love the visual supports.', rating: 5 },
-  { id: 2, name: 'Miguel R.', role: 'Dual Language 5th Grade', avatar: 'MR', content: 'The multilingual classroom labels are a game-changer. Finally resources in the languages my students actually speak.', rating: 5 },
-  { id: 3, name: 'Jennifer L.', role: 'SPED Paraprofessional', avatar: 'JL', content: 'The visual supports work perfectly for my students with IEPs. I use them alongside the ELL vocabulary packs.', rating: 5 },
-  { id: 4, name: 'Priya K.', role: 'Homeschool Parent', avatar: 'PK', content: 'My kids are learning English at home and these packs make it so easy. Just print and go.', rating: 5 },
+  { id: 1, name: 'Sarah M.', role: '2nd Grade ESL Teacher', avatar: '/images/avatars/sarah.png', content: 'These packs saved me hours of prep time. My newcomer students love the visual supports.', rating: 5 },
+  { id: 2, name: 'Miguel R.', role: 'Dual Language 5th Grade', avatar: '/images/avatars/miguel.png', content: 'The multilingual classroom labels are a game-changer. Finally resources in the languages my students actually speak.', rating: 5 },
+  { id: 3, name: 'Jennifer L.', role: 'SPED Paraprofessional', avatar: '/images/avatars/jennifer.png', content: 'The visual supports work perfectly for my students with IEPs. I use them alongside the ELL vocabulary packs.', rating: 5 },
+  { id: 4, name: 'Priya K.', role: 'Homeschool Parent', avatar: '/images/avatars/priya.png', content: 'My kids are learning English at home and these packs make it so easy. Just print and go.', rating: 5 },
 ]
 
 const stats = [
@@ -213,13 +213,13 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t) => (
-              <div key={t.id} className="clay-card p-6">
+              <div key={t.id} className="clay-card p-6 flex flex-col">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-5 h-5 fill-cta text-cta" />)}
                 </div>
-                <p className="text-text-primary mb-6 italic">"{t.content}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-semibold">{t.avatar}</div>
+                <p className="text-text-primary mb-6 italic flex-grow">"{t.content}"</p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <Image src={t.avatar} alt={t.name} width={48} height={48} className="w-12 h-12 rounded-full object-cover" />
                   <div>
                     <p className="font-semibold text-text-primary">{t.name}</p>
                     <p className="text-sm text-text-muted">{t.role}</p>
