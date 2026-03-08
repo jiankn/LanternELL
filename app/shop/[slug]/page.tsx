@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { queryOne, query } from '@/lib/db'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react'
 import type { Metadata } from 'next'
 import { ProductPurchaseButton } from '@/components/ui/product-purchase-button'
+import { getProductImage } from '@/lib/product-images'
 
 export const dynamic = 'force-dynamic'
 
@@ -184,29 +186,44 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             {/* Left: Product Info */}
             <div className="lg:col-span-3 space-y-8">
               {/* Product Cover */}
-              <div className="clay-card p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
-                <div className="flex flex-col sm:flex-row items-start gap-6">
-                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-clay-sm text-primary shrink-0">
-                    {packTypeIcons[mainPackType] || <Package className="w-10 h-10" />}
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${product.type === 'bundle' ? 'bg-purple-100 text-purple-700'
+              <div className="clay-card overflow-hidden">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src={getProductImage(
+                      product.type,
+                      product.resources?.[0]?.pack_type,
+                      product.resources?.[0]?.age_band
+                    )}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
+                  <div className="flex flex-col sm:flex-row items-start gap-6">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-clay-sm text-primary shrink-0">
+                      {packTypeIcons[mainPackType] || <Package className="w-8 h-8" />}
+                    </div>
+                    <div>
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <span className={`px-3 py-1 text-xs font-semibold rounded-full ${product.type === 'bundle' ? 'bg-purple-100 text-purple-700'
                           : product.type === 'membership' ? 'bg-cta/10 text-cta'
                             : 'bg-primary/10 text-primary'
-                        }`}>
-                        {product.type.toUpperCase()}
-                      </span>
-                      <span className="text-sm text-text-muted">
-                        {packTypeLabels[mainPackType] || 'Teaching Pack'}
-                      </span>
+                          }`}>
+                          {product.type.toUpperCase()}
+                        </span>
+                        <span className="text-sm text-text-muted">
+                          {packTypeLabels[mainPackType] || 'Teaching Pack'}
+                        </span>
+                      </div>
+                      <h1 className="font-heading text-2xl sm:text-3xl font-bold text-text-primary mb-3">
+                        {product.name}
+                      </h1>
+                      <p className="text-text-primary/70 leading-relaxed">
+                        {product.description || 'A comprehensive printable teaching pack designed for K-5 ELL and bilingual classrooms. Also suitable for Pre-K and middle school.'}
+                      </p>
                     </div>
-                    <h1 className="font-heading text-2xl sm:text-3xl font-bold text-text-primary mb-3">
-                      {product.name}
-                    </h1>
-                    <p className="text-text-primary/70 leading-relaxed">
-                      {product.description || 'A comprehensive printable teaching pack designed for K-5 ELL and bilingual classrooms. Also suitable for Pre-K and middle school.'}
-                    </p>
                   </div>
                 </div>
               </div>

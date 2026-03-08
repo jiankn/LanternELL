@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, Suspense } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import {
   BookOpen, Star, ArrowRight, Sparkles, Globe, Heart,
@@ -10,6 +11,7 @@ import {
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { ProductGridSkeleton } from '@/components/ui/skeleton'
+import { getProductImage } from '@/lib/product-images'
 
 interface Product {
   id: string; slug: string; name: string; description: string
@@ -158,11 +160,10 @@ function ShopPageInner() {
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
-                className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer ${
-                  filter === f.key
+                className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer ${filter === f.key
                     ? 'bg-primary text-white shadow-clay-button'
                     : 'bg-white text-text-primary hover:bg-primary/10'
-                }`}
+                  }`}
               >
                 {f.label}
               </button>
@@ -218,63 +219,67 @@ function ShopPageInner() {
                 <Link
                   key={product.id}
                   href={`/shop/${product.slug}`}
-                  className="clay-card p-6 hover:-translate-y-1 transition-all duration-200 cursor-pointer group block"
+                  className="clay-card overflow-hidden hover:-translate-y-1 transition-all duration-200 cursor-pointer group block flex flex-col"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      product.type === 'bundle'
-                        ? 'bg-purple-100 text-purple-700'
-                        : product.type === 'membership'
-                        ? 'bg-cta/10 text-cta'
-                        : 'bg-primary/10 text-primary'
-                    }`}>
-                      {product.type === 'membership' ? 'Membership' : product.type.toUpperCase()}
-                    </span>
-                    {product.type === 'bundle' && (
-                      <span className="text-xs text-green-600 font-medium">Save 30%</span>
-                    )}
-                  </div>
-
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 text-primary ${
-                    packTypeColors[product.resources?.[0]?.pack_type || 'vocabulary_pack']
-                  }`}>
-                    {product.type === 'membership' ? (
-                      <Star className="w-7 h-7" />
-                    ) : (
-                      packTypeIcons[product.resources?.[0]?.pack_type || 'vocabulary_pack']
-                    )}
-                  </div>
-
-                  <h3 className="font-heading text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">
-                    {product.name}
-                  </h3>
-
-                  <p className="text-sm text-text-primary/70 mb-4 line-clamp-2">
-                    {product.description}
-                  </p>
-
-                  {product.resources && product.resources.length > 0 && (
-                    <p className="text-xs text-text-muted mb-4">
-                      {product.resources.length} printable {product.resources.length === 1 ? 'pack' : 'packs'} included
-                    </p>
-                  )}
-
-                  <div className="flex items-center justify-between pt-4 border-t border-text-primary/10">
-                    <div>
-                      {product.type === 'membership' ? (
-                        <span className="font-heading text-2xl font-bold text-cta">
-                          ${(product.price_cents / 100).toFixed(0)}
-                          <span className="text-sm font-normal text-text-muted">/mo</span>
-                        </span>
-                      ) : (
-                        <span className="font-heading text-2xl font-bold text-primary">
-                          ${(product.price_cents / 100).toFixed(2)}
-                        </span>
+                  {/* Cover Image */}
+                  <div className="relative h-44 w-full bg-slate-50">
+                    <Image
+                      src={getProductImage(
+                        product.type,
+                        product.resources?.[0]?.pack_type,
+                        product.resources?.[0]?.age_band
                       )}
+                      alt={product.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full backdrop-blur-sm ${product.type === 'bundle'
+                          ? 'bg-purple-100/90 text-purple-700'
+                          : product.type === 'membership'
+                            ? 'bg-cta/10 text-cta bg-white/90'
+                            : 'bg-primary/10 text-primary bg-white/90'
+                        }`}>
+                        {product.type === 'membership' ? 'Membership' : product.type.toUpperCase()}
+                      </span>
                     </div>
-                    <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                      View <ArrowRight className="w-4 h-4" />
-                    </span>
+                    {product.type === 'bundle' && (
+                      <span className="absolute top-3 right-3 text-xs text-white font-medium bg-green-500/90 backdrop-blur-sm px-2 py-1 rounded-full">Save 30%</span>
+                    )}
+                  </div>
+
+                  <div className="p-5 flex flex-col flex-grow">
+                    <h3 className="font-heading text-lg font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {product.name}
+                    </h3>
+
+                    <p className="text-sm text-text-primary/70 mb-4 line-clamp-2 flex-grow">
+                      {product.description}
+                    </p>
+
+                    {product.resources && product.resources.length > 0 && (
+                      <p className="text-xs text-text-muted mb-4">
+                        {product.resources.length} printable {product.resources.length === 1 ? 'pack' : 'packs'} included
+                      </p>
+                    )}
+
+                    <div className="flex items-center justify-between pt-4 border-t border-text-primary/10 mt-auto">
+                      <div>
+                        {product.type === 'membership' ? (
+                          <span className="font-heading text-2xl font-bold text-cta">
+                            ${(product.price_cents / 100).toFixed(0)}
+                            <span className="text-sm font-normal text-text-muted">/mo</span>
+                          </span>
+                        ) : (
+                          <span className="font-heading text-2xl font-bold text-primary">
+                            ${(product.price_cents / 100).toFixed(2)}
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-sm text-cta font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        View <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}
