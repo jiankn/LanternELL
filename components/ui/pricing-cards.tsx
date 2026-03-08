@@ -26,7 +26,7 @@ function XIcon() {
 
 const comparisonFeatures = [
   { name: 'Printable PDF packs', single: true, bundle: true, membership: true },
-  { name: '6 language pairs (ES, ZH, AR, VI, FR, PT)', single: true, bundle: true, membership: true },
+  { name: 'English-Spanish bilingual packs', single: true, bundle: true, membership: true },
   { name: 'K-5 core grades + Pre-K & middle school', single: true, bundle: true, membership: true },
   { name: 'Unlimited classroom printing', single: true, bundle: true, membership: true },
   { name: 'Vocabulary packs', single: true, bundle: true, membership: true },
@@ -61,7 +61,7 @@ export function PricingCards() {
       features: [
         'One printable teaching pack',
         'PDF instant download',
-        '6 language pairs available',
+        'English-Spanish bilingual content',
         'K-5 core grades + Pre-K & middle school',
         'Lifetime access to purchased pack',
         'Print unlimited copies for your class',
@@ -81,7 +81,7 @@ export function PricingCards() {
       features: [
         'Unlimited downloads — every pack',
         'New packs added weekly',
-        'All 6 language pairs',
+        'English-Spanish bilingual packs',
         'SPED visual supports included',
         'Assessment tools included',
         'High-resolution, no watermark',

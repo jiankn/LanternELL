@@ -22,18 +22,18 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 export const metadata: Metadata = {
   title: 'LanternELL — Printable ELL Worksheets & Bilingual Classroom Resources',
   description:
-    'Print-ready ELL worksheets, bilingual classroom labels, visual supports, and multilingual teaching packs for K-5 ESL teachers, bilingual educators, and homeschool families. 6 languages. Just print and use today.',
+    'Print-ready ELL worksheets, bilingual classroom labels, visual supports, and bilingual teaching packs for K-5 ESL teachers, bilingual educators, and homeschool families. English-Spanish. Just print and use today.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'LanternELL — Printable ELL Worksheets & Bilingual Resources',
-    description: 'Print-ready bilingual & ELL resources for K-5 classrooms. 6 language pairs. Just print and use today.',
+    description: 'Print-ready bilingual & ELL resources for K-5 classrooms. English-Spanish. Just print and use today.',
     url: BASE_URL,
   },
 }
 
 const packs = [
   { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$8.99', badge: 'Bestseller', icon: <Sparkles className="w-6 h-6" />, color: 'bg-amber-100', href: '/shop' },
-  { id: 2, title: 'Classroom Labels — 6 Languages', description: 'Bilingual labels in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese', price: '$5.99', badge: 'Popular', icon: <Globe className="w-6 h-6" />, color: 'bg-emerald-100', href: '/shop' },
+  { id: 2, title: 'Classroom Labels — English-Spanish', description: 'Bilingual labels for classroom furniture, supplies, areas, and daily routines', price: '$3.99', badge: 'Popular', icon: <Globe className="w-6 h-6" />, color: 'bg-emerald-100', href: '/shop' },
   { id: 3, title: 'Visual Supports Pack', description: 'Visual schedules, emotion cards, and behavior charts for ELL & SPED students', price: '$5.99', badge: 'New', icon: <BookOpen className="w-6 h-6" />, color: 'bg-blue-100', href: '/shop' },
   { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication in multiple languages', price: '$3.99', badge: null, icon: <Heart className="w-6 h-6" />, color: 'bg-rose-100', href: '/shop' },
 ]
@@ -47,14 +47,14 @@ const testimonials = [
 
 const stats = [
   { value: '50+', label: 'Printable Packs' },
-  { value: '6', label: 'Language Pairs' },
+  { value: 'EN-ES', label: 'Bilingual Packs' },
   { value: 'K–5', label: 'Core Grades' },
   { value: 'Free', label: 'Sample Downloads' },
 ]
 
 const faqs = [
   { question: 'What grade levels are these ELL worksheets for?', answer: 'Our core packs are designed for K-5 classrooms — the grades where ELL and newcomer support is most needed. We also have resources for Pre-K and grades 6-8. Each pack is labeled with the target age band so you can find the right level.' },
-  { question: 'What languages do you support?', answer: 'We currently offer resources in 6 language pairs: English-Spanish, English-Chinese, English-Arabic, English-Vietnamese, English-French, and English-Portuguese — the top languages spoken by ELL students in the US.' },
+  { question: 'What languages do you support?', answer: 'Our first release focuses on English-Spanish bilingual resources — the most in-demand language pair for ELL classrooms in the US. More language pairs (Chinese, Arabic, Vietnamese, French, Portuguese) are planned for future updates.' },
   { question: 'Can I use these for special education students?', answer: 'Yes. Many of our visual supports packs work well for students with IEPs/504 plans alongside ELL newcomers. The visual scaffolding, simplified language, and structured formats are helpful across both populations.' },
   { question: 'What file formats do you offer?', answer: 'All resources are delivered as PDF files, formatted for US Letter (8.5" x 11") and A4, ready to print.' },
   { question: 'Can I use these bilingual resources in my classroom?', answer: 'Yes. Single-teacher licenses allow use in one classroom. School-wide licenses are also available for districts and programs.' },
@@ -110,7 +110,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-text-primary/80 max-w-2xl mx-auto mb-10">
-            Save hours of prep time with ready-to-print ELL worksheets, visual supports, and bilingual teaching packs designed for K-5 classrooms. Available in 6 languages. Resources also available for Pre-K and middle school.
+            Save hours of prep time with ready-to-print ELL worksheets, visual supports, and bilingual teaching packs designed for K-5 classrooms. English-Spanish bilingual. Resources also available for Pre-K and middle school.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -141,7 +141,7 @@ export default function LandingPage() {
               Multilingual Printable Teaching Packs
             </h2>
             <p className="text-lg text-text-primary/70 max-w-2xl mx-auto">
-              Ready-to-use <Link href="/shop" className="text-primary hover:underline">bilingual classroom resources</Link> in Spanish, Chinese, Arabic, Vietnamese, French & Portuguese — designed for K-5 ESL teachers, bilingual educators, and homeschool families
+              Ready-to-use <Link href="/shop" className="text-primary hover:underline">bilingual classroom resources</Link> in English and Spanish — designed for K-5 ESL teachers, bilingual educators, and homeschool families
             </p>
           </div>
 

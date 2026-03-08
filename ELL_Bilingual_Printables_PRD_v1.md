@@ -1,7 +1,7 @@
 # Bilingual / ELL Printable Packs 平台产品需求文档（PRD）
 
-**版本**：v1.1  
-**日期**：2026-03-06  
+**版本**：v1.2  
+**日期**：2026-03-08  
 **项目代号**：Project Lantern  
 **建议品牌方向**：面向教师 / 家长 / newcomer 支持的双语与 ELL printable 平台  
 **目标读者**：AI 开发代理、独立开发者、产品负责人、SEO 内容负责人
@@ -305,9 +305,9 @@
 ## 7. 产品范围与路线图
 
 ### 7.1 MVP（首发版本）
-首发不做全品类，只做一个极窄切口：
+首发做 English-Spanish 单语言对切口，覆盖 K-8 全年级段：
 
-**English-Spanish ELL / newcomer printable packs for K-2**
+**English-Spanish ELL / newcomer printable packs for K-8**
 
 MVP 必须包含：
 
@@ -321,8 +321,8 @@ MVP 必须包含：
 8. PDF 自动生成管线
 9. 邮件订阅入口
 
-### 7.2 MVP 核心内容 SKU
-建议首批 20 个 pack：
+### 7.2 MVP 核心内容 SKU（方案 C: 45 pack）
+首发 45 个 English-Spanish pack，覆盖 K-8 三个年级段（详见 lib/seed-topics.ts）：
 
 #### A 类：Classroom Survival
 - classroom objects
@@ -349,8 +349,14 @@ MVP 必须包含：
 - matching cards
 
 ### 7.3 v1
-- 增加更多主题
-- 新增 English-Chinese / English-Arabic / English-Portuguese
+- **TODO: 新增语言对（按 ELL 学生占比优先级排序）**
+  1. English-Chinese (Mandarin) — 学生占比第二 (~4%)
+  2. English-Arabic — 学生占比第三 (~3%)
+  3. English-Vietnamese — 学生占比第四 (~2%)
+  4. English-Portuguese — 巴西社区需求
+  5. English-French — 加拿大及西非社区
+  - 每个新语言对复用现有 45 pack 模板，仅需翻译 + 审核
+  - 预计每个语言对增量工作：2-3 周
 - 新增账户页 / bundle library
 - 新增“teacher planner”产品线
 - 新增 TPT / Etsy 分发导流页

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | LanternELL',
   },
   description:
-    'Print-ready bilingual & ELL resources for real classrooms. Save hours of prep time with ready-to-print teaching packs designed for Pre-K–8 ELL, bilingual, and SPED students in 6 languages.',
+    'Print-ready bilingual & ELL resources for real classrooms. Save hours of prep time with ready-to-print teaching packs designed for K-5 ELL and bilingual classrooms. English-Spanish.',
   keywords: [
     'ELL worksheets',
     'bilingual classroom labels',

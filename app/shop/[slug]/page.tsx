@@ -66,7 +66,7 @@ const packTypeLabels: Record<string, string> = {
 
 const features = [
   { icon: <Printer className="w-5 h-5" />, text: 'Print-ready PDF format' },
-  { icon: <Globe className="w-5 h-5" />, text: '6 language pairs available' },
+  { icon: <Globe className="w-5 h-5" />, text: 'English-Spanish bilingual' },
   { icon: <Users className="w-5 h-5" />, text: 'Designed for K-5 ELL & bilingual classrooms' },
   { icon: <Download className="w-5 h-5" />, text: 'Instant digital download' },
 ]
@@ -191,11 +191,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   </div>
                   <div>
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        product.type === 'bundle' ? 'bg-purple-100 text-purple-700'
-                        : product.type === 'membership' ? 'bg-cta/10 text-cta'
-                        : 'bg-primary/10 text-primary'
-                      }`}>
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${product.type === 'bundle' ? 'bg-purple-100 text-purple-700'
+                          : product.type === 'membership' ? 'bg-cta/10 text-cta'
+                            : 'bg-primary/10 text-primary'
+                        }`}>
                         {product.type.toUpperCase()}
                       </span>
                       <span className="text-sm text-text-muted">
