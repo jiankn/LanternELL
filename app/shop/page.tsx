@@ -25,7 +25,8 @@ function ProductImage({ product }: { product: Product }) {
     getProductImage(
       product.type,
       product.resources?.[0]?.pack_type,
-      product.resources?.[0]?.age_band
+      product.resources?.[0]?.age_band,
+      product.slug
     )
   )
 
