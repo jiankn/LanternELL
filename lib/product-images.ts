@@ -36,23 +36,45 @@ const FALLBACK_IMAGE = '/images/products/pack-vocabulary-k2.png'
 export const PLACEHOLDER_IMAGE = '/images/products/placeholder-pack.webp'
 
 export const SLUG_IMAGES: Record<string, string> = {
+    // --- K-2 Vocabulary Packs (15) ---
     'action-verbs-vocabulary-pack-k-2-en-es': '/images/products/action-verbs-vocab-k2.webp',
     'animals-vocabulary-pack-k-2-en-es': '/images/products/animals-vocab-k2.webp',
     'body-parts-vocabulary-pack-k-2-en-es': '/images/products/body-parts-vocab-k2.webp',
     'classroom-objects-vocabulary-pack-k-2-en-es': '/images/products/classroom-objects-vocab-k2.webp',
     'clothes-vocabulary-pack-k-2-en-es': '/images/products/clothes-vocab-k2.webp',
     'colors-vocabulary-pack-k-2-en-es': '/images/products/colors-vocab-k2.webp',
-    'community-vocabulary-pack-k-2-en-es': '/images/products/community-vocab-k2.webp',
-    'family-vocabulary-pack-k-2-en-es': '/images/products/family-vocab-k2.webp',
-    'feelings-vocabulary-pack-k-2-en-es': '/images/products/feelings-vocab-k2.webp',
+    'places-in-community-vocabulary-pack-k-2-en-es': '/images/products/community-vocab-k2.webp',
+    'family-members-vocabulary-pack-k-2-en-es': '/images/products/family-vocab-k2.webp',
+    'feelings-and-emotions-vocabulary-pack-k-2-en-es': '/images/products/feelings-vocab-k2.webp',
     'food-vocabulary-pack-k-2-en-es': '/images/products/food-vocab-k2.webp',
-    'classroom-furniture-classroom-labels-k-2-en-es': '/images/products/furniture-labels-k2.webp',
-    'school-supplies-classroom-labels-k-2-en-es': '/images/products/supplies-labels-k2.webp',
     'numbers-1-20-vocabulary-pack-k-2-en-es': '/images/products/numbers-vocab-k2.webp',
     'opposites-vocabulary-pack-k-2-en-es': '/images/products/opposites-vocab-k2.webp',
     'shapes-vocabulary-pack-k-2-en-es': '/images/products/shapes-vocab-k2.webp',
     'transportation-vocabulary-pack-k-2-en-es': '/images/products/transportation-vocab-k2.webp',
     'weather-and-seasons-vocabulary-pack-k-2-en-es': '/images/products/weather-vocab-k2.webp',
+    // --- K-2 Classroom Labels (5) ---
+    'classroom-furniture-classroom-labels-k-2-en-es': '/images/products/furniture-labels-k2.webp',
+    'school-supplies-classroom-labels-k-2-en-es': '/images/products/supplies-labels-k2.webp',
+    'classroom-areas-classroom-labels-k-2-en-es': '/images/products/areas-labels-k2.webp',
+    'days-and-months-classroom-labels-k-2-en-es': '/images/products/days-months-labels-k2.webp',
+    'time-and-clock-classroom-labels-k-2-en-es': '/images/products/time-clock-labels-k2.webp',
+    // --- K-2 Sentence Frames (5) ---
+    'basic-greetings-sentence-frames-k-2-en-es': '/images/products/greetings-sentences-k2.webp',
+    'asking-for-help-sentence-frames-k-2-en-es': '/images/products/asking-help-sentences-k2.webp',
+    'expressing-feelings-sentence-frames-k-2-en-es': '/images/products/feelings-sentences-k2.webp',
+    'classroom-instructions-sentence-frames-k-2-en-es': '/images/products/instructions-sentences-k2.webp',
+    'sharing-and-taking-turns-sentence-frames-k-2-en-es': '/images/products/sharing-sentences-k2.webp',
+    // --- 3-5 Vocabulary Packs (8) ---
+    'science-vocabulary-vocabulary-pack-3-5-en-es': '/images/products/science-vocab-35.webp',
+    'math-vocabulary-vocabulary-pack-3-5-en-es': '/images/products/math-vocab-35.webp',
+    'social-studies-vocabulary-pack-3-5-en-es': '/images/products/social-studies-vocab-35.webp',
+    'reading-and-writing-vocabulary-pack-3-5-en-es': '/images/products/reading-writing-vocab-35.webp',
+    'health-and-safety-vocabulary-pack-3-5-en-es': '/images/products/health-safety-vocab-35.webp',
+    'geography-and-maps-vocabulary-pack-3-5-en-es': '/images/products/geography-vocab-35.webp',
+    'technology-and-computers-vocabulary-pack-3-5-en-es': '/images/products/technology-vocab-35.webp',
+    'arts-and-music-vocabulary-pack-3-5-en-es': '/images/products/arts-music-vocab-35.webp',
+    // --- 3-5 Sentence Frames (1/3) ---
+    'academic-discussion-sentence-frames-3-5-en-es': '/images/products/academic-discussion-sentences-35.webp',
 }
 
 /**
