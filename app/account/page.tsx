@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProductImage } from '@/lib/product-images'
+import { getProductImage, PLACEHOLDER_IMAGE } from '@/lib/product-images'
 import {
     Library,
     Receipt,
@@ -41,6 +41,28 @@ interface RecentDownload {
     name: string
     downloadedAt: string
     packType: string
+}
+
+/** Image with automatic fallback to placeholder on load error */
+function ProductImage({ product }: { product: Product }) {
+    const [src, setSrc] = useState(() =>
+        getProductImage(
+            product.type,
+            product.resources?.[0]?.pack_type,
+            product.resources?.[0]?.age_band
+        )
+    )
+
+    return (
+        <Image
+            src={src}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            onError={() => setSrc(PLACEHOLDER_IMAGE)}
+        />
+    )
 }
 
 const packTypeIcons: Record<string, React.ReactNode> = {
@@ -268,15 +290,8 @@ export default function AccountDashboard() {
                                         className="group cursor-pointer block"
                                     >
                                         <div className="relative h-32 rounded-xl overflow-hidden bg-slate-50 mb-3">
-                                            <Image
-                                                src={getProductImage(
-                                                    product.type,
-                                                    product.resources?.[0]?.pack_type,
-                                                    product.resources?.[0]?.age_band
-                                                )}
-                                                alt={product.name}
-                                                fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                            <ProductImage
+                                                product={product}
                                             />
                                             <span className={`absolute top-2 left-2 px-2 py-0.5 text-xs font-semibold rounded-full ${product.type === 'bundle'
                                                 ? 'bg-purple-100/90 text-purple-700'

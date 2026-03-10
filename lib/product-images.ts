@@ -32,6 +32,9 @@ const TYPE_IMAGES: Record<string, string> = {
 
 const FALLBACK_IMAGE = '/images/products/pack-vocabulary-k2.png'
 
+/** Exported for use as onError fallback in Image components */
+export const PLACEHOLDER_IMAGE = '/images/products/placeholder-pack.webp'
+
 /**
  * Returns the appropriate cover image path for a product.
  *

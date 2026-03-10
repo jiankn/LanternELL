@@ -11,12 +11,34 @@ import {
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { ProductGridSkeleton } from '@/components/ui/skeleton'
-import { getProductImage } from '@/lib/product-images'
+import { getProductImage, PLACEHOLDER_IMAGE } from '@/lib/product-images'
 
 interface Product {
   id: string; slug: string; name: string; description: string
   type: string; price_cents: number; price_formatted: string
   resources?: Array<{ id: string; title: string; pack_type: string; age_band: string; language_pair: string }>
+}
+
+/** Image with automatic fallback to placeholder on load error */
+function ProductImage({ product }: { product: Product }) {
+  const [src, setSrc] = useState(() =>
+    getProductImage(
+      product.type,
+      product.resources?.[0]?.pack_type,
+      product.resources?.[0]?.age_band
+    )
+  )
+
+  return (
+    <Image
+      src={src}
+      alt={product.name}
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      className="object-cover group-hover:scale-105 transition-transform duration-500"
+      onError={() => setSrc(PLACEHOLDER_IMAGE)}
+    />
+  )
 }
 
 const packTypeIcons: Record<string, React.ReactNode> = {
@@ -161,8 +183,8 @@ function ShopPageInner() {
                 key={f.key}
                 onClick={() => setFilter(f.key)}
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer ${filter === f.key
-                    ? 'bg-primary text-white shadow-clay-button'
-                    : 'bg-white text-text-primary hover:bg-primary/10'
+                  ? 'bg-primary text-white shadow-clay-button'
+                  : 'bg-white text-text-primary hover:bg-primary/10'
                   }`}
               >
                 {f.label}
@@ -223,22 +245,13 @@ function ShopPageInner() {
                 >
                   {/* Cover Image */}
                   <div className="relative h-44 w-full bg-slate-50">
-                    <Image
-                      src={getProductImage(
-                        product.type,
-                        product.resources?.[0]?.pack_type,
-                        product.resources?.[0]?.age_band
-                      )}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <ProductImage product={product} />
                     <div className="absolute top-3 left-3">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full backdrop-blur-sm ${product.type === 'bundle'
-                          ? 'bg-purple-100/90 text-purple-700'
-                          : product.type === 'membership'
-                            ? 'bg-cta/10 text-cta bg-white/90'
-                            : 'bg-primary/10 text-primary bg-white/90'
+                        ? 'bg-purple-100/90 text-purple-700'
+                        : product.type === 'membership'
+                          ? 'bg-cta/10 text-cta bg-white/90'
+                          : 'bg-primary/10 text-primary bg-white/90'
                         }`}>
                         {product.type === 'membership' ? 'Membership' : product.type.toUpperCase()}
                       </span>
