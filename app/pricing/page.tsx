@@ -31,7 +31,7 @@ const faqs = [
   {
     question: 'Can I try before I buy?',
     answer:
-      'Yes. We offer free sample packs on our shop page so you can see the quality before purchasing. No credit card required.',
+      'Yes. We provide detailed previews of every pack so you can see the quality before purchasing. We also offer free sample worksheets on our free resources page. No credit card required.',
   },
   {
     question: 'What is the difference between monthly and annual billing?',
@@ -108,7 +108,7 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-6">
             <Zap className="w-4 h-4 text-cta" />
-            <span className="text-sm font-medium text-text-primary">Free Samples Before You Buy</span>
+            <span className="text-sm font-medium text-text-primary">Preview Packs Before You Buy</span>
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             Simple Pricing for <span className="text-gradient">Every Classroom</span>
@@ -134,7 +134,7 @@ export default function PricingPage() {
               { icon: <Shield className="w-6 h-6" />, label: 'Free Samples Available' },
               { icon: <Download className="w-6 h-6" />, label: 'Instant Download' },
               { icon: <Zap className="w-6 h-6" />, label: 'Cancel Anytime' },
-              { icon: <Users className="w-6 h-6" />, label: '10,000+ Teachers' },
+              { icon: <Users className="w-6 h-6" />, label: '50+ Teaching Packs' },
             ].map((badge) => (
               <div key={badge.label} className="clay-card-sm p-4 text-center">
                 <div className="text-primary mx-auto mb-2 flex justify-center">{badge.icon}</div>
@@ -191,13 +191,13 @@ export default function PricingPage() {
               Ready to Save Hours of Prep Time?
             </h2>
             <p className="text-text-primary/70 mb-8">
-              Join thousands of teachers using LanternELL in their classrooms every day.
+              Built for the real needs of ESL teachers, bilingual educators, and homeschool families.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/shop?filter=membership" className="clay-button-cta text-lg cursor-pointer">
                 Start All Access — $9/mo
               </Link>
-              <Link href="/shop" className="clay-button text-lg cursor-pointer">
+              <Link href="/free-samples" className="clay-button text-lg cursor-pointer">
                 Browse Free Samples
               </Link>
             </div>

@@ -30,7 +30,9 @@ interface BlogPost {
   published_at: string
 }
 
-export const dynamic = 'force-dynamic'
+// ISR: 静态生成，每 3600 秒（1小时）重新验证
+// Google 爬虫拿到的是预渲染的静态 HTML，加载更快，SEO 更好
+export const revalidate = 3600
 
 export default async function BlogPage() {
   let posts: BlogPost[] = []

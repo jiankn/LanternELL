@@ -34,9 +34,9 @@ const comparisonFeatures = [
   { name: 'Sentence frames', single: true, bundle: true, membership: true },
   { name: 'Classroom labels', single: true, bundle: true, membership: true },
   { name: 'Parent communication sheets', single: true, bundle: true, membership: true },
-  { name: 'SPED visual supports', single: false, bundle: 'Some', membership: true },
-  { name: 'Assessment tools', single: false, bundle: 'Some', membership: true },
-  { name: 'New weekly packs', single: false, bundle: false, membership: true },
+  { name: 'Visual supports for diverse learners', single: false, bundle: 'Some', membership: true },
+  { name: 'Progress tracking templates', single: false, bundle: 'Some', membership: true },
+  { name: 'New packs added regularly', single: false, bundle: false, membership: true },
   { name: 'High-res / no watermark', single: true, bundle: true, membership: true },
   { name: 'Bundle discount (up to 40%)', single: false, bundle: true, membership: 'N/A' },
 ]
@@ -81,17 +81,15 @@ export function PricingCards() {
       icon: <Sparkles className="w-6 h-6" />,
       features: [
         'Unlimited downloads — every pack',
-        'New packs added weekly',
+        'New packs added regularly',
         'English-Spanish bilingual packs',
-        'SPED visual supports included',
-        'Assessment tools included',
+        'Visual supports for diverse learners',
+        'Progress tracking templates included',
         'High-resolution, no watermark',
         'Cancel anytime',
       ],
       annualPerks: isAnnual ? [
         '3+ months free vs monthly',
-        'Priority email support',
-        'Early access to new packs',
       ] : [],
     },
     {

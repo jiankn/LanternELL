@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 interface Product {
   id: string; slug: string; name: string; description: string
@@ -219,8 +219,8 @@ export default async function EllWorksheetsPage() {
           </p>
 
           <div className="text-center mt-8">
-            <Link href="/shop" className="clay-button-cta text-lg cursor-pointer inline-flex items-center gap-2">
-              <Download className="w-5 h-5" /> Get Started with Free Samples
+            <Link href="/free-samples" className="clay-button-cta text-lg cursor-pointer inline-flex items-center gap-2">
+              <Download className="w-5 h-5" /> Browse Free Samples
             </Link>
           </div>
         </div>

@@ -47,24 +47,24 @@ export const metadata: Metadata = {
 }
 
 const packs = [
-  { id: 1, title: 'Newcomer Survival Pack', description: 'Essential vocabulary and phrases for first-week ELL students in any grade', price: '$8.99', badge: 'Bestseller', image: '/images/categories/cat-vocabulary.webp', href: '/shop' },
-  { id: 2, title: 'Classroom Labels — English-Spanish', description: 'Bilingual labels for classroom furniture, supplies, areas, and daily routines', price: '$3.99', badge: 'Popular', image: '/images/categories/cat-labels.webp', href: '/shop' },
-  { id: 3, title: 'Sentence Frames Pack', description: 'Bilingual sentence starters, dialogue strips, and speaking prompts for ELL newcomers', price: '$5.99', badge: 'New', image: '/images/categories/cat-sentence.webp', href: '/shop' },
-  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication — welcome letters, homework notes, progress reports', price: '$3.99', badge: null, image: '/images/categories/cat-parents.webp', href: '/shop' },
+  { id: 1, title: 'Vocabulary Packs', description: 'Print-ready bilingual vocabulary cards, matching worksheets, tracing activities, and mini-books for ELL newcomers', price: 'From $3.99', badge: 'Popular', image: '/images/categories/cat-vocabulary.webp', href: '/shop' },
+  { id: 2, title: 'Classroom Labels — English-Spanish', description: 'Bilingual labels for classroom furniture, supplies, areas, and daily routines', price: 'From $3.99', badge: null, image: '/images/categories/cat-labels.webp', href: '/shop' },
+  { id: 3, title: 'Sentence Frames Pack', description: 'Bilingual sentence starters, dialogue strips, and speaking prompts for ELL newcomers', price: 'From $3.99', badge: 'New', image: '/images/categories/cat-sentence.webp', href: '/shop' },
+  { id: 4, title: 'Parent Communication', description: 'Bilingual notes for home-school communication — welcome letters, homework notes, progress reports', price: 'From $3.99', badge: null, image: '/images/categories/cat-parents.webp', href: '/shop' },
 ]
 
 const testimonials = [
-  { id: 1, name: 'Sarah M.', role: '2nd Grade ESL Teacher', avatar: '/images/avatars/sarah.png', content: 'These packs saved me hours of prep time. My newcomer students love the visual supports.', rating: 5 },
-  { id: 2, name: 'Miguel R.', role: 'Dual Language 5th Grade', avatar: '/images/avatars/miguel.png', content: 'The multilingual classroom labels are a game-changer. Finally resources in the languages my students actually speak.', rating: 5 },
-  { id: 3, name: 'Jennifer L.', role: 'SPED Paraprofessional', avatar: '/images/avatars/jennifer.png', content: 'The visual supports work perfectly for my students with IEPs. I use them alongside the ELL vocabulary packs.', rating: 5 },
-  { id: 4, name: 'Priya K.', role: 'Homeschool Parent', avatar: '/images/avatars/priya.png', content: 'My kids are learning English at home and these packs make it so easy. Just print and go.', rating: 5 },
+  { id: 1, name: 'ESL Teacher', role: '2nd Grade, Public School', avatar: '/images/avatars/sarah.png', content: 'These packs saved me hours of prep time. My newcomer students love the visual supports.', rating: 5 },
+  { id: 2, name: 'Dual Language Teacher', role: '5th Grade, Bilingual Program', avatar: '/images/avatars/miguel.png', content: 'The bilingual classroom labels are a game-changer. Finally resources in the languages my students actually speak.', rating: 5 },
+  { id: 3, name: 'Paraprofessional', role: 'K-5 ELL Support', avatar: '/images/avatars/jennifer.png', content: 'The visual supports work perfectly for my students. I use them alongside the ELL vocabulary packs every day.', rating: 5 },
+  { id: 4, name: 'Homeschool Parent', role: 'English Learner Family', avatar: '/images/avatars/priya.png', content: 'My kids are learning English at home and these packs make it so easy. Just print and go.', rating: 5 },
 ]
 
 const stats = [
   { value: '50+', label: 'Printable Packs' },
-  { value: 'EN-ES', label: 'Bilingual Packs' },
-  { value: 'K–5', label: 'Core Grades' },
-  { value: 'Free', label: 'Sample Downloads' },
+  { value: 'EN-ES', label: 'Bilingual Content' },
+  { value: 'K–8', label: 'Grade Coverage' },
+  { value: 'PDF', label: 'Print-Ready Files' },
 ]
 
 const faqs = [
@@ -116,7 +116,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-8">
             <Sparkles className="w-4 h-4 text-cta" />
-            <span className="text-sm font-medium text-text-primary">Trusted by 10,000+ Teachers</span>
+            <span className="text-sm font-medium text-text-primary">50+ Teaching Packs · K-8 Grade Coverage</span>
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
@@ -129,7 +129,7 @@ export default function LandingPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link href="/shop" className="clay-button-cta text-lg flex items-center gap-2 cursor-pointer">
+            <Link href="/free-samples" className="clay-button-cta text-lg flex items-center gap-2 cursor-pointer">
               <Download className="w-5 h-5" /> Get Free Samples
             </Link>
             <Link href="/shop" className="clay-button text-lg flex items-center gap-2 cursor-pointer">
@@ -216,14 +216,14 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* H2: Trusted by ELL & Bilingual Teachers */}
+      {/* H2: Built for ELL & Bilingual Teachers */}
       <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-              Trusted by ELL & Bilingual Teachers
+              Built for ELL & Bilingual Teachers
             </h2>
-            <p className="text-lg text-text-primary/70">Join thousands of educators who use LanternELL in their classrooms</p>
+            <p className="text-lg text-text-primary/70">Designed for the real needs of ESL teachers, bilingual educators, and homeschool families</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t) => (
@@ -294,10 +294,10 @@ export default function LandingPage() {
           <div className="clay-card p-8 sm:p-10">
             <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-text-primary mb-4">
-              Free ELL Teaching Resources
+              ELL Teaching Tips & Updates
             </h2>
             <p className="text-sm text-text-primary/70">
-              Subscribe to get 3 free printable packs and be the first to know about new <Link href="/teaching-tips" className="text-primary hover:underline">ELL teaching tips</Link>, <Link href="/ell-worksheets" className="text-primary hover:underline">free ELL worksheets</Link>, and bilingual classroom resources.
+              Subscribe to get early access to new packs and be the first to know about <Link href="/teaching-tips" className="text-primary hover:underline">ELL teaching tips</Link>, <Link href="/free-samples" className="text-primary hover:underline">free ELL resources</Link>, and bilingual classroom updates.
             </p>
             <EmailCapture />
           </div>

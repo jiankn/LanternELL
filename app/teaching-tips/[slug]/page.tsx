@@ -6,13 +6,26 @@ import { Footer } from '@/components/ui/footer'
 import { Calendar, ArrowLeft } from 'lucide-react'
 import type { Metadata } from 'next'
 
-export const dynamic = 'force-dynamic'
+// ISR: 静态生成，每 3600 秒（1小时）重新验证
+export const revalidate = 3600
 
 interface BlogPost {
   id: string; slug: string; title: string; excerpt: string | null
   content_md: string; cover_image_url: string | null; author: string
   tags: string | null; seo_title: string | null; seo_description: string | null
   published_at: string
+}
+
+// Build 时预渲染所有已发布文章为静态 HTML
+export async function generateStaticParams() {
+  try {
+    const posts = await query<{ slug: string }>(
+      "SELECT slug FROM blog_posts WHERE status = 'published'"
+    )
+    return posts.map((post) => ({ slug: post.slug }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
