@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { Mail, MessageSquare, Clock } from 'lucide-react'
@@ -15,6 +16,11 @@ export default function ContactPage() {
       <Navbar links={[{ href: '/shop', label: 'Shop' }, { href: '/teaching-tips', label: 'Teaching Tips' }, { href: '/login', label: 'Sign In' }]} />
       <article className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
+          <nav className="flex items-center gap-2 text-sm text-text-muted mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-text-primary font-medium">Contact</span>
+          </nav>
           <h1 className="font-heading text-4xl font-bold text-text-primary mb-4">Contact Us</h1>
           <p className="text-text-primary/70 text-lg mb-12">
             Have a question about your order, account, or our ELL teaching resources? We're here to help.

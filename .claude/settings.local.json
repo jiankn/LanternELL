@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add app/page.tsx app/shop/[slug]/page.tsx app/teaching-tips/[slug]/page.tsx app/teaching-tips/page.tsx SEO_OPTIMIZATION_PLAN.md)",
+      "Bash(git commit -m \"$\\(cat <<'EOF'\nfeat: 优化首页和核心页面 SEO，建立 Topic Cluster 架构\n\n- 首页重构为 Pillar Page，聚焦主关键词 \"ELL worksheets\"\n- 优化 Title、Meta Description、H1 和正文前 100 字包含主关键词\n- 重构 6 个 H2 标题覆盖长尾关键词\n- 添加 Open Graph 图片到首页、产品页、博客页\n- 修复所有图片 alt 属性，添加描述性文本\n- 优化内部链接锚文本，使用关键词替代通用文本\n- 建立内链矩阵：首页链向所有 Cluster Pages\n- 添加 SEO 优化规划文档 \\(SEO_OPTIMIZATION_PLAN.md\\)\n\nSEO 架构：\n- Pillar: 首页 \\(ELL worksheets\\)\n- Clusters: 6 个子页面覆盖细分关键词\n- 内链矩阵：Pillar ↔ Cluster 双向链接\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

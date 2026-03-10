@@ -66,6 +66,36 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             priority: 0.9,
         },
         {
+            url: `${BASE_URL}/bilingual-classroom-labels`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/english-spanish-printables`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/esl-worksheets-beginners`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/visual-supports-ell`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/newcomer-activities`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${BASE_URL}/pricing`,
             lastModified: new Date(),
             changeFrequency: 'monthly',

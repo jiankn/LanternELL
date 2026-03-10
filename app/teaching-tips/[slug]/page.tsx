@@ -81,9 +81,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <article className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <Link href="/teaching-tips" className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-primary transition-colors mb-8 cursor-pointer">
-            <ArrowLeft className="w-4 h-4" /> Back to Teaching Tips
-          </Link>
+          <nav className="flex items-center gap-2 text-sm text-text-muted mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/teaching-tips" className="hover:text-primary transition-colors">Teaching Tips</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-text-primary font-medium line-clamp-1">{post.title}</span>
+          </nav>
 
           {post.cover_image_url && (
             <img src={post.cover_image_url} alt={`${post.title} - Cover image`} className="w-full h-64 object-cover rounded-2xl mb-8" />
@@ -103,6 +107,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           )}
 
           <div className="prose-lanternell" dangerouslySetInnerHTML={{ __html: html }} />
+
+          {/* Related Resources — internal links to cluster pages */}
+          <div className="mt-12 pt-8 border-t border-text-primary/10">
+            <h2 className="font-heading text-xl font-semibold text-text-primary mb-4">Related ELL Resources</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/ell-worksheets" className="text-sm text-primary hover:underline">ELL Worksheets</Link>
+              <span className="text-text-muted">·</span>
+              <Link href="/bilingual-classroom-labels" className="text-sm text-primary hover:underline">Bilingual Classroom Labels</Link>
+              <span className="text-text-muted">·</span>
+              <Link href="/english-spanish-printables" className="text-sm text-primary hover:underline">English-Spanish Printables</Link>
+              <span className="text-text-muted">·</span>
+              <Link href="/visual-supports-ell" className="text-sm text-primary hover:underline">Visual Supports</Link>
+              <span className="text-text-muted">·</span>
+              <Link href="/newcomer-activities" className="text-sm text-primary hover:underline">Newcomer Activities</Link>
+              <span className="text-text-muted">·</span>
+              <Link href="/esl-worksheets-beginners" className="text-sm text-primary hover:underline">ESL for Beginners</Link>
+            </div>
+          </div>
         </div>
       </article>
 

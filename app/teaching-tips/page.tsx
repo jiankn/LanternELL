@@ -47,6 +47,11 @@ export default async function BlogPage() {
 
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+          <nav className="flex items-center gap-2 text-sm text-text-muted mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-text-primary font-medium">Teaching Tips</span>
+          </nav>
           <h1 className="font-heading text-4xl font-bold text-text-primary mb-4">Teaching Tips</h1>
           <p className="text-text-muted mb-12">Practical strategies and resources for ELL educators.</p>
 

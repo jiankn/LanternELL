@@ -92,8 +92,19 @@ export default function PricingPage() {
         ]}
       />
 
+      {/* Breadcrumb */}
+      <div className="pt-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <nav className="flex items-center gap-2 text-sm text-text-muted mb-4" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-text-primary font-medium">Pricing</span>
+          </nav>
+        </div>
+      </div>
+
       {/* Hero */}
-      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+      <section className="pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-6">
             <Zap className="w-4 h-4 text-cta" />
