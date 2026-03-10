@@ -106,7 +106,7 @@ export const SLUG_IMAGES: Record<string, string> = {
  * @param productType - 'single' | 'bundle' | 'membership'
  * @param packType - e.g. 'vocabulary_pack', 'sentence_frames', etc.
  * @param ageBand - e.g. 'K-2', '3-5', '6-8'
- * @param slug - product slug for direct mapping
+ * @param slug - product slug for direct mapping (highest priority)
  */
 export function getProductImage(
     productType: string,
@@ -114,21 +114,20 @@ export function getProductImage(
     ageBand?: string,
     slug?: string
 ): string {
-    // Bundles and memberships have their own dedicated images
-    if (productType === 'bundle' || productType === 'membership') {
-        return TYPE_IMAGES[productType] || FALLBACK_IMAGE
-    }
-
-    // Direct mapping by slug (new system)
+    // 1. Highest priority: direct mapping by slug (new per-product images)
     if (slug && SLUG_IMAGES[slug]) {
         return SLUG_IMAGES[slug]
     }
 
-    // Single packs fallback: look up by pack_type + age_band (old system)
+    // 2. Bundles and memberships fallback to type-level images
+    if (productType === 'bundle' || productType === 'membership') {
+        return TYPE_IMAGES[productType] || FALLBACK_IMAGE
+    }
+
+    // 3. Single packs fallback: look up by pack_type + age_band
     if (packType) {
         const ageMap = PACK_TYPE_AGE_IMAGES[packType]
         if (ageMap) {
-            // Try exact age band match, then wildcard
             return ageMap[ageBand || 'K-2'] || ageMap['*'] || FALLBACK_IMAGE
         }
     }
