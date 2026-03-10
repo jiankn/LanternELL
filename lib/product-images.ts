@@ -73,8 +73,31 @@ export const SLUG_IMAGES: Record<string, string> = {
     'geography-and-maps-vocabulary-pack-3-5-en-es': '/images/products/geography-vocab-35.webp',
     'technology-and-computers-vocabulary-pack-3-5-en-es': '/images/products/technology-vocab-35.webp',
     'arts-and-music-vocabulary-pack-3-5-en-es': '/images/products/arts-music-vocab-35.webp',
-    // --- 3-5 Sentence Frames (1/3) ---
+    // --- 3-5 Sentence Frames (3) ---
     'academic-discussion-sentence-frames-3-5-en-es': '/images/products/academic-discussion-sentences-35.webp',
+    'writing-prompts-and-responses-sentence-frames-3-5-en-es': '/images/products/writing-prompts-sentences-35.webp',
+    'book-reports-and-reading-logs-sentence-frames-3-5-en-es': '/images/products/book-reports-sentences-35.webp',
+    // --- 3-5 Classroom Labels (1) ---
+    'science-lab-labels-classroom-labels-3-5-en-es': '/images/products/science-lab-labels-35.webp',
+    // --- 6-8 Vocabulary Packs (3) ---
+    'academic-vocabulary-vocabulary-pack-6-8-en-es': '/images/products/academic-vocab-68.webp',
+    'lab-reports-and-scientific-method-vocabulary-pack-6-8-en-es': '/images/products/lab-reports-vocab-68.webp',
+    'career-and-life-skills-vocabulary-pack-6-8-en-es': '/images/products/career-skills-vocab-68.webp',
+    // --- 6-8 Sentence Frames (2) ---
+    'literary-analysis-sentence-frames-6-8-en-es': '/images/products/literary-analysis-sentences-68.webp',
+    'research-and-citation-sentence-frames-6-8-en-es': '/images/products/research-citation-sentences-68.webp',
+    // --- K-2 Parent Communication (3) ---
+    'welcome-letter-parent-communication-k-2-en-es': '/images/products/welcome-letter-parent.webp',
+    'homework-note-parent-communication-k-2-en-es': '/images/products/homework-note-parent.webp',
+    'progress-report-parent-communication-k-2-en-es': '/images/products/progress-report-parent.webp',
+    // --- Bundles (5) ---
+    'newcomer-starter-kit-bundle-en-es': '/images/products/newcomer-starter-bundle.webp',
+    'classroom-essentials-labels-bundle-en-es': '/images/products/classroom-essentials-bundle.webp',
+    'grade-3-5-academic-pack-bundle-en-es': '/images/products/grade-35-academic-bundle.webp',
+    'middle-school-newcomer-pack-bundle-en-es': '/images/products/middle-school-bundle.webp',
+    'complete-k8-ell-pack-bundle-en-es': '/images/products/complete-k8-bundle.webp',
+    // --- Memberships (1) ---
+    'all-access-membership': '/images/products/all-access-membership.webp',
 }
 
 /**
