@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Teaching Tips - ELL Strategies & Classroom Resources',
   description: 'Practical teaching tips, strategies, and resources for ELL, bilingual, and SPED educators. From classroom management to language acquisition techniques for Pre-K–8.',
   alternates: { canonical: '/teaching-tips' },
+  openGraph: {
+    title: 'Teaching Tips - ELL Strategies & Classroom Resources',
+    description: 'Practical teaching tips, strategies, and resources for ELL, bilingual, and SPED educators.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'}/teaching-tips`,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'}/images/og-teaching-tips.png`,
+        width: 1200,
+        height: 630,
+        alt: 'LanternELL Teaching Tips for ELL Educators',
+      },
+    ],
+  },
 }
 
 interface BlogPost {
@@ -49,7 +62,7 @@ export default async function BlogPage() {
                   <Link key={post.id} href={`/teaching-tips/${post.slug}`}
                     className="clay-card p-6 flex flex-col sm:flex-row gap-6 group cursor-pointer hover:-translate-y-0.5 transition-all duration-200">
                     {post.cover_image_url && (
-                      <img src={post.cover_image_url} alt="" className="w-full sm:w-48 h-32 object-cover rounded-xl shrink-0" />
+                      <img src={post.cover_image_url} alt={`${post.title} - ELL teaching tips and strategies`} className="w-full sm:w-48 h-32 object-cover rounded-xl shrink-0" />
                     )}
                     <div className="flex-1 min-w-0">
                       <h2 className="font-heading text-xl font-semibold text-text-primary group-hover:text-primary transition-colors mb-2">{post.title}</h2>

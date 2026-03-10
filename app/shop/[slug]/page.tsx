@@ -108,6 +108,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       url: `${BASE_URL}/shop/${slug}`,
       type: 'website',
+      images: [
+        {
+          url: getProductImage(
+            product.type,
+            product.resources?.[0]?.pack_type,
+            product.resources?.[0]?.age_band
+          ),
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
     },
   }
 }

@@ -21,14 +21,28 @@ import { FaqAccordion } from '@/components/ui/faq-accordion'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'LanternELL — Printable ELL Worksheets & Bilingual Classroom Resources',
+  title: 'ELL Worksheets — Printable Bilingual Resources for K-5 Teachers | LanternELL',
   description:
-    'Print-ready ELL worksheets, bilingual classroom labels, visual supports, and bilingual teaching packs for K-5 ESL teachers, bilingual educators, and homeschool families. English-Spanish. Just print and use today.',
+    'Free & premium ELL worksheets for newcomer students. Print-ready bilingual resources in English-Spanish for K-5 classrooms. Download ELL worksheets, classroom labels, visual supports & sentence frames today.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'LanternELL — Printable ELL Worksheets & Bilingual Resources',
-    description: 'Print-ready bilingual & ELL resources for K-5 classrooms. English-Spanish. Just print and use today.',
+    title: 'ELL Worksheets — Printable Bilingual Resources for K-5 Teachers',
+    description: 'Free & premium ELL worksheets for newcomer students. Print-ready bilingual resources in English-Spanish for K-5 classrooms.',
     url: BASE_URL,
+    images: [
+      {
+        url: `${BASE_URL}/images/og-home.png`,
+        width: 1200,
+        height: 630,
+        alt: 'LanternELL - ELL Worksheets and Bilingual Classroom Resources',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ELL Worksheets — Printable Bilingual Resources for K-5 Teachers',
+    description: 'Free & premium ELL worksheets for newcomer students. Print-ready bilingual resources in English-Spanish for K-5 classrooms.',
+    images: [`${BASE_URL}/images/og-home.png`],
   },
 }
 
@@ -106,12 +120,12 @@ export default function LandingPage() {
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
-            Print-Ready ELL Worksheets &<br />
+            ELL Worksheets &<br />
             <span className="text-gradient">Bilingual Classroom Resources</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-text-primary/80 max-w-2xl mx-auto mb-10">
-            Save hours of prep time with ready-to-print ELL worksheets, visual supports, and bilingual teaching packs designed for K-5 classrooms. English-Spanish bilingual. Resources also available for Pre-K and middle school.
+            Download free and premium ELL worksheets for newcomer students in K-5 classrooms. Our print-ready bilingual resources include ELL worksheets, classroom labels, visual supports, and sentence frames in English-Spanish. Perfect for ESL teachers, bilingual educators, and homeschool families. Just print and use today.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -134,15 +148,15 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* H2: Multilingual Printable Teaching Packs */}
+      {/* H2: Printable ELL Worksheets & Teaching Packs */}
       <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-              Multilingual Printable Teaching Packs
+              Printable ELL Worksheets & Teaching Packs
             </h2>
             <p className="text-lg text-text-primary/70 max-w-2xl mx-auto">
-              Ready-to-use <Link href="/shop" className="text-primary hover:underline">bilingual classroom resources</Link> in English and Spanish — designed for K-5 ESL teachers, bilingual educators, and homeschool families
+              Ready-to-use <Link href="/ell-worksheets" className="text-primary hover:underline">ELL worksheets</Link>, <Link href="/bilingual-classroom-labels" className="text-primary hover:underline">bilingual classroom labels</Link>, <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports</Link>, and <Link href="/english-spanish-printables" className="text-primary hover:underline">English-Spanish printables</Link> — designed for K-5 ESL teachers, bilingual educators, and homeschool families
             </p>
           </div>
 
@@ -150,7 +164,7 @@ export default function LandingPage() {
             {packs.map((pack) => (
               <Link key={pack.id} href={pack.href} className="clay-card overflow-hidden hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col">
                 <div className="relative h-48 w-full bg-slate-100">
-                  <Image src={pack.image} alt={pack.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={pack.image} alt={`${pack.title} - Printable ELL teaching pack for K-5 classrooms`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   {pack.badge && <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full shadow-sm">{pack.badge}</span>}
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
@@ -166,8 +180,8 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/shop" className="clay-button cursor-pointer inline-flex items-center">Browse All Packs <ArrowRight className="w-5 h-5 ml-2" /></Link>
-            <Link href="/ell-worksheets" className="clay-button cursor-pointer inline-flex items-center ml-4">ELL Worksheets Guide <ArrowRight className="w-5 h-5 ml-2" /></Link>
+            <Link href="/shop" className="clay-button cursor-pointer inline-flex items-center">Browse All ELL Worksheets & Packs <ArrowRight className="w-5 h-5 ml-2" /></Link>
+            <Link href="/ell-worksheets" className="clay-button cursor-pointer inline-flex items-center ml-4">Free ELL Worksheets <ArrowRight className="w-5 h-5 ml-2" /></Link>
           </div>
         </div>
       </section>
@@ -178,10 +192,10 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                Visual Supports for ELL Newcomers
+                Visual Supports for ELL Newcomers & SPED Students
               </h2>
               <p className="text-lg text-text-primary/70 mb-8">
-                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for <Link href="/teaching-tips" className="text-primary hover:underline">ELL newcomers</Link> in K-5 classrooms. Also used by SPED educators, paraprofessionals, and homeschool families across the US.
+                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for <Link href="/newcomer-activities" className="text-primary hover:underline">ELL newcomers</Link> in K-5 classrooms. Also used by SPED educators, paraprofessionals, and homeschool families across the US. Browse our <Link href="/esl-worksheets-beginners" className="text-primary hover:underline">ESL worksheets for beginners</Link> and <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports for ELL students</Link>.
               </p>
               <div className="space-y-4">
                 {['Vocabulary checklists for each pack', 'Student self-assessment cards', 'Teacher observation guides', 'Progress report templates'].map((f, i) => (
@@ -238,7 +252,7 @@ export default function LandingPage() {
             <div className="relative h-64 w-full">
               <Image
                 src="/images/mockups/bundle-showcase.webp"
-                alt="Complete K-8 ELL Teaching Pack bundle showcase"
+                alt="Complete K-8 ELL Teaching Pack bundle with bilingual classroom labels and sentence frames"
                 fill
                 className="object-cover"
               />
@@ -248,7 +262,7 @@ export default function LandingPage() {
                 Bilingual Classroom Labels & Sentence Frames
               </h2>
               <p className="text-lg text-text-primary/70 mb-8 max-w-xl mx-auto">
-                Get instant access to our complete library of <Link href="/shop" className="text-primary hover:underline">printable ELL resources</Link>. New packs added weekly.
+                Get instant access to our complete library of <Link href="/bilingual-classroom-labels" className="text-primary hover:underline">bilingual classroom labels</Link>, <Link href="/english-spanish-printables" className="text-primary hover:underline">English-Spanish printables</Link>, and ELL sentence frames. New packs added weekly.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <Link href="/shop" className="clay-button-cta text-lg cursor-pointer">Get All Access - $9/mo</Link>
@@ -282,8 +296,8 @@ export default function LandingPage() {
             <h2 className="font-heading text-2xl sm:text-3xl font-bold text-text-primary mb-4">
               Free ELL Teaching Resources
             </h2>
-            <p className="text-text-primary/70 mb-6">
-              Subscribe to get 3 free printable packs and be the first to know about new <Link href="/teaching-tips" className="text-primary hover:underline">teaching tips</Link> and resources.
+            <p className="text-sm text-text-primary/70">
+              Subscribe to get 3 free printable packs and be the first to know about new <Link href="/teaching-tips" className="text-primary hover:underline">ELL teaching tips</Link>, <Link href="/ell-worksheets" className="text-primary hover:underline">free ELL worksheets</Link>, and bilingual classroom resources.
             </p>
             <EmailCapture />
           </div>

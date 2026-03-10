@@ -23,6 +23,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.seo_title || post.title,
     description: post.seo_description || post.excerpt || '',
     alternates: { canonical: `/teaching-tips/${slug}` },
+    openGraph: {
+      title: post.seo_title || post.title,
+      description: post.seo_description || post.excerpt || '',
+      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'}/teaching-tips/${slug}`,
+      images: post.cover_image_url
+        ? [
+            {
+              url: post.cover_image_url,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ]
+        : [],
+    },
   }
 }
 
@@ -71,7 +86,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </Link>
 
           {post.cover_image_url && (
-            <img src={post.cover_image_url} alt="" className="w-full h-64 object-cover rounded-2xl mb-8" />
+            <img src={post.cover_image_url} alt={`${post.title} - Cover image`} className="w-full h-64 object-cover rounded-2xl mb-8" />
           )}
 
           <h1 className="font-heading text-4xl font-bold text-text-primary mb-4">{post.title}</h1>
