@@ -114,17 +114,24 @@ export function getProductImage(
     ageBand?: string,
     slug?: string
 ): string {
-    // 1. Highest priority: direct mapping by slug (new per-product images)
+    // 1. Exact slug match
     if (slug && SLUG_IMAGES[slug]) {
         return SLUG_IMAGES[slug]
     }
 
-    // 2. Bundles and memberships fallback to type-level images
+    // 2. Fuzzy slug match: extract topic keywords and find best match
+    //    e.g. "family-members-pack-en-es-k-2" → matches "family-members-vocabulary-pack-k-2-en-es"
+    if (slug) {
+        const match = findFuzzySlugMatch(slug)
+        if (match) return match
+    }
+
+    // 3. Bundles and memberships fallback to type-level images
     if (productType === 'bundle' || productType === 'membership') {
         return TYPE_IMAGES[productType] || FALLBACK_IMAGE
     }
 
-    // 3. Single packs fallback: look up by pack_type + age_band
+    // 4. Single packs fallback: look up by pack_type + age_band
     if (packType) {
         const ageMap = PACK_TYPE_AGE_IMAGES[packType]
         if (ageMap) {
@@ -133,4 +140,32 @@ export function getProductImage(
     }
 
     return FALLBACK_IMAGE
+}
+
+/**
+ * Fuzzy match: extract meaningful topic words from the input slug
+ * and try to find a SLUG_IMAGES entry whose key shares those words.
+ */
+function findFuzzySlugMatch(slug: string): string | null {
+    // Strip common suffixes that don't carry topic meaning
+    const noise = ['en-es', 'es-en', 'bundle', 'pack', 'membership', 'single',
+        'vocabulary', 'sentence', 'frames', 'classroom', 'labels',
+        'communication', 'parent', 'k-2', '3-5', '6-8']
+    const words = slug.split('-').filter(w => !noise.includes(w) && w.length > 1)
+    if (words.length === 0) return null
+
+    // Score each existing slug by how many topic words it shares
+    let best: string | null = null
+    let bestScore = 0
+    for (const [key, img] of Object.entries(SLUG_IMAGES)) {
+        const keyWords = key.split('-')
+        const score = words.filter(w => keyWords.includes(w)).length
+        if (score > bestScore) {
+            bestScore = score
+            best = img
+        }
+    }
+
+    // Require at least 2 matching words to avoid false positives
+    return bestScore >= 2 ? best : null
 }
