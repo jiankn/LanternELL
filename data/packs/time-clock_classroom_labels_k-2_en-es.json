@@ -1,0 +1,173 @@
+{
+  "pack_id": "time-clock-k2-en-es-001",
+  "pack_type": "classroom_labels",
+  "topic": "Time & Clock",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Time & Clock Bilingual Classroom Labels",
+  "description": "A set of bilingual (English-Spanish) labels, routine cards, and rules posters designed for K-2 classrooms to introduce and reinforce time-related vocabulary and daily routines.",
+  "labels": [
+    {
+      "en": "Clock",
+      "l2": "El reloj",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Clocks / Los relojes"
+    },
+    {
+      "en": "Hour",
+      "l2": "La hora",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Hours / Las horas"
+    },
+    {
+      "en": "Minute",
+      "l2": "El minuto",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Minutes / Los minutos"
+    },
+    {
+      "en": "Second",
+      "l2": "El segundo",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Seconds / Los segundos"
+    },
+    {
+      "en": "Today",
+      "l2": "Hoy",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Yesterday",
+      "l2": "Ayer",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Tomorrow",
+      "l2": "Mañana",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Morning",
+      "l2": "La mañana",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Mornings / Las mañanas"
+    },
+    {
+      "en": "Afternoon",
+      "l2": "La tarde",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Afternoons / Las tardes"
+    },
+    {
+      "en": "Night",
+      "l2": "La noche",
+      "category": "time vocabulary",
+      "size": "full",
+      "plural_form": "Nights / Las noches"
+    },
+    {
+      "en": "Now",
+      "l2": "Ahora",
+      "category": "time vocabulary",
+      "size": "small",
+      "plural_form": ""
+    },
+    {
+      "en": "Later",
+      "l2": "Más tarde",
+      "category": "time vocabulary",
+      "size": "small",
+      "plural_form": ""
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Morning Arrival",
+      "routine_l2": "Llegada por la mañana",
+      "time_of_day": "morning",
+      "icon_prompt": "child entering classroom, backpack, sun"
+    },
+    {
+      "routine_en": "Circle Time",
+      "routine_l2": "Hora del círculo",
+      "time_of_day": "morning",
+      "icon_prompt": "children sitting in a circle, teacher, book"
+    },
+    {
+      "routine_en": "Lunch Time",
+      "routine_l2": "Hora del almuerzo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child eating, sandwich, apple, clock"
+    },
+    {
+      "routine_en": "Quiet Time",
+      "routine_l2": "Tiempo de silencio",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child reading a book quietly, shhh gesture"
+    },
+    {
+      "routine_en": "Dismissal",
+      "routine_l2": "Salida",
+      "time_of_day": "dismissal",
+      "icon_prompt": "child leaving classroom, backpack, clock, school bus"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Listen to the teacher.",
+      "rule_l2": "Escucha a la maestra/maestro.",
+      "icon_prompt": "child listening, ear icon, teacher speaking"
+    },
+    {
+      "rule_en": "Raise your hand.",
+      "rule_l2": "Levanta la mano.",
+      "icon_prompt": "child with raised hand, question mark"
+    },
+    {
+      "rule_en": "Be kind to friends.",
+      "rule_l2": "Sé amable con tus amigos.",
+      "icon_prompt": "two children sharing, heart icon"
+    },
+    {
+      "rule_en": "Clean up your space.",
+      "rule_l2": "Limpia tu espacio.",
+      "icon_prompt": "child putting away toys, broom, tidy up"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To introduce and reinforce basic time-related vocabulary and daily classroom routines in both English and Spanish, supporting language acquisition and classroom management for K-2 ELL newcomers.",
+    "suggested_use": "Place full-size labels near the classroom clock, calendar, or a dedicated 'Time' learning center. Use small labels on objects or areas to indicate 'now' (e.g., current activity bin) or 'later' (e.g., future activity bin). Display visual routine cards in a prominent location, reviewing them daily. Post classroom rules where they are easily visible and refer to them frequently.",
+    "materials_needed": [
+      "Printer",
+      "Laminator (recommended for durability)",
+      "Scissors",
+      "Tape or adhesive for mounting",
+      "Velcro dots (optional, for interactive routine charts)",
+      "A classroom clock with clear numbers (digital and analog if possible)"
+    ],
+    "differentiation_tips": [
+      "Pair visuals with gestures and actions for each word/routine.",
+      "Encourage students to repeat the words in both languages.",
+      "Use sentence frames (e.g., 'It is [time].', 'First we do [routine], then we do [routine].')",
+      "Integrate the labels into daily conversations and calendar time.",
+      "For rules, role-play scenarios to demonstrate expected behaviors."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-03-11T13:33:02.207Z",
+  "updated_at": "2024-03-11T13:33:02.207Z"
+}

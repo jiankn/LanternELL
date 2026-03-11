@@ -1,0 +1,539 @@
+{
+  "pack_id": "academic-vocab-6-8-en-es-1",
+  "pack_type": "vocabulary_pack",
+  "topic": "Academic Vocabulary",
+  "age_band": "6-8",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 6-8",
+  "title": "Mastering Academic Vocabulary: English & Spanish for Grades 6-8",
+  "description": "A comprehensive vocabulary pack designed for newcomer ELL students in grades 6-8, focusing on essential academic terms for classroom success in English and Spanish. This pack includes 20 key vocabulary words, a mini-book for contextual learning, and three engaging worksheets.",
+  "vocabulary": [
+    {
+      "en": "Analyze",
+      "l2": "Analizar",
+      "image_prompt": "A student breaking down a complex problem into smaller parts with a magnifying glass"
+    },
+    {
+      "en": "Synthesize",
+      "l2": "Sintetizar",
+      "image_prompt": "Different puzzle pieces coming together to form a complete picture"
+    },
+    {
+      "en": "Evaluate",
+      "l2": "Evaluar",
+      "image_prompt": "A person weighing two options on a scale, making a judgment"
+    },
+    {
+      "en": "Summarize",
+      "l2": "Resumir",
+      "image_prompt": "A large book being condensed into a small notebook with a few key points"
+    },
+    {
+      "en": "Compare",
+      "l2": "Comparar",
+      "image_prompt": "Two apples side-by-side, highlighting their similarities"
+    },
+    {
+      "en": "Contrast",
+      "l2": "Contrastar",
+      "image_prompt": "A black cat and a white cat standing next to each other, showing differences"
+    },
+    {
+      "en": "Infer",
+      "l2": "Inferir",
+      "image_prompt": "A detective looking at clues to figure out a mystery"
+    },
+    {
+      "en": "Elaborate",
+      "l2": "Elaborar",
+      "image_prompt": "A simple sketch being expanded with many detailed drawings and notes"
+    },
+    {
+      "en": "Justify",
+      "l2": "Justificar",
+      "image_prompt": "A student presenting reasons and evidence to support an answer"
+    },
+    {
+      "en": "Context",
+      "l2": "Contexto",
+      "image_prompt": "A word in the center of a circle, surrounded by other related words and images"
+    },
+    {
+      "en": "Evidence",
+      "l2": "Evidencia",
+      "image_prompt": "Footprints on the ground leading to a lost item, showing proof"
+    },
+    {
+      "en": "Hypothesis",
+      "l2": "Hipótesis",
+      "image_prompt": "A thought bubble with a question mark and a possible explanation"
+    },
+    {
+      "en": "Theory",
+      "l2": "Teoría",
+      "image_prompt": "A complex diagram with interconnected ideas, representing a well-explained concept"
+    },
+    {
+      "en": "Argument",
+      "l2": "Argumento",
+      "image_prompt": "Two people debating respectfully, each presenting their case"
+    },
+    {
+      "en": "Perspective",
+      "l2": "Perspectiva",
+      "image_prompt": "Two people looking at the same object (e.g., a '6' or '9'), seeing different numbers"
+    },
+    {
+      "en": "Differentiate",
+      "l2": "Diferenciar",
+      "image_prompt": "Sorting different colored blocks into separate piles"
+    },
+    {
+      "en": "Interpret",
+      "l2": "Interpretar",
+      "image_prompt": "A person looking at a piece of art and explaining its meaning"
+    },
+    {
+      "en": "Illustrate",
+      "l2": "Ilustrar",
+      "image_prompt": "A teacher drawing a picture on a whiteboard to explain a concept"
+    },
+    {
+      "en": "Conclude",
+      "l2": "Concluir",
+      "image_prompt": "A finish line with a runner crossing it, representing the end of a process or a final decision"
+    },
+    {
+      "en": "Demonstrate",
+      "l2": "Demostrar",
+      "image_prompt": "A person showing step-by-step how to build a model"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match each English academic vocabulary word to its correct English definition. Draw a line from the word to its definition.",
+      "instructions_l2": "Une cada palabra de vocabulario académico en inglés con su definición correcta en inglés. Dibuja una línea de la palabra a su definición.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Analyze",
+          "content_l2": "Analizar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To break down information into smaller parts to understand it better."
+        },
+        {
+          "id": "2",
+          "content": "Synthesize",
+          "content_l2": "Sintetizar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To combine different ideas or pieces of information to create something new."
+        },
+        {
+          "id": "3",
+          "content": "Evaluate",
+          "content_l2": "Evaluar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To form an opinion or judgment about something."
+        },
+        {
+          "id": "4",
+          "content": "Summarize",
+          "content_l2": "Resumir",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To state the main points of something in a brief form."
+        },
+        {
+          "id": "5",
+          "content": "Compare",
+          "content_l2": "Comparar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To find similarities between two or more things."
+        },
+        {
+          "id": "6",
+          "content": "Contrast",
+          "content_l2": "Contrastar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To find differences between two or more things."
+        },
+        {
+          "id": "7",
+          "content": "Infer",
+          "content_l2": "Inferir",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To figure out something based on evidence and reasoning, not directly stated."
+        },
+        {
+          "id": "8",
+          "content": "Elaborate",
+          "content_l2": "Elaborar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To explain with more details."
+        },
+        {
+          "id": "9",
+          "content": "Justify",
+          "content_l2": "Justificar",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "To give reasons or evidence to support an answer or claim."
+        },
+        {
+          "id": "10",
+          "content": "Context",
+          "content_l2": "Contexto",
+          "options": [
+            "To give reasons or evidence to support an answer or claim.",
+            "To break down information into smaller parts to understand it better.",
+            "To form an opinion or judgment about something.",
+            "To combine different ideas or pieces of information to create something new.",
+            "To state the main points of something in a brief form.",
+            "To find similarities between two or more things.",
+            "To find differences between two or more things.",
+            "To explain with more details.",
+            "To figure out something based on evidence and reasoning, not directly stated.",
+            "The circumstances or information surrounding an event or word that help to understand it."
+          ],
+          "correct_answer": "The circumstances or information surrounding an event or word that help to understand it."
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the academic vocabulary word, then write it three times on the lines provided.",
+      "instructions_l2": "Traza la palabra de vocabulario académico y luego escríbela tres veces en las líneas provistas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Evidence",
+          "content_l2": "Evidencia"
+        },
+        {
+          "id": "2",
+          "content": "Hypothesis",
+          "content_l2": "Hipótesis"
+        },
+        {
+          "id": "3",
+          "content": "Theory",
+          "content_l2": "Teoría"
+        },
+        {
+          "id": "4",
+          "content": "Argument",
+          "content_l2": "Argumento"
+        },
+        {
+          "id": "5",
+          "content": "Perspective",
+          "content_l2": "Perspectiva"
+        },
+        {
+          "id": "6",
+          "content": "Differentiate",
+          "content_l2": "Diferenciar"
+        },
+        {
+          "id": "7",
+          "content": "Interpret",
+          "content_l2": "Interpretar"
+        },
+        {
+          "id": "8",
+          "content": "Illustrate",
+          "content_l2": "Ilustrar"
+        },
+        {
+          "id": "9",
+          "content": "Conclude",
+          "content_l2": "Concluir"
+        },
+        {
+          "id": "10",
+          "content": "Demonstrate",
+          "content_l2": "Demostrar"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the illustration that represents each academic vocabulary word.",
+      "instructions_l2": "Colorea la ilustración que representa cada palabra de vocabulario académico.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Analyze",
+          "content_l2": "Analizar",
+          "image_prompt": "A student breaking down a complex problem into smaller parts with a magnifying glass"
+        },
+        {
+          "id": "2",
+          "content": "Synthesize",
+          "content_l2": "Sintetizar",
+          "image_prompt": "Different puzzle pieces coming together to form a complete picture"
+        },
+        {
+          "id": "3",
+          "content": "Evaluate",
+          "content_l2": "Evaluar",
+          "image_prompt": "A person weighing two options on a scale, making a judgment"
+        },
+        {
+          "id": "4",
+          "content": "Summarize",
+          "content_l2": "Resumir",
+          "image_prompt": "A large book being condensed into a small notebook with a few key points"
+        },
+        {
+          "id": "5",
+          "content": "Compare",
+          "content_l2": "Comparar",
+          "image_prompt": "Two apples side-by-side, highlighting their similarities"
+        },
+        {
+          "id": "6",
+          "content": "Contrast",
+          "content_l2": "Contrastar",
+          "image_prompt": "A black cat and a white cat standing next to each other, showing differences"
+        },
+        {
+          "id": "7",
+          "content": "Infer",
+          "content_l2": "Inferir",
+          "image_prompt": "A detective looking at clues to figure out a mystery"
+        },
+        {
+          "id": "8",
+          "content": "Context",
+          "content_l2": "Contexto",
+          "image_prompt": "A word in the center of a circle, surrounded by other related words and images"
+        },
+        {
+          "id": "9",
+          "content": "Argument",
+          "content_l2": "Argumento",
+          "image_prompt": "Two people debating respectfully, each presenting their case"
+        },
+        {
+          "id": "10",
+          "content": "Perspective",
+          "content_l2": "Perspectiva",
+          "image_prompt": "Two people looking at the same object (e.g., a '6' or '9'), seeing different numbers"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Our Big Project: Using Academic Words",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Page 1: Our teacher, Ms. Elena, gave us a big project. We need to understand how to use new academic words to do well.",
+        "text_l2": "Página 1: Nuestra maestra, la Sra. Elena, nos dio un gran proyecto. Necesitamos entender cómo usar nuevas palabras académicas para hacerlo bien."
+      },
+      {
+        "page_number": 2,
+        "text_en": "Page 2: First, we need to ANALYZE the topic. This means breaking it down into smaller parts to understand each piece.",
+        "text_l2": "Página 2: Primero, necesitamos ANALIZAR el tema. Esto significa dividirlo en partes más pequeñas para entender cada pieza."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Page 3: Next, we will COMPARE and CONTRAST different ideas. We'll look for similarities and differences between sources.",
+        "text_l2": "Página 3: Luego, COMPARAREMOS y CONTRASTAREMOS diferentes ideas. Buscaremos similitudes y diferencias entre las fuentes."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Page 4: We must find strong EVIDENCE to support our ARGUMENT. Our claims need proof!",
+        "text_l2": "Página 4: Debemos encontrar EVIDENCIA sólida para apoyar nuestro ARGUMENTO. ¡Nuestras afirmaciones necesitan pruebas!"
+      },
+      {
+        "page_number": 5,
+        "text_en": "Page 5: It's important to consider every PERSPECTIVE. Everyone has a different point of view, and we need to understand them.",
+        "text_l2": "Página 5: Es importante considerar cada PERSPECTIVA. Todos tienen un punto de vista diferente, y necesitamos entenderlos."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Page 6: After gathering information, we will SYNTHESIZE it. This means combining all the different parts into one clear idea.",
+        "text_l2": "Página 6: Después de recopilar información, la SINTETIZAREMOS. Esto significa combinar todas las partes diferentes en una idea clara."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Page 7: Finally, we will EVALUATE our work. We will judge its quality and make sure it meets all the requirements.",
+        "text_l2": "Página 7: Finalmente, EVALUAREMOS nuestro trabajo. Juzgaremos su calidad y nos aseguraremos de que cumpla con todos los requisitos."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Page 8: Using these academic words helps us clearly DEMONSTRATE our learning and CONCLUDE our project successfully!",
+        "text_l2": "Página 8: Usar estas palabras académicas nos ayuda a DEMOSTRAR claramente nuestro aprendizaje y CONCLUIR nuestro proyecto con éxito."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to understand, identify, and begin to use academic vocabulary words essential for success in middle school content areas. Students will develop strategies for comprehending and applying these terms in English and Spanish.",
+    "suggested_use": "Pre-teaching: Introduce words before a unit or lesson. During Reading: Encourage students to identify and infer meaning of words in context. Post-Reading: Use words in summaries, discussions, and writing assignments. Writing Activities: Provide sentence frames and graphic organizers for students to practice using the vocabulary. Pair Work: Students can practice definitions and create sentences together.",
+    "materials_needed": [
+      "Printed vocabulary pack (worksheets, mini-book)",
+      "Pencils, crayons/colored pencils",
+      "Whiteboard or chart paper",
+      "Markers",
+      "Optional: Bilingual dictionaries, digital devices for image search"
+    ],
+    "differentiation_tips": [
+      "For beginners: Provide sentence starters for all writing tasks. Allow students to use L1 for initial understanding before transitioning to English. Use gestures and realia whenever possible.",
+      "For intermediate learners: Encourage creation of concept maps or Frayer models for each word. Have them write short paragraphs using multiple vocabulary words.",
+      "For advanced learners: Challenge them to use the words in debates or presentations. Ask them to explain the nuances between similar words (e.g., 'hypothesis' vs. 'theory').",
+      "Visual support: Always pair words with images or physical actions.",
+      "Peer support: Encourage collaborative learning where students can explain words to each other in L1 or L2."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "matching-1",
+      "answers": {
+        "1": "To break down information into smaller parts to understand it better.",
+        "2": "To combine different ideas or pieces of information to create something new.",
+        "3": "To form an opinion or judgment about something.",
+        "4": "To state the main points of something in a brief form.",
+        "5": "To find similarities between two or more things.",
+        "6": "To find differences between two or more things.",
+        "7": "To figure out something based on evidence and reasoning, not directly stated.",
+        "8": "To explain with more details.",
+        "9": "To give reasons or evidence to support an answer or claim.",
+        "10": "The circumstances or information surrounding an event or word that help to understand it."
+      }
+    },
+    {
+      "worksheet_id": "tracing-1",
+      "answers": {
+        "1": "Students trace 'Evidence' and write it three times.",
+        "2": "Students trace 'Hypothesis' and write it three times.",
+        "3": "Students trace 'Theory' and write it three times.",
+        "4": "Students trace 'Argument' and write it three times.",
+        "5": "Students trace 'Perspective' and write it three times.",
+        "6": "Students trace 'Differentiate' and write it three times.",
+        "7": "Students trace 'Interpret' and write it three times.",
+        "8": "Students trace 'Illustrate' and write it three times.",
+        "9": "Students trace 'Conclude' and write it three times.",
+        "10": "Students trace 'Demonstrate' and write it three times."
+      }
+    },
+    {
+      "worksheet_id": "coloring-1",
+      "answers": {
+        "1": "Students color the illustration for 'Analyze'.",
+        "2": "Students color the illustration for 'Synthesize'.",
+        "3": "Students color the illustration for 'Evaluate'.",
+        "4": "Students color the illustration for 'Summarize'.",
+        "5": "Students color the illustration for 'Compare'.",
+        "6": "Students color the illustration for 'Contrast'.",
+        "7": "Students color the illustration for 'Infer'.",
+        "8": "Students color the illustration for 'Context'.",
+        "9": "Students color the illustration for 'Argument'.",
+        "10": "Students color the illustration for 'Perspective'."
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

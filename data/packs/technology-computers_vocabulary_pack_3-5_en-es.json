@@ -1,0 +1,327 @@
+{
+  "pack_id": "tech-comp-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Technology & Computers",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "My Tech World: Technology & Computers Vocabulary Pack",
+  "description": "An engaging vocabulary pack designed for 3rd-5th grade ELL newcomer students, focusing on essential technology and computer terms. Includes a mini-book and interactive worksheets.",
+  "vocabulary": [
+    {
+      "en": "computer",
+      "l2": "computadora",
+      "image_prompt": "A desktop computer with a monitor, keyboard, and mouse on a desk."
+    },
+    {
+      "en": "screen",
+      "l2": "pantalla",
+      "image_prompt": "A close-up of a glowing computer screen displaying a simple, friendly icon."
+    },
+    {
+      "en": "keyboard",
+      "l2": "teclado",
+      "image_prompt": "A pair of hands typing on a computer keyboard."
+    },
+    {
+      "en": "mouse",
+      "l2": "ratón",
+      "image_prompt": "A computer mouse next to a mouse pad with a hand resting on it."
+    },
+    {
+      "en": "internet",
+      "l2": "internet",
+      "image_prompt": "A globe with dashed lines connecting to various electronic devices like a laptop and a phone, symbolizing global connection."
+    },
+    {
+      "en": "tablet",
+      "l2": "tableta",
+      "image_prompt": "A child holding and looking at a tablet device, smiling."
+    },
+    {
+      "en": "smartphone",
+      "l2": "teléfono inteligente",
+      "image_prompt": "A hand holding a modern smartphone, showing a simple app icon on the screen."
+    },
+    {
+      "en": "printer",
+      "l2": "impresora",
+      "image_prompt": "A printer with a sheet of paper coming out, showing a colorful image."
+    },
+    {
+      "en": "speaker",
+      "l2": "altavoz",
+      "image_prompt": "A single speaker playing music notes in the air."
+    },
+    {
+      "en": "headphones",
+      "l2": "auriculares",
+      "image_prompt": "A pair of over-ear headphones, ready to be worn."
+    },
+    {
+      "en": "camera",
+      "l2": "cámara",
+      "image_prompt": "A digital camera with a flash going off, capturing a moment."
+    },
+    {
+      "en": "website",
+      "l2": "sitio web",
+      "image_prompt": "A computer screen showing a colorful webpage with text, images, and navigation buttons."
+    },
+    {
+      "en": "email",
+      "l2": "correo electrónico",
+      "image_prompt": "An open envelope with an '@' symbol visible inside, representing digital mail."
+    },
+    {
+      "en": "robot",
+      "l2": "robot",
+      "image_prompt": "A friendly, simple robot standing and waving."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English word to its Spanish translation. Draw a line from the English word to the correct Spanish word.",
+      "instructions_l2": "Une la palabra en inglés con su traducción al español. Dibuja una línea desde la palabra en inglés hasta la palabra en español correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "computer",
+          "content_l2": "computadora"
+        },
+        {
+          "id": "2",
+          "content": "screen",
+          "content_l2": "pantalla"
+        },
+        {
+          "id": "3",
+          "content": "keyboard",
+          "content_l2": "teclado"
+        },
+        {
+          "id": "4",
+          "content": "mouse",
+          "content_l2": "ratón"
+        },
+        {
+          "id": "5",
+          "content": "internet",
+          "content_l2": "internet"
+        },
+        {
+          "id": "6",
+          "content": "tablet",
+          "content_l2": "tableta"
+        },
+        {
+          "id": "7",
+          "content": "smartphone",
+          "content_l2": "teléfono inteligente"
+        },
+        {
+          "id": "8",
+          "content": "printer",
+          "content_l2": "impresora"
+        },
+        {
+          "id": "9",
+          "content": "speaker",
+          "content_l2": "altavoz"
+        },
+        {
+          "id": "10",
+          "content": "headphones",
+          "content_l2": "auriculares"
+        },
+        {
+          "id": "11",
+          "content": "camera",
+          "content_l2": "cámara"
+        },
+        {
+          "id": "12",
+          "content": "website",
+          "content_l2": "sitio web"
+        },
+        {
+          "id": "13",
+          "content": "email",
+          "content_l2": "correo electrónico"
+        },
+        {
+          "id": "14",
+          "content": "robot",
+          "content_l2": "robot"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the English words. Say the words aloud as you trace them.",
+      "instructions_l2": "Traza las palabras en inglés. Di las palabras en voz alta mientras las trazas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "computer"
+        },
+        {
+          "id": "2",
+          "content": "screen"
+        },
+        {
+          "id": "3",
+          "content": "keyboard"
+        },
+        {
+          "id": "4",
+          "content": "mouse"
+        },
+        {
+          "id": "5",
+          "content": "internet"
+        },
+        {
+          "id": "6",
+          "content": "tablet"
+        },
+        {
+          "id": "7",
+          "content": "smartphone"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures of the technology items. Write the English word next to each picture.",
+      "instructions_l2": "Colorea las imágenes de los artículos tecnológicos. Escribe la palabra en inglés al lado de cada imagen.",
+      "items": [
+        {
+          "id": "1",
+          "content": "computer",
+          "image_prompt": "Outline of a desktop computer"
+        },
+        {
+          "id": "2",
+          "content": "smartphone",
+          "image_prompt": "Outline of a smartphone"
+        },
+        {
+          "id": "3",
+          "content": "printer",
+          "image_prompt": "Outline of a printer"
+        },
+        {
+          "id": "4",
+          "content": "headphones",
+          "image_prompt": "Outline of headphones"
+        },
+        {
+          "id": "5",
+          "content": "robot",
+          "image_prompt": "Outline of a friendly robot"
+        },
+        {
+          "id": "6",
+          "content": "camera",
+          "image_prompt": "Outline of a digital camera"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Tech World / Mi Mundo Tecnológico",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Tech World",
+        "text_l2": "Mi Mundo Tecnológico"
+      },
+      {
+        "page_number": 2,
+        "text_en": "This is a computer. We use it to learn and play.",
+        "text_l2": "Esta es una computadora. La usamos para aprender y jugar."
+      },
+      {
+        "page_number": 3,
+        "text_en": "The screen shows us pictures and words. It helps us see!",
+        "text_l2": "La pantalla nos muestra imágenes y palabras. ¡Nos ayuda a ver!"
+      },
+      {
+        "page_number": 4,
+        "text_en": "We type on the keyboard. We click with the mouse.",
+        "text_l2": "Escribimos en el teclado. Hacemos clic con el ratón."
+      },
+      {
+        "page_number": 5,
+        "text_en": "The internet connects us to the world. We can find many things online.",
+        "text_l2": "El internet nos conecta con el mundo. Podemos encontrar muchas cosas en línea."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Tablets and smartphones are small computers. We can carry them with us.",
+        "text_l2": "Las tabletas y los teléfonos inteligentes son computadoras pequeñas. Podemos llevarlos con nosotros."
+      },
+      {
+        "page_number": 7,
+        "text_en": "We can print pictures with a printer. We listen to music with speakers or headphones.",
+        "text_l2": "Podemos imprimir imágenes con una impresora. Escuchamos música con altavoces o auriculares."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Technology helps us every day! It makes our lives easier and more fun.",
+        "text_l2": "¡La tecnología nos ayuda todos los días! Hace nuestras vidas más fáciles y divertidas."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name common technology and computer-related vocabulary in English and Spanish, and understand their basic functions.",
+    "suggested_use": "Introduce vocabulary using the mini-book and flashcards (printable from vocabulary list). Use the matching worksheet for initial vocabulary acquisition, the tracing worksheet for spelling and recognition practice, and the coloring worksheet for creative reinforcement. Encourage students to share their experiences with technology.",
+    "materials_needed": [
+      "Printed vocabulary list (for flashcards)",
+      "Printed mini-book (one per student)",
+      "Printed worksheets (one set per student)",
+      "Crayons or colored pencils",
+      "Scissors (for mini-book)",
+      "Glue or stapler (for mini-book)"
+    ],
+    "differentiation_tips": [
+      "Support: Pair students with stronger English speakers, provide realia or larger pictures of technology items, pre-teach words with gestures, allow students to use L1 for initial understanding.",
+      "Challenge: Ask students to create simple sentences using the new vocabulary, describe how they use a specific technology item, or draw their own 'future technology' and label it."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "computadora",
+        "2": "pantalla",
+        "3": "teclado",
+        "4": "ratón",
+        "5": "internet",
+        "6": "tableta",
+        "7": "teléfono inteligente",
+        "8": "impresora",
+        "9": "altavoz",
+        "10": "auriculares",
+        "11": "cámara",
+        "12": "sitio web",
+        "13": "correo electrónico",
+        "14": "robot"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "No specific answer key needed as it's a tracing activity. Students should accurately trace the words."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "No specific answer key needed for coloring. Students should correctly write the English word next to each corresponding picture: 1. computer, 2. smartphone, 3. printer, 4. headphones, 5. robot, 6. camera."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

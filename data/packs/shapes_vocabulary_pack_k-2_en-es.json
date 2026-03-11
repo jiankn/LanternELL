@@ -1,0 +1,267 @@
+{
+  "pack_id": "shapes-k2-en-es-pack-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Shapes",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Shapes Around Us: A K-2 Vocabulary Pack (English-Spanish)",
+  "description": "This vocabulary pack introduces basic shapes to K-2 ELL newcomer students, featuring dual-language support, engaging worksheets, and a simple mini-book for hands-on learning.",
+  "vocabulary": [
+    {
+      "en": "Circle",
+      "l2": "Círculo",
+      "image_prompt": "A simple red circle"
+    },
+    {
+      "en": "Square",
+      "l2": "Cuadrado",
+      "image_prompt": "A simple blue square"
+    },
+    {
+      "en": "Triangle",
+      "l2": "Triángulo",
+      "image_prompt": "A simple green triangle"
+    },
+    {
+      "en": "Rectangle",
+      "l2": "Rectángulo",
+      "image_prompt": "A simple yellow rectangle"
+    },
+    {
+      "en": "Star",
+      "l2": "Estrella",
+      "image_prompt": "A simple purple star"
+    },
+    {
+      "en": "Heart",
+      "l2": "Corazón",
+      "image_prompt": "A simple pink heart"
+    },
+    {
+      "en": "Oval",
+      "l2": "Óvalo",
+      "image_prompt": "A simple orange oval"
+    },
+    {
+      "en": "Diamond",
+      "l2": "Rombo",
+      "image_prompt": "A simple light blue diamond shape"
+    },
+    {
+      "en": "Hexagon",
+      "l2": "Hexágono",
+      "image_prompt": "A simple brown hexagon"
+    },
+    {
+      "en": "Semicircle",
+      "l2": "Semicírculo",
+      "image_prompt": "A simple gray semicircle"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line from the English word to its Spanish translation and then to the correct shape picture.",
+      "instructions_l2": "Dibuja una línea de la palabra en inglés a su traducción en español y luego a la imagen de la forma correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Circle",
+          "content_l2": "Círculo",
+          "image_prompt": "A simple circle outline"
+        },
+        {
+          "id": "2",
+          "content": "Square",
+          "content_l2": "Cuadrado",
+          "image_prompt": "A simple square outline"
+        },
+        {
+          "id": "3",
+          "content": "Triangle",
+          "content_l2": "Triángulo",
+          "image_prompt": "A simple triangle outline"
+        },
+        {
+          "id": "4",
+          "content": "Rectangle",
+          "content_l2": "Rectángulo",
+          "image_prompt": "A simple rectangle outline"
+        },
+        {
+          "id": "5",
+          "content": "Star",
+          "content_l2": "Estrella",
+          "image_prompt": "A simple star outline"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the shape words in English and Spanish. Then draw the shape.",
+      "instructions_l2": "Traza las palabras de las formas en inglés y español. Luego dibuja la forma.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Circle",
+          "content_l2": "Círculo",
+          "image_prompt": "Dotted outline of the word 'Circle' and 'Círculo' for tracing, with space to draw a circle"
+        },
+        {
+          "id": "2",
+          "content": "Square",
+          "content_l2": "Cuadrado",
+          "image_prompt": "Dotted outline of the word 'Square' and 'Cuadrado' for tracing, with space to draw a square"
+        },
+        {
+          "id": "3",
+          "content": "Triangle",
+          "content_l2": "Triángulo",
+          "image_prompt": "Dotted outline of the word 'Triangle' and 'Triángulo' for tracing, with space to draw a triangle"
+        },
+        {
+          "id": "4",
+          "content": "Rectangle",
+          "content_l2": "Rectángulo",
+          "image_prompt": "Dotted outline of the word 'Rectangle' and 'Rectángulo' for tracing, with space to draw a rectangle"
+        },
+        {
+          "id": "5",
+          "content": "Heart",
+          "content_l2": "Corazón",
+          "image_prompt": "Dotted outline of the word 'Heart' and 'Corazón' for tracing, with space to draw a heart"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the shapes! Look at the words to know what shape it is.",
+      "instructions_l2": "¡Colorea las formas! Mira las palabras para saber qué forma es.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Oval",
+          "content_l2": "Óvalo",
+          "image_prompt": "An outline of an oval with 'Oval' and 'Óvalo' written below it."
+        },
+        {
+          "id": "2",
+          "content": "Diamond",
+          "content_l2": "Rombo",
+          "image_prompt": "An outline of a diamond with 'Diamond' and 'Rombo' written below it."
+        },
+        {
+          "id": "3",
+          "content": "Hexagon",
+          "content_l2": "Hexágono",
+          "image_prompt": "An outline of a hexagon with 'Hexagon' and 'Hexágono' written below it."
+        },
+        {
+          "id": "4",
+          "content": "Semicircle",
+          "content_l2": "Semicírculo",
+          "image_prompt": "An outline of a semicircle with 'Semicircle' and 'Semicírculo' written below it."
+        },
+        {
+          "id": "5",
+          "content": "Star",
+          "content_l2": "Estrella",
+          "image_prompt": "An outline of a star with 'Star' and 'Estrella' written below it."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Book of Shapes / Mi libro de formas",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Book of Shapes",
+        "text_l2": "Mi libro de formas",
+        "image_prompt": "A title page with various simple colorful shapes and the book title."
+      },
+      {
+        "page_number": 2,
+        "text_en": "Look at the shapes!",
+        "text_l2": "¡Mira las formas!",
+        "image_prompt": "A child looking at a collection of different basic shapes."
+      },
+      {
+        "page_number": 3,
+        "text_en": "This is a circle.",
+        "text_l2": "Este es un círculo.",
+        "image_prompt": "A large red circle."
+      },
+      {
+        "page_number": 4,
+        "text_en": "This is a square.",
+        "text_l2": "Este es un cuadrado.",
+        "image_prompt": "A large blue square."
+      },
+      {
+        "page_number": 5,
+        "text_en": "This is a triangle.",
+        "text_l2": "Este es un triángulo.",
+        "image_prompt": "A large green triangle."
+      },
+      {
+        "page_number": 6,
+        "text_en": "This is a rectangle.",
+        "text_l2": "Este es un rectángulo.",
+        "image_prompt": "A large yellow rectangle."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Can you find a star?",
+        "text_l2": "¿Puedes encontrar una estrella?",
+        "image_prompt": "A large purple star."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Shapes are everywhere!",
+        "text_l2": "¡Las formas están por todas partes!",
+        "image_prompt": "A scene with everyday objects representing shapes (e.g., a clock for a circle, a window for a square, a slice of pizza for a triangle)."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name basic shapes (circle, square, triangle, rectangle, star, heart, oval, diamond, hexagon, semicircle) in both English and Spanish.",
+    "suggested_use": "Introduce shapes using visual aids and real-world examples. Use the mini-book for shared reading and independent practice. Worksheets can be used for reinforcement, assessment, or homework. Encourage students to point out shapes they see in the classroom.",
+    "materials_needed": [
+      "Crayons or colored pencils",
+      "Pencils",
+      "Scissors (for mini-book assembly)",
+      "Glue sticks (for mini-book assembly)",
+      "Optional: Real-world objects representing shapes (e.g., a ball, a book, a cracker)"
+    ],
+    "differentiation_tips": [
+      "**For students needing more support:** Pre-teach vocabulary with flashcards. Provide physical shape manipulatives. Pair with a peer for collaborative activities.",
+      "**For students ready for a challenge:** Ask them to draw objects that are specific shapes. Introduce 3D shapes. Have them create a 'shape hunt' in the classroom or at home."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "Circle / Círculo (matches to circle image)",
+        "2": "Square / Cuadrado (matches to square image)",
+        "3": "Triangle / Triángulo (matches to triangle image)",
+        "4": "Rectangle / Rectángulo (matches to rectangle image)",
+        "5": "Star / Estrella (matches to star image)"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Completion of tracing words and drawing shapes."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "Completion of coloring the specified shapes."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

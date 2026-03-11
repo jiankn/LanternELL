@@ -1,0 +1,189 @@
+{
+  "pack_id": "research-citation-6-8-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Research & Citation",
+  "age_band": "6-8",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 6-8",
+  "title": "Academic Research & Citation: Sentence Frames for Grades 6-8",
+  "description": "This pack provides academic sentence frames for newcomer ELL students in grades 6-8 to discuss research processes, source evaluation, and proper citation techniques in English and Spanish.",
+  "sentence_frames": [
+    {
+      "frame": "I need to locate reliable sources for my research on _______________.",
+      "translation": "Necesito localizar fuentes confiables para mi investigación sobre _______________."
+    },
+    {
+      "frame": "To avoid plagiarism, I must always cite the original source of information.",
+      "translation": "Para evitar el plagio, siempre debo citar la fuente original de información."
+    },
+    {
+      "frame": "When evaluating a source, I consider its authority, accuracy, and purpose.",
+      "translation": "Al evaluar una fuente, considero su autoridad, precisión y propósito."
+    },
+    {
+      "frame": "I will paraphrase this information in my own words to demonstrate understanding.",
+      "translation": "Parafrasearé esta información con mis propias palabras para demostrar comprensión."
+    },
+    {
+      "frame": "Can you explain the difference between a primary and secondary source?",
+      "translation": "¿Puedes explicar la diferencia entre una fuente primaria y una secundaria?"
+    },
+    {
+      "frame": "According to the article '_______________', the main argument is that _______________.",
+      "translation": "Según el artículo '_______________', el argumento principal es que _______________."
+    },
+    {
+      "frame": "I am having difficulty understanding how to properly format a citation for _______________.",
+      "translation": "Estoy teniendo dificultades para entender cómo formatear correctamente una cita para _______________."
+    },
+    {
+      "frame": "My research question is '_______________', and I hope to find evidence to support _______________.",
+      "translation": "Mi pregunta de investigación es '_______________', y espero encontrar evidencia que apoye _______________."
+    },
+    {
+      "frame": "It is crucial to credit authors for their intellectual property by using citations.",
+      "translation": "Es crucial dar crédito a los autores por su propiedad intelectual mediante el uso de citas."
+    },
+    {
+      "frame": "The evidence from this source helps to strengthen my argument about _______________.",
+      "translation": "La evidencia de esta fuente ayuda a fortalecer mi argumento sobre _______________."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "I need to locate reliable sources for my research on climate change.",
+      "speaker_b_en": "When evaluating a source, I consider its authority, accuracy, and purpose. That might help you!",
+      "speaker_a_l2": "Necesito localizar fuentes confiables para mi investigación sobre el cambio climático.",
+      "speaker_b_l2": "Al evaluar una fuente, considero su autoridad, precisión y propósito. ¡Eso podría ayudarte!",
+      "context": "Students discussing a research project"
+    },
+    {
+      "speaker_a_en": "I am having difficulty understanding how to properly format a citation for a website.",
+      "speaker_b_en": "To avoid plagiarism, I must always cite the original source of information. Let's look at the example in our textbook together.",
+      "speaker_a_l2": "Estoy teniendo dificultades para entender cómo formatear correctamente una cita para un sitio web.",
+      "speaker_b_l2": "Para evitar el plagio, siempre debo citar la fuente original de información. Veamos el ejemplo en nuestro libro de texto juntos.",
+      "context": "Students seeking help with citation"
+    },
+    {
+      "speaker_a_en": "My research question is 'How does deforestation impact biodiversity?', and I hope to find evidence to support my claim.",
+      "speaker_b_en": "The evidence from this source helps to strengthen my argument about the Amazon rainforest. Maybe you can find something similar.",
+      "speaker_a_l2": "Mi pregunta de investigación es '¿Cómo afecta la deforestación a la biodiversidad?', y espero encontrar evidencia que apoye mi afirmación.",
+      "speaker_b_l2": "La evidencia de esta fuente ayuda a fortalecer mi argumento sobre la selva amazónica. Quizás puedas encontrar algo similar.",
+      "context": "Students sharing their research questions and findings"
+    },
+    {
+      "speaker_a_en": "Can you explain the difference between a primary and secondary source?",
+      "speaker_b_en": "I will paraphrase this information in my own words to demonstrate understanding, but broadly, primary sources are original, and secondary sources analyze those originals.",
+      "speaker_a_l2": "¿Puedes explicar la diferencia entre una fuente primaria y una secundaria?",
+      "speaker_b_l2": "Parafrasearé esta información con mis propias palabras para demostrar comprensión, pero en general, las fuentes primarias son originales y las secundarias analizan esos originales.",
+      "context": "Students clarifying research terms"
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "You found an article online. How do you determine if it's a good source for your project?",
+      "prompt_l2": "Encontraste un artículo en línea. ¿Cómo determinas si es una buena fuente para tu proyecto?",
+      "expected_response": "When evaluating a source, I consider its authority, accuracy, and purpose.",
+      "visual_cue": "Image of a student looking at a laptop screen with various article snippets."
+    },
+    {
+      "prompt_en": "You've read an interesting fact in a book. What must you do when you include it in your report?",
+      "prompt_l2": "Leíste un dato interesante en un libro. ¿Qué debes hacer cuando lo incluyas en tu informe?",
+      "expected_response": "To avoid plagiarism, I must always cite the original source of information.",
+      "visual_cue": "Image of a book open next to a notebook with a pen."
+    },
+    {
+      "prompt_en": "Your teacher asks you to put information into your own words. Why is this important?",
+      "prompt_l2": "Tu maestro te pide que pongas la información en tus propias palabras. ¿Por qué es esto importante?",
+      "expected_response": "I will paraphrase this information in my own words to demonstrate understanding.",
+      "visual_cue": "Image of a thought bubble with original text and another thought bubble with rephrased text."
+    },
+    {
+      "prompt_en": "You're starting a new research project. What is the first thing you need to identify?",
+      "prompt_l2": "Estás comenzando un nuevo proyecto de investigación. ¿Qué es lo primero que necesitas identificar?",
+      "expected_response": "My research question is '_______________', and I hope to find evidence to support _______________.",
+      "visual_cue": "Image of a magnifying glass over a question mark."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Use the sentence frames to write complete sentences based on the prompts below. Remember to fill in the blanks with your own ideas.",
+      "instructions_l2": "Usa los marcos de oraciones para escribir oraciones completas basadas en las indicaciones a continuación. Recuerda llenar los espacios en blanco con tus propias ideas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Write a sentence about what you need for a research project using: 'I need to locate reliable sources for my research on _______________.'",
+          "correct_answer": "Varies by student. Example: I need to locate reliable sources for my research on the history of video games."
+        },
+        {
+          "id": "2",
+          "content": "Explain why citing sources is important using: 'To avoid plagiarism, I must always cite the original source of information.'",
+          "correct_answer": "Varies by student. Example: To avoid plagiarism, I must always cite the original source of information, because it is important to give credit to the author."
+        },
+        {
+          "id": "3",
+          "content": "Describe how you would evaluate an online article using: 'When evaluating a source, I consider its authority, accuracy, and purpose.'",
+          "correct_answer": "Varies by student. Example: When evaluating a source, I consider its authority, accuracy, and purpose to make sure it's trustworthy."
+        },
+        {
+          "id": "4",
+          "content": "Formulate a research question using: 'My research question is '_______________', and I hope to find evidence to support _______________.'",
+          "correct_answer": "Varies by student. Example: My research question is 'Do video games improve cognitive skills?', and I hope to find evidence to support that they do."
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Complete the sentences by filling in the blanks with the correct word or phrase from the word bank. (Word Bank: plagiarism, reliable, paraphrase, primary, strengthen)",
+      "instructions_l2": "Completa las oraciones llenando los espacios en blanco con la palabra o frase correcta del banco de palabras. (Banco de palabras: plagio, confiables, parafrasear, primaria, fortalecer)",
+      "items": [
+        {
+          "id": "1",
+          "content": "I need to locate _______________ sources for my research on endangered species.",
+          "correct_answer": "reliable"
+        },
+        {
+          "id": "2",
+          "content": "To avoid _______________, I must always cite the original source of information.",
+          "correct_answer": "plagiarism"
+        },
+        {
+          "id": "3",
+          "content": "I will _______________ this information in my own words to demonstrate understanding.",
+          "correct_answer": "paraphrase"
+        },
+        {
+          "id": "4",
+          "content": "Can you explain the difference between a _______________ and secondary source?",
+          "correct_answer": "primary"
+        },
+        {
+          "id": "5",
+          "content": "The evidence from this source helps to _______________ my argument about renewable energy.",
+          "correct_answer": "strengthen"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use academic language frames to discuss research processes, source evaluation, and citation practices in English.",
+    "suggested_use": "Introduce frames one by one, modeling pronunciation and usage. Practice in pairs or small groups through structured dialogues. Use speaking prompts for whole-class discussion or individual assessment. Worksheets can be used for independent practice or homework. Encourage students to keep a 'Research & Citation' vocabulary journal.",
+    "materials_needed": [
+      "Whiteboard or projector",
+      "Markers/pens",
+      "Copies of sentence frames, dialogue strips, speaking prompts, and worksheets",
+      "Index cards or small whiteboards for quick responses",
+      "Access to computers/internet for example research (optional)"
+    ],
+    "differentiation_tips": [
+      "**For beginning ELLs:** Provide sentence starters or word banks for blanks. Allow students to use L1 for initial brainstorming. Pair with a more proficient English speaker.",
+      "**For intermediate ELLs:** Encourage elaboration on responses. Ask 'why' and 'how' questions. Challenge them to use multiple frames in one response.",
+      "**For advanced ELLs:** Have them create their own dialogue strips or speaking prompts. Encourage debate or critical analysis using the frames."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00Z",
+  "updated_at": "2024-07-30T10:00:00Z"
+}

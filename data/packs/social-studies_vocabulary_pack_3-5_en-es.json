@@ -1,0 +1,429 @@
+{
+  "pack_id": "ss-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Social Studies",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Social Studies Explorers: Our World & Community",
+  "description": "A vocabulary pack designed for 3rd-5th grade ELL newcomers, focusing on core social studies concepts related to civics, geography, and culture. Includes vocabulary, a mini-book, and three worksheets.",
+  "vocabulary": [
+    {
+      "en": "citizen",
+      "l2": "ciudadano",
+      "image_prompt": "A diverse group of people standing together, some with speech bubbles showing 'vote' or 'help'"
+    },
+    {
+      "en": "community",
+      "l2": "comunidad",
+      "image_prompt": "A street scene with diverse people, houses, a school, and a park"
+    },
+    {
+      "en": "government",
+      "l2": "gobierno",
+      "image_prompt": "A building representing a town hall or capitol, with people discussing"
+    },
+    {
+      "en": "law",
+      "l2": "ley",
+      "image_prompt": "A scroll or document with rules, next to a stop sign or a judge's gavel"
+    },
+    {
+      "en": "right",
+      "l2": "derecho",
+      "image_prompt": "Children reading books, playing, and speaking freely, symbolizing freedoms"
+    },
+    {
+      "en": "responsibility",
+      "l2": "responsabilidad",
+      "image_prompt": "A child helping with chores, another helping a friend, showing duties"
+    },
+    {
+      "en": "map",
+      "l2": "mapa",
+      "image_prompt": "An unfolded paper map showing roads, cities, and landmarks"
+    },
+    {
+      "en": "globe",
+      "l2": "globo terráqueo",
+      "image_prompt": "A child pointing to a physical globe of the Earth"
+    },
+    {
+      "en": "continent",
+      "l2": "continente",
+      "image_prompt": "A world map with one continent highlighted, e.g., North America"
+    },
+    {
+      "en": "country",
+      "l2": "país",
+      "image_prompt": "A world map with one country highlighted, or a national flag"
+    },
+    {
+      "en": "state",
+      "l2": "estado",
+      "image_prompt": "A map of the United States with one state highlighted"
+    },
+    {
+      "en": "city",
+      "l2": "ciudad",
+      "image_prompt": "A cartoon cityscape with skyscrapers, cars, and people"
+    },
+    {
+      "en": "history",
+      "l2": "historia",
+      "image_prompt": "An open old book, a scroll, or a timeline with historical figures"
+    },
+    {
+      "en": "culture",
+      "l2": "cultura",
+      "image_prompt": "Diverse children in traditional clothing, or symbols representing different cultures"
+    },
+    {
+      "en": "tradition",
+      "l2": "tradición",
+      "image_prompt": "A family celebrating a holiday or performing a customary activity"
+    },
+    {
+      "en": "leader",
+      "l2": "líder",
+      "image_prompt": "A person standing at a podium speaking to a group, or a guide leading others"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line from the English word to its Spanish translation.",
+      "instructions_l2": "Dibuja una línea de la palabra en inglés a su traducción en español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "citizen",
+          "content_l2": "ciudadano",
+          "correct_answer": "ciudadano"
+        },
+        {
+          "id": "2",
+          "content": "community",
+          "content_l2": "comunidad",
+          "correct_answer": "comunidad"
+        },
+        {
+          "id": "3",
+          "content": "government",
+          "content_l2": "gobierno",
+          "correct_answer": "gobierno"
+        },
+        {
+          "id": "4",
+          "content": "law",
+          "content_l2": "ley",
+          "correct_answer": "ley"
+        },
+        {
+          "id": "5",
+          "content": "right",
+          "content_l2": "derecho",
+          "correct_answer": "derecho"
+        },
+        {
+          "id": "6",
+          "content": "responsibility",
+          "content_l2": "responsabilidad",
+          "correct_answer": "responsabilidad"
+        },
+        {
+          "id": "7",
+          "content": "map",
+          "content_l2": "mapa",
+          "correct_answer": "mapa"
+        },
+        {
+          "id": "8",
+          "content": "globe",
+          "content_l2": "globo terráqueo",
+          "correct_answer": "globo terráqueo"
+        },
+        {
+          "id": "9",
+          "content": "continent",
+          "content_l2": "continente",
+          "correct_answer": "continente"
+        },
+        {
+          "id": "10",
+          "content": "country",
+          "content_l2": "país",
+          "correct_answer": "país"
+        },
+        {
+          "id": "11",
+          "content": "state",
+          "content_l2": "estado",
+          "correct_answer": "estado"
+        },
+        {
+          "id": "12",
+          "content": "city",
+          "content_l2": "ciudad",
+          "correct_answer": "ciudad"
+        },
+        {
+          "id": "13",
+          "content": "history",
+          "content_l2": "historia",
+          "correct_answer": "historia"
+        },
+        {
+          "id": "14",
+          "content": "culture",
+          "content_l2": "cultura",
+          "correct_answer": "cultura"
+        },
+        {
+          "id": "15",
+          "content": "tradition",
+          "content_l2": "tradición",
+          "correct_answer": "tradición"
+        },
+        {
+          "id": "16",
+          "content": "leader",
+          "content_l2": "líder",
+          "correct_answer": "líder"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the English and Spanish words for each social studies term.",
+      "instructions_l2": "Traza las palabras en inglés y español para cada término de estudios sociales.",
+      "items": [
+        {
+          "id": "1",
+          "content": "citizen",
+          "content_l2": "ciudadano",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "2",
+          "content": "community",
+          "content_l2": "comunidad",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "3",
+          "content": "government",
+          "content_l2": "gobierno",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "4",
+          "content": "law",
+          "content_l2": "ley",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "5",
+          "content": "right",
+          "content_l2": "derecho",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "6",
+          "content": "responsibility",
+          "content_l2": "responsabilidad",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "7",
+          "content": "map",
+          "content_l2": "mapa",
+          "correct_answer": "traced"
+        },
+        {
+          "id": "8",
+          "content": "globe",
+          "content_l2": "globo terráqueo",
+          "correct_answer": "traced"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the picture that represents the word and trace the English and Spanish words.",
+      "instructions_l2": "Colorea la imagen que representa la palabra y traza las palabras en inglés y español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "continent",
+          "content_l2": "continente",
+          "image_prompt": "An outline of a large landmass, like North America",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "2",
+          "content": "country",
+          "content_l2": "país",
+          "image_prompt": "A simplified map of a country, or a national flag",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "3",
+          "content": "state",
+          "content_l2": "estado",
+          "image_prompt": "An outline of a state on a map",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "4",
+          "content": "city",
+          "content_l2": "ciudad",
+          "image_prompt": "A simple drawing of a city skyline",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "5",
+          "content": "history",
+          "content_l2": "historia",
+          "image_prompt": "An open old book or a scroll with ancient writing",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "6",
+          "content": "culture",
+          "content_l2": "cultura",
+          "image_prompt": "Children from different backgrounds in traditional attire",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "7",
+          "content": "tradition",
+          "content_l2": "tradición",
+          "image_prompt": "A family celebrating a holiday, e.g., sharing a meal",
+          "correct_answer": "colored and traced"
+        },
+        {
+          "id": "8",
+          "content": "leader",
+          "content_l2": "líder",
+          "image_prompt": "A person guiding a group, or speaking to an audience",
+          "correct_answer": "colored and traced"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Our World, Our Community / Nuestro Mundo, Nuestra Comunidad",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Our World, Our Community",
+        "text_l2": "Nuestro Mundo, Nuestra Comunidad"
+      },
+      {
+        "page_number": 2,
+        "text_en": "We live in a **community**. A community is a group of people who live and work together.",
+        "text_l2": "Vivimos en una **comunidad**. Una comunidad es un grupo de personas que viven y trabajan juntas."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Every person in a community is a **citizen**. Citizens have **rights** and **responsibilities**.",
+        "text_l2": "Cada persona en una comunidad es un **ciudadano**. Los ciudadanos tienen **derechos** y **responsabilidades**."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Our **government** makes **laws** to keep our community safe and fair.",
+        "text_l2": "Nuestro **gobierno** hace **leyes** para mantener nuestra comunidad segura y justa."
+      },
+      {
+        "page_number": 5,
+        "text_en": "We can learn about our world using a **map** or a **globe**. A globe is a model of Earth.",
+        "text_l2": "Podemos aprender sobre nuestro mundo usando un **mapa** o un **globo terráqueo**. Un globo es un modelo de la Tierra."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Earth has many **continents** and **countries**. Our country has many **states** and **cities**.",
+        "text_l2": "La Tierra tiene muchos **continentes** y **países**. Nuestro país tiene muchos **estados** y **ciudades**."
+      },
+      {
+        "page_number": 7,
+        "text_en": "We learn about the past through **history**. We learn about how people live through **culture** and **traditions**.",
+        "text_l2": "Aprendemos sobre el pasado a través de la **historia**. Aprendemos sobre cómo vive la gente a través de la **cultura** y las **tradiciones**."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Good **leaders** help guide our communities and countries.",
+        "text_l2": "Buenos **líderes** ayudan a guiar nuestras comunidades y países."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and understand 16 key social studies vocabulary words in English and Spanish, and use them in context.",
+    "suggested_use": "Introduce vocabulary with flashcards and visual aids. Read the mini-book aloud with students, pausing to discuss concepts. Use worksheets for independent practice, small group work, or assessment. Encourage students to create their own sentences using the new vocabulary.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional)",
+      "Printed mini-books",
+      "Printed worksheets",
+      "Pencils",
+      "Crayons or colored pencils",
+      "World map or globe (physical or digital)"
+    ],
+    "differentiation_tips": [
+      "**Support**: Pair students with stronger English speakers. Provide sentence frames for discussions. Use gestures and realia (e.g., a small globe) for concrete examples. Allow students to use a bilingual dictionary.",
+      "**Challenge**: Encourage students to write short paragraphs using multiple vocabulary words. Ask them to research a specific country or culture and use the new terms to describe it. Have them identify examples of these concepts in their own lives or local community."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "ciudadano",
+        "2": "comunidad",
+        "3": "gobierno",
+        "4": "ley",
+        "5": "derecho",
+        "6": "responsabilidad",
+        "7": "mapa",
+        "8": "globo terráqueo",
+        "9": "continente",
+        "10": "país",
+        "11": "estado",
+        "12": "ciudad",
+        "13": "historia",
+        "14": "cultura",
+        "15": "tradición",
+        "16": "líder"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "traced",
+        "2": "traced",
+        "3": "traced",
+        "4": "traced",
+        "5": "traced",
+        "6": "traced",
+        "7": "traced",
+        "8": "traced"
+      }
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "colored and traced",
+        "2": "colored and traced",
+        "3": "colored and traced",
+        "4": "colored and traced",
+        "5": "colored and traced",
+        "6": "colored and traced",
+        "7": "colored and traced",
+        "8": "colored and traced"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:30:42.135Z",
+  "updated_at": "2026-03-11T13:30:42.136Z"
+}

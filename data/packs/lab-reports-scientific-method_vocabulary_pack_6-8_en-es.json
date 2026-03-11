@@ -1,0 +1,388 @@
+{
+  "pack_id": "lab-reports-scientific-method-6-8-en-es",
+  "pack_type": "vocabulary_pack",
+  "topic": "Lab Reports & Scientific Method",
+  "age_band": "6-8",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 6-8",
+  "title": "Unveiling Science: Lab Reports & The Scientific Method",
+  "description": "This vocabulary pack introduces essential terms for understanding lab reports and the scientific method, tailored for 6th-8th grade English Language Learners.",
+  "vocabulary": [
+    {
+      "en": "Scientific Method",
+      "l2": "Método Científico",
+      "image_prompt": "A flow chart showing steps: Observe, Question, Hypothesize, Experiment, Analyze, Conclude."
+    },
+    {
+      "en": "Observation",
+      "l2": "Observación",
+      "image_prompt": "A student looking closely at a plant with a magnifying glass."
+    },
+    {
+      "en": "Question",
+      "l2": "Pregunta",
+      "image_prompt": "A thought bubble with a question mark and a lightbulb."
+    },
+    {
+      "en": "Hypothesis",
+      "l2": "Hipótesis",
+      "image_prompt": "A scientist writing 'If... then...' on a whiteboard."
+    },
+    {
+      "en": "Experiment",
+      "l2": "Experimento",
+      "image_prompt": "A person in a lab coat mixing chemicals in beakers, with test tubes around."
+    },
+    {
+      "en": "Variable",
+      "l2": "Variable",
+      "image_prompt": "Two arrows pointing in different directions, indicating change or difference."
+    },
+    {
+      "en": "Independent Variable",
+      "l2": "Variable Independiente",
+      "image_prompt": "A hand adjusting a dial or lever, showing something being changed intentionally."
+    },
+    {
+      "en": "Dependent Variable",
+      "l2": "Variable Dependiente",
+      "image_prompt": "A measuring tape or a thermometer showing a result, indicating something being measured."
+    },
+    {
+      "en": "Control Group",
+      "l2": "Grupo de Control",
+      "image_prompt": "Two identical plants, one with a 'treated' label and one with a 'normal' label, showing the normal one."
+    },
+    {
+      "en": "Data",
+      "l2": "Datos",
+      "image_prompt": "A spreadsheet or bar graph with numbers and labels."
+    },
+    {
+      "en": "Analysis",
+      "l2": "Análisis",
+      "image_prompt": "A person looking at a chart or graph with a magnifying glass, thinking."
+    },
+    {
+      "en": "Conclusion",
+      "l2": "Conclusión",
+      "image_prompt": "A scientist writing 'The hypothesis was supported/not supported' on a notebook."
+    },
+    {
+      "en": "Lab Report",
+      "l2": "Informe de Laboratorio",
+      "image_prompt": "An open notebook with sections like 'Introduction', 'Methods', 'Results', 'Conclusion'."
+    },
+    {
+      "en": "Procedure",
+      "l2": "Procedimiento",
+      "image_prompt": "Numbered steps or a checklist with arrows indicating sequence."
+    },
+    {
+      "en": "Materials",
+      "l2": "Materiales",
+      "image_prompt": "A collection of common lab equipment: beaker, test tube, Bunsen burner, goggles."
+    },
+    {
+      "en": "Results",
+      "l2": "Resultados",
+      "image_prompt": "A clear bar graph or line graph showing outcomes of an experiment."
+    },
+    {
+      "en": "Discussion",
+      "l2": "Discusión",
+      "image_prompt": "Two students talking and looking at a lab report, exchanging ideas."
+    },
+    {
+      "en": "Safety",
+      "l2": "Seguridad",
+      "image_prompt": "A person wearing safety goggles and gloves in a lab, with a 'safety first' sign."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-1",
+      "instructions_en": "Match the English vocabulary word with its Spanish translation.",
+      "instructions_l2": "Empareja la palabra del vocabulario en inglés con su traducción al español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Scientific Method",
+          "content_l2": "Método Científico",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "Observation",
+          "content_l2": "Observación",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "Hypothesis",
+          "content_l2": "Hipótesis",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "Experiment",
+          "content_l2": "Experimento",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "5",
+          "content": "Data",
+          "content_l2": "Datos",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "6",
+          "content": "Conclusion",
+          "content_l2": "Conclusión",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "7",
+          "content": "Lab Report",
+          "content_l2": "Informe de Laboratorio",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        },
+        {
+          "id": "8",
+          "content": "Safety",
+          "content_l2": "Seguridad",
+          "options": [
+            "Método Científico",
+            "Observación",
+            "Hipótesis",
+            "Experimento",
+            "Datos",
+            "Conclusión",
+            "Informe de Laboratorio",
+            "Seguridad"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-2",
+      "instructions_en": "Trace the scientific vocabulary words.",
+      "instructions_l2": "Traza las palabras de vocabulario científico.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Scientific Method"
+        },
+        {
+          "id": "2",
+          "content": "Hypothesis"
+        },
+        {
+          "id": "3",
+          "content": "Experiment"
+        },
+        {
+          "id": "4",
+          "content": "Independent Variable"
+        },
+        {
+          "id": "5",
+          "content": "Dependent Variable"
+        },
+        {
+          "id": "6",
+          "content": "Data"
+        },
+        {
+          "id": "7",
+          "content": "Analysis"
+        },
+        {
+          "id": "8",
+          "content": "Conclusion"
+        },
+        {
+          "id": "9",
+          "content": "Lab Report"
+        },
+        {
+          "id": "10",
+          "content": "Procedure"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-3",
+      "instructions_en": "Color the image that represents each word.",
+      "instructions_l2": "Colorea la imagen que representa cada palabra.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Observation",
+          "image_prompt": "A pair of eyes looking through a microscope."
+        },
+        {
+          "id": "2",
+          "content": "Experiment",
+          "image_prompt": "A hand holding a test tube over a Bunsen burner."
+        },
+        {
+          "id": "3",
+          "content": "Data",
+          "image_prompt": "A pie chart or bar graph filled with different colors."
+        },
+        {
+          "id": "4",
+          "content": "Safety",
+          "image_prompt": "A pair of safety goggles and gloves."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "The Scientific Journey: Understanding Lab Reports",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Title: The Scientific Journey: Understanding Lab Reports",
+        "text_l2": "Título: El Viaje Científico: Comprendiendo los Informes de Laboratorio"
+      },
+      {
+        "page_number": 2,
+        "text_en": "What is the Scientific Method? It's a way scientists explore the world. It has steps to help answer questions and solve problems.",
+        "text_l2": "¿Qué es el Método Científico? Es una forma en que los científicos exploran el mundo. Tiene pasos para ayudar a responder preguntas y resolver problemas."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Step 1: Observation & Question. First, you notice something (Observation). Then, you ask a question about it (Question).",
+        "text_l2": "Paso 1: Observación y Pregunta. Primero, notas algo (Observación). Luego, haces una pregunta al respecto (Pregunta)."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Step 2: Hypothesis & Experiment. You make an educated guess (Hypothesis). Then, you design a test (Experiment) to see if your guess is right.",
+        "text_l2": "Paso 2: Hipótesis y Experimento. Haces una suposición informada (Hipótesis). Luego, diseñas una prueba (Experimento) para ver si tu suposición es correcta."
+      },
+      {
+        "page_number": 5,
+        "text_en": "Step 3: Variables & Control Group. In an experiment, you change one thing (Independent Variable) and measure another (Dependent Variable). A Control Group helps you compare.",
+        "text_l2": "Paso 3: Variables y Grupo de Control. En un experimento, cambias una cosa (Variable Independiente) y mides otra (Variable Dependiente). Un Grupo de Control te ayuda a comparar."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Step 4: Data & Analysis. You collect information (Data) during your experiment. Then, you look closely at the Data to find patterns (Analysis).",
+        "text_l2": "Paso 4: Datos y Análisis. Recopilas información (Datos) durante tu experimento. Luego, examinas de cerca los Datos para encontrar patrones (Análisis)."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Step 5: Conclusion. Finally, you write what you learned. Did your experiment support your Hypothesis? This is your Conclusion.",
+        "text_l2": "Paso 5: Conclusión. Finalmente, escribes lo que aprendiste. ¿Tu experimento apoyó tu Hipótesis? Esta es tu Conclusión."
+      },
+      {
+        "page_number": 8,
+        "text_en": "What is a Lab Report? A Lab Report is a written summary of your entire experiment. It tells others about your Question, Hypothesis, Procedure, Data, and Conclusion.",
+        "text_l2": "¿Qué es un Informe de Laboratorio? Un Informe de Laboratorio es un resumen escrito de todo tu experimento. Les cuenta a otros sobre tu Pregunta, Hipótesis, Procedimiento, Datos y Conclusión."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and define key vocabulary related to the scientific method and lab reports in English and Spanish, enhancing their comprehension of scientific inquiry.",
+    "suggested_use": "Introduce vocabulary using flashcards or the mini-book. Use the tracing worksheet for spelling practice and the matching worksheet to reinforce English-Spanish connections. The coloring worksheet can be used as a fun review or for early finishers. Encourage students to create their own simple lab report using the learned terms.",
+    "materials_needed": [
+      "Printed vocabulary flashcards (from image prompts)",
+      "Printed mini-books (one per student)",
+      "Printed worksheets (one set per student)",
+      "Crayons or colored pencils",
+      "Science notebooks or paper for additional writing"
+    ],
+    "differentiation_tips": [
+      "**For struggling learners:** Pair students with stronger English speakers. Provide sentence starters for discussions. Allow them to draw instead of write where appropriate.",
+      "**For advanced learners:** Challenge them to write short sentences or paragraphs using the vocabulary words. Ask them to design a simple experiment and outline its steps using the new terms.",
+      "**For all learners:** Incorporate real-life examples of the scientific method (e.g., 'Why does my plant need sun?'). Use visuals consistently."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "Método Científico",
+        "2": "Observación",
+        "3": "Hipótesis",
+        "4": "Experimento",
+        "5": "Datos",
+        "6": "Conclusión",
+        "7": "Informe de Laboratorio",
+        "8": "Seguridad"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:46:03.729Z",
+  "updated_at": "2026-03-11T13:46:03.730Z"
+}

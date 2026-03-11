@@ -1,0 +1,283 @@
+{
+  "pack_id": "action-verbs-k2-en-es-1",
+  "pack_type": "vocabulary_pack",
+  "topic": "Action Verbs",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Let's Move! Action Verbs for K-2",
+  "description": "A vocabulary pack designed for K-2 ELL newcomer students focusing on common action verbs. Includes bilingual vocabulary, a mini-book, and engaging worksheets.",
+  "vocabulary": [
+    {
+      "en": "run",
+      "l2": "correr",
+      "image_prompt": "a happy child running outdoors"
+    },
+    {
+      "en": "jump",
+      "l2": "saltar",
+      "image_prompt": "a child jumping high with a smile"
+    },
+    {
+      "en": "eat",
+      "l2": "comer",
+      "image_prompt": "a child eating a healthy snack like an apple"
+    },
+    {
+      "en": "drink",
+      "l2": "beber",
+      "image_prompt": "a child drinking water from a cup"
+    },
+    {
+      "en": "sleep",
+      "l2": "dormir",
+      "image_prompt": "a child sleeping peacefully in bed"
+    },
+    {
+      "en": "read",
+      "l2": "leer",
+      "image_prompt": "a child sitting and reading an open book"
+    },
+    {
+      "en": "write",
+      "l2": "escribir",
+      "image_prompt": "a child holding a pencil and writing on paper"
+    },
+    {
+      "en": "sing",
+      "l2": "cantar",
+      "image_prompt": "a child singing with open mouth, maybe holding a pretend microphone"
+    },
+    {
+      "en": "dance",
+      "l2": "bailar",
+      "image_prompt": "a child dancing with joyful movement"
+    },
+    {
+      "en": "play",
+      "l2": "jugar",
+      "image_prompt": "a child playing with a toy or a ball"
+    },
+    {
+      "en": "walk",
+      "l2": "caminar",
+      "image_prompt": "a child walking on a sidewalk or path"
+    },
+    {
+      "en": "sit",
+      "l2": "sentarse",
+      "image_prompt": "a child sitting on a chair at a table"
+    },
+    {
+      "en": "stand",
+      "l2": "pararse",
+      "image_prompt": "a child standing tall next to a desk"
+    },
+    {
+      "en": "throw",
+      "l2": "lanzar",
+      "image_prompt": "a child throwing a small soft ball"
+    },
+    {
+      "en": "kick",
+      "l2": "patear",
+      "image_prompt": "a child kicking a soccer ball"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-1",
+      "instructions_en": "Draw a line from the English word to the matching picture.",
+      "instructions_l2": "Dibuja una línea de la palabra en inglés a la imagen correspondiente.",
+      "items": [
+        {
+          "id": "1",
+          "content": "run",
+          "image_prompt": "a child running",
+          "correct_answer": "picture_of_child_running"
+        },
+        {
+          "id": "2",
+          "content": "jump",
+          "image_prompt": "a child jumping",
+          "correct_answer": "picture_of_child_jumping"
+        },
+        {
+          "id": "3",
+          "content": "eat",
+          "image_prompt": "a child eating",
+          "correct_answer": "picture_of_child_eating"
+        },
+        {
+          "id": "4",
+          "content": "drink",
+          "image_prompt": "a child drinking",
+          "correct_answer": "picture_of_child_drinking"
+        },
+        {
+          "id": "5",
+          "content": "sleep",
+          "image_prompt": "a child sleeping",
+          "correct_answer": "picture_of_child_sleeping"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-2",
+      "instructions_en": "Trace the action verbs. Then say the word!",
+      "instructions_l2": "Traza los verbos de acción. ¡Luego di la palabra!",
+      "items": [
+        {
+          "id": "1",
+          "content": "read",
+          "content_l2": "leer"
+        },
+        {
+          "id": "2",
+          "content": "write",
+          "content_l2": "escribir"
+        },
+        {
+          "id": "3",
+          "content": "sing",
+          "content_l2": "cantar"
+        },
+        {
+          "id": "4",
+          "content": "dance",
+          "content_l2": "bailar"
+        },
+        {
+          "id": "5",
+          "content": "play",
+          "content_l2": "jugar"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-3",
+      "instructions_en": "Color the pictures of the action verbs. Say the word as you color!",
+      "instructions_l2": "Colorea las imágenes de los verbos de acción. ¡Di la palabra mientras coloreas!",
+      "items": [
+        {
+          "id": "1",
+          "content": "walk",
+          "image_prompt": "a child walking",
+          "content_l2": "caminar"
+        },
+        {
+          "id": "2",
+          "content": "sit",
+          "image_prompt": "a child sitting",
+          "content_l2": "sentarse"
+        },
+        {
+          "id": "3",
+          "content": "stand",
+          "image_prompt": "a child standing",
+          "content_l2": "pararse"
+        },
+        {
+          "id": "4",
+          "content": "throw",
+          "image_prompt": "a child throwing a ball",
+          "content_l2": "lanzar"
+        },
+        {
+          "id": "5",
+          "content": "kick",
+          "image_prompt": "a child kicking a ball",
+          "content_l2": "patear"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "I Can Move! / ¡Yo Puedo Moverme!",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "I Can Move! Let's learn action verbs!",
+        "text_l2": "¡Yo Puedo Moverme! ¡Aprendamos verbos de acción!",
+        "image_prompt": "a group of diverse children moving and playing happily"
+      },
+      {
+        "page_number": 2,
+        "text_en": "I can run. I can run fast!",
+        "text_l2": "Yo puedo correr. ¡Yo puedo correr rápido!",
+        "image_prompt": "a child running with speed"
+      },
+      {
+        "page_number": 3,
+        "text_en": "I can jump. I can jump high!",
+        "text_l2": "Yo puedo saltar. ¡Yo puedo saltar alto!",
+        "image_prompt": "a child jumping with arms up"
+      },
+      {
+        "page_number": 4,
+        "text_en": "I can eat. I can eat healthy food!",
+        "text_l2": "Yo puedo comer. ¡Yo puedo comer comida saludable!",
+        "image_prompt": "a child eating a carrot or a piece of fruit"
+      },
+      {
+        "page_number": 5,
+        "text_en": "I can drink. I can drink water!",
+        "text_l2": "Yo puedo beber. ¡Yo puedo beber agua!",
+        "image_prompt": "a child drinking from a water bottle"
+      },
+      {
+        "page_number": 6,
+        "text_en": "I can read. I can read a book!",
+        "text_l2": "Yo puedo leer. ¡Yo puedo leer un libro!",
+        "image_prompt": "a child looking at a picture book"
+      },
+      {
+        "page_number": 7,
+        "text_en": "I can write. I can write my name!",
+        "text_l2": "Yo puedo escribir. ¡Yo puedo escribir mi nombre!",
+        "image_prompt": "a child writing with a crayon or pencil"
+      },
+      {
+        "page_number": 8,
+        "text_en": "What can you do? What action verbs do you know?",
+        "text_l2": "¿Qué puedes hacer tú? ¿Qué verbos de acción conoces?",
+        "image_prompt": "a child thinking with a question mark above their head"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and use common action verbs in English and Spanish, both receptively and productively.",
+    "suggested_use": "Introduce verbs with Total Physical Response (TPR) and gestures. Use vocabulary flashcards for practice. Read the mini-book together, pointing to actions and encouraging students to mimic. Complete worksheets as a class or in small groups. Encourage students to create simple sentences using the verbs.",
+    "materials_needed": [
+      "Printable vocabulary flashcards (for the 15 verbs)",
+      "Crayons, markers, or colored pencils",
+      "Pencils for tracing and matching",
+      "Scissors (for mini-book assembly)",
+      "Glue or stapler (for mini-book assembly)",
+      "Optional: Whiteboard/chart paper for modeling"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide strong visual cues and model actions extensively. Pair students with a peer who has stronger English skills. Use sentence frames (e.g., 'I can ______.') for verbal practice. Allow students to point to pictures instead of verbalizing if needed.",
+      "**Challenge:** Encourage students to use the verbs in simple sentences or create their own action drawings. Ask them to act out other action verbs not covered in the pack. Have them describe what they can do using 'I can...' statements."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "picture_of_child_running",
+        "2": "picture_of_child_jumping",
+        "3": "picture_of_child_eating",
+        "4": "picture_of_child_drinking",
+        "5": "picture_of_child_sleeping"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-03-11T13:36:22.525Z",
+  "updated_at": "2024-03-11T13:36:22.526Z"
+}

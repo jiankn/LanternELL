@@ -1,0 +1,273 @@
+{
+  "pack_id": "feelings-emotions-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Feelings & Emotions",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Feelings & Emotions: English-Spanish Vocabulary Pack",
+  "description": "An engaging vocabulary pack designed for K-2 ELL newcomers to learn and identify basic feelings and emotions in English and Spanish, featuring a mini-book and interactive worksheets.",
+  "vocabulary": [
+    {
+      "en": "happy",
+      "l2": "feliz",
+      "image_prompt": "A child smiling brightly, maybe jumping or with hands up in joy."
+    },
+    {
+      "en": "sad",
+      "l2": "triste",
+      "image_prompt": "A child with tears or a frown, looking down."
+    },
+    {
+      "en": "angry",
+      "l2": "enojado/a",
+      "image_prompt": "A child with a red face, furrowed brows, perhaps stomping a foot."
+    },
+    {
+      "en": "scared",
+      "l2": "asustado/a",
+      "image_prompt": "A child with wide eyes, hands near face or hiding behind something."
+    },
+    {
+      "en": "surprised",
+      "l2": "sorprendido/a",
+      "image_prompt": "A child with an open mouth and wide eyes, hands to cheeks."
+    },
+    {
+      "en": "shy",
+      "l2": "tímido/a",
+      "image_prompt": "A child peeking from behind hands or an object, looking down."
+    },
+    {
+      "en": "proud",
+      "l2": "orgulloso/a",
+      "image_prompt": "A child standing tall, smiling confidently, perhaps holding a certificate or drawing."
+    },
+    {
+      "en": "excited",
+      "l2": "emocionado/a",
+      "image_prompt": "A child with a big smile, hands up in the air, full of energy."
+    },
+    {
+      "en": "calm",
+      "l2": "tranquilo/a",
+      "image_prompt": "A child sitting peacefully, perhaps taking a deep breath or meditating."
+    },
+    {
+      "en": "silly",
+      "l2": "tonto/a",
+      "image_prompt": "A child making a funny face, sticking out their tongue, or crossing eyes."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English feeling word to the correct picture. Draw a line.",
+      "instructions_l2": "Une la palabra en inglés con la imagen correcta. Dibuja una línea.",
+      "items": [
+        {
+          "id": "m1",
+          "content": "happy",
+          "content_l2": "feliz",
+          "image_prompt": "A child smiling brightly."
+        },
+        {
+          "id": "m2",
+          "content": "sad",
+          "content_l2": "triste",
+          "image_prompt": "A child with a frown and tears."
+        },
+        {
+          "id": "m3",
+          "content": "angry",
+          "content_l2": "enojado/a",
+          "image_prompt": "A child with a red face and furrowed brows."
+        },
+        {
+          "id": "m4",
+          "content": "scared",
+          "content_l2": "asustado/a",
+          "image_prompt": "A child with wide eyes, hands near face."
+        },
+        {
+          "id": "m5",
+          "content": "surprised",
+          "content_l2": "sorprendido/a",
+          "image_prompt": "A child with an open mouth and wide eyes."
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the feeling words.",
+      "instructions_l2": "Traza las palabras de los sentimientos.",
+      "items": [
+        {
+          "id": "t1",
+          "content": "happy",
+          "content_l2": "feliz",
+          "correct_answer": "happy"
+        },
+        {
+          "id": "t2",
+          "content": "sad",
+          "content_l2": "triste",
+          "correct_answer": "sad"
+        },
+        {
+          "id": "t3",
+          "content": "angry",
+          "content_l2": "enojado",
+          "correct_answer": "angry"
+        },
+        {
+          "id": "t4",
+          "content": "scared",
+          "content_l2": "asustado",
+          "correct_answer": "scared"
+        },
+        {
+          "id": "t5",
+          "content": "excited",
+          "content_l2": "emocionado",
+          "correct_answer": "excited"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures that show different feelings.",
+      "instructions_l2": "Colorea las imágenes que muestran diferentes sentimientos.",
+      "items": [
+        {
+          "id": "c1",
+          "content": "Happy face",
+          "content_l2": "Cara feliz",
+          "image_prompt": "A simple cartoon face with a big smile."
+        },
+        {
+          "id": "c2",
+          "content": "Sad face",
+          "content_l2": "Cara triste",
+          "image_prompt": "A simple cartoon face with a frown and a tear."
+        },
+        {
+          "id": "c3",
+          "content": "Angry face",
+          "content_l2": "Cara enojada",
+          "image_prompt": "A simple cartoon face with furrowed brows and a scowl."
+        },
+        {
+          "id": "c4",
+          "content": "Surprised face",
+          "content_l2": "Cara sorprendida",
+          "image_prompt": "A simple cartoon face with wide eyes and an open mouth."
+        },
+        {
+          "id": "c5",
+          "content": "Silly face",
+          "content_l2": "Cara tonta",
+          "image_prompt": "A simple cartoon face sticking out its tongue."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "How Do You Feel? / ¿Cómo te sientes?",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "How Do You Feel?",
+        "text_l2": "¿Cómo te sientes?",
+        "image_prompt": "A title page with various emoji-like faces showing different feelings."
+      },
+      {
+        "page_number": 2,
+        "text_en": "I feel happy!",
+        "text_l2": "¡Me siento feliz!",
+        "image_prompt": "A child smiling brightly with sun rays around them."
+      },
+      {
+        "page_number": 3,
+        "text_en": "I feel sad.",
+        "text_l2": "Me siento triste.",
+        "image_prompt": "A child with a tear, sitting with head down."
+      },
+      {
+        "page_number": 4,
+        "text_en": "I feel angry.",
+        "text_l2": "Me siento enojado.",
+        "image_prompt": "A child with red cheeks and stomping foot."
+      },
+      {
+        "page_number": 5,
+        "text_en": "I feel scared.",
+        "text_l2": "Me siento asustado.",
+        "image_prompt": "A child hiding behind a blanket or hands, wide eyes."
+      },
+      {
+        "page_number": 6,
+        "text_en": "I feel surprised!",
+        "text_l2": "¡Me siento sorprendido!",
+        "image_prompt": "A child with wide eyes and open mouth looking at a gift."
+      },
+      {
+        "page_number": 7,
+        "text_en": "I feel calm.",
+        "text_l2": "Me siento tranquilo.",
+        "image_prompt": "A child sitting cross-legged, taking a deep breath."
+      },
+      {
+        "page_number": 8,
+        "text_en": "How do YOU feel today?",
+        "text_l2": "¿Cómo te sientes TÚ hoy?",
+        "image_prompt": "A child looking at themselves in a mirror, thinking about their feelings."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name basic feelings and emotions in English and Spanish. They will use simple sentences to express how they feel.",
+    "suggested_use": "Introduce vocabulary using flashcards or realia (emojis, facial expressions in a mirror). Read the mini-book aloud, pausing to discuss each feeling. Complete the worksheets as follow-up activities. Encourage students to express their feelings daily in English and Spanish during morning circle time or check-ins.",
+    "materials_needed": [
+      "Printed vocabulary cards (from image prompts)",
+      "Crayons, markers, or colored pencils",
+      "Scissors (for optional cut-and-glue matching)",
+      "Glue sticks",
+      "A mirror (for practicing facial expressions)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide sentence frames ('I feel _____', 'Me siento _____'). Use gesture and total physical response (TPR) to act out feelings. Pair students with a strong L1 speaker or an English-speaking buddy. Use real-life scenarios to discuss feelings.",
+      "**Challenge:** Ask students to describe *why* they feel a certain way. Encourage them to use feeling words in longer sentences or to write a short story about a character's feelings. Have them create their own feeling faces or scenarios."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "matching-ws-1",
+      "answers": {
+        "m1": "image of happy child",
+        "m2": "image of sad child",
+        "m3": "image of angry child",
+        "m4": "image of scared child",
+        "m5": "image of surprised child"
+      }
+    },
+    {
+      "worksheet_id": "tracing-ws-2",
+      "answers": {
+        "t1": "happy",
+        "t2": "sad",
+        "t3": "angry",
+        "t4": "scared",
+        "t5": "excited"
+      }
+    },
+    {
+      "worksheet_id": "coloring-ws-3",
+      "answers": "No specific answer key needed as it's a creative coloring activity; focus on effort and engagement."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:36:22.525Z",
+  "updated_at": "2026-03-11T13:36:22.526Z"
+}

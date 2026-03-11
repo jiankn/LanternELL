@@ -1,0 +1,416 @@
+{
+  "pack_id": "colors-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Colors",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Colorful World: Colors for K-2 ELL",
+  "description": "A comprehensive vocabulary pack designed for K-2 newcomer ELL students to learn and practice basic colors in English and Spanish, featuring engaging worksheets and a mini-book.",
+  "vocabulary": [
+    {
+      "en": "red",
+      "l2": "rojo",
+      "image_prompt": "A bright red apple."
+    },
+    {
+      "en": "blue",
+      "l2": "azul",
+      "image_prompt": "A blue sky with a cloud."
+    },
+    {
+      "en": "yellow",
+      "l2": "amarillo",
+      "image_prompt": "A yellow sun."
+    },
+    {
+      "en": "green",
+      "l2": "verde",
+      "image_prompt": "Green grass and a tree."
+    },
+    {
+      "en": "orange",
+      "l2": "naranja",
+      "image_prompt": "A juicy orange fruit."
+    },
+    {
+      "en": "purple",
+      "l2": "morado",
+      "image_prompt": "A bunch of purple grapes."
+    },
+    {
+      "en": "pink",
+      "l2": "rosa",
+      "image_prompt": "A pink flower."
+    },
+    {
+      "en": "black",
+      "l2": "negro",
+      "image_prompt": "A black cat."
+    },
+    {
+      "en": "white",
+      "l2": "blanco",
+      "image_prompt": "A white cloud."
+    },
+    {
+      "en": "brown",
+      "l2": "marrón",
+      "image_prompt": "A brown bear."
+    },
+    {
+      "en": "gray",
+      "l2": "gris",
+      "image_prompt": "A gray elephant."
+    },
+    {
+      "en": "rainbow",
+      "l2": "arcoíris",
+      "image_prompt": "A colorful rainbow in the sky."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English color word to the correct color swatch.",
+      "instructions_l2": "Une la palabra de color en inglés con la muestra de color correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "red",
+          "content_l2": "rojo",
+          "image_prompt": "A blank box to be matched with a red swatch option.",
+          "correct_answer": "red_swatch"
+        },
+        {
+          "id": "2",
+          "content": "blue",
+          "content_l2": "azul",
+          "image_prompt": "A blank box to be matched with a blue swatch option.",
+          "correct_answer": "blue_swatch"
+        },
+        {
+          "id": "3",
+          "content": "yellow",
+          "content_l2": "amarillo",
+          "image_prompt": "A blank box to be matched with a yellow swatch option.",
+          "correct_answer": "yellow_swatch"
+        },
+        {
+          "id": "4",
+          "content": "green",
+          "content_l2": "verde",
+          "image_prompt": "A blank box to be matched with a green swatch option.",
+          "correct_answer": "green_swatch"
+        },
+        {
+          "id": "5",
+          "content": "orange",
+          "content_l2": "naranja",
+          "image_prompt": "A blank box to be matched with an orange swatch option.",
+          "correct_answer": "orange_swatch"
+        },
+        {
+          "id": "6",
+          "content": "purple",
+          "content_l2": "morado",
+          "image_prompt": "A blank box to be matched with a purple swatch option.",
+          "correct_answer": "purple_swatch"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the color word and then color the box next to it.",
+      "instructions_l2": "Traza la palabra de color y luego colorea la caja al lado.",
+      "items": [
+        {
+          "id": "1",
+          "content": "red",
+          "content_l2": "rojo",
+          "image_prompt": "A dotted outline of the word 'red' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'red', color box red."
+        },
+        {
+          "id": "2",
+          "content": "blue",
+          "content_l2": "azul",
+          "image_prompt": "A dotted outline of the word 'blue' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'blue', color box blue."
+        },
+        {
+          "id": "3",
+          "content": "yellow",
+          "content_l2": "amarillo",
+          "image_prompt": "A dotted outline of the word 'yellow' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'yellow', color box yellow."
+        },
+        {
+          "id": "4",
+          "content": "green",
+          "content_l2": "verde",
+          "image_prompt": "A dotted outline of the word 'green' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'green', color box green."
+        },
+        {
+          "id": "5",
+          "content": "orange",
+          "content_l2": "naranja",
+          "image_prompt": "A dotted outline of the word 'orange' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'orange', color box orange."
+        },
+        {
+          "id": "6",
+          "content": "purple",
+          "content_l2": "morado",
+          "image_prompt": "A dotted outline of the word 'purple' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'purple', color box purple."
+        },
+        {
+          "id": "7",
+          "content": "pink",
+          "content_l2": "rosa",
+          "image_prompt": "A dotted outline of the word 'pink' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'pink', color box pink."
+        },
+        {
+          "id": "8",
+          "content": "black",
+          "content_l2": "negro",
+          "image_prompt": "A dotted outline of the word 'black' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'black', color box black."
+        },
+        {
+          "id": "9",
+          "content": "white",
+          "content_l2": "blanco",
+          "image_prompt": "A dotted outline of the word 'white' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'white', color box white."
+        },
+        {
+          "id": "10",
+          "content": "brown",
+          "content_l2": "marrón",
+          "image_prompt": "A dotted outline of the word 'brown' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'brown', color box brown."
+        },
+        {
+          "id": "11",
+          "content": "gray",
+          "content_l2": "gris",
+          "image_prompt": "A dotted outline of the word 'gray' for tracing, followed by an empty square box.",
+          "correct_answer": "Trace 'gray', color box gray."
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Read the color word and color the picture. For the rainbow, color it with all the colors!",
+      "instructions_l2": "Lee la palabra de color y colorea el dibujo. ¡Para el arcoíris, coloréalo con todos los colores!",
+      "items": [
+        {
+          "id": "1",
+          "content": "red",
+          "content_l2": "rojo",
+          "image_prompt": "An outline of an apple.",
+          "correct_answer": "Color the apple red."
+        },
+        {
+          "id": "2",
+          "content": "yellow",
+          "content_l2": "amarillo",
+          "image_prompt": "An outline of a sun.",
+          "correct_answer": "Color the sun yellow."
+        },
+        {
+          "id": "3",
+          "content": "blue",
+          "content_l2": "azul",
+          "image_prompt": "An outline of a cloud.",
+          "correct_answer": "Color the cloud blue."
+        },
+        {
+          "id": "4",
+          "content": "green",
+          "content_l2": "verde",
+          "image_prompt": "An outline of a leaf.",
+          "correct_answer": "Color the leaf green."
+        },
+        {
+          "id": "5",
+          "content": "orange",
+          "content_l2": "naranja",
+          "image_prompt": "An outline of a carrot.",
+          "correct_answer": "Color the carrot orange."
+        },
+        {
+          "id": "6",
+          "content": "purple",
+          "content_l2": "morado",
+          "image_prompt": "An outline of a flower.",
+          "correct_answer": "Color the flower purple."
+        },
+        {
+          "id": "7",
+          "content": "pink",
+          "content_l2": "rosa",
+          "image_prompt": "An outline of a pig.",
+          "correct_answer": "Color the pig pink."
+        },
+        {
+          "id": "8",
+          "content": "black",
+          "content_l2": "negro",
+          "image_prompt": "An outline of a bat.",
+          "correct_answer": "Color the bat black."
+        },
+        {
+          "id": "9",
+          "content": "white",
+          "content_l2": "blanco",
+          "image_prompt": "An outline of a ghost.",
+          "correct_answer": "Color the ghost white."
+        },
+        {
+          "id": "10",
+          "content": "brown",
+          "content_l2": "marrón",
+          "image_prompt": "An outline of a tree trunk.",
+          "correct_answer": "Color the tree trunk brown."
+        },
+        {
+          "id": "11",
+          "content": "gray",
+          "content_l2": "gris",
+          "image_prompt": "An outline of a rock.",
+          "correct_answer": "Color the rock gray."
+        },
+        {
+          "id": "12",
+          "content": "rainbow",
+          "content_l2": "arcoíris",
+          "image_prompt": "An outline of a rainbow.",
+          "correct_answer": "Color the rainbow with multiple colors (red, orange, yellow, green, blue, indigo, violet)."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Colorful World! / ¡Mi Mundo Colorido!",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Colorful World!",
+        "text_l2": "¡Mi Mundo Colorido!",
+        "image_prompt": "A child smiling, surrounded by colorful objects like a ball, a flower, and a block."
+      },
+      {
+        "page_number": 2,
+        "text_en": "I see colors everywhere.",
+        "text_l2": "Veo colores por todas partes.",
+        "image_prompt": "Various colorful objects scattered on a page."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Red is an apple.",
+        "text_l2": "Rojo es una manzana.",
+        "image_prompt": "A red apple."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Blue is the sky.",
+        "text_l2": "Azul es el cielo.",
+        "image_prompt": "A blue sky with a few white clouds."
+      },
+      {
+        "page_number": 5,
+        "text_en": "Yellow is the sun.",
+        "text_l2": "Amarillo es el sol.",
+        "image_prompt": "A bright yellow sun with rays."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Green is the grass.",
+        "text_l2": "Verde es la hierba.",
+        "image_prompt": "Green grass with a small flower."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Orange is a carrot.",
+        "text_l2": "Naranja es una zanahoria.",
+        "image_prompt": "An orange carrot."
+      },
+      {
+        "page_number": 8,
+        "text_en": "What is your favorite color?",
+        "text_l2": "¿Cuál es tu color favorito?",
+        "image_prompt": "A question mark surrounded by various color swatches."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name 12 basic colors in English and Spanish, and associate them with common objects.",
+    "suggested_use": "Introduce colors using flashcards and realia. Use the mini-book for shared reading and repeat after me. Worksheets can be used for independent practice, small group work, or as a station activity. Encourage students to point to colors in the classroom.",
+    "materials_needed": [
+      "Crayons, markers, or colored pencils",
+      "Color flashcards (English and Spanish)",
+      "Real objects of different colors (e.g., red apple, blue ball, yellow banana)",
+      "Scissors (for mini-book assembly)",
+      "Glue sticks (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "Support: Provide color cues or physical color swatches for matching. Allow students to work in pairs. Focus on 3-4 colors at a time for initial learning. Use hand-over-hand for tracing if needed.",
+      "Challenge: Encourage students to use colors in simple sentences (e.g., 'The car is blue.'). Ask them to identify colors of objects not on the worksheets. Introduce color mixing concepts."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "red_swatch",
+        "2": "blue_swatch",
+        "3": "yellow_swatch",
+        "4": "green_swatch",
+        "5": "orange_swatch",
+        "6": "purple_swatch"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "Trace 'red', color box red.",
+        "2": "Trace 'blue', color box blue.",
+        "3": "Trace 'yellow', color box yellow.",
+        "4": "Trace 'green', color box green.",
+        "5": "Trace 'orange', color box orange.",
+        "6": "Trace 'purple', color box purple.",
+        "7": "Trace 'pink', color box pink.",
+        "8": "Trace 'black', color box black.",
+        "9": "Trace 'white', color box white.",
+        "10": "Trace 'brown', color box brown.",
+        "11": "Trace 'gray', color box gray."
+      }
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "Color the apple red.",
+        "2": "Color the sun yellow.",
+        "3": "Color the cloud blue.",
+        "4": "Color the leaf green.",
+        "5": "Color the carrot orange.",
+        "6": "Color the flower purple.",
+        "7": "Color the pig pink.",
+        "8": "Color the bat black.",
+        "9": "Color the ghost white.",
+        "10": "Color the tree trunk brown.",
+        "11": "Color the rock gray.",
+        "12": "Color the rainbow with multiple colors (red, orange, yellow, green, blue, indigo, violet)."
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-29T12:00:00.000Z",
+  "updated_at": "2024-07-29T12:00:00.000Z"
+}

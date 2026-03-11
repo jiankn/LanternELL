@@ -1,0 +1,199 @@
+{
+  "pack_id": "literary-analysis-6-8-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Literary Analysis",
+  "age_band": "6-8",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 6-8",
+  "title": "Literary Analysis Sentence Frames for Grades 6-8 (English-Spanish)",
+  "description": "This pack provides 12 academic sentence frames designed to help 6th-8th grade newcomer ELL students discuss and analyze literary texts. It includes English and Spanish translations, dialogue strips, speaking prompts, and worksheets to support classroom communication and understanding of literary concepts.",
+  "sentence_frames": [
+    {
+      "frame": "The author uses [literary device, e.g., imagery, metaphor] to emphasize [idea/theme, e.g., the character's loneliness, the beauty of nature].",
+      "translation": "El autor utiliza [recurso literario, ej., imágenes, metáfora] para enfatizar [idea/tema, ej., la soledad del personaje, la belleza de la naturaleza]."
+    },
+    {
+      "frame": "A significant detail that reveals [character trait, e.g., courage, wisdom] about [character's name] is when [evidence/action from text].",
+      "translation": "Un detalle significativo que revela [rasgo de carácter, ej., valentía, sabiduría] sobre [nombre del personaje] es cuando [evidencia/acción del texto]."
+    },
+    {
+      "frame": "The central theme of this text appears to be [theme, e.g., the importance of friendship, overcoming adversity], as evidenced by [plot point/symbol/character's realization].",
+      "translation": "El tema central de este texto parece ser [tema, ej., la importancia de la amistad, superar la adversidad], como lo demuestra [punto de la trama/símbolo/realización del personaje]."
+    },
+    {
+      "frame": "The setting of [setting description, e.g., a desolate forest, a bustling city] contributes to the mood of [mood, e.g., mystery, excitement] by [explanation of how].",
+      "translation": "El escenario de [descripción del escenario, ej., un bosque desolado, una ciudad bulliciosa] contribuye al ambiente de [ambiente, ej., misterio, emoción] al [explicación de cómo]."
+    },
+    {
+      "frame": "I infer that [character's motivation/feeling] because the text states/shows [specific evidence or action].",
+      "translation": "Infiero que [motivación/sentimiento del personaje] porque el texto afirma/muestra [evidencia o acción específica]."
+    },
+    {
+      "frame": "The conflict between [character 1] and [character 2/force/internal struggle] drives the plot by [explanation of its impact on events].",
+      "translation": "El conflicto entre [personaje 1] y [personaje 2/fuerza/lucha interna] impulsa la trama al [explicación de su impacto en los eventos]."
+    },
+    {
+      "frame": "One example of symbolism in this story is [symbol, e.g., a caged bird, a wilting flower], which represents [meaning, e.g., loss of freedom, fading hope].",
+      "translation": "Un ejemplo de simbolismo en esta historia es [símbolo, ej., un pájaro enjaulado, una flor marchita], que representa [significado, ej., pérdida de libertad, esperanza que se desvanece]."
+    },
+    {
+      "frame": "The author's purpose in writing this piece is primarily to [inform/persuade/entertain/express] by [technique, e.g., presenting facts, creating suspense, sharing personal experience].",
+      "translation": "El propósito del autor al escribir esta pieza es principalmente [informar/persuadir/entretener/expresar] mediante [técnica, ej., presentar hechos, crear suspenso, compartir experiencia personal]."
+    },
+    {
+      "frame": "This passage suggests that [interpretation/idea] because it includes the phrase/line, \"[quote from text]\".",
+      "translation": "Este pasaje sugiere que [interpretación/idea] porque incluye la frase/línea, \"[cita del texto]\"."
+    },
+    {
+      "frame": "If I were to analyze [literary element, e.g., the protagonist's journey, the story's climax], I would focus on [specific aspect] to understand [deeper meaning/impact].",
+      "translation": "Si tuviera que analizar [elemento literario, ej., el viaje del protagonista, el clímax de la historia], me centraría en [aspecto específico] para comprender [significado/impacto más profundo]."
+    },
+    {
+      "frame": "The word choice of \"[specific word/phrase]\" creates a tone of [tone description, e.g., urgency, melancholy] because [explanation of its effect].",
+      "translation": "La elección de palabras de \"[palabra/frase específica]\" crea un tono de [descripción del tono, ej., urgencia, melancolía] porque [explicación de su efecto]."
+    },
+    {
+      "frame": "A key turning point in the narrative occurs when [event], which leads to [consequence/change in character or plot].",
+      "translation": "Un punto de inflexión clave en la narrativa ocurre cuando [evento], lo que lleva a [consecuencia/cambio en el personaje o la trama]."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "What do you think is the central theme of this story?",
+      "speaker_b_en": "The central theme of this text appears to be the importance of honesty, as evidenced by the main character's consequences for lying.",
+      "speaker_a_l2": "¿Cuál crees que es el tema central de esta historia?",
+      "speaker_b_l2": "El tema central de este texto parece ser la importancia de la honestidad, como lo demuestra las consecuencias del personaje principal por mentir.",
+      "context": "Students discussing a short story in pairs."
+    },
+    {
+      "speaker_a_en": "How does the author reveal the protagonist's personality?",
+      "speaker_b_en": "A significant detail that reveals courage about the protagonist is when she stood up to the antagonist despite being scared.",
+      "speaker_a_l2": "¿Cómo revela el autor la personalidad del protagonista?",
+      "speaker_b_l2": "Un detalle significativo que revela valentía sobre el protagonista es cuando se enfrentó al antagonista a pesar de tener miedo.",
+      "context": "Students analyzing character traits."
+    },
+    {
+      "speaker_a_en": "Why do you think the author included so many descriptive details about the old house?",
+      "speaker_b_en": "The setting of the old, creaky house contributes to the mood of mystery by creating a sense of unease and anticipation for the reader.",
+      "speaker_a_l2": "¿Por qué crees que el autor incluyó tantos detalles descriptivos sobre la casa antigua?",
+      "speaker_b_l2": "El escenario de la casa antigua y crujiente contribuye al ambiente de misterio al crear una sensación de inquietud y anticipación para el lector.",
+      "context": "Discussing the role of setting in a narrative."
+    },
+    {
+      "speaker_a_en": "What is the author trying to achieve with this specific part of the text?",
+      "speaker_b_en": "The author's purpose in writing this piece is primarily to persuade readers to take action, by presenting compelling arguments and emotional appeals.",
+      "speaker_a_l2": "¿Qué intenta lograr el autor con esta parte específica del texto?",
+      "speaker_b_l2": "El propósito del autor al escribir esta pieza es principalmente persuadir a los lectores a tomar acción, presentando argumentos convincentes y apelaciones emocionales.",
+      "context": "Students discussing author's purpose."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "Analyze a character's motivation. Why does [Character's Name] act the way they do?",
+      "prompt_l2": "Analiza la motivación de un personaje. ¿Por qué [Nombre del Personaje] actúa de la manera en que lo hace?",
+      "expected_response": "I infer that [character's motivation] because the text states/shows [specific evidence or action].",
+      "visual_cue": "Image of a thinking person with a question mark above their head."
+    },
+    {
+      "prompt_en": "Identify the main theme of the story. What big idea is the author trying to convey?",
+      "prompt_l2": "Identifica el tema principal de la historia. ¿Qué gran idea intenta transmitir el autor?",
+      "expected_response": "The central theme of this text appears to be [theme], as evidenced by [plot point/symbol].",
+      "visual_cue": "Image of an open book with a lightbulb glowing above it."
+    },
+    {
+      "prompt_en": "Explain any symbolism you noticed. What does [object/event] represent?",
+      "prompt_l2": "Explica cualquier simbolismo que hayas notado. ¿Qué representa [objeto/evento]?",
+      "expected_response": "One example of symbolism in this story is [symbol], which represents [meaning].",
+      "visual_cue": "Image of a dove flying, with a small olive branch, symbolizing peace."
+    },
+    {
+      "prompt_en": "Discuss the author's purpose. What was the author's main goal in writing this text?",
+      "prompt_l2": "Discute el propósito del autor. ¿Cuál fue el objetivo principal del autor al escribir este texto?",
+      "expected_response": "The author's purpose in writing this piece is primarily to [inform/persuade/entertain/express] by [technique].",
+      "visual_cue": "Image of a person writing at a desk, with a speech bubble icon next to them."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Read the short passage below. Choose one sentence frame from the list provided and use it to write a short paragraph (3-5 sentences) analyzing a literary element from the passage. Remember to include evidence from the text.",
+      "instructions_l2": "Lee el siguiente pasaje corto. Elige un marco de oración de la lista proporcionada y úsalo para escribir un párrafo corto (3-5 oraciones) analizando un elemento literario del pasaje. Recuerda incluir evidencia del texto.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Passage: The old lighthouse stood on the rugged cliff, its beam cutting through the thick fog like a lone, watchful eye. Below, the waves crashed against the rocks with a mournful roar, a sound that had echoed through generations of lighthouse keepers. A small, weathered boat bobbed precariously in the churning waters, its mast broken, a tattered flag barely visible in the gloom. The air was heavy with the scent of salt and impending storm. \n\nYour analysis paragraph:"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Complete the sentences using the words from the word bank. Each word will be used once.",
+      "instructions_l2": "Completa las oraciones usando las palabras del banco de palabras. Cada palabra se usará una vez.",
+      "items": [
+        {
+          "id": "1",
+          "content": "The central ______ of this text appears to be [theme], as evidenced by [plot point/symbol].",
+          "correct_answer": "theme"
+        },
+        {
+          "id": "2",
+          "content": "The ______ of [setting description] contributes to the mood of [mood] by [explanation].",
+          "correct_answer": "setting"
+        },
+        {
+          "id": "3",
+          "content": "A significant detail that reveals [character trait] about [character's name] is [evidence/action].",
+          "correct_answer": "character"
+        },
+        {
+          "id": "4",
+          "content": "One example of ______ in this story is [symbol], which represents [meaning].",
+          "correct_answer": "symbolism"
+        },
+        {
+          "id": "5",
+          "content": "The author's ______ in writing this piece is primarily to [inform/persuade/entertain/express].",
+          "correct_answer": "purpose"
+        },
+        {
+          "id": "6",
+          "content": "I infer that [character's motivation] because the text states/shows [specific ______ or action].",
+          "correct_answer": "evidence"
+        },
+        {
+          "id": "7",
+          "content": "The ______ between [character 1] and [character 2/force] drives the plot by [explanation].",
+          "correct_answer": "conflict"
+        },
+        {
+          "id": "8",
+          "content": "A key turning point in the narrative occurs when [event], which leads to [consequence]. This is part of the story's ______.",
+          "correct_answer": "plot"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use academic sentence frames to articulate their literary analysis, identify key literary elements, and support their interpretations with textual evidence in English and Spanish.",
+    "suggested_use": "Introduce frames one at a time with a short mentor text. Practice in pairs or small groups using dialogue strips. Use speaking prompts for individual or group presentations. Worksheets can be used for independent practice, assessment, or homework. Encourage students to highlight keywords in frames and replace them with specific details from the text.",
+    "materials_needed": [
+      "Short stories or literary excerpts (grade-appropriate)",
+      "Whiteboard or projector",
+      "Markers/pens",
+      "Copies of sentence frames, dialogue strips, and worksheets",
+      "Graphic organizers for literary elements (optional)"
+    ],
+    "differentiation_tips": [
+      "Provide a word bank of literary terms and descriptive adjectives in both languages.",
+      "Allow students to discuss in their native language before formulating responses in English.",
+      "Pre-teach challenging vocabulary from the literary text and frames.",
+      "Model correct usage of each frame multiple times with different examples.",
+      "Pair stronger English speakers with newcomers for peer support.",
+      "For writing tasks, provide sentence starters or a graphic organizer to structure their thoughts."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:30:00Z",
+  "updated_at": "2024-07-30T10:30:00Z"
+}

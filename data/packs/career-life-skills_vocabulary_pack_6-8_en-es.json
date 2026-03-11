@@ -1,0 +1,420 @@
+{
+  "pack_id": "career-life-skills-6-8-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Career & Life Skills",
+  "age_band": "6-8",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 6-8",
+  "title": "Essential Skills for Your Future: Career & Life Vocabulary Pack",
+  "description": "This vocabulary pack introduces 6th-8th grade ELL newcomer students to key terms related to career exploration and essential life skills. Content is designed to be age-appropriate and supports understanding of future planning and personal development.",
+  "vocabulary": [
+    {
+      "en": "Responsibility",
+      "l2": "Responsabilidad",
+      "image_prompt": "A student completing homework independently, a person taking care of a pet, or someone cleaning up a spill."
+    },
+    {
+      "en": "Teamwork",
+      "l2": "Trabajo en equipo",
+      "image_prompt": "A group of diverse students collaborating on a project, building a tower together, or playing a sport as a team."
+    },
+    {
+      "en": "Problem-solving",
+      "l2": "Resolución de problemas",
+      "image_prompt": "A student looking at a puzzle or a broken object with thought bubbles showing different solutions, a person fixing a flat tire."
+    },
+    {
+      "en": "Goal Setting",
+      "l2": "Establecimiento de metas",
+      "image_prompt": "A student writing down future plans in a notebook, an arrow hitting a target, or a person climbing steps towards a flag."
+    },
+    {
+      "en": "Communication",
+      "l2": "Comunicación",
+      "image_prompt": "Two students talking and listening attentively, speech bubbles connecting people, or someone giving a presentation."
+    },
+    {
+      "en": "Budgeting",
+      "l2": "Presupuesto",
+      "image_prompt": "A person looking at a chart or spreadsheet with income and expenses, coins in different labeled jars (savings, spending)."
+    },
+    {
+      "en": "Career Path",
+      "l2": "Trayectoria profesional",
+      "image_prompt": "A winding road with different career icons (doctor, artist, engineer) along the way, a person looking at a map with various job options."
+    },
+    {
+      "en": "Critical Thinking",
+      "l2": "Pensamiento crítico",
+      "image_prompt": "A student with a question mark and lightbulb over their head, examining information closely, or comparing two different ideas."
+    },
+    {
+      "en": "Decision Making",
+      "l2": "Toma de decisiones",
+      "image_prompt": "A person standing at a crossroads with two different paths, a scale balancing two options, or someone choosing between two items."
+    },
+    {
+      "en": "Time Management",
+      "l2": "Gestión del tiempo",
+      "image_prompt": "A student looking at a schedule or calendar, a clock with different activities marked around it, or someone juggling multiple tasks efficiently."
+    },
+    {
+      "en": "Interview",
+      "l2": "Entrevista",
+      "image_prompt": "Two people sitting opposite each other at a desk, one asking questions and the other answering, a professional handshake."
+    },
+    {
+      "en": "Resume",
+      "l2": "Currículum vitae",
+      "image_prompt": "A document showing sections for 'Experience,' 'Education,' and 'Skills,' a person handing a paper to another person."
+    },
+    {
+      "en": "Entrepreneurship",
+      "l2": "Emprendimiento",
+      "image_prompt": "A young person selling lemonade, someone drawing a business plan on a whiteboard, or a lightbulb with money symbols around it."
+    },
+    {
+      "en": "Financial Literacy",
+      "l2": "Educación financiera",
+      "image_prompt": "A student counting money, a piggy bank, or a person looking at a graph showing savings growth."
+    },
+    {
+      "en": "Collaboration",
+      "l2": "Colaboración",
+      "image_prompt": "Several hands reaching into the center to form a circle, people working together on a shared document or puzzle."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match each vocabulary word to its correct definition. Draw a line from the word to its definition.",
+      "instructions_l2": "Une cada palabra de vocabulario con su definición correcta. Traza una línea desde la palabra hasta su definición.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Responsibility",
+          "options_en": [
+            "A. Finding solutions to difficult issues.",
+            "B. Taking ownership of tasks and actions.",
+            "C. Exchanging information effectively.",
+            "D. Planning how to spend and save money."
+          ],
+          "correct_answer": "B"
+        },
+        {
+          "id": "2",
+          "content": "Teamwork",
+          "options_en": [
+            "A. Working together with others to achieve a common goal.",
+            "B. Analyzing information objectively.",
+            "C. The sequence of jobs in a person's life.",
+            "D. Organizing time between activities."
+          ],
+          "correct_answer": "A"
+        },
+        {
+          "id": "3",
+          "content": "Problem-solving",
+          "options_en": [
+            "A. Planning what you want to achieve.",
+            "B. Choosing between different options.",
+            "C. Finding solutions to difficult or complex issues.",
+            "D. A formal meeting for a job."
+          ],
+          "correct_answer": "C"
+        },
+        {
+          "id": "4",
+          "content": "Goal Setting",
+          "options_en": [
+            "A. Planning how to spend and save money.",
+            "B. Taking ownership of tasks.",
+            "C. Planning what you want to achieve and how to get there.",
+            "D. Working together on a project."
+          ],
+          "correct_answer": "C"
+        },
+        {
+          "id": "5",
+          "content": "Communication",
+          "options_en": [
+            "A. Analyzing information objectively.",
+            "B. Exchanging information, ideas, or feelings effectively.",
+            "C. The activity of setting up a business.",
+            "D. A brief summary of your work experience."
+          ],
+          "correct_answer": "B"
+        },
+        {
+          "id": "6",
+          "content": "Budgeting",
+          "options_en": [
+            "A. Planning how to spend and save money.",
+            "B. Finding solutions to issues.",
+            "C. Organizing your time.",
+            "D. Understanding financial skills."
+          ],
+          "correct_answer": "A"
+        },
+        {
+          "id": "7",
+          "content": "Career Path",
+          "options_en": [
+            "A. A formal meeting for a job.",
+            "B. The sequence of jobs and experiences that make up a person's working life.",
+            "C. Taking ownership of tasks.",
+            "D. Working with others to create something."
+          ],
+          "correct_answer": "B"
+        },
+        {
+          "id": "8",
+          "content": "Critical Thinking",
+          "options_en": [
+            "A. Choosing between different options.",
+            "B. Planning what you want to achieve.",
+            "C. Analyzing information objectively and making reasoned judgments.",
+            "D. Planning how to spend money."
+          ],
+          "correct_answer": "C"
+        },
+        {
+          "id": "9",
+          "content": "Decision Making",
+          "options_en": [
+            "A. Choosing between different options.",
+            "B. Exchanging information effectively.",
+            "C. Finding solutions to issues.",
+            "D. Organizing your time."
+          ],
+          "correct_answer": "A"
+        },
+        {
+          "id": "10",
+          "content": "Time Management",
+          "options_en": [
+            "A. Planning how to spend money.",
+            "B. Organizing and planning how to divide your time between specific activities.",
+            "C. Taking ownership of tasks.",
+            "D. Working together on a project."
+          ],
+          "correct_answer": "B"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace each vocabulary word below. Say the word aloud as you trace it.",
+      "instructions_l2": "Traza cada palabra de vocabulario a continuación. Di la palabra en voz alta mientras la trazas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Responsibility",
+          "content_l2": "Responsabilidad"
+        },
+        {
+          "id": "2",
+          "content": "Teamwork",
+          "content_l2": "Trabajo en equipo"
+        },
+        {
+          "id": "3",
+          "content": "Problem-solving",
+          "content_l2": "Resolución de problemas"
+        },
+        {
+          "id": "4",
+          "content": "Goal Setting",
+          "content_l2": "Establecimiento de metas"
+        },
+        {
+          "id": "5",
+          "content": "Communication",
+          "content_l2": "Comunicación"
+        },
+        {
+          "id": "6",
+          "content": "Budgeting",
+          "content_l2": "Presupuesto"
+        },
+        {
+          "id": "7",
+          "content": "Career Path",
+          "content_l2": "Trayectoria profesional"
+        },
+        {
+          "id": "8",
+          "content": "Critical Thinking",
+          "content_l2": "Pensamiento crítico"
+        },
+        {
+          "id": "9",
+          "content": "Decision Making",
+          "content_l2": "Toma de decisiones"
+        },
+        {
+          "id": "10",
+          "content": "Time Management",
+          "content_l2": "Gestión del tiempo"
+        },
+        {
+          "id": "11",
+          "content": "Interview",
+          "content_l2": "Entrevista"
+        },
+        {
+          "id": "12",
+          "content": "Resume",
+          "content_l2": "Currículum vitae"
+        },
+        {
+          "id": "13",
+          "content": "Entrepreneurship",
+          "content_l2": "Emprendimiento"
+        },
+        {
+          "id": "14",
+          "content": "Financial Literacy",
+          "content_l2": "Educación financiera"
+        },
+        {
+          "id": "15",
+          "content": "Collaboration",
+          "content_l2": "Colaboración"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the image that represents the vocabulary word. Then, write the word in English and Spanish.",
+      "instructions_l2": "Colorea la imagen que representa la palabra de vocabulario. Luego, escribe la palabra en inglés y español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Image: Two hands shaking, representing a formal meeting. (Interview)",
+          "content_l2": "Imagen: Dos manos estrechándose, representando una reunión formal. (Entrevista)",
+          "correct_answer": "Interview / Entrevista"
+        },
+        {
+          "id": "2",
+          "content": "Image: A person looking at a calendar with tasks scheduled. (Time Management)",
+          "content_l2": "Imagen: Una persona mirando un calendario con tareas programadas. (Gestión del tiempo)",
+          "correct_answer": "Time Management / Gestión del tiempo"
+        },
+        {
+          "id": "3",
+          "content": "Image: A group of students working together on a poster. (Teamwork / Collaboration)",
+          "content_l2": "Imagen: Un grupo de estudiantes trabajando juntos en un cartel. (Trabajo en equipo / Colaboración)",
+          "correct_answer": "Teamwork / Trabajo en equipo OR Collaboration / Colaboración"
+        },
+        {
+          "id": "4",
+          "content": "Image: A piggy bank with coins. (Budgeting / Financial Literacy)",
+          "content_l2": "Imagen: Una alcancía con monedas. (Presupuesto / Educación financiera)",
+          "correct_answer": "Budgeting / Presupuesto OR Financial Literacy / Educación financiera"
+        },
+        {
+          "id": "5",
+          "content": "Image: A student raising their hand to ask a question. (Communication)",
+          "content_l2": "Imagen: Un estudiante levantando la mano para hacer una pregunta. (Comunicación)",
+          "correct_answer": "Communication / Comunicación"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Leo's Journey: Building Life Skills",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Leo's Journey: Building Life Skills",
+        "text_l2": "El Viaje de Leo: Desarrollando Habilidades para la Vida"
+      },
+      {
+        "page_number": 2,
+        "text_en": "Leo, a middle school student, often dreamed about his future. He knew he wanted to do something exciting, but he wasn't sure how to start. His teacher, Ms. Elena, told him, “To build a strong future, you need strong life skills!”",
+        "text_l2": "Leo, un estudiante de secundaria, a menudo soñaba con su futuro. Sabía que quería hacer algo emocionante, pero no estaba seguro de cómo empezar. Su maestra, la Sra. Elena, le dijo: “¡Para construir un futuro sólido, necesitas habilidades para la vida sólidas!”"
+      },
+      {
+        "page_number": 3,
+        "text_en": "First, Ms. Elena taught them about **Goal Setting**. “What do you want to achieve?” she asked. Leo learned to set small, achievable goals. He also learned about **Responsibility**, understanding that reaching goals requires taking ownership of his tasks.",
+        "text_l2": "Primero, la Sra. Elena les enseñó sobre el **Establecimiento de Metas**. “¿Qué quieren lograr?” preguntó ella. Leo aprendió a establecer metas pequeñas y alcanzables. También aprendió sobre la **Responsabilidad**, comprendiendo que alcanzar las metas requiere asumir la propiedad de sus tareas."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Next, they worked on a big group project. Leo practiced **Teamwork** and **Collaboration**, learning to work effectively with his classmates. He also improved his **Communication** skills, sharing ideas clearly and listening to others.",
+        "text_l2": "Luego, trabajaron en un gran proyecto grupal. Leo practicó el **Trabajo en equipo** y la **Colaboración**, aprendiendo a trabajar eficazmente con sus compañeros. También mejoró sus habilidades de **Comunicación**, compartiendo ideas claramente y escuchando a los demás."
+      },
+      {
+        "page_number": 5,
+        "text_en": "When their project faced unexpected problems, Leo used his **Problem-solving** skills. He applied **Critical Thinking** to analyze the situation and make a good **Decision Making** with his team.",
+        "text_l2": "Cuando su proyecto enfrentó problemas inesperados, Leo usó sus habilidades de **Resolución de problemas**. Aplicó el **Pensamiento crítico** para analizar la situación y tomar una buena **Toma de decisiones** con su equipo."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Ms. Elena also taught them about **Financial Literacy**. Leo learned about **Budgeting** his allowance, saving money for things he wanted, and understanding how money works. He even started thinking about different **Career Paths**.",
+        "text_l2": "La Sra. Elena también les enseñó sobre **Educación financiera**. Leo aprendió sobre cómo hacer un **Presupuesto** con su mesada, ahorrar dinero para las cosas que quería y entender cómo funciona el dinero. Incluso comenzó a pensar en diferentes **Trayectorias profesionales**."
+      },
+      {
+        "page_number": 7,
+        "text_en": "To prepare for future jobs, they practiced mock **Interview** skills and learned how to create a simple **Resume**. Leo also explored the idea of **Entrepreneurship**, thinking about starting his own small business one day.",
+        "text_l2": "Para prepararse para futuros trabajos, practicaron habilidades de **Entrevista** simuladas y aprendieron a crear un **Currículum vitae** simple. Leo también exploró la idea del **Emprendimiento**, pensando en iniciar su propio pequeño negocio algún día."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Leo realized that these 'life skills' weren't just for adults. They were essential for success in school, in his community, and for his exciting future! He felt more prepared and confident than ever.",
+        "text_l2": "Leo se dio cuenta de que estas 'habilidades para la vida' no eran solo para adultos. ¡Eran esenciales para el éxito en la escuela, en su comunidad y para su emocionante futuro! Se sintió más preparado y seguro que nunca."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify, define, and use key vocabulary related to career exploration and essential life skills, enhancing their understanding of personal development and future planning.",
+    "suggested_use": "Introduce vocabulary using flashcards and visuals. Read the mini-book aloud, pausing to discuss vocabulary in context. Use matching and tracing worksheets for reinforcement. The coloring worksheet can serve as a creative assessment. Encourage students to use the words in sentences and discuss how these skills apply to their daily lives and future aspirations.",
+    "materials_needed": [
+      "Printed vocabulary cards (with English, Spanish, and image prompts)",
+      "Mini-book copies for each student or one large copy for shared reading",
+      "Worksheet copies (matching, tracing, coloring)",
+      "Pencils, crayons/colored pencils",
+      "Whiteboard or projector for introducing new words"
+    ],
+    "differentiation_tips": [
+      "**For struggling learners:** Provide sentence starters for discussions. Allow students to use bilingual dictionaries. Pair them with a stronger English speaker for activities. Focus on a smaller set of vocabulary words if needed.",
+      "**For advanced learners:** Encourage them to write short paragraphs or journal entries using the vocabulary. Have them research specific careers and identify which life skills are most important for those roles. Ask them to create their own definitions or example sentences."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "B",
+        "2": "A",
+        "3": "C",
+        "4": "C",
+        "5": "B",
+        "6": "A",
+        "7": "B",
+        "8": "C",
+        "9": "A",
+        "10": "B"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "No specific answers needed for tracing, as the goal is to trace the provided words."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "Interview / Entrevista",
+        "2": "Time Management / Gestión del tiempo",
+        "3": "Teamwork / Trabajo en equipo OR Collaboration / Colaboración",
+        "4": "Budgeting / Presupuesto OR Financial Literacy / Educación financiera",
+        "5": "Communication / Comunicación"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

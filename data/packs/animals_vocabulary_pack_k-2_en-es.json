@@ -1,0 +1,340 @@
+{
+  "pack_id": "animals-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Animals",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Animal Friends / Mis Amigos los Animales",
+  "description": "A vocabulary pack for K-2 ELL newcomers focusing on common animals, featuring bilingual support, tracing, matching, and a mini-book.",
+  "vocabulary": [
+    {
+      "en": "cat",
+      "l2": "gato",
+      "image_prompt": "a friendly domestic cat sitting"
+    },
+    {
+      "en": "dog",
+      "l2": "perro",
+      "image_prompt": "a happy dog wagging its tail"
+    },
+    {
+      "en": "bird",
+      "l2": "pájaro",
+      "image_prompt": "a small bird flying in the sky"
+    },
+    {
+      "en": "fish",
+      "l2": "pez",
+      "image_prompt": "a colorful fish swimming in water"
+    },
+    {
+      "en": "cow",
+      "l2": "vaca",
+      "image_prompt": "a brown and white cow grazing in a field"
+    },
+    {
+      "en": "pig",
+      "l2": "cerdo",
+      "image_prompt": "a pink pig playing in mud"
+    },
+    {
+      "en": "horse",
+      "l2": "caballo",
+      "image_prompt": "a strong horse running in a field"
+    },
+    {
+      "en": "sheep",
+      "l2": "oveja",
+      "image_prompt": "a fluffy white sheep standing"
+    },
+    {
+      "en": "duck",
+      "l2": "pato",
+      "image_prompt": "a yellow duck swimming on a pond"
+    },
+    {
+      "en": "frog",
+      "l2": "rana",
+      "image_prompt": "a green frog sitting on a lily pad"
+    },
+    {
+      "en": "lion",
+      "l2": "león",
+      "image_prompt": "a majestic lion with a mane"
+    },
+    {
+      "en": "monkey",
+      "l2": "mono",
+      "image_prompt": "a playful monkey eating a banana"
+    },
+    {
+      "en": "elephant",
+      "l2": "elefante",
+      "image_prompt": "a large gray elephant with big ears"
+    },
+    {
+      "en": "bear",
+      "l2": "oso",
+      "image_prompt": "a friendly brown bear standing"
+    },
+    {
+      "en": "snake",
+      "l2": "serpiente",
+      "image_prompt": "a green snake coiled on a branch"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the animal picture to its English word.",
+      "instructions_l2": "Une la imagen del animal con su palabra en inglés.",
+      "items": [
+        {
+          "id": "1",
+          "content": "picture of a cat",
+          "content_l2": "imagen de un gato",
+          "correct_answer": "cat"
+        },
+        {
+          "id": "2",
+          "content": "picture of a dog",
+          "content_l2": "imagen de un perro",
+          "correct_answer": "dog"
+        },
+        {
+          "id": "3",
+          "content": "picture of a bird",
+          "content_l2": "imagen de un pájaro",
+          "correct_answer": "bird"
+        },
+        {
+          "id": "4",
+          "content": "picture of a fish",
+          "content_l2": "imagen de un pez",
+          "correct_answer": "fish"
+        },
+        {
+          "id": "5",
+          "content": "picture of a cow",
+          "content_l2": "imagen de una vaca",
+          "correct_answer": "cow"
+        },
+        {
+          "id": "6",
+          "content": "picture of a pig",
+          "content_l2": "imagen de un cerdo",
+          "correct_answer": "pig"
+        }
+      ],
+      "worksheet_id": "ws-1"
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the animal words in English and Spanish.",
+      "instructions_l2": "Traza las palabras de los animales en inglés y español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "cat",
+          "content_l2": "gato"
+        },
+        {
+          "id": "2",
+          "content": "dog",
+          "content_l2": "perro"
+        },
+        {
+          "id": "3",
+          "content": "bird",
+          "content_l2": "pájaro"
+        },
+        {
+          "id": "4",
+          "content": "fish",
+          "content_l2": "pez"
+        },
+        {
+          "id": "5",
+          "content": "cow",
+          "content_l2": "vaca"
+        },
+        {
+          "id": "6",
+          "content": "pig",
+          "content_l2": "cerdo"
+        },
+        {
+          "id": "7",
+          "content": "horse",
+          "content_l2": "caballo"
+        },
+        {
+          "id": "8",
+          "content": "sheep",
+          "content_l2": "oveja"
+        }
+      ],
+      "worksheet_id": "ws-2"
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the animals. Write their names in English.",
+      "instructions_l2": "Colorea los animales. Escribe sus nombres en inglés.",
+      "items": [
+        {
+          "id": "1",
+          "content": "outline of a duck",
+          "content_l2": "contorno de un pato",
+          "correct_answer": "duck"
+        },
+        {
+          "id": "2",
+          "content": "outline of a frog",
+          "content_l2": "contorno de una rana",
+          "correct_answer": "frog"
+        },
+        {
+          "id": "3",
+          "content": "outline of a lion",
+          "content_l2": "contorno de un león",
+          "correct_answer": "lion"
+        },
+        {
+          "id": "4",
+          "content": "outline of a monkey",
+          "content_l2": "contorno de un mono",
+          "correct_answer": "monkey"
+        },
+        {
+          "id": "5",
+          "content": "outline of an elephant",
+          "content_l2": "contorno de un elefante",
+          "correct_answer": "elephant"
+        },
+        {
+          "id": "6",
+          "content": "outline of a bear",
+          "content_l2": "contorno de un oso",
+          "correct_answer": "bear"
+        },
+        {
+          "id": "7",
+          "content": "outline of a snake",
+          "content_l2": "contorno de una serpiente",
+          "correct_answer": "snake"
+        }
+      ],
+      "worksheet_id": "ws-3"
+    }
+  ],
+  "mini_book": {
+    "title": "My Animal Friends / Mis Amigos los Animales",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Animal Friends",
+        "text_l2": "Mis Amigos los Animales"
+      },
+      {
+        "page_number": 2,
+        "text_en": "I see a cat.",
+        "text_l2": "Veo un gato.",
+        "image_prompt": "a cat looking friendly"
+      },
+      {
+        "page_number": 3,
+        "text_en": "I see a dog.",
+        "text_l2": "Veo un perro.",
+        "image_prompt": "a dog wagging its tail"
+      },
+      {
+        "page_number": 4,
+        "text_en": "I see a bird.",
+        "text_l2": "Veo un pájaro.",
+        "image_prompt": "a small bird on a branch"
+      },
+      {
+        "page_number": 5,
+        "text_en": "I see a fish.",
+        "text_l2": "Veo un pez.",
+        "image_prompt": "a fish swimming in a bowl"
+      },
+      {
+        "page_number": 6,
+        "text_en": "I see a cow.",
+        "text_l2": "Veo una vaca.",
+        "image_prompt": "a cow eating grass"
+      },
+      {
+        "page_number": 7,
+        "text_en": "I see a pig.",
+        "text_l2": "Veo un cerdo.",
+        "image_prompt": "a pig rolling in mud"
+      },
+      {
+        "page_number": 8,
+        "text_en": "I see many animals!",
+        "text_l2": "¡Veo muchos animales!",
+        "image_prompt": "a group of various friendly animals together"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name common animals in English and Spanish. Students will practice tracing and writing animal names, and matching words to pictures.",
+    "suggested_use": "Introduce new vocabulary with flashcards or realia. Use the mini-book for shared reading, focusing on repetitive sentence structures. Worksheets can be used for independent practice, small group work, or as homework. Encourage students to use the words in simple sentences.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional)",
+      "Crayons or colored pencils",
+      "Pencils",
+      "Scissors (for mini-book assembly)",
+      "Glue or stapler (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide a word bank for matching activities. Use hand-over-hand guidance for tracing. Pair students with a stronger peer for support. Show pictures and say words aloud multiple times.",
+      "**Challenge:** Ask students to describe animals using adjectives. Encourage them to draw their favorite animal and write a sentence about it. Have them create their own sentences using the new vocabulary."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "cat",
+        "2": "dog",
+        "3": "bird",
+        "4": "fish",
+        "5": "cow",
+        "6": "pig"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "cat / gato (traced)",
+        "2": "dog / perro (traced)",
+        "3": "bird / pájaro (traced)",
+        "4": "fish / pez (traced)",
+        "5": "cow / vaca (traced)",
+        "6": "pig / cerdo (traced)",
+        "7": "horse / caballo (traced)",
+        "8": "sheep / oveja (traced)"
+      }
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "duck",
+        "2": "frog",
+        "3": "lion",
+        "4": "monkey",
+        "5": "elephant",
+        "6": "bear",
+        "7": "snake"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-29T10:00:00.000Z",
+  "updated_at": "2024-07-29T10:00:00.000Z"
+}

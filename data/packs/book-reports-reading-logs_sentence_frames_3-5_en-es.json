@@ -1,0 +1,185 @@
+{
+  "pack_id": "sf-brrl-3-5-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Book Reports & Reading Logs",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "My Reading Journey: Book Reports & Reading Logs",
+  "description": "This pack provides 10 functional sentence frames for 3rd-5th grade ELL students to discuss book reports and reading logs. It includes dialogue strips, speaking prompts, and worksheets to support classroom communication and literacy development.",
+  "sentence_frames": [
+    {
+      "frame": "I read about [character's name] in my book, and I learned that [he/she] is [adjective].",
+      "translation": "Leí sobre [nombre del personaje] en mi libro, y aprendí que [él/ella] es [adjetivo]."
+    },
+    {
+      "frame": "My favorite part was when [event], because [reason].",
+      "translation": "Mi parte favorita fue cuando [evento], porque [razón]."
+    },
+    {
+      "frame": "The main idea of this book is [main idea], so I think [conclusion].",
+      "translation": "La idea principal de este libro es [idea principal], así que creo que [conclusión]."
+    },
+    {
+      "frame": "I recorded [number] pages in my reading log this week, and I want to read more next week.",
+      "translation": "Registré [número] páginas en mi registro de lectura esta semana, y quiero leer más la próxima semana."
+    },
+    {
+      "frame": "This book reminded me of [another book/event], and I liked both stories.",
+      "translation": "Este libro me recordó a [otro libro/evento], y me gustaron ambas historias."
+    },
+    {
+      "frame": "I need to finish my book report by [date], so I will [action].",
+      "translation": "Necesito terminar mi informe de libro para [fecha], así que voy a [acción]."
+    },
+    {
+      "frame": "The author wrote this book to [purpose], and I think [he/she] did a good job.",
+      "translation": "El autor escribió este libro para [propósito], y creo que [él/ella] hizo un buen trabajo."
+    },
+    {
+      "frame": "I will share my book report with the class, and I feel [emotion] about it.",
+      "translation": "Compartiré mi informe de libro con la clase, y me siento [emoción] al respecto."
+    },
+    {
+      "frame": "When I read, I learned new words like [word 1] and [word 2], so I wrote them in my vocabulary journal.",
+      "translation": "Cuando leí, aprendí palabras nuevas como [palabra 1] y [palabra 2], así que las escribí en mi diario de vocabulario."
+    },
+    {
+      "frame": "I chose this book because [reason], and I am glad I read it.",
+      "translation": "Elegí este libro porque [razón], y estoy contento/a de haberlo leído."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "My favorite part was when the dragon flew away, because it was very exciting.",
+      "speaker_b_en": "That sounds interesting! What was the main idea of this book?",
+      "speaker_a_l2": "Mi parte favorita fue cuando el dragón se fue volando, porque fue muy emocionante.",
+      "speaker_b_l2": "¡Eso suena interesante! ¿Cuál fue la idea principal de este libro?",
+      "context": "Two students discussing their books."
+    },
+    {
+      "speaker_a_en": "I recorded 25 pages in my reading log this week, and I want to read more next week.",
+      "speaker_b_en": "Good job! I need to finish my book report by Friday, so I will read tonight.",
+      "speaker_a_l2": "Registré 25 páginas en mi registro de lectura esta semana, y quiero leer más la próxima semana.",
+      "speaker_b_l2": "¡Buen trabajo! Necesito terminar mi informe de libro para el viernes, así que voy a leer esta noche.",
+      "context": "Students checking in on reading progress."
+    },
+    {
+      "speaker_a_en": "The author wrote this book to teach us about space, and I think she did a good job.",
+      "speaker_b_en": "I chose this book because it had cool pictures, and I am glad I read it.",
+      "speaker_a_l2": "El autor escribió este libro para enseñarnos sobre el espacio, y creo que ella hizo un buen trabajo.",
+      "speaker_b_l2": "Elegí este libro porque tenía dibujos geniales, y estoy contento/a de haberlo leído.",
+      "context": "Students sharing why they liked their books."
+    },
+    {
+      "speaker_a_en": "I will share my book report with the class, and I feel a little nervous about it.",
+      "speaker_b_en": "Don't worry! My favorite part was when the hero won, because it was a happy ending. You can tell them that.",
+      "speaker_a_l2": "Compartiré mi informe de libro con la clase, y me siento un poco nervioso/a al respecto.",
+      "speaker_b_l2": "¡No te preocupes! Mi parte favorita fue cuando el héroe ganó, porque fue un final feliz. Puedes decirles eso.",
+      "context": "A student expressing feelings about an upcoming book report presentation."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "Tell your partner about a character you read about. Use the frame: 'I read about [character's name] in my book, and I learned that [he/she] is [adjective].'",
+      "prompt_l2": "Cuéntale a tu compañero sobre un personaje que leíste. Usa el marco: 'Leí sobre [nombre del personaje] en mi libro, y aprendí que [él/ella] es [adjetivo].'",
+      "expected_response": "I read about Charlotte in my book, and I learned that she is very wise.",
+      "visual_cue": "Image of a child reading a book with a thought bubble showing a character with an adjective (e.g., a brave knight, a kind princess)."
+    },
+    {
+      "prompt_en": "How many pages did you read this week? Use the frame: 'I recorded [number] pages in my reading log this week, and I want to read more next week.'",
+      "prompt_l2": "¿Cuántas páginas leíste esta semana? Usa el marco: 'Registré [número] páginas en mi registro de lectura esta semana, y quiero leer más la próxima semana.'",
+      "expected_response": "I recorded 40 pages in my reading log this week, and I want to read more next week.",
+      "visual_cue": "Image of an open reading log with numbers filled in, and a pen."
+    },
+    {
+      "prompt_en": "What is the main idea of your book? Use the frame: 'The main idea of this book is [main idea], so I think [conclusion].'",
+      "prompt_l2": "¿Cuál es la idea principal de tu libro? Usa el marco: 'La idea principal de este libro es [idea principal], así que creo que [conclusión].'",
+      "expected_response": "The main idea of this book is to never give up, so I think it's a good lesson for everyone.",
+      "visual_cue": "Image of a book with a lightbulb graphic or a thought bubble containing a simple concept (e.g., 'friendship,' 'adventure')."
+    },
+    {
+      "prompt_en": "Why did you choose your book? Use the frame: 'I chose this book because [reason], and I am glad I read it.'",
+      "prompt_l2": "¿Por qué elegiste tu libro? Usa el marco: 'Elegí este libro porque [razón], y estoy contento/a de haberlo leído.'",
+      "expected_response": "I chose this book because it was about mysteries, and I am glad I read it.",
+      "visual_cue": "Image of a child pointing to a book on a bookshelf, with a question mark above their head."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Use the sentence frames to write about your book. Choose two frames and complete them with information from your reading.",
+      "instructions_l2": "Usa los marcos de oraciones para escribir sobre tu libro. Elige dos marcos y complétalos con información de tu lectura.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Frame 1: I read about ________ in my book, and I learned that ________ is ________.\n\nMy writing: ____________________________________________________________________"
+        },
+        {
+          "id": "2",
+          "content": "Frame 2: My favorite part was when ________, because ________.\n\nMy writing: ____________________________________________________________________"
+        },
+        {
+          "id": "3",
+          "content": "Frame 3: The main idea of this book is ________, so I think ________.\n\nMy writing: ____________________________________________________________________"
+        },
+        {
+          "id": "4",
+          "content": "Frame 4: I chose this book because ________, and I am glad I read it.\n\nMy writing: ____________________________________________________________________"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Complete the sentences with words from the box. (Words: main, recorded, favorite, finish, learned)",
+      "instructions_l2": "Completa las oraciones con palabras de la caja. (Palabras: idea principal, registré, favorita, terminar, aprendí)",
+      "items": [
+        {
+          "id": "1",
+          "content": "I ________ 20 pages in my reading log this week.",
+          "correct_answer": "recorded"
+        },
+        {
+          "id": "2",
+          "content": "My ________ part was when the dog found its way home.",
+          "correct_answer": "favorite"
+        },
+        {
+          "id": "3",
+          "content": "The ________ idea of this book is about bravery.",
+          "correct_answer": "main"
+        },
+        {
+          "id": "4",
+          "content": "I need to ________ my book report by Friday.",
+          "correct_answer": "finish"
+        },
+        {
+          "id": "5",
+          "content": "When I read, I ________ new words like 'adventure' and 'journey'.",
+          "correct_answer": "learned"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to communicate about their reading experiences, book reports, and reading log progress using compound sentence frames in English and Spanish.",
+    "suggested_use": "Introduce frames one by one, modeling pronunciation and meaning. Practice in pairs or small groups using dialogue strips and speaking prompts. Use worksheets for independent practice or assessment. Encourage students to use the frames during class discussions about books and reading logs.",
+    "materials_needed": [
+      "Books for students to read",
+      "Reading logs",
+      "Pencils/pens",
+      "Printed speaking prompt cards",
+      "Printed worksheets",
+      "Whiteboard or projector for modeling"
+    ],
+    "differentiation_tips": [
+      "Support: Provide a word bank for writing practice, allow students to draw pictures instead of writing for some responses, pre-teach key vocabulary, partner students with stronger English speakers.",
+      "Challenge: Encourage students to expand on their sentences with more details, ask follow-up questions during dialogues, have students write a short paragraph using 2-3 frames, present their book report to a small group."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:42:39.535Z",
+  "updated_at": "2026-03-11T13:42:39.535Z"
+}

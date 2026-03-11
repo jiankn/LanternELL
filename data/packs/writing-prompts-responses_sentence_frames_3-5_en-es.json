@@ -1,0 +1,174 @@
+{
+  "pack_id": "writing-prompts-responses-3-5-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Writing Prompts & Responses",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Crafting Stories: Writing Prompts & Responses",
+  "description": "This pack provides functional sentence frames to help 3rd-5th grade ELL newcomers plan, write, and respond to writing prompts, fostering both written and oral communication skills.",
+  "sentence_frames": [
+    {
+      "frame": "The writing prompt asks me to describe ______, so I will think about _____.",
+      "translation": "El indicador de escritura me pide que describa ______, así que pensaré en _____."
+    },
+    {
+      "frame": "I need to write about ______, and I will include details like _____.",
+      "translation": "Necesito escribir sobre ______, e incluiré detalles como _____."
+    },
+    {
+      "frame": "My main idea for this story is ______, and I will start by _____.",
+      "translation": "Mi idea principal para esta historia es ______, y comenzaré por _____."
+    },
+    {
+      "frame": "I will organize my writing by first ______, then ______, and finally _____.",
+      "translation": "Organizaré mi escritura primero ______, luego ______, y finalmente _____."
+    },
+    {
+      "frame": "When I read the prompt, I understand that I should ______, so I will make sure to _____.",
+      "translation": "Cuando leo el indicador, entiendo que debo ______, así que me aseguraré de _____."
+    },
+    {
+      "frame": "I can use descriptive words such as ______ and ______ to make my writing better.",
+      "translation": "Puedo usar palabras descriptivas como ______ y ______ para mejorar mi escritura."
+    },
+    {
+      "frame": "I think my paragraph needs a topic sentence about ______, and then supporting details about ______.",
+      "translation": "Creo que mi párrafo necesita una oración principal sobre ______, y luego detalles de apoyo sobre ______."
+    },
+    {
+      "frame": "My partner's writing is interesting because they described ______, and I liked how they used ______.",
+      "translation": "La escritura de mi compañero es interesante porque describieron ______, y me gustó cómo usaron ______."
+    },
+    {
+      "frame": "I want to ask my partner about ______, because I am curious about ______ in their story.",
+      "translation": "Quiero preguntarle a mi compañero sobre ______, porque tengo curiosidad sobre ______ en su historia."
+    },
+    {
+      "frame": "To improve my writing, I can add more details about ______ or change the ending to ______.",
+      "translation": "Para mejorar mi escritura, puedo añadir más detalles sobre ______ o cambiar el final a ______."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "The writing prompt asks me to describe my favorite animal, so I will think about its colors.",
+      "speaker_b_en": "That's a good idea! I need to write about my pet, and I will include details like its fur.",
+      "speaker_a_l2": "El indicador de escritura me pide que describa mi animal favorito, así que pensaré en sus colores.",
+      "speaker_b_l2": "¡Esa es una buena idea! Necesito escribir sobre mi mascota, e incluiré detalles como su pelaje.",
+      "context": "Students discussing a descriptive writing prompt."
+    },
+    {
+      "speaker_a_en": "My main idea for this story is a magical adventure, and I will start by introducing the hero.",
+      "speaker_b_en": "Cool! I will organize my writing by first describing the setting, then the problem, and finally the solution.",
+      "speaker_a_l2": "Mi idea principal para esta historia es una aventura mágica, y comenzaré por presentar al héroe.",
+      "speaker_b_l2": "¡Genial! Organizaré mi escritura primero describiendo el escenario, luego el problema, y finalmente la solución.",
+      "context": "Students planning a narrative story."
+    },
+    {
+      "speaker_a_en": "When I read the prompt, I understand that I should explain a process, so I will make sure to use transition words.",
+      "speaker_b_en": "Good point. I can use descriptive words such as 'sparkling' and 'gigantic' to make my writing better.",
+      "speaker_a_l2": "Cuando leo el indicador, entiendo que debo explicar un proceso, así que me aseguraré de usar palabras de transición.",
+      "speaker_b_l2": "Buen punto. Puedo usar palabras descriptivas como 'brillante' y 'gigantesco' para mejorar mi escritura.",
+      "context": "Students discussing how to approach an explanatory prompt."
+    },
+    {
+      "speaker_a_en": "My partner's writing is interesting because they described a mysterious forest, and I liked how they used suspense.",
+      "speaker_b_en": "I agree! I want to ask my partner about the monster, because I am curious about its powers in their story.",
+      "speaker_a_l2": "La escritura de mi compañero es interesante porque describieron un bosque misterioso, y me gustó cómo usaron el suspenso.",
+      "speaker_b_l2": "¡Estoy de acuerdo! Quiero preguntarle a mi compañero sobre el monstruo, porque tengo curiosidad sobre sus poderes en su historia.",
+      "context": "Students giving peer feedback on a story."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "What does the writing prompt ask you to do?",
+      "prompt_l2": "¿Qué te pide el indicador de escritura?",
+      "expected_response": "The writing prompt asks me to describe...",
+      "visual_cue": "Image of a question mark and a pencil"
+    },
+    {
+      "prompt_en": "What is your main idea for your story?",
+      "prompt_l2": "¿Cuál es tu idea principal para tu historia?",
+      "expected_response": "My main idea for this story is...",
+      "visual_cue": "Image of a thought bubble with a story idea"
+    },
+    {
+      "prompt_en": "What descriptive words can you use?",
+      "prompt_l2": "¿Qué palabras descriptivas puedes usar?",
+      "expected_response": "I can use descriptive words such as...",
+      "visual_cue": "Image of a magnifying glass over text"
+    },
+    {
+      "prompt_en": "What do you like about your partner's writing?",
+      "prompt_l2": "¿Qué te gusta de la escritura de tu compañero?",
+      "expected_response": "My partner's writing is interesting because they described...",
+      "visual_cue": "Image of two students talking about writing"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Read the prompt and use the sentence frames to plan your story. Then, write your story in the space below.",
+      "instructions_l2": "Lee el indicador y usa los marcos de oraciones para planificar tu historia. Luego, escribe tu historia en el espacio de abajo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Writing Prompt: Write a short story about a day when everything went backwards. What happened? How did you feel?\n\nPlan your story using these frames:\n- The writing prompt asks me to describe a day when everything went backwards, so I will think about _____.\n- My main idea for this story is ______, and I will start by _____.\n- I will organize my writing by first ______, then ______, and finally _____.\n- I can use descriptive words such as ______ and ______ to make my writing better.\n\nMy Story:"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Complete the sentences using words from the box below.",
+      "instructions_l2": "Completa las oraciones usando palabras del recuadro de abajo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "The writing ______ asks me to tell about my favorite season. (Word Box: descriptive, prompt, main, details, improve)",
+          "correct_answer": "prompt"
+        },
+        {
+          "id": "2",
+          "content": "My ______ idea for this story is a trip to the beach. (Word Box: descriptive, prompt, main, details, improve)",
+          "correct_answer": "main"
+        },
+        {
+          "id": "3",
+          "content": "I need to include ______ like the warm sand and blue water. (Word Box: descriptive, prompt, main, details, improve)",
+          "correct_answer": "details"
+        },
+        {
+          "id": "4",
+          "content": "I can use ______ words to make my writing more exciting. (Word Box: descriptive, prompt, main, details, improve)",
+          "correct_answer": "descriptive"
+        },
+        {
+          "id": "5",
+          "content": "To ______ my writing, I can add more interesting sentences. (Word Box: descriptive, prompt, main, details, improve)",
+          "correct_answer": "improve"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will use sentence frames to plan, write, and respond to writing prompts, enhancing their ability to communicate ideas in written and spoken English.",
+    "suggested_use": "Introduce frames one by one. Model usage with examples relevant to the students' lives. Practice in pairs or small groups during pre-writing, drafting, and peer review stages. Integrate these frames with existing writing curriculum to support ELL students in various writing tasks.",
+    "materials_needed": [
+      "Whiteboard/projector",
+      "Markers",
+      "Sentence frame printouts",
+      "Writing paper",
+      "Pencils",
+      "Colored pencils for visual cues",
+      "Peer review checklists (optional)"
+    ],
+    "differentiation_tips": [
+      "Support: Provide word banks for fill-in-the-blank activities. Pre-teach key vocabulary before writing tasks. Allow students to draw their ideas before writing. Pair newcomer students with stronger English speakers for peer activities.",
+      "Challenge: Encourage students to extend the frames with more complex ideas or additional clauses. Ask them to create their own sentence frames for different stages of the writing process. Have them lead peer review discussions using the frames."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00Z",
+  "updated_at": "2024-07-30T10:00:00Z"
+}

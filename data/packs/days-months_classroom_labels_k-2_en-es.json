@@ -1,0 +1,232 @@
+{
+  "pack_id": "days-months-k2-en-es-001",
+  "pack_type": "classroom_labels",
+  "topic": "Days & Months",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Bilingual Calendar & Time Labels (K-2)",
+  "description": "A comprehensive set of bilingual (English-Spanish) labels for K-2 classrooms, focusing on days of the week, months of the year, and key calendar vocabulary. This pack supports daily routines and language acquisition.",
+  "labels": [
+    {
+      "en": "Monday",
+      "l2": "Lunes",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Tuesday",
+      "l2": "Martes",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Wednesday",
+      "l2": "Miércoles",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Thursday",
+      "l2": "Jueves",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Friday",
+      "l2": "Viernes",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Today is...",
+      "l2": "Hoy es...",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Tomorrow will be...",
+      "l2": "Mañana será...",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Yesterday was...",
+      "l2": "Ayer fue...",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "The Month is...",
+      "l2": "El Mes es...",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "The Year is...",
+      "l2": "El Año es...",
+      "category": "calendar_vocabulary",
+      "size": "full",
+      "plural_form": null
+    },
+    {
+      "en": "Saturday",
+      "l2": "Sábado",
+      "category": "calendar_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "Sunday",
+      "l2": "Domingo",
+      "category": "calendar_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "January",
+      "l2": "Enero",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "February",
+      "l2": "Febrero",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "March",
+      "l2": "Marzo",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "April",
+      "l2": "Abril",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "May",
+      "l2": "Mayo",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "June",
+      "l2": "Junio",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "July",
+      "l2": "Julio",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    },
+    {
+      "en": "August",
+      "l2": "Agosto",
+      "category": "month_vocabulary",
+      "size": "small",
+      "plural_form": null
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Morning Arrival",
+      "routine_l2": "Llegada por la mañana",
+      "time_of_day": "morning",
+      "icon_prompt": "child entering classroom, backpack"
+    },
+    {
+      "routine_en": "Calendar Time",
+      "routine_l2": "Hora del Calendario",
+      "time_of_day": "morning",
+      "icon_prompt": "calendar with numbers, children pointing"
+    },
+    {
+      "routine_en": "Lunch Time",
+      "routine_l2": "Hora del Almuerzo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "lunch box, apple, sandwich"
+    },
+    {
+      "routine_en": "Quiet Time / Reading",
+      "routine_l2": "Tiempo de Calma / Lectura",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child reading a book quietly"
+    },
+    {
+      "routine_en": "Dismissal",
+      "routine_l2": "Salida",
+      "time_of_day": "dismissal",
+      "icon_prompt": "child waving goodbye, school bus"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Listen when others speak.",
+      "rule_l2": "Escucha cuando otros hablan.",
+      "icon_prompt": "ear, listening child"
+    },
+    {
+      "rule_en": "Raise your hand to speak.",
+      "rule_l2": "Levanta la mano para hablar.",
+      "icon_prompt": "child raising hand"
+    },
+    {
+      "rule_en": "Be kind and respectful.",
+      "rule_l2": "Sé amable y respetuoso.",
+      "icon_prompt": "two children smiling, heart"
+    },
+    {
+      "rule_en": "Walk, don't run.",
+      "rule_l2": "Camina, no corras.",
+      "icon_prompt": "walking feet, no running sign"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To provide a highly visual and interactive environment for K-2 students to learn and practice days of the week, months of the year, and key calendar phrases in both English and Spanish, fostering early biliteracy and routine comprehension.",
+    "suggested_use": [
+      "Print and laminate full-size labels for a prominent daily calendar display (e.g., 'Today is...', 'The Month is...').",
+      "Use small-size month labels on a rotating 'Month of the Year' wheel or a linear display.",
+      "Integrate day labels into a daily calendar routine where students physically change the day.",
+      "Attach visual routine cards to a daily schedule board, pointing to each as the routine progresses.",
+      "Display classroom rules prominently, reviewing them daily or as needed."
+    ],
+    "materials_needed": [
+      "Printer",
+      "Laminator (optional, but recommended for durability)",
+      "Velcro dots or tape",
+      "Wall space or bulletin board",
+      "Pointer stick (for calendar time)"
+    ],
+    "differentiation_tips": [
+      "For beginners: Focus on repeating the target vocabulary daily. Use gestures and TPR (Total Physical Response).",
+      "For developing learners: Encourage sentence frames (e.g., 'Today is [day].', 'El mes es [month].'). Ask simple questions.",
+      "For advanced learners: Have them lead the calendar routine, identify patterns (e.g., days that start with 'M'), or create simple sentences about the day/month."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:33:02.207Z",
+  "updated_at": "2026-03-11T13:33:02.207Z"
+}

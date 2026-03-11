@@ -1,0 +1,192 @@
+{
+  "pack_id": "classroom-labels-k2-en-es-supplies-1715011200",
+  "pack_type": "classroom_labels",
+  "topic": "School Supplies",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Bilingual School Supplies Labels & Classroom Essentials (K-2)",
+  "description": "A comprehensive set of bilingual (English-Spanish) labels for K-2 classrooms, focusing on high-frequency school supplies, essential visual routines, and core classroom rules to support ELL newcomers and promote language immersion.",
+  "labels": [
+    {
+      "en": "Pencil",
+      "l2": "Lápiz",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Lápices"
+    },
+    {
+      "en": "Crayon",
+      "l2": "Crayola",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Crayolas"
+    },
+    {
+      "en": "Marker",
+      "l2": "Marcador",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Marcadores"
+    },
+    {
+      "en": "Scissor",
+      "l2": "Tijeras",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Tijeras"
+    },
+    {
+      "en": "Glue Stick",
+      "l2": "Pegamento en barra",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Pegamentos en barra"
+    },
+    {
+      "en": "Paper",
+      "l2": "Papel",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Papeles"
+    },
+    {
+      "en": "Book",
+      "l2": "Libro",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Libros"
+    },
+    {
+      "en": "Backpack",
+      "l2": "Mochila",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Mochilas"
+    },
+    {
+      "en": "Notebook",
+      "l2": "Cuaderno",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Cuadernos"
+    },
+    {
+      "en": "Eraser",
+      "l2": "Borrador",
+      "category": "supplies",
+      "size": "full",
+      "plural_form": "Borradores"
+    },
+    {
+      "en": "Pencil Box",
+      "l2": "Caja de lápices",
+      "category": "supplies",
+      "size": "small",
+      "plural_form": "Cajas de lápices"
+    },
+    {
+      "en": "Folder",
+      "l2": "Carpeta",
+      "category": "supplies",
+      "size": "small",
+      "plural_form": "Carpetas"
+    },
+    {
+      "en": "Paint",
+      "l2": "Pintura",
+      "category": "supplies",
+      "size": "small",
+      "plural_form": "Pinturas"
+    },
+    {
+      "en": "Ruler",
+      "l2": "Regla",
+      "category": "supplies",
+      "size": "small",
+      "plural_form": "Reglas"
+    },
+    {
+      "en": "Clipboard",
+      "l2": "Portapapeles",
+      "category": "supplies",
+      "size": "small",
+      "plural_form": "Portapapeles"
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Morning Arrival",
+      "routine_l2": "Llegada por la mañana",
+      "time_of_day": "morning",
+      "icon_prompt": "child hanging up backpack and coat"
+    },
+    {
+      "routine_en": "Circle Time",
+      "routine_l2": "Hora del círculo",
+      "time_of_day": "morning",
+      "icon_prompt": "children sitting in a circle on a rug"
+    },
+    {
+      "routine_en": "Lunch Time",
+      "routine_l2": "Hora del almuerzo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child eating food at a table"
+    },
+    {
+      "routine_en": "Recess",
+      "routine_l2": "Recreo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "children playing outdoors on a playground"
+    },
+    {
+      "routine_en": "Dismissal",
+      "routine_l2": "Salida",
+      "time_of_day": "dismissal",
+      "icon_prompt": "child leaving with backpack and waving goodbye"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Listen carefully",
+      "rule_l2": "Escucha con atención",
+      "icon_prompt": "ear with sound waves"
+    },
+    {
+      "rule_en": "Raise your hand",
+      "rule_l2": "Levanta la mano",
+      "icon_prompt": "child's hand raised in the air"
+    },
+    {
+      "rule_en": "Share with friends",
+      "rule_l2": "Comparte con amigos",
+      "icon_prompt": "two children sharing a toy or crayons"
+    },
+    {
+      "rule_en": "Use kind words",
+      "rule_l2": "Usa palabras amables",
+      "icon_prompt": "speech bubble with a heart inside"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To create an immersive, language-rich environment for K-2 students, especially ELL newcomers, by labeling essential classroom items, routines, and rules in both English and Spanish.",
+    "suggested_use": "Print full-size labels for walls, doors, and large bins. Print small-size labels for individual supplies, pencil boxes, and smaller containers. Display visual routine cards in a prominent area and review daily. Post classroom rules where visible to all students.",
+    "materials_needed": [
+      "Printer",
+      "Laminator (optional)",
+      "Scissors",
+      "Tape/Adhesive",
+      "Velcro dots (optional for routine cards)"
+    ],
+    "differentiation_tips": [
+      "Encourage students to point to labels as they use items.",
+      "Use labels during vocabulary games and matching activities.",
+      "Have students repeat the words in both languages.",
+      "Pair new labels with gestures or actions for better comprehension."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-05-06T12:00:00.000Z",
+  "updated_at": "2024-05-06T12:00:00.000Z"
+}

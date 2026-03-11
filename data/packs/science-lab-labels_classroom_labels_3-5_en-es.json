@@ -1,0 +1,186 @@
+{
+  "pack_id": "sci-lab-labels-3-5-en-es",
+  "pack_type": "classroom_labels",
+  "topic": "Science Lab Labels",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Science Lab Labels: Explore & Learn (English-Spanish)",
+  "description": "Bilingual labels designed for Pre-K to 8th-grade science labs, promoting vocabulary acquisition and safe practices for young learners (ages 3-5).",
+  "labels": [
+    {
+      "en": "Science Lab",
+      "l2": "Laboratorio de Ciencias",
+      "category": "Areas",
+      "size": "full"
+    },
+    {
+      "en": "Experiment Station",
+      "l2": "Estación de Experimentos",
+      "category": "Areas",
+      "size": "full"
+    },
+    {
+      "en": "Observation Area",
+      "l2": "Área de Observación",
+      "category": "Areas",
+      "size": "full"
+    },
+    {
+      "en": "Safety Goggles",
+      "l2": "Gafas de Seguridad",
+      "category": "Supplies",
+      "size": "full",
+      "plural_form": "Goggle/Gafa"
+    },
+    {
+      "en": "Lab Coats",
+      "l2": "Batas de Laboratorio",
+      "category": "Supplies",
+      "size": "full",
+      "plural_form": "Lab Coat/Bata de Laboratorio"
+    },
+    {
+      "en": "Microscopes",
+      "l2": "Microscopios",
+      "category": "Supplies",
+      "size": "full",
+      "plural_form": "Microscope/Microscopio"
+    },
+    {
+      "en": "Test Tubes",
+      "l2": "Tubos de Ensayo",
+      "category": "Supplies",
+      "size": "full",
+      "plural_form": "Test Tube/Tubo de Ensayo"
+    },
+    {
+      "en": "Beakers",
+      "l2": "Vasos de Precipitados",
+      "category": "Supplies",
+      "size": "full",
+      "plural_form": "Beaker/Vaso de Precipitados"
+    },
+    {
+      "en": "Sink",
+      "l2": "Fregadero",
+      "category": "Furniture",
+      "size": "full"
+    },
+    {
+      "en": "Exit",
+      "l2": "Salida",
+      "category": "Areas",
+      "size": "full"
+    },
+    {
+      "en": "Magnifying Glass",
+      "l2": "Lupa",
+      "category": "Supplies",
+      "size": "small"
+    },
+    {
+      "en": "Droppers",
+      "l2": "Cuentagotas",
+      "category": "Supplies",
+      "size": "small",
+      "plural_form": "Dropper/Cuentagotas"
+    },
+    {
+      "en": "Petri Dishes",
+      "l2": "Placas de Petri",
+      "category": "Supplies",
+      "size": "small",
+      "plural_form": "Petri Dish/Placa de Petri"
+    },
+    {
+      "en": "Scales",
+      "l2": "Balanza",
+      "category": "Supplies",
+      "size": "small",
+      "plural_form": "Scale/Balanza"
+    },
+    {
+      "en": "Pencils",
+      "l2": "Lápices",
+      "category": "Supplies",
+      "size": "small",
+      "plural_form": "Pencil/Lápiz"
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Entering the Lab",
+      "routine_l2": "Entrar al Laboratorio",
+      "time_of_day": "morning",
+      "icon_prompt": "students entering a lab, putting on safety gear"
+    },
+    {
+      "routine_en": "Washing Hands",
+      "routine_l2": "Lavar las Manos",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child washing hands at a sink with soap and water"
+    },
+    {
+      "routine_en": "Cleaning Up",
+      "routine_l2": "Limpiar",
+      "time_of_day": "afternoon",
+      "icon_prompt": "children putting away lab materials, wiping a table clean"
+    },
+    {
+      "routine_en": "Sharing Materials",
+      "routine_l2": "Compartir Materiales",
+      "time_of_day": "afternoon",
+      "icon_prompt": "two children sharing a science tool or lab equipment"
+    },
+    {
+      "routine_en": "Leaving the Lab",
+      "routine_l2": "Salir del Laboratorio",
+      "time_of_day": "dismissal",
+      "icon_prompt": "students exiting a lab, waving goodbye"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Be Safe",
+      "rule_l2": "Sé Seguro/a",
+      "icon_prompt": "child wearing safety goggles, being careful with equipment"
+    },
+    {
+      "rule_en": "Be Respectful",
+      "rule_l2": "Sé Respetuoso/a",
+      "icon_prompt": "children listening to each other, raising hands to speak"
+    },
+    {
+      "rule_en": "Be Responsible",
+      "rule_l2": "Sé Responsable",
+      "icon_prompt": "child putting away materials, cleaning up a spill"
+    },
+    {
+      "rule_en": "Listen Carefully",
+      "rule_l2": "Escucha Atentamente",
+      "icon_prompt": "child with hand cupped to ear, another child speaking"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To facilitate vocabulary acquisition, promote safety, and establish clear routines in a bilingual science lab setting for young learners.",
+    "suggested_use": "Print, laminate, and display labels throughout the science lab. Use full-size labels for general areas and large equipment, and small-size labels for bins and specific tools. Post visual routine cards in sequence near the entrance or a designated routine board. Review rules daily at the start of lab activities.",
+    "materials_needed": [
+      "Printer",
+      "Laminator",
+      "Scissors",
+      "Adhesive (tape, glue dots, or Velcro)"
+    ],
+    "differentiation_tips": [
+      "Pair labels with real objects (realia) whenever possible.",
+      "Encourage students to echo new vocabulary.",
+      "Use gestures and TPR (Total Physical Response) to demonstrate meaning.",
+      "Create a 'Science Word Wall' to reinforce new terms.",
+      "Provide opportunities for students to lead routines using the visual cards."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:36:22.526Z",
+  "updated_at": "2026-03-11T13:36:22.526Z"
+}

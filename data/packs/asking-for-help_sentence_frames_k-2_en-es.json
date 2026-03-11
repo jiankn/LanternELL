@@ -1,0 +1,171 @@
+{
+  "pack_id": "sf-k2-help-en-es-20240311",
+  "pack_type": "sentence_frames",
+  "topic": "Asking for Help",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Asking for Help: Classroom Communication Frames (K-2)",
+  "description": "This pack provides essential sentence frames for K-2 ELL newcomers to confidently ask for help in English and Spanish classroom settings. Includes dialogue, speaking prompts, and worksheets.",
+  "sentence_frames": [
+    {
+      "frame": "I need help.",
+      "translation": "Necesito ayuda."
+    },
+    {
+      "frame": "Can you help me?",
+      "translation": "¿Puedes ayudarme?"
+    },
+    {
+      "frame": "Please help me.",
+      "translation": "Por favor, ayúdame."
+    },
+    {
+      "frame": "I don't understand.",
+      "translation": "No entiendo."
+    },
+    {
+      "frame": "Show me, please.",
+      "translation": "Muéstrame, por favor."
+    },
+    {
+      "frame": "What is this?",
+      "translation": "¿Qué es esto?"
+    },
+    {
+      "frame": "I can't do it.",
+      "translation": "No puedo hacerlo."
+    },
+    {
+      "frame": "Help me with ___.",
+      "translation": "Ayúdame con ___."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "What do you need?",
+      "speaker_b_en": "I need help.",
+      "speaker_a_l2": "¿Qué necesitas?",
+      "speaker_b_l2": "Necesito ayuda.",
+      "context": "A student is struggling to open a glue stick."
+    },
+    {
+      "speaker_a_en": "Can you help me?",
+      "speaker_b_en": "Yes, I can.",
+      "speaker_a_l2": "¿Puedes ayudarme?",
+      "speaker_b_l2": "Sí, puedo.",
+      "context": "One student asks another for help finding a crayon."
+    },
+    {
+      "speaker_a_en": "Do you understand?",
+      "speaker_b_en": "I don't understand.",
+      "speaker_a_l2": "¿Entiendes?",
+      "speaker_b_l2": "No entiendo.",
+      "context": "The teacher just explained a math problem."
+    },
+    {
+      "speaker_a_en": "What do you need help with?",
+      "speaker_b_en": "Help me with my drawing.",
+      "speaker_a_l2": "¿Con qué necesitas ayuda?",
+      "speaker_b_l2": "Ayúdame con mi dibujo.",
+      "context": "A student is having trouble drawing a star."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "You can't reach the book on the shelf.",
+      "prompt_l2": "No puedes alcanzar el libro en el estante.",
+      "expected_response": "Can you help me?",
+      "visual_cue": "Image of a child reaching for a book on a high shelf."
+    },
+    {
+      "prompt_en": "You don't know how to start your puzzle.",
+      "prompt_l2": "No sabes cómo empezar tu rompecabezas.",
+      "expected_response": "I need help.",
+      "visual_cue": "Image of a child looking confused at a puzzle."
+    },
+    {
+      "prompt_en": "The teacher explained something, but you are confused.",
+      "prompt_l2": "La maestra explicó algo, pero estás confundido.",
+      "expected_response": "I don't understand.",
+      "visual_cue": "Image of a child with a question mark above their head."
+    },
+    {
+      "prompt_en": "You want the teacher to show you how to cut the paper.",
+      "prompt_l2": "Quieres que la maestra te muestre cómo cortar el papel.",
+      "expected_response": "Show me, please.",
+      "visual_cue": "Image of a child holding scissors and paper, looking at an adult."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Trace the words. Then write them by yourself.",
+      "instructions_l2": "Traza las palabras. Luego escríbelas tú mismo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Trace: I need help. \nWrite: _______________"
+        },
+        {
+          "id": "2",
+          "content": "Trace: Can you help me? \nWrite: _______________"
+        },
+        {
+          "id": "3",
+          "content": "Trace: Please help me. \nWrite: _______________"
+        },
+        {
+          "id": "4",
+          "content": "Trace: I don't understand. \nWrite: _______________"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Read the sentence. Choose the best word to fill the blank. (Options: help, understand, show)",
+      "instructions_l2": "Lee la oración. Elige la mejor palabra para llenar el espacio en blanco. (Opciones: ayuda, entiendo, muéstrame)",
+      "items": [
+        {
+          "id": "1",
+          "content": "I need ___.",
+          "correct_answer": "help"
+        },
+        {
+          "id": "2",
+          "content": "Can you ___ me?",
+          "correct_answer": "help"
+        },
+        {
+          "id": "3",
+          "content": "I don't ___.",
+          "correct_answer": "understand"
+        },
+        {
+          "id": "4",
+          "content": "___ me, please.",
+          "correct_answer": "Show"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use simple sentence frames to ask for help in common classroom situations, fostering independence and communication skills.",
+    "suggested_use": "Introduce frames one at a time with visual aids and gestures. Practice with 'choral repetition' and 'turn and talk' activities. Use dialogue strips for role-playing. Integrate speaking prompts into daily routines for real-time practice. Worksheets can be used for independent practice or assessment.",
+    "materials_needed": [
+      "Sentence frame flashcards (large print)",
+      "Speaking prompt cards (with visuals)",
+      "Dialogue strips",
+      "Worksheets",
+      "Realia (e.g., a difficult puzzle, a book on a high shelf, art supplies)"
+    ],
+    "differentiation_tips": [
+      "Support: Pair students with a more proficient peer, provide sentence starters with visual cues, model extensively, use hand-over-hand for writing practice.",
+      "Challenge: Encourage students to add one more detail (e.g., 'Help me with the red crayon.'), ask 'Why do you need help?' and guide them to simple answers."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-03-11T13:33:02.207Z",
+  "updated_at": "2024-03-11T13:33:02.207Z"
+}

@@ -1,0 +1,332 @@
+{
+  "pack_id": "math-vocab-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Math Vocabulary",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Essential Math Vocabulary for Grades 3-5",
+  "description": "This vocabulary pack introduces key math terms for newcomer ELL students in grades 3-5. It includes common operations, number types, and problem-solving concepts, accompanied by a mini-book and interactive worksheets.",
+  "vocabulary": [
+    {
+      "en": "sum",
+      "l2": "suma",
+      "image_prompt": "Two numbers being added together to show their sum, e.g., 3 + 2 = 5 with '5' highlighted."
+    },
+    {
+      "en": "difference",
+      "l2": "diferencia",
+      "image_prompt": "Two numbers being subtracted to show their difference, e.g., 7 - 3 = 4 with '4' highlighted."
+    },
+    {
+      "en": "product",
+      "l2": "producto",
+      "image_prompt": "Two numbers being multiplied to show their product, e.g., 4 x 2 = 8 with '8' highlighted."
+    },
+    {
+      "en": "quotient",
+      "l2": "cociente",
+      "image_prompt": "A division problem showing the quotient, e.g., 10 / 2 = 5 with '5' highlighted."
+    },
+    {
+      "en": "add",
+      "l2": "sumar",
+      "image_prompt": "A plus sign (+) and two groups of objects being combined, e.g., 3 apples + 2 apples."
+    },
+    {
+      "en": "subtract",
+      "l2": "restar",
+      "image_prompt": "A minus sign (-) and a group of objects with some being taken away, e.g., 5 cookies - 2 cookies."
+    },
+    {
+      "en": "multiply",
+      "l2": "multiplicar",
+      "image_prompt": "An 'x' or multiplication sign and equal groups of objects, e.g., 3 groups of 4 stars."
+    },
+    {
+      "en": "divide",
+      "l2": "dividir",
+      "image_prompt": "A division sign (÷) and a set of objects being shared equally into groups, e.g., 12 candies shared among 3 kids."
+    },
+    {
+      "en": "equal",
+      "l2": "igual",
+      "image_prompt": "An equal sign (=) with balanced scales or two identical sets of objects."
+    },
+    {
+      "en": "equation",
+      "l2": "ecuación",
+      "image_prompt": "A simple math sentence with an equal sign, e.g., 5 + x = 10, with a question mark for 'x'."
+    },
+    {
+      "en": "fraction",
+      "l2": "fracción",
+      "image_prompt": "A circle divided into parts, with one part shaded, representing 1/4 or 1/2."
+    },
+    {
+      "en": "decimal",
+      "l2": "decimal",
+      "image_prompt": "A number line showing numbers with decimal points, e.g., 0.5, 1.0, 1.5."
+    },
+    {
+      "en": "whole number",
+      "l2": "número entero",
+      "image_prompt": "A group of distinct, complete objects, like 5 whole apples, with the number '5'."
+    },
+    {
+      "en": "pattern",
+      "l2": "patrón",
+      "image_prompt": "A sequence of shapes or numbers that repeats, e.g., circle, square, circle, square..."
+    },
+    {
+      "en": "estimate",
+      "l2": "estimar",
+      "image_prompt": "A jar of candies with a thought bubble showing an approximate number, like 'about 50'."
+    },
+    {
+      "en": "measure",
+      "l2": "medir",
+      "image_prompt": "A ruler next to an object, like a pencil, showing its length being measured."
+    },
+    {
+      "en": "geometry",
+      "l2": "geometría",
+      "image_prompt": "A collection of basic 2D and 3D shapes: square, triangle, circle, cube, sphere."
+    },
+    {
+      "en": "data",
+      "l2": "datos",
+      "image_prompt": "A simple bar graph or tally chart showing collected information about favorite fruits."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-1",
+      "instructions_en": "Match the English math word to its Spanish translation. Draw a line from the English word to the correct Spanish word.",
+      "instructions_l2": "Une la palabra de matemáticas en inglés con su traducción al español. Dibuja una línea desde la palabra en inglés hasta la palabra correcta en español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "sum",
+          "content_l2": "suma",
+          "correct_answer": "suma"
+        },
+        {
+          "id": "2",
+          "content": "difference",
+          "content_l2": "diferencia",
+          "correct_answer": "diferencia"
+        },
+        {
+          "id": "3",
+          "content": "product",
+          "content_l2": "producto",
+          "correct_answer": "producto"
+        },
+        {
+          "id": "4",
+          "content": "quotient",
+          "content_l2": "cociente",
+          "correct_answer": "cociente"
+        },
+        {
+          "id": "5",
+          "content": "add",
+          "content_l2": "sumar",
+          "correct_answer": "sumar"
+        },
+        {
+          "id": "6",
+          "content": "subtract",
+          "content_l2": "restar",
+          "correct_answer": "restar"
+        },
+        {
+          "id": "7",
+          "content": "multiply",
+          "content_l2": "multiplicar",
+          "correct_answer": "multiplicar"
+        },
+        {
+          "id": "8",
+          "content": "divide",
+          "content_l2": "dividir",
+          "correct_answer": "dividir"
+        },
+        {
+          "id": "9",
+          "content": "equal",
+          "content_l2": "igual",
+          "correct_answer": "igual"
+        },
+        {
+          "id": "10",
+          "content": "fraction",
+          "content_l2": "fracción",
+          "correct_answer": "fracción"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-2",
+      "instructions_en": "Trace the math vocabulary words. Say each word as you trace it.",
+      "instructions_l2": "Traza las palabras de vocabulario de matemáticas. Di cada palabra mientras la trazas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "equation",
+          "image_prompt": "An empty line for tracing 'equation'"
+        },
+        {
+          "id": "2",
+          "content": "decimal",
+          "image_prompt": "An empty line for tracing 'decimal'"
+        },
+        {
+          "id": "3",
+          "content": "whole number",
+          "image_prompt": "An empty line for tracing 'whole number'"
+        },
+        {
+          "id": "4",
+          "content": "pattern",
+          "image_prompt": "An empty line for tracing 'pattern'"
+        },
+        {
+          "id": "5",
+          "content": "estimate",
+          "image_prompt": "An empty line for tracing 'estimate'"
+        },
+        {
+          "id": "6",
+          "content": "measure",
+          "image_prompt": "An empty line for tracing 'measure'"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-3",
+      "instructions_en": "Color the picture that matches each math word. Say the word aloud.",
+      "instructions_l2": "Colorea la imagen que coincide con cada palabra de matemáticas. Di la palabra en voz alta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "add",
+          "image_prompt": "A picture of two groups of objects (e.g., 3 circles and 2 circles) with a plus sign in between, ready to be colored."
+        },
+        {
+          "id": "2",
+          "content": "subtract",
+          "image_prompt": "A picture of 5 objects with 2 crossed out, and a minus sign, ready to be colored."
+        },
+        {
+          "id": "3",
+          "content": "multiply",
+          "image_prompt": "A picture of 3 rows of 4 stars, with a multiplication sign, ready to be colored."
+        },
+        {
+          "id": "4",
+          "content": "divide",
+          "image_prompt": "A picture of 8 cookies being shared equally into 4 plates, with a division sign, ready to be colored."
+        },
+        {
+          "id": "5",
+          "content": "fraction",
+          "image_prompt": "A picture of a pizza cut into 4 slices, with one slice colored differently, representing 1/4, ready to be colored."
+        },
+        {
+          "id": "6",
+          "content": "geometry",
+          "image_prompt": "A picture showing a square, triangle, and circle, ready to be colored."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Math Words / Mis Palabras de Matemáticas",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Math Words",
+        "text_l2": "Mis Palabras de Matemáticas"
+      },
+      {
+        "page_number": 2,
+        "text_en": "Math helps us understand numbers and shapes. We use math every day!",
+        "text_l2": "Las matemáticas nos ayudan a entender los números y las formas. ¡Usamos las matemáticas todos los días!"
+      },
+      {
+        "page_number": 3,
+        "text_en": "When we add, we put numbers together to find the sum. When we subtract, we take one number from another to find the difference.",
+        "text_l2": "Cuando sumamos, juntamos números para encontrar la suma. Cuando restamos, quitamos un número de otro para encontrar la diferencia."
+      },
+      {
+        "page_number": 4,
+        "text_en": "To multiply means to add equal groups. The answer is called the product. To divide means to share equally. The answer is called the quotient.",
+        "text_l2": "Multiplicar significa sumar grupos iguales. La respuesta se llama producto. Dividir significa compartir por igual. La respuesta se llama cociente."
+      },
+      {
+        "page_number": 5,
+        "text_en": "A whole number is a complete number like 1, 2, 3. A fraction shows parts of a whole, like 1/2. A decimal is another way to show parts, like 0.5.",
+        "text_l2": "Un número entero es un número completo como 1, 2, 3. Una fracción muestra partes de un todo, como 1/2. Un decimal es otra forma de mostrar partes, como 0.5."
+      },
+      {
+        "page_number": 6,
+        "text_en": "An equation is a math sentence with an equal sign. Sometimes we need to estimate an answer, which means finding a close number.",
+        "text_l2": "Una ecuación es una oración matemática con un signo de igual. A veces necesitamos estimar una respuesta, lo que significa encontrar un número cercano."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Geometry is about shapes and their properties. We also learn to measure objects using tools like rulers.",
+        "text_l2": "La geometría trata sobre las formas y sus propiedades. También aprendemos a medir objetos usando herramientas como reglas."
+      },
+      {
+        "page_number": 8,
+        "text_en": "We can collect data and look for patterns to understand information better. Math is fun!",
+        "text_l2": "Podemos recolectar datos y buscar patrones para entender mejor la información. ¡Las matemáticas son divertidas!"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and understand basic math vocabulary in English and Spanish, and use these terms in simple contexts.",
+    "suggested_use": "Introduce vocabulary using flashcards or visuals. Read the mini-book aloud, then have students read it independently or with a partner. Use the matching worksheet for initial comprehension, tracing for handwriting and reinforcement, and coloring for creative engagement and visual association. Integrate these words into daily math lessons.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional)",
+      "Mini-book copies for each student",
+      "Worksheet copies for each student",
+      "Pencils",
+      "Crayons or colored pencils",
+      "Scissors (for mini-book assembly if applicable)",
+      "Glue (for mini-book assembly if applicable)"
+    ],
+    "differentiation_tips": [
+      "**For beginning ELLs:** Provide strong visual support for every word. Use gestures and realia (actual math manipulatives). Allow students to point or draw answers. Provide sentence frames like 'The sum of 2 and 3 is ______.'",
+      "**For intermediate ELLs:** Encourage students to use the vocabulary in simple sentences orally and in writing. Have them create their own simple math problems using the new terms. Partner work for mini-book reading.",
+      "**For advanced ELLs:** Challenge students to define words in their own words. Ask them to solve word problems that require the use of the new vocabulary. Discuss how these words are used in different math topics."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "suma",
+        "2": "diferencia",
+        "3": "producto",
+        "4": "cociente",
+        "5": "sumar",
+        "6": "restar",
+        "7": "multiplicar",
+        "8": "dividir",
+        "9": "igual",
+        "10": "fracción"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:30:42.135Z",
+  "updated_at": "2026-03-11T13:30:42.136Z"
+}

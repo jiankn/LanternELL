@@ -1,0 +1,290 @@
+{
+  "pack_id": "ws-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Weather & Seasons",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Weather & Seasons: Learn English & Spanish",
+  "description": "A vocabulary pack designed for K-2 ELL newcomers to learn basic weather conditions and seasons in English and Spanish, featuring simple words, visual aids, and engaging activities.",
+  "vocabulary": [
+    {
+      "en": "Sun",
+      "l2": "Sol",
+      "image_prompt": "A bright yellow smiling sun in a blue sky."
+    },
+    {
+      "en": "Rain",
+      "l2": "Lluvia",
+      "image_prompt": "Dark clouds with raindrops falling, a child holding an umbrella."
+    },
+    {
+      "en": "Snow",
+      "l2": "Nieve",
+      "image_prompt": "Falling snowflakes, a snowman with a hat and scarf."
+    },
+    {
+      "en": "Cloud",
+      "l2": "Nube",
+      "image_prompt": "A big fluffy white cloud floating in the sky."
+    },
+    {
+      "en": "Wind",
+      "l2": "Viento",
+      "image_prompt": "A tree bending in the wind, leaves blowing, a kite flying."
+    },
+    {
+      "en": "Hot",
+      "l2": "Caliente",
+      "image_prompt": "A sun shining brightly, a child sweating and fanning themselves."
+    },
+    {
+      "en": "Cold",
+      "l2": "Frío",
+      "image_prompt": "A child bundled in a hat and scarf, shivering slightly, with snow in the background."
+    },
+    {
+      "en": "Spring",
+      "l2": "Primavera",
+      "image_prompt": "Green grass, blooming flowers (tulips, daffodils), baby animals (chick, bunny)."
+    },
+    {
+      "en": "Summer",
+      "l2": "Verano",
+      "image_prompt": "A beach scene with a bright sun, ocean, sandcastle, and children playing."
+    },
+    {
+      "en": "Fall",
+      "l2": "Otoño",
+      "image_prompt": "Trees with red, orange, and yellow leaves, leaves falling to the ground, a pumpkin."
+    },
+    {
+      "en": "Winter",
+      "l2": "Invierno",
+      "image_prompt": "Snowy landscape, bare trees, children playing in snow, wearing warm clothes."
+    },
+    {
+      "en": "Rainbow",
+      "l2": "Arcoíris",
+      "image_prompt": "A colorful rainbow arching across a sky with light clouds and sunshine."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "id": "ws-1",
+      "instructions_en": "Match the English word to the correct picture. Draw a line from the word to the image.",
+      "instructions_l2": "Une la palabra en inglés con el dibujo correcto. Dibuja una línea desde la palabra hasta la imagen.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Sun",
+          "image_prompt": "A bright yellow smiling sun"
+        },
+        {
+          "id": "2",
+          "content": "Rain",
+          "image_prompt": "Dark clouds with raindrops falling"
+        },
+        {
+          "id": "3",
+          "content": "Snow",
+          "image_prompt": "Falling snowflakes, a snowman"
+        },
+        {
+          "id": "4",
+          "content": "Hot",
+          "image_prompt": "A sun shining brightly, child sweating"
+        },
+        {
+          "id": "5",
+          "content": "Cold",
+          "image_prompt": "A child bundled in a hat and scarf"
+        },
+        {
+          "id": "6",
+          "content": "Rainbow",
+          "image_prompt": "A colorful rainbow arching across a sky"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "id": "ws-2",
+      "instructions_en": "Trace the weather and season words.",
+      "instructions_l2": "Traza las palabras de clima y estaciones.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Sun",
+          "trace_text_en": "Sun",
+          "image_prompt": "A small sun icon"
+        },
+        {
+          "id": "2",
+          "content": "Rain",
+          "trace_text_en": "Rain",
+          "image_prompt": "A small rain cloud icon"
+        },
+        {
+          "id": "3",
+          "content": "Snow",
+          "trace_text_en": "Snow",
+          "image_prompt": "A small snowflake icon"
+        },
+        {
+          "id": "4",
+          "content": "Cloud",
+          "trace_text_en": "Cloud",
+          "image_prompt": "A small cloud icon"
+        },
+        {
+          "id": "5",
+          "content": "Wind",
+          "trace_text_en": "Wind",
+          "image_prompt": "A small blowing wind icon"
+        },
+        {
+          "id": "6",
+          "content": "Spring",
+          "trace_text_en": "Spring",
+          "image_prompt": "A small flower icon"
+        },
+        {
+          "id": "7",
+          "content": "Summer",
+          "trace_text_en": "Summer",
+          "image_prompt": "A small sun with sunglasses icon"
+        },
+        {
+          "id": "8",
+          "content": "Winter",
+          "trace_text_en": "Winter",
+          "image_prompt": "A small mitten icon"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "id": "ws-3",
+      "instructions_en": "Color the pictures and trace the words for each season.",
+      "instructions_l2": "Colorea los dibujos y traza las palabras para cada estación.",
+      "items": [
+        {
+          "id": "1",
+          "image_prompt": "A scene for Spring with blooming flowers and a butterfly.",
+          "trace_text_en": "Spring"
+        },
+        {
+          "id": "2",
+          "image_prompt": "A scene for Summer with children playing at the beach.",
+          "trace_text_en": "Summer"
+        },
+        {
+          "id": "3",
+          "image_prompt": "A scene for Fall with trees showing colorful leaves and a pumpkin.",
+          "trace_text_en": "Fall"
+        },
+        {
+          "id": "4",
+          "image_prompt": "A scene for Winter with snow falling and a snowman.",
+          "trace_text_en": "Winter"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "The Weather and Seasons / El Clima y las Estaciones",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "The Weather and Seasons",
+        "text_l2": "El Clima y las Estaciones"
+      },
+      {
+        "page_number": 2,
+        "text_en": "The sun shines bright. It is hot!",
+        "text_l2": "El sol brilla fuerte. ¡Hace calor!",
+        "image_prompt": "A bright smiling sun."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Sometimes it rains. We need an umbrella.",
+        "text_l2": "A veces llueve. Necesitamos un paraguas.",
+        "image_prompt": "Rain falling from a cloud onto an open umbrella."
+      },
+      {
+        "page_number": 4,
+        "text_en": "In winter, it can snow. It is cold!",
+        "text_l2": "En invierno, puede nevar. ¡Hace frío!",
+        "image_prompt": "A child wearing a hat and scarf, with snowflakes around them."
+      },
+      {
+        "page_number": 5,
+        "text_en": "Clouds are in the sky. Wind blows the leaves.",
+        "text_l2": "Hay nubes en el cielo. El viento sopla las hojas.",
+        "image_prompt": "Fluffy clouds in the sky and leaves blowing from a tree."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Spring brings flowers. Summer is for playing outside.",
+        "text_l2": "La primavera trae flores. El verano es para jugar afuera.",
+        "image_prompt": "A field of colorful flowers for Spring, and a child playing with a ball on a sunny day for Summer."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Fall has colorful leaves. Winter has snow and ice.",
+        "text_l2": "El otoño tiene hojas de colores. El invierno tiene nieve y hielo.",
+        "image_prompt": "Red and orange leaves falling for Fall, and a snowy landscape with a snowflake for Winter."
+      },
+      {
+        "page_number": 8,
+        "text_en": "What is your favorite weather or season?",
+        "text_l2": "¿Cuál es tu clima o estación favorita?",
+        "image_prompt": "A child thinking, with thought bubbles showing various weather and season icons."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name common weather conditions and seasons in English and Spanish, using age-appropriate vocabulary and visual cues.",
+    "suggested_use": "Introduce vocabulary with flashcards and gestures. Read the mini-book aloud, pointing to pictures. Use worksheets for guided practice and independent reinforcement. Encourage daily 'weather talk' in class. The mini-book can be folded and stapled by students.",
+    "materials_needed": [
+      "Printed vocabulary cards",
+      "Printed mini-book pages",
+      "Printed worksheets",
+      "Crayons or markers",
+      "Pencils",
+      "Scissors (for mini-book assembly)",
+      "Stapler (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "Support: Pre-teach vocabulary with realia or gestures. Pair students with a stronger English speaker. Allow pointing as an answer. Provide sentence frames for verbal responses (e.g., 'It is ___').",
+      "Challenge: Encourage students to use the vocabulary in simple sentences (e.g., 'I like the sun because it is hot.'). Ask them to describe what they wear or do in different weather/seasons. Have them draw and label their own weather scenes."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "A bright yellow smiling sun",
+        "2": "Dark clouds with raindrops falling",
+        "3": "Falling snowflakes, a snowman",
+        "4": "A sun shining brightly, child sweating",
+        "5": "A child bundled in a hat and scarf",
+        "6": "A colorful rainbow arching across a sky"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Tracing words are self-explanatory; students should trace the provided English words."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "Coloring activity with tracing. Students should color the images for Spring, Summer, Fall, and Winter, and trace the corresponding English words."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.503Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

@@ -1,0 +1,266 @@
+{
+  "pack_id": "geo-maps-3-5-en-es-pk-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Geography & Maps",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Exploring Our World: Geography & Maps",
+  "description": "This vocabulary pack introduces 3rd-5th grade ELL newcomers to essential geography and map terms in English and Spanish. It includes a mini-book, interactive worksheets, and teacher notes to support learning.",
+  "vocabulary": [
+    {
+      "en": "Map",
+      "l2": "Mapa",
+      "image_prompt": "A colorful world map with oceans and continents clearly visible."
+    },
+    {
+      "en": "Globe",
+      "l2": "Globo terráqueo",
+      "image_prompt": "A spinning blue and green globe on a stand."
+    },
+    {
+      "en": "Compass Rose",
+      "l2": "Rosa de los vientos",
+      "image_prompt": "A diagram showing North, South, East, West directions with arrows."
+    },
+    {
+      "en": "Continent",
+      "l2": "Continente",
+      "image_prompt": "A simplified world map highlighting one large landmass, like North America."
+    },
+    {
+      "en": "Ocean",
+      "l2": "Océano",
+      "image_prompt": "A vast blue ocean with gentle waves, maybe a small boat in the distance."
+    },
+    {
+      "en": "Country",
+      "l2": "País",
+      "image_prompt": "A map of a single country, like Mexico or Canada, with its borders clearly defined."
+    },
+    {
+      "en": "State",
+      "l2": "Estado",
+      "image_prompt": "A map of a single U.S. state, like Texas or California, with its internal borders."
+    },
+    {
+      "en": "City",
+      "l2": "Ciudad",
+      "image_prompt": "A simple city skyline with buildings and streets on a map."
+    },
+    {
+      "en": "River",
+      "l2": "Río",
+      "image_prompt": "A winding blue line on a green landscape map, representing a river."
+    },
+    {
+      "en": "Mountain",
+      "l2": "Montaña",
+      "image_prompt": "Brown triangular shapes on a green landscape map, representing mountains."
+    },
+    {
+      "en": "Desert",
+      "l2": "Desierto",
+      "image_prompt": "A sandy, arid area on a map with a few cactuses symbols."
+    },
+    {
+      "en": "Forest",
+      "l2": "Bosque",
+      "image_prompt": "An area on a map filled with green tree symbols."
+    },
+    {
+      "en": "Lake",
+      "l2": "Lago",
+      "image_prompt": "A small, enclosed body of blue water on a green landscape map."
+    },
+    {
+      "en": "Legend / Key",
+      "l2": "Leyenda / Clave",
+      "image_prompt": "A small box on a map showing symbols and their meanings (e.g., tree for forest, airplane for airport)."
+    },
+    {
+      "en": "Border",
+      "l2": "Frontera",
+      "image_prompt": "A dashed line on a map separating two countries or states."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line to match each English vocabulary word to its Spanish translation.",
+      "instructions_l2": "Dibuja una línea para unir cada palabra de vocabulario en inglés con su traducción al español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Map",
+          "content_l2": "Mapa"
+        },
+        {
+          "id": "2",
+          "content": "Globe",
+          "content_l2": "Globo terráqueo"
+        },
+        {
+          "id": "3",
+          "content": "Continent",
+          "content_l2": "Continente"
+        },
+        {
+          "id": "4",
+          "content": "Ocean",
+          "content_l2": "Océano"
+        },
+        {
+          "id": "5",
+          "content": "River",
+          "content_l2": "Río"
+        },
+        {
+          "id": "6",
+          "content": "Mountain",
+          "content_l2": "Montaña"
+        },
+        {
+          "id": "7",
+          "content": "City",
+          "content_l2": "Ciudad"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the vocabulary words below. Then, draw a small picture for each word.",
+      "instructions_l2": "Traza las palabras de vocabulario a continuación. Luego, dibuja un pequeño dibujo para cada palabra.",
+      "items": [
+        {
+          "id": "1",
+          "content": "MAP",
+          "content_l2": ""
+        },
+        {
+          "id": "2",
+          "content": "GLOBE",
+          "content_l2": ""
+        },
+        {
+          "id": "3",
+          "content": "RIVER",
+          "content_l2": ""
+        },
+        {
+          "id": "4",
+          "content": "MOUNTAIN",
+          "content_l2": ""
+        },
+        {
+          "id": "5",
+          "content": "OCEAN",
+          "content_l2": ""
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the map! Use blue for the lake and river, green for the forest, brown for the mountain, and yellow for the desert. Then, label each feature using the words provided.",
+      "instructions_l2": "¡Colorea el mapa! Usa azul para el lago y el río, verde para el bosque, marrón para la montaña y amarillo para el desierto. Luego, etiqueta cada característica usando las palabras dadas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Outline map with a lake, a river, a forest, a mountain, and a desert area. Labels to place: Lake, River, Forest, Mountain, Desert.",
+          "content_l2": "Mapa de contorno con un lago, un río, un bosque, una montaña y una zona desértica. Etiquetas para colocar: Lago, Río, Bosque, Montaña, Desierto."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Geography Book / Mi Libro de Geografía",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Geography Book",
+        "text_l2": "Mi Libro de Geografía"
+      },
+      {
+        "page_number": 2,
+        "text_en": "What is a Map? A map is a drawing of a place. It shows us where things are.",
+        "text_l2": "¿Qué es un Mapa? Un mapa es un dibujo de un lugar. Nos muestra dónde están las cosas."
+      },
+      {
+        "page_number": 3,
+        "text_en": "What is a Globe? A globe is a model of Earth. It is shaped like a ball.",
+        "text_l2": "¿Qué es un Globo Terráqueo? Un globo terráqueo es un modelo de la Tierra. Tiene forma de pelota."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Continents and Oceans. Earth has 7 continents (big pieces of land) and 5 oceans (big bodies of water).",
+        "text_l2": "Continentes y Océanos. La Tierra tiene 7 continentes (grandes extensiones de tierra) y 5 océanos (grandes cuerpos de agua)."
+      },
+      {
+        "page_number": 5,
+        "text_en": "Compass Rose. A compass rose shows directions: North, South, East, West. This helps us know where we are going.",
+        "text_l2": "Rosa de los Vientos. Una rosa de los vientos muestra las direcciones: Norte, Sur, Este, Oeste. Esto nos ayuda a saber adónde vamos."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Map Legend. A map legend, or key, tells us what the symbols on a map mean. For example, a tree might mean a forest.",
+        "text_l2": "Leyenda del Mapa. Una leyenda del mapa, o clave, nos dice qué significan los símbolos en un mapa. Por ejemplo, un árbol podría significar un bosque."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Landforms. Maps show different landforms like tall mountains, long rivers, and big lakes. They also show deserts and forests.",
+        "text_l2": "Formas Terrestres. Los mapas muestran diferentes formas terrestres como montañas altas, ríos largos y lagos grandes. También muestran desiertos y bosques."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Why use Maps? Maps help us find places, plan trips, and understand our world!",
+        "text_l2": "¿Por qué usar Mapas? ¡Los mapas nos ayudan a encontrar lugares, planificar viajes y entender nuestro mundo!"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name common geography terms and map features (e.g., map, globe, continent, ocean, river, mountain, compass rose, legend) in English and Spanish. Students will understand the basic purpose of a map.",
+    "suggested_use": "Introduce vocabulary using flashcards or images. Read the mini-book aloud, pausing to discuss concepts and check for understanding. Complete the matching worksheet as a class or in small groups. Use the tracing worksheet for handwriting practice and vocabulary reinforcement. The coloring worksheet provides a hands-on activity to apply learned terms. Encourage students to point out map features on a classroom map or globe.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional)",
+      "Printed mini-books (one per student)",
+      "Printed worksheets (one per student)",
+      "Crayons, colored pencils, or markers",
+      "Pencils",
+      "Scissors (for mini-book assembly)",
+      "Glue or stapler (for mini-book assembly)",
+      "Large world map or globe for classroom reference"
+    ],
+    "differentiation_tips": [
+      "**For struggling learners:** Pre-teach key vocabulary, pair with a stronger student for activities, provide sentence starters for discussions, use realia (e.g., a small globe) for hands-on exploration.",
+      "**For advanced learners:** Encourage them to find specific countries/states on a map, research a specific landform, or draw their own simple map of a familiar place (e.g., their classroom, school).",
+      "**Visual Support:** Emphasize the image prompts and provide clear visual aids for all vocabulary words.",
+      "**L1 Support:** Allow students to use their L1 for initial understanding and discussion before transitioning to English."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "Mapa",
+        "2": "Globo terráqueo",
+        "3": "Continente",
+        "4": "Océano",
+        "5": "Río",
+        "6": "Montaña",
+        "7": "Ciudad"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Tracing is subjective, but students should accurately trace the words 'MAP', 'GLOBE', 'RIVER', 'MOUNTAIN', 'OCEAN' and draw a relevant simple picture for each."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "Students should color the map features correctly (blue for lake/river, green for forest, brown for mountain, yellow for desert) and accurately label the corresponding features with the provided words."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:36:22.525Z",
+  "updated_at": "2026-03-11T13:36:22.526Z"
+}

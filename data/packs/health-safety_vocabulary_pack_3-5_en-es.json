@@ -1,0 +1,336 @@
+{
+  "pack_id": "health-safety-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Health & Safety",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Health & Safety Vocabulary Pack",
+  "description": "A vocabulary pack for newcomer ELL students in grades 3-5 focusing on essential health and safety terms, including a mini-book and three worksheets.",
+  "vocabulary": [
+    {
+      "en": "Hygiene",
+      "l2": "Higiene",
+      "image_prompt": "A child washing hands thoroughly with soap and water."
+    },
+    {
+      "en": "Germs",
+      "l2": "Gérmenes",
+      "image_prompt": "Small, cartoon-like microscopic organisms floating in the air or on surfaces."
+    },
+    {
+      "en": "Injury",
+      "l2": "Lesión",
+      "image_prompt": "A child with a scraped knee or a small cut, looking slightly hurt."
+    },
+    {
+      "en": "First Aid",
+      "l2": "Primeros Auxilios",
+      "image_prompt": "A red cross symbol on a white box, with a bandage and antiseptic wipe nearby."
+    },
+    {
+      "en": "Emergency",
+      "l2": "Emergencia",
+      "image_prompt": "An ambulance with flashing lights and a siren, or a fire truck."
+    },
+    {
+      "en": "Helmet",
+      "l2": "Casco",
+      "image_prompt": "A child wearing a protective helmet while riding a bicycle."
+    },
+    {
+      "en": "Seatbelt",
+      "l2": "Cinturón de seguridad",
+      "image_prompt": "A child buckled safely into a car seat with a seatbelt across their chest."
+    },
+    {
+      "en": "Stranger",
+      "l2": "Extraño",
+      "image_prompt": "An unfamiliar adult face with a question mark or a 'no' symbol indicating caution."
+    },
+    {
+      "en": "Medication",
+      "l2": "Medicamento",
+      "image_prompt": "Pills in a child-proof bottle and a spoon with liquid medicine, handled by an adult."
+    },
+    {
+      "en": "Allergy",
+      "l2": "Alergia",
+      "image_prompt": "A child sneezing near a cat, or a food item (like peanuts) with a 'no eating' symbol."
+    },
+    {
+      "en": "Nutrition",
+      "l2": "Nutrición",
+      "image_prompt": "A plate filled with a variety of healthy foods: fruits, vegetables, and whole grains."
+    },
+    {
+      "en": "Exercise",
+      "l2": "Ejercicio",
+      "image_prompt": "Children running, jumping, or playing active games outdoors."
+    },
+    {
+      "en": "Safety Rules",
+      "l2": "Reglas de seguridad",
+      "image_prompt": "A poster with simple icons representing safety rules, like 'Stop, Look, Listen' or 'Walk, Don't Run'."
+    },
+    {
+      "en": "Report",
+      "l2": "Reportar/Informar",
+      "image_prompt": "A child speaking to a trusted adult (teacher or parent) about a problem or concern."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-matching-1",
+      "instructions_en": "Match the English word to its correct definition.",
+      "instructions_l2": "Une la palabra en inglés con su definición correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Hygiene",
+          "content_l2": "Higiene",
+          "options_en": [
+            "Tiny living things that can make you sick.",
+            "Practices to stay clean and healthy.",
+            "A hard hat worn for protection.",
+            "A serious situation needing immediate action.",
+            "The process of getting food necessary for health and growth."
+          ],
+          "options_l2": [
+            "Pequeños seres vivos que pueden enfermarte.",
+            "Prácticas para mantenerse limpio y saludable.",
+            "Un casco duro que se usa para protegerse.",
+            "Una situación grave que requiere acción inmediata.",
+            "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
+          ]
+        },
+        {
+          "id": "2",
+          "content": "Germs",
+          "content_l2": "Gérmenes",
+          "options_en": [
+            "Tiny living things that can make you sick.",
+            "Practices to stay clean and healthy.",
+            "A hard hat worn for protection.",
+            "A serious situation needing immediate action.",
+            "The process of getting food necessary for health and growth."
+          ],
+          "options_l2": [
+            "Pequeños seres vivos que pueden enfermarte.",
+            "Prácticas para mantenerse limpio y saludable.",
+            "Un casco duro que se usa para protegerse.",
+            "Una situación grave que requiere acción inmediata.",
+            "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
+          ]
+        },
+        {
+          "id": "3",
+          "content": "Emergency",
+          "content_l2": "Emergencia",
+          "options_en": [
+            "Tiny living things that can make you sick.",
+            "Practices to stay clean and healthy.",
+            "A hard hat worn for protection.",
+            "A serious situation needing immediate action.",
+            "The process of getting food necessary for health and growth."
+          ],
+          "options_l2": [
+            "Pequeños seres vivos que pueden enfermarte.",
+            "Prácticas para mantenerse limpio y saludable.",
+            "Un casco duro que se usa para protegerse.",
+            "Una situación grave que requiere acción inmediata.",
+            "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
+          ]
+        },
+        {
+          "id": "4",
+          "content": "Helmet",
+          "content_l2": "Casco",
+          "options_en": [
+            "Tiny living things that can make you sick.",
+            "Practices to stay clean and healthy.",
+            "A hard hat worn for protection.",
+            "A serious situation needing immediate action.",
+            "The process of getting food necessary for health and growth."
+          ],
+          "options_l2": [
+            "Pequeños seres vivos que pueden enfermarte.",
+            "Prácticas para mantenerse limpio y saludable.",
+            "Un casco duro que se usa para protegerse.",
+            "Una situación grave que requiere acción inmediata.",
+            "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
+          ]
+        },
+        {
+          "id": "5",
+          "content": "Nutrition",
+          "content_l2": "Nutrición",
+          "options_en": [
+            "Tiny living things that can make you sick.",
+            "Practices to stay clean and healthy.",
+            "A hard hat worn for protection.",
+            "A serious situation needing immediate action.",
+            "The process of getting food necessary for health and growth."
+          ],
+          "options_l2": [
+            "Pequeños seres vivos que pueden enfermarte.",
+            "Prácticas para mantenerse limpio y saludable.",
+            "Un casco duro que se usa para protegerse.",
+            "Una situación grave que requiere acción inmediata.",
+            "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-tracing-1",
+      "instructions_en": "Trace the health and safety words.",
+      "instructions_l2": "Traza las palabras de salud y seguridad.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Hygiene",
+          "content_l2": "Higiene"
+        },
+        {
+          "id": "2",
+          "content": "Seatbelt",
+          "content_l2": "Cinturón de seguridad"
+        },
+        {
+          "id": "3",
+          "content": "First Aid",
+          "content_l2": "Primeros Auxilios"
+        },
+        {
+          "id": "4",
+          "content": "Exercise",
+          "content_l2": "Ejercicio"
+        },
+        {
+          "id": "5",
+          "content": "Report",
+          "content_l2": "Reportar"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-coloring-1",
+      "instructions_en": "Color the pictures that show good health and safety practices.",
+      "instructions_l2": "Colorea los dibujos que muestran buenas prácticas de salud y seguridad.",
+      "items": [
+        {
+          "id": "1",
+          "content": "A child washing hands with soap.",
+          "content_l2": "Un niño lavándose las manos con jabón.",
+          "image_prompt": "A child actively washing hands."
+        },
+        {
+          "id": "2",
+          "content": "A child wearing a helmet while riding a scooter.",
+          "content_l2": "Un niño usando un casco mientras monta un patinete.",
+          "image_prompt": "A child with a helmet on a scooter."
+        },
+        {
+          "id": "3",
+          "content": "A plate with fruits and vegetables.",
+          "content_l2": "Un plato con frutas y verduras.",
+          "image_prompt": "A colorful plate of healthy food."
+        },
+        {
+          "id": "4",
+          "content": "A child talking to a teacher about a problem.",
+          "content_l2": "Un niño hablando con un maestro sobre un problema.",
+          "image_prompt": "A child speaking to a kind teacher."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Staying Healthy and Safe / Manteniéndonos Sanos y Seguros",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Staying Healthy and Safe",
+        "text_l2": "Manteniéndonos Sanos y Seguros"
+      },
+      {
+        "page_number": 2,
+        "text_en": "We learn about Health and Safety to keep ourselves and others well. It's important to know how to take care of our bodies and stay safe in different places.",
+        "text_l2": "Aprendemos sobre Salud y Seguridad para mantenernos bien a nosotros y a los demás. Es importante saber cómo cuidar nuestros cuerpos y mantenernos seguros en diferentes lugares."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Good **Hygiene**, like washing hands often, helps stop **Germs** from spreading. Cover your mouth when you cough or sneeze!",
+        "text_l2": "Una buena **Higiene**, como lavarse las manos a menudo, ayuda a evitar que los **Gérmenes** se propaguen. ¡Cúbrete la boca al toser o estornudar!"
+      },
+      {
+        "page_number": 4,
+        "text_en": "If you get an **Injury**, like a scraped knee, tell an adult right away. They can help with **First Aid** to clean and cover the wound.",
+        "text_l2": "Si te haces una **Lesión**, como una raspadura en la rodilla, díselo a un adulto de inmediato. Ellos pueden ayudar con los **Primeros Auxilios** para limpiar y cubrir la herida."
+      },
+      {
+        "page_number": 5,
+        "text_en": "In an **Emergency**, like a fire or someone needing help, know who to call. Always wear a **Helmet** when riding a bike and a **Seatbelt** in the car.",
+        "text_l2": "En una **Emergencia**, como un incendio o alguien que necesita ayuda, sabe a quién llamar. Siempre usa un **Casco** al andar en bicicleta y un **Cinturón de seguridad** en el auto."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Never talk to or go with a **Stranger**. Only take **Medication** from a trusted adult, and tell them if you have an **Allergy** to certain foods or medicines.",
+        "text_l2": "Nunca hables ni vayas con un **Extraño**. Solo toma **Medicamentos** de un adulto de confianza, y diles si tienes una **Alergia** a ciertos alimentos o medicinas."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Eat healthy foods for good **Nutrition** and get plenty of **Exercise** every day. This keeps your body strong and healthy.",
+        "text_l2": "Come alimentos saludables para una buena **Nutrición** y haz mucho **Ejercicio** todos los días. Esto mantiene tu cuerpo fuerte y saludable."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Always follow **Safety Rules** at school, home, and outside. If you see something unsafe or someone needs help, always **Report** it to a trusted adult.",
+        "text_l2": "Siempre sigue las **Reglas de seguridad** en la escuela, en casa y afuera. Si ves algo inseguro o alguien necesita ayuda, siempre **Reporta**lo a un adulto de confianza."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and use basic health and safety vocabulary in English and Spanish, and understand their importance in daily life.",
+    "suggested_use": "Introduce vocabulary using flashcards and realia. Read the mini-book aloud, then encourage students to read along or in small groups. Use worksheets for independent practice, reinforcement, and informal assessment. Facilitate discussions about personal safety and healthy habits.",
+    "materials_needed": [
+      "Flashcards of vocabulary words with images",
+      "Markers or crayons for coloring worksheet",
+      "Scissors and glue for mini-book assembly",
+      "Chart paper or whiteboard for brainstorming and sentence building",
+      "Optional: Real-life examples of safety items (e.g., small helmet, first aid kit)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide picture-to-word matching activities. Pair students with stronger English speakers. Allow students to draw their answers or use gestures. Pre-teach challenging vocabulary in smaller groups.",
+      "**Challenge:** Encourage students to write sentences or short paragraphs using the new vocabulary. Have them create their own 'Safety Rules' poster or role-play a scenario where they need to report an emergency or injury."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-matching-1",
+      "answers": {
+        "1": "Practices to stay clean and healthy. (Prácticas para mantenerse limpio y saludable.)",
+        "2": "Tiny living things that can make you sick. (Pequeños seres vivos que pueden enfermarte.)",
+        "3": "A serious situation needing immediate action. (Una situación grave que requiere acción inmediata.)",
+        "4": "A hard hat worn for protection. (Un casco duro que se usa para protegerse.)",
+        "5": "The process of getting food necessary for health and growth. (El proceso de obtener alimentos necesarios para la salud y el crecimiento.)"
+      }
+    },
+    {
+      "worksheet_id": "ws-tracing-1",
+      "answers": "No specific answer key needed for tracing; completion indicates success."
+    },
+    {
+      "worksheet_id": "ws-coloring-1",
+      "answers": "All four images (child washing hands, child with helmet, plate with healthy food, child talking to teacher) should be colored as they represent positive health and safety practices."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-04-23T10:00:00Z",
+  "updated_at": "2024-04-23T10:00:00Z"
+}

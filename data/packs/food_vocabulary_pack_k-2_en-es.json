@@ -1,0 +1,324 @@
+{
+  "pack_id": "food-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Food",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Favorite Foods! (Mis Comidas Favoritas!)",
+  "description": "A vocabulary pack designed for K-2 ELL newcomer students to learn basic food items in English and Spanish, featuring engaging visuals, tracing activities, and a simple mini-book.",
+  "vocabulary": [
+    {
+      "en": "apple",
+      "l2": "manzana",
+      "image_prompt": "A red apple with a green leaf"
+    },
+    {
+      "en": "banana",
+      "l2": "plátano",
+      "image_prompt": "A yellow peeled banana"
+    },
+    {
+      "en": "milk",
+      "l2": "leche",
+      "image_prompt": "A glass of white milk"
+    },
+    {
+      "en": "bread",
+      "l2": "pan",
+      "image_prompt": "A slice of brown bread"
+    },
+    {
+      "en": "cheese",
+      "l2": "queso",
+      "image_prompt": "A yellow block of cheese"
+    },
+    {
+      "en": "egg",
+      "l2": "huevo",
+      "image_prompt": "A white egg in an egg carton"
+    },
+    {
+      "en": "carrot",
+      "l2": "zanahoria",
+      "image_prompt": "An orange carrot with green leaves"
+    },
+    {
+      "en": "water",
+      "l2": "agua",
+      "image_prompt": "A clear glass of water"
+    },
+    {
+      "en": "chicken",
+      "l2": "pollo",
+      "image_prompt": "A cooked chicken drumstick"
+    },
+    {
+      "en": "fish",
+      "l2": "pescado",
+      "image_prompt": "A simple blue fish"
+    },
+    {
+      "en": "rice",
+      "l2": "arroz",
+      "image_prompt": "A bowl of white rice"
+    },
+    {
+      "en": "pizza",
+      "l2": "pizza",
+      "image_prompt": "A slice of pepperoni pizza"
+    },
+    {
+      "en": "juice",
+      "l2": "jugo",
+      "image_prompt": "A glass of orange juice"
+    },
+    {
+      "en": "cookie",
+      "l2": "galleta",
+      "image_prompt": "A chocolate chip cookie"
+    },
+    {
+      "en": "orange",
+      "l2": "naranja",
+      "image_prompt": "A whole orange fruit"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-1",
+      "instructions_en": "Match the food word to its picture. Draw a line from the word to the correct picture.",
+      "instructions_l2": "Une la palabra de comida con su dibujo. Dibuja una línea desde la palabra hasta el dibujo correcto.",
+      "items": [
+        {
+          "id": "1",
+          "content": "apple",
+          "image_prompt": "A red apple"
+        },
+        {
+          "id": "2",
+          "content": "milk",
+          "image_prompt": "A glass of milk"
+        },
+        {
+          "id": "3",
+          "content": "bread",
+          "image_prompt": "A slice of bread"
+        },
+        {
+          "id": "4",
+          "content": "carrot",
+          "image_prompt": "An orange carrot"
+        },
+        {
+          "id": "5",
+          "content": "chicken",
+          "image_prompt": "A cooked chicken leg"
+        },
+        {
+          "id": "6",
+          "content": "pizza",
+          "image_prompt": "A slice of pizza"
+        },
+        {
+          "id": "7",
+          "content": "cookie",
+          "image_prompt": "A chocolate chip cookie"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-2",
+      "instructions_en": "Trace the food words. Say the word as you trace it.",
+      "instructions_l2": "Traza las palabras de comida. Di la palabra mientras la trazas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "banana",
+          "image_prompt": "A yellow banana"
+        },
+        {
+          "id": "2",
+          "content": "cheese",
+          "image_prompt": "A block of cheese"
+        },
+        {
+          "id": "3",
+          "content": "egg",
+          "image_prompt": "A white egg"
+        },
+        {
+          "id": "4",
+          "content": "water",
+          "image_prompt": "A glass of water"
+        },
+        {
+          "id": "5",
+          "content": "fish",
+          "image_prompt": "A cartoon fish"
+        },
+        {
+          "id": "6",
+          "content": "rice",
+          "image_prompt": "A bowl of rice"
+        },
+        {
+          "id": "7",
+          "content": "juice",
+          "image_prompt": "A glass of juice"
+        },
+        {
+          "id": "8",
+          "content": "orange",
+          "image_prompt": "An orange fruit"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-3",
+      "instructions_en": "Color the pictures. Then trace the word below each picture.",
+      "instructions_l2": "Colorea los dibujos. Luego traza la palabra debajo de cada dibujo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "apple",
+          "image_prompt": "Outline of an apple"
+        },
+        {
+          "id": "2",
+          "content": "banana",
+          "image_prompt": "Outline of a banana"
+        },
+        {
+          "id": "3",
+          "content": "milk",
+          "image_prompt": "Outline of a milk carton"
+        },
+        {
+          "id": "4",
+          "content": "bread",
+          "image_prompt": "Outline of a loaf of bread"
+        },
+        {
+          "id": "5",
+          "content": "pizza",
+          "image_prompt": "Outline of a pizza slice"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "I Like Food! (¡Me Gusta la Comida!)",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "I like food!",
+        "text_l2": "¡Me gusta la comida!",
+        "image_prompt": "A happy child sitting at a table with various foods in front of them."
+      },
+      {
+        "page_number": 2,
+        "text_en": "I like apples.",
+        "text_l2": "Me gustan las manzanas.",
+        "image_prompt": "A child holding a red apple."
+      },
+      {
+        "page_number": 3,
+        "text_en": "I like bananas.",
+        "text_l2": "Me gustan los plátanos.",
+        "image_prompt": "A child eating a banana."
+      },
+      {
+        "page_number": 4,
+        "text_en": "I like bread.",
+        "text_l2": "Me gusta el pan.",
+        "image_prompt": "A child holding a slice of bread."
+      },
+      {
+        "page_number": 5,
+        "text_en": "I like chicken.",
+        "text_l2": "Me gusta el pollo.",
+        "image_prompt": "A child eating a chicken drumstick."
+      },
+      {
+        "page_number": 6,
+        "text_en": "I like water.",
+        "text_l2": "Me gusta el agua.",
+        "image_prompt": "A child drinking from a glass of water."
+      },
+      {
+        "page_number": 7,
+        "text_en": "I like juice.",
+        "text_l2": "Me gusta el jugo.",
+        "image_prompt": "A child holding a glass of orange juice."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Yummy food!",
+        "text_l2": "¡Comida rica!",
+        "image_prompt": "A smiling child with a full plate of various healthy foods."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name 15 common food items in English, understand their Spanish equivalents, and use simple sentences to express preferences.",
+    "suggested_use": "Introduce vocabulary using flashcards and realia. Use the mini-book for shared reading and repeated exposure. Worksheets can be used for independent practice, small group work, or as homework. Encourage students to point to pictures and repeat words. Integrate into daily routines (e.g., during snack time).",
+    "materials_needed": [
+      "Printed vocabulary cards (for each food item)",
+      "Real food items or toy food (if available)",
+      "Crayons/markers",
+      "Pencils",
+      "Scissors (for mini-book assembly)",
+      "Glue sticks (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**For beginners:** Focus on 5-7 core words. Provide heavy visual support and model pronunciation repeatedly. Use total physical response (TPR) activities.",
+      "**For developing learners:** Encourage students to use the words in simple sentences (e.g., 'I like apples.'). Have them identify foods by color or category (e.g., 'fruit').",
+      "**For advanced learners:** Challenge them to describe the foods (e.g., 'The apple is red and sweet.'). Introduce new related vocabulary (e.g., 'breakfast', 'lunch', 'dinner'). Ask them to draw their favorite food and label it."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "apple (match to apple picture)",
+        "2": "milk (match to milk picture)",
+        "3": "bread (match to bread picture)",
+        "4": "carrot (match to carrot picture)",
+        "5": "chicken (match to chicken picture)",
+        "6": "pizza (match to pizza picture)",
+        "7": "cookie (match to cookie picture)"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "Students trace 'banana'",
+        "2": "Students trace 'cheese'",
+        "3": "Students trace 'egg'",
+        "4": "Students trace 'water'",
+        "5": "Students trace 'fish'",
+        "6": "Students trace 'rice'",
+        "7": "Students trace 'juice'",
+        "8": "Students trace 'orange'"
+      }
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "Students color the apple and trace 'apple'",
+        "2": "Students color the banana and trace 'banana'",
+        "3": "Students color the milk carton and trace 'milk'",
+        "4": "Students color the loaf of bread and trace 'bread'",
+        "5": "Students color the pizza slice and trace 'pizza'"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.503Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

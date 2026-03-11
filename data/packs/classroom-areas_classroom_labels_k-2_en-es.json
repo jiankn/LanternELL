@@ -1,0 +1,158 @@
+{
+  "pack_id": "classroom-areas-k2-en-es-001",
+  "pack_type": "classroom_labels",
+  "topic": "Classroom Areas",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Bilingual Classroom Area Labels, Routines & Rules (K-2)",
+  "description": "A set of bilingual (English-Spanish) labels for common classroom areas, essential visual routine cards, and classroom rules, designed for Kindergarten to 2nd-grade students, particularly supporting English Language Learners (ELLs).",
+  "labels": [
+    {
+      "en": "Reading Corner",
+      "l2": "Rincón de Lectura",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Art Center",
+      "l2": "Centro de Arte",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Math Station",
+      "l2": "Estación de Matemáticas",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Science Area",
+      "l2": "Área de Ciencias",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Block Area",
+      "l2": "Área de Bloques",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Quiet Zone",
+      "l2": "Zona Tranquila",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Carpet Area",
+      "l2": "Área de la Alfombra",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Teacher's Desk",
+      "l2": "Escritorio del Maestro/a",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Calendar Area",
+      "l2": "Área del Calendario",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    },
+    {
+      "en": "Door",
+      "l2": "Puerta",
+      "category": "areas",
+      "size": "full",
+      "plural_form": ""
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Morning Arrival",
+      "routine_l2": "Llegada por la Mañana",
+      "time_of_day": "morning",
+      "icon_prompt": "child entering classroom, backpack, smiling"
+    },
+    {
+      "routine_en": "Lunch Time",
+      "routine_l2": "Hora del Almuerzo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child eating sandwich, lunchbox, apple"
+    },
+    {
+      "routine_en": "Restroom Break",
+      "routine_l2": "Descanso para el Baño",
+      "time_of_day": "any",
+      "icon_prompt": "restroom door symbol, child washing hands"
+    },
+    {
+      "routine_en": "Circle Time",
+      "routine_l2": "Círculo de Conversación",
+      "time_of_day": "morning",
+      "icon_prompt": "children sitting in a circle on a rug, teacher reading a book"
+    },
+    {
+      "routine_en": "Dismissal",
+      "routine_l2": "Salida",
+      "time_of_day": "dismissal",
+      "icon_prompt": "child waving goodbye, school bus, clock showing end of day"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Be Kind",
+      "rule_l2": "Sé Amable",
+      "icon_prompt": "two children sharing, smiling"
+    },
+    {
+      "rule_en": "Listen Actively",
+      "rule_l2": "Escucha Atentamente",
+      "icon_prompt": "child with hand cupped to ear, paying attention"
+    },
+    {
+      "rule_en": "Raise Your Hand",
+      "rule_l2": "Levanta la Mano",
+      "icon_prompt": "child with hand raised in classroom setting"
+    },
+    {
+      "rule_en": "Walk Safely",
+      "rule_l2": "Camina con Cuidado",
+      "icon_prompt": "child walking in a line, footprints"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To create a language-rich and organized classroom environment that supports K-2 ELLs in understanding classroom areas, daily routines, and behavioral expectations through visual and bilingual aids.",
+    "suggested_use": "Print and laminate all labels, routine cards, and rules for durability. Place full-size area labels prominently on walls or doors of designated zones. Use routine cards on a visible schedule board, reviewing them daily. Display classroom rules in a central location and refer to them regularly during class discussions.",
+    "materials_needed": [
+      "Printer",
+      "Cardstock or heavy paper",
+      "Laminator and laminating pouches",
+      "Scissors",
+      "Tape, sticky tack, or velcro dots for display"
+    ],
+    "differentiation_tips": [
+      "For newcomers, pair labels with realia or gestures when introducing them.",
+      "Encourage students to echo the English and Spanish words for each label.",
+      "Have students help place labels in the correct areas as a collaborative activity.",
+      "Use routine cards to sequence events before they happen, giving students a visual preview.",
+      "Incorporate the rules into role-playing scenarios to demonstrate appropriate behavior."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00Z",
+  "updated_at": "2024-07-30T10:00:00Z"
+}

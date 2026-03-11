@@ -1,0 +1,169 @@
+{
+  "pack_id": "K2-Feelings-EN-ES-001",
+  "pack_type": "sentence_frames",
+  "topic": "Expressing Feelings",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Feelings: K-2 Sentence Frames (English-Spanish)",
+  "description": "A set of simple sentence frames designed for K-2 ELL newcomer students to express basic feelings in English and Spanish, promoting classroom communication.",
+  "sentence_frames": [
+    {
+      "frame": "I am happy.",
+      "translation": "Estoy feliz."
+    },
+    {
+      "frame": "I feel sad.",
+      "translation": "Me siento triste."
+    },
+    {
+      "frame": "I am mad.",
+      "translation": "Estoy enojado/a."
+    },
+    {
+      "frame": "I feel scared.",
+      "translation": "Me siento asustado/a."
+    },
+    {
+      "frame": "I am excited.",
+      "translation": "Estoy emocionado/a."
+    },
+    {
+      "frame": "I feel tired.",
+      "translation": "Me siento cansado/a."
+    },
+    {
+      "frame": "I am hungry.",
+      "translation": "Tengo hambre."
+    },
+    {
+      "frame": "I feel shy.",
+      "translation": "Me siento tímido/a."
+    },
+    {
+      "frame": "Are you okay?",
+      "translation": "¿Estás bien?"
+    },
+    {
+      "frame": "How do you feel?",
+      "translation": "¿Cómo te sientes?"
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "How do you feel?",
+      "speaker_b_en": "I am happy!",
+      "speaker_a_l2": "¿Cómo te sientes?",
+      "speaker_b_l2": "¡Estoy feliz!",
+      "context": "A friend looks happy."
+    },
+    {
+      "speaker_a_en": "Are you okay?",
+      "speaker_b_en": "I feel sad.",
+      "speaker_a_l2": "¿Estás bien?",
+      "speaker_b_l2": "Me siento triste.",
+      "context": "A friend looks sad."
+    },
+    {
+      "speaker_a_en": "How do you feel?",
+      "speaker_b_en": "I am mad.",
+      "speaker_a_l2": "¿Cómo te sientes?",
+      "speaker_b_l2": "Estoy enojado/a.",
+      "context": "A friend looks angry."
+    },
+    {
+      "speaker_a_en": "Are you okay?",
+      "speaker_b_en": "I feel tired.",
+      "speaker_a_l2": "¿Estás bien?",
+      "speaker_b_l2": "Me siento cansado/a.",
+      "context": "A friend looks sleepy."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "How do you feel?",
+      "prompt_l2": "¿Cómo te sientes?",
+      "expected_response": "I am happy.",
+      "visual_cue": "Picture of a happy face / 😊"
+    },
+    {
+      "prompt_en": "How do you feel?",
+      "prompt_l2": "¿Cómo te sientes?",
+      "expected_response": "I feel sad.",
+      "visual_cue": "Picture of a sad face / 😔"
+    },
+    {
+      "prompt_en": "How do you feel?",
+      "prompt_l2": "¿Cómo te sientes?",
+      "expected_response": "I am mad.",
+      "visual_cue": "Picture of an angry face / 😡"
+    },
+    {
+      "prompt_en": "How do you feel?",
+      "prompt_l2": "¿Cómo te sientes?",
+      "expected_response": "I feel scared.",
+      "visual_cue": "Picture of a scared face / 😨"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Draw a picture of how you feel today. Then complete the sentence below.",
+      "instructions_l2": "Dibuja cómo te sientes hoy. Luego completa la oración de abajo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "I feel ____________________.",
+          "correct_answer": "Student's choice of feeling word and drawing."
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Look at the picture. Complete the sentence with the correct feeling word. (Word bank: happy, sad, mad, tired)",
+      "instructions_l2": "Mira la imagen. Completa la oración con la palabra correcta para la emoción. (Banco de palabras: feliz, triste, enojado/a, cansado/a)",
+      "items": [
+        {
+          "id": "1",
+          "content": "I am __________. (Visual cue: happy child)",
+          "correct_answer": "happy"
+        },
+        {
+          "id": "2",
+          "content": "I feel __________. (Visual cue: sad child)",
+          "correct_answer": "sad"
+        },
+        {
+          "id": "3",
+          "content": "I am __________. (Visual cue: mad child)",
+          "correct_answer": "mad"
+        },
+        {
+          "id": "4",
+          "content": "I feel __________. (Visual cue: tired child)",
+          "correct_answer": "tired"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to identify and express basic feelings (happy, sad, mad, scared, excited, tired, hungry, shy) using simple 3-5 word sentence frames in English and Spanish.",
+    "suggested_use": "Introduce one or two frames daily. Use feelings flashcards for visual support. Model sentences repeatedly. Incorporate into daily 'check-in' routines or morning meetings. Encourage students to use frames during social interactions. Role-play different scenarios where feelings might be expressed.",
+    "materials_needed": [
+      "Feelings flashcards (pictures of faces expressing emotions)",
+      "Whiteboard or chart paper",
+      "Markers",
+      "Student journals or blank paper for drawing/writing",
+      "Printouts of dialogue strips and worksheets"
+    ],
+    "differentiation_tips": [
+      "For emergent learners: Provide only 2-3 choices for fill-in-the-blank. Allow pointing to pictures instead of speaking. Focus on 'I am happy' and 'I feel sad' first.",
+      "For developing learners: Encourage full sentence responses. Pair with a more proficient peer for dialogue practice. Use the frames to describe characters in stories.",
+      "For advanced learners: Encourage adding 'because...' to explain feelings (e.g., 'I am happy because...'). Introduce more complex feeling words as appropriate."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2023-10-27T10:00:00Z",
+  "updated_at": "2023-10-27T10:00:00Z"
+}

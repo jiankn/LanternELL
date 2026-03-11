@@ -1,0 +1,321 @@
+{
+  "pack_id": "classroom-objects-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Classroom Objects",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Classroom: Objects Vocabulary Pack (K-2 ELL)",
+  "description": "A comprehensive vocabulary pack designed for K-2 ELL newcomers to learn and practice common classroom objects in English and Spanish. Includes vocabulary cards, a mini-book, and three engaging worksheets.",
+  "vocabulary": [
+    {
+      "en": "pencil",
+      "l2": "lápiz",
+      "image_prompt": "A yellow pencil with a pink eraser on top."
+    },
+    {
+      "en": "book",
+      "l2": "libro",
+      "image_prompt": "An open book with colorful illustrations."
+    },
+    {
+      "en": "chair",
+      "l2": "silla",
+      "image_prompt": "A small classroom chair, blue or green."
+    },
+    {
+      "en": "table",
+      "l2": "mesa",
+      "image_prompt": "A rectangular classroom table with four legs."
+    },
+    {
+      "en": "crayon",
+      "l2": "crayón",
+      "image_prompt": "A single red crayon, peeled slightly."
+    },
+    {
+      "en": "paper",
+      "l2": "papel",
+      "image_prompt": "A stack of white blank papers."
+    },
+    {
+      "en": "scissors",
+      "l2": "tijeras",
+      "image_prompt": "A pair of child-safe scissors with rounded tips and blue handles."
+    },
+    {
+      "en": "glue",
+      "l2": "pegamento",
+      "image_prompt": "A white glue stick."
+    },
+    {
+      "en": "backpack",
+      "l2": "mochila",
+      "image_prompt": "A colorful child's backpack, slightly open."
+    },
+    {
+      "en": "marker",
+      "l2": "marcador",
+      "image_prompt": "A blue felt-tip marker with its cap on."
+    },
+    {
+      "en": "eraser",
+      "l2": "borrador",
+      "image_prompt": "A pink rectangular rubber eraser."
+    },
+    {
+      "en": "ruler",
+      "l2": "regla",
+      "image_prompt": "A clear plastic ruler with inch and centimeter markings."
+    },
+    {
+      "en": "whiteboard",
+      "l2": "pizarra",
+      "image_prompt": "A large white board mounted on a classroom wall, with a few scribbles."
+    },
+    {
+      "en": "door",
+      "l2": "puerta",
+      "image_prompt": "A classroom door, slightly ajar, showing a hallway."
+    },
+    {
+      "en": "window",
+      "l2": "ventana",
+      "image_prompt": "A classroom window looking out to a sunny playground."
+    },
+    {
+      "en": "clock",
+      "l2": "reloj",
+      "image_prompt": "A round analog wall clock showing 9:00."
+    },
+    {
+      "en": "desk",
+      "l2": "escritorio",
+      "image_prompt": "A single student desk with a cubby underneath."
+    },
+    {
+      "en": "computer",
+      "l2": "computadora",
+      "image_prompt": "A desktop computer with a monitor, keyboard, and mouse."
+    },
+    {
+      "en": "shelf",
+      "l2": "estante",
+      "image_prompt": "A wooden classroom shelf with a few books and toys."
+    },
+    {
+      "en": "folder",
+      "l2": "carpeta",
+      "image_prompt": "A bright yellow plastic folder, closed."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line from the English word to its matching picture.",
+      "instructions_l2": "Dibuja una línea de la palabra en inglés a su imagen correspondiente.",
+      "items": [
+        {
+          "id": "1",
+          "content": "pencil",
+          "content_l2": "lápiz",
+          "image_prompt": "A yellow pencil."
+        },
+        {
+          "id": "2",
+          "content": "book",
+          "content_l2": "libro",
+          "image_prompt": "A closed red book."
+        },
+        {
+          "id": "3",
+          "content": "chair",
+          "content_l2": "silla",
+          "image_prompt": "A blue classroom chair."
+        },
+        {
+          "id": "4",
+          "content": "table",
+          "content_l2": "mesa",
+          "image_prompt": "A small green table."
+        },
+        {
+          "id": "5",
+          "content": "crayon",
+          "content_l2": "crayón",
+          "image_prompt": "A purple crayon."
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the words below. Then say the word.",
+      "instructions_l2": "Traza las palabras de abajo. Luego di la palabra.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Pencil",
+          "content_l2": "Lápiz",
+          "image_prompt": "A simple drawing of a pencil."
+        },
+        {
+          "id": "2",
+          "content": "Book",
+          "content_l2": "Libro",
+          "image_prompt": "A simple drawing of a book."
+        },
+        {
+          "id": "3",
+          "content": "Chair",
+          "content_l2": "Silla",
+          "image_prompt": "A simple drawing of a chair."
+        },
+        {
+          "id": "4",
+          "content": "Table",
+          "content_l2": "Mesa",
+          "image_prompt": "A simple drawing of a table."
+        },
+        {
+          "id": "5",
+          "content": "Crayon",
+          "content_l2": "Crayón",
+          "image_prompt": "A simple drawing of a crayon."
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the classroom objects. Say their names in English and Spanish.",
+      "instructions_l2": "Colorea los objetos del salón de clases. Di sus nombres en inglés y español.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Scissors",
+          "content_l2": "Tijeras",
+          "image_prompt": "An outline drawing of child-safe scissors."
+        },
+        {
+          "id": "2",
+          "content": "Glue",
+          "content_l2": "Pegamento",
+          "image_prompt": "An outline drawing of a glue stick."
+        },
+        {
+          "id": "3",
+          "content": "Backpack",
+          "content_l2": "Mochila",
+          "image_prompt": "An outline drawing of a child's backpack."
+        },
+        {
+          "id": "4",
+          "content": "Marker",
+          "content_l2": "Marcador",
+          "image_prompt": "An outline drawing of a marker."
+        },
+        {
+          "id": "5",
+          "content": "Eraser",
+          "content_l2": "Borrador",
+          "image_prompt": "An outline drawing of an eraser."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Classroom / Mi Salón de Clases",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Classroom",
+        "text_l2": "Mi Salón de Clases"
+      },
+      {
+        "page_number": 2,
+        "text_en": "This is my classroom. It is big!",
+        "text_l2": "Este es mi salón de clases. ¡Es grande!"
+      },
+      {
+        "page_number": 3,
+        "text_en": "I see a pencil. I use my pencil to write.",
+        "text_l2": "Veo un lápiz. Uso mi lápiz para escribir."
+      },
+      {
+        "page_number": 4,
+        "text_en": "I see a book. I like to read books.",
+        "text_l2": "Veo un libro. Me gusta leer libros."
+      },
+      {
+        "page_number": 5,
+        "text_en": "I see a chair. I sit on my chair.",
+        "text_l2": "Veo una silla. Me siento en mi silla."
+      },
+      {
+        "page_number": 6,
+        "text_en": "I see a table. I work at my table.",
+        "text_l2": "Veo una mesa. Trabajo en mi mesa."
+      },
+      {
+        "page_number": 7,
+        "text_en": "I see crayons. I color with crayons.",
+        "text_l2": "Veo crayones. Coloreo con crayones."
+      },
+      {
+        "page_number": 8,
+        "text_en": "My classroom has many things! What do you see?",
+        "text_l2": "¡Mi salón de clases tiene muchas cosas! ¿Qué ves tú?"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name at least 15 common classroom objects in English and Spanish. Students will use new vocabulary in simple sentences.",
+    "suggested_use": "Introduce vocabulary using flashcards and realia. Use the mini-book for shared reading and repeated practice. Worksheets can be completed independently or in small groups. Encourage students to point to and name objects in the classroom.",
+    "materials_needed": [
+      "Flashcards of classroom objects (included vocabulary)",
+      "Real classroom objects (pencil, book, chair, etc.)",
+      "Crayons, markers, or colored pencils",
+      "Pencils for tracing and writing",
+      "Glue sticks for optional extension activities (e.g., cut and paste)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide sentence frames (e.g., 'It's a ___.', 'I see a ___ .'), use TPR (Total Physical Response) by having students touch or point to objects, pair students with a stronger English speaker, use visuals extensively.",
+      "**Challenge:** Ask students to describe objects (e.g., 'What color is the pencil?'), use objects in a sentence, identify objects by their function (e.g., 'What do we use to cut paper?'), create their own mini-book page."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "pencil (to image of pencil)",
+        "2": "book (to image of book)",
+        "3": "chair (to image of chair)",
+        "4": "table (to image of table)",
+        "5": "crayon (to image of crayon)"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "Visual check: 'Pencil' traced correctly.",
+        "2": "Visual check: 'Book' traced correctly.",
+        "3": "Visual check: 'Chair' traced correctly.",
+        "4": "Visual check: 'Table' traced correctly.",
+        "5": "Visual check: 'Crayon' traced correctly."
+      }
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "Visual check: Scissors colored appropriately.",
+        "2": "Visual check: Glue stick colored appropriately.",
+        "3": "Visual check: Backpack colored appropriately.",
+        "4": "Visual check: Marker colored appropriately.",
+        "5": "Visual check: Eraser colored appropriately."
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:11:47.973Z",
+  "updated_at": "2026-03-11T13:11:47.975Z"
+}

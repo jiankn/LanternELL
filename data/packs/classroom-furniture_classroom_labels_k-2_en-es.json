@@ -1,0 +1,193 @@
+{
+  "pack_id": "furniture-k2-en-es-001",
+  "pack_type": "classroom_labels",
+  "topic": "Classroom Furniture",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "K-2 Classroom Furniture Labels (English-Spanish)",
+  "description": "Bilingual labels for common classroom furniture, designed for K-2 ELL newcomers to support language acquisition and classroom orientation.",
+  "labels": [
+    {
+      "en": "Table",
+      "l2": "Mesa",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Tables / Mesas"
+    },
+    {
+      "en": "Chair",
+      "l2": "Silla",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Chairs / Sillas"
+    },
+    {
+      "en": "Desk",
+      "l2": "Escritorio",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Desks / Escritorios"
+    },
+    {
+      "en": "Bookshelf",
+      "l2": "Estante de libros",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Bookshelves / Estantes de libros"
+    },
+    {
+      "en": "Carpet",
+      "l2": "Alfombra",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Carpets / Alfombras"
+    },
+    {
+      "en": "Whiteboard",
+      "l2": "Pizarra",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Whiteboards / Pizarras"
+    },
+    {
+      "en": "Door",
+      "l2": "Puerta",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Doors / Puertas"
+    },
+    {
+      "en": "Window",
+      "l2": "Ventana",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Windows / Ventanas"
+    },
+    {
+      "en": "Cubby",
+      "l2": "Casillero",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Cubbies / Casilleros"
+    },
+    {
+      "en": "Teacher's Desk",
+      "l2": "Escritorio del maestro",
+      "category": "furniture",
+      "size": "full",
+      "plural_form": "Teacher's Desks / Escritorios de los maestros"
+    },
+    {
+      "en": "Storage Bin",
+      "l2": "Contenedor de almacenamiento",
+      "category": "furniture",
+      "size": "small",
+      "plural_form": "Storage Bins / Contenedores de almacenamiento"
+    },
+    {
+      "en": "Stool",
+      "l2": "Taburete",
+      "category": "furniture",
+      "size": "small",
+      "plural_form": "Stools / Taburetes"
+    },
+    {
+      "en": "Cushion",
+      "l2": "Cojín",
+      "category": "furniture",
+      "size": "small",
+      "plural_form": "Cushions / Cojines"
+    },
+    {
+      "en": "Shelf",
+      "l2": "Estante",
+      "category": "furniture",
+      "size": "small",
+      "plural_form": "Shelves / Estantes"
+    },
+    {
+      "en": "Easel",
+      "l2": "Caballete",
+      "category": "furniture",
+      "size": "small",
+      "plural_form": "Easel / Caballetes"
+    }
+  ],
+  "visual_routine_cards": [
+    {
+      "routine_en": "Morning Arrival",
+      "routine_l2": "Llegada por la mañana",
+      "time_of_day": "morning",
+      "icon_prompt": "child entering classroom, hanging backpack"
+    },
+    {
+      "routine_en": "Circle Time",
+      "routine_l2": "Hora del círculo",
+      "time_of_day": "morning",
+      "icon_prompt": "children sitting in a circle on a rug"
+    },
+    {
+      "routine_en": "Lunch Time",
+      "routine_l2": "Hora del almuerzo",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child eating a sandwich at a table"
+    },
+    {
+      "routine_en": "Quiet Time",
+      "routine_l2": "Tiempo de silencio",
+      "time_of_day": "afternoon",
+      "icon_prompt": "child reading a book quietly on a cushion"
+    },
+    {
+      "routine_en": "Dismissal",
+      "routine_l2": "Salida",
+      "time_of_day": "dismissal",
+      "icon_prompt": "child waving goodbye, leaving school"
+    }
+  ],
+  "classroom_rules": [
+    {
+      "rule_en": "Be Kind",
+      "rule_l2": "Sé amable",
+      "icon_prompt": "two children sharing toys or hugging"
+    },
+    {
+      "rule_en": "Listen Carefully",
+      "rule_l2": "Escucha con atención",
+      "icon_prompt": "child with hand to ear, looking attentive"
+    },
+    {
+      "rule_en": "Raise Your Hand",
+      "rule_l2": "Levanta la mano",
+      "icon_prompt": "child raising hand to speak"
+    },
+    {
+      "rule_en": "Walk Safely",
+      "rule_l2": "Camina con seguridad",
+      "icon_prompt": "child walking in a line, calm steps"
+    }
+  ],
+  "teacher_notes": {
+    "objective": "To support K-2 ELL newcomers in identifying common classroom furniture, understanding daily routines, and adhering to classroom rules through bilingual visual labels.",
+    "suggested_use": "Print full-size labels for larger furniture items and walls. Print small-size labels for bins, smaller furniture pieces, or specific areas. Display visual routine cards in a prominent sequence. Post classroom rules at eye level. Encourage students to point to labels as they interact with items or follow routines.",
+    "materials_needed": [
+      "Printer",
+      "Cardstock",
+      "Laminator",
+      "Scissors",
+      "Adhesive (tape, velcro, glue dots)"
+    ],
+    "differentiation_tips": [
+      "Use gestures and repetition when introducing new labels.",
+      "Create a scavenger hunt for students to find labeled items.",
+      "Pair students for peer support in identifying labels.",
+      "Incorporate labels into daily games or activities (e.g., 'Simon Says' using furniture names).",
+      "Encourage students to use the L1 and L2 terms."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.504Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

@@ -1,0 +1,412 @@
+{
+  "pack_id": "arts-music-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Arts & Music",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Exploring Arts & Music: A Vocabulary Pack for ELLs",
+  "description": "This vocabulary pack introduces key terms related to arts and music for English Language Learners in grades 3-5. It includes 12 vocabulary items, a mini-book, and three engaging worksheets to support language acquisition.",
+  "vocabulary": [
+    {
+      "en": "artist",
+      "l2": "artista",
+      "image_prompt": "A person painting on a canvas with a brush, smiling."
+    },
+    {
+      "en": "musician",
+      "l2": "músico/a",
+      "image_prompt": "A person playing a guitar and singing into a microphone."
+    },
+    {
+      "en": "paint",
+      "l2": "pintar",
+      "image_prompt": "A hand holding a paintbrush, adding blue color to a picture of a sky."
+    },
+    {
+      "en": "draw",
+      "l2": "dibujar",
+      "image_prompt": "A child drawing a house and a tree on paper with crayons."
+    },
+    {
+      "en": "sing",
+      "l2": "cantar",
+      "image_prompt": "A person with an open mouth, musical notes floating around their head."
+    },
+    {
+      "en": "dance",
+      "l2": "bailar",
+      "image_prompt": "Two children moving their bodies to music, one spinning, one jumping."
+    },
+    {
+      "en": "instrument",
+      "l2": "instrumento",
+      "image_prompt": "A collection of musical instruments: a drum, a flute, and a small keyboard."
+    },
+    {
+      "en": "sculpture",
+      "l2": "escultura",
+      "image_prompt": "A clay sculpture of an animal, like a bird or a cat, on a pedestal."
+    },
+    {
+      "en": "melody",
+      "l2": "melodía",
+      "image_prompt": "A curved line of musical notes flowing smoothly across a staff."
+    },
+    {
+      "en": "rhythm",
+      "l2": "ritmo",
+      "image_prompt": "A series of drums and percussion instruments with repeating beat lines."
+    },
+    {
+      "en": "stage",
+      "l2": "escenario",
+      "image_prompt": "An empty performance stage with red curtains and spotlights shining down."
+    },
+    {
+      "en": "audience",
+      "l2": "audiencia",
+      "image_prompt": "A group of diverse people sitting in rows, clapping and watching a performance."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English word to its Spanish translation. Draw a line from the English word to the correct Spanish word.",
+      "instructions_l2": "Empareja la palabra en inglés con su traducción en español. Dibuja una línea desde la palabra en inglés hasta la palabra en español correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "artist",
+          "content_l2": "artista",
+          "correct_answer": "artista"
+        },
+        {
+          "id": "2",
+          "content": "musician",
+          "content_l2": "músico/a",
+          "correct_answer": "músico/a"
+        },
+        {
+          "id": "3",
+          "content": "paint",
+          "content_l2": "pintar",
+          "correct_answer": "pintar"
+        },
+        {
+          "id": "4",
+          "content": "draw",
+          "content_l2": "dibujar",
+          "correct_answer": "dibujar"
+        },
+        {
+          "id": "5",
+          "content": "sing",
+          "content_l2": "cantar",
+          "correct_answer": "cantar"
+        },
+        {
+          "id": "6",
+          "content": "dance",
+          "content_l2": "bailar",
+          "correct_answer": "bailar"
+        },
+        {
+          "id": "7",
+          "content": "instrument",
+          "content_l2": "instrumento",
+          "correct_answer": "instrumento"
+        },
+        {
+          "id": "8",
+          "content": "sculpture",
+          "content_l2": "escultura",
+          "correct_answer": "escultura"
+        },
+        {
+          "id": "9",
+          "content": "melody",
+          "content_l2": "melodía",
+          "correct_answer": "melodía"
+        },
+        {
+          "id": "10",
+          "content": "rhythm",
+          "content_l2": "ritmo",
+          "correct_answer": "ritmo"
+        },
+        {
+          "id": "11",
+          "content": "stage",
+          "content_l2": "escenario",
+          "correct_answer": "escenario"
+        },
+        {
+          "id": "12",
+          "content": "audience",
+          "content_l2": "audiencia",
+          "correct_answer": "audiencia"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the vocabulary word and then write it on the line below. Say the word aloud.",
+      "instructions_l2": "Traza la palabra del vocabulario y luego escríbela en la línea de abajo. Di la palabra en voz alta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "artist",
+          "content_l2": "artista",
+          "correct_answer": "artist"
+        },
+        {
+          "id": "2",
+          "content": "musician",
+          "content_l2": "músico/a",
+          "correct_answer": "musician"
+        },
+        {
+          "id": "3",
+          "content": "paint",
+          "content_l2": "pintar",
+          "correct_answer": "paint"
+        },
+        {
+          "id": "4",
+          "content": "draw",
+          "content_l2": "dibujar",
+          "correct_answer": "draw"
+        },
+        {
+          "id": "5",
+          "content": "sing",
+          "content_l2": "cantar",
+          "correct_answer": "sing"
+        },
+        {
+          "id": "6",
+          "content": "dance",
+          "content_l2": "bailar",
+          "correct_answer": "dance"
+        },
+        {
+          "id": "7",
+          "content": "instrument",
+          "content_l2": "instrumento",
+          "correct_answer": "instrument"
+        },
+        {
+          "id": "8",
+          "content": "sculpture",
+          "content_l2": "escultura",
+          "correct_answer": "sculpture"
+        },
+        {
+          "id": "9",
+          "content": "melody",
+          "content_l2": "melodía",
+          "correct_answer": "melody"
+        },
+        {
+          "id": "10",
+          "content": "rhythm",
+          "content_l2": "ritmo",
+          "correct_answer": "rhythm"
+        },
+        {
+          "id": "11",
+          "content": "stage",
+          "content_l2": "escenario",
+          "correct_answer": "stage"
+        },
+        {
+          "id": "12",
+          "content": "audience",
+          "content_l2": "audiencia",
+          "correct_answer": "audience"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures and say the vocabulary word for each one.",
+      "instructions_l2": "Colorea los dibujos y di la palabra del vocabulario para cada uno.",
+      "items": [
+        {
+          "id": "1",
+          "content": "artist",
+          "content_l2": "artista",
+          "image_prompt": "Outline drawing of an artist painting a picture."
+        },
+        {
+          "id": "2",
+          "content": "musician",
+          "content_l2": "músico/a",
+          "image_prompt": "Outline drawing of a musician playing a violin."
+        },
+        {
+          "id": "3",
+          "content": "paint",
+          "content_l2": "pintar",
+          "image_prompt": "Outline drawing of paint tubes and brushes."
+        },
+        {
+          "id": "4",
+          "content": "draw",
+          "content_l2": "dibujar",
+          "image_prompt": "Outline drawing of a hand holding a pencil, drawing a star."
+        },
+        {
+          "id": "5",
+          "content": "sing",
+          "content_l2": "cantar",
+          "image_prompt": "Outline drawing of a child singing into a microphone."
+        },
+        {
+          "id": "6",
+          "content": "dance",
+          "content_l2": "bailar",
+          "image_prompt": "Outline drawing of two kids dancing with happy expressions."
+        },
+        {
+          "id": "7",
+          "content": "instrument",
+          "content_l2": "instrumento",
+          "image_prompt": "Outline drawing of a piano."
+        },
+        {
+          "id": "8",
+          "content": "sculpture",
+          "content_l2": "escultura",
+          "image_prompt": "Outline drawing of a small clay pot or figure."
+        },
+        {
+          "id": "9",
+          "content": "melody",
+          "content_l2": "melodía",
+          "image_prompt": "Outline drawing of musical notes on a staff."
+        },
+        {
+          "id": "10",
+          "content": "rhythm",
+          "content_l2": "ritmo",
+          "image_prompt": "Outline drawing of a drum set."
+        },
+        {
+          "id": "11",
+          "content": "stage",
+          "content_l2": "escenario",
+          "image_prompt": "Outline drawing of a simple stage with a curtain."
+        },
+        {
+          "id": "12",
+          "content": "audience",
+          "content_l2": "audiencia",
+          "image_prompt": "Outline drawing of several people sitting and watching."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My World of Arts and Music",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My World of Arts and Music",
+        "text_l2": "Mi Mundo de Artes y Música"
+      },
+      {
+        "page_number": 2,
+        "text_en": "Art and music are wonderful ways to express ourselves. We can create beautiful things and enjoy amazing sounds.",
+        "text_l2": "El arte y la música son formas maravillosas de expresarnos. Podemos crear cosas hermosas y disfrutar de sonidos increíbles."
+      },
+      {
+        "page_number": 3,
+        "text_en": "An artist likes to paint and draw. They use colors and lines to make pictures come alive.",
+        "text_l2": "A un artista le gusta pintar y dibujar. Usan colores y líneas para hacer que las imágenes cobren vida."
+      },
+      {
+        "page_number": 4,
+        "text_en": "A musician loves to make music. They often play an instrument, like a guitar or a piano.",
+        "text_l2": "A un músico le encanta hacer música. A menudo tocan un instrumento, como una guitarra o un piano."
+      },
+      {
+        "page_number": 5,
+        "text_en": "We can sing songs with our voices. We can also dance to the music, moving our bodies to the beat.",
+        "text_l2": "Podemos cantar canciones con nuestras voces. También podemos bailar al ritmo de la música, moviendo nuestros cuerpos al compás."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Sometimes artists make a sculpture. A sculpture is a 3D artwork, like a statue made of clay or wood.",
+        "text_l2": "A veces los artistas hacen una escultura. Una escultura es una obra de arte en 3D, como una estatua hecha de arcilla o madera."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Music has a melody, which is the main tune. It also has a rhythm, which is the pattern of sounds.",
+        "text_l2": "La música tiene una melodía, que es la melodía principal. También tiene un ritmo, que es el patrón de sonidos."
+      },
+      {
+        "page_number": 8,
+        "text_en": "Performers go on a stage to show their talents. The audience watches and claps for their amazing show!",
+        "text_l2": "Los artistas suben a un escenario para mostrar sus talentos. ¡La audiencia observa y aplaude su increíble espectáculo!"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and use 12 vocabulary words related to 'Arts & Music' in English and Spanish, demonstrating comprehension through various activities.",
+    "suggested_use": "Introduce vocabulary daily using flashcards and realia. Read the mini-book together to build context and fluency. Use worksheets for independent practice, small group work, or homework. Encourage students to share their own experiences with arts and music.",
+    "materials_needed": [
+      "Flashcards of vocabulary words (English and Spanish)",
+      "Real objects or pictures representing instruments, art supplies, etc.",
+      "Whiteboard or chart paper",
+      "Crayons or colored pencils",
+      "Scissors (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**For beginning ELLs:** Provide sentence starters for discussions. Pair with a more proficient student for activities. Focus on identifying words with images rather than writing.",
+      "**For developing ELLs:** Encourage them to use vocabulary words in simple sentences. Ask open-ended questions. Have them create their own simple drawings or musical sounds related to the words.",
+      "**For advanced ELLs:** Challenge them to write short paragraphs using multiple vocabulary words. Research different types of instruments or art forms. Lead group discussions about their favorite art or music."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "matching-ws-1",
+      "answers": {
+        "1": "artista",
+        "2": "músico/a",
+        "3": "pintar",
+        "4": "dibujar",
+        "5": "cantar",
+        "6": "bailar",
+        "7": "instrumento",
+        "8": "escultura",
+        "9": "melodía",
+        "10": "ritmo",
+        "11": "escenario",
+        "12": "audiencia"
+      }
+    },
+    {
+      "worksheet_id": "tracing-ws-2",
+      "answers": {
+        "1": "artist",
+        "2": "musician",
+        "3": "paint",
+        "4": "draw",
+        "5": "sing",
+        "6": "dance",
+        "7": "instrument",
+        "8": "sculpture",
+        "9": "melody",
+        "10": "rhythm",
+        "11": "stage",
+        "12": "audience"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:36:22.525Z",
+  "updated_at": "2026-03-11T13:36:22.526Z"
+}

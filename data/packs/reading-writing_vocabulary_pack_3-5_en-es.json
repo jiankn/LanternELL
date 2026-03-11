@@ -1,0 +1,284 @@
+{
+  "pack_id": "RW-3-5-EN-ES-20240311",
+  "pack_type": "vocabulary_pack",
+  "topic": "Reading & Writing",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "My Reading & Writing Tools: A Vocabulary Pack for Grades 3-5",
+  "description": "This vocabulary pack introduces essential English and Spanish terms related to reading and writing for newcomer ELL students in grades 3-5. It includes a mini-book, three engaging worksheets, and comprehensive teacher notes.",
+  "vocabulary": [
+    {
+      "en": "Read",
+      "l2": "Leer",
+      "image_prompt": "A child sitting comfortably, holding an open book, looking engaged in the story."
+    },
+    {
+      "en": "Write",
+      "l2": "Escribir",
+      "image_prompt": "A child at a desk, holding a pencil, writing in a notebook or on a piece of paper."
+    },
+    {
+      "en": "Book",
+      "l2": "Libro",
+      "image_prompt": "An open hardcover book with colorful illustrations and text on its pages."
+    },
+    {
+      "en": "Story",
+      "l2": "Historia",
+      "image_prompt": "A group of children listening to an adult storyteller, with images of characters from a fairy tale floating above their heads."
+    },
+    {
+      "en": "Sentence",
+      "l2": "Oración",
+      "image_prompt": "A simple, complete sentence (e.g., 'The cat sat.') written clearly on a line, with a period at the end."
+    },
+    {
+      "en": "Paragraph",
+      "l2": "Párrafo",
+      "image_prompt": "A block of text with several sentences grouped together, showing an indentation at the beginning."
+    },
+    {
+      "en": "Word",
+      "l2": "Palabra",
+      "image_prompt": "A single, common word (e.g., 'tree') clearly written in large letters."
+    },
+    {
+      "en": "Letter",
+      "l2": "Letra",
+      "image_prompt": "The uppercase and lowercase versions of a letter (e.g., 'A a') displayed prominently."
+    },
+    {
+      "en": "Author",
+      "l2": "Autor/a",
+      "image_prompt": "A person sitting at a desk, writing on a computer or in a notebook, with several finished books stacked nearby."
+    },
+    {
+      "en": "Illustrator",
+      "l2": "Ilustrador/a",
+      "image_prompt": "An artist at an easel or desk, drawing pictures for a book, surrounded by art supplies like paintbrushes and colored pencils."
+    },
+    {
+      "en": "Main Idea",
+      "l2": "Idea Principal",
+      "image_prompt": "A large thought bubble containing a central concept or theme, with smaller bubbles representing supporting details branching off from it."
+    },
+    {
+      "en": "Detail",
+      "l2": "Detalle",
+      "image_prompt": "A magnifying glass focusing on a small, specific part of a larger image or text, highlighting its importance."
+    },
+    {
+      "en": "Summary",
+      "l2": "Resumen",
+      "image_prompt": "A large, thick book being condensed into a smaller, thinner book or a short list of bullet points, representing key information."
+    },
+    {
+      "en": "Edit",
+      "l2": "Editar",
+      "image_prompt": "A hand holding a red pen, making corrections (e.g., circling a misspelled word, adding a comma) on a piece of written text."
+    },
+    {
+      "en": "Revise",
+      "l2": "Revisar",
+      "image_prompt": "A child looking thoughtfully at their written work, holding an eraser, with a part of the text being rewritten or improved."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English vocabulary word to its Spanish translation. Draw a line to connect them.",
+      "instructions_l2": "Une la palabra de vocabulario en inglés con su traducción al español. Dibuja una línea para conectarlas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Read",
+          "content_l2": "Leer",
+          "correct_answer": "Leer"
+        },
+        {
+          "id": "2",
+          "content": "Write",
+          "content_l2": "Escribir",
+          "correct_answer": "Escribir"
+        },
+        {
+          "id": "3",
+          "content": "Book",
+          "content_l2": "Libro",
+          "correct_answer": "Libro"
+        },
+        {
+          "id": "4",
+          "content": "Story",
+          "content_l2": "Historia",
+          "correct_answer": "Historia"
+        },
+        {
+          "id": "5",
+          "content": "Author",
+          "content_l2": "Autor/a",
+          "correct_answer": "Autor/a"
+        },
+        {
+          "id": "6",
+          "content": "Illustrator",
+          "content_l2": "Ilustrador/a",
+          "correct_answer": "Ilustrador/a"
+        },
+        {
+          "id": "7",
+          "content": "Sentence",
+          "content_l2": "Oración",
+          "correct_answer": "Oración"
+        },
+        {
+          "id": "8",
+          "content": "Word",
+          "content_l2": "Palabra",
+          "correct_answer": "Palabra"
+        },
+        {
+          "id": "9",
+          "content": "Paragraph",
+          "content_l2": "Párrafo",
+          "correct_answer": "Párrafo"
+        },
+        {
+          "id": "10",
+          "content": "Edit",
+          "content_l2": "Editar",
+          "correct_answer": "Editar"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the vocabulary words carefully. Then, try to write them on your own.",
+      "instructions_l2": "Traza las palabras de vocabulario con cuidado. Luego, intenta escribirlas tú mismo/a.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Read"
+        },
+        {
+          "id": "2",
+          "content": "Write"
+        },
+        {
+          "id": "3",
+          "content": "Book"
+        },
+        {
+          "id": "4",
+          "content": "Story"
+        },
+        {
+          "id": "5",
+          "content": "Sentence"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the picture. Find the words 'BOOK', 'STORY', 'WORD', 'SENTENCE', 'READ', and 'WRITE' in the image and color them a special color.",
+      "instructions_l2": "Colorea la imagen. Encuentra las palabras 'LIBRO', 'HISTORIA', 'PALABRA', 'ORACIÓN', 'LEER' y 'ESCRIBIR' en la imagen y coloréalas de un color especial.",
+      "items": [
+        {
+          "id": "1",
+          "content": "A scene with two children: one child is sitting on a rug reading an open book, and another child is at a desk writing in a notebook. Speech bubbles or labels around the scene point to items. Words to be colored are: BOOK (near the book), STORY (near the reading child), WORD (near the writing child's paper), SENTENCE (also near the writing child's paper), READ (implied by the reading child), WRITE (implied by the writing child)."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Our Reading and Writing Journey",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Our Reading and Writing Journey",
+        "text_l2": "Nuestro Viaje de Lectura y Escritura"
+      },
+      {
+        "page_number": 2,
+        "text_en": "We love to read! We open a book and find an amazing story.",
+        "text_l2": "¡Nos encanta leer! Abrimos un libro y encontramos una historia asombrosa."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Every story has an author who writes the words.",
+        "text_l2": "Cada historia tiene un autor que escribe las palabras."
+      },
+      {
+        "page_number": 4,
+        "text_en": "An illustrator draws the pictures for the book.",
+        "text_l2": "Un ilustrador dibuja las imágenes para el libro."
+      },
+      {
+        "page_number": 5,
+        "text_en": "When we write, we use letters to make words.",
+        "text_l2": "Cuando escribimos, usamos letras para formar palabras."
+      },
+      {
+        "page_number": 6,
+        "text_en": "Words make sentences, and sentences make a paragraph.",
+        "text_l2": "Las palabras forman oraciones, y las oraciones forman un párrafo."
+      },
+      {
+        "page_number": 7,
+        "text_en": "After we write, we edit and revise our work. We look for the main idea and important details.",
+        "text_l2": "Después de escribir, editamos y revisamos nuestro trabajo. Buscamos la idea principal y los detalles importantes."
+      },
+      {
+        "page_number": 8,
+        "text_en": "We can also write a summary of what we read or wrote! Reading and writing help us learn!",
+        "text_l2": "¡También podemos escribir un resumen de lo que leímos o escribimos! ¡Leer y escribir nos ayudan a aprender!"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and use basic vocabulary related to reading and writing in English and Spanish, improving their comprehension and expression skills.",
+    "suggested_use": "Introduce the vocabulary using flashcards and visuals. Read the mini-book aloud as a shared reading activity, pausing to discuss key vocabulary. Use the worksheets for independent practice, small group work, or as a review. Encourage students to create their own sentences or short paragraphs using the new words.",
+    "materials_needed": [
+      "Printed vocabulary list or flashcards",
+      "Printed mini-book (one per student)",
+      "Printed worksheets (one per student)",
+      "Pencils",
+      "Crayons or colored pencils",
+      "Scissors (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide sentence starters for discussions or writing tasks. Allow students to draw responses instead of writing. Pre-teach vocabulary with realia or explicit definitions. Pair students with a stronger English speaker for collaborative activities.",
+      "**Challenge:** Encourage students to write their own definitions for the vocabulary words in English. Ask them to create a short story or a summary of a text they've read using multiple vocabulary words. Have them identify the main idea and supporting details in a short text."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "Leer",
+        "2": "Escribir",
+        "3": "Libro",
+        "4": "Historia",
+        "5": "Autor/a",
+        "6": "Ilustrador/a",
+        "7": "Oración",
+        "8": "Palabra",
+        "9": "Párrafo",
+        "10": "Editar"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Students should have accurately traced the words 'Read', 'Write', 'Book', 'Story', 'Sentence'."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "Students should have colored the picture and specifically identified and colored the words 'BOOK', 'STORY', 'WORD', 'SENTENCE', 'READ', and 'WRITE' within the illustration."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-03-11T13:30:00Z",
+  "updated_at": "2024-03-11T13:30:00Z"
+}

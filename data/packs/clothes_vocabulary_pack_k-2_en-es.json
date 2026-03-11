@@ -1,0 +1,307 @@
+{
+  "pack_id": "clothes-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Clothes",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Clothes Book: Learning English & Spanish",
+  "description": "A vocabulary pack designed for K-2 ELL newcomers to learn basic clothing words in English and Spanish, featuring simple visuals and engaging activities.",
+  "vocabulary": [
+    {
+      "en": "shirt",
+      "l2": "camisa",
+      "image_prompt": "a red t-shirt"
+    },
+    {
+      "en": "pants",
+      "l2": "pantalones",
+      "image_prompt": "blue denim pants"
+    },
+    {
+      "en": "dress",
+      "l2": "vestido",
+      "image_prompt": "a pink dress with short sleeves"
+    },
+    {
+      "en": "shoes",
+      "l2": "zapatos",
+      "image_prompt": "a pair of brown shoes"
+    },
+    {
+      "en": "hat",
+      "l2": "sombrero",
+      "image_prompt": "a yellow baseball cap"
+    },
+    {
+      "en": "socks",
+      "l2": "calcetines",
+      "image_prompt": "a pair of striped socks"
+    },
+    {
+      "en": "coat",
+      "l2": "abrigo",
+      "image_prompt": "a warm blue winter coat"
+    },
+    {
+      "en": "skirt",
+      "l2": "falda",
+      "image_prompt": "a green pleated skirt"
+    },
+    {
+      "en": "shorts",
+      "l2": "pantalones cortos",
+      "image_prompt": "a pair of blue shorts"
+    },
+    {
+      "en": "sweater",
+      "l2": "suéter",
+      "image_prompt": "a cozy orange sweater"
+    },
+    {
+      "en": "t-shirt",
+      "l2": "camiseta",
+      "image_prompt": "a plain white t-shirt"
+    },
+    {
+      "en": "boots",
+      "l2": "botas",
+      "image_prompt": "a pair of yellow rain boots"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the English word to the correct picture. Draw a line from the word to the picture.",
+      "instructions_l2": "Une la palabra en inglés con la imagen correcta. Dibuja una línea de la palabra a la imagen.",
+      "items": [
+        {
+          "id": "1",
+          "content": "shirt",
+          "content_l2": "camisa",
+          "correct_answer": "a red t-shirt"
+        },
+        {
+          "id": "2",
+          "content": "pants",
+          "content_l2": "pantalones",
+          "correct_answer": "blue denim pants"
+        },
+        {
+          "id": "3",
+          "content": "dress",
+          "content_l2": "vestido",
+          "correct_answer": "a pink dress with short sleeves"
+        },
+        {
+          "id": "4",
+          "content": "shoes",
+          "content_l2": "zapatos",
+          "correct_answer": "a pair of brown shoes"
+        },
+        {
+          "id": "5",
+          "content": "hat",
+          "content_l2": "sombrero",
+          "correct_answer": "a yellow baseball cap"
+        },
+        {
+          "id": "6",
+          "content": "socks",
+          "content_l2": "calcetines",
+          "correct_answer": "a pair of striped socks"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the words. Say each word as you trace it.",
+      "instructions_l2": "Traza las palabras. Di cada palabra mientras la trazas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "shirt",
+          "content_l2": "camisa",
+          "correct_answer": null
+        },
+        {
+          "id": "2",
+          "content": "pants",
+          "content_l2": "pantalones",
+          "correct_answer": null
+        },
+        {
+          "id": "3",
+          "content": "dress",
+          "content_l2": "vestido",
+          "correct_answer": null
+        },
+        {
+          "id": "4",
+          "content": "shoes",
+          "content_l2": "zapatos",
+          "correct_answer": null
+        },
+        {
+          "id": "5",
+          "content": "hat",
+          "content_l2": "sombrero",
+          "correct_answer": null
+        },
+        {
+          "id": "6",
+          "content": "socks",
+          "content_l2": "calcetines",
+          "correct_answer": null
+        },
+        {
+          "id": "7",
+          "content": "coat",
+          "content_l2": "abrigo",
+          "correct_answer": null
+        },
+        {
+          "id": "8",
+          "content": "skirt",
+          "content_l2": "falda",
+          "correct_answer": null
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the clothes. Say the name of each item as you color.",
+      "instructions_l2": "Colorea la ropa. Di el nombre de cada prenda mientras la coloreas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "sweater",
+          "content_l2": "suéter",
+          "correct_answer": null
+        },
+        {
+          "id": "2",
+          "content": "t-shirt",
+          "content_l2": "camiseta",
+          "correct_answer": null
+        },
+        {
+          "id": "3",
+          "content": "boots",
+          "content_l2": "botas",
+          "correct_answer": null
+        },
+        {
+          "id": "4",
+          "content": "shorts",
+          "content_l2": "pantalones cortos",
+          "correct_answer": null
+        },
+        {
+          "id": "5",
+          "content": "skirt",
+          "content_l2": "falda",
+          "correct_answer": null
+        },
+        {
+          "id": "6",
+          "content": "coat",
+          "content_l2": "abrigo",
+          "correct_answer": null
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Clothes Book / Mi Libro de Ropa",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Clothes Book",
+        "text_l2": "Mi Libro de Ropa"
+      },
+      {
+        "page_number": 2,
+        "text_en": "I wear a shirt.",
+        "text_l2": "Yo llevo una camisa.",
+        "image_prompt": "A happy child wearing a red shirt."
+      },
+      {
+        "page_number": 3,
+        "text_en": "I wear pants.",
+        "text_l2": "Yo llevo pantalones.",
+        "image_prompt": "A happy child wearing blue pants."
+      },
+      {
+        "page_number": 4,
+        "text_en": "I wear a dress.",
+        "text_l2": "Yo llevo un vestido.",
+        "image_prompt": "A happy child wearing a pink dress."
+      },
+      {
+        "page_number": 5,
+        "text_en": "I wear shoes.",
+        "text_l2": "Yo llevo zapatos.",
+        "image_prompt": "A happy child wearing brown shoes."
+      },
+      {
+        "page_number": 6,
+        "text_en": "I wear a hat.",
+        "text_l2": "Yo llevo un sombrero.",
+        "image_prompt": "A happy child wearing a yellow hat."
+      },
+      {
+        "page_number": 7,
+        "text_en": "I wear socks.",
+        "text_l2": "Yo llevo calcetines.",
+        "image_prompt": "A happy child wearing striped socks."
+      },
+      {
+        "page_number": 8,
+        "text_en": "I wear a coat.",
+        "text_l2": "Yo llevo un abrigo.",
+        "image_prompt": "A happy child wearing a blue coat."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name 12 common clothing items in English and Spanish, and use them in simple sentences.",
+    "suggested_use": "Introduce vocabulary using flashcards and realia. Read the mini-book aloud, pointing to pictures. Use worksheets for practice and reinforcement. Encourage total physical response (TPR) by having students point to their own clothes or miming putting on clothes.",
+    "materials_needed": [
+      "Flashcards of clothing items",
+      "Real clothing items (if possible)",
+      "Crayons or colored pencils",
+      "Scissors (for cutting out mini-book)",
+      "Stapler (for mini-book)"
+    ],
+    "differentiation_tips": [
+      "For struggling learners: Focus on 3-5 core vocabulary words. Provide sentence stems (e.g., 'This is a ______.') for speaking practice. Pair with a stronger peer.",
+      "For advanced learners: Encourage describing clothes with colors and sizes (e.g., 'This is a red shirt.'). Ask 'What do you wear when it's cold/hot?' Have them create their own simple sentences or draw additional clothing items."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "a red t-shirt",
+        "2": "blue denim pants",
+        "3": "a pink dress with short sleeves",
+        "4": "a pair of brown shoes",
+        "5": "a yellow baseball cap",
+        "6": "a pair of striped socks"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {}
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {}
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.503Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

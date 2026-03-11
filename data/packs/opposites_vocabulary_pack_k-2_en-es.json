@@ -1,0 +1,354 @@
+{
+  "pack_id": "opposites-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Opposites",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Opposites Book & Activities",
+  "description": "A vocabulary pack for K-2 ELL newcomers focusing on common opposite words in English and Spanish, with visual aids and interactive activities.",
+  "vocabulary": [
+    {
+      "en": "Big",
+      "l2": "Grande",
+      "image_prompt": "a very large elephant"
+    },
+    {
+      "en": "Small",
+      "l2": "Pequeño",
+      "image_prompt": "a tiny mouse"
+    },
+    {
+      "en": "Hot",
+      "l2": "Caliente",
+      "image_prompt": "a bright sun with rays"
+    },
+    {
+      "en": "Cold",
+      "l2": "Frío",
+      "image_prompt": "an ice cube or a snowman"
+    },
+    {
+      "en": "Up",
+      "l2": "Arriba",
+      "image_prompt": "an arrow pointing upwards, a balloon floating up"
+    },
+    {
+      "en": "Down",
+      "l2": "Abajo",
+      "image_prompt": "an arrow pointing downwards, a ball falling down"
+    },
+    {
+      "en": "Day",
+      "l2": "Día",
+      "image_prompt": "a sunny sky with clouds"
+    },
+    {
+      "en": "Night",
+      "l2": "Noche",
+      "image_prompt": "a dark sky with a moon and stars"
+    },
+    {
+      "en": "Happy",
+      "l2": "Feliz",
+      "image_prompt": "a smiling face emoji"
+    },
+    {
+      "en": "Sad",
+      "l2": "Triste",
+      "image_prompt": "a frowning face emoji with a tear"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line from the word on the left to its opposite word on the right.",
+      "instructions_l2": "Dibuja una línea de la palabra de la izquierda a su palabra opuesta en la derecha.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Big",
+          "content_l2": "Grande",
+          "match_options_en": [
+            "Small",
+            "Up",
+            "Hot",
+            "Day",
+            "Happy"
+          ],
+          "match_options_l2": [
+            "Pequeño",
+            "Arriba",
+            "Caliente",
+            "Día",
+            "Feliz"
+          ],
+          "correct_answer": "Small"
+        },
+        {
+          "id": "2",
+          "content": "Hot",
+          "content_l2": "Caliente",
+          "match_options_en": [
+            "Cold",
+            "Big",
+            "Down",
+            "Night",
+            "Sad"
+          ],
+          "match_options_l2": [
+            "Frío",
+            "Grande",
+            "Abajo",
+            "Noche",
+            "Triste"
+          ],
+          "correct_answer": "Cold"
+        },
+        {
+          "id": "3",
+          "content": "Up",
+          "content_l2": "Arriba",
+          "match_options_en": [
+            "Down",
+            "Small",
+            "Cold",
+            "Day",
+            "Happy"
+          ],
+          "match_options_l2": [
+            "Abajo",
+            "Pequeño",
+            "Frío",
+            "Día",
+            "Feliz"
+          ],
+          "correct_answer": "Down"
+        },
+        {
+          "id": "4",
+          "content": "Day",
+          "content_l2": "Día",
+          "match_options_en": [
+            "Night",
+            "Hot",
+            "Up",
+            "Big",
+            "Sad"
+          ],
+          "match_options_l2": [
+            "Noche",
+            "Caliente",
+            "Arriba",
+            "Grande",
+            "Triste"
+          ],
+          "correct_answer": "Night"
+        },
+        {
+          "id": "5",
+          "content": "Happy",
+          "content_l2": "Feliz",
+          "match_options_en": [
+            "Sad",
+            "Cold",
+            "Down",
+            "Small",
+            "Night"
+          ],
+          "match_options_l2": [
+            "Triste",
+            "Frío",
+            "Abajo",
+            "Pequeño",
+            "Noche"
+          ],
+          "correct_answer": "Sad"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the words and say them aloud.",
+      "instructions_l2": "Traza las palabras y dilas en voz alta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Big",
+          "content_l2": "Grande",
+          "image_prompt": "a big elephant outline for tracing"
+        },
+        {
+          "id": "2",
+          "content": "Small",
+          "content_l2": "Pequeño",
+          "image_prompt": "a small mouse outline for tracing"
+        },
+        {
+          "id": "3",
+          "content": "Hot",
+          "content_l2": "Caliente",
+          "image_prompt": "a sun outline for tracing"
+        },
+        {
+          "id": "4",
+          "content": "Cold",
+          "content_l2": "Frío",
+          "image_prompt": "an ice cream cone outline for tracing"
+        },
+        {
+          "id": "5",
+          "content": "Up",
+          "content_l2": "Arriba",
+          "image_prompt": "a balloon flying up outline for tracing"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures as described.",
+      "instructions_l2": "Colorea los dibujos como se describe.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Color the BIG elephant blue.",
+          "content_l2": "Colorea el elefante GRANDE de azul.",
+          "image_prompt": "outline drawing of a big elephant",
+          "correct_answer": "Blue"
+        },
+        {
+          "id": "2",
+          "content": "Color the SMALL mouse red.",
+          "content_l2": "Colorea el ratón PEQUEÑO de rojo.",
+          "image_prompt": "outline drawing of a small mouse",
+          "correct_answer": "Red"
+        },
+        {
+          "id": "3",
+          "content": "Color the HOT sun yellow.",
+          "content_l2": "Colorea el sol CALIENTE de amarillo.",
+          "image_prompt": "outline drawing of a smiling sun",
+          "correct_answer": "Yellow"
+        },
+        {
+          "id": "4",
+          "content": "Color the COLD ice cream white.",
+          "content_l2": "Colorea el helado FRÍO de blanco.",
+          "image_prompt": "outline drawing of an ice cream cone",
+          "correct_answer": "White"
+        },
+        {
+          "id": "5",
+          "content": "Color the HAPPY face green.",
+          "content_l2": "Colorea la cara FELIZ de verde.",
+          "image_prompt": "outline drawing of a happy face",
+          "correct_answer": "Green"
+        },
+        {
+          "id": "6",
+          "content": "Color the SAD face purple.",
+          "content_l2": "Colorea la cara TRISTE de morado.",
+          "image_prompt": "outline drawing of a sad face",
+          "correct_answer": "Purple"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Opposites Book",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Opposites Book",
+        "text_l2": "Mi Libro de Opuestos",
+        "image_prompt": "A cheerful book cover with two opposite images, like a big and small object."
+      },
+      {
+        "page_number": 2,
+        "text_en": "Big / Small\nA big elephant. A small mouse.",
+        "text_l2": "Grande / Pequeño\nUn elefante grande. Un ratón pequeño.",
+        "image_prompt": "a big elephant and a small mouse side by side"
+      },
+      {
+        "page_number": 3,
+        "text_en": "Hot / Cold\nA hot sun. Cold ice cream.",
+        "text_l2": "Caliente / Frío\nUn sol caliente. Un helado frío.",
+        "image_prompt": "a hot sun and an ice cream cone"
+      },
+      {
+        "page_number": 4,
+        "text_en": "Up / Down\nThe balloon goes up. The ball goes down.",
+        "text_l2": "Arriba / Abajo\nEl globo sube. La pelota baja.",
+        "image_prompt": "a balloon floating up and a ball bouncing down"
+      },
+      {
+        "page_number": 5,
+        "text_en": "Day / Night\nIt is day. It is night.",
+        "text_l2": "Día / Noche\nEs de día. Es de noche.",
+        "image_prompt": "a sunny landscape and a starry night landscape"
+      },
+      {
+        "page_number": 6,
+        "text_en": "Happy / Sad\nA happy face. A sad face.",
+        "text_l2": "Feliz / Triste\nUna cara feliz. Una cara triste.",
+        "image_prompt": "a happy emoji and a sad emoji"
+      },
+      {
+        "page_number": 7,
+        "text_en": "Open / Close\nOpen the door. Close the door.",
+        "text_l2": "Abrir / Cerrar\nAbre la puerta. Cierra la puerta.",
+        "image_prompt": "an open door and a closed door"
+      },
+      {
+        "page_number": 8,
+        "text_en": "Fast / Slow\nA fast car. A slow turtle.",
+        "text_l2": "Rápido / Lento\nUn coche rápido. Una tortuga lenta.",
+        "image_prompt": "a race car speeding and a turtle slowly walking"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify, understand, and use common opposite words (e.g., big/small, hot/cold) in English and Spanish.",
+    "suggested_use": "Introduce vocabulary with flashcards and gestures. Read the mini-book aloud, pointing to pictures. Use the tracing worksheet for handwriting practice and word recognition. The matching worksheet reinforces understanding of opposites. The coloring worksheet provides a fun way to apply vocabulary and follow instructions. Encourage students to create their own sentences using the opposite words.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional)",
+      "Printed mini-books (one per student)",
+      "Printed worksheets",
+      "Crayons or colored pencils",
+      "Scissors (for mini-book assembly)",
+      "Glue sticks (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**For emerging learners:** Provide extra visual support and gestures. Use realia (real objects) when possible. Focus on 2-3 pairs at a time. Allow students to point instead of speaking.",
+      "**For developing learners:** Encourage students to repeat words and phrases. Provide sentence frames (e.g., 'The elephant is _____. The mouse is _____.') for oral practice. Partner work for matching activities.",
+      "**For expanding learners:** Challenge students to use the words in original sentences. Ask 'why' questions (e.g., 'Why is the sun hot?'). Have them draw their own opposite pairs."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "matching-1",
+      "answers": {
+        "1": "Small",
+        "2": "Cold",
+        "3": "Down",
+        "4": "Night",
+        "5": "Sad"
+      }
+    },
+    {
+      "worksheet_id": "coloring-1",
+      "answers": {
+        "1": "Elephant should be colored blue.",
+        "2": "Mouse should be colored red.",
+        "3": "Sun should be colored yellow.",
+        "4": "Ice cream should be colored white.",
+        "5": "Happy face should be colored green.",
+        "6": "Sad face should be colored purple."
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

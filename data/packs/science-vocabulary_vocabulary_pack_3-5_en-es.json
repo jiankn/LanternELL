@@ -1,0 +1,470 @@
+{
+  "pack_id": "science-vocab-3-5-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Science Vocabulary",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Exploring Science: Vocabulary Pack for Grades 3-5",
+  "description": "This vocabulary pack introduces essential science terms for newcomer ELL students in grades 3-5, focusing on key concepts and the scientific process. Includes vocabulary list, mini-book, and interactive worksheets.",
+  "vocabulary": [
+    {
+      "en": "Observe",
+      "l2": "Observar",
+      "image_prompt": "A child looking closely through a magnifying glass at a leaf."
+    },
+    {
+      "en": "Experiment",
+      "l2": "Experimento",
+      "image_prompt": "A child in a lab coat mixing liquids in beakers with bubbles."
+    },
+    {
+      "en": "Hypothesis",
+      "l2": "Hipótesis",
+      "image_prompt": "A thought bubble with a question mark and a lightbulb over a child's head."
+    },
+    {
+      "en": "Predict",
+      "l2": "Predecir",
+      "image_prompt": "A child pointing to a future event on a timeline, with a crystal ball nearby."
+    },
+    {
+      "en": "Data",
+      "l2": "Datos",
+      "image_prompt": "A clipboard with numbers and charts, next to a pencil."
+    },
+    {
+      "en": "Microscope",
+      "l2": "Microscopio",
+      "image_prompt": "A detailed drawing of a microscope with a slide underneath."
+    },
+    {
+      "en": "Scientist",
+      "l2": "Científico/a",
+      "image_prompt": "A person wearing a lab coat and safety goggles, holding a test tube."
+    },
+    {
+      "en": "Laboratory",
+      "l2": "Laboratorio",
+      "image_prompt": "A room with lab equipment: beakers, test tubes, Bunsen burner, safety shower."
+    },
+    {
+      "en": "Measure",
+      "l2": "Medir",
+      "image_prompt": "A hand holding a ruler next to an object, showing measurements."
+    },
+    {
+      "en": "Classify",
+      "l2": "Clasificar",
+      "image_prompt": "Different objects (e.g., fruits, vegetables, animals) being sorted into groups."
+    },
+    {
+      "en": "Conclude",
+      "l2": "Concluir",
+      "image_prompt": "A child writing 'The answer is...' with a checkmark, looking satisfied."
+    },
+    {
+      "en": "Results",
+      "l2": "Resultados",
+      "image_prompt": "A chart or graph showing the outcome of an experiment."
+    },
+    {
+      "en": "Evidence",
+      "l2": "Evidencia",
+      "image_prompt": "A magnifying glass highlighting footprints or fingerprints."
+    },
+    {
+      "en": "Variable",
+      "l2": "Variable",
+      "image_prompt": "A hand adjusting a dial or slider, showing something that can change."
+    },
+    {
+      "en": "Theory",
+      "l2": "Teoría",
+      "image_prompt": "A complex web of interconnected ideas or concepts, like a mind map."
+    },
+    {
+      "en": "Gravity",
+      "l2": "Gravedad",
+      "image_prompt": "An apple falling from a tree towards the ground."
+    },
+    {
+      "en": "Energy",
+      "l2": "Energía",
+      "image_prompt": "A lightning bolt, a lightbulb, and a sun, representing different forms of energy."
+    },
+    {
+      "en": "Matter",
+      "l2": "Materia",
+      "image_prompt": "Illustrations of a solid (ice cube), liquid (water), and gas (steam)."
+    },
+    {
+      "en": "Solution",
+      "l2": "Solución",
+      "image_prompt": "A clear glass of water with dissolved sugar or salt, showing it's mixed evenly."
+    },
+    {
+      "en": "Organism",
+      "l2": "Organismo",
+      "image_prompt": "A variety of living things: a plant, an animal, and a microorganism."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the science word to its definition. Draw a line from the word to the correct definition.",
+      "instructions_l2": "Une la palabra de ciencia con su definición. Dibuja una línea desde la palabra a la definición correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Observe",
+          "content_l2": "Observar",
+          "options": [
+            {
+              "id": "A",
+              "text_en": "To look at something carefully to learn about it."
+            },
+            {
+              "id": "B",
+              "text_en": "To guess what will happen next."
+            },
+            {
+              "id": "C",
+              "text_en": "A place where scientists work."
+            },
+            {
+              "id": "D",
+              "text_en": "Information collected during an experiment."
+            }
+          ],
+          "correct_answer": "A"
+        },
+        {
+          "id": "2",
+          "content": "Predict",
+          "content_l2": "Predecir",
+          "options": [
+            {
+              "id": "A",
+              "text_en": "To look at something carefully to learn about it."
+            },
+            {
+              "id": "B",
+              "text_en": "To guess what will happen next."
+            },
+            {
+              "id": "C",
+              "text_en": "A place where scientists work."
+            },
+            {
+              "id": "D",
+              "text_en": "Information collected during an experiment."
+            }
+          ],
+          "correct_answer": "B"
+        },
+        {
+          "id": "3",
+          "content": "Laboratory",
+          "content_l2": "Laboratorio",
+          "options": [
+            {
+              "id": "A",
+              "text_en": "To look at something carefully to learn about it."
+            },
+            {
+              "id": "B",
+              "text_en": "To guess what will happen next."
+            },
+            {
+              "id": "C",
+              "text_en": "A place where scientists work."
+            },
+            {
+              "id": "D",
+              "text_en": "Information collected during an experiment."
+            }
+          ],
+          "correct_answer": "C"
+        },
+        {
+          "id": "4",
+          "content": "Data",
+          "content_l2": "Datos",
+          "options": [
+            {
+              "id": "A",
+              "text_en": "To look at something carefully to learn about it."
+            },
+            {
+              "id": "B",
+              "text_en": "To guess what will happen next."
+            },
+            {
+              "id": "C",
+              "text_en": "A place where scientists work."
+            },
+            {
+              "id": "D",
+              "text_en": "Information collected during an experiment."
+            }
+          ],
+          "correct_answer": "D"
+        },
+        {
+          "id": "5",
+          "content": "Scientist",
+          "content_l2": "Científico/a",
+          "options": [
+            {
+              "id": "E",
+              "text_en": "A person who studies science."
+            },
+            {
+              "id": "F",
+              "text_en": "A guess that can be tested."
+            },
+            {
+              "id": "G",
+              "text_en": "To sort things into groups."
+            },
+            {
+              "id": "H",
+              "text_en": "The outcome or findings of a test."
+            }
+          ],
+          "correct_answer": "E"
+        },
+        {
+          "id": "6",
+          "content": "Hypothesis",
+          "content_l2": "Hipótesis",
+          "options": [
+            {
+              "id": "E",
+              "text_en": "A person who studies science."
+            },
+            {
+              "id": "F",
+              "text_en": "A guess that can be tested."
+            },
+            {
+              "id": "G",
+              "text_en": "To sort things into groups."
+            },
+            {
+              "id": "H",
+              "text_en": "The outcome or findings of a test."
+            }
+          ],
+          "correct_answer": "F"
+        },
+        {
+          "id": "7",
+          "content": "Classify",
+          "content_l2": "Clasificar",
+          "options": [
+            {
+              "id": "E",
+              "text_en": "A person who studies science."
+            },
+            {
+              "id": "F",
+              "text_en": "A guess that can be tested."
+            },
+            {
+              "id": "G",
+              "text_en": "To sort things into groups."
+            },
+            {
+              "id": "H",
+              "text_en": "The outcome or findings of a test."
+            }
+          ],
+          "correct_answer": "G"
+        },
+        {
+          "id": "8",
+          "content": "Results",
+          "content_l2": "Resultados",
+          "options": [
+            {
+              "id": "E",
+              "text_en": "A person who studies science."
+            },
+            {
+              "id": "F",
+              "text_en": "A guess that can be tested."
+            },
+            {
+              "id": "G",
+              "text_en": "To sort things into groups."
+            },
+            {
+              "id": "H",
+              "text_en": "The outcome or findings of a test."
+            }
+          ],
+          "correct_answer": "H"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the science word. Then, write the word again on the line below. Try to draw a small picture for each word.",
+      "instructions_l2": "Traza la palabra de ciencia. Luego, escribe la palabra otra vez en la línea de abajo. Intenta dibujar una imagen pequeña para cada palabra.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Experiment",
+          "content_l2": "Experimento"
+        },
+        {
+          "id": "2",
+          "content": "Measure",
+          "content_l2": "Medir"
+        },
+        {
+          "id": "3",
+          "content": "Evidence",
+          "content_l2": "Evidencia"
+        },
+        {
+          "id": "4",
+          "content": "Conclude",
+          "content_l2": "Concluir"
+        },
+        {
+          "id": "5",
+          "content": "Microscope",
+          "content_l2": "Microscopio"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the picture that represents the science word. Then, write the word on the line.",
+      "instructions_l2": "Colorea la imagen que representa la palabra de ciencia. Luego, escribe la palabra en la línea.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Gravity",
+          "content_l2": "Gravedad",
+          "image_prompt": "An apple falling from a tree."
+        },
+        {
+          "id": "2",
+          "content": "Energy",
+          "content_l2": "Energía",
+          "image_prompt": "A sun emitting rays and a lightning bolt."
+        },
+        {
+          "id": "3",
+          "content": "Matter",
+          "content_l2": "Materia",
+          "image_prompt": "A block of ice, a glass of water, and steam from a kettle."
+        },
+        {
+          "id": "4",
+          "content": "Solution",
+          "content_l2": "Solución",
+          "image_prompt": "A clear glass with water and dissolved sugar."
+        },
+        {
+          "id": "5",
+          "content": "Organism",
+          "content_l2": "Organismo",
+          "image_prompt": "A small plant, a fish, and a tiny bug."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Our Science Adventure",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Our Science Adventure! We are young scientists ready to learn.",
+        "text_l2": "¡Nuestra Aventura Científica! Somos jóvenes científicos listos para aprender."
+      },
+      {
+        "page_number": 2,
+        "text_en": "First, we Observe the world around us. We look closely at plants and animals.",
+        "text_l2": "Primero, Observamos el mundo que nos rodea. Miramos de cerca las plantas y los animales."
+      },
+      {
+        "page_number": 3,
+        "text_en": "Then, we form a Hypothesis. This is a special guess about how things work.",
+        "text_l2": "Luego, formulamos una Hipótesis. Esta es una suposición especial sobre cómo funcionan las cosas."
+      },
+      {
+        "page_number": 4,
+        "text_en": "Next, we Plan an Experiment. We will test our hypothesis in the Laboratory.",
+        "text_l2": "A continuación, planeamos un Experimento. Probaremos nuestra hipótesis en el Laboratorio."
+      },
+      {
+        "page_number": 5,
+        "text_en": "During the experiment, we Measure carefully and collect Data. We write down all our findings.",
+        "text_l2": "Durante el experimento, Medimos con cuidado y recopilamos Datos. Anotamos todos nuestros hallazgos."
+      },
+      {
+        "page_number": 6,
+        "text_en": "After the experiment, we look at our Results and find Evidence to support our ideas.",
+        "text_l2": "Después del experimento, miramos nuestros Resultados y encontramos Evidencia para apoyar nuestras ideas."
+      },
+      {
+        "page_number": 7,
+        "text_en": "Finally, we Conclude what we learned. Science helps us understand everything, like Gravity and Energy!",
+        "text_l2": "Finalmente, Concluimos lo que aprendimos. ¡La ciencia nos ayuda a entender todo, como la Gravedad y la Energía!"
+      },
+      {
+        "page_number": 8,
+        "text_en": "Keep exploring! Every Organism and every piece of Matter has a story to tell.",
+        "text_l2": "¡Sigue explorando! Cada Organismo y cada trozo de Materia tiene una historia que contar."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and understand 20 basic science vocabulary words in English and Spanish, and use them in simple contexts related to scientific inquiry.",
+    "suggested_use": "Introduce 3-5 words per day, using visuals and gestures. Read the mini-book aloud, pausing to discuss vocabulary. Use worksheets as independent practice or small group activities. Encourage students to create their own sentences with the words.",
+    "materials_needed": [
+      "Printed vocabulary cards (optional, based on image prompts)",
+      "Printed mini-books (one per student)",
+      "Printed worksheets (one set per student)",
+      "Pencils, crayons/colored pencils",
+      "Magnifying glasses, simple measuring tools (optional, for hands-on observation)"
+    ],
+    "differentiation_tips": [
+      "**For beginning ELLs:** Pair students with a stronger English speaker. Provide sentence frames for verbal practice. Allow them to point to pictures for answers.",
+      "**For intermediate ELLs:** Encourage them to use vocabulary words in short sentences or describe the images. Have them define words in their own words.",
+      "**Extension activities:** Students can create their own 'science journal' using the vocabulary, or design a simple experiment using the scientific method terms."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E",
+        "6": "F",
+        "7": "G",
+        "8": "H"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Answers will vary as students trace, write, and draw. Teacher should check for legible tracing/writing and relevant drawings."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": "Answers will vary for coloring. Teacher should check for correct word written on the line."
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:30:42.135Z",
+  "updated_at": "2026-03-11T13:30:42.136Z"
+}

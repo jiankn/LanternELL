@@ -1,0 +1,186 @@
+{
+  "pack_id": "academic-discussion-3-5-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Academic Discussion",
+  "age_band": "3-5",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer 3-5",
+  "title": "Academic Discussion Frames for Grades 3-5",
+  "description": "This pack provides functional sentence frames to help newcomer ELL students in grades 3-5 participate in academic discussions, covering expressing opinions, agreeing, disagreeing, clarifying, and summarizing.",
+  "sentence_frames": [
+    {
+      "frame": "I think that [idea], because [reason].",
+      "translation": "Creo que [idea], porque [razón]."
+    },
+    {
+      "frame": "In my opinion, [topic] is important, and I believe [reason].",
+      "translation": "En mi opinión, [tema] es importante, y creo que [razón]."
+    },
+    {
+      "frame": "I agree with [person's name] because [reason], and I also think [additional idea].",
+      "translation": "Estoy de acuerdo con [nombre de la persona] porque [razón], y también pienso que [idea adicional]."
+    },
+    {
+      "frame": "I disagree with [person's name] because [reason], but I understand [their point of view].",
+      "translation": "No estoy de acuerdo con [nombre de la persona] porque [razón], pero entiendo [su punto de vista]."
+    },
+    {
+      "frame": "Could you please explain [your idea] again, so I can understand it better?",
+      "translation": "¿Podrías explicar [tu idea] otra vez, por favor, para que pueda entenderla mejor?"
+    },
+    {
+      "frame": "Another point to consider is [new idea], and it relates to [previous idea].",
+      "translation": "Otro punto a considerar es [nueva idea], y se relaciona con [idea anterior]."
+    },
+    {
+      "frame": "To clarify, are you saying that [rephrase idea]?",
+      "translation": "Para aclarar, ¿estás diciendo que [reformular idea]?"
+    },
+    {
+      "frame": "I noticed that [detail] in the text, which makes me think [conclusion].",
+      "translation": "Me di cuenta de que [detalle] en el texto, lo que me hace pensar [conclusión]."
+    },
+    {
+      "frame": "This reminds me of [personal experience/other topic], and it helps me understand [concept].",
+      "translation": "Esto me recuerda a [experiencia personal/otro tema], y me ayuda a entender [concepto]."
+    },
+    {
+      "frame": "What do you think about [specific question], and why is it important?",
+      "translation": "¿Qué piensas sobre [pregunta específica], y por qué es importante?"
+    },
+    {
+      "frame": "So, to summarize, we discussed [main point 1] and [main point 2].",
+      "translation": "Entonces, para resumir, discutimos [punto principal 1] y [punto principal 2]."
+    },
+    {
+      "frame": "My evidence from the text is on page [number], and it says [quote/paraphrase].",
+      "translation": "Mi evidencia del texto está en la página [número], y dice [cita/paráfrasis]."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "I think that the main character was brave, because she helped her friend.",
+      "speaker_b_en": "I agree with you because she faced her fears, and I also think she was very kind.",
+      "speaker_a_l2": "Creo que la personaje principal fue valiente, porque ayudó a su amiga.",
+      "speaker_b_l2": "Estoy de acuerdo contigo porque ella enfrentó sus miedos, y también pienso que fue muy amable.",
+      "context": "Students discussing a book character."
+    },
+    {
+      "speaker_a_en": "In my opinion, the plant needs more water, and I believe it will grow faster.",
+      "speaker_b_en": "I disagree with you because too much water can hurt it, but I understand why you think that.",
+      "speaker_a_l2": "En mi opinión, la planta necesita más agua, y creo que crecerá más rápido.",
+      "speaker_b_l2": "No estoy de acuerdo contigo porque demasiada agua puede dañarla, pero entiendo por qué piensas eso.",
+      "context": "Students discussing a science experiment with plants."
+    },
+    {
+      "speaker_a_en": "I noticed that the explorers brought many tools, which makes me think they were prepared.",
+      "speaker_b_en": "Another point to consider is that they also had maps, and it relates to being prepared for the journey.",
+      "speaker_a_l2": "Me di cuenta de que los exploradores trajeron muchas herramientas, lo que me hace pensar que estaban preparados.",
+      "speaker_b_l2": "Otro punto a considerar es que también tenían mapas, y se relaciona con estar preparados para el viaje.",
+      "context": "Students discussing a historical exploration."
+    },
+    {
+      "speaker_a_en": "Could you please explain the last step again, so I can understand it better?",
+      "speaker_b_en": "To clarify, are you saying that we mix the two liquids after heating them?",
+      "speaker_a_l2": "¿Podrías explicar el último paso otra vez, por favor, para que pueda entenderlo mejor?",
+      "speaker_b_l2": "Para aclarar, ¿estás diciendo que mezclamos los dos líquidos después de calentarlos?",
+      "context": "Students clarifying instructions for an activity."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "What is the most important rule in our classroom, and why do you think so?",
+      "prompt_l2": "¿Cuál es la regla más importante en nuestra aula, y por qué piensas eso?",
+      "expected_response": "Students should use frames like 'I think that...' or 'In my opinion...'",
+      "visual_cue": "Image of a classroom with rules posted."
+    },
+    {
+      "prompt_en": "Look at these two pictures of different animals. Which animal would make a better pet, and why?",
+      "prompt_l2": "Mira estas dos imágenes de diferentes animales. ¿Qué animal sería una mejor mascota, y por qué?",
+      "expected_response": "Students should use frames like 'I agree/disagree...' or 'I think that...' with reasons.",
+      "visual_cue": "Two pictures: one of a dog, one of a fish."
+    },
+    {
+      "prompt_en": "We just read a story about sharing. What is one way to be a good friend, and how does it help others?",
+      "prompt_l2": "Acabamos de leer una historia sobre compartir. ¿Cuál es una forma de ser un buen amigo, y cómo ayuda a los demás?",
+      "expected_response": "Students should use frames like 'I think that...' or 'This reminds me of...' to share ideas.",
+      "visual_cue": "Image of two children sharing toys."
+    },
+    {
+      "prompt_en": "Imagine we are planning a class trip. What is one place you would like to visit, and why?",
+      "prompt_l2": "Imagina que estamos planeando una excursión de clase. ¿Qué lugar te gustaría visitar, y por qué?",
+      "expected_response": "Students should use frames like 'In my opinion...' or 'What do you think about...' to express preferences and ask others.",
+      "visual_cue": "Image of a map with a magnifying glass."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Read the question below. Write your answer using at least two different sentence frames from our list. Remember to explain your reasons.",
+      "instructions_l2": "Lee la pregunta a continuación. Escribe tu respuesta usando al menos dos marcos de oraciones diferentes de nuestra lista. Recuerda explicar tus razones.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Question: Do you think students should have homework every night? Why or why not?"
+        },
+        {
+          "id": "2",
+          "content": "Write your answer here:"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Complete the sentences using words from the word bank. Each word can only be used once. \nWord Bank: agree, because, explain, opinion, think, summarize",
+      "instructions_l2": "Completa las oraciones usando palabras del banco de palabras. Cada palabra solo puede usarse una vez. \nBanco de palabras: acuerdo, porque, explica, opinión, pienso, resumir",
+      "items": [
+        {
+          "id": "1",
+          "content": "I ______ that the story was exciting, ______ the ending was a surprise.",
+          "correct_answer": "think, because"
+        },
+        {
+          "id": "2",
+          "content": "In my ______, reading every day is important.",
+          "correct_answer": "opinion"
+        },
+        {
+          "id": "3",
+          "content": "I ______ with Maya's idea, and I also think we should add more colors.",
+          "correct_answer": "agree"
+        },
+        {
+          "id": "4",
+          "content": "Could you please ______ your drawing, so I can understand it better?",
+          "correct_answer": "explain"
+        },
+        {
+          "id": "5",
+          "content": "So, to ______, we learned about plants and animals.",
+          "correct_answer": "summarize"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use functional sentence frames to express opinions, agree, disagree, ask for clarification, and summarize key points in academic discussions.",
+    "suggested_use": "Introduce 2-3 frames at a time. Model their use with a partner or whole class. Practice in pairs or small groups using the dialogue strips and speaking prompts. Encourage students to use the frames during regular classroom discussions across subjects. The worksheets can be used for independent practice or assessment.",
+    "materials_needed": [
+      "Whiteboard or chart paper",
+      "Markers",
+      "Printed sentence frames (laminated for durability)",
+      "Printed dialogue strips",
+      "Printed speaking prompt cards",
+      "Worksheets",
+      "A relevant text, image, or topic for discussion (e.g., a short story, a science concept, a current event suitable for grade level)"
+    ],
+    "differentiation_tips": [
+      "**For struggling learners:** Provide visual cues for each frame. Allow students to use sentence starters and fill in single words. Pair them with a more proficient peer. Practice choral repetition of frames.",
+      "**For advanced learners:** Encourage them to combine frames or extend their responses with more complex reasoning. Ask them to lead small group discussions or create their own discussion questions using the frames."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:42:39.535Z",
+  "updated_at": "2026-03-11T13:42:39.535Z"
+}

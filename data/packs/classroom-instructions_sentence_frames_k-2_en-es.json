@@ -1,0 +1,190 @@
+{
+  "pack_id": "classroom_instructions_k2_en_es_001",
+  "pack_type": "sentence_frames",
+  "topic": "Classroom Instructions",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Classroom Words: Instructions for K-2",
+  "description": "This pack provides essential sentence frames for K-2 newcomer ELL students to understand and use common classroom instructions and requests. It includes functional phrases, dialogue practice, speaking prompts, and worksheets to support language acquisition in English and Spanish.",
+  "sentence_frames": [
+    {
+      "frame": "I need help.",
+      "translation": "Necesito ayuda."
+    },
+    {
+      "frame": "May I go?",
+      "translation": "¿Puedo ir?"
+    },
+    {
+      "frame": "Please sit down.",
+      "translation": "Por favor, siéntate."
+    },
+    {
+      "frame": "Look at me.",
+      "translation": "Mírame."
+    },
+    {
+      "frame": "Listen to me.",
+      "translation": "Escúchame."
+    },
+    {
+      "frame": "I can do it.",
+      "translation": "Yo puedo hacerlo."
+    },
+    {
+      "frame": "Please stand up.",
+      "translation": "Por favor, levántate."
+    },
+    {
+      "frame": "Give me ____.",
+      "translation": "Dame ____."
+    },
+    {
+      "frame": "Take your turn.",
+      "translation": "Toma tu turno."
+    },
+    {
+      "frame": "Open your book.",
+      "translation": "Abre tu libro."
+    },
+    {
+      "frame": "Close your book.",
+      "translation": "Cierra tu libro."
+    },
+    {
+      "frame": "Where is it?",
+      "translation": "¿Dónde está?"
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "I need help.",
+      "speaker_b_en": "I can help.",
+      "speaker_a_l2": "Necesito ayuda.",
+      "speaker_b_l2": "Yo puedo ayudar.",
+      "context": "A student needs assistance with an activity."
+    },
+    {
+      "speaker_a_en": "May I go?",
+      "speaker_b_en": "Yes, you may.",
+      "speaker_a_l2": "¿Puedo ir?",
+      "speaker_b_l2": "Sí, puedes ir.",
+      "context": "A student asks to leave their seat (e.g., for the restroom or water)."
+    },
+    {
+      "speaker_a_en": "Please sit down.",
+      "speaker_b_en": "Okay, I will.",
+      "speaker_a_l2": "Por favor, siéntate.",
+      "speaker_b_l2": "Está bien, lo haré.",
+      "context": "The teacher gives an instruction to the class."
+    },
+    {
+      "speaker_a_en": "Look at me.",
+      "speaker_b_en": "I see you.",
+      "speaker_a_l2": "Mírame.",
+      "speaker_b_l2": "Te veo.",
+      "context": "One student tries to get another student's attention."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "What do you say when you need help with your work?",
+      "prompt_l2": "¿Qué dices cuando necesitas ayuda con tu trabajo?",
+      "expected_response": "I need help.",
+      "visual_cue": "A child looking confused, raising their hand."
+    },
+    {
+      "prompt_en": "You want to go to the water fountain. What do you say?",
+      "prompt_l2": "Quieres ir al bebedero. ¿Qué dices?",
+      "expected_response": "May I go?",
+      "visual_cue": "A child pointing to a water fountain or door."
+    },
+    {
+      "prompt_en": "The teacher wants everyone to sit down. What does she say?",
+      "prompt_l2": "La maestra quiere que todos se sienten. ¿Qué dice ella?",
+      "expected_response": "Please sit down.",
+      "visual_cue": "Children standing, then a teacher gesture to sit, then children sitting."
+    },
+    {
+      "prompt_en": "You need a crayon from your friend. What do you say?",
+      "prompt_l2": "Necesitas un crayón de tu amigo. ¿Qué dices?",
+      "expected_response": "Give me the crayon.",
+      "visual_cue": "One child holding a crayon, another extending an empty hand."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Trace and copy the sentences. Say them aloud.",
+      "instructions_l2": "Traza y copia las oraciones. Dilos en voz alta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "I need help. ____________________",
+          "correct_answer": "I need help."
+        },
+        {
+          "id": "2",
+          "content": "Please sit down. ____________________",
+          "correct_answer": "Please sit down."
+        },
+        {
+          "id": "3",
+          "content": "Look at me. ____________________",
+          "correct_answer": "Look at me."
+        },
+        {
+          "id": "4",
+          "content": "Open your book. ____________________",
+          "correct_answer": "Open your book."
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Fill in the missing word to complete the sentence.",
+      "instructions_l2": "Rellena la palabra que falta para completar la oración.",
+      "items": [
+        {
+          "id": "1",
+          "content": "I need ______.",
+          "correct_answer": "help"
+        },
+        {
+          "id": "2",
+          "content": "Please ______ down.",
+          "correct_answer": "sit"
+        },
+        {
+          "id": "3",
+          "content": "______ your book.",
+          "correct_answer": "Open"
+        },
+        {
+          "id": "4",
+          "content": "May I ______?",
+          "correct_answer": "go"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to understand and use basic classroom instruction sentence frames to communicate their needs and respond to directions in English and Spanish.",
+    "suggested_use": "Introduce frames one by one with actions. Practice with whole group, then in pairs using dialogue strips. Use speaking prompts for individual assessment or small group discussion. Worksheets can be used for independent practice or homework. Integrate into daily classroom routines.",
+    "materials_needed": [
+      "Picture cards for each instruction",
+      "Whiteboards or sentence strips for writing practice",
+      "Real objects (e.g., book) for demonstration",
+      "Index cards for speaking prompts"
+    ],
+    "differentiation_tips": [
+      "For struggling learners: Provide visual aids for every frame. Use gestures and TPR (Total Physical Response). Pair with a strong English speaker or a peer who shares their L1.",
+      "For advanced learners: Encourage them to expand sentences (e.g., 'May I go to the restroom?'). Ask them to create their own dialogue strips using the frames."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:33:02.207Z",
+  "updated_at": "2026-03-11T13:33:02.207Z"
+}

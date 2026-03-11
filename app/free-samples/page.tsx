@@ -223,13 +223,15 @@ export default function FreeSamplesPage() {
 
                                     {/* Actions */}
                                     <div className="space-y-2 mt-auto">
-                                        <button
+                                        <a
+                                            href={`/api/download/sample/${sample.fullPackHref.split('/').pop()}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="clay-button-cta w-full text-sm flex items-center justify-center gap-2 cursor-pointer"
-                                            disabled
-                                            title="Sample PDFs coming soon"
+                                            title="Download free sample PDF"
                                         >
                                             <Download className="w-4 h-4" /> Download Free PDF
-                                        </button>
+                                        </a>
                                         <Link
                                             href={sample.fullPackHref}
                                             className="block text-center text-xs text-primary hover:underline"

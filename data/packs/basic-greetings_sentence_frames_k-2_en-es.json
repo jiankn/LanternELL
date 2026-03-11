@@ -1,0 +1,173 @@
+{
+  "pack_id": "basic-greetings-k2-en-es-001",
+  "pack_type": "sentence_frames",
+  "topic": "Basic Greetings",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Hello, Friend! K-2 Greetings & Goodbyes",
+  "description": "This pack provides K-2 ELL newcomer students with essential 3-5 word sentence frames for basic greetings, goodbyes, and simple exchanges in English and Spanish. Includes dialogue, speaking prompts, and worksheets.",
+  "sentence_frames": [
+    {
+      "frame": "Hello, [name].",
+      "translation": "Hola, [nombre]."
+    },
+    {
+      "frame": "Good morning.",
+      "translation": "Buenos días."
+    },
+    {
+      "frame": "Good afternoon.",
+      "translation": "Buenas tardes."
+    },
+    {
+      "frame": "How are you?",
+      "translation": "¿Cómo estás?"
+    },
+    {
+      "frame": "I am good.",
+      "translation": "Estoy bien."
+    },
+    {
+      "frame": "I am happy.",
+      "translation": "Estoy feliz."
+    },
+    {
+      "frame": "Thank you.",
+      "translation": "Gracias."
+    },
+    {
+      "frame": "You're welcome.",
+      "translation": "De nada."
+    },
+    {
+      "frame": "Goodbye, [name].",
+      "translation": "Adiós, [nombre]."
+    },
+    {
+      "frame": "See you soon!",
+      "translation": "¡Nos vemos pronto!"
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "Good morning.",
+      "speaker_b_en": "Good morning.",
+      "speaker_a_l2": "Buenos días.",
+      "speaker_b_l2": "Buenos días.",
+      "context": "Two friends meet in the classroom."
+    },
+    {
+      "speaker_a_en": "Hello, Maria. How are you?",
+      "speaker_b_en": "I am good. Thank you.",
+      "speaker_a_l2": "Hola, María. ¿Cómo estás?",
+      "speaker_b_l2": "Estoy bien. Gracias.",
+      "context": "Two students greet each other."
+    },
+    {
+      "speaker_a_en": "Goodbye, teacher.",
+      "speaker_b_en": "Goodbye, Ana. See you soon!",
+      "speaker_a_l2": "Adiós, maestra.",
+      "speaker_b_l2": "Adiós, Ana. ¡Nos vemos pronto!",
+      "context": "A student leaves school."
+    },
+    {
+      "speaker_a_en": "I am happy.",
+      "speaker_b_en": "That's good!",
+      "speaker_a_l2": "Estoy feliz.",
+      "speaker_b_l2": "¡Qué bien!",
+      "context": "A student shares their feeling with a classmate."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "Greet your friend in the morning.",
+      "prompt_l2": "Saluda a tu amigo por la mañana.",
+      "expected_response": "Good morning.",
+      "visual_cue": "Image of a sun rising and two children waving."
+    },
+    {
+      "prompt_en": "Ask your teacher how they are.",
+      "prompt_l2": "Pregúntale a tu maestro/a cómo está.",
+      "expected_response": "How are you?",
+      "visual_cue": "Image of a teacher smiling with a question mark above their head."
+    },
+    {
+      "prompt_en": "Tell your friend you are happy.",
+      "prompt_l2": "Dile a tu amigo que estás feliz.",
+      "expected_response": "I am happy.",
+      "visual_cue": "Image of a smiley face emoji."
+    },
+    {
+      "prompt_en": "Say thank you to a classmate.",
+      "prompt_l2": "Dale las gracias a un compañero.",
+      "expected_response": "Thank you.",
+      "visual_cue": "Image of two hands exchanging a small gift."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Draw a picture of you greeting someone. Then, write what you say.",
+      "instructions_l2": "Dibuja una imagen tuya saludando a alguien. Luego, escribe lo que dices.",
+      "items": [
+        {
+          "id": "1",
+          "content": "My greeting picture:\n\n____________________________________\n\nI say: _____________________________"
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Fill in the blank with a word from the box: (morning, you, good, thank, welcome)",
+      "instructions_l2": "Rellena el espacio en blanco con una palabra de la caja: (mañana, tú, bien, gracias, de nada)",
+      "items": [
+        {
+          "id": "1",
+          "content": "Good __________.",
+          "correct_answer": "morning"
+        },
+        {
+          "id": "2",
+          "content": "How are __________?",
+          "correct_answer": "you"
+        },
+        {
+          "id": "3",
+          "content": "I am __________.",
+          "correct_answer": "good"
+        },
+        {
+          "id": "4",
+          "content": "__________ you.",
+          "correct_answer": "Thank"
+        },
+        {
+          "id": "5",
+          "content": "You're __________.",
+          "correct_answer": "welcome"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use 3-5 word English greeting phrases (e.g., Hello, Good morning, How are you?, I am good, Goodbye) in classroom interactions and respond appropriately to basic greetings.",
+    "suggested_use": "Introduce frames during morning meeting. Practice with partner work and role-playing scenarios (e.g., meeting a new friend, greeting the principal). Display sentence frames prominently in the classroom with visual cues. Use dialogue strips for guided practice and speaking prompts for independent application. Worksheets can reinforce writing and vocabulary.",
+    "materials_needed": [
+      "Sentence frame cards (printed)",
+      "Dialogue strip printouts",
+      "Speaking prompt cards (printed with visuals)",
+      "Worksheets (printed)",
+      "Whiteboard/markers or chart paper",
+      "Puppets or stuffed animals for role-play (optional)"
+    ],
+    "differentiation_tips": [
+      "Support: Model phrases extensively with gestures. Provide individual sentence strip visuals. Pair students with a strong English speaker. Use echo reading for repetition.",
+      "Challenge: Encourage students to extend greetings (e.g., 'Good morning, how are you today?'). Have them create their own simple dialogue using two or more frames. Introduce different tones of voice for greetings."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2023-10-27T10:00:00Z",
+  "updated_at": "2023-10-27T10:00:00Z"
+}

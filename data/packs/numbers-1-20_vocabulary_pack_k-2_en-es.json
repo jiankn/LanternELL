@@ -1,0 +1,511 @@
+{
+  "pack_id": "numbers-1-20-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Numbers 1-20",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My First Numbers: 1 to 20!",
+  "description": "A comprehensive vocabulary pack designed for K-2 ELL newcomers to learn and practice numbers 1-20 in English and Spanish, featuring engaging activities and visual support.",
+  "vocabulary": [
+    {
+      "en": "one",
+      "l2": "uno",
+      "image_prompt": "One red apple"
+    },
+    {
+      "en": "two",
+      "l2": "dos",
+      "image_prompt": "Two blue birds"
+    },
+    {
+      "en": "three",
+      "l2": "tres",
+      "image_prompt": "Three green leaves"
+    },
+    {
+      "en": "four",
+      "l2": "cuatro",
+      "image_prompt": "Four yellow flowers"
+    },
+    {
+      "en": "five",
+      "l2": "cinco",
+      "image_prompt": "Five orange fish"
+    },
+    {
+      "en": "six",
+      "l2": "seis",
+      "image_prompt": "Six purple balloons"
+    },
+    {
+      "en": "seven",
+      "l2": "siete",
+      "image_prompt": "Seven red ladybugs"
+    },
+    {
+      "en": "eight",
+      "l2": "ocho",
+      "image_prompt": "Eight brown bears"
+    },
+    {
+      "en": "nine",
+      "l2": "nueve",
+      "image_prompt": "Nine pink hearts"
+    },
+    {
+      "en": "ten",
+      "l2": "diez",
+      "image_prompt": "Ten blue stars"
+    },
+    {
+      "en": "eleven",
+      "l2": "once",
+      "image_prompt": "Eleven yellow pencils"
+    },
+    {
+      "en": "twelve",
+      "l2": "doce",
+      "image_prompt": "Twelve brown eggs"
+    },
+    {
+      "en": "thirteen",
+      "l2": "trece",
+      "image_prompt": "Thirteen colorful books"
+    },
+    {
+      "en": "fourteen",
+      "l2": "catorce",
+      "image_prompt": "Fourteen chocolate chip cookies"
+    },
+    {
+      "en": "fifteen",
+      "l2": "quince",
+      "image_prompt": "Fifteen happy faces"
+    },
+    {
+      "en": "sixteen",
+      "l2": "dieciséis",
+      "image_prompt": "Sixteen small red circles"
+    },
+    {
+      "en": "seventeen",
+      "l2": "diecisiete",
+      "image_prompt": "Seventeen small blue squares"
+    },
+    {
+      "en": "eighteen",
+      "l2": "dieciocho",
+      "image_prompt": "Eighteen small green triangles"
+    },
+    {
+      "en": "nineteen",
+      "l2": "diecinueve",
+      "image_prompt": "Nineteen small yellow diamonds"
+    },
+    {
+      "en": "twenty",
+      "l2": "veinte",
+      "image_prompt": "Twenty small purple dots"
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line to match the number word to the numeral.",
+      "instructions_l2": "Dibuja una línea para unir la palabra del número con el número.",
+      "items": [
+        {
+          "id": "1",
+          "content": "one",
+          "content_l2": "uno",
+          "match_options_en": [
+            "1",
+            "3",
+            "5"
+          ],
+          "match_options_l2": [
+            "1",
+            "3",
+            "5"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "two",
+          "content_l2": "dos",
+          "match_options_en": [
+            "2",
+            "4",
+            "6"
+          ],
+          "match_options_l2": [
+            "2",
+            "4",
+            "6"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "three",
+          "content_l2": "tres",
+          "match_options_en": [
+            "3",
+            "1",
+            "2"
+          ],
+          "match_options_l2": [
+            "3",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "four",
+          "content_l2": "cuatro",
+          "match_options_en": [
+            "4",
+            "5",
+            "6"
+          ],
+          "match_options_l2": [
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        {
+          "id": "5",
+          "content": "five",
+          "content_l2": "cinco",
+          "match_options_en": [
+            "5",
+            "3",
+            "4"
+          ],
+          "match_options_l2": [
+            "5",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "id": "6",
+          "content": "six",
+          "content_l2": "seis",
+          "match_options_en": [
+            "6",
+            "7",
+            "8"
+          ],
+          "match_options_l2": [
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "id": "7",
+          "content": "seven",
+          "content_l2": "siete",
+          "match_options_en": [
+            "7",
+            "9",
+            "10"
+          ],
+          "match_options_l2": [
+            "7",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "id": "8",
+          "content": "eight",
+          "content_l2": "ocho",
+          "match_options_en": [
+            "8",
+            "6",
+            "7"
+          ],
+          "match_options_l2": [
+            "8",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "id": "9",
+          "content": "nine",
+          "content_l2": "nueve",
+          "match_options_en": [
+            "9",
+            "10",
+            "1"
+          ],
+          "match_options_l2": [
+            "9",
+            "10",
+            "1"
+          ]
+        },
+        {
+          "id": "10",
+          "content": "ten",
+          "content_l2": "diez",
+          "match_options_en": [
+            "10",
+            "8",
+            "9"
+          ],
+          "match_options_l2": [
+            "10",
+            "8",
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the number words and numerals.",
+      "instructions_l2": "Traza las palabras de los números y los números.",
+      "items": [
+        {
+          "id": "1",
+          "content": "one (1)",
+          "content_l2": "uno (1)"
+        },
+        {
+          "id": "2",
+          "content": "two (2)",
+          "content_l2": "dos (2)"
+        },
+        {
+          "id": "3",
+          "content": "three (3)",
+          "content_l2": "tres (3)"
+        },
+        {
+          "id": "4",
+          "content": "four (4)",
+          "content_l2": "cuatro (4)"
+        },
+        {
+          "id": "5",
+          "content": "five (5)",
+          "content_l2": "cinco (5)"
+        },
+        {
+          "id": "6",
+          "content": "six (6)",
+          "content_l2": "seis (6)"
+        },
+        {
+          "id": "7",
+          "content": "seven (7)",
+          "content_l2": "siete (7)"
+        },
+        {
+          "id": "8",
+          "content": "eight (8)",
+          "content_l2": "ocho (8)"
+        },
+        {
+          "id": "9",
+          "content": "nine (9)",
+          "content_l2": "nueve (9)"
+        },
+        {
+          "id": "10",
+          "content": "ten (10)",
+          "content_l2": "diez (10)"
+        },
+        {
+          "id": "11",
+          "content": "eleven (11)",
+          "content_l2": "once (11)"
+        },
+        {
+          "id": "12",
+          "content": "twelve (12)",
+          "content_l2": "doce (12)"
+        },
+        {
+          "id": "13",
+          "content": "thirteen (13)",
+          "content_l2": "trece (13)"
+        },
+        {
+          "id": "14",
+          "content": "fourteen (14)",
+          "content_l2": "catorce (14)"
+        },
+        {
+          "id": "15",
+          "content": "fifteen (15)",
+          "content_l2": "quince (15)"
+        },
+        {
+          "id": "16",
+          "content": "sixteen (16)",
+          "content_l2": "dieciséis (16)"
+        },
+        {
+          "id": "17",
+          "content": "seventeen (17)",
+          "content_l2": "diecisiete (17)"
+        },
+        {
+          "id": "18",
+          "content": "eighteen (18)",
+          "content_l2": "dieciocho (18)"
+        },
+        {
+          "id": "19",
+          "content": "nineteen (19)",
+          "content_l2": "diecinueve (19)"
+        },
+        {
+          "id": "20",
+          "content": "twenty (20)",
+          "content_l2": "veinte (20)"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the correct number of objects.",
+      "instructions_l2": "Colorea la cantidad correcta de objetos.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Color five stars.",
+          "content_l2": "Colorea cinco estrellas.",
+          "image_prompt": "10 outline stars, 5 to be colored"
+        },
+        {
+          "id": "2",
+          "content": "Color ten apples.",
+          "content_l2": "Colorea diez manzanas.",
+          "image_prompt": "15 outline apples, 10 to be colored"
+        },
+        {
+          "id": "3",
+          "content": "Color fifteen balloons.",
+          "content_l2": "Colorea quince globos.",
+          "image_prompt": "20 outline balloons, 15 to be colored"
+        },
+        {
+          "id": "4",
+          "content": "Color twenty circles.",
+          "content_l2": "Colorea veinte círculos.",
+          "image_prompt": "25 outline circles, 20 to be colored"
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Counting Fun! / ¡Contando Divertido!",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Counting Fun!",
+        "text_l2": "¡Contando Divertido!",
+        "image_prompt": "Title page with a happy child counting fingers"
+      },
+      {
+        "page_number": 2,
+        "text_en": "Here is one cat.",
+        "text_l2": "Aquí hay un gato.",
+        "image_prompt": "One cute cat"
+      },
+      {
+        "page_number": 3,
+        "text_en": "Here are two dogs.",
+        "text_l2": "Aquí hay dos perros.",
+        "image_prompt": "Two friendly dogs"
+      },
+      {
+        "page_number": 4,
+        "text_en": "Here are three birds.",
+        "text_l2": "Aquí hay tres pájaros.",
+        "image_prompt": "Three colorful birds"
+      },
+      {
+        "page_number": 5,
+        "text_en": "Here are four fish.",
+        "text_l2": "Aquí hay cuatro peces.",
+        "image_prompt": "Four swimming fish"
+      },
+      {
+        "page_number": 6,
+        "text_en": "Here are five apples.",
+        "text_l2": "Aquí hay cinco manzanas.",
+        "image_prompt": "Five red apples"
+      },
+      {
+        "page_number": 7,
+        "text_en": "Let's count to ten!",
+        "text_l2": "¡Vamos a contar hasta diez!",
+        "image_prompt": "Numerals 1-10 with small illustrations for each (e.g., 1 sun, 2 clouds)"
+      },
+      {
+        "page_number": 8,
+        "text_en": "Can you count to twenty?",
+        "text_l2": "¿Puedes contar hasta veinte?",
+        "image_prompt": "Numerals 11-20 with small illustrations for each (e.g., 11 stars, 12 moons)"
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify, count, and write numbers 1-20 in English and Spanish. They will also be able to match number words to numerals and quantities.",
+    "suggested_use": "Introduce numbers 1-10 first, then 11-20. Use flashcards for whole group and small group practice. The mini-book can be read aloud, then students can color and take home. Worksheets can be used for independent practice or in learning centers. Incorporate songs and counting games.",
+    "materials_needed": [
+      "Flashcards (number words, numerals, and quantities 1-20)",
+      "Crayons, markers, or colored pencils",
+      "Manipulatives (e.g., counting bears, unifix cubes, blocks)",
+      "Number line (1-20)",
+      "Scissors (for mini-book assembly)"
+    ],
+    "differentiation_tips": [
+      "**Support:** Provide physical manipulatives for counting. Focus on numbers 1-10 before moving to 11-20. Offer hand-over-hand guidance for tracing. Use a number line as a visual aid. Allow students to point to numbers rather than always saying them.",
+      "**Challenge:** Ask students to write sentences using numbers (e.g., 'I see seven birds.'). Introduce simple addition or subtraction problems using numbers 1-5. Encourage skip counting by 2s or 5s. Have students create their own number stories."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "one-1",
+        "2": "two-2",
+        "3": "three-3",
+        "4": "four-4",
+        "5": "five-5",
+        "6": "six-6",
+        "7": "seven-7",
+        "8": "eight-8",
+        "9": "nine-9",
+        "10": "ten-10"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Students' traced words and numerals should accurately follow the provided examples."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "5 stars colored",
+        "2": "10 apples colored",
+        "3": "15 balloons colored",
+        "4": "20 circles colored"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00.000Z",
+  "updated_at": "2024-07-30T10:00:00.000Z"
+}

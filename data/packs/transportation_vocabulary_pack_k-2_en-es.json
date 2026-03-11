@@ -1,0 +1,270 @@
+{
+  "pack_id": "transportation-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Transportation",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Let's Go! Transportation Words (K-2)",
+  "description": "A vocabulary pack for K-2 newcomer ELL students focusing on common transportation methods, featuring visual aids, a mini-book, and engaging worksheets.",
+  "vocabulary": [
+    {
+      "en": "car",
+      "l2": "coche",
+      "image_prompt": "A simple red car driving on a road."
+    },
+    {
+      "en": "bus",
+      "l2": "autobús",
+      "image_prompt": "A yellow school bus with children waving inside."
+    },
+    {
+      "en": "bike",
+      "l2": "bicicleta",
+      "image_prompt": "A child riding a blue bicycle with training wheels."
+    },
+    {
+      "en": "train",
+      "l2": "tren",
+      "image_prompt": "A colorful train with a happy face driving on tracks."
+    },
+    {
+      "en": "plane",
+      "l2": "avión",
+      "image_prompt": "A white airplane flying high in a blue sky with clouds."
+    },
+    {
+      "en": "boat",
+      "l2": "barco",
+      "image_prompt": "A small red boat sailing on calm blue water."
+    },
+    {
+      "en": "truck",
+      "l2": "camión",
+      "image_prompt": "A large green delivery truck."
+    },
+    {
+      "en": "motorcycle",
+      "l2": "motocicleta",
+      "image_prompt": "A person riding a black motorcycle on a road."
+    },
+    {
+      "en": "taxi",
+      "l2": "taxi",
+      "image_prompt": "A yellow taxi cab with a 'TAXI' sign on top."
+    },
+    {
+      "en": "fire truck",
+      "l2": "camión de bomberos",
+      "image_prompt": "A bright red fire truck with a ladder and flashing lights."
+    },
+    {
+      "en": "ambulance",
+      "l2": "ambulancia",
+      "image_prompt": "A white ambulance with a red cross symbol."
+    },
+    {
+      "en": "helicopter",
+      "l2": "helicóptero",
+      "image_prompt": "A blue helicopter with spinning blades flying in the sky."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "instructions_en": "Match the transportation word to its picture. Draw a line.",
+      "instructions_l2": "Une la palabra de transporte con su dibujo. Dibuja una línea.",
+      "worksheet_id": "ws-1",
+      "items": [
+        {
+          "id": "1",
+          "content": "car",
+          "image_prompt": "A simple red car.",
+          "correct_answer_id": "img-1"
+        },
+        {
+          "id": "2",
+          "content": "bus",
+          "image_prompt": "A yellow school bus.",
+          "correct_answer_id": "img-2"
+        },
+        {
+          "id": "3",
+          "content": "bike",
+          "image_prompt": "A child's blue bicycle.",
+          "correct_answer_id": "img-3"
+        },
+        {
+          "id": "4",
+          "content": "train",
+          "image_prompt": "A colorful train.",
+          "correct_answer_id": "img-4"
+        },
+        {
+          "id": "5",
+          "content": "plane",
+          "image_prompt": "An airplane in the sky.",
+          "correct_answer_id": "img-5"
+        },
+        {
+          "id": "6",
+          "content": "boat",
+          "image_prompt": "A small boat on water.",
+          "correct_answer_id": "img-6"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the transportation words.",
+      "instructions_l2": "Traza las palabras de transporte.",
+      "worksheet_id": "ws-2",
+      "items": [
+        {
+          "id": "1",
+          "content": "truck",
+          "content_l2": "camión"
+        },
+        {
+          "id": "2",
+          "content": "motorcycle",
+          "content_l2": "motocicleta"
+        },
+        {
+          "id": "3",
+          "content": "taxi",
+          "content_l2": "taxi"
+        },
+        {
+          "id": "4",
+          "content": "fire truck",
+          "content_l2": "camión de bomberos"
+        },
+        {
+          "id": "5",
+          "content": "ambulance",
+          "content_l2": "ambulancia"
+        },
+        {
+          "id": "6",
+          "content": "helicopter",
+          "content_l2": "helicóptero"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures and say the word.",
+      "instructions_l2": "Colorea los dibujos y di la palabra.",
+      "worksheet_id": "ws-3",
+      "items": [
+        {
+          "id": "1",
+          "content": "car",
+          "image_prompt": "An outline of a car to color."
+        },
+        {
+          "id": "2",
+          "content": "bus",
+          "image_prompt": "An outline of a bus to color."
+        },
+        {
+          "id": "3",
+          "content": "bike",
+          "image_prompt": "An outline of a bicycle to color."
+        },
+        {
+          "id": "4",
+          "content": "train",
+          "image_prompt": "An outline of a train to color."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "Let's Go! ¡Vamos!",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "Let's Go! Transportation",
+        "text_l2": "¡Vamos! El Transporte",
+        "image_prompt": "A collage of different transportation vehicles: car, bus, plane, boat."
+      },
+      {
+        "page_number": 2,
+        "text_en": "I see a car.",
+        "text_l2": "Veo un coche.",
+        "image_prompt": "A red car driving on a road."
+      },
+      {
+        "page_number": 3,
+        "text_en": "The bus is big.",
+        "text_l2": "El autobús es grande.",
+        "image_prompt": "A yellow school bus."
+      },
+      {
+        "page_number": 4,
+        "text_en": "I ride my bike.",
+        "text_l2": "Monto mi bicicleta.",
+        "image_prompt": "A child riding a blue bicycle."
+      },
+      {
+        "page_number": 5,
+        "text_en": "The train goes fast.",
+        "text_l2": "El tren va rápido.",
+        "image_prompt": "A fast-moving train."
+      },
+      {
+        "page_number": 6,
+        "text_en": "A plane flies high.",
+        "text_l2": "Un avión vuela alto.",
+        "image_prompt": "An airplane flying in the sky."
+      },
+      {
+        "page_number": 7,
+        "text_en": "A boat sails on water.",
+        "text_l2": "Un barco navega en el agua.",
+        "image_prompt": "A small boat on water."
+      },
+      {
+        "page_number": 8,
+        "text_en": "What is your favorite?",
+        "text_l2": "¿Cuál es tu favorito?",
+        "image_prompt": "A question mark surrounded by small images of various transportation."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name at least 8 common modes of transportation in English and Spanish.",
+    "suggested_use": "Introduce vocabulary with flashcards and realia. Read the mini-book aloud, pointing to pictures. Have students repeat words. Use worksheets for practice and reinforcement. Encourage students to share their favorite transportation.",
+    "materials_needed": [
+      "Flashcards of transportation vehicles",
+      "Markers or crayons",
+      "Printed mini-books (one per student)",
+      "Printed worksheets (one set per student)",
+      "Optional: Toy vehicles for hands-on exploration"
+    ],
+    "differentiation_tips": [
+      "**For emerging ELLs:** Provide strong visual support (pictures, gestures). Focus on receptive vocabulary (pointing to the correct picture when named). Use sentence frames like 'It is a ____.'",
+      "**For developing ELLs:** Encourage speaking in short sentences. Pair with a more proficient student for peer support during activities. Use 'I see a ____.' or 'I like the ____.'",
+      "**For all students:** Incorporate total physical response (TPR) activities, e.g., 'Pretend to drive a car,' 'Fly like a plane.' Sing a transportation song."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "img-1",
+        "2": "img-2",
+        "3": "img-3",
+        "4": "img-4",
+        "5": "img-5",
+        "6": "img-6"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2024-07-30T10:00:00Z",
+  "updated_at": "2024-07-30T10:00:00Z"
+}

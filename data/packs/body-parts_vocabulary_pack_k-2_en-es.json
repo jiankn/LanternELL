@@ -1,0 +1,296 @@
+{
+  "pack_id": "body-parts-k2-en-es-1",
+  "pack_type": "vocabulary_pack",
+  "topic": "Body Parts",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Body, My Words: Body Parts Vocabulary Pack",
+  "description": "An engaging vocabulary pack designed for K-2 ELL newcomers to learn and identify basic body parts in English and Spanish through visual aids, tracing, matching, and a simple mini-book.",
+  "vocabulary": [
+    {
+      "en": "head",
+      "l2": "cabeza",
+      "image_prompt": "A child's head with a smiling face."
+    },
+    {
+      "en": "hair",
+      "l2": "pelo",
+      "image_prompt": "A child's head showing brown hair."
+    },
+    {
+      "en": "face",
+      "l2": "cara",
+      "image_prompt": "A close-up of a child's happy face."
+    },
+    {
+      "en": "eye",
+      "l2": "ojo",
+      "image_prompt": "A single child's eye looking forward."
+    },
+    {
+      "en": "ear",
+      "l2": "oreja",
+      "image_prompt": "A child's ear."
+    },
+    {
+      "en": "nose",
+      "l2": "nariz",
+      "image_prompt": "A child's nose."
+    },
+    {
+      "en": "mouth",
+      "l2": "boca",
+      "image_prompt": "A child's mouth smiling, showing teeth."
+    },
+    {
+      "en": "arm",
+      "l2": "brazo",
+      "image_prompt": "A child's arm bent at the elbow."
+    },
+    {
+      "en": "hand",
+      "l2": "mano",
+      "image_prompt": "A child's open hand."
+    },
+    {
+      "en": "leg",
+      "l2": "pierna",
+      "image_prompt": "A child's leg, from hip to foot."
+    },
+    {
+      "en": "foot",
+      "l2": "pie",
+      "image_prompt": "A child's bare foot."
+    },
+    {
+      "en": "tummy",
+      "l2": "barriga",
+      "image_prompt": "A child's belly button area."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "matching",
+      "worksheet_id": "ws-1",
+      "instructions_en": "Draw a line from the English word to the correct picture.",
+      "instructions_l2": "Dibuja una línea de la palabra en inglés a la imagen correcta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "head",
+          "image_prompt": "A child's head",
+          "correct_answer": "A child's head"
+        },
+        {
+          "id": "2",
+          "content": "eye",
+          "image_prompt": "A single child's eye",
+          "correct_answer": "A single child's eye"
+        },
+        {
+          "id": "3",
+          "content": "hand",
+          "image_prompt": "A child's open hand",
+          "correct_answer": "A child's open hand"
+        },
+        {
+          "id": "4",
+          "content": "leg",
+          "image_prompt": "A child's leg",
+          "correct_answer": "A child's leg"
+        },
+        {
+          "id": "5",
+          "content": "nose",
+          "image_prompt": "A child's nose",
+          "correct_answer": "A child's nose"
+        },
+        {
+          "id": "6",
+          "content": "mouth",
+          "image_prompt": "A child's smiling mouth",
+          "correct_answer": "A child's smiling mouth"
+        }
+      ]
+    },
+    {
+      "type": "tracing",
+      "worksheet_id": "ws-2",
+      "instructions_en": "Trace the English words for each body part. Say the words aloud.",
+      "instructions_l2": "Traza las palabras en inglés para cada parte del cuerpo. Di las palabras en voz alta.",
+      "items": [
+        {
+          "id": "1",
+          "content": "head",
+          "content_l2": "cabeza"
+        },
+        {
+          "id": "2",
+          "content": "ear",
+          "content_l2": "oreja"
+        },
+        {
+          "id": "3",
+          "content": "arm",
+          "content_l2": "brazo"
+        },
+        {
+          "id": "4",
+          "content": "foot",
+          "content_l2": "pie"
+        },
+        {
+          "id": "5",
+          "content": "hair",
+          "content_l2": "pelo"
+        },
+        {
+          "id": "6",
+          "content": "face",
+          "content_l2": "cara"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "worksheet_id": "ws-3",
+      "instructions_en": "Color the picture. Then, label the body parts using the words provided.",
+      "instructions_l2": "Colorea el dibujo. Luego, etiqueta las partes del cuerpo usando las palabras proporcionadas.",
+      "items": [
+        {
+          "id": "1",
+          "content": "head",
+          "image_prompt": "An outline of a child with arrows pointing to the head."
+        },
+        {
+          "id": "2",
+          "content": "arm",
+          "image_prompt": "An outline of a child with arrows pointing to an arm."
+        },
+        {
+          "id": "3",
+          "content": "hand",
+          "image_prompt": "An outline of a child with arrows pointing to a hand."
+        },
+        {
+          "id": "4",
+          "content": "leg",
+          "image_prompt": "An outline of a child with arrows pointing to a leg."
+        },
+        {
+          "id": "5",
+          "content": "foot",
+          "image_prompt": "An outline of a child with arrows pointing to a foot."
+        },
+        {
+          "id": "6",
+          "content": "tummy",
+          "image_prompt": "An outline of a child with arrows pointing to the tummy area."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Amazing Body / Mi Cuerpo Asombroso",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Amazing Body",
+        "text_l2": "Mi Cuerpo Asombroso",
+        "image_prompt": "A happy child standing, pointing to their body."
+      },
+      {
+        "page_number": 2,
+        "text_en": "This is my head. I think with my head.",
+        "text_l2": "Esta es mi cabeza. Pienso con mi cabeza.",
+        "image_prompt": "A child touching their head."
+      },
+      {
+        "page_number": 3,
+        "text_en": "These are my eyes. I see with my eyes.",
+        "text_l2": "Estos son mis ojos. Veo con mis ojos.",
+        "image_prompt": "A child pointing to their eyes, looking curious."
+      },
+      {
+        "page_number": 4,
+        "text_en": "This is my nose. I smell with my nose.",
+        "text_l2": "Esta es mi nariz. Huelo con mi nariz.",
+        "image_prompt": "A child sniffing a flower."
+      },
+      {
+        "page_number": 5,
+        "text_en": "This is my mouth. I eat and talk with my mouth.",
+        "text_l2": "Esta es mi boca. Como y hablo con mi boca.",
+        "image_prompt": "A child eating an apple."
+      },
+      {
+        "page_number": 6,
+        "text_en": "These are my hands. I clap with my hands.",
+        "text_l2": "Estas son mis manos. Aplaudo con mis manos.",
+        "image_prompt": "A child clapping their hands."
+      },
+      {
+        "page_number": 7,
+        "text_en": "These are my legs. I run with my legs.",
+        "text_l2": "Estas son mis piernas. Corro con mis piernas.",
+        "image_prompt": "A child running happily."
+      },
+      {
+        "page_number": 8,
+        "text_en": "These are my feet. I kick with my feet.",
+        "text_l2": "Estos son mis pies. Pateo con mis pies.",
+        "image_prompt": "A child kicking a ball."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name 12 basic body parts in English and Spanish, and use them in simple sentences.",
+    "suggested_use": "Introduce vocabulary using flashcards and gestures. Use the mini-book for shared reading, then allow students to color and assemble their own. Worksheets can be used for individual practice, small group work, or as homework. Encourage Total Physical Response (TPR) by asking students to point to body parts.",
+    "materials_needed": [
+      "Pencils",
+      "Crayons",
+      "Scissors",
+      "Glue sticks (for mini-book)",
+      "Optional: Body parts flashcards",
+      "Optional: A large picture or doll to label body parts"
+    ],
+    "differentiation_tips": [
+      "**For emerging learners:** Provide extra visual support and model gestures. Focus on 3-5 core words initially. Allow students to point instead of speaking.",
+      "**For developing learners:** Encourage full sentence responses. Use 'Simon Says' to practice body part vocabulary. Provide sentence frames for the mini-book pages.",
+      "**For advanced learners:** Ask students to describe the function of each body part. Introduce additional body parts (e.g., elbow, knee, fingers, toes). Have them draw and label a full person."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "head (match to 'A child's head')",
+        "2": "eye (match to 'A single child's eye')",
+        "3": "hand (match to 'A child's open hand')",
+        "4": "leg (match to 'A child's leg')",
+        "5": "nose (match to 'A child's nose')",
+        "6": "mouth (match to 'A child's smiling mouth')"
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": "Tracing worksheet, answers are self-evident from tracing the provided words."
+    },
+    {
+      "worksheet_id": "ws-3",
+      "answers": {
+        "1": "head",
+        "2": "arm",
+        "3": "hand",
+        "4": "leg",
+        "5": "foot",
+        "6": "tummy"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.503Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

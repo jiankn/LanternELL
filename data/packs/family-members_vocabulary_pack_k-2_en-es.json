@@ -1,0 +1,286 @@
+{
+  "pack_id": "fm-k2-en-es-001",
+  "pack_type": "vocabulary_pack",
+  "topic": "Family Members",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "My Family: Learning English and Spanish",
+  "description": "A vocabulary pack for K-2 ELL newcomer students to learn common family members in English and Spanish, featuring a mini-book and three interactive worksheets.",
+  "vocabulary": [
+    {
+      "en": "Mom",
+      "l2": "Mamá",
+      "image_prompt": "A friendly woman with a warm smile, representing a mother."
+    },
+    {
+      "en": "Dad",
+      "l2": "Papá",
+      "image_prompt": "A kind man with a gentle smile, representing a father."
+    },
+    {
+      "en": "Sister",
+      "l2": "Hermana",
+      "image_prompt": "A young girl playing, representing a sister."
+    },
+    {
+      "en": "Brother",
+      "l2": "Hermano",
+      "image_prompt": "A young boy playing, representing a brother."
+    },
+    {
+      "en": "Grandma",
+      "l2": "Abuela",
+      "image_prompt": "An elderly woman with glasses and a kind expression, representing a grandmother."
+    },
+    {
+      "en": "Grandpa",
+      "l2": "Abuelo",
+      "image_prompt": "An elderly man with a warm smile, representing a grandfather."
+    },
+    {
+      "en": "Baby",
+      "l2": "Bebé",
+      "image_prompt": "A happy baby crawling or sitting."
+    },
+    {
+      "en": "Family",
+      "l2": "Familia",
+      "image_prompt": "A diverse group of people (mom, dad, kids) holding hands, smiling."
+    },
+    {
+      "en": "Aunt",
+      "l2": "Tía",
+      "image_prompt": "A friendly woman standing next to a child, representing an aunt."
+    },
+    {
+      "en": "Uncle",
+      "l2": "Tío",
+      "image_prompt": "A friendly man standing next to a child, representing an uncle."
+    },
+    {
+      "en": "Cousin (boy)",
+      "l2": "Primo",
+      "image_prompt": "A young boy playing with another child, representing a male cousin."
+    },
+    {
+      "en": "Cousin (girl)",
+      "l2": "Prima",
+      "image_prompt": "A young girl playing with another child, representing a female cousin."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "tracing",
+      "instructions_en": "Trace the words for family members.",
+      "instructions_l2": "Traza las palabras de los miembros de la familia.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Mom",
+          "content_l2": "Mamá"
+        },
+        {
+          "id": "2",
+          "content": "Dad",
+          "content_l2": "Papá"
+        },
+        {
+          "id": "3",
+          "content": "Sister",
+          "content_l2": "Hermana"
+        },
+        {
+          "id": "4",
+          "content": "Brother",
+          "content_l2": "Hermano"
+        },
+        {
+          "id": "5",
+          "content": "Grandma",
+          "content_l2": "Abuela"
+        },
+        {
+          "id": "6",
+          "content": "Grandpa",
+          "content_l2": "Abuelo"
+        },
+        {
+          "id": "7",
+          "content": "Baby",
+          "content_l2": "Bebé"
+        },
+        {
+          "id": "8",
+          "content": "Family",
+          "content_l2": "Familia"
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "instructions_en": "Draw a line from the English word to its picture.",
+      "instructions_l2": "Dibuja una línea desde la palabra en inglés hasta su imagen.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Mom",
+          "image_prompt": "A friendly woman with a warm smile.",
+          "correct_answer": "image_Mom"
+        },
+        {
+          "id": "2",
+          "content": "Dad",
+          "image_prompt": "A kind man with a gentle smile.",
+          "correct_answer": "image_Dad"
+        },
+        {
+          "id": "3",
+          "content": "Sister",
+          "image_prompt": "A young girl playing.",
+          "correct_answer": "image_Sister"
+        },
+        {
+          "id": "4",
+          "content": "Brother",
+          "image_prompt": "A young boy playing.",
+          "correct_answer": "image_Brother"
+        },
+        {
+          "id": "5",
+          "content": "Aunt",
+          "image_prompt": "A friendly woman standing next to a child.",
+          "correct_answer": "image_Aunt"
+        },
+        {
+          "id": "6",
+          "content": "Uncle",
+          "image_prompt": "A friendly man standing next to a child.",
+          "correct_answer": "image_Uncle"
+        }
+      ]
+    },
+    {
+      "type": "coloring",
+      "instructions_en": "Color the pictures of the family members.",
+      "instructions_l2": "Colorea los dibujos de los miembros de la familia.",
+      "items": [
+        {
+          "id": "1",
+          "content": "A picture of a family (mom, dad, two children) smiling together."
+        },
+        {
+          "id": "2",
+          "content": "A picture of a mom hugging a child."
+        },
+        {
+          "id": "3",
+          "content": "A picture of a dad playing with a child."
+        },
+        {
+          "id": "4",
+          "content": "A picture of a girl with a bow, representing a sister."
+        },
+        {
+          "id": "5",
+          "content": "A picture of a boy with a toy car, representing a brother."
+        },
+        {
+          "id": "6",
+          "content": "A picture of a grandma reading a book."
+        },
+        {
+          "id": "7",
+          "content": "A picture of a grandpa telling a story."
+        }
+      ]
+    }
+  ],
+  "mini_book": {
+    "title": "My Family / Mi Familia",
+    "pages": [
+      {
+        "page_number": 1,
+        "text_en": "My Family / Mi Familia",
+        "text_l2": "Mi Familia / My Family",
+        "image_prompt": "A drawing of a happy family (mom, dad, two children) smiling together."
+      },
+      {
+        "page_number": 2,
+        "text_en": "This is my family. / Esta es mi familia.",
+        "text_l2": "Esta es mi familia. / This is my family.",
+        "image_prompt": "A drawing of a diverse family (mom, dad, two children) smiling."
+      },
+      {
+        "page_number": 3,
+        "text_en": "This is my Mom. / Esta es mi Mamá.",
+        "text_l2": "Esta es mi Mamá. / This is my Mom.",
+        "image_prompt": "A drawing of a kind mom."
+      },
+      {
+        "page_number": 4,
+        "text_en": "This is my Dad. / Este es mi Papá.",
+        "text_l2": "Este es mi Papá. / This is my Dad.",
+        "image_prompt": "A drawing of a friendly dad."
+      },
+      {
+        "page_number": 5,
+        "text_en": "This is my Sister. / Esta es mi Hermana.",
+        "text_l2": "Esta es mi Hermana. / This is my Sister.",
+        "image_prompt": "A drawing of a happy sister."
+      },
+      {
+        "page_number": 6,
+        "text_en": "This is my Brother. / Este es mi Hermano.",
+        "text_l2": "Este es mi Hermano. / This is my Brother.",
+        "image_prompt": "A drawing of a playful brother."
+      },
+      {
+        "page_number": 7,
+        "text_en": "This is my Grandma. / Esta es mi Abuela.",
+        "text_l2": "Esta es mi Abuela. / This is my Grandma.",
+        "image_prompt": "A drawing of a sweet grandma."
+      },
+      {
+        "page_number": 8,
+        "text_en": "This is my Grandpa. / Este es mi Abuelo.",
+        "text_l2": "Este es mi Abuelo. / This is my Grandpa.",
+        "image_prompt": "A drawing of a kind grandpa."
+      }
+    ]
+  },
+  "teacher_notes": {
+    "objective": "Students will be able to identify and name common family members in English and Spanish, using simple sentences.",
+    "suggested_use": "Introduce vocabulary with flashcards and realia. Use the mini-book for shared reading and individual practice. Worksheets can be completed independently or in small groups. Encourage students to talk about their own families.",
+    "materials_needed": [
+      "Pencils",
+      "Crayons",
+      "Scissors (for mini-book)",
+      "Glue sticks (for mini-book)",
+      "Flashcards of family members (optional)",
+      "Picture dictionary (optional)"
+    ],
+    "differentiation_tips": [
+      "For emerging students: Provide sentence frames ('This is my ____.') and point to pictures. Allow students to only identify words in their stronger language first.",
+      "For developing students: Encourage them to use both English and Spanish words. Ask them to describe one family member using an adjective.",
+      "For expanding students: Have them create their own sentences about their family members. Ask them to draw and label additional family members not covered in the pack (e.g., pets)."
+    ]
+  },
+  "answer_key": [
+    {
+      "worksheet_id": "ws-matching-1",
+      "answers": {
+        "1": "image_Mom",
+        "2": "image_Dad",
+        "3": "image_Sister",
+        "4": "image_Brother",
+        "5": "image_Aunt",
+        "6": "image_Uncle"
+      }
+    }
+  ],
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:12:44.503Z",
+  "updated_at": "2026-03-11T13:12:44.504Z"
+}

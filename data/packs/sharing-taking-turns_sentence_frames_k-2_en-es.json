@@ -1,0 +1,172 @@
+{
+  "pack_id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+  "pack_type": "sentence_frames",
+  "topic": "Sharing & Taking Turns",
+  "age_band": "K-2",
+  "language_pair": "en-es",
+  "target_user": "ELL newcomer K-2",
+  "title": "Sharing and Taking Turns: Classroom Communication Frames (K-2)",
+  "description": "Functional sentence frames designed to help K-2 ELL newcomers communicate effectively about sharing and taking turns in the classroom, with English and Spanish translations.",
+  "sentence_frames": [
+    {
+      "frame": "Can I play?",
+      "translation": "¿Puedo jugar?"
+    },
+    {
+      "frame": "My turn, please.",
+      "translation": "Mi turno, por favor."
+    },
+    {
+      "frame": "Your turn now.",
+      "translation": "Tu turno ahora."
+    },
+    {
+      "frame": "Let's share.",
+      "translation": "Vamos a compartir."
+    },
+    {
+      "frame": "I can share.",
+      "translation": "Puedo compartir."
+    },
+    {
+      "frame": "Wait for me.",
+      "translation": "Espérame."
+    },
+    {
+      "frame": "Thank you for sharing.",
+      "translation": "Gracias por compartir."
+    },
+    {
+      "frame": "Here you go.",
+      "translation": "Aquí tienes."
+    }
+  ],
+  "dialogue_strips": [
+    {
+      "speaker_a_en": "Can I play?",
+      "speaker_b_en": "Yes, you can!",
+      "speaker_a_l2": "¿Puedo jugar?",
+      "speaker_b_l2": "¡Sí, puedes!",
+      "context": "A child wants to join a game."
+    },
+    {
+      "speaker_a_en": "My turn, please.",
+      "speaker_b_en": "Okay, your turn now.",
+      "speaker_a_l2": "Mi turno, por favor.",
+      "speaker_b_l2": "Está bien, tu turno ahora.",
+      "context": "A child asks for a toy another child is using."
+    },
+    {
+      "speaker_a_en": "Let's share.",
+      "speaker_b_en": "I can share!",
+      "speaker_a_l2": "Vamos a compartir.",
+      "speaker_b_l2": "¡Puedo compartir!",
+      "context": "Two children are playing with building blocks."
+    },
+    {
+      "speaker_a_en": "Here you go.",
+      "speaker_b_en": "Thank you for sharing.",
+      "speaker_a_l2": "Aquí tienes.",
+      "speaker_b_l2": "Gracias por compartir.",
+      "context": "One child hands a toy to another child."
+    }
+  ],
+  "speaking_prompts": [
+    {
+      "prompt_en": "What do you say if you want to play with a friend?",
+      "prompt_l2": "¿Qué dices si quieres jugar con un amigo?",
+      "expected_response": "Can I play?",
+      "visual_cue": "Picture of two children playing with a toy, and one child looking at them."
+    },
+    {
+      "prompt_en": "What do you say when it's your turn for a toy?",
+      "prompt_l2": "¿Qué dices cuando es tu turno para un juguete?",
+      "expected_response": "My turn, please.",
+      "visual_cue": "Picture of a child pointing to themselves next to a toy, with a timer nearby."
+    },
+    {
+      "prompt_en": "What can you say when you give a toy to a friend?",
+      "prompt_l2": "¿Qué puedes decir cuando le das un juguete a un amigo?",
+      "expected_response": "Here you go.",
+      "visual_cue": "Picture of a child handing a toy to another child."
+    },
+    {
+      "prompt_en": "What do you say if someone shares with you?",
+      "prompt_l2": "¿Qué dices si alguien comparte contigo?",
+      "expected_response": "Thank you for sharing.",
+      "visual_cue": "Picture of two children happily playing together with a shared toy."
+    }
+  ],
+  "worksheets": [
+    {
+      "type": "writing",
+      "instructions_en": "Trace the sentence. Then, write it on your own.",
+      "instructions_l2": "Traza la oración. Luego, escríbela tú mismo.",
+      "items": [
+        {
+          "id": "1",
+          "content": "Can I play?"
+        },
+        {
+          "id": "2",
+          "content": "My turn, please."
+        },
+        {
+          "id": "3",
+          "content": "Let's share."
+        },
+        {
+          "id": "4",
+          "content": "Thank you for sharing."
+        }
+      ]
+    },
+    {
+      "type": "fill-blank",
+      "instructions_en": "Fill in the blank with a word from the box. (play, turn, share, go)",
+      "instructions_l2": "Rellena el espacio en blanco con una palabra de la caja. (jugar, turno, compartir, tienes)",
+      "items": [
+        {
+          "id": "1",
+          "content": "Can I _______?",
+          "correct_answer": "play"
+        },
+        {
+          "id": "2",
+          "content": "My _______, please.",
+          "correct_answer": "turn"
+        },
+        {
+          "id": "3",
+          "content": "Let's _______.",
+          "correct_answer": "share"
+        },
+        {
+          "id": "4",
+          "content": "Here you _______.",
+          "correct_answer": "go"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": {
+    "objective": "Students will be able to use simple sentence frames to request to play, ask for a turn, offer to share, and express gratitude in English and Spanish.",
+    "suggested_use": "Introduce one frame at a time. Model the phrases using puppets or role-playing. Practice in small groups and whole group settings. Integrate into daily classroom routines during free play or group activities. Use the dialogue strips for partner practice and speaking prompts for individual assessment.",
+    "materials_needed": [
+      "Puppets or stuffed animals",
+      "Classroom toys (blocks, cars, dolls)",
+      "Picture cards matching visual cues",
+      "Sentence frame cards (for display)",
+      "Whiteboard or chart paper"
+    ],
+    "differentiation_tips": [
+      "Provide visual aids for all frames (e.g., icons, photos).",
+      "For students needing more support, focus on 1-2 frames initially and use hand gestures.",
+      "For advanced students, encourage them to initiate conversations using the frames without prompting and expand on their responses (e.g., 'Yes, you can play with the red car.')."
+    ]
+  },
+  "license": "personal-classroom-use",
+  "version": "1.0",
+  "created_at": "2026-03-11T13:33:02.207Z",
+  "updated_at": "2026-03-11T13:33:02.207Z"
+}
