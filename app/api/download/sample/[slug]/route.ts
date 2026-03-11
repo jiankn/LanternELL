@@ -17,13 +17,18 @@ export async function GET(
     }
 
     try {
-        // Look up resource
+        // Look up resource via product slug -> product_resources -> resources
         const resource = await queryOne<{
             title: string;
             sample_pdf_url: string | null;
         }>(
-            'SELECT title, sample_pdf_url FROM resources WHERE slug = ?',
-            [slug]
+            `SELECT r.title, r.sample_pdf_url 
+             FROM resources r
+             LEFT JOIN product_resources pr ON pr.resource_id = r.id
+             LEFT JOIN products p ON p.id = pr.product_id
+             WHERE p.slug = ? OR r.slug = ?
+             LIMIT 1`,
+            [slug, slug]
         );
 
         if (!resource) {
