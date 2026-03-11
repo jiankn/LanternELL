@@ -44,14 +44,27 @@ for (const p of pkgPaths) {
   if (original) backups.push({ path: p, original });
 }
 
+function runWithRetry(cmd, maxRetries = 3) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      run(cmd);
+      return;
+    } catch (e) {
+      if (attempt === maxRetries) throw e;
+      console.warn(`\nAttempt ${attempt}/${maxRetries} failed, retrying in 5s...\n`);
+      execSync('node -e "Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,5000)"');
+    }
+  }
+}
+
 try {
   // Build: next build + opennext bundle -> .open-next/
   run("npx @opennextjs/cloudflare build --dangerouslyUseUnsupportedNextVersion");
   console.log("build done\n");
 
   // Deploy: populate R2 cache + wrangler deploy
-  // Use opennextjs-cloudflare deploy directly (not wrangler deploy which re-detects OpenNext)
-  run("npx @opennextjs/cloudflare deploy");
+  // R2 bulk put is experimental and may intermittently 500, so retry up to 3 times
+  runWithRetry("npx @opennextjs/cloudflare deploy", 3);
   console.log("\ndeploy done!");
 } catch (e) {
   console.error("failed:", e.message);
