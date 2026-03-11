@@ -69,9 +69,9 @@ export function ShopClient() {
   const searchParams = useSearchParams()
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState(searchParams.get('filter') || 'all')
+  const [filter, setFilter] = useState(searchParams?.get('filter') || 'all')
   const [searchQuery, setSearchQuery] = useState('')
-  const [packType, setPackType] = useState(searchParams.get('type') || '')
+  const [packType, setPackType] = useState(searchParams?.get('type') || '')
   const [language, setLanguage] = useState('')
 
   const fetchProducts = useCallback(async () => {
@@ -143,7 +143,7 @@ export function ShopClient() {
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer ${filter === f.key
                   ? 'bg-primary text-white shadow-clay-button'
                   : 'bg-white text-text-primary hover:bg-primary/10'
-                }`}
+                  }`}
               >
                 {f.label}
               </button>
@@ -193,7 +193,7 @@ export function ShopClient() {
                         : product.type === 'membership'
                           ? 'bg-cta/10 text-cta bg-white/90'
                           : 'bg-primary/10 text-primary bg-white/90'
-                      }`}>
+                        }`}>
                         {product.type === 'membership' ? 'Membership' : product.type.toUpperCase()}
                       </span>
                     </div>
