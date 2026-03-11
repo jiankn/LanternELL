@@ -1,0 +1,257 @@
+
+ 鉀咃笍 wrangler 4.71.0 (update available 4.72.0)
+鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+Resource location: remote 
+
+馃寑 Executing on remote database lanternell-prod (bd811246-1a4c-413b-a10a-d3c6a4e65654):
+馃寑 To execute on your local development database, remove the --remote flag from your wrangler command.
+馃殻 Executed 1 command in 0.32ms
+[
+  {
+    "results": [
+      {
+        "slug": "classroom-objects-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/classroom-objects_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/classroom-objects_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "colors-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/colors_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/colors_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "numbers-1-20-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/numbers-1-20_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/numbers-1-20_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "shapes-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/shapes_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/shapes_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "animals-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/animals_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/animals_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "food-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/food_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/food_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "family-members-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/family-members_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/family-members_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "body-parts-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/body-parts_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/body-parts_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "weather-and-seasons-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/weather-seasons_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/weather-seasons_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "clothes-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/clothes_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/clothes_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "classroom-furniture-classroom-labels-k-2-en-es",
+        "pdf_url": "pdfs/classroom-furniture_classroom_labels_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/classroom-furniture_classroom_labels_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "school-supplies-classroom-labels-k-2-en-es",
+        "pdf_url": "pdfs/school-supplies_classroom_labels_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/school-supplies_classroom_labels_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "classroom-areas-classroom-labels-k-2-en-es",
+        "pdf_url": "pdfs/classroom-areas_classroom_labels_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/classroom-areas_classroom_labels_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "days-and-months-classroom-labels-k-2-en-es",
+        "pdf_url": "pdfs/days-months_classroom_labels_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/days-months_classroom_labels_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "time-and-clock-classroom-labels-k-2-en-es",
+        "pdf_url": "pdfs/time-clock_classroom_labels_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/time-clock_classroom_labels_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "basic-greetings-sentence-frames-k-2-en-es",
+        "pdf_url": "pdfs/basic-greetings_sentence_frames_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/basic-greetings_sentence_frames_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "asking-for-help-sentence-frames-k-2-en-es",
+        "pdf_url": "pdfs/asking-for-help_sentence_frames_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/asking-for-help_sentence_frames_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "expressing-feelings-sentence-frames-k-2-en-es",
+        "pdf_url": "pdfs/expressing-feelings_sentence_frames_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/expressing-feelings_sentence_frames_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "classroom-instructions-sentence-frames-k-2-en-es",
+        "pdf_url": "pdfs/classroom-instructions_sentence_frames_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/classroom-instructions_sentence_frames_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "sharing-and-taking-turns-sentence-frames-k-2-en-es",
+        "pdf_url": "pdfs/sharing-taking-turns_sentence_frames_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/sharing-taking-turns_sentence_frames_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "transportation-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/transportation_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/transportation_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "places-in-community-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/places-in-community_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/places-in-community_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "feelings-and-emotions-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/feelings-emotions_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/feelings-emotions_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "action-verbs-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/action-verbs_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/action-verbs_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "opposites-vocabulary-pack-k-2-en-es",
+        "pdf_url": "pdfs/opposites_vocabulary_pack_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/opposites_vocabulary_pack_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "science-vocabulary-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/science-vocabulary_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/science-vocabulary_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "math-vocabulary-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/math-vocabulary_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/math-vocabulary_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "social-studies-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/social-studies_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/social-studies_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "reading-and-writing-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/reading-writing_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/reading-writing_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "health-and-safety-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/health-safety_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/health-safety_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "geography-and-maps-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/geography-maps_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/geography-maps_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "technology-and-computers-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/technology-computers_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/technology-computers_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "arts-and-music-vocabulary-pack-3-5-en-es",
+        "pdf_url": "pdfs/arts-music_vocabulary_pack_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/arts-music_vocabulary_pack_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "academic-discussion-sentence-frames-3-5-en-es",
+        "pdf_url": "pdfs/academic-discussion_sentence_frames_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/academic-discussion_sentence_frames_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "writing-prompts-and-responses-sentence-frames-3-5-en-es",
+        "pdf_url": "pdfs/writing-prompts-responses_sentence_frames_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/writing-prompts-responses_sentence_frames_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "book-reports-and-reading-logs-sentence-frames-3-5-en-es",
+        "pdf_url": "pdfs/book-reports-reading-logs_sentence_frames_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/book-reports-reading-logs_sentence_frames_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "science-lab-labels-classroom-labels-3-5-en-es",
+        "pdf_url": "pdfs/science-lab-labels_classroom_labels_3-5_en-es.pdf",
+        "sample_pdf_url": "samples/science-lab-labels_classroom_labels_3-5_en-es-sample.pdf"
+      },
+      {
+        "slug": "academic-vocabulary-vocabulary-pack-6-8-en-es",
+        "pdf_url": "pdfs/academic-vocabulary_vocabulary_pack_6-8_en-es.pdf",
+        "sample_pdf_url": "samples/academic-vocabulary_vocabulary_pack_6-8_en-es-sample.pdf"
+      },
+      {
+        "slug": "lab-reports-and-scientific-method-vocabulary-pack-6-8-en-es",
+        "pdf_url": "pdfs/lab-reports-scientific-method_vocabulary_pack_6-8_en-es.pdf",
+        "sample_pdf_url": "samples/lab-reports-scientific-method_vocabulary_pack_6-8_en-es-sample.pdf"
+      },
+      {
+        "slug": "career-and-life-skills-vocabulary-pack-6-8-en-es",
+        "pdf_url": "pdfs/career-life-skills_vocabulary_pack_6-8_en-es.pdf",
+        "sample_pdf_url": "samples/career-life-skills_vocabulary_pack_6-8_en-es-sample.pdf"
+      },
+      {
+        "slug": "literary-analysis-sentence-frames-6-8-en-es",
+        "pdf_url": "pdfs/literary-analysis_sentence_frames_6-8_en-es.pdf",
+        "sample_pdf_url": "samples/literary-analysis_sentence_frames_6-8_en-es-sample.pdf"
+      },
+      {
+        "slug": "research-and-citation-sentence-frames-6-8-en-es",
+        "pdf_url": "pdfs/research-citation_sentence_frames_6-8_en-es.pdf",
+        "sample_pdf_url": "samples/research-citation_sentence_frames_6-8_en-es-sample.pdf"
+      },
+      {
+        "slug": "welcome-letter-parent-communication-k-2-en-es",
+        "pdf_url": "pdfs/welcome-letter_parent_communication_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/welcome-letter_parent_communication_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "homework-note-parent-communication-k-2-en-es",
+        "pdf_url": "pdfs/homework-note_parent_communication_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/homework-note_parent_communication_k-2_en-es-sample.pdf"
+      },
+      {
+        "slug": "progress-report-parent-communication-k-2-en-es",
+        "pdf_url": "pdfs/progress-report_parent_communication_k-2_en-es.pdf",
+        "sample_pdf_url": "samples/progress-report_parent_communication_k-2_en-es-sample.pdf"
+      }
+    ],
+    "success": true,
+    "meta": {
+      "served_by": "v3-prod",
+      "served_by_region": "WNAM",
+      "served_by_colo": "LAX",
+      "served_by_primary": true,
+      "timings": {
+        "sql_duration_ms": 0.3183
+      },
+      "duration": 0.3183,
+      "changes": 0,
+      "last_row_id": 0,
+      "changed_db": false,
+      "size_after": 503808,
+      "rows_read": 100,
+      "rows_written": 0,
+      "total_attempts": 1
+    }
+  }
+]
