@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        @page { size: letter; margin: 0; }
+        .page-break-after { page-break-after: always; }
+        .page-break-inside-avoid { page-break-inside: avoid; }
+    </style>
+</head>
+<body>
+    <html lang="en"><head><meta charSet="utf-8"/><title>My Classroom: Objects Vocabulary Pack (K-2 ELL)</title><style>
+    :root {
+      --primary: #FF6B35; --primary-light: #FFF0E8;
+      --secondary: #4ECDC4; --secondary-light: #E8FAF8;
+      --accent: #FFE66D; --accent-light: #FFFDE8;
+      --text: #1E293B; --text-secondary: #64748B;
+      --bg: #FFFFFF; --page-bg: #FAFBFF; --border: #E2E8F0;
+    }
+  </style><style>
+  @import url(&#x27;https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap&#x27;);
+
+  @page { size: Letter; margin: 0; }
+  @media print { @page { size: Letter; margin: 0; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body.pack-body {
+    margin: 0;
+    background: #F1F5F9;
+    color: var(--text);
+    font-family: &#x27;Inter&#x27;, system-ui, sans-serif;
+  }
+
+  /* === PAGE FRAME === */
+  .pdf-page {
+    position: relative;
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--bg);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .pdf-page:last-child { border-bottom: none; }
+
+  /* Brand bar at top */
+  .brand-bar {
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary, var(--primary)) 50%, var(--accent, var(--primary)) 100%);
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0.55in;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header .brand-name {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .page-content {
+    flex: 1;
+    padding: 0.35in 0.55in 0.25in;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0.55in;
+    font-size: 10px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+  }
+  .page-footer .site-url {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* === WATERMARK (sample) === */
+  .watermark {
+    position: absolute;
+    bottom: 1.2in;
+    right: 0.4in;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.06);
+    transform: rotate(-12deg);
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0.05em;
+  }
+
+  /* Sample CTA banner */
+  .sample-cta {
+    background: linear-gradient(135deg, var(--primary), var(--secondary, var(--primary)));
+    color: white;
+    text-align: center;
+    padding: 14px 0.55in;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .sample-cta a { color: white; text-decoration: underline; }
+
+  /* === TYPOGRAPHY === */
+  h1 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  h2.section-title {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--text);
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+  }
+  h3 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  /* === COVER PAGE === */
+  .cover-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 9.2in;
+  }
+  .cover-hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light, var(--primary-light)) 100%);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    text-align: center;
+  }
+  .cover-hero .eyebrow {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .cover-hero h1 { font-size: 38px; margin-bottom: 14px; }
+  .cover-hero .lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .cover-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .meta-pill {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .meta-pill .meta-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .meta-pill .meta-value {
+    display: block;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .cover-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+  }
+  .cover-includes-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .cover-includes-box h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--primary);
+  }
+  .cover-includes-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .cover-includes-box li {
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-secondary);
+  }
+  .cover-includes-box li::before {
+    content: &#x27;✓&#x27;;
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .cover-includes-box p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* === VOCABULARY CARDS === */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .vocab-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
+  }
+  .vocab-card .card-num {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .vocab-card .illust-area {
+    width: 100%;
+    height: 100px;
+    border-radius: 14px;
+    background: var(--card-bg, #f8f8f8);
+    border: 2px dashed var(--card-border, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .vocab-card .word-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .vocab-card .word-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .vocab-img {
+    width: 100%;
+    max-height: 160px; /* 调大尺寸 */
+    object-fit: contain;
+    border-radius: 14px;
+    margin-bottom: 15px;
+  }
+
+  /* === SENTENCE FRAMES === */
+  .frames-list { display: grid; gap: 14px; }
+  .frame-card {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    padding: 18px;
+    border-left: 4px solid var(--primary);
+  }
+  .frame-num {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .frame-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .frame-card p { font-size: 15px; color: var(--primary); margin-top: 4px; }
+
+  /* === WORKSHEETS === */
+  .ws-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .ws-type-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-top: 4px;
+  }
+  .ws-name-box {
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 4px;
+    min-width: 200px;
+  }
+  .ws-instructions {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .ws-instructions-l2 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .ws-items { display: grid; gap: 16px; }
+  .ws-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .ws-item-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 18px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .ws-item-content strong {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 18px;
+    display: block;
+  }
+  .ws-item-content .ws-l2 {
+    font-size: 15px;
+    color: var(--primary);
+    margin: 4px 0 12px;
+  }
+  .ws-write-line {
+    height: 20px;
+    border-bottom: 2px dotted var(--border);
+    margin-top: 8px;
+  }
+
+  /* === LABELS === */
+  .labels-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .label-card-new {
+    border: 3px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+  }
+  .label-card-new .label-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .label-card-new .label-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .label-card-new .label-cat {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+  }
+
+  /* === MINI BOOK === */
+  .minibook-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .minibook-card {
+    border: 2px dashed var(--border);
+    border-radius: 18px;
+    background: var(--bg);
+    padding: 18px;
+    min-height: 195px;
+    display: flex;
+    flex-direction: column;
+  }
+  .minibook-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: right;
+    margin-bottom: 8px;
+  }
+  .minibook-text { flex: 1; }
+  .minibook-text .text-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .minibook-text .text-l2 {
+    font-size: 14px;
+    color: var(--primary);
+    line-height: 1.5;
+  }
+  .minibook-illust {
+    margin-top: 10px;
+    height: 60px;
+    border: 2px dashed var(--card-border, #ddd);
+    border-radius: 12px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* === DIALOGUE STRIPS === */
+  .dialogue-list { display: grid; gap: 14px; }
+  .dialogue-card {
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    padding: 16px;
+  }
+  .dialogue-ctx {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .dialogue-speakers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .spk { display: flex; gap: 10px; align-items: flex-start; }
+  .spk-badge {
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-weight: 800; font-size: 13px; flex-shrink: 0;
+  }
+  .spk-a .spk-badge { background: #E0D5F5; color: #5B3E9E; }
+  .spk-b .spk-badge { background: #D5EEE0; color: #2E7D4F; }
+  .spk strong { font-size: 15px; display: block; }
+  .spk p { font-size: 13px; color: var(--primary); margin-top: 2px; }
+
+  /* === TEACHER NOTES === */
+  .notes-grid { display: grid; gap: 14px; }
+  .note-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .note-section h3 {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .note-section p, .note-section li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .note-section ul { padding-left: 18px; }
+  .note-section li { margin-bottom: 4px; }
+
+  /* === ANSWER KEY === */
+  .answer-list { display: grid; gap: 14px; }
+  .ak-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .ak-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 12px; }
+  .ak-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .ak-item {
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .ak-item strong { color: var(--text); margin-right: 6px; }
+  .ak-item span { color: var(--text-secondary); }
+
+  /* === PARENT NOTES === */
+  .parent-notes-list { display: grid; gap: 16px; }
+  .pn-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    background: var(--bg);
+  }
+  .pn-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .pn-header strong { font-size: 16px; }
+  .pn-type-badge {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary);
+    background: var(--primary-light);
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .pn-card p { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .pn-translated {
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .pn-sig { margin-top: 14px; font-size: 13px; color: var(--text-secondary); }
+  .pn-response { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+
+  /* === SPEAKING PROMPTS / ROUTINE / RULES === */
+  .prompt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .prompt-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 18px;
+    min-height: 160px;
+  }
+  .prompt-card .card-num { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 8px; }
+  .prompt-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .prompt-card p { font-size: 15px; color: var(--primary); margin-top: 2px; }
+  .prompt-card .visual-cue {
+    margin-top: 10px; font-size: 11px; font-style: italic; color: var(--text-secondary);
+    border-top: 1px dashed var(--border); padding-top: 8px;
+  }
+
+  .routine-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .routine-card-new {
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg);
+    padding: 18px; text-align: center;
+  }
+  .routine-card-new .time-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 6px; }
+  .routine-card-new .icon-area {
+    width: 60px; height: 60px; margin: 0 auto 10px;
+    border-radius: 50%; background: var(--primary-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--text-secondary);
+  }
+  .routine-card-new h3 { font-size: 17px; margin-bottom: 2px; }
+  .routine-card-new p { font-size: 15px; color: var(--primary); }
+
+  .rules-list { display: grid; gap: 14px; }
+  .rule-card {
+    display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: center;
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg); padding: 20px;
+  }
+  .rule-num {
+    width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: var(--primary); color: white;
+    font-weight: 900; font-size: 22px; font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .rule-card h3 { font-size: 17px; margin-bottom: 2px; }
+  .rule-card p { font-size: 15px; color: var(--primary); }
+
+  /* === TERMS OF USE === */
+  .terms-grid { display: grid; gap: 14px; }
+  .terms-section {
+    border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: var(--bg);
+  }
+  .terms-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 10px; }
+  .terms-section p, .terms-section li { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .terms-section ul { padding-left: 18px; }
+  .terms-section li { margin-bottom: 4px; }
+</style></head><body class="pack-body"><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Cover</span><span>📎 Sample</span></header><main class="page-content"><div class="cover-page"><div class="cover-hero"><div class="eyebrow">EN-ES Printable Resource</div><h1>My Classroom: Objects Vocabulary Pack (K-2 ELL)</h1><p class="lead">A comprehensive vocabulary pack designed for K-2 ELL newcomers to learn and practice common classroom objects in English and Spanish. Includes vocabulary cards, a mini-book, and three engaging worksheets.</p></div><div class="cover-meta-grid"><div class="meta-pill"><span class="meta-label">Topic</span><span class="meta-value">Classroom Objects</span></div><div class="meta-pill"><span class="meta-label">Age Band</span><span class="meta-value">K-2</span></div><div class="meta-pill"><span class="meta-label">Pack Type</span><span class="meta-value">vocabulary pack</span></div><div class="meta-pill"><span class="meta-label">Language</span><span class="meta-value">EN-ES</span></div></div><div class="cover-includes"><div class="cover-includes-box"><h3>✨ What&#x27;s Inside</h3><ul><li>20 vocabulary items</li><li>3 worksheets</li><li>Mini-book (8 pages)</li><li>Teacher notes &amp; answer key</li></ul></div><div class="cover-includes-box"><h3>📖 How to Use</h3><p>Introduce vocabulary using flashcards and realia. Use the mini-book for shared reading and repeated practice. Worksheets can be completed independently or in small groups. Encourage students to point to and name objects in the classroom.</p></div></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 1 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Vocabulary Cards 1</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Vocabulary Cards</h2><div class="vocab-grid"><article class="vocab-card" style="--card-bg:#FFF0E8;--card-border:#FFB088"><div class="card-num">Card 1</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LCAxNSkgcm90YXRlKDQ1LCAzNSwgMzUpIj4KICAgICAgPCEtLSBEcm9wIHNoYWRvdyAtLT4KICAgICAgPHBhdGggZD0iTTE0IDYgTDQ0IDYgTDU1IDY1IEw0NCA4MCBMMjkgODAgTDE0IDY1IFoiIGZpbGw9IiNFMkU4RjAiIG9wYWNpdHk9IjAuNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNSwgNSkiIC8+CiAgICAgIDwhLS0gRXJhc2VyIC0tPgogICAgICA8cGF0aCBkPSJNMTUgMTAgUSAzMCA1IDQ1IDEwIEw0MyAyMCBMMTcgMjAgWiIgZmlsbD0iI0U4ODg4MCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICA8cGF0aCBkPSJNMTcgMTIgUSAzMCA4IDQzIDEyIEw0MCAxOCBMMjAgMTggWiIgZmlsbD0iI0Y0OUM5NSIgc3Ryb2tlPSJub25lIiAvPgogICAgICA8cGF0aCBkPSJNMzggMTAgUSA0MyAxMCA0MyAxOCBMMzUgMTUgWiIgZmlsbD0iI0ZGRiIgb3BhY2l0eT0iMC41IiAvPgogICAgICA8IS0tIEZlcnJ1bGUgKG1ldGFsIHBhcnQpIC0tPgogICAgICA8cmVjdCB4PSIxNyIgeT0iMjAiIHdpZHRoPSIyNiIgaGVpZ2h0PSIxMiIgZmlsbD0iI0JDQzZDQyIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4KICAgICAgPHJlY3QgeD0iMjUiIHk9IjIwIiB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgZmlsbD0iI0Q1REZFNSIgc3Ryb2tlPSJub25lIiAvPgogICAgICA8cmVjdCB4PSIzMyIgeT0iMjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjEyIiBmaWxsPSIjOUNBOEIwIiBzdHJva2U9Im5vbmUiIC8+CiAgICAgIDxsaW5lIHgxPSIxNyIgeTE9IjI0IiB4Mj0iNDMiIHkyPSIyNCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICAgICAgPGxpbmUgeDE9IjE3IiB5MT0iMjgiIHgyPSI0MyIgeTI9IjI4IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMS41IiAvPgogICAgICA8IS0tIFBlbmNpbCBCb2R5IC0tPgogICAgICA8cG9seWdvbiBwb2ludHM9IjE3LDMyIDQzLDMyIDQzLDY1IDE3LDY1IiBmaWxsPSIjRUJCOTVGIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogICAgICA8cG9seWdvbiBwb2ludHM9IjI1LDMyIDM1LDMyIDM1LDY1IDI1LDY1IiBmaWxsPSIjRjhDRDc3IiBzdHJva2U9Im5vbmUiIC8+CiAgICAgIDwhLS0gT3JhbmdlIGNvcmUgcmVmbGVjdGlvbiAtLT4KICAgICAgPHBvbHlnb24gcG9pbnRzPSIzNSwzMiA0MywzMiA0Myw2NSAzNSw2NSIgZmlsbD0iI0Q0OTk0MCIgc3Ryb2tlPSJub25lIiAvPgogICAgICA8bGluZSB4MT0iMjUiIHkxPSIzMiIgeDI9IjI1IiB5Mj0iNjUiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIC8+CiAgICAgIDxsaW5lIHgxPSIzNSIgeTE9IjMyIiB4Mj0iMzUiIHkyPSI2NSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICAgICAgPCEtLSBXb29kZW4gdGlwIC0tPgogICAgICA8cG9seWdvbiBwb2ludHM9IjE3LDY1IDQzLDY1IDMwLDg1IiBmaWxsPSIjRTdDREIwIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogICAgICA8cG9seWdvbiBwb2ludHM9IjI1LDY1IDM1LDY1IDMwLDg1IiBmaWxsPSIjRjFEQ0M1IiBzdHJva2U9Im5vbmUiIC8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMzUsNjUgNDMsNjUgMzAsODUiIGZpbGw9IiNEM0I0OTEiIHN0cm9rZT0ibm9uZSIgLz4KICAgICAgPCEtLSBHcmFwaGl0ZSB0aXAgLS0+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMjYsNzkgMzQsNzkgMzAsODUiIGZpbGw9IiM0QjRCNEIiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMzAsNzkgMzIsNzkgMzAsODUiIGZpbGw9IiM2QjZCNkIiIHN0cm9rZT0ibm9uZSIgLz4KICAgICAgPCEtLSBMaXR0bGUgc3BhcmtsZSAtLT4KICAgICAgPHRleHQgeD0iNTAiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiNGQUNDMTUiPuKcqDwvdGV4dD4KICAgIDwvZz4KICA8L3N2Zz4=" alt="pencil"/><div class="word-en">pencil</div><div class="word-l2">lápiz</div></article><article class="vocab-card" style="--card-bg:#E8FAF8;--card-border:#7EDDD6"><div class="card-num">Card 2</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLCAxNSkiPgogICAgICA8IS0tIERyb3Agc2hhZG93IC0tPgogICAgICA8cGF0aCBkPSJNIDUgNSBMIDgwIDE1IEwgNzUgNzUgTCAwIDY1IFoiIGZpbGw9IiNFMkU4RjAiIG9wYWNpdHk9IjAuNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAsIDEwKSIgLz4KICAgICAgCiAgICAgIDwhLS0gQmFjayBwYWdlcyAtLT4KICAgICAgPHBhdGggZD0iTSAxMiA4IEwgODIgMTggTCA4MiA3MiBMIDEyIDYyIFoiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgPGxpbmUgeDE9IjgyIiB5MT0iMjAiIHgyPSIxMiIgeTI9IjEwIiBzdHJva2U9IiNFNkUwRDQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgIDxsaW5lIHgxPSI4MiIgeTE9IjI0IiB4Mj0iMTIiIHkyPSIxNCIgc3Ryb2tlPSIjRTZFMEQ0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICA8bGluZSB4MT0iODIiIHkxPSIyOCIgeDI9IjEyIiB5Mj0iMTgiIHN0cm9rZT0iI0U2RTBENCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgICAgPGxpbmUgeDE9IjgyIiB5MT0iMzIiIHgyPSIxMiIgeTI9IjIyIiBzdHJva2U9IiNFNkUwRDQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgIAogICAgICA8IS0tIEZyb250IGNvdmVyIC0tPgogICAgICA8cGF0aCBkPSJNIDUgNSBMIDc1IDE1IEwgNzUgNzUgTCA1IDY1IFoiIGZpbGw9IiM0Q0FDOUIiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgCiAgICAgIDwhLS0gQW5pbWUgaGlnaGxpZ2h0cyAmIHNoYWRvd3MgLS0+CiAgICAgIDxwYXRoIGQ9Ik0gMTAgNyBMIDM1IDExIEwgMzUgNzAgTCAxMCA2NiBaIiBmaWxsPSIjNjlDOUI3IiAvPgogICAgICA8cGF0aCBkPSJNIDY1IDE0IEwgNzMgMTUgTCA3MyA3NCBMIDY1IDczIFoiIGZpbGw9IiMzQThBN0EiIC8+CiAgICAgIAogICAgICA8IS0tIFNwaW5lIC0tPgogICAgICA8cGF0aCBkPSJNIDUgNSBMIDE1IDYgTCAxNSA2NiBMIDUgNjUgWiIgZmlsbD0iIzNBOEE3QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAKICAgICAgPCEtLSBCb29rbWFyayByaWJib24gLS0+CiAgICAgIDxwYXRoIGQ9Ik0gNDUgMTAgTCA1MiAxMSBMIDUyIDQ1IEwgNDggNDAgTCA0NSA0NSBaIiBmaWxsPSIjREM2MzVDIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICA8cGF0aCBkPSJNIDQ2IDEyIEwgNDggMTIgTCA0OCA0MSBMIDQ2IDM5IFoiIGZpbGw9IiNGMDhGOEEiIC8+CgogICAgICA8IS0tIExhYmVsIC0tPgogICAgICA8cGF0aCBkPSJNIDI1IDI1IEwgNjAgMzAgTCA2MCA0NSBMIDI1IDQwIFoiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIDxsaW5lIHgxPSIzMCIgeTE9IjMyIiB4Mj0iNTUiIHkyPSIzNSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgIDxsaW5lIHgxPSIzMCIgeTE9IjM4IiB4Mj0iNDUiIHkyPSI0MCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgIAogICAgICA8IS0tIFRpbnkgbGVhZiBlbWJsZW0gKEdoaWJsaSB2aWJlKSAtLT4KICAgICAgPHBhdGggZD0iTSA2NSA2MCBRIDU1IDUwIDYwIDU1IFEgNzAgNjUgNjUgNjAiIGZpbGw9IiNCRUU4OUEiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgICAgPHRleHQgeD0iNjUiIHk9IjIwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNGQUNDMTUiPuKcqDwvdGV4dD4KICAgIDwvZz4KICA8L3N2Zz4=" alt="book"/><div class="word-en">book</div><div class="word-l2">libro</div></article><article class="vocab-card" style="--card-bg:#FFFDE8;--card-border:#FFE66D"><div class="card-num">Card 3</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LCAxMCkiPgogICAgICA8IS0tIFNoYWRvdyAtLT4KICAgICAgPGVsbGlwc2UgY3g9IjM1IiBjeT0iODAiIHJ4PSIzMCIgcnk9IjgiIGZpbGw9IiNFMkU4RjAiIG9wYWNpdHk9IjAuOCIgLz4KICAgICAgCiAgICAgIDwhLS0gQmFjayBsZWdzIC0tPgogICAgICA8cmVjdCB4PSIyMCIgeT0iNDUiIHdpZHRoPSI4IiBoZWlnaHQ9IjMwIiByeD0iNCIgZmlsbD0iIzkxNkU1QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgPHJlY3QgeD0iNTUiIHk9IjQ1IiB3aWR0aD0iOCIgaGVpZ2h0PSIzMCIgcng9IjQiIGZpbGw9IiM3NTU3NDUiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICAgIAogICAgICA8IS0tIFNlYXQgc2hhZG93IC0tPgogICAgICA8cGF0aCBkPSJNIDEyIDQwIEwgNjUgNDAgTCA3NSA1MiBMIDIwIDUyIFoiIGZpbGw9IiM1RjlEQTUiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgPCEtLSBTZWF0IHN1cmZhY2UgLS0+CiAgICAgIDxwYXRoIGQ9Ik0gMTAgMzUgTCA2MyAzNSBMIDc1IDQ1IEwgMjAgNDUgWiIgZmlsbD0iIzdDQkNDNSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICA8IS0tIFNlYXQgaGlnaGxpZ2h0IC0tPgogICAgICA8cGF0aCBkPSJNIDE1IDM3IEwgNTUgMzcgTCA2MCA0MSBMIDIyIDQxIFoiIGZpbGw9IiM5RkQ2REUiIC8+CiAgICAgIAogICAgICA8IS0tIEZyb250IGxlZ3MgLS0+CiAgICAgIDxyZWN0IHg9IjIyIiB5PSI0NSIgd2lkdGg9IjgiIGhlaWdodD0iMzUiIHJ4PSI0IiBmaWxsPSIjRDNBNTgxIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgICA8cmVjdCB4PSI2NSIgeT0iNDUiIHdpZHRoPSI4IiBoZWlnaHQ9IjM1IiByeD0iNCIgZmlsbD0iI0FEODQ2NSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgPCEtLSBMZWcgaGlnaGxpZ2h0cyAtLT4KICAgICAgPHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMiIgaGVpZ2h0PSIyOCIgZmlsbD0iI0YxQ0RCMyIgLz4KICAgICAgCiAgICAgIDwhLS0gQmFja3Jlc3Qgc3VwcG9ydHMgLS0+CiAgICAgIDxyZWN0IHg9IjE4IiB5PSI1IiB3aWR0aD0iNiIgaGVpZ2h0PSIzNSIgZmlsbD0iI0QzQTU4MSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgPHJlY3QgeD0iNTgiIHk9IjUiIHdpZHRoPSI2IiBoZWlnaHQ9IjM1IiBmaWxsPSIjQUQ4NDY1IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgICAKICAgICAgPCEtLSBCYWNrcmVzdCBib2FyZHMgLS0+CiAgICAgIDxwYXRoIGQ9Ik0gMTQgMTAgTCA2NiAxMCBDIDY4IDEwIDY4IDIyIDY2IDIyIEwgMTQgMjIgQyAxMiAyMiAxMiAxMCAxNCAxMCBaIiBmaWxsPSIjN0NCQ0M1IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIDxwYXRoIGQ9Ik0gMTYgMjYgTCA2NCAyNiBDIDY2IDI2IDY2IDMzIDY0IDMzIEwgMTYgMzMgQyAxNCAzMyAxNCAyNiAxNiAyNiBaIiBmaWxsPSIjN0NCQ0M1IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIAogICAgICA8IS0tIEJhY2tyZXN0IGhpZ2hsaWdodHMgLS0+CiAgICAgIDxyZWN0IHg9IjE4IiB5PSIxMiIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjOUZENkRFIiAvPgogICAgICA8cmVjdCB4PSIyMCIgeT0iMjgiIHdpZHRoPSI0MCIgaGVpZ2h0PSIyIiByeD0iMSIgZmlsbD0iIzlGRDZERSIgLz4KICAgIDwvZz4KICA8L3N2Zz4=" alt="chair"/><div class="word-en">chair</div><div class="word-l2">silla</div></article><article class="vocab-card" style="--card-bg:#F0EBFF;--card-border:#C4B5FD"><div class="card-num">Card 4</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsIDIwKSI+CiAgICAgIDwhLS0gU2hhZG93IC0tPgogICAgICA8ZWxsaXBzZSBjeD0iNDUiIGN5PSI3MCIgcng9IjQwIiByeT0iMTAiIGZpbGw9IiNFMkU4RjAiIG9wYWNpdHk9IjAuOCIgLz4KICAgICAgCiAgICAgIDwhLS0gQmFjayBsZWdzIC0tPgogICAgICA8cmVjdCB4PSIxNSIgeT0iMzUiIHdpZHRoPSI4IiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iIzkxNkU1QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgPHJlY3QgeD0iNzUiIHk9IjM1IiB3aWR0aD0iOCIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiM3NTU3NDUiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICAgIAogICAgICA8IS0tIFRhYmxlIHRoaWNrbmVzcyAtLT4KICAgICAgPHBhdGggZD0iTSA1IDM1IEwgODUgMzUgTCA5NSA0NSBMIDggNDUgWiIgZmlsbD0iI0M1ODU1MiIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICA8IS0tIFRhYmxlIHRvcCAtLT4KICAgICAgPHBhdGggZD0iTSAxNSAxNSBMIDkwIDE1IEwgOTUgMzUgTCA1IDM1IFoiIGZpbGw9IiNGMUNEQjMiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgPCEtLSBUYWJsZSB0b3AgaGlnaGxpZ2h0IC8gZ3JhaW4gLS0+CiAgICAgIDxwYXRoIGQ9Ik0gMjAgMTggTCA4NSAxOCBMIDg4IDMwIEwgMTIgMzAgWiIgZmlsbD0iI0ZERjNFOCIgLz4KICAgICAgPHBhdGggZD0iTSAzMCAyMiBDIDQwIDIwIDYwIDI1IDcwIDIyIiBmaWxsPSJub25lIiBzdHJva2U9IiNFNkI4OTgiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgPHBhdGggZD0iTSAyNSAyOCBDIDQ1IDI3IDUwIDMyIDgwIDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiNFNkI4OTgiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgCiAgICAgIDwhLS0gRnJvbnQgbGVncyAtLT4KICAgICAgPHJlY3QgeD0iOCIgeT0iNDUiIHdpZHRoPSIxMCIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiNFOEFFODIiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICAgIDxyZWN0IHg9Ijc4IiB5PSI0NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iI0M1ODU1MiIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgCiAgICAgIDwhLS0gRnJvbnQgbGVnIGhpZ2hsaWdodHMgLS0+CiAgICAgIDxyZWN0IHg9IjEwIiB5PSI0OCIgd2lkdGg9IjMiIGhlaWdodD0iMjQiIHJ4PSIxLjUiIGZpbGw9IiNGREYzRTgiIC8+CiAgICAgIDxyZWN0IHg9IjgwIiB5PSI0OCIgd2lkdGg9IjMiIGhlaWdodD0iMjQiIHJ4PSIxLjUiIGZpbGw9IiNFOEFFODIiIC8+CiAgICA8L2c+CiAgPC9zdmc+" alt="table"/><div class="word-en">table</div><div class="word-l2">mesa</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 2 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Vocabulary Cards 2</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Vocabulary Cards</h2><div class="vocab-grid"><article class="vocab-card" style="--card-bg:#FDF0F5;--card-border:#F9A8D4"><div class="card-num">Card 5</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LCAxMCkiPgogICAgICA8IS0tIERyb3Agc2hhZG93IC0tPgogICAgICA8cGF0aCBkPSJNIDE1IDggTCA0NSA4IEwgNDUgNzUgTCAxNSA3NSBaIiBmaWxsPSIjRTJFOEYwIiBvcGFjaXR5PSIwLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLCAxMCkgcm90YXRlKC0xMCwgMjUsIDQwKSIgLz4KICAgICAgPGcgdHJhbnNmb3JtPSJyb3RhdGUoLTE1LCAyNSwgNDApIj4KICAgICAgICA8IS0tIFBhcGVyIFdyYXBwZXIgLS0+CiAgICAgICAgPHJlY3QgeD0iMTAiIHk9IjI1IiB3aWR0aD0iMzAiIGhlaWdodD0iNDUiIGZpbGw9IiNEQzYzNUMiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgICA8IS0tIFdyYXBwZXIgZGVzaWduIHBhdHRlcm4gLS0+CiAgICAgICAgPHBhdGggZD0iTSAxMCAzMiBRIDI1IDM4IDQwIDMyIEwgNDAgMzYgUSAyNSA0MiAxMCAzNiBaIiBmaWxsPSIjRkZGIiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gMTAgNjAgUSAyNSA2NiA0MCA2MCBMIDQwIDY0IFEgMjUgNzAgMTAgNjQgWiIgZmlsbD0iI0ZGRiIgLz4KICAgICAgICAKICAgICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjQ2IiByPSI4IiBmaWxsPSIjRkZGIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMS41IiAvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iNDYiIHI9IjQiIGZpbGw9IiNEQzYzNUMiIC8+CiAgICAgICAgCiAgICAgICAgPCEtLSBXYXggYm9keSB0b3AgLyBib3R0b20gLS0+CiAgICAgICAgPHJlY3QgeD0iMTIiIHk9IjcwIiB3aWR0aD0iMjYiIGhlaWdodD0iMTIiIGZpbGw9IiNFNjgyN0QiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgICA8cGF0aCBkPSJNIDEyIDgyIEMgMTIgODYgMzggODYgMzggODIgWiIgZmlsbD0iI0RDNjM1QyIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIAogICAgICAgIDwhLS0gVGlwIC0tPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTIsMjUgMzgsMjUgMjUsNSIgZmlsbD0iI0U2ODI3RCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTUsMjUgMjUsMjUgMjUsMTIiIGZpbGw9IiNGMkE1QTIiIHN0cm9rZT0ibm9uZSIgLz4KICAgICAgICAKICAgICAgICA8IS0tIFR1YmUgaGlnaGxpZ2h0cyAtLT4KICAgICAgICA8cmVjdCB4PSIxNSIgeT0iMjUiIHdpZHRoPSI0IiBoZWlnaHQ9IjQ1IiBmaWxsPSIjRjA4RjhBIiAvPgogICAgICAgIDxyZWN0IHg9IjE2IiB5PSI3MCIgd2lkdGg9IjMiIGhlaWdodD0iMTIiIGZpbGw9IiNGMkE1QTIiIC8+CiAgICAgICAgCiAgICAgICAgPCEtLSBUaW55IHN0YXIgLS0+CiAgICAgICAgPHRleHQgeD0iMzUiIHk9IjE1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNGQUNDMTUiPuKcqDwvdGV4dD4KICAgICAgPC9nPgogICAgPC9nPgogIDwvc3ZnPg==" alt="crayon"/><div class="word-en">crayon</div><div class="word-l2">crayón</div></article><article class="vocab-card" style="--card-bg:#ECFDF5;--card-border:#6EE7B7"><div class="card-num">Card 6</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LCAxMCkiPgogICAgICA8IS0tIFNoYWRvdyAtLT4KICAgICAgPHBhdGggZD0iTSAxNSAxMCBMIDY1IDIwIEwgNjAgODUgTCAxMCA3NSBaIiBmaWxsPSIjRTJFOEYwIiBvcGFjaXR5PSIwLjgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsIDUpIiAvPgogICAgICAKICAgICAgPCEtLSBCYWNrIHBhcGVyIC0tPgogICAgICA8cGF0aCBkPSJNIDE1IDEwIEwgNjUgMjAgTCA1NSA4NSBMIDUgNzUgWiIgZmlsbD0iI0U4RUJFRCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgCiAgICAgIDwhLS0gTWlkZGxlIHBhcGVyIC0tPgogICAgICA8cGF0aCBkPSJNIDE4IDE1IEwgNjggMTIgTCA2OCA3OCBMIDE4IDgwIFoiIGZpbGw9IiNGM0Y1RjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgCiAgICAgIDwhLS0gVG9wIEZyb250IHBhcGVyIC0tPgogICAgICA8cGF0aCBkPSJNIDEwIDIwIEwgNjUgMTUgTCA3NSA4MCBMIDIwIDg1IFoiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgCiAgICAgIDwhLS0gQmx1ZSBsaW5lZCBwYXBlciBwYXR0ZXJuIC0tPgogICAgICA8bGluZSB4MT0iMTUiIHkxPSIzNSIgeDI9IjY3IiB5Mj0iMzAiIHN0cm9rZT0iIzhCRDNFNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIC8+CiAgICAgIDxsaW5lIHgxPSIxNiIgeTE9IjQ1IiB4Mj0iNjgiIHkyPSI0MCIgc3Ryb2tlPSIjOEJEM0U2IiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICAgICAgPGxpbmUgeDE9IjE3IiB5MT0iNTUiIHgyPSI2OSIgeTI9IjUwIiBzdHJva2U9IiM4QkQzRTYiIHN0cm9rZS13aWR0aD0iMS41IiAvPgogICAgICA8bGluZSB4MT0iMTgiIHkxPSI2NSIgeDI9IjcwIiB5Mj0iNjAiIHN0cm9rZT0iIzhCRDNFNiIgc3Ryb2tlLXdpZHRoPSIxLjUiIC8+CiAgICAgIDxsaW5lIHgxPSIxOSIgeTE9Ijc1IiB4Mj0iNzEiIHkyPSI3MCIgc3Ryb2tlPSIjOEJEM0U2IiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICAgICAgCiAgICAgIDwhLS0gUmVkIG1hcmdpbiBkb3duIHRoZSBzaWRlIC0tPgogICAgICA8bGluZSB4MT0iMjUiIHkxPSIxOCIgeDI9IjM1IiB5Mj0iODMiIHN0cm9rZT0iI0Y0OUM5NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgICAKICAgICAgPCEtLSBGb2xkL0RvZy1lYXIgY29ybmVyIC0tPgogICAgICA8cG9seWdvbiBwb2ludHM9IjY1LDE1IDYzLDI4IDc1LDI2IiBmaWxsPSIjRThFQkVEIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIAogICAgICA8IS0tIFBhcGVyIHRleHR1cmUvaGlnaGxpZ2h0IC0tPgogICAgICA8cGF0aCBkPSJNIDI4IDIwIEwgNjAgMTcgTCA2MiA0NSBMIDMwIDQ4IFoiIGZpbGw9IiNGREZERkYiIG9wYWNpdHk9IjAuNiIgLz4KICAgIDwvZz4KICA8L3N2Zz4=" alt="paper"/><div class="word-en">paper</div><div class="word-l2">papel</div></article><article class="vocab-card" style="--card-bg:#FFF0E8;--card-border:#FFB088"><div class="card-num">Card 7</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LCAxMCkiPgogICAgICA8IS0tIERyb3Agc2hhZG93IC0tPgogICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2LCA2KSByb3RhdGUoMjAsIDM1LCAzNSkiIG9wYWNpdHk9IjAuMyI+CiAgICAgICAgPHBhdGggZD0iTSAyNSA1IEwgMzIgNDUgTCA1IDcwIEMgMCA4NSAyMCA5MCAyOCA3NSBMIDM1IDUwIFoiIGZpbGw9IiMzMzQxNTUiIC8+CiAgICAgICAgPHBhdGggZD0iTSA0NSA1IEwgMzggNDUgTCA2NSA3MCBDIDcwIDg1IDUwIDkwIDQyIDc1IEwgMzUgNTAgWiIgZmlsbD0iIzMzNDE1NSIgLz4KICAgICAgPC9nPgogICAgICAKICAgICAgPGcgdHJhbnNmb3JtPSJyb3RhdGUoMjAsIDM1LCAzNSkiPgogICAgICAgIDwhLS0gSW5zaWRlIEJsYWRlIDEgLS0+CiAgICAgICAgPHBvbHlnb24gcG9pbnRzPSI0NSw1IDM4LDQ1IDMzLDQwIiBmaWxsPSIjQkNDNkNDIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIDxwb2x5Z29uIHBvaW50cz0iNDIsNSAzOCw0NSAzNSw0MCIgZmlsbD0iI0UyRThGMCIgLz4gPCEtLSBIaWdobGlnaHQgLS0+CiAgICAgICAgCiAgICAgICAgPCEtLSBIYW5kbGUgMSAoQm90dG9tIExlZnQpIC0tPgogICAgICAgIDxwYXRoIGQ9Ik0gMzMgNDUgTCA4IDcyIEMgLTMgODMgMTUgOTUgMjQgODIgTCAzNSA0OCBaIiBmaWxsPSIjRTg3QjVCIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgICAgPCEtLSBIYW5kbGUgMSBob2xlIC0tPgogICAgICAgIDxlbGxpcHNlIGN4PSIxOCIgY3k9Ijc0IiByeD0iNiIgcnk9IjEyIiBmaWxsPSIjRTJFOEYwIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAsIDE4LCA3NCkiLz4KICAgICAgICA8IS0tIEhhbmRsZSAxIEhpZ2hsaWdodCAtLT4KICAgICAgICA8cGF0aCBkPSJNIDI4IDUwIEwgMTIgNjggQyA1IDc1IDE0IDg1IDIyIDc2IiBmaWxsPSJub25lIiBzdHJva2U9IiNGMkE0OEQiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPgoKICAgICAgICA8IS0tIE91dHNpZGUgQmxhZGUgMiAtLT4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjI1LDUgMzIsNDUgMzcsNDAiIGZpbGw9IiM5Q0E4QjAiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjI1LDUgMjgsNSAzMyw0NSAzMiw0NSBaIiBmaWxsPSIjRjFGNUY5IiAvPiA8IS0tIFN1cGVyIHNoYXJwIGVkZ2UgaGlnaGxpZ2h0IC0tPgoKICAgICAgICA8IS0tIEhhbmRsZSAyIChCb3R0b20gUmlnaHQpIC0tPgogICAgICAgIDxwYXRoIGQ9Ik0gMzcgNDUgTCA2MiA3MiBDIDczIDgzIDU1IDk1IDQ2IDgyIEwgMzUgNDggWiIgZmlsbD0iI0RDNUE0NSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIDwhLS0gSGFuZGxlIDIgaG9sZSAtLT4KICAgICAgICA8ZWxsaXBzZSBjeD0iNTIiIGN5PSI3NCIgcng9IjYiIHJ5PSIxMiIgZmlsbD0iI0UyRThGMCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgdHJhbnNmb3JtPSJyb3RhdGUoMzAsIDUyLCA3NCkiLz4KICAgICAgICA8IS0tIEhhbmRsZSAyIEhpZ2hsaWdodCAtLT4KICAgICAgICA8cGF0aCBkPSJNIDQyIDUwIEwgNTggNjggQyA2NSA3NSA1NiA4NSA0OCA3NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRTg3QjVCIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz4KCiAgICAgICAgPCEtLSBDZW50ZXIgU2NyZXcgLS0+CiAgICAgICAgPGNpcmNsZSBjeD0iMzUiIGN5PSI0NSIgcj0iNCIgZmlsbD0iI0UyRThGMCIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICAgICAgPGNpcmNsZSBjeD0iMzQiIGN5PSI0NCIgcj0iMS41IiBmaWxsPSIjRkZGIiAvPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9zdmc+" alt="scissors"/><div class="word-en">scissors</div><div class="word-l2">tijeras</div></article><article class="vocab-card" style="--card-bg:#E8FAF8;--card-border:#7EDDD6"><div class="card-num">Card 8</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LCAxMCkiPgogICAgICA8IS0tIERyb3Agc2hhZG93IC0tPgogICAgICA8ZWxsaXBzZSBjeD0iMjUiIGN5PSI4NSIgcng9IjE1IiByeT0iNSIgZmlsbD0iI0UyRThGMCIgb3BhY2l0eT0iMC44IiAvPgogICAgICAKICAgICAgPCEtLSBCb3R0bGUgQm9keSAtLT4KICAgICAgPHJlY3QgeD0iMTAiIHk9IjM1IiB3aWR0aD0iMzAiIGhlaWdodD0iNDgiIHJ4PSI2IiBmaWxsPSIjRjhDRDc3IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIDxyZWN0IHg9IjEzIiB5PSIzOCIgd2lkdGg9IjYiIGhlaWdodD0iNDIiIHJ4PSIzIiBmaWxsPSIjRkNFQUMxIiBzdHJva2U9Im5vbmUiIC8+IDwhLS0gSGlnaGxpZ2h0IC0tPgogICAgICA8cmVjdCB4PSIzMyIgeT0iMzgiIHdpZHRoPSI0IiBoZWlnaHQ9IjQyIiByeD0iMiIgZmlsbD0iI0Q0OTk0MCIgc3Ryb2tlPSJub25lIiAvPiA8IS0tIFNoYWRvdyAtLT4KICAgICAgCiAgICAgIDwhLS0gTGFiZWwgLS0+CiAgICAgIDxyZWN0IHg9IjEwIiB5PSI0NSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjI1IiBmaWxsPSIjNUY5REE1IiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIDwhLS0gTGFiZWwgc3RyaXBlICYgaGlnaGxpZ2h0IC0tPgogICAgICA8cmVjdCB4PSIxMCIgeT0iNDUiIHdpZHRoPSIzMCIgaGVpZ2h0PSI0IiBmaWxsPSIjOUZENkRFIiAvPgogICAgICA8cmVjdCB4PSIxMCIgeT0iNjYiIHdpZHRoPSIzMCIgaGVpZ2h0PSI0IiBmaWxsPSIjM0E4QTdBIiAvPgogICAgICAKICAgICAgPCEtLSBMYWJlbCBDaXJjbGUgLS0+CiAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iNTciIHI9IjgiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjU3IiByPSI0IiBmaWxsPSIjREM2MzVDIiBzdHJva2U9Im5vbmUiIC8+CiAgICAgIAogICAgICA8IS0tIE5lY2sgYmFzZSAtLT4KICAgICAgPHJlY3QgeD0iMTUiIHk9IjMwIiB3aWR0aD0iMjAiIGhlaWdodD0iNSIgcng9IjIiIGZpbGw9IiNFMkU4RjAiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgICAgPHJlY3QgeD0iMTUiIHk9IjI3IiB3aWR0aD0iMjAiIGhlaWdodD0iNCIgZmlsbD0iI0NCRDVFMSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAKICAgICAgPCEtLSBDYXAgbm96emxlIC0tPgogICAgICA8cGF0aCBkPSJNIDE4IDI3IEwgMzIgMjcgTCAyNyA1IEwgMjMgNSBaIiBmaWxsPSIjREM2MzVDIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMTgsMjcgMjMsMjcgMjQuNSw1IDIzLDUiIGZpbGw9IiNGMDhGOEEiIC8+IDwhLS0gSGlnaGxpZ2h0IC0tPgogICAgICA8cGF0aCBkPSJNIDIzIDUgQyAyMyAyIDI3IDIgMjcgNSIgZmlsbD0iI0U4N0I1QiIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIuNSIgLz4KICAgICAgCiAgICAgIDwhLS0gRHJvcGxldCAtLT4KICAgICAgPHBhdGggZD0iTSAyNSAxIFEgMjMgMyAyNSA2IFEgMjcgMyAyNSAxIFoiIGZpbGw9IiNGRkYiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAgIDx0ZXh0IHg9IjM1IiB5PSIxNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgICA8L2c+CiAgPC9zdmc+" alt="glue"/><div class="word-en">glue</div><div class="word-l2">pegamento</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 3 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Vocabulary Cards 3</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Vocabulary Cards</h2><div class="vocab-grid"><article class="vocab-card" style="--card-bg:#FFFDE8;--card-border:#FFE66D"><div class="card-num">Card 9</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMCwxMCkiPjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNFMzdDNjQiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIzIiAvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjYwIiByeD0iNSIgZmlsbD0iI0YwQTY5MyIvPjxyZWN0IHg9IjMwIiB5PSI1MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjMwIiByeD0iMTAiIGZpbGw9IiNBRjU1NDIiIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTMwIDIwIEMgMzAgNSA3MCA1IDcwIDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEM0I0OTEiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9nPjwvc3ZnPg==" alt="backpack"/><div class="word-en">backpack</div><div class="word-l2">mochila</div></article><article class="vocab-card" style="--card-bg:#F0EBFF;--card-border:#C4B5FD"><div class="card-num">Card 10</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="marker"/><div class="word-en">marker</div><div class="word-l2">marcador</div></article><article class="vocab-card" style="--card-bg:#FDF0F5;--card-border:#F9A8D4"><div class="card-num">Card 11</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="eraser"/><div class="word-en">eraser</div><div class="word-l2">borrador</div></article><article class="vocab-card" style="--card-bg:#ECFDF5;--card-border:#6EE7B7"><div class="card-num">Card 12</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="ruler"/><div class="word-en">ruler</div><div class="word-l2">regla</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 4 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Vocabulary Cards 4</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Vocabulary Cards</h2><div class="vocab-grid"><article class="vocab-card" style="--card-bg:#FFF0E8;--card-border:#FFB088"><div class="card-num">Card 13</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="whiteboard"/><div class="word-en">whiteboard</div><div class="word-l2">pizarra</div></article><article class="vocab-card" style="--card-bg:#E8FAF8;--card-border:#7EDDD6"><div class="card-num">Card 14</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="door"/><div class="word-en">door</div><div class="word-l2">puerta</div></article><article class="vocab-card" style="--card-bg:#FFFDE8;--card-border:#FFE66D"><div class="card-num">Card 15</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="window"/><div class="word-en">window</div><div class="word-l2">ventana</div></article><article class="vocab-card" style="--card-bg:#F0EBFF;--card-border:#C4B5FD"><div class="card-num">Card 16</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="clock"/><div class="word-en">clock</div><div class="word-l2">reloj</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 5 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Vocabulary Cards 5</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Vocabulary Cards</h2><div class="vocab-grid"><article class="vocab-card" style="--card-bg:#FDF0F5;--card-border:#F9A8D4"><div class="card-num">Card 17</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="desk"/><div class="word-en">desk</div><div class="word-l2">escritorio</div></article><article class="vocab-card" style="--card-bg:#ECFDF5;--card-border:#6EE7B7"><div class="card-num">Card 18</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="computer"/><div class="word-en">computer</div><div class="word-l2">computadora</div></article><article class="vocab-card" style="--card-bg:#FFF0E8;--card-border:#FFB088"><div class="card-num">Card 19</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="shelf"/><div class="word-en">shelf</div><div class="word-l2">estante</div></article><article class="vocab-card" style="--card-bg:#E8FAF8;--card-border:#7EDDD6"><div class="card-num">Card 20</div><img class="vocab-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0ib2JqZWN0LWZpdDogY29udGFpbjsgZmlsdGVyOiBkcm9wLXNoYWRvdygwcHggOHB4IDEwcHggcmdiYSgwLDAsMCwwLjA2KSk7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iMTUiIGZpbGw9IiNGREZCRjciIHN0cm9rZT0iIzNBMkEyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0iI0ZERTY4QSIgc3Ryb2tlPSIjM0EyQTIyIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8cGF0aCBkPSJNMjAgODUgUSA1MCA1MCA4MCA4NSBaIiBmaWxsPSIjQkVFODlBIiBzdHJva2U9IiMzQTJBMjIiIHN0cm9rZS13aWR0aD0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0RDNjM1QyIgLz4KICAgIDx0ZXh0IHg9Ijc1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjRkFDQzE1Ij7inKg8L3RleHQ+CiAgPC9zdmc+" alt="folder"/><div class="word-en">folder</div><div class="word-l2">carpeta</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 6 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Mini-Book</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Mini-Book: My Classroom / Mi Salón de Clases</h2><p class="ws-instructions">Print double-sided, fold in half, and staple to create a mini-book.</p><div class="minibook-grid-new"><article class="minibook-card"><div class="minibook-num">1</div><div class="minibook-text"><div class="text-en">My Classroom</div><div class="text-l2">Mi Salón de Clases</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">2</div><div class="minibook-text"><div class="text-en">This is my classroom. It is big!</div><div class="text-l2">Este es mi salón de clases. ¡Es grande!</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">3</div><div class="minibook-text"><div class="text-en">I see a pencil. I use my pencil to write.</div><div class="text-l2">Veo un lápiz. Uso mi lápiz para escribir.</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">4</div><div class="minibook-text"><div class="text-en">I see a book. I like to read books.</div><div class="text-l2">Veo un libro. Me gusta leer libros.</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">5</div><div class="minibook-text"><div class="text-en">I see a chair. I sit on my chair.</div><div class="text-l2">Veo una silla. Me siento en mi silla.</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">6</div><div class="minibook-text"><div class="text-en">I see a table. I work at my table.</div><div class="text-l2">Veo una mesa. Trabajo en mi mesa.</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">7</div><div class="minibook-text"><div class="text-en">I see crayons. I color with crayons.</div><div class="text-l2">Veo crayones. Coloreo con crayones.</div></div><div class="minibook-illust">🖼️ Illustration</div></article><article class="minibook-card"><div class="minibook-num">8</div><div class="minibook-text"><div class="text-en">My classroom has many things! What do you see?</div><div class="text-l2">¡Mi salón de clases tiene muchas cosas! ¿Qué ves tú?</div></div><div class="minibook-illust">🖼️ Illustration</div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 7 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Worksheet 1</span><span>📎 Sample</span></header><main class="page-content"><div><div class="ws-header"><div><h2 class="section-title">Worksheet 1</h2><span class="ws-type-badge">matching</span></div><div class="ws-name-box">Name: ____________________</div></div><p class="ws-instructions">Draw a line from the English word to its matching picture.</p><p class="ws-instructions-l2">Dibuja una línea de la palabra en inglés a su imagen correspondiente.</p><div class="ws-items"><article class="ws-item"><div class="ws-item-num">1</div><div class="ws-item-content"><strong>pencil</strong><div class="ws-l2">lápiz</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">2</div><div class="ws-item-content"><strong>book</strong><div class="ws-l2">libro</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">3</div><div class="ws-item-content"><strong>chair</strong><div class="ws-l2">silla</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">4</div><div class="ws-item-content"><strong>table</strong><div class="ws-l2">mesa</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">5</div><div class="ws-item-content"><strong>crayon</strong><div class="ws-l2">crayón</div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 8 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Worksheet 2</span><span>📎 Sample</span></header><main class="page-content"><div><div class="ws-header"><div><h2 class="section-title">Worksheet 2</h2><span class="ws-type-badge">tracing</span></div><div class="ws-name-box">Name: ____________________</div></div><p class="ws-instructions">Trace the words below. Then say the word.</p><p class="ws-instructions-l2">Traza las palabras de abajo. Luego di la palabra.</p><div class="ws-items"><article class="ws-item"><div class="ws-item-num">1</div><div class="ws-item-content"><strong>Pencil</strong><div class="ws-l2">Lápiz</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">2</div><div class="ws-item-content"><strong>Book</strong><div class="ws-l2">Libro</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">3</div><div class="ws-item-content"><strong>Chair</strong><div class="ws-l2">Silla</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">4</div><div class="ws-item-content"><strong>Table</strong><div class="ws-l2">Mesa</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">5</div><div class="ws-item-content"><strong>Crayon</strong><div class="ws-l2">Crayón</div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 9 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Worksheet 3</span><span>📎 Sample</span></header><main class="page-content"><div><div class="ws-header"><div><h2 class="section-title">Worksheet 3</h2><span class="ws-type-badge">coloring</span></div><div class="ws-name-box">Name: ____________________</div></div><p class="ws-instructions">Color the classroom objects. Say their names in English and Spanish.</p><p class="ws-instructions-l2">Colorea los objetos del salón de clases. Di sus nombres en inglés y español.</p><div class="ws-items"><article class="ws-item"><div class="ws-item-num">1</div><div class="ws-item-content"><strong>Scissors</strong><div class="ws-l2">Tijeras</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">2</div><div class="ws-item-content"><strong>Glue</strong><div class="ws-l2">Pegamento</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">3</div><div class="ws-item-content"><strong>Backpack</strong><div class="ws-l2">Mochila</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">4</div><div class="ws-item-content"><strong>Marker</strong><div class="ws-l2">Marcador</div><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">5</div><div class="ws-item-content"><strong>Eraser</strong><div class="ws-l2">Borrador</div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 10 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Teacher Notes</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Teacher Notes</h2><div class="notes-grid"><section class="note-section"><h3>🎯 Objective</h3><p>Students will be able to identify and name at least 15 common classroom objects in English and Spanish. Students will use new vocabulary in simple sentences.</p></section><section class="note-section"><h3>💡 Suggested Use</h3><p>Introduce vocabulary using flashcards and realia. Use the mini-book for shared reading and repeated practice. Worksheets can be completed independently or in small groups. Encourage students to point to and name objects in the classroom.</p></section><section class="note-section"><h3>📦 Materials Needed</h3><ul><li>Flashcards of classroom objects (included vocabulary)</li><li>Real classroom objects (pencil, book, chair, etc.)</li><li>Crayons, markers, or colored pencils</li><li>Pencils for tracing and writing</li><li>Glue sticks for optional extension activities (e.g., cut and paste)</li></ul></section><section class="note-section"><h3>🔀 Differentiation Tips</h3><ul><li>**Support:** Provide sentence frames (e.g., &#x27;It&#x27;s a ___.&#x27;, &#x27;I see a ___ .&#x27;), use TPR (Total Physical Response) by having students touch or point to objects, pair students with a stronger English speaker, use visuals extensively.</li><li>**Challenge:** Ask students to describe objects (e.g., &#x27;What color is the pencil?&#x27;), use objects in a sentence, identify objects by their function (e.g., &#x27;What do we use to cut paper?&#x27;), create their own mini-book page.</li></ul></section></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 11 / 13</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Answer Key</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Answer Key</h2><div class="answer-list"><section class="ak-section"><h3>ws-1</h3><div class="ak-grid"><div class="ak-item"><strong>1.</strong><span>pencil (to image of pencil)</span></div><div class="ak-item"><strong>2.</strong><span>book (to image of book)</span></div><div class="ak-item"><strong>3.</strong><span>chair (to image of chair)</span></div><div class="ak-item"><strong>4.</strong><span>table (to image of table)</span></div><div class="ak-item"><strong>5.</strong><span>crayon (to image of crayon)</span></div></div></section><section class="ak-section"><h3>ws-2</h3><div class="ak-grid"><div class="ak-item"><strong>1.</strong><span>Visual check: &#x27;Pencil&#x27; traced correctly.</span></div><div class="ak-item"><strong>2.</strong><span>Visual check: &#x27;Book&#x27; traced correctly.</span></div><div class="ak-item"><strong>3.</strong><span>Visual check: &#x27;Chair&#x27; traced correctly.</span></div><div class="ak-item"><strong>4.</strong><span>Visual check: &#x27;Table&#x27; traced correctly.</span></div><div class="ak-item"><strong>5.</strong><span>Visual check: &#x27;Crayon&#x27; traced correctly.</span></div></div></section><section class="ak-section"><h3>ws-3</h3><div class="ak-grid"><div class="ak-item"><strong>1.</strong><span>Visual check: Scissors colored appropriately.</span></div><div class="ak-item"><strong>2.</strong><span>Visual check: Glue stick colored appropriately.</span></div><div class="ak-item"><strong>3.</strong><span>Visual check: Backpack colored appropriately.</span></div><div class="ak-item"><strong>4.</strong><span>Visual check: Marker colored appropriately.</span></div><div class="ak-item"><strong>5.</strong><span>Visual check: Eraser colored appropriately.</span></div></div></section></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 12 / 13</span></footer><div class="sample-cta">💡 Love this sample? Get the full pack at lanternell.com/shop</div></section><section class="pdf-page"><div class="brand-bar"></div><div class="watermark">FREE SAMPLE - LanternELL.com</div><header class="page-header"><span class="brand-name">LanternELL</span><span>Terms of Use</span><span>📎 Sample</span></header><main class="page-content"><div><h2 class="section-title">Terms of Use</h2><div class="terms-grid"><section class="terms-section"><h3>📄 License: personal-classroom-use</h3><p>This resource is licensed for personal and single-classroom use only.</p></section><section class="terms-section"><h3>✅ You May</h3><ul><li>Print copies for your own students</li><li>Use in your classroom, tutoring sessions, or homeschool</li><li>Share the product link with colleagues (not the file)</li></ul></section><section class="terms-section"><h3>❌ You May Not</h3><ul><li>Share, redistribute, or resell the digital files</li><li>Upload to shared drives accessible by other teachers</li><li>Claim this content as your own creation</li></ul></section><section class="terms-section"><h3>🏫 Need a School License?</h3><p>Contact us at support@lanternell.com for multi-teacher and site licensing options.</p></section></div></div></main><footer class="page-footer"><span>Mar 12, 2026</span><span class="site-url">lanternell.com</span><span>Page 13 / 13</span></footer></section></body></html>
+</body>
+</html>
