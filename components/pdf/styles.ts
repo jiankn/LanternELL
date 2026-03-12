@@ -344,10 +344,10 @@ export const PACK_STYLES = `
   }
   .vocab-img {
     width: 100%;
-    max-height: 120px;
+    max-height: 160px; /* 调大尺寸 */
     object-fit: contain;
     border-radius: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
   }
 
   /* === SENTENCE FRAMES === */
