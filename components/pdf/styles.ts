@@ -113,7 +113,7 @@ export const PACK_STYLES = `
 
   .page-content {
     flex: 1;
-    padding: 0.35in 0.55in 0.25in;
+    padding: 0.2in 0.5in 0.15in;
     position: relative;
     z-index: 1;
   }
@@ -170,10 +170,10 @@ export const PACK_STYLES = `
   h2.section-title {
     font-family: 'Nunito', system-ui, sans-serif;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 22px;
     color: var(--text);
-    margin: 0 0 20px;
-    padding-bottom: 10px;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
     border-bottom: 3px solid var(--primary);
     display: inline-block;
   }
@@ -294,18 +294,18 @@ export const PACK_STYLES = `
   .vocab-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 12px;
   }
   .vocab-card {
     border: 2px solid var(--card-border, var(--border));
-    border-radius: 20px;
+    border-radius: 18px;
     background: var(--card-bg, #fff);
-    padding: 20px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: 200px;
+    min-height: 180px;
   }
   .vocab-card .card-num {
     font-size: 10px;
@@ -344,23 +344,23 @@ export const PACK_STYLES = `
   }
   .vocab-img {
     width: 100%;
-    max-height: 160px; /* 调大尺寸 */
+    max-height: 140px;
     object-fit: contain;
-    border-radius: 14px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    margin-bottom: 8px;
   }
 
   /* === SENTENCE FRAMES === */
-  .frames-list { display: grid; gap: 14px; }
+  .frames-list { display: grid; gap: 10px; }
   .frame-card {
     display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 14px;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
     align-items: start;
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 14px;
     background: var(--bg);
-    padding: 18px;
+    padding: 14px;
     border-left: 4px solid var(--primary);
   }
   .frame-num {
@@ -418,15 +418,15 @@ export const PACK_STYLES = `
     font-style: italic;
     margin-bottom: 20px;
   }
-  .ws-items { display: grid; gap: 16px; }
+  .ws-items { display: grid; gap: 12px; }
   .ws-item {
     display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 14px;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
     align-items: start;
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px;
+    border-radius: 14px;
+    padding: 14px;
     background: var(--bg);
   }
   .ws-item-num {
