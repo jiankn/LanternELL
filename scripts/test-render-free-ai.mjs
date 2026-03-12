@@ -55,6 +55,7 @@ async function main() {
 
     const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();
+    console.log('  Verifying enriched data...', enriched.vocabulary[0].image_data?.substring(0, 50));
 
     console.log('  Fetching from local dev server...');
     const res = await fetch(LOCAL_DEV_URL, {
