@@ -14,11 +14,16 @@ function VocabularyCards({ items, cardColors, cardBorders, pageIndex }: {
             <div className="vocab-grid">
                 {items.map((item, i) => {
                     const ci = (pageIndex * 4 + i) % cardColors.length;
+                    const imgData = (item as any).image_data;
                     return (
                         <article key={`${item.en}-${i}`} className="vocab-card"
                             style={{ '--card-bg': cardColors[ci], '--card-border': cardBorders[ci] } as any}>
                             <div className="card-num">Card {pageIndex * 4 + i + 1}</div>
-                            <div className="illust-area">{item.image_prompt || '🖼️'}</div>
+                            {imgData ? (
+                                <img className="vocab-img" src={imgData} alt={item.en} />
+                            ) : (
+                                <div className="illust-area">{item.image_prompt || '🖼️'}</div>
+                            )}
                             <div className="word-en">{item.en}</div>
                             <div className="word-l2">{item.l2}</div>
                         </article>

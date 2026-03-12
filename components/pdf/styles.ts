@@ -1,62 +1,62 @@
 // Theme colors based on age band
 export const THEMES = {
-    'K-2': {
-        primary: '#FF6B35',
-        primaryLight: '#FFF0E8',
-        secondary: '#4ECDC4',
-        secondaryLight: '#E8FAF8',
-        accent: '#FFE66D',
-        accentLight: '#FFFDE8',
-        purple: '#A78BFA',
-        purpleLight: '#F0EBFF',
-        pink: '#F472B6',
-        pinkLight: '#FDF0F5',
-        green: '#34D399',
-        greenLight: '#ECFDF5',
-        text: '#1E293B',
-        textSecondary: '#64748B',
-        bg: '#FFFFFF',
-        pageBg: '#FAFBFF',
-        border: '#E2E8F0',
-        cardColors: ['#FFF0E8', '#E8FAF8', '#FFFDE8', '#F0EBFF', '#FDF0F5', '#ECFDF5'],
-        cardBorders: ['#FFB088', '#7EDDD6', '#FFE66D', '#C4B5FD', '#F9A8D4', '#6EE7B7'],
-    },
-    '3-5': {
-        primary: '#0D9488',
-        primaryLight: '#F0FDFA',
-        secondary: '#F97316',
-        secondaryLight: '#FFF7ED',
-        accent: '#6366F1',
-        accentLight: '#EEF2FF',
-        text: '#0F172A',
-        textSecondary: '#475569',
-        bg: '#FFFFFF',
-        pageBg: '#F8FAFC',
-        border: '#CBD5E1',
-        cardColors: ['#F0FDFA', '#FFF7ED', '#EEF2FF', '#FEF2F2', '#F0FDF4', '#FDF4FF'],
-        cardBorders: ['#5EEAD4', '#FDBA74', '#A5B4FC', '#FCA5A5', '#86EFAC', '#E9D5FF'],
-    },
-    '6-8': {
-        primary: '#1E40AF',
-        primaryLight: '#EFF6FF',
-        secondary: '#DC2626',
-        secondaryLight: '#FEF2F2',
-        accent: '#059669',
-        accentLight: '#ECFDF5',
-        text: '#0F172A',
-        textSecondary: '#475569',
-        bg: '#FFFFFF',
-        pageBg: '#F8FAFC',
-        border: '#CBD5E1',
-        cardColors: ['#EFF6FF', '#FEF2F2', '#ECFDF5', '#FDF4FF', '#FFFBEB', '#F0F9FF'],
-        cardBorders: ['#93C5FD', '#FCA5A5', '#6EE7B7', '#E9D5FF', '#FDE68A', '#7DD3FC'],
-    },
+  'K-2': {
+    primary: '#FF6B35',
+    primaryLight: '#FFF0E8',
+    secondary: '#4ECDC4',
+    secondaryLight: '#E8FAF8',
+    accent: '#FFE66D',
+    accentLight: '#FFFDE8',
+    purple: '#A78BFA',
+    purpleLight: '#F0EBFF',
+    pink: '#F472B6',
+    pinkLight: '#FDF0F5',
+    green: '#34D399',
+    greenLight: '#ECFDF5',
+    text: '#1E293B',
+    textSecondary: '#64748B',
+    bg: '#FFFFFF',
+    pageBg: '#FAFBFF',
+    border: '#E2E8F0',
+    cardColors: ['#FFF0E8', '#E8FAF8', '#FFFDE8', '#F0EBFF', '#FDF0F5', '#ECFDF5'],
+    cardBorders: ['#FFB088', '#7EDDD6', '#FFE66D', '#C4B5FD', '#F9A8D4', '#6EE7B7'],
+  },
+  '3-5': {
+    primary: '#0D9488',
+    primaryLight: '#F0FDFA',
+    secondary: '#F97316',
+    secondaryLight: '#FFF7ED',
+    accent: '#6366F1',
+    accentLight: '#EEF2FF',
+    text: '#0F172A',
+    textSecondary: '#475569',
+    bg: '#FFFFFF',
+    pageBg: '#F8FAFC',
+    border: '#CBD5E1',
+    cardColors: ['#F0FDFA', '#FFF7ED', '#EEF2FF', '#FEF2F2', '#F0FDF4', '#FDF4FF'],
+    cardBorders: ['#5EEAD4', '#FDBA74', '#A5B4FC', '#FCA5A5', '#86EFAC', '#E9D5FF'],
+  },
+  '6-8': {
+    primary: '#1E40AF',
+    primaryLight: '#EFF6FF',
+    secondary: '#DC2626',
+    secondaryLight: '#FEF2F2',
+    accent: '#059669',
+    accentLight: '#ECFDF5',
+    text: '#0F172A',
+    textSecondary: '#475569',
+    bg: '#FFFFFF',
+    pageBg: '#F8FAFC',
+    border: '#CBD5E1',
+    cardColors: ['#EFF6FF', '#FEF2F2', '#ECFDF5', '#FDF4FF', '#FFFBEB', '#F0F9FF'],
+    cardBorders: ['#93C5FD', '#FCA5A5', '#6EE7B7', '#E9D5FF', '#FDE68A', '#7DD3FC'],
+  },
 };
 
 export function getTheme(ageBand: string) {
-    if (ageBand?.includes('6') || ageBand?.includes('7') || ageBand?.includes('8')) return THEMES['6-8'];
-    if (ageBand?.includes('3') || ageBand?.includes('4') || ageBand?.includes('5')) return THEMES['3-5'];
-    return THEMES['K-2'];
+  if (ageBand?.includes('6') || ageBand?.includes('7') || ageBand?.includes('8')) return THEMES['6-8'];
+  if (ageBand?.includes('3') || ageBand?.includes('4') || ageBand?.includes('5')) return THEMES['3-5'];
+  return THEMES['K-2'];
 }
 
 export const PACK_STYLES = `
@@ -341,6 +341,13 @@ export const PACK_STYLES = `
     font-size: 20px;
     font-weight: 700;
     color: var(--primary);
+  }
+  .vocab-img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 14px;
+    margin-bottom: 14px;
   }
 
   /* === SENTENCE FRAMES === */

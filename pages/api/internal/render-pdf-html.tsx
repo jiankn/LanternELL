@@ -3,6 +3,10 @@ import { PackDocument } from '@/components/pdf/pack-document';
 import { renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 
+export const config = {
+    api: { bodyParser: { sizeLimit: '50mb' } },
+};
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method Not Allowed' });
