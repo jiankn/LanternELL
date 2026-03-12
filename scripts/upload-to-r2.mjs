@@ -16,7 +16,7 @@ async function uploadFile(localPath, remoteKey) {
     console.log(`Uploading ${remoteKey}...`);
     try {
         // Use wrangler CLI to upload
-        execSync(`npx wrangler r2 object put ${BUCKET_NAME}/${remoteKey} --file="${localPath}"`, {
+        execSync(`npx wrangler r2 object put ${BUCKET_NAME}/${remoteKey} --file="${localPath}" --remote`, {
             stdio: 'pipe',
             cwd: ROOT
         });
