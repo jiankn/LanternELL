@@ -495,47 +495,47 @@ export const PACK_STYLES = `
   }
 
   /* === MINI BOOK === */
-  .minibook-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .minibook-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .minibook-card {
     border: 2px dashed var(--border);
-    border-radius: 18px;
+    border-radius: 14px;
     background: var(--bg);
-    padding: 18px;
-    min-height: 195px;
+    padding: 12px;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
   }
   .minibook-num {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
     color: var(--primary);
     text-align: right;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
   .minibook-text { flex: 1; }
   .minibook-text .text-en {
     font-family: 'Nunito', system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 6px;
-    line-height: 1.5;
+    margin-bottom: 4px;
+    line-height: 1.4;
   }
   .minibook-text .text-l2 {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--primary);
-    line-height: 1.5;
+    line-height: 1.4;
   }
   .minibook-illust {
-    margin-top: 10px;
-    height: 60px;
+    margin-top: 6px;
+    height: 40px;
     border: 2px dashed var(--card-border, #ddd);
-    border-radius: 12px;
+    border-radius: 10px;
     background: var(--primary-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-secondary);
     font-style: italic;
   }

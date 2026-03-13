@@ -1,0 +1,85 @@
+[dotenv@17.3.1] injecting env (32) from .env.local -- tip: 鈿欙笍  suppress all logs with { quiet: true }
+========================================
+  Imagen 4 Fast - American Cartoon Style
+  Pack: classroom-objects (K-2)
+========================================
+
+Phase 1: Generating AI images (20 items, style: K-2)...
+  [1/20] pencil -> cached (7KB), skip
+  [2/20] book -> cached (24KB), skip
+  [3/20] chair -> cached (9KB), skip
+  [4/20] table -> cached (8KB), skip
+  [5/20] crayon -> cached (10KB), skip
+  [6/20] paper -> cached (9KB), skip
+  [7/20] scissors -> cached (11KB), skip
+  [8/20] glue -> cached (8KB), skip
+  [9/20] Generating: backpack...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [10/20] Generating: marker...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [11/20] Generating: eraser...
+    -> FAILED: API 429: {
+  "error": {
+  [12/20] Generating: ruler...
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [13/20] Generating: whiteboard...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [14/20] Generating: door...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [15/20] Generating: window...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [16/20] Generating: clock...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [17/20] Generating: desk...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [18/20] Generating: computer...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [19/20] Generating: shelf...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  [20/20] Generating: folder...
+    -> FAILED: API 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+  Result: 0 new, 8 cached
+
+Phase 2: Rendering PDF...
+  Images loaded: 8/20
+  Requesting HTML from dev server...
+FATAL: fetch failed TypeError: fetch failed
+    at node:internal/deps/undici/undici:15845:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async phase2_renderPDF (file:///C:/antigravity/LanternELL/scripts/render-full-pack.mjs:137:17)
+    at async main (file:///C:/antigravity/LanternELL/scripts/render-full-pack.mjs:192:21)
