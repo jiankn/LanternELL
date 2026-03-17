@@ -427,6 +427,8 @@ export const PACK_STYLES = `
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 16px;
+    page-break-inside: avoid;
+    page-break-after: avoid;
   }
   .ws-type-badge {
     display: inline-block;
@@ -454,6 +456,7 @@ export const PACK_STYLES = `
     line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: 6px;
+    page-break-after: avoid;
   }
   .ws-instructions-l2 {
     font-size: 14px;
@@ -461,6 +464,7 @@ export const PACK_STYLES = `
     color: var(--primary);
     font-style: italic;
     margin-bottom: 20px;
+    page-break-after: avoid;
   }
   .ws-items { display: grid; gap: 12px; }
   .ws-item {
