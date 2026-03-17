@@ -53,14 +53,14 @@
     },
     {
       "en": "Carpet Area",
-      "l2": "Área de la Alfombra",
+      "l2": "La Alfombra",
       "category": "areas",
       "size": "full",
       "plural_form": ""
     },
     {
       "en": "Teacher's Desk",
-      "l2": "Escritorio del Maestro/a",
+      "l2": "Escritorio del Maestro",
       "category": "areas",
       "size": "small",
       "plural_form": ""
@@ -83,7 +83,7 @@
   "visual_routine_cards": [
     {
       "routine_en": "Morning Arrival",
-      "routine_l2": "Llegada por la Mañana",
+      "routine_l2": "Llegada",
       "time_of_day": "morning",
       "icon_prompt": "child entering classroom, backpack, smiling"
     },
@@ -95,13 +95,13 @@
     },
     {
       "routine_en": "Restroom Break",
-      "routine_l2": "Descanso para el Baño",
+      "routine_l2": "Ir al Baño",
       "time_of_day": "any",
       "icon_prompt": "restroom door symbol, child washing hands"
     },
     {
       "routine_en": "Circle Time",
-      "routine_l2": "Círculo de Conversación",
+      "routine_l2": "Tiempo en Círculo",
       "time_of_day": "morning",
       "icon_prompt": "children sitting in a circle on a rug, teacher reading a book"
     },

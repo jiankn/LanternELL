@@ -99,7 +99,7 @@
     },
     {
       "prompt_en": "Ask your teacher how they are.",
-      "prompt_l2": "Pregúntale a tu maestro/a cómo está.",
+      "prompt_l2": "Pregúntale a tu maestro(a) cómo está.",
       "expected_response": "How are you?",
       "visual_cue": "Image of a teacher smiling with a question mark above their head."
     },

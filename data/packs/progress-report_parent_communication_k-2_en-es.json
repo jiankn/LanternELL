@@ -14,7 +14,7 @@
       "title_en": "Welcome to Your Child's Progress Report!",
       "title_l2": "¡Bienvenidos al Informe de Progreso de su Hijo/a!",
       "content_en": "Dear Families,\n\nWe are excited to share your child's progress report for this marking period. This report is a snapshot of their growth, achievements, and areas where we can continue to support them together. We celebrate their hard work and dedication!\n\nPlease take some time to review the report. We value our partnership with you in your child's educational journey.\n\nSincerely,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nNos complace compartir el informe de progreso de su hijo/a para este período. Este informe es una instantánea de su crecimiento, logros y áreas donde podemos seguir apoyándolos juntos. ¡Celebramos su arduo trabajo y dedicación!\n\nPor favor, tómense un tiempo para revisar el informe. Valoramos nuestra colaboración con ustedes en el camino educativo de su hijo/a.\n\nAtentamente,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nNos complace compartir el informe de progreso de su hijo(a) para este período. Este informe es una instantánea de su crecimiento, logros y áreas donde podemos seguir apoyándolos juntos. ¡Celebramos su arduo trabajo y dedicación!\n\nPor favor, tómense un tiempo para revisar el informe. Valoramos nuestra colaboración con ustedes en el camino educativo de su hijo(a).\n\nAtentamente,\n[Nombre del Maestro(a)]",
       "signature_required": false,
       "response_section": true,
       "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
@@ -25,7 +25,7 @@
       "title_en": "Homework and Learning at Home",
       "title_l2": "Tareas y Aprendizaje en Casa",
       "content_en": "Dear Families,\n\nHomework plays an important role in reinforcing what your child learns in class. We encourage you to create a quiet space and a consistent routine for homework time. If you have any questions or if your child is consistently struggling with assignments, please let us know. We are here to help!\n\nThank you for your support,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nLa tarea juega un papel importante en el refuerzo de lo que su hijo/a aprende en clase. Les animamos a crear un espacio tranquilo y una rutina constante para la hora de la tarea. Si tienen alguna pregunta o si su hijo/a tiene dificultades constantes con las tareas, por favor háganoslo saber. ¡Estamos aquí para ayudar!\n\nGracias por su apoyo,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nLa tarea juega un papel importante en el refuerzo de lo que su hijo(a) aprende en clase. Les animamos a crear un espacio tranquilo y una rutina constante para la hora de la tarea. Si tienen alguna pregunta o si su hijo(a) tiene dificultades constantes con las tareas, por favor háganoslo saber. ¡Estamos aquí para ayudar!\n\nGracias por su apoyo,\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": true,
       "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
@@ -36,7 +36,7 @@
       "title_en": "Classroom Behavior Update",
       "title_l2": "Actualización sobre el Comportamiento en Clase",
       "content_en": "Dear Families,\n\nWe are proud of the positive choices your child is making in the classroom. They are showing great progress in [mention a positive behavior, e.g., 'sharing with friends' or 'following instructions']. We also want to work together on [mention an area for growth, e.g., 'raising a hand before speaking' or 'keeping hands to self']. Your support at home in reinforcing these expectations is invaluable.\n\nPlease feel free to reach out to discuss this further.\n\nSincerely,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nEstamos orgullosos de las decisiones positivas que su hijo/a está tomando en el aula. Están mostrando un gran progreso en [mencione un comportamiento positivo, ej. 'compartir con amigos' o 'seguir instrucciones']. También queremos trabajar juntos en [mencione un área de crecimiento, ej. 'levantar la mano antes de hablar' o 'mantener las manos quietas']. Su apoyo en casa para reforzar estas expectativas es invaluable.\n\nNo duden en comunicarse para discutir esto más a fondo.\n\nAtentamente,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nEstamos orgullosos de las decisiones positivas que su hijo(a) está tomando en el aula. Están mostrando un gran progreso en [mencione un comportamiento positivo, ej. 'compartir con amigos' o 'seguir instrucciones']. También queremos trabajar juntos en [mencione un área de crecimiento, ej. 'levantar la mano antes de hablar' o 'mantener las manos quietas']. Su apoyo en casa para reforzar estas expectativas es invaluable.\n\nNo duden en comunicarse para discutir esto más a fondo.\n\nAtentamente,\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": true
     },
@@ -45,7 +45,7 @@
       "title_en": "Academic Progress Report",
       "title_l2": "Informe de Progreso Académico",
       "content_en": "Dear Families,\n\nYour child continues to make wonderful progress in their learning journey! We've seen significant growth in [mention a subject or skill, e.g., 'reading fluency' or 'math problem-solving']. We are so proud of their efforts and achievements. The attached report provides more details on their academic development.\n\nWe look forward to continuing to nurture their love for learning.\n\nSincerely,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\n¡Su hijo/a sigue haciendo un progreso maravilloso en su viaje de aprendizaje! Hemos visto un crecimiento significativo en [mencione una materia o habilidad, ej. 'fluidez lectora' o 'resolución de problemas matemáticos']. Estamos muy orgullosos de sus esfuerzos y logros. El informe adjunto proporciona más detalles sobre su desarrollo académico.\n\nEsperamos seguir cultivando su amor por el aprendizaje.\n\nAtentamente,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\n¡Su hijo(a) sigue haciendo un progreso maravilloso en su viaje de aprendizaje! Hemos visto un crecimiento significativo en [mencione una materia o habilidad, ej. 'fluidez lectora' o 'resolución de problemas matemáticos']. Estamos muy orgullosos de sus esfuerzos y logros. El informe adjunto proporciona más detalles sobre su desarrollo académico.\n\nEsperamos seguir cultivando su amor por el aprendizaje.\n\nAtentamente,\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": true
     },
@@ -54,7 +54,7 @@
       "title_en": "Classroom Supply Request",
       "title_l2": "Solicitud de Materiales para el Aula",
       "content_en": "Dear Families,\n\nWe are running low on some essential classroom supplies that help make our learning activities engaging and fun. We would greatly appreciate it if you could help by sending in [list specific items, e.g., 'a box of tissues' or 'glue sticks and markers']. Your generosity helps ensure we have everything we need for a productive classroom. \n\nThank you for your support!\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nNos estamos quedando sin algunos materiales esenciales en el aula que nos ayudan a que nuestras actividades de aprendizaje sean atractivas y divertidas. Agradeceríamos mucho si pudieran ayudar enviando [liste artículos específicos, ej. 'una caja de pañuelos' o 'barras de pegamento y marcadores']. Su generosidad ayuda a asegurar que tengamos todo lo que necesitamos para un aula productiva.\n\n¡Gracias por su apoyo!\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nNos estamos quedando sin algunos materiales esenciales en el aula que nos ayudan a que nuestras actividades de aprendizaje sean atractivas y divertidas. Agradeceríamos mucho si pudieran ayudar enviando [liste artículos específicos, ej. 'una caja de pañuelos' o 'barras de pegamento y marcadores']. Su generosidad ayuda a asegurar que tengamos todo lo que necesitamos para un aula productiva.\n\n¡Gracias por su apoyo!\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": true
     },
@@ -63,7 +63,7 @@
       "title_en": "Important Message Regarding Attendance",
       "title_l2": "Mensaje Importante sobre la Asistencia",
       "content_en": "Dear Families,\n\nRegular attendance is crucial for your child's success in school. Every day in class brings new learning experiences and helps build a strong foundation. We've noticed [mention a pattern, e.g., 'a few absences this month' or 'some late arrivals']. Please ensure your child arrives on time and attends school daily unless they are genuinely ill.\n\nIf you are experiencing challenges with attendance, please contact us so we can offer support.\n\nSincerely,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nLa asistencia regular es crucial para el éxito escolar de su hijo/a. Cada día en clase trae nuevas experiencias de aprendizaje y ayuda a construir una base sólida. Hemos notado [mencione un patrón, ej. 'algunas ausencias este mes' o 'algunos retrasos']. Por favor, asegúrense de que su hijo/a llegue a tiempo y asista a la escuela diariamente a menos que esté realmente enfermo/a.\n\nSi tienen dificultades con la asistencia, por favor contáctennos para que podamos ofrecer apoyo.\n\nAtentamente,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nLa asistencia regular es crucial para el éxito escolar de su hijo(a). Cada día en clase trae nuevas experiencias de aprendizaje y ayuda a construir una base sólida. Hemos notado [mencione un patrón, ej. 'algunas ausencias este mes' o 'algunos retrasos']. Por favor, asegúrense de que su hijo(a) llegue a tiempo y asista a la escuela diariamente a menos que esté realmente enfermo/a.\n\nSi tienen dificultades con la asistencia, por favor contáctennos para que podamos ofrecer apoyo.\n\nAtentamente,\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": true
     },
@@ -72,7 +72,7 @@
       "title_en": "General Classroom Update",
       "title_l2": "Actualización General del Aula",
       "content_en": "Dear Families,\n\nJust a friendly reminder about [mention general information, e.g., 'our upcoming field trip on [Date]' or 'the school's annual book fair next week']. We also want to thank you for your continued involvement and support in our classroom community. Your partnership makes a huge difference!\n\nPlease let us know if you have any questions.\n\nSincerely,\n[Teacher's Name]",
-      "content_l2": "Estimadas familias,\n\nSolo un recordatorio amistoso sobre [mencione información general, ej. 'nuestra próxima excursión el [Fecha]' o 'la feria anual del libro de la escuela la próxima semana']. También queremos agradecerles por su continua participación y apoyo en nuestra comunidad de aula. ¡Su colaboración marca una gran diferencia!\n\nPor favor, háganos saber si tienen alguna pregunta.\n\nAtentamente,\n[Nombre del Maestro/a]",
+      "content_l2": "Estimadas familias,\n\nSolo un recordatorio amistoso sobre [mencione información general, ej. 'nuestra próxima excursión el [Fecha]' o 'la feria anual del libro de la escuela la próxima semana']. También queremos agradecerles por su continua participación y apoyo en nuestra comunidad de aula. ¡Su colaboración marca una gran diferencia!\n\nPor favor, háganos saber si tienen alguna pregunta.\n\nAtentamente,\n[Nombre del Maestro(a)]",
       "signature_required": true,
       "response_section": false
     }
