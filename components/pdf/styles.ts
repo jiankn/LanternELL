@@ -120,8 +120,6 @@ export const PACK_STYLES = `
     padding: 0.2in 0.5in 0.15in;
     position: relative;
     z-index: 1;
-    max-height: 9.85in;
-    overflow: hidden;
   }
 
   .page-footer {
