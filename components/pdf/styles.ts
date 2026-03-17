@@ -291,21 +291,60 @@ export const PACK_STYLES = `
   }
 
   /* === VOCABULARY CARDS === */
-  .vocab-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .vocab-container {
+    width: 100%;
   }
+  .vocab-row {
+    display: flex;
+    width: 100%;
+  }
+  .vocab-cell {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+  }
+
+  /* ✂️ Horizontal cut line between rows */
+  .cut-line-h {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    margin: 2px 0;
+  }
+  .cut-line-scissors {
+    font-size: 16px;
+    color: #999;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+  .cut-line-dash {
+    flex: 1;
+    height: 0;
+    border-top: 2px dashed #BBBBBB;
+  }
+
+  /* ✂️ Vertical cut line between columns */
+  .cut-line-v {
+    width: 0;
+    align-self: stretch;
+    border-left: 2px dashed #BBBBBB;
+    margin: 8px 2px;
+    flex-shrink: 0;
+  }
+
   .vocab-card {
     border: 2px solid var(--card-border, var(--border));
     border-radius: 18px;
     background: var(--card-bg, #fff);
     padding: 14px;
+    margin: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     min-height: 180px;
+    flex: 1;
   }
   .vocab-card .card-num {
     font-size: 10px;

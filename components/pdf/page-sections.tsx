@@ -8,27 +8,49 @@ import { fmt } from './pack-document';
 function VocabularyCards({ items, cardColors, cardBorders, pageIndex }: {
     items: VocabularyItem[]; cardColors: string[]; cardBorders: string[]; pageIndex: number;
 }) {
+    // Build 2-column rows with cut lines between them
+    const rows: VocabularyItem[][] = [];
+    for (let i = 0; i < items.length; i += 2) {
+        rows.push(items.slice(i, i + 2));
+    }
+
     return (
         <div>
             <h2 className="section-title">Vocabulary Cards</h2>
-            <div className="vocab-grid">
-                {items.map((item, i) => {
-                    const ci = (pageIndex * 4 + i) % cardColors.length;
-                    const imgData = (item as any).image_data;
-                    return (
-                        <article key={`${item.en}-${i}`} className="vocab-card"
-                            style={{ '--card-bg': cardColors[ci], '--card-border': cardBorders[ci] } as any}>
-                            <div className="card-num">Card {pageIndex * 4 + i + 1}</div>
-                            {imgData ? (
-                                <img className="vocab-img" src={imgData} alt={item.en} />
-                            ) : (
-                                <div className="illust-area">{item.image_prompt || '🖼️'}</div>
-                            )}
-                            <div className="word-en">{item.en}</div>
-                            <div className="word-l2">{item.l2}</div>
-                        </article>
-                    );
-                })}
+            <div className="vocab-container">
+                {rows.map((row, ri) => (
+                    <div key={`row-${ri}`}>
+                        <div className="vocab-row">
+                            {row.map((item, ci) => {
+                                const idx = pageIndex * 4 + ri * 2 + ci;
+                                const cIdx = idx % cardColors.length;
+                                const imgData = (item as any).image_data;
+                                return (
+                                    <div key={`${item.en}-${ci}`} className="vocab-cell">
+                                        {ci > 0 && <div className="cut-line-v" />}
+                                        <article className="vocab-card"
+                                            style={{ '--card-bg': cardColors[cIdx], '--card-border': cardBorders[cIdx] } as any}>
+                                            <div className="card-num">Card {idx + 1}</div>
+                                            {imgData ? (
+                                                <img className="vocab-img" src={imgData} alt={item.en} />
+                                            ) : (
+                                                <div className="illust-area">{item.image_prompt || '🖼️'}</div>
+                                            )}
+                                            <div className="word-en">{item.en}</div>
+                                            <div className="word-l2">{item.l2}</div>
+                                        </article>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {ri < rows.length - 1 && (
+                            <div className="cut-line-h">
+                                <span className="cut-line-scissors">✂</span>
+                                <span className="cut-line-dash" />
+                            </div>
+                        )}
+                    </div>
+                ))}
             </div>
         </div>
     );

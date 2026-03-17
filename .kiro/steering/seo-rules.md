@@ -1,5 +1,6 @@
 ---
 inclusion: auto
+description: SEO 建站全局规则，包含 10 条强制规则，涵盖关键词策略、内容结构、技术 SEO、结构化数据等方面
 ---
 
 # SEO 建站规则（全局强制）

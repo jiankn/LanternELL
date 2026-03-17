@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        @page { size: letter; margin: 0; }
+        .page-break-after { page-break-after: always; }
+        .page-break-inside-avoid { page-break-inside: avoid; }
+    </style>
+</head>
+<body>
+    <html lang="en"><head><meta charSet="utf-8"/><title>Asking for Help: Classroom Communication Frames (K-2)</title><style>
+    :root {
+      --primary: #FF6B35; --primary-light: #FFF0E8;
+      --secondary: #4ECDC4; --secondary-light: #E8FAF8;
+      --accent: #FFE66D; --accent-light: #FFFDE8;
+      --text: #1E293B; --text-secondary: #64748B;
+      --bg: #FFFFFF; --page-bg: #FAFBFF; --border: #E2E8F0;
+    }
+  </style><style>
+  @import url(&#x27;https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap&#x27;);
+
+  @page { size: Letter; margin: 0; }
+  @media print { @page { size: Letter; margin: 0; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body.pack-body {
+    margin: 0;
+    background: #F1F5F9;
+    color: var(--text);
+    font-family: &#x27;Inter&#x27;, system-ui, sans-serif;
+  }
+
+  /* === PAGE FRAME === */
+  .pdf-page {
+    position: relative;
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--bg);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .pdf-page:last-child { border-bottom: none; }
+
+  /* Brand bar at top */
+  .brand-bar {
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary, var(--primary)) 50%, var(--accent, var(--primary)) 100%);
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0.55in;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header .brand-name {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .page-content {
+    flex: 1;
+    padding: 0.2in 0.5in 0.15in;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0.55in;
+    font-size: 10px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+  }
+  .page-footer .site-url {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* === WATERMARK (sample) === */
+  .watermark {
+    position: absolute;
+    bottom: 1.2in;
+    right: 0.4in;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.06);
+    transform: rotate(-12deg);
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0.05em;
+  }
+
+  /* Sample CTA banner */
+  .sample-cta {
+    background: linear-gradient(135deg, var(--primary), var(--secondary, var(--primary)));
+    color: white;
+    text-align: center;
+    padding: 14px 0.55in;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .sample-cta a { color: white; text-decoration: underline; }
+
+  /* === TYPOGRAPHY === */
+  h1 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  h2.section-title {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--text);
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+  }
+  h3 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  /* === COVER PAGE === */
+  .cover-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 9.2in;
+  }
+  .cover-hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light, var(--primary-light)) 100%);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    text-align: center;
+  }
+  .cover-hero .eyebrow {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .cover-hero h1 { font-size: 38px; margin-bottom: 14px; }
+  .cover-hero .lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .cover-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .meta-pill {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .meta-pill .meta-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .meta-pill .meta-value {
+    display: block;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .cover-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+  }
+  .cover-includes-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .cover-includes-box h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--primary);
+  }
+  .cover-includes-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .cover-includes-box li {
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-secondary);
+  }
+  .cover-includes-box li::before {
+    content: &#x27;✓&#x27;;
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .cover-includes-box p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* === VOCABULARY CARDS === */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .vocab-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 18px;
+    background: var(--card-bg, #fff);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 180px;
+  }
+  .vocab-card .card-num {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .vocab-card .illust-area {
+    width: 100%;
+    height: 100px;
+    border-radius: 14px;
+    background: var(--card-bg, #f8f8f8);
+    border: 2px dashed var(--card-border, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .vocab-card .word-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .vocab-card .word-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .vocab-img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  /* === SENTENCE FRAMES === */
+  .frames-list { display: grid; gap: 10px; }
+  .frame-card {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg);
+    padding: 14px;
+    border-left: 4px solid var(--primary);
+  }
+  .frame-num {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .frame-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .frame-card p { font-size: 15px; color: var(--primary); margin-top: 4px; }
+
+  /* === WORKSHEETS === */
+  .ws-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .ws-type-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-top: 4px;
+  }
+  .ws-name-box {
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 4px;
+    min-width: 200px;
+  }
+  .ws-instructions {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .ws-instructions-l2 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .ws-items { display: grid; gap: 12px; }
+  .ws-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--bg);
+  }
+  .ws-item-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 18px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .ws-item-content strong {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 18px;
+    display: block;
+  }
+  .ws-item-content .ws-l2 {
+    font-size: 15px;
+    color: var(--primary);
+    margin: 4px 0 12px;
+  }
+  .ws-write-line {
+    height: 20px;
+    border-bottom: 2px dotted var(--border);
+    margin-top: 8px;
+  }
+
+  /* === LABELS === */
+  .labels-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .label-card-new {
+    border: 3px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+  }
+  .label-card-new .label-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .label-card-new .label-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .label-card-new .label-cat {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+  }
+
+  /* === MINI BOOK === */
+  .minibook-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .minibook-card {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    background: var(--bg);
+    padding: 12px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  .minibook-num {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: right;
+    margin-bottom: 4px;
+  }
+  .minibook-text { flex: 1; }
+  .minibook-text .text-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .minibook-text .text-l2 {
+    font-size: 12px;
+    color: var(--primary);
+    line-height: 1.4;
+  }
+  .minibook-illust {
+    margin-top: 6px;
+    height: 40px;
+    border: 2px dashed var(--card-border, #ddd);
+    border-radius: 10px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* === DIALOGUE STRIPS === */
+  .dialogue-list { display: grid; gap: 14px; }
+  .dialogue-card {
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    padding: 16px;
+  }
+  .dialogue-ctx {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .dialogue-speakers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .spk { display: flex; gap: 10px; align-items: flex-start; }
+  .spk-badge {
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-weight: 800; font-size: 13px; flex-shrink: 0;
+  }
+  .spk-a .spk-badge { background: #E0D5F5; color: #5B3E9E; }
+  .spk-b .spk-badge { background: #D5EEE0; color: #2E7D4F; }
+  .spk strong { font-size: 15px; display: block; }
+  .spk p { font-size: 13px; color: var(--primary); margin-top: 2px; }
+
+  /* === TEACHER NOTES === */
+  .notes-grid { display: grid; gap: 14px; }
+  .note-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .note-section h3 {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .note-section p, .note-section li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .note-section ul { padding-left: 18px; }
+  .note-section li { margin-bottom: 4px; }
+
+  /* === ANSWER KEY === */
+  .answer-list { display: grid; gap: 14px; }
+  .ak-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .ak-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 12px; }
+  .ak-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .ak-item {
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .ak-item strong { color: var(--text); margin-right: 6px; }
+  .ak-item span { color: var(--text-secondary); }
+
+  /* === PARENT NOTES === */
+  .parent-notes-list { display: grid; gap: 16px; }
+  .pn-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    background: var(--bg);
+  }
+  .pn-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .pn-header strong { font-size: 16px; }
+  .pn-type-badge {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary);
+    background: var(--primary-light);
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .pn-card p { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .pn-translated {
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .pn-sig { margin-top: 14px; font-size: 13px; color: var(--text-secondary); }
+  .pn-response { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+
+  /* === SPEAKING PROMPTS / ROUTINE / RULES === */
+  .prompt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .prompt-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 18px;
+    min-height: 160px;
+  }
+  .prompt-card .card-num { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 8px; }
+  .prompt-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .prompt-card p { font-size: 15px; color: var(--primary); margin-top: 2px; }
+  .prompt-card .visual-cue {
+    margin-top: 10px; font-size: 11px; font-style: italic; color: var(--text-secondary);
+    border-top: 1px dashed var(--border); padding-top: 8px;
+  }
+
+  .routine-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .routine-card-new {
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg);
+    padding: 18px; text-align: center;
+  }
+  .routine-card-new .time-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 6px; }
+  .routine-card-new .icon-area {
+    width: 60px; height: 60px; margin: 0 auto 10px;
+    border-radius: 50%; background: var(--primary-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--text-secondary);
+  }
+  .routine-card-new h3 { font-size: 17px; margin-bottom: 2px; }
+  .routine-card-new p { font-size: 15px; color: var(--primary); }
+
+  .rules-list { display: grid; gap: 14px; }
+  .rule-card {
+    display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: center;
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg); padding: 20px;
+  }
+  .rule-num {
+    width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: var(--primary); color: white;
+    font-weight: 900; font-size: 22px; font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .rule-card h3 { font-size: 17px; margin-bottom: 2px; }
+  .rule-card p { font-size: 15px; color: var(--primary); }
+
+  /* === TERMS OF USE === */
+  .terms-grid { display: grid; gap: 14px; }
+  .terms-section {
+    border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: var(--bg);
+  }
+  .terms-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 10px; }
+  .terms-section p, .terms-section li { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .terms-section ul { padding-left: 18px; }
+  .terms-section li { margin-bottom: 4px; }
+</style></head><body class="pack-body"><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Cover</span><span>📄 Printable Pack</span></header><main class="page-content"><div class="cover-page"><div class="cover-hero"><div class="eyebrow">EN-ES Printable Resource</div><h1>Asking for Help: Classroom Communication Frames (K-2)</h1><p class="lead">This pack provides essential sentence frames for K-2 ELL newcomers to confidently ask for help in English and Spanish classroom settings. Includes dialogue, speaking prompts, and worksheets.</p></div><div class="cover-meta-grid"><div class="meta-pill"><span class="meta-label">Topic</span><span class="meta-value">Asking for Help</span></div><div class="meta-pill"><span class="meta-label">Age Band</span><span class="meta-value">K-2</span></div><div class="meta-pill"><span class="meta-label">Pack Type</span><span class="meta-value">sentence frames</span></div><div class="meta-pill"><span class="meta-label">Language</span><span class="meta-value">EN-ES</span></div></div><div class="cover-includes"><div class="cover-includes-box"><h3>✨ What&#x27;s Inside</h3><ul><li>2 worksheets</li><li>8 sentence frames</li><li>4 dialogue strips</li><li>4 speaking prompts</li><li>Teacher notes &amp; answer key</li></ul></div><div class="cover-includes-box"><h3>📖 How to Use</h3><p>Introduce frames one at a time with visual aids and gestures. Practice with &#x27;choral repetition&#x27; and &#x27;turn and talk&#x27; activities. Use dialogue strips for role-playing. Integrate speaking prompts into daily routines for real-time practice. Worksheets can be used for independent practice or assessment.</p></div></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 1 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Sentence Frames 1</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Sentence Frames</h2><div class="frames-list"><article class="frame-card"><div class="frame-num">1</div><div><h3>I need help.</h3><p>Necesito ayuda.</p></div></article><article class="frame-card"><div class="frame-num">2</div><div><h3>Can you help me?</h3><p>¿Puedes ayudarme?</p></div></article><article class="frame-card"><div class="frame-num">3</div><div><h3>Please help me.</h3><p>Por favor, ayúdame.</p></div></article><article class="frame-card"><div class="frame-num">4</div><div><h3>I don&#x27;t understand.</h3><p>No entiendo.</p></div></article><article class="frame-card"><div class="frame-num">5</div><div><h3>Show me, please.</h3><p>Muéstrame, por favor.</p></div></article><article class="frame-card"><div class="frame-num">6</div><div><h3>What is this?</h3><p>¿Qué es esto?</p></div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 2 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Sentence Frames 2</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Sentence Frames</h2><div class="frames-list"><article class="frame-card"><div class="frame-num">1</div><div><h3>I can&#x27;t do it.</h3><p>No puedo hacerlo.</p></div></article><article class="frame-card"><div class="frame-num">2</div><div><h3>Help me with ___.</h3><p>Ayúdame con ___.</p></div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 3 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Dialogue Strips</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Dialogue Strips</h2><p class="ws-instructions">Cut along the dotted lines. Practice with a partner.</p><div class="dialogue-list"><article class="dialogue-card"><div class="dialogue-ctx">A student is struggling to open a glue stick.</div><div class="dialogue-speakers"><div class="spk spk-a"><div class="spk-badge">A</div><div><strong>What do you need?</strong><p>¿Qué necesitas?</p></div></div><div class="spk spk-b"><div class="spk-badge">B</div><div><strong>I need help.</strong><p>Necesito ayuda.</p></div></div></div></article><article class="dialogue-card"><div class="dialogue-ctx">One student asks another for help finding a crayon.</div><div class="dialogue-speakers"><div class="spk spk-a"><div class="spk-badge">A</div><div><strong>Can you help me?</strong><p>¿Puedes ayudarme?</p></div></div><div class="spk spk-b"><div class="spk-badge">B</div><div><strong>Yes, I can.</strong><p>Sí, puedo.</p></div></div></div></article><article class="dialogue-card"><div class="dialogue-ctx">The teacher just explained a math problem.</div><div class="dialogue-speakers"><div class="spk spk-a"><div class="spk-badge">A</div><div><strong>Do you understand?</strong><p>¿Entiendes?</p></div></div><div class="spk spk-b"><div class="spk-badge">B</div><div><strong>I don&#x27;t understand.</strong><p>No entiendo.</p></div></div></div></article><article class="dialogue-card"><div class="dialogue-ctx">A student is having trouble drawing a star.</div><div class="dialogue-speakers"><div class="spk spk-a"><div class="spk-badge">A</div><div><strong>What do you need help with?</strong><p>¿Con qué necesitas ayuda?</p></div></div><div class="spk spk-b"><div class="spk-badge">B</div><div><strong>Help me with my drawing.</strong><p>Ayúdame con mi dibujo.</p></div></div></div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 4 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Speaking Prompts</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Speaking Prompt Cards</h2><div class="prompt-grid"><article class="prompt-card" style="--card-bg:#FFF0E8;--card-border:#FFB088"><div class="card-num">Prompt 1</div><h3>You can&#x27;t reach the book on the shelf.</h3><p>No puedes alcanzar el libro en el estante.</p><div class="visual-cue">Image of a child reaching for a book on a high shelf.</div></article><article class="prompt-card" style="--card-bg:#E8FAF8;--card-border:#7EDDD6"><div class="card-num">Prompt 2</div><h3>You don&#x27;t know how to start your puzzle.</h3><p>No sabes cómo empezar tu rompecabezas.</p><div class="visual-cue">Image of a child looking confused at a puzzle.</div></article><article class="prompt-card" style="--card-bg:#FFFDE8;--card-border:#FFE66D"><div class="card-num">Prompt 3</div><h3>The teacher explained something, but you are confused.</h3><p>La maestra explicó algo, pero estás confundido.</p><div class="visual-cue">Image of a child with a question mark above their head.</div></article><article class="prompt-card" style="--card-bg:#F0EBFF;--card-border:#C4B5FD"><div class="card-num">Prompt 4</div><h3>You want the teacher to show you how to cut the paper.</h3><p>Quieres que la maestra te muestre cómo cortar el papel.</p><div class="visual-cue">Image of a child holding scissors and paper, looking at an adult.</div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 5 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Worksheet 1</span><span>📄 Printable Pack</span></header><main class="page-content"><div><div class="ws-header"><div><h2 class="section-title">Worksheet 1</h2><span class="ws-type-badge">writing</span></div><div class="ws-name-box">Name: ____________________</div></div><p class="ws-instructions">Trace the words. Then write them by yourself.</p><p class="ws-instructions-l2">Traza las palabras. Luego escríbelas tú mismo.</p><div class="ws-items"><article class="ws-item"><div class="ws-item-num">1</div><div class="ws-item-content"><strong>Trace: I need help. 
+Write: _______________</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">2</div><div class="ws-item-content"><strong>Trace: Can you help me? 
+Write: _______________</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">3</div><div class="ws-item-content"><strong>Trace: Please help me. 
+Write: _______________</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">4</div><div class="ws-item-content"><strong>Trace: I don&#x27;t understand. 
+Write: _______________</strong><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 6 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Worksheet 2</span><span>📄 Printable Pack</span></header><main class="page-content"><div><div class="ws-header"><div><h2 class="section-title">Worksheet 2</h2><span class="ws-type-badge">fill-blank</span></div><div class="ws-name-box">Name: ____________________</div></div><p class="ws-instructions">Read the sentence. Choose the best word to fill the blank. (Options: help, understand, show)</p><p class="ws-instructions-l2">Lee la oración. Elige la mejor palabra para llenar el espacio en blanco. (Opciones: ayuda, entiendo, muéstrame)</p><div class="ws-items"><article class="ws-item"><div class="ws-item-num">1</div><div class="ws-item-content"><strong>I need ___.</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">2</div><div class="ws-item-content"><strong>Can you ___ me?</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">3</div><div class="ws-item-content"><strong>I don&#x27;t ___.</strong><div class="ws-write-line"></div></div></article><article class="ws-item"><div class="ws-item-num">4</div><div class="ws-item-content"><strong>___ me, please.</strong><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 7 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Teacher Notes</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Teacher Notes</h2><div class="notes-grid"><section class="note-section"><h3>🎯 Objective</h3><p>Students will be able to use simple sentence frames to ask for help in common classroom situations, fostering independence and communication skills.</p></section><section class="note-section"><h3>💡 Suggested Use</h3><p>Introduce frames one at a time with visual aids and gestures. Practice with &#x27;choral repetition&#x27; and &#x27;turn and talk&#x27; activities. Use dialogue strips for role-playing. Integrate speaking prompts into daily routines for real-time practice. Worksheets can be used for independent practice or assessment.</p></section><section class="note-section"><h3>📦 Materials Needed</h3><ul><li>Sentence frame flashcards (large print)</li><li>Speaking prompt cards (with visuals)</li><li>Dialogue strips</li><li>Worksheets</li><li>Realia (e.g., a difficult puzzle, a book on a high shelf, art supplies)</li></ul></section><section class="note-section"><h3>🔀 Differentiation Tips</h3><ul><li>Support: Pair students with a more proficient peer, provide sentence starters with visual cues, model extensively, use hand-over-hand for writing practice.</li><li>Challenge: Encourage students to add one more detail (e.g., &#x27;Help me with the red crayon.&#x27;), ask &#x27;Why do you need help?&#x27; and guide them to simple answers.</li></ul></section></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 8 / 9</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Terms of Use</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Terms of Use</h2><div class="terms-grid"><section class="terms-section"><h3>📄 License: personal-classroom-use</h3><p>This resource is licensed for personal and single-classroom use only.</p></section><section class="terms-section"><h3>✅ You May</h3><ul><li>Print copies for your own students</li><li>Use in your classroom, tutoring sessions, or homeschool</li><li>Share the product link with colleagues (not the file)</li></ul></section><section class="terms-section"><h3>❌ You May Not</h3><ul><li>Share, redistribute, or resell the digital files</li><li>Upload to shared drives accessible by other teachers</li><li>Claim this content as your own creation</li></ul></section><section class="terms-section"><h3>🏫 Need a School License?</h3><p>Contact us at support@lanternell.com for multi-teacher and site licensing options.</p></section></div></div></main><footer class="page-footer"><span>Mar 17, 2026</span><span class="site-url">lanternell.com</span><span>Page 9 / 9</span></footer></section></body></html>
+</body>
+</html>
