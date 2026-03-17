@@ -299,126 +299,99 @@
       ]
     },
     {
-      "type": "tracing",
-      "instructions_en": "Trace the academic vocabulary word, then write it three times on the lines provided.",
-      "instructions_l2": "Traza la palabra de vocabulario académico y luego escríbela tres veces en las líneas provistas.",
+      "type": "fill-blank",
+      "instructions_en": "Read each sentence. Fill in the blank with the correct academic vocabulary word from the word bank.\nWord Bank: Evidence, Hypothesis, Theory, Argument, Perspective, Differentiate, Interpret, Illustrate, Conclude, Demonstrate",
+      "instructions_l2": "Lee cada oración. Completa el espacio en blanco con la palabra de vocabulario académico correcta del banco de palabras.\nBanco de palabras: Evidencia, Hipótesis, Teoría, Argumento, Perspectiva, Diferenciar, Interpretar, Ilustrar, Concluir, Demostrar",
       "items": [
         {
           "id": "1",
-          "content": "Evidence",
-          "content_l2": "Evidencia"
+          "content": "The scientist formed a ______ before starting the experiment.",
+          "content_l2": "El científico formuló una ______ antes de comenzar el experimento.",
+          "correct_answer": "Hypothesis"
         },
         {
           "id": "2",
-          "content": "Hypothesis",
-          "content_l2": "Hipótesis"
+          "content": "We need strong ______ to support our claims in the essay.",
+          "content_l2": "Necesitamos ______ sólida para respaldar nuestras afirmaciones en el ensayo.",
+          "correct_answer": "Evidence"
         },
         {
           "id": "3",
-          "content": "Theory",
-          "content_l2": "Teoría"
+          "content": "Can you ______ between a fact and an opinion?",
+          "content_l2": "¿Puedes ______ entre un hecho y una opinión?",
+          "correct_answer": "Differentiate"
         },
         {
           "id": "4",
-          "content": "Argument",
-          "content_l2": "Argumento"
+          "content": "The teacher asked us to ______ the meaning of the poem.",
+          "content_l2": "La maestra nos pidió ______ el significado del poema.",
+          "correct_answer": "Interpret"
         },
         {
           "id": "5",
-          "content": "Perspective",
-          "content_l2": "Perspectiva"
+          "content": "Please ______ your answer with a diagram or example.",
+          "content_l2": "Por favor, ______ tu respuesta con un diagrama o ejemplo.",
+          "correct_answer": "Illustrate"
         },
         {
           "id": "6",
-          "content": "Differentiate",
-          "content_l2": "Diferenciar"
+          "content": "After reviewing all the data, we can ______ that the experiment was successful.",
+          "content_l2": "Después de revisar todos los datos, podemos ______ que el experimento fue exitoso.",
+          "correct_answer": "Conclude"
         },
         {
           "id": "7",
-          "content": "Interpret",
-          "content_l2": "Interpretar"
+          "content": "Each student presented their ______ on the topic during the debate.",
+          "content_l2": "Cada estudiante presentó su ______ sobre el tema durante el debate.",
+          "correct_answer": "Perspective"
         },
         {
           "id": "8",
-          "content": "Illustrate",
-          "content_l2": "Ilustrar"
+          "content": "His ______ was well-organized and included three supporting reasons.",
+          "content_l2": "Su ______ estaba bien organizado e incluía tres razones de apoyo.",
+          "correct_answer": "Argument"
         },
         {
           "id": "9",
-          "content": "Conclude",
-          "content_l2": "Concluir"
+          "content": "Evolution is a scientific ______ supported by decades of research.",
+          "content_l2": "La evolución es una ______ científica respaldada por décadas de investigación.",
+          "correct_answer": "Theory"
         },
         {
           "id": "10",
-          "content": "Demonstrate",
-          "content_l2": "Demostrar"
+          "content": "The student was able to ______ her understanding by solving the problem on the board.",
+          "content_l2": "La estudiante pudo ______ su comprensión resolviendo el problema en la pizarra.",
+          "correct_answer": "Demonstrate"
         }
       ]
     },
     {
-      "type": "coloring",
-      "instructions_en": "Color the illustration that represents each academic vocabulary word.",
-      "instructions_l2": "Colorea la ilustración que representa cada palabra de vocabulario académico.",
+      "type": "categorizing",
+      "instructions_en": "Sort the following academic vocabulary words into the correct category. Write each word under the heading where it best fits.",
+      "instructions_l2": "Clasifica las siguientes palabras de vocabulario académico en la categoría correcta. Escribe cada palabra debajo del encabezado donde mejor corresponda.",
       "items": [
         {
           "id": "1",
-          "content": "Analyze",
-          "content_l2": "Analizar",
-          "image_prompt": "A student breaking down a complex problem into smaller parts with a magnifying glass"
+          "content": "Categories: \"Thinking Skills\" | \"Communication Skills\" | \"Research Skills\""
         },
         {
           "id": "2",
-          "content": "Synthesize",
-          "content_l2": "Sintetizar",
-          "image_prompt": "Different puzzle pieces coming together to form a complete picture"
+          "content": "Words to sort: Analyze, Summarize, Elaborate, Justify, Infer, Evaluate, Synthesize, Compare, Contrast, Interpret, Illustrate, Demonstrate, Conclude, Differentiate, Context, Evidence, Hypothesis, Theory, Argument, Perspective"
         },
         {
           "id": "3",
-          "content": "Evaluate",
-          "content_l2": "Evaluar",
-          "image_prompt": "A person weighing two options on a scale, making a judgment"
+          "content": "Thinking Skills: ___",
+          "correct_answer": "Analyze, Infer, Evaluate, Synthesize, Compare, Contrast, Differentiate, Interpret"
         },
         {
           "id": "4",
-          "content": "Summarize",
-          "content_l2": "Resumir",
-          "image_prompt": "A large book being condensed into a small notebook with a few key points"
+          "content": "Communication Skills: ___",
+          "correct_answer": "Summarize, Elaborate, Justify, Illustrate, Demonstrate, Argue, Conclude"
         },
         {
           "id": "5",
-          "content": "Compare",
-          "content_l2": "Comparar",
-          "image_prompt": "Two apples side-by-side, highlighting their similarities"
-        },
-        {
-          "id": "6",
-          "content": "Contrast",
-          "content_l2": "Contrastar",
-          "image_prompt": "A black cat and a white cat standing next to each other, showing differences"
-        },
-        {
-          "id": "7",
-          "content": "Infer",
-          "content_l2": "Inferir",
-          "image_prompt": "A detective looking at clues to figure out a mystery"
-        },
-        {
-          "id": "8",
-          "content": "Context",
-          "content_l2": "Contexto",
-          "image_prompt": "A word in the center of a circle, surrounded by other related words and images"
-        },
-        {
-          "id": "9",
-          "content": "Argument",
-          "content_l2": "Argumento",
-          "image_prompt": "Two people debating respectfully, each presenting their case"
-        },
-        {
-          "id": "10",
-          "content": "Perspective",
-          "content_l2": "Perspectiva",
-          "image_prompt": "Two people looking at the same object (e.g., a '6' or '9'), seeing different numbers"
+          "content": "Research Skills: ___",
+          "correct_answer": "Context, Evidence, Hypothesis, Theory, Perspective"
         }
       ]
     }

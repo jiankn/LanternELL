@@ -230,78 +230,88 @@
       ]
     },
     {
-      "type": "tracing",
-      "worksheet_id": "ws-2",
-      "instructions_en": "Trace the scientific vocabulary words.",
-      "instructions_l2": "Traza las palabras de vocabulario científico.",
+      "type": "fill-blank",
+      "instructions_en": "Complete each sentence with the correct scientific vocabulary word from the word bank.\nWord Bank: Scientific Method, Hypothesis, Experiment, Independent Variable, Dependent Variable, Data, Analysis, Conclusion, Lab Report, Procedure",
+      "instructions_l2": "Completa cada oración con la palabra de vocabulario científico correcta del banco de palabras.\nBanco de palabras: Método Científico, Hipótesis, Experimento, Variable Independiente, Variable Dependiente, Datos, Análisis, Conclusión, Informe de Laboratorio, Procedimiento",
       "items": [
         {
           "id": "1",
-          "content": "Scientific Method"
+          "content": "The ______ is a step-by-step process scientists use to investigate questions.",
+          "content_l2": "El ______ es un proceso paso a paso que los científicos usan para investigar preguntas.",
+          "correct_answer": "Scientific Method"
         },
         {
           "id": "2",
-          "content": "Hypothesis"
+          "content": "Before starting the experiment, we wrote a ______ predicting what would happen.",
+          "content_l2": "Antes de comenzar el experimento, escribimos una ______ prediciendo lo que sucedería.",
+          "correct_answer": "Hypothesis"
         },
         {
           "id": "3",
-          "content": "Experiment"
+          "content": "The thing we changed in the experiment is called the ______.",
+          "content_l2": "Lo que cambiamos en el experimento se llama ______.",
+          "correct_answer": "Independent Variable"
         },
         {
           "id": "4",
-          "content": "Independent Variable"
+          "content": "The thing we measured is called the ______.",
+          "content_l2": "Lo que medimos se llama ______.",
+          "correct_answer": "Dependent Variable"
         },
         {
           "id": "5",
-          "content": "Dependent Variable"
+          "content": "We recorded all our ______ in a table during the experiment.",
+          "content_l2": "Registramos todos nuestros ______ en una tabla durante el experimento.",
+          "correct_answer": "Data"
         },
         {
           "id": "6",
-          "content": "Data"
+          "content": "The ______ section of the lab report explains the steps we followed.",
+          "content_l2": "La sección de ______ del informe de laboratorio explica los pasos que seguimos.",
+          "correct_answer": "Procedure"
         },
         {
           "id": "7",
-          "content": "Analysis"
+          "content": "After collecting data, we performed an ______ to find patterns.",
+          "content_l2": "Después de recopilar datos, realizamos un ______ para encontrar patrones.",
+          "correct_answer": "Analysis"
         },
         {
           "id": "8",
-          "content": "Conclusion"
-        },
-        {
-          "id": "9",
-          "content": "Lab Report"
-        },
-        {
-          "id": "10",
-          "content": "Procedure"
+          "content": "Our ______ stated whether the hypothesis was supported or not.",
+          "content_l2": "Nuestra ______ indicó si la hipótesis fue apoyada o no.",
+          "correct_answer": "Conclusion"
         }
       ]
     },
     {
-      "type": "coloring",
-      "worksheet_id": "ws-3",
-      "instructions_en": "Color the image that represents each word.",
-      "instructions_l2": "Colorea la imagen que representa cada palabra.",
+      "type": "context-clues",
+      "instructions_en": "Read each sentence. Use context clues to figure out which vocabulary word fits best. Write the word on the line.",
+      "instructions_l2": "Lee cada oración. Usa las pistas del contexto para determinar qué palabra de vocabulario encaja mejor. Escribe la palabra en la línea.",
       "items": [
         {
           "id": "1",
-          "content": "Observation",
-          "image_prompt": "A pair of eyes looking through a microscope."
+          "content": "Maria put on her goggles and gloves before entering the lab. She always follows ______ rules.",
+          "content_l2": "María se puso sus gafas y guantes antes de entrar al laboratorio. Ella siempre sigue las reglas de ______.",
+          "correct_answer": "Safety"
         },
         {
           "id": "2",
-          "content": "Experiment",
-          "image_prompt": "A hand holding a test tube over a Bunsen burner."
+          "content": "The students wrote down everything they saw happening in the beaker. They were making careful ______.",
+          "content_l2": "Los estudiantes anotaron todo lo que vieron suceder en el vaso de precipitados. Estaban haciendo ______ cuidadosas.",
+          "correct_answer": "Observations"
         },
         {
           "id": "3",
-          "content": "Data",
-          "image_prompt": "A pie chart or bar graph filled with different colors."
+          "content": "After the experiment, the teacher asked the class to talk about what they learned and share ideas. This part is called the ______.",
+          "content_l2": "Después del experimento, la maestra pidió a la clase que hablaran sobre lo que aprendieron y compartieran ideas. Esta parte se llama la ______.",
+          "correct_answer": "Discussion"
         },
         {
           "id": "4",
-          "content": "Safety",
-          "image_prompt": "A pair of safety goggles and gloves."
+          "content": "The beakers, test tubes, and thermometers were all listed under the ______ section of the lab report.",
+          "content_l2": "Los vasos de precipitados, tubos de ensayo y termómetros estaban todos listados en la sección de ______ del informe de laboratorio.",
+          "correct_answer": "Materials"
         }
       ]
     }

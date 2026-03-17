@@ -204,121 +204,64 @@
       ]
     },
     {
-      "type": "tracing",
-      "instructions_en": "Trace each vocabulary word below. Say the word aloud as you trace it.",
-      "instructions_l2": "Traza cada palabra de vocabulario a continuación. Di la palabra en voz alta mientras la trazas.",
+      "type": "writing",
+      "instructions_en": "Choose 5 vocabulary words from this pack. For each word, write one sentence explaining how this skill could help you in school or in a future job.",
+      "instructions_l2": "Elige 5 palabras de vocabulario de este paquete. Para cada palabra, escribe una oración explicando cómo esta habilidad podría ayudarte en la escuela o en un trabajo futuro.",
       "items": [
         {
           "id": "1",
-          "content": "Responsibility",
-          "content_l2": "Responsabilidad"
+          "content": "Word 1: ____________\nSentence: ____________________________________________________________"
         },
         {
           "id": "2",
-          "content": "Teamwork",
-          "content_l2": "Trabajo en equipo"
+          "content": "Word 2: ____________\nSentence: ____________________________________________________________"
         },
         {
           "id": "3",
-          "content": "Problem-solving",
-          "content_l2": "Resolución de problemas"
+          "content": "Word 3: ____________\nSentence: ____________________________________________________________"
         },
         {
           "id": "4",
-          "content": "Goal Setting",
-          "content_l2": "Establecimiento de metas"
+          "content": "Word 4: ____________\nSentence: ____________________________________________________________"
         },
         {
           "id": "5",
-          "content": "Communication",
-          "content_l2": "Comunicación"
-        },
-        {
-          "id": "6",
-          "content": "Budgeting",
-          "content_l2": "Presupuesto"
-        },
-        {
-          "id": "7",
-          "content": "Career Path",
-          "content_l2": "Trayectoria profesional"
-        },
-        {
-          "id": "8",
-          "content": "Critical Thinking",
-          "content_l2": "Pensamiento crítico"
-        },
-        {
-          "id": "9",
-          "content": "Decision Making",
-          "content_l2": "Toma de decisiones"
-        },
-        {
-          "id": "10",
-          "content": "Time Management",
-          "content_l2": "Gestión del tiempo"
-        },
-        {
-          "id": "11",
-          "content": "Interview",
-          "content_l2": "Entrevista"
-        },
-        {
-          "id": "12",
-          "content": "Resume",
-          "content_l2": "Currículum vitae"
-        },
-        {
-          "id": "13",
-          "content": "Entrepreneurship",
-          "content_l2": "Emprendimiento"
-        },
-        {
-          "id": "14",
-          "content": "Financial Literacy",
-          "content_l2": "Educación financiera"
-        },
-        {
-          "id": "15",
-          "content": "Collaboration",
-          "content_l2": "Colaboración"
+          "content": "Word 5: ____________\nSentence: ____________________________________________________________"
         }
       ]
     },
     {
-      "type": "coloring",
-      "instructions_en": "Color the image that represents the vocabulary word. Then, write the word in English and Spanish.",
-      "instructions_l2": "Colorea la imagen que representa la palabra de vocabulario. Luego, escribe la palabra en inglés y español.",
+      "type": "categorizing",
+      "instructions_en": "Sort the following life skills into the correct category. Write each word under the heading where it best fits.",
+      "instructions_l2": "Clasifica las siguientes habilidades para la vida en la categoría correcta. Escribe cada palabra debajo del encabezado donde mejor corresponda.",
       "items": [
         {
           "id": "1",
-          "content": "Image: Two hands shaking, representing a formal meeting. (Interview)",
-          "content_l2": "Imagen: Dos manos estrechándose, representando una reunión formal. (Entrevista)",
-          "correct_answer": "Interview / Entrevista"
+          "content": "Categories: \"Personal Skills\" | \"Social Skills\" | \"Financial Skills\" | \"Career Skills\""
         },
         {
           "id": "2",
-          "content": "Image: A person looking at a calendar with tasks scheduled. (Time Management)",
-          "content_l2": "Imagen: Una persona mirando un calendario con tareas programadas. (Gestión del tiempo)",
-          "correct_answer": "Time Management / Gestión del tiempo"
+          "content": "Words to sort: Responsibility, Teamwork, Problem-solving, Goal Setting, Communication, Budgeting, Career Path, Critical Thinking, Decision Making, Time Management, Interview, Resume, Entrepreneurship, Financial Literacy, Collaboration"
         },
         {
           "id": "3",
-          "content": "Image: A group of students working together on a poster. (Teamwork / Collaboration)",
-          "content_l2": "Imagen: Un grupo de estudiantes trabajando juntos en un cartel. (Trabajo en equipo / Colaboración)",
-          "correct_answer": "Teamwork / Trabajo en equipo OR Collaboration / Colaboración"
+          "content": "Personal Skills: ___",
+          "correct_answer": "Responsibility, Goal Setting, Critical Thinking, Decision Making, Time Management"
         },
         {
           "id": "4",
-          "content": "Image: A piggy bank with coins. (Budgeting / Financial Literacy)",
-          "content_l2": "Imagen: Una alcancía con monedas. (Presupuesto / Educación financiera)",
-          "correct_answer": "Budgeting / Presupuesto OR Financial Literacy / Educación financiera"
+          "content": "Social Skills: ___",
+          "correct_answer": "Teamwork, Communication, Collaboration"
         },
         {
           "id": "5",
-          "content": "Image: A student raising their hand to ask a question. (Communication)",
-          "content_l2": "Imagen: Un estudiante levantando la mano para hacer una pregunta. (Comunicación)",
-          "correct_answer": "Communication / Comunicación"
+          "content": "Financial Skills: ___",
+          "correct_answer": "Budgeting, Financial Literacy"
+        },
+        {
+          "id": "6",
+          "content": "Career Skills: ___",
+          "correct_answer": "Career Path, Interview, Resume, Entrepreneurship, Problem-solving"
         }
       ]
     }
@@ -398,10 +341,6 @@
         "9": "A",
         "10": "B"
       }
-    },
-    {
-      "worksheet_id": "ws-2",
-      "answers": "No specific answers needed for tracing, as the goal is to trace the provided words."
     },
     {
       "worksheet_id": "ws-3",
