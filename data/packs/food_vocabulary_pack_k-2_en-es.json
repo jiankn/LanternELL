@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "first_week",
+    "new_student_arrival",
+    "daily_routine"
+  ],
   "title": "My Favorite Foods! (Mis Comidas Favoritas!)",
   "description": "A vocabulary pack designed for K-2 ELL newcomer students to learn basic food items in English and Spanish, featuring engaging visuals, tracing activities, and a simple mini-book.",
   "vocabulary": [

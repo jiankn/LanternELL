@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "classroom_setup",
+    "first_week"
+  ],
   "title": "K-2 Classroom Furniture Labels (English-Spanish)",
   "description": "Bilingual labels for common classroom furniture, designed for K-2 ELL newcomers to support language acquisition and classroom orientation.",
   "labels": [

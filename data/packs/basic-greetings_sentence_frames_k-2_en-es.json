@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "daily_routine",
+    "first_week",
+    "new_student_arrival"
+  ],
   "title": "Hello, Friend! K-2 Greetings & Goodbyes",
   "description": "This pack provides K-2 ELL newcomer students with essential 3-5 word sentence frames for basic greetings, goodbyes, and simple exchanges in English and Spanish. Includes dialogue, speaking prompts, and worksheets.",
   "sentence_frames": [

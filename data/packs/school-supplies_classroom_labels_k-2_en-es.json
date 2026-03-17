@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "classroom_setup",
+    "first_week"
+  ],
   "title": "Bilingual School Supplies Labels & Classroom Essentials (K-2)",
   "description": "A comprehensive set of bilingual (English-Spanish) labels for K-2 classrooms, focusing on high-frequency school supplies, essential visual routines, and core classroom rules to support ELL newcomers and promote language immersion.",
   "labels": [

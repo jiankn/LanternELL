@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer 3-5",
   "proficiency_level": "developing",
+  "scenario_tags": [
+    "daily_routine",
+    "ongoing_support"
+  ],
   "title": "Academic Discussion Frames for Grades 3-5",
   "description": "This pack provides functional sentence frames to help newcomer ELL students in grades 3-5 participate in academic discussions, covering expressing opinions, agreeing, disagreeing, clarifying, and summarizing.",
   "sentence_frames": [

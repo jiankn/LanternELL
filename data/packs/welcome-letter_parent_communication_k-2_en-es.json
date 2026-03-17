@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "parent_conference",
+    "first_week",
+    "new_student_arrival"
+  ],
   "title": "Welcome to Our Classroom! / ¡Bienvenidos a Nuestra Clase!",
   "description": "A comprehensive set of warm and informative letters designed to welcome K-2 parents at the beginning of the school year, covering key aspects of classroom life and expectations in both English and Spanish.",
   "parent_notes": [

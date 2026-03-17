@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer 3-5",
   "proficiency_level": "emerging",
+  "scenario_tags": [
+    "classroom_setup",
+    "first_week"
+  ],
   "title": "Science Lab Labels: Explore & Learn (English-Spanish)",
   "description": "Bilingual labels designed for Pre-K to 8th-grade science labs, promoting vocabulary acquisition and safe practices for young learners (ages 3-5).",
   "labels": [

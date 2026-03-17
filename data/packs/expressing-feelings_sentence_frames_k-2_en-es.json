@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "daily_routine",
+    "ongoing_support"
+  ],
   "title": "My Feelings: K-2 Sentence Frames (English-Spanish)",
   "description": "A set of simple sentence frames designed for K-2 ELL newcomer students to express basic feelings in English and Spanish, promoting classroom communication.",
   "sentence_frames": [

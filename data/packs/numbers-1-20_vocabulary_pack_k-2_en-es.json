@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "first_week",
+    "new_student_arrival",
+    "daily_routine"
+  ],
   "title": "My First Numbers: 1 to 20!",
   "description": "A comprehensive vocabulary pack designed for K-2 ELL newcomers to learn and practice numbers 1-20 in English and Spanish, featuring engaging activities and visual support.",
   "vocabulary": [

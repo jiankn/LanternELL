@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer 3-5",
   "proficiency_level": "emerging",
+  "scenario_tags": [
+    "ongoing_support",
+    "daily_routine"
+  ],
   "title": "Essential Math Vocabulary for Grades 3-5",
   "description": "This vocabulary pack introduces key math terms for newcomer ELL students in grades 3-5. It includes common operations, number types, and problem-solving concepts, accompanied by a mini-book and interactive worksheets.",
   "vocabulary": [

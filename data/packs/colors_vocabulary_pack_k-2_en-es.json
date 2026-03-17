@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "first_week",
+    "new_student_arrival",
+    "daily_routine"
+  ],
   "title": "My Colorful World: Colors for K-2 ELL",
   "description": "A comprehensive vocabulary pack designed for K-2 newcomer ELL students to learn and practice basic colors in English and Spanish, featuring engaging worksheets and a mini-book.",
   "vocabulary": [

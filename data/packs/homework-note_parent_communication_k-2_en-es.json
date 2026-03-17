@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "parent_conference",
+    "ongoing_support"
+  ],
   "title": "K-2 Parent Communication Pack: Homework & General Notes (English-Spanish)",
   "description": "A comprehensive set of bilingual communication templates for K-2 teachers to effectively connect with parents on various topics, including homework, behavior, progress, and general announcements, ensuring all families feel informed and included.",
   "parent_notes": [

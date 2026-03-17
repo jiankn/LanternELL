@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer 3-5",
   "proficiency_level": "emerging",
+  "scenario_tags": [
+    "ongoing_support",
+    "daily_routine"
+  ],
   "title": "My Tech World: Technology & Computers Vocabulary Pack",
   "description": "An engaging vocabulary pack designed for 3rd-5th grade ELL newcomer students, focusing on essential technology and computer terms. Includes a mini-book and interactive worksheets.",
   "vocabulary": [

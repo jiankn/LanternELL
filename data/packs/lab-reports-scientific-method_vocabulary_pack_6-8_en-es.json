@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer 6-8",
   "proficiency_level": "developing",
+  "scenario_tags": [
+    "ongoing_support",
+    "daily_routine",
+    "assessment_week"
+  ],
   "title": "Unveiling Science: Lab Reports & The Scientific Method",
   "description": "This vocabulary pack introduces essential terms for understanding lab reports and the scientific method, tailored for 6th-8th grade English Language Learners.",
   "vocabulary": [

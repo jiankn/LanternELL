@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "classroom_setup",
+    "first_week",
+    "daily_routine"
+  ],
   "title": "Time & Clock Bilingual Classroom Labels",
   "description": "A set of bilingual (English-Spanish) labels, routine cards, and rules posters designed for K-2 classrooms to introduce and reinforce time-related vocabulary and daily routines.",
   "labels": [

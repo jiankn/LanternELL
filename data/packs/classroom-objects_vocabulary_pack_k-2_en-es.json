@@ -6,6 +6,11 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "first_week",
+    "new_student_arrival",
+    "daily_routine"
+  ],
   "title": "My Classroom: Objects Vocabulary Pack (K-2 ELL)",
   "description": "A comprehensive vocabulary pack designed for K-2 ELL newcomers to learn and practice common classroom objects in English and Spanish. Includes vocabulary cards, a mini-book, and three engaging worksheets.",
   "vocabulary": [

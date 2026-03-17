@@ -6,6 +6,10 @@
   "language_pair": "en-es",
   "target_user": "ELL newcomer K-2",
   "proficiency_level": "entering",
+  "scenario_tags": [
+    "classroom_setup",
+    "first_week"
+  ],
   "title": "Bilingual Classroom Area Labels, Routines & Rules (K-2)",
   "description": "A set of bilingual (English-Spanish) labels for common classroom areas, essential visual routine cards, and classroom rules, designed for Kindergarten to 2nd-grade students, particularly supporting English Language Learners (ELLs).",
   "labels": [
