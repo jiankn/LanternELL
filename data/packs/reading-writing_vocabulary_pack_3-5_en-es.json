@@ -207,37 +207,44 @@
       {
         "page_number": 2,
         "text_en": "We love to read! We open a book and find an amazing story.",
-        "text_l2": "¡Nos encanta leer! Abrimos un libro y encontramos una historia asombrosa."
+        "text_l2": "¡Nos encanta leer! Abrimos un libro y encontramos una historia asombrosa.",
+        "image_prompt": "a child-friendly illustration about: We love to read! We open a book and find an amazing story."
       },
       {
         "page_number": 3,
         "text_en": "Every story has an author who writes the words.",
-        "text_l2": "Cada historia tiene un autor que escribe las palabras."
+        "text_l2": "Cada historia tiene un autor que escribe las palabras.",
+        "image_prompt": "a child-friendly illustration about: Every story has an author who writes the words."
       },
       {
         "page_number": 4,
         "text_en": "An illustrator draws the pictures for the book.",
-        "text_l2": "Un ilustrador dibuja las imágenes para el libro."
+        "text_l2": "Un ilustrador dibuja las imágenes para el libro.",
+        "image_prompt": "a child-friendly illustration about: An illustrator draws the pictures for the book."
       },
       {
         "page_number": 5,
         "text_en": "When we write, we use letters to make words.",
-        "text_l2": "Cuando escribimos, usamos letras para formar palabras."
+        "text_l2": "Cuando escribimos, usamos letras para formar palabras.",
+        "image_prompt": "a child-friendly illustration about: When we write, we use letters to make words."
       },
       {
         "page_number": 6,
         "text_en": "Words make sentences, and sentences make a paragraph.",
-        "text_l2": "Las palabras forman oraciones, y las oraciones forman un párrafo."
+        "text_l2": "Las palabras forman oraciones, y las oraciones forman un párrafo.",
+        "image_prompt": "a child-friendly illustration about: Words make sentences, and sentences make a paragraph."
       },
       {
         "page_number": 7,
         "text_en": "After we write, we edit and revise our work. We look for the main idea and important details.",
-        "text_l2": "Después de escribir, editamos y revisamos nuestro trabajo. Buscamos la idea principal y los detalles importantes."
+        "text_l2": "Después de escribir, editamos y revisamos nuestro trabajo. Buscamos la idea principal y los detalles importantes.",
+        "image_prompt": "a child-friendly illustration about: After we write, we edit and revise our work. We look for the main idea and"
       },
       {
         "page_number": 8,
         "text_en": "We can also write a summary of what we read or wrote! Reading and writing help us learn!",
-        "text_l2": "¡También podemos escribir un resumen de lo que leímos o escribimos! ¡Leer y escribir nos ayudan a aprender!"
+        "text_l2": "¡También podemos escribir un resumen de lo que leímos o escribimos! ¡Leer y escribir nos ayudan a aprender!",
+        "image_prompt": "a child-friendly illustration about: We can also write a summary of what we read or wrote! Reading and writing help us"
       }
     ]
   },

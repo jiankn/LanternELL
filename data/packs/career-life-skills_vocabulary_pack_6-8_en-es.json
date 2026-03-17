@@ -281,37 +281,44 @@
       {
         "page_number": 2,
         "text_en": "Leo, a middle school student, often dreamed about his future. He knew he wanted to do something exciting, but he wasn't sure how to start. His teacher, Ms. Elena, told him, “To build a strong future, you need strong life skills!”",
-        "text_l2": "Leo, un estudiante de secundaria, a menudo soñaba con su futuro. Sabía que quería hacer algo emocionante, pero no estaba seguro de cómo empezar. Su maestra, la Sra. Elena, le dijo: “¡Para construir un futuro sólido, necesitas habilidades para la vida sólidas!”"
+        "text_l2": "Leo, un estudiante de secundaria, a menudo soñaba con su futuro. Sabía que quería hacer algo emocionante, pero no estaba seguro de cómo empezar. Su maestra, la Sra. Elena, le dijo: “¡Para construir un futuro sólido, necesitas habilidades para la vida sólidas!”",
+        "image_prompt": "a child-friendly illustration about: Leo, a middle school student, often dreamed about his future. He knew he wanted to"
       },
       {
         "page_number": 3,
         "text_en": "First, Ms. Elena taught them about **Goal Setting**. “What do you want to achieve?” she asked. Leo learned to set small, achievable goals. He also learned about **Responsibility**, understanding that reaching goals requires taking ownership of his tasks.",
-        "text_l2": "Primero, la Sra. Elena les enseñó sobre el **Establecimiento de Metas**. “¿Qué quieren lograr?” preguntó ella. Leo aprendió a establecer metas pequeñas y alcanzables. También aprendió sobre la **Responsabilidad**, comprendiendo que alcanzar las metas requiere asumir la propiedad de sus tareas."
+        "text_l2": "Primero, la Sra. Elena les enseñó sobre el **Establecimiento de Metas**. “¿Qué quieren lograr?” preguntó ella. Leo aprendió a establecer metas pequeñas y alcanzables. También aprendió sobre la **Responsabilidad**, comprendiendo que alcanzar las metas requiere asumir la propiedad de sus tareas.",
+        "image_prompt": "a child-friendly illustration about: First, Ms. Elena taught them about **Goal Setting**."
       },
       {
         "page_number": 4,
         "text_en": "Next, they worked on a big group project. Leo practiced **Teamwork** and **Collaboration**, learning to work effectively with his classmates. He also improved his **Communication** skills, sharing ideas clearly and listening to others.",
-        "text_l2": "Luego, trabajaron en un gran proyecto grupal. Leo practicó el **Trabajo en equipo** y la **Colaboración**, aprendiendo a trabajar eficazmente con sus compañeros. También mejoró sus habilidades de **Comunicación**, compartiendo ideas claramente y escuchando a los demás."
+        "text_l2": "Luego, trabajaron en un gran proyecto grupal. Leo practicó el **Trabajo en equipo** y la **Colaboración**, aprendiendo a trabajar eficazmente con sus compañeros. También mejoró sus habilidades de **Comunicación**, compartiendo ideas claramente y escuchando a los demás.",
+        "image_prompt": "a child-friendly illustration about: Next, they worked on a big group project. Leo practiced **Teamwork** and"
       },
       {
         "page_number": 5,
         "text_en": "When their project faced unexpected problems, Leo used his **Problem-solving** skills. He applied **Critical Thinking** to analyze the situation and make a good **Decision Making** with his team.",
-        "text_l2": "Cuando su proyecto enfrentó problemas inesperados, Leo usó sus habilidades de **Resolución de problemas**. Aplicó el **Pensamiento crítico** para analizar la situación y tomar una buena **Toma de decisiones** con su equipo."
+        "text_l2": "Cuando su proyecto enfrentó problemas inesperados, Leo usó sus habilidades de **Resolución de problemas**. Aplicó el **Pensamiento crítico** para analizar la situación y tomar una buena **Toma de decisiones** con su equipo.",
+        "image_prompt": "a child-friendly illustration about: When their project faced unexpected problems, Leo used his **Problem-solving**"
       },
       {
         "page_number": 6,
         "text_en": "Ms. Elena also taught them about **Financial Literacy**. Leo learned about **Budgeting** his allowance, saving money for things he wanted, and understanding how money works. He even started thinking about different **Career Paths**.",
-        "text_l2": "La Sra. Elena también les enseñó sobre **Educación financiera**. Leo aprendió sobre cómo hacer un **Presupuesto** con su mesada, ahorrar dinero para las cosas que quería y entender cómo funciona el dinero. Incluso comenzó a pensar en diferentes **Trayectorias profesionales**."
+        "text_l2": "La Sra. Elena también les enseñó sobre **Educación financiera**. Leo aprendió sobre cómo hacer un **Presupuesto** con su mesada, ahorrar dinero para las cosas que quería y entender cómo funciona el dinero. Incluso comenzó a pensar en diferentes **Trayectorias profesionales**.",
+        "image_prompt": "a child-friendly illustration about: Ms. Elena also taught them about **Financial Literacy**."
       },
       {
         "page_number": 7,
         "text_en": "To prepare for future jobs, they practiced mock **Interview** skills and learned how to create a simple **Resume**. Leo also explored the idea of **Entrepreneurship**, thinking about starting his own small business one day.",
-        "text_l2": "Para prepararse para futuros trabajos, practicaron habilidades de **Entrevista** simuladas y aprendieron a crear un **Currículum vitae** simple. Leo también exploró la idea del **Emprendimiento**, pensando en iniciar su propio pequeño negocio algún día."
+        "text_l2": "Para prepararse para futuros trabajos, practicaron habilidades de **Entrevista** simuladas y aprendieron a crear un **Currículum vitae** simple. Leo también exploró la idea del **Emprendimiento**, pensando en iniciar su propio pequeño negocio algún día.",
+        "image_prompt": "a child-friendly illustration about: To prepare for future jobs, they practiced mock **Interview** skills and learned"
       },
       {
         "page_number": 8,
         "text_en": "Leo realized that these 'life skills' weren't just for adults. They were essential for success in school, in his community, and for his exciting future! He felt more prepared and confident than ever.",
-        "text_l2": "Leo se dio cuenta de que estas 'habilidades para la vida' no eran solo para adultos. ¡Eran esenciales para el éxito en la escuela, en su comunidad y para su emocionante futuro! Se sintió más preparado y seguro que nunca."
+        "text_l2": "Leo se dio cuenta de que estas 'habilidades para la vida' no eran solo para adultos. ¡Eran esenciales para el éxito en la escuela, en su comunidad y para su emocionante futuro! Se sintió más preparado y seguro que nunca.",
+        "image_prompt": "a child-friendly illustration about: Leo realized that these 'life skills' weren't just for adults. They were essential"
       }
     ]
   },

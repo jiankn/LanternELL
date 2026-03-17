@@ -239,37 +239,44 @@
       {
         "page_number": 2,
         "text_en": "This is my classroom. It is big!",
-        "text_l2": "Este es mi salón de clases. ¡Es grande!"
+        "text_l2": "Este es mi salón de clases. ¡Es grande!",
+        "image_prompt": "a child-friendly illustration about: This is my classroom. It is big!"
       },
       {
         "page_number": 3,
         "text_en": "I see a pencil. I use my pencil to write.",
-        "text_l2": "Veo un lápiz. Uso mi lápiz para escribir."
+        "text_l2": "Veo un lápiz. Uso mi lápiz para escribir.",
+        "image_prompt": "a child-friendly illustration about: I see a pencil. I use my pencil to write."
       },
       {
         "page_number": 4,
         "text_en": "I see a book. I like to read books.",
-        "text_l2": "Veo un libro. Me gusta leer libros."
+        "text_l2": "Veo un libro. Me gusta leer libros.",
+        "image_prompt": "a child-friendly illustration about: I see a book. I like to read books."
       },
       {
         "page_number": 5,
         "text_en": "I see a chair. I sit on my chair.",
-        "text_l2": "Veo una silla. Me siento en mi silla."
+        "text_l2": "Veo una silla. Me siento en mi silla.",
+        "image_prompt": "a child-friendly illustration about: I see a chair. I sit on my chair."
       },
       {
         "page_number": 6,
         "text_en": "I see a table. I work at my table.",
-        "text_l2": "Veo una mesa. Trabajo en mi mesa."
+        "text_l2": "Veo una mesa. Trabajo en mi mesa.",
+        "image_prompt": "a child-friendly illustration about: I see a table. I work at my table."
       },
       {
         "page_number": 7,
         "text_en": "I see crayons. I color with crayons.",
-        "text_l2": "Veo crayones. Coloreo con crayones."
+        "text_l2": "Veo crayones. Coloreo con crayones.",
+        "image_prompt": "a child-friendly illustration about: I see crayons. I color with crayons."
       },
       {
         "page_number": 8,
         "text_en": "My classroom has many things! What do you see?",
-        "text_l2": "¡Mi salón de clases tiene muchas cosas! ¿Qué ves tú?"
+        "text_l2": "¡Mi salón de clases tiene muchas cosas! ¿Qué ves tú?",
+        "image_prompt": "a child-friendly illustration about: My classroom has many things! What do you see?"
       }
     ]
   },

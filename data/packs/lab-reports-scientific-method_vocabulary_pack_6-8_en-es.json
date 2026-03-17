@@ -332,37 +332,44 @@
       {
         "page_number": 2,
         "text_en": "What is the Scientific Method? It's a way scientists explore the world. It has steps to help answer questions and solve problems.",
-        "text_l2": "¿Qué es el Método Científico? Es una forma en que los científicos exploran el mundo. Tiene pasos para ayudar a responder preguntas y resolver problemas."
+        "text_l2": "¿Qué es el Método Científico? Es una forma en que los científicos exploran el mundo. Tiene pasos para ayudar a responder preguntas y resolver problemas.",
+        "image_prompt": "a child-friendly illustration about: What is the Scientific Method? It's a way scientists explore the world."
       },
       {
         "page_number": 3,
         "text_en": "Step 1: Observation & Question. First, you notice something (Observation). Then, you ask a question about it (Question).",
-        "text_l2": "Paso 1: Observación y Pregunta. Primero, notas algo (Observación). Luego, haces una pregunta al respecto (Pregunta)."
+        "text_l2": "Paso 1: Observación y Pregunta. Primero, notas algo (Observación). Luego, haces una pregunta al respecto (Pregunta).",
+        "image_prompt": "a child-friendly illustration about: Step 1: Observation & Question. First, you notice something (Observation)."
       },
       {
         "page_number": 4,
         "text_en": "Step 2: Hypothesis & Experiment. You make an educated guess (Hypothesis). Then, you design a test (Experiment) to see if your guess is right.",
-        "text_l2": "Paso 2: Hipótesis y Experimento. Haces una suposición informada (Hipótesis). Luego, diseñas una prueba (Experimento) para ver si tu suposición es correcta."
+        "text_l2": "Paso 2: Hipótesis y Experimento. Haces una suposición informada (Hipótesis). Luego, diseñas una prueba (Experimento) para ver si tu suposición es correcta.",
+        "image_prompt": "a child-friendly illustration about: Step 2: Hypothesis & Experiment. You make an educated guess (Hypothesis)."
       },
       {
         "page_number": 5,
         "text_en": "Step 3: Variables & Control Group. In an experiment, you change one thing (Independent Variable) and measure another (Dependent Variable). A Control Group helps you compare.",
-        "text_l2": "Paso 3: Variables y Grupo de Control. En un experimento, cambias una cosa (Variable Independiente) y mides otra (Variable Dependiente). Un Grupo de Control te ayuda a comparar."
+        "text_l2": "Paso 3: Variables y Grupo de Control. En un experimento, cambias una cosa (Variable Independiente) y mides otra (Variable Dependiente). Un Grupo de Control te ayuda a comparar.",
+        "image_prompt": "a child-friendly illustration about: Step 3: Variables & Control Group. In an experiment, you change one thing"
       },
       {
         "page_number": 6,
         "text_en": "Step 4: Data & Analysis. You collect information (Data) during your experiment. Then, you look closely at the Data to find patterns (Analysis).",
-        "text_l2": "Paso 4: Datos y Análisis. Recopilas información (Datos) durante tu experimento. Luego, examinas de cerca los Datos para encontrar patrones (Análisis)."
+        "text_l2": "Paso 4: Datos y Análisis. Recopilas información (Datos) durante tu experimento. Luego, examinas de cerca los Datos para encontrar patrones (Análisis).",
+        "image_prompt": "a child-friendly illustration about: Step 4: Data & Analysis. You collect information (Data) during your experiment."
       },
       {
         "page_number": 7,
         "text_en": "Step 5: Conclusion. Finally, you write what you learned. Did your experiment support your Hypothesis? This is your Conclusion.",
-        "text_l2": "Paso 5: Conclusión. Finalmente, escribes lo que aprendiste. ¿Tu experimento apoyó tu Hipótesis? Esta es tu Conclusión."
+        "text_l2": "Paso 5: Conclusión. Finalmente, escribes lo que aprendiste. ¿Tu experimento apoyó tu Hipótesis? Esta es tu Conclusión.",
+        "image_prompt": "a child-friendly illustration about: Step 5: Conclusion. Finally, you write what you learned."
       },
       {
         "page_number": 8,
         "text_en": "What is a Lab Report? A Lab Report is a written summary of your entire experiment. It tells others about your Question, Hypothesis, Procedure, Data, and Conclusion.",
-        "text_l2": "¿Qué es un Informe de Laboratorio? Un Informe de Laboratorio es un resumen escrito de todo tu experimento. Les cuenta a otros sobre tu Pregunta, Hipótesis, Procedimiento, Datos y Conclusión."
+        "text_l2": "¿Qué es un Informe de Laboratorio? Un Informe de Laboratorio es un resumen escrito de todo tu experimento. Les cuenta a otros sobre tu Pregunta, Hipótesis, Procedimiento, Datos y Conclusión.",
+        "image_prompt": "a child-friendly illustration about: What is a Lab Report? A Lab Report is a written summary of your entire experiment."
       }
     ]
   },

@@ -395,37 +395,44 @@
       {
         "page_number": 2,
         "text_en": "First, we Observe the world around us. We look closely at plants and animals.",
-        "text_l2": "Primero, Observamos el mundo que nos rodea. Miramos de cerca las plantas y los animales."
+        "text_l2": "Primero, Observamos el mundo que nos rodea. Miramos de cerca las plantas y los animales.",
+        "image_prompt": "a child-friendly illustration about: First, we Observe the world around us. We look closely at plants and animals."
       },
       {
         "page_number": 3,
         "text_en": "Then, we form a Hypothesis. This is a special guess about how things work.",
-        "text_l2": "Luego, formulamos una Hipótesis. Esta es una suposición especial sobre cómo funcionan las cosas."
+        "text_l2": "Luego, formulamos una Hipótesis. Esta es una suposición especial sobre cómo funcionan las cosas.",
+        "image_prompt": "a child-friendly illustration about: Then, we form a Hypothesis. This is a special guess about how things work."
       },
       {
         "page_number": 4,
         "text_en": "Next, we Plan an Experiment. We will test our hypothesis in the Laboratory.",
-        "text_l2": "A continuación, planeamos un Experimento. Probaremos nuestra hipótesis en el Laboratorio."
+        "text_l2": "A continuación, planeamos un Experimento. Probaremos nuestra hipótesis en el Laboratorio.",
+        "image_prompt": "a child-friendly illustration about: Next, we Plan an Experiment. We will test our hypothesis in the Laboratory."
       },
       {
         "page_number": 5,
         "text_en": "During the experiment, we Measure carefully and collect Data. We write down all our findings.",
-        "text_l2": "Durante el experimento, Medimos con cuidado y recopilamos Datos. Anotamos todos nuestros hallazgos."
+        "text_l2": "Durante el experimento, Medimos con cuidado y recopilamos Datos. Anotamos todos nuestros hallazgos.",
+        "image_prompt": "a child-friendly illustration about: During the experiment, we Measure carefully and collect Data. We write down all"
       },
       {
         "page_number": 6,
         "text_en": "After the experiment, we look at our Results and find Evidence to support our ideas.",
-        "text_l2": "Después del experimento, miramos nuestros Resultados y encontramos Evidencia para apoyar nuestras ideas."
+        "text_l2": "Después del experimento, miramos nuestros Resultados y encontramos Evidencia para apoyar nuestras ideas.",
+        "image_prompt": "a child-friendly illustration about: After the experiment, we look at our Results and find Evidence to support our"
       },
       {
         "page_number": 7,
         "text_en": "Finally, we Conclude what we learned. Science helps us understand everything, like Gravity and Energy!",
-        "text_l2": "Finalmente, Concluimos lo que aprendimos. ¡La ciencia nos ayuda a entender todo, como la Gravedad y la Energía!"
+        "text_l2": "Finalmente, Concluimos lo que aprendimos. ¡La ciencia nos ayuda a entender todo, como la Gravedad y la Energía!",
+        "image_prompt": "a child-friendly illustration about: Finally, we Conclude what we learned. Science helps us understand everything, like"
       },
       {
         "page_number": 8,
         "text_en": "Keep exploring! Every Organism and every piece of Matter has a story to tell.",
-        "text_l2": "¡Sigue explorando! Cada Organismo y cada trozo de Materia tiene una historia que contar."
+        "text_l2": "¡Sigue explorando! Cada Organismo y cada trozo de Materia tiene una historia que contar.",
+        "image_prompt": "a child-friendly illustration about: Keep exploring! Every Organism and every piece of Matter has a story to tell."
       }
     ]
   },

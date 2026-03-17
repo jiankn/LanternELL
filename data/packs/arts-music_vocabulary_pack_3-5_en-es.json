@@ -324,37 +324,44 @@
       {
         "page_number": 2,
         "text_en": "Art and music are wonderful ways to express ourselves. We can create beautiful things and enjoy amazing sounds.",
-        "text_l2": "El arte y la música son formas maravillosas de expresarnos. Podemos crear cosas hermosas y disfrutar de sonidos increíbles."
+        "text_l2": "El arte y la música son formas maravillosas de expresarnos. Podemos crear cosas hermosas y disfrutar de sonidos increíbles.",
+        "image_prompt": "art and music are wonderful ways to express ourselves"
       },
       {
         "page_number": 3,
         "text_en": "An artist likes to paint and draw. They use colors and lines to make pictures come alive.",
-        "text_l2": "A un artista le gusta pintar y dibujar. Usan colores y líneas para hacer que las imágenes cobren vida."
+        "text_l2": "A un artista le gusta pintar y dibujar. Usan colores y líneas para hacer que las imágenes cobren vida.",
+        "image_prompt": "artist likes to paint and draw"
       },
       {
         "page_number": 4,
         "text_en": "A musician loves to make music. They often play an instrument, like a guitar or a piano.",
-        "text_l2": "A un músico le encanta hacer música. A menudo tocan un instrumento, como una guitarra o un piano."
+        "text_l2": "A un músico le encanta hacer música. A menudo tocan un instrumento, como una guitarra o un piano.",
+        "image_prompt": "musician loves to make music"
       },
       {
         "page_number": 5,
         "text_en": "We can sing songs with our voices. We can also dance to the music, moving our bodies to the beat.",
-        "text_l2": "Podemos cantar canciones con nuestras voces. También podemos bailar al ritmo de la música, moviendo nuestros cuerpos al compás."
+        "text_l2": "Podemos cantar canciones con nuestras voces. También podemos bailar al ritmo de la música, moviendo nuestros cuerpos al compás.",
+        "image_prompt": "we can sing songs with our voices"
       },
       {
         "page_number": 6,
         "text_en": "Sometimes artists make a sculpture. A sculpture is a 3D artwork, like a statue made of clay or wood.",
-        "text_l2": "A veces los artistas hacen una escultura. Una escultura es una obra de arte en 3D, como una estatua hecha de arcilla o madera."
+        "text_l2": "A veces los artistas hacen una escultura. Una escultura es una obra de arte en 3D, como una estatua hecha de arcilla o madera.",
+        "image_prompt": "sometimes artists make a sculpture"
       },
       {
         "page_number": 7,
         "text_en": "Music has a melody, which is the main tune. It also has a rhythm, which is the pattern of sounds.",
-        "text_l2": "La música tiene una melodía, que es la melodía principal. También tiene un ritmo, que es el patrón de sonidos."
+        "text_l2": "La música tiene una melodía, que es la melodía principal. También tiene un ritmo, que es el patrón de sonidos.",
+        "image_prompt": "music has a melody, which is the main tune"
       },
       {
         "page_number": 8,
         "text_en": "Performers go on a stage to show their talents. The audience watches and claps for their amazing show!",
-        "text_l2": "Los artistas suben a un escenario para mostrar sus talentos. ¡La audiencia observa y aplaude su increíble espectáculo!"
+        "text_l2": "Los artistas suben a un escenario para mostrar sus talentos. ¡La audiencia observa y aplaude su increíble espectáculo!",
+        "image_prompt": "performers go on a stage to show their talents"
       }
     ]
   },

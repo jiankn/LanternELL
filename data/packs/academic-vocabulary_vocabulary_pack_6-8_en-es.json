@@ -411,37 +411,44 @@
       {
         "page_number": 2,
         "text_en": "Page 2: First, we need to ANALYZE the topic. This means breaking it down into smaller parts to understand each piece.",
-        "text_l2": "Página 2: Primero, necesitamos ANALIZAR el tema. Esto significa dividirlo en partes más pequeñas para entender cada pieza."
+        "text_l2": "Página 2: Primero, necesitamos ANALIZAR el tema. Esto significa dividirlo en partes más pequeñas para entender cada pieza.",
+        "image_prompt": "page 2: first, we need to analyze the topic"
       },
       {
         "page_number": 3,
         "text_en": "Page 3: Next, we will COMPARE and CONTRAST different ideas. We'll look for similarities and differences between sources.",
-        "text_l2": "Página 3: Luego, COMPARAREMOS y CONTRASTAREMOS diferentes ideas. Buscaremos similitudes y diferencias entre las fuentes."
+        "text_l2": "Página 3: Luego, COMPARAREMOS y CONTRASTAREMOS diferentes ideas. Buscaremos similitudes y diferencias entre las fuentes.",
+        "image_prompt": "page 3: next, we will compare and contrast different ideas"
       },
       {
         "page_number": 4,
         "text_en": "Page 4: We must find strong EVIDENCE to support our ARGUMENT. Our claims need proof!",
-        "text_l2": "Página 4: Debemos encontrar EVIDENCIA sólida para apoyar nuestro ARGUMENTO. ¡Nuestras afirmaciones necesitan pruebas!"
+        "text_l2": "Página 4: Debemos encontrar EVIDENCIA sólida para apoyar nuestro ARGUMENTO. ¡Nuestras afirmaciones necesitan pruebas!",
+        "image_prompt": "page 4: we must find strong evidence to support our argument"
       },
       {
         "page_number": 5,
         "text_en": "Page 5: It's important to consider every PERSPECTIVE. Everyone has a different point of view, and we need to understand them.",
-        "text_l2": "Página 5: Es importante considerar cada PERSPECTIVA. Todos tienen un punto de vista diferente, y necesitamos entenderlos."
+        "text_l2": "Página 5: Es importante considerar cada PERSPECTIVA. Todos tienen un punto de vista diferente, y necesitamos entenderlos.",
+        "image_prompt": "page 5: it's important to consider every perspective"
       },
       {
         "page_number": 6,
         "text_en": "Page 6: After gathering information, we will SYNTHESIZE it. This means combining all the different parts into one clear idea.",
-        "text_l2": "Página 6: Después de recopilar información, la SINTETIZAREMOS. Esto significa combinar todas las partes diferentes en una idea clara."
+        "text_l2": "Página 6: Después de recopilar información, la SINTETIZAREMOS. Esto significa combinar todas las partes diferentes en una idea clara.",
+        "image_prompt": "page 6: after gathering information, we will synthesize it"
       },
       {
         "page_number": 7,
         "text_en": "Page 7: Finally, we will EVALUATE our work. We will judge its quality and make sure it meets all the requirements.",
-        "text_l2": "Página 7: Finalmente, EVALUAREMOS nuestro trabajo. Juzgaremos su calidad y nos aseguraremos de que cumpla con todos los requisitos."
+        "text_l2": "Página 7: Finalmente, EVALUAREMOS nuestro trabajo. Juzgaremos su calidad y nos aseguraremos de que cumpla con todos los requisitos.",
+        "image_prompt": "page 7: finally, we will evaluate our work"
       },
       {
         "page_number": 8,
         "text_en": "Page 8: Using these academic words helps us clearly DEMONSTRATE our learning and CONCLUDE our project successfully!",
-        "text_l2": "Página 8: Usar estas palabras académicas nos ayuda a DEMOSTRAR claramente nuestro aprendizaje y CONCLUIR nuestro proyecto con éxito."
+        "text_l2": "Página 8: Usar estas palabras académicas nos ayuda a DEMOSTRAR claramente nuestro aprendizaje y CONCLUIR nuestro proyecto con éxito.",
+        "image_prompt": "page 8: using these academic words helps us clearly"
       }
     ]
   },

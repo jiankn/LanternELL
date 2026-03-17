@@ -188,37 +188,44 @@
       {
         "page_number": 2,
         "text_en": "What is a Map? A map is a drawing of a place. It shows us where things are.",
-        "text_l2": "¿Qué es un Mapa? Un mapa es un dibujo de un lugar. Nos muestra dónde están las cosas."
+        "text_l2": "¿Qué es un Mapa? Un mapa es un dibujo de un lugar. Nos muestra dónde están las cosas.",
+        "image_prompt": "a child-friendly illustration about: What is a Map? A map is a drawing of a place."
       },
       {
         "page_number": 3,
         "text_en": "What is a Globe? A globe is a model of Earth. It is shaped like a ball.",
-        "text_l2": "¿Qué es un Globo Terráqueo? Un globo terráqueo es un modelo de la Tierra. Tiene forma de pelota."
+        "text_l2": "¿Qué es un Globo Terráqueo? Un globo terráqueo es un modelo de la Tierra. Tiene forma de pelota.",
+        "image_prompt": "a child-friendly illustration about: What is a Globe? A globe is a model of Earth."
       },
       {
         "page_number": 4,
         "text_en": "Continents and Oceans. Earth has 7 continents (big pieces of land) and 5 oceans (big bodies of water).",
-        "text_l2": "Continentes y Océanos. La Tierra tiene 7 continentes (grandes extensiones de tierra) y 5 océanos (grandes cuerpos de agua)."
+        "text_l2": "Continentes y Océanos. La Tierra tiene 7 continentes (grandes extensiones de tierra) y 5 océanos (grandes cuerpos de agua).",
+        "image_prompt": "a child-friendly illustration about: Continents and Oceans. Earth has 7 continents (big pieces of land) and 5 oceans"
       },
       {
         "page_number": 5,
         "text_en": "Compass Rose. A compass rose shows directions: North, South, East, West. This helps us know where we are going.",
-        "text_l2": "Rosa de los Vientos. Una rosa de los vientos muestra las direcciones: Norte, Sur, Este, Oeste. Esto nos ayuda a saber adónde vamos."
+        "text_l2": "Rosa de los Vientos. Una rosa de los vientos muestra las direcciones: Norte, Sur, Este, Oeste. Esto nos ayuda a saber adónde vamos.",
+        "image_prompt": "a child-friendly illustration about: Compass Rose. A compass rose shows directions: North, South, East, West."
       },
       {
         "page_number": 6,
         "text_en": "Map Legend. A map legend, or key, tells us what the symbols on a map mean. For example, a tree might mean a forest.",
-        "text_l2": "Leyenda del Mapa. Una leyenda del mapa, o clave, nos dice qué significan los símbolos en un mapa. Por ejemplo, un árbol podría significar un bosque."
+        "text_l2": "Leyenda del Mapa. Una leyenda del mapa, o clave, nos dice qué significan los símbolos en un mapa. Por ejemplo, un árbol podría significar un bosque.",
+        "image_prompt": "a child-friendly illustration about: Map Legend. A map legend, or key, tells us what the symbols on a map mean."
       },
       {
         "page_number": 7,
         "text_en": "Landforms. Maps show different landforms like tall mountains, long rivers, and big lakes. They also show deserts and forests.",
-        "text_l2": "Formas Terrestres. Los mapas muestran diferentes formas terrestres como montañas altas, ríos largos y lagos grandes. También muestran desiertos y bosques."
+        "text_l2": "Formas Terrestres. Los mapas muestran diferentes formas terrestres como montañas altas, ríos largos y lagos grandes. También muestran desiertos y bosques.",
+        "image_prompt": "a child-friendly illustration about: Landforms. Maps show different landforms like tall mountains, long rivers, and big"
       },
       {
         "page_number": 8,
         "text_en": "Why use Maps? Maps help us find places, plan trips, and understand our world!",
-        "text_l2": "¿Por qué usar Mapas? ¡Los mapas nos ayudan a encontrar lugares, planificar viajes y entender nuestro mundo!"
+        "text_l2": "¿Por qué usar Mapas? ¡Los mapas nos ayudan a encontrar lugares, planificar viajes y entender nuestro mundo!",
+        "image_prompt": "a child-friendly illustration about: Why use Maps? Maps help us find places, plan trips, and understand our world!"
       }
     ]
   },

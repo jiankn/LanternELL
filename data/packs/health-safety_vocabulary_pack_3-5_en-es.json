@@ -265,37 +265,44 @@
       {
         "page_number": 2,
         "text_en": "We learn about Health and Safety to keep ourselves and others well. It's important to know how to take care of our bodies and stay safe in different places.",
-        "text_l2": "Aprendemos sobre Salud y Seguridad para mantenernos bien a nosotros y a los demás. Es importante saber cómo cuidar nuestros cuerpos y mantenernos seguros en diferentes lugares."
+        "text_l2": "Aprendemos sobre Salud y Seguridad para mantenernos bien a nosotros y a los demás. Es importante saber cómo cuidar nuestros cuerpos y mantenernos seguros en diferentes lugares.",
+        "image_prompt": "we learn about health and safety to keep ourselves and"
       },
       {
         "page_number": 3,
         "text_en": "Good **Hygiene**, like washing hands often, helps stop **Germs** from spreading. Cover your mouth when you cough or sneeze!",
-        "text_l2": "Una buena **Higiene**, como lavarse las manos a menudo, ayuda a evitar que los **Gérmenes** se propaguen. ¡Cúbrete la boca al toser o estornudar!"
+        "text_l2": "Una buena **Higiene**, como lavarse las manos a menudo, ayuda a evitar que los **Gérmenes** se propaguen. ¡Cúbrete la boca al toser o estornudar!",
+        "image_prompt": "good **hygiene**, like washing hands often, helps stop"
       },
       {
         "page_number": 4,
         "text_en": "If you get an **Injury**, like a scraped knee, tell an adult right away. They can help with **First Aid** to clean and cover the wound.",
-        "text_l2": "Si te haces una **Lesión**, como una raspadura en la rodilla, díselo a un adulto de inmediato. Ellos pueden ayudar con los **Primeros Auxilios** para limpiar y cubrir la herida."
+        "text_l2": "Si te haces una **Lesión**, como una raspadura en la rodilla, díselo a un adulto de inmediato. Ellos pueden ayudar con los **Primeros Auxilios** para limpiar y cubrir la herida.",
+        "image_prompt": "if you get an **injury**, like a scraped knee, tell an"
       },
       {
         "page_number": 5,
         "text_en": "In an **Emergency**, like a fire or someone needing help, know who to call. Always wear a **Helmet** when riding a bike and a **Seatbelt** in the car.",
-        "text_l2": "En una **Emergencia**, como un incendio o alguien que necesita ayuda, sabe a quién llamar. Siempre usa un **Casco** al andar en bicicleta y un **Cinturón de seguridad** en el auto."
+        "text_l2": "En una **Emergencia**, como un incendio o alguien que necesita ayuda, sabe a quién llamar. Siempre usa un **Casco** al andar en bicicleta y un **Cinturón de seguridad** en el auto.",
+        "image_prompt": "in an **emergency**, like a fire or someone needing help,"
       },
       {
         "page_number": 6,
         "text_en": "Never talk to or go with a **Stranger**. Only take **Medication** from a trusted adult, and tell them if you have an **Allergy** to certain foods or medicines.",
-        "text_l2": "Nunca hables ni vayas con un **Extraño**. Solo toma **Medicamentos** de un adulto de confianza, y diles si tienes una **Alergia** a ciertos alimentos o medicinas."
+        "text_l2": "Nunca hables ni vayas con un **Extraño**. Solo toma **Medicamentos** de un adulto de confianza, y diles si tienes una **Alergia** a ciertos alimentos o medicinas.",
+        "image_prompt": "never talk to or go with a **stranger**"
       },
       {
         "page_number": 7,
         "text_en": "Eat healthy foods for good **Nutrition** and get plenty of **Exercise** every day. This keeps your body strong and healthy.",
-        "text_l2": "Come alimentos saludables para una buena **Nutrición** y haz mucho **Ejercicio** todos los días. Esto mantiene tu cuerpo fuerte y saludable."
+        "text_l2": "Come alimentos saludables para una buena **Nutrición** y haz mucho **Ejercicio** todos los días. Esto mantiene tu cuerpo fuerte y saludable.",
+        "image_prompt": "eat healthy foods for good **nutrition** and get plenty of"
       },
       {
         "page_number": 8,
         "text_en": "Always follow **Safety Rules** at school, home, and outside. If you see something unsafe or someone needs help, always **Report** it to a trusted adult.",
-        "text_l2": "Siempre sigue las **Reglas de seguridad** en la escuela, en casa y afuera. Si ves algo inseguro o alguien necesita ayuda, siempre **Reporta**lo a un adulto de confianza."
+        "text_l2": "Siempre sigue las **Reglas de seguridad** en la escuela, en casa y afuera. Si ves algo inseguro o alguien necesita ayuda, siempre **Reporta**lo a un adulto de confianza.",
+        "image_prompt": "always follow **safety rules** at school, home, and outside"
       }
     ]
   },

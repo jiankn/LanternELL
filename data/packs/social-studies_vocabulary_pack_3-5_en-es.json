@@ -328,37 +328,44 @@
       {
         "page_number": 2,
         "text_en": "We live in a **community**. A community is a group of people who live and work together.",
-        "text_l2": "Vivimos en una **comunidad**. Una comunidad es un grupo de personas que viven y trabajan juntas."
+        "text_l2": "Vivimos en una **comunidad**. Una comunidad es un grupo de personas que viven y trabajan juntas.",
+        "image_prompt": "we live in a **community**"
       },
       {
         "page_number": 3,
         "text_en": "Every person in a community is a **citizen**. Citizens have **rights** and **responsibilities**.",
-        "text_l2": "Cada persona en una comunidad es un **ciudadano**. Los ciudadanos tienen **derechos** y **responsabilidades**."
+        "text_l2": "Cada persona en una comunidad es un **ciudadano**. Los ciudadanos tienen **derechos** y **responsabilidades**.",
+        "image_prompt": "every person in a community is a **citizen**"
       },
       {
         "page_number": 4,
         "text_en": "Our **government** makes **laws** to keep our community safe and fair.",
-        "text_l2": "Nuestro **gobierno** hace **leyes** para mantener nuestra comunidad segura y justa."
+        "text_l2": "Nuestro **gobierno** hace **leyes** para mantener nuestra comunidad segura y justa.",
+        "image_prompt": "our **government** makes **laws** to keep our community"
       },
       {
         "page_number": 5,
         "text_en": "We can learn about our world using a **map** or a **globe**. A globe is a model of Earth.",
-        "text_l2": "Podemos aprender sobre nuestro mundo usando un **mapa** o un **globo terráqueo**. Un globo es un modelo de la Tierra."
+        "text_l2": "Podemos aprender sobre nuestro mundo usando un **mapa** o un **globo terráqueo**. Un globo es un modelo de la Tierra.",
+        "image_prompt": "we can learn about our world using a **map** or a **globe**"
       },
       {
         "page_number": 6,
         "text_en": "Earth has many **continents** and **countries**. Our country has many **states** and **cities**.",
-        "text_l2": "La Tierra tiene muchos **continentes** y **países**. Nuestro país tiene muchos **estados** y **ciudades**."
+        "text_l2": "La Tierra tiene muchos **continentes** y **países**. Nuestro país tiene muchos **estados** y **ciudades**.",
+        "image_prompt": "earth has many **continents** and **countries**"
       },
       {
         "page_number": 7,
         "text_en": "We learn about the past through **history**. We learn about how people live through **culture** and **traditions**.",
-        "text_l2": "Aprendemos sobre el pasado a través de la **historia**. Aprendemos sobre cómo vive la gente a través de la **cultura** y las **tradiciones**."
+        "text_l2": "Aprendemos sobre el pasado a través de la **historia**. Aprendemos sobre cómo vive la gente a través de la **cultura** y las **tradiciones**.",
+        "image_prompt": "we learn about the past through **history**"
       },
       {
         "page_number": 8,
         "text_en": "Good **leaders** help guide our communities and countries.",
-        "text_l2": "Buenos **líderes** ayudan a guiar nuestras comunidades y países."
+        "text_l2": "Buenos **líderes** ayudan a guiar nuestras comunidades y países.",
+        "image_prompt": "good **leaders** help guide our communities and countries"
       }
     ]
   },

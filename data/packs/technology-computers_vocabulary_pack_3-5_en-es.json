@@ -246,37 +246,44 @@
       {
         "page_number": 2,
         "text_en": "This is a computer. We use it to learn and play.",
-        "text_l2": "Esta es una computadora. La usamos para aprender y jugar."
+        "text_l2": "Esta es una computadora. La usamos para aprender y jugar.",
+        "image_prompt": "a child-friendly illustration about: This is a computer. We use it to learn and play."
       },
       {
         "page_number": 3,
         "text_en": "The screen shows us pictures and words. It helps us see!",
-        "text_l2": "La pantalla nos muestra imágenes y palabras. ¡Nos ayuda a ver!"
+        "text_l2": "La pantalla nos muestra imágenes y palabras. ¡Nos ayuda a ver!",
+        "image_prompt": "a child-friendly illustration about: The screen shows us pictures and words. It helps us see!"
       },
       {
         "page_number": 4,
         "text_en": "We type on the keyboard. We click with the mouse.",
-        "text_l2": "Escribimos en el teclado. Hacemos clic con el ratón."
+        "text_l2": "Escribimos en el teclado. Hacemos clic con el ratón.",
+        "image_prompt": "a child-friendly illustration about: We type on the keyboard. We click with the mouse."
       },
       {
         "page_number": 5,
         "text_en": "The internet connects us to the world. We can find many things online.",
-        "text_l2": "El internet nos conecta con el mundo. Podemos encontrar muchas cosas en línea."
+        "text_l2": "El internet nos conecta con el mundo. Podemos encontrar muchas cosas en línea.",
+        "image_prompt": "a child-friendly illustration about: The internet connects us to the world. We can find many things online."
       },
       {
         "page_number": 6,
         "text_en": "Tablets and smartphones are small computers. We can carry them with us.",
-        "text_l2": "Las tabletas y los teléfonos inteligentes son computadoras pequeñas. Podemos llevarlos con nosotros."
+        "text_l2": "Las tabletas y los teléfonos inteligentes son computadoras pequeñas. Podemos llevarlos con nosotros.",
+        "image_prompt": "a child-friendly illustration about: Tablets and smartphones are small computers. We can carry them with us."
       },
       {
         "page_number": 7,
         "text_en": "We can print pictures with a printer. We listen to music with speakers or headphones.",
-        "text_l2": "Podemos imprimir imágenes con una impresora. Escuchamos música con altavoces o auriculares."
+        "text_l2": "Podemos imprimir imágenes con una impresora. Escuchamos música con altavoces o auriculares.",
+        "image_prompt": "a child-friendly illustration about: We can print pictures with a printer. We listen to music with speakers or"
       },
       {
         "page_number": 8,
         "text_en": "Technology helps us every day! It makes our lives easier and more fun.",
-        "text_l2": "¡La tecnología nos ayuda todos los días! Hace nuestras vidas más fáciles y divertidas."
+        "text_l2": "¡La tecnología nos ayuda todos los días! Hace nuestras vidas más fáciles y divertidas.",
+        "image_prompt": "a child-friendly illustration about: Technology helps us every day! It makes our lives easier and more fun."
       }
     ]
   },

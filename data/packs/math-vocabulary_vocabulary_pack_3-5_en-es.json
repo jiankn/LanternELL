@@ -261,37 +261,44 @@
       {
         "page_number": 2,
         "text_en": "Math helps us understand numbers and shapes. We use math every day!",
-        "text_l2": "Las matemáticas nos ayudan a entender los números y las formas. ¡Usamos las matemáticas todos los días!"
+        "text_l2": "Las matemáticas nos ayudan a entender los números y las formas. ¡Usamos las matemáticas todos los días!",
+        "image_prompt": "math helps us understand numbers and shapes"
       },
       {
         "page_number": 3,
         "text_en": "When we add, we put numbers together to find the sum. When we subtract, we take one number from another to find the difference.",
-        "text_l2": "Cuando sumamos, juntamos números para encontrar la suma. Cuando restamos, quitamos un número de otro para encontrar la diferencia."
+        "text_l2": "Cuando sumamos, juntamos números para encontrar la suma. Cuando restamos, quitamos un número de otro para encontrar la diferencia.",
+        "image_prompt": "when we add, we put numbers together to find the sum"
       },
       {
         "page_number": 4,
         "text_en": "To multiply means to add equal groups. The answer is called the product. To divide means to share equally. The answer is called the quotient.",
-        "text_l2": "Multiplicar significa sumar grupos iguales. La respuesta se llama producto. Dividir significa compartir por igual. La respuesta se llama cociente."
+        "text_l2": "Multiplicar significa sumar grupos iguales. La respuesta se llama producto. Dividir significa compartir por igual. La respuesta se llama cociente.",
+        "image_prompt": "to multiply means to add equal groups"
       },
       {
         "page_number": 5,
         "text_en": "A whole number is a complete number like 1, 2, 3. A fraction shows parts of a whole, like 1/2. A decimal is another way to show parts, like 0.5.",
-        "text_l2": "Un número entero es un número completo como 1, 2, 3. Una fracción muestra partes de un todo, como 1/2. Un decimal es otra forma de mostrar partes, como 0.5."
+        "text_l2": "Un número entero es un número completo como 1, 2, 3. Una fracción muestra partes de un todo, como 1/2. Un decimal es otra forma de mostrar partes, como 0.5.",
+        "image_prompt": "whole number is a complete number like 1, 2, 3"
       },
       {
         "page_number": 6,
         "text_en": "An equation is a math sentence with an equal sign. Sometimes we need to estimate an answer, which means finding a close number.",
-        "text_l2": "Una ecuación es una oración matemática con un signo de igual. A veces necesitamos estimar una respuesta, lo que significa encontrar un número cercano."
+        "text_l2": "Una ecuación es una oración matemática con un signo de igual. A veces necesitamos estimar una respuesta, lo que significa encontrar un número cercano.",
+        "image_prompt": "equation is a math sentence with an equal sign"
       },
       {
         "page_number": 7,
         "text_en": "Geometry is about shapes and their properties. We also learn to measure objects using tools like rulers.",
-        "text_l2": "La geometría trata sobre las formas y sus propiedades. También aprendemos a medir objetos usando herramientas como reglas."
+        "text_l2": "La geometría trata sobre las formas y sus propiedades. También aprendemos a medir objetos usando herramientas como reglas.",
+        "image_prompt": "geometry is about shapes and their properties"
       },
       {
         "page_number": 8,
         "text_en": "We can collect data and look for patterns to understand information better. Math is fun!",
-        "text_l2": "Podemos recolectar datos y buscar patrones para entender mejor la información. ¡Las matemáticas son divertidas!"
+        "text_l2": "Podemos recolectar datos y buscar patrones para entender mejor la información. ¡Las matemáticas son divertidas!",
+        "image_prompt": "we can collect data and look for patterns to understand"
       }
     ]
   },
