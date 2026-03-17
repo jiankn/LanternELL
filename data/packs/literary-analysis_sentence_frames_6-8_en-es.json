@@ -11,51 +11,63 @@
   "sentence_frames": [
     {
       "frame": "The author uses [literary device, e.g., imagery, metaphor] to emphasize [idea/theme, e.g., the character's loneliness, the beauty of nature].",
-      "translation": "El autor utiliza [recurso literario, ej., imágenes, metáfora] para enfatizar [idea/tema, ej., la soledad del personaje, la belleza de la naturaleza]."
+      "translation": "El autor utiliza [recurso literario, ej., imágenes, metáfora] para enfatizar [idea/tema, ej., la soledad del personaje, la belleza de la naturaleza].",
+      "icon_prompt": "A pen or quill icon"
     },
     {
       "frame": "A significant detail that reveals [character trait, e.g., courage, wisdom] about [character's name] is when [evidence/action from text].",
-      "translation": "Un detalle significativo que revela [rasgo de carácter, ej., valentía, sabiduría] sobre [nombre del personaje] es cuando [evidencia/acción del texto]."
+      "translation": "Un detalle significativo que revela [rasgo de carácter, ej., valentía, sabiduría] sobre [nombre del personaje] es cuando [evidencia/acción del texto].",
+      "icon_prompt": "A person silhouette with a magnifying glass"
     },
     {
       "frame": "The central theme of this text appears to be [theme, e.g., the importance of friendship, overcoming adversity], as evidenced by [plot point/symbol/character's realization].",
-      "translation": "El tema central de este texto parece ser [tema, ej., la importancia de la amistad, superar la adversidad], como lo demuestra [punto de la trama/símbolo/realización del personaje]."
+      "translation": "El tema central de este texto parece ser [tema, ej., la importancia de la amistad, superar la adversidad], como lo demuestra [punto de la trama/símbolo/realización del personaje].",
+      "icon_prompt": "A key icon"
     },
     {
       "frame": "The setting of [setting description, e.g., a desolate forest, a bustling city] contributes to the mood of [mood, e.g., mystery, excitement] by [explanation of how].",
-      "translation": "El escenario de [descripción del escenario, ej., un bosque desolado, una ciudad bulliciosa] contribuye al ambiente de [ambiente, ej., misterio, emoción] al [explicación de cómo]."
+      "translation": "El escenario de [descripción del escenario, ej., un bosque desolado, una ciudad bulliciosa] contribuye al ambiente de [ambiente, ej., misterio, emoción] al [explicación de cómo].",
+      "icon_prompt": "A landscape with weather symbols"
     },
     {
       "frame": "I infer that [character's motivation/feeling] because the text states/shows [specific evidence or action].",
-      "translation": "Infiero que [motivación/sentimiento del personaje] porque el texto afirma/muestra [evidencia o acción específica]."
+      "translation": "Infiero que [motivación/sentimiento del personaje] porque el texto afirma/muestra [evidencia o acción específica].",
+      "icon_prompt": "A person silhouette with a magnifying glass"
     },
     {
       "frame": "The conflict between [character 1] and [character 2/force/internal struggle] drives the plot by [explanation of its impact on events].",
-      "translation": "El conflicto entre [personaje 1] y [personaje 2/fuerza/lucha interna] impulsa la trama al [explicación de su impacto en los eventos]."
+      "translation": "El conflicto entre [personaje 1] y [personaje 2/fuerza/lucha interna] impulsa la trama al [explicación de su impacto en los eventos].",
+      "icon_prompt": "A person silhouette with a magnifying glass"
     },
     {
       "frame": "One example of symbolism in this story is [symbol, e.g., a caged bird, a wilting flower], which represents [meaning, e.g., loss of freedom, fading hope].",
-      "translation": "Un ejemplo de simbolismo en esta historia es [símbolo, ej., un pájaro enjaulado, una flor marchita], que representa [significado, ej., pérdida de libertad, esperanza que se desvanece]."
+      "translation": "Un ejemplo de simbolismo en esta historia es [símbolo, ej., un pájaro enjaulado, una flor marchita], que representa [significado, ej., pérdida de libertad, esperanza que se desvanece].",
+      "icon_prompt": "An abstract shape representing meaning"
     },
     {
       "frame": "The author's purpose in writing this piece is primarily to [inform/persuade/entertain/express] by [technique, e.g., presenting facts, creating suspense, sharing personal experience].",
-      "translation": "El propósito del autor al escribir esta pieza es principalmente [informar/persuadir/entretener/expresar] mediante [técnica, ej., presentar hechos, crear suspenso, compartir experiencia personal]."
+      "translation": "El propósito del autor al escribir esta pieza es principalmente [informar/persuadir/entretener/expresar] mediante [técnica, ej., presentar hechos, crear suspenso, compartir experiencia personal].",
+      "icon_prompt": "A pen or quill icon"
     },
     {
       "frame": "This passage suggests that [interpretation/idea] because it includes the phrase/line, \"[quote from text]\".",
-      "translation": "Este pasaje sugiere que [interpretación/idea] porque incluye la frase/línea, \"[cita del texto]\"."
+      "translation": "Este pasaje sugiere que [interpretación/idea] porque incluye la frase/línea, \"[cita del texto]\".",
+      "icon_prompt": "A detective magnifying glass"
     },
     {
       "frame": "If I were to analyze [literary element, e.g., the protagonist's journey, the story's climax], I would focus on [specific aspect] to understand [deeper meaning/impact].",
-      "translation": "Si tuviera que analizar [elemento literario, ej., el viaje del protagonista, el clímax de la historia], me centraría en [aspecto específico] para comprender [significado/impacto más profundo]."
+      "translation": "Si tuviera que analizar [elemento literario, ej., el viaje del protagonista, el clímax de la historia], me centraría en [aspecto específico] para comprender [significado/impacto más profundo].",
+      "icon_prompt": "A mountain peak"
     },
     {
       "frame": "The word choice of \"[specific word/phrase]\" creates a tone of [tone description, e.g., urgency, melancholy] because [explanation of its effect].",
-      "translation": "La elección de palabras de \"[palabra/frase específica]\" crea un tono de [descripción del tono, ej., urgencia, melancolía] porque [explicación de su efecto]."
+      "translation": "La elección de palabras de \"[palabra/frase específica]\" crea un tono de [descripción del tono, ej., urgencia, melancolía] porque [explicación de su efecto].",
+      "icon_prompt": "A paintbrush with words"
     },
     {
       "frame": "A key turning point in the narrative occurs when [event], which leads to [consequence/change in character or plot].",
-      "translation": "Un punto de inflexión clave en la narrativa ocurre cuando [evento], lo que lleva a [consecuencia/cambio en el personaje o la trama]."
+      "translation": "Un punto de inflexión clave en la narrativa ocurre cuando [evento], lo que lleva a [consecuencia/cambio en el personaje o la trama].",
+      "icon_prompt": "A person silhouette with a magnifying glass"
     }
   ],
   "dialogue_strips": [

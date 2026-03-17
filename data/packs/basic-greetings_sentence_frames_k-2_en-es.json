@@ -11,43 +11,53 @@
   "sentence_frames": [
     {
       "frame": "Hello, [name].",
-      "translation": "Hola, [nombre]."
+      "translation": "Hola, [nombre].",
+      "icon_prompt": "A waving hand"
     },
     {
       "frame": "Good morning.",
-      "translation": "Buenos días."
+      "translation": "Buenos días.",
+      "icon_prompt": "A waving hand"
     },
     {
       "frame": "Good afternoon.",
-      "translation": "Buenas tardes."
+      "translation": "Buenas tardes.",
+      "icon_prompt": "A waving hand"
     },
     {
       "frame": "How are you?",
-      "translation": "¿Cómo estás?"
+      "translation": "¿Cómo estás?",
+      "icon_prompt": "A smiley face"
     },
     {
       "frame": "I am good.",
-      "translation": "Estoy bien."
+      "translation": "Estoy bien.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I am happy.",
-      "translation": "Estoy feliz."
+      "translation": "Estoy feliz.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Thank you.",
-      "translation": "Gracias."
+      "translation": "Gracias.",
+      "icon_prompt": "A heart or thumbs up"
     },
     {
       "frame": "You're welcome.",
-      "translation": "De nada."
+      "translation": "De nada.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Goodbye, [name].",
-      "translation": "Adiós, [nombre]."
+      "translation": "Adiós, [nombre].",
+      "icon_prompt": "A hand waving goodbye"
     },
     {
       "frame": "See you soon!",
-      "translation": "¡Nos vemos pronto!"
+      "translation": "¡Nos vemos pronto!",
+      "icon_prompt": "A hand waving goodbye"
     }
   ],
   "dialogue_strips": [

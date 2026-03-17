@@ -11,51 +11,63 @@
   "sentence_frames": [
     {
       "frame": "I need help.",
-      "translation": "Necesito ayuda."
+      "translation": "Necesito ayuda.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "May I go?",
-      "translation": "¿Puedo ir?"
+      "translation": "¿Puedo ir?",
+      "icon_prompt": "A question mark in a speech bubble"
     },
     {
       "frame": "Please sit down.",
-      "translation": "Por favor, siéntate."
+      "translation": "Por favor, siéntate.",
+      "icon_prompt": "A chair with a downward arrow"
     },
     {
       "frame": "Look at me.",
-      "translation": "Mírame."
+      "translation": "Mírame.",
+      "icon_prompt": "An eye icon"
     },
     {
       "frame": "Listen to me.",
-      "translation": "Escúchame."
+      "translation": "Escúchame.",
+      "icon_prompt": "An ear icon"
     },
     {
       "frame": "I can do it.",
-      "translation": "Yo puedo hacerlo."
+      "translation": "Yo puedo hacerlo.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Please stand up.",
-      "translation": "Por favor, levántate."
+      "translation": "Por favor, levántate.",
+      "icon_prompt": "A person standing with an upward arrow"
     },
     {
       "frame": "Give me ____.",
-      "translation": "Dame ____."
+      "translation": "Dame ____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "Take your turn.",
-      "translation": "Toma tu turno."
+      "translation": "Toma tu turno.",
+      "icon_prompt": "Two arrows forming a circle"
     },
     {
       "frame": "Open your book.",
-      "translation": "Abre tu libro."
+      "translation": "Abre tu libro.",
+      "icon_prompt": "A book opening or closing"
     },
     {
       "frame": "Close your book.",
-      "translation": "Cierra tu libro."
+      "translation": "Cierra tu libro.",
+      "icon_prompt": "A book opening or closing"
     },
     {
       "frame": "Where is it?",
-      "translation": "¿Dónde está?"
+      "translation": "¿Dónde está?",
+      "icon_prompt": "A question mark in a speech bubble"
     }
   ],
   "dialogue_strips": [

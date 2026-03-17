@@ -11,35 +11,43 @@
   "sentence_frames": [
     {
       "frame": "I need help.",
-      "translation": "Necesito ayuda."
+      "translation": "Necesito ayuda.",
+      "icon_prompt": "A raised hand with a question mark"
     },
     {
       "frame": "Can you help me?",
-      "translation": "¿Puedes ayudarme?"
+      "translation": "¿Puedes ayudarme?",
+      "icon_prompt": "Two hands reaching toward each other"
     },
     {
       "frame": "Please help me.",
-      "translation": "Por favor, ayúdame."
+      "translation": "Por favor, ayúdame.",
+      "icon_prompt": "A child with hands together in a pleading gesture"
     },
     {
       "frame": "I don't understand.",
-      "translation": "No entiendo."
+      "translation": "No entiendo.",
+      "icon_prompt": "A confused face with a question mark above"
     },
     {
       "frame": "Show me, please.",
-      "translation": "Muéstrame, por favor."
+      "translation": "Muéstrame, por favor.",
+      "icon_prompt": "A pointing finger and an eye"
     },
     {
       "frame": "What is this?",
-      "translation": "¿Qué es esto?"
+      "translation": "¿Qué es esto?",
+      "icon_prompt": "A magnifying glass over an object"
     },
     {
       "frame": "I can't do it.",
-      "translation": "No puedo hacerlo."
+      "translation": "No puedo hacerlo.",
+      "icon_prompt": "A child looking at a difficult task with a thought bubble"
     },
     {
       "frame": "Help me with ___.",
-      "translation": "Ayúdame con ___."
+      "translation": "Ayúdame con ___.",
+      "icon_prompt": "A wrench or tool icon representing assistance"
     }
   ],
   "dialogue_strips": [

@@ -11,43 +11,53 @@
   "sentence_frames": [
     {
       "frame": "The writing prompt asks me to describe ______, so I will think about _____.",
-      "translation": "El indicador de escritura me pide que describa ______, así que pensaré en _____."
+      "translation": "El indicador de escritura me pide que describa ______, así que pensaré en _____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I need to write about ______, and I will include details like _____.",
-      "translation": "Necesito escribir sobre ______, e incluiré detalles como _____."
+      "translation": "Necesito escribir sobre ______, e incluiré detalles como _____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "My main idea for this story is ______, and I will start by _____.",
-      "translation": "Mi idea principal para esta historia es ______, y comenzaré por _____."
+      "translation": "Mi idea principal para esta historia es ______, y comenzaré por _____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I will organize my writing by first ______, then ______, and finally _____.",
-      "translation": "Organizaré mi escritura primero ______, luego ______, y finalmente _____."
+      "translation": "Organizaré mi escritura primero ______, luego ______, y finalmente _____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "When I read the prompt, I understand that I should ______, so I will make sure to _____.",
-      "translation": "Cuando leo el indicador, entiendo que debo ______, así que me aseguraré de _____."
+      "translation": "Cuando leo el indicador, entiendo que debo ______, así que me aseguraré de _____.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I can use descriptive words such as ______ and ______ to make my writing better.",
-      "translation": "Puedo usar palabras descriptivas como ______ y ______ para mejorar mi escritura."
+      "translation": "Puedo usar palabras descriptivas como ______ y ______ para mejorar mi escritura.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I think my paragraph needs a topic sentence about ______, and then supporting details about ______.",
-      "translation": "Creo que mi párrafo necesita una oración principal sobre ______, y luego detalles de apoyo sobre ______."
+      "translation": "Creo que mi párrafo necesita una oración principal sobre ______, y luego detalles de apoyo sobre ______.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "My partner's writing is interesting because they described ______, and I liked how they used ______.",
-      "translation": "La escritura de mi compañero es interesante porque describieron ______, y me gustó cómo usaron ______."
+      "translation": "La escritura de mi compañero es interesante porque describieron ______, y me gustó cómo usaron ______.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I want to ask my partner about ______, because I am curious about ______ in their story.",
-      "translation": "Quiero preguntarle a mi compañero sobre ______, porque tengo curiosidad sobre ______ en su historia."
+      "translation": "Quiero preguntarle a mi compañero sobre ______, porque tengo curiosidad sobre ______ en su historia.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "To improve my writing, I can add more details about ______ or change the ending to ______.",
-      "translation": "Para mejorar mi escritura, puedo añadir más detalles sobre ______ o cambiar el final a ______."
+      "translation": "Para mejorar mi escritura, puedo añadir más detalles sobre ______ o cambiar el final a ______.",
+      "icon_prompt": "A pencil filling in a blank line"
     }
   ],
   "dialogue_strips": [

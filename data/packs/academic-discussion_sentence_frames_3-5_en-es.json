@@ -11,51 +11,63 @@
   "sentence_frames": [
     {
       "frame": "I think that [idea], because [reason].",
-      "translation": "Creo que [idea], porque [razón]."
+      "translation": "Creo que [idea], porque [razón].",
+      "icon_prompt": "A thought bubble with a lightbulb"
     },
     {
       "frame": "In my opinion, [topic] is important, and I believe [reason].",
-      "translation": "En mi opinión, [tema] es importante, y creo que [razón]."
+      "translation": "En mi opinión, [tema] es importante, y creo que [razón].",
+      "icon_prompt": "A thought bubble with a lightbulb"
     },
     {
       "frame": "I agree with [person's name] because [reason], and I also think [additional idea].",
-      "translation": "Estoy de acuerdo con [nombre de la persona] porque [razón], y también pienso que [idea adicional]."
+      "translation": "Estoy de acuerdo con [nombre de la persona] porque [razón], y también pienso que [idea adicional].",
+      "icon_prompt": "A thought bubble with a lightbulb"
     },
     {
       "frame": "I disagree with [person's name] because [reason], but I understand [their point of view].",
-      "translation": "No estoy de acuerdo con [nombre de la persona] porque [razón], pero entiendo [su punto de vista]."
+      "translation": "No estoy de acuerdo con [nombre de la persona] porque [razón], pero entiendo [su punto de vista].",
+      "icon_prompt": "A thumbs up icon"
     },
     {
       "frame": "Could you please explain [your idea] again, so I can understand it better?",
-      "translation": "¿Podrías explicar [tu idea] otra vez, por favor, para que pueda entenderla mejor?"
+      "translation": "¿Podrías explicar [tu idea] otra vez, por favor, para que pueda entenderla mejor?",
+      "icon_prompt": "A speech bubble with lines of text"
     },
     {
       "frame": "Another point to consider is [new idea], and it relates to [previous idea].",
-      "translation": "Otro punto a considerar es [nueva idea], y se relaciona con [idea anterior]."
+      "translation": "Otro punto a considerar es [nueva idea], y se relaciona con [idea anterior].",
+      "icon_prompt": "A pointing finger"
     },
     {
       "frame": "To clarify, are you saying that [rephrase idea]?",
-      "translation": "Para aclarar, ¿estás diciendo que [reformular idea]?"
+      "translation": "Para aclarar, ¿estás diciendo que [reformular idea]?",
+      "icon_prompt": "A speech bubble with lines of text"
     },
     {
       "frame": "I noticed that [detail] in the text, which makes me think [conclusion].",
-      "translation": "Me di cuenta de que [detalle] en el texto, lo que me hace pensar [conclusión]."
+      "translation": "Me di cuenta de que [detalle] en el texto, lo que me hace pensar [conclusión].",
+      "icon_prompt": "A thought bubble with a lightbulb"
     },
     {
       "frame": "This reminds me of [personal experience/other topic], and it helps me understand [concept].",
-      "translation": "Esto me recuerda a [experiencia personal/otro tema], y me ayuda a entender [concepto]."
+      "translation": "Esto me recuerda a [experiencia personal/otro tema], y me ayuda a entender [concepto].",
+      "icon_prompt": "A chain link or connection icon"
     },
     {
       "frame": "What do you think about [specific question], and why is it important?",
-      "translation": "¿Qué piensas sobre [pregunta específica], y por qué es importante?"
+      "translation": "¿Qué piensas sobre [pregunta específica], y por qué es importante?",
+      "icon_prompt": "A thought bubble with a lightbulb"
     },
     {
       "frame": "So, to summarize, we discussed [main point 1] and [main point 2].",
-      "translation": "Entonces, para resumir, discutimos [punto principal 1] y [punto principal 2]."
+      "translation": "Entonces, para resumir, discutimos [punto principal 1] y [punto principal 2].",
+      "icon_prompt": "A large document shrinking into a small note"
     },
     {
       "frame": "My evidence from the text is on page [number], and it says [quote/paraphrase].",
-      "translation": "Mi evidencia del texto está en la página [número], y dice [cita/paráfrasis]."
+      "translation": "Mi evidencia del texto está en la página [número], y dice [cita/paráfrasis].",
+      "icon_prompt": "A document with a magnifying glass"
     }
   ],
   "dialogue_strips": [

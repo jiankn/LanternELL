@@ -11,43 +11,53 @@
   "sentence_frames": [
     {
       "frame": "I read about [character's name] in my book, and I learned that [he/she] is [adjective].",
-      "translation": "Leí sobre [nombre del personaje] en mi libro, y aprendí que [él/ella] es [adjetivo]."
+      "translation": "Leí sobre [nombre del personaje] en mi libro, y aprendí que [él/ella] es [adjetivo].",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "My favorite part was when [event], because [reason].",
-      "translation": "Mi parte favorita fue cuando [evento], porque [razón]."
+      "translation": "Mi parte favorita fue cuando [evento], porque [razón].",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "The main idea of this book is [main idea], so I think [conclusion].",
-      "translation": "La idea principal de este libro es [idea principal], así que creo que [conclusión]."
+      "translation": "La idea principal de este libro es [idea principal], así que creo que [conclusión].",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I recorded [number] pages in my reading log this week, and I want to read more next week.",
-      "translation": "Registré [número] páginas en mi registro de lectura esta semana, y quiero leer más la próxima semana."
+      "translation": "Registré [número] páginas en mi registro de lectura esta semana, y quiero leer más la próxima semana.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "This book reminded me of [another book/event], and I liked both stories.",
-      "translation": "Este libro me recordó a [otro libro/evento], y me gustaron ambas historias."
+      "translation": "Este libro me recordó a [otro libro/evento], y me gustaron ambas historias.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I need to finish my book report by [date], so I will [action].",
-      "translation": "Necesito terminar mi informe de libro para [fecha], así que voy a [acción]."
+      "translation": "Necesito terminar mi informe de libro para [fecha], así que voy a [acción].",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "The author wrote this book to [purpose], and I think [he/she] did a good job.",
-      "translation": "El autor escribió este libro para [propósito], y creo que [él/ella] hizo un buen trabajo."
+      "translation": "El autor escribió este libro para [propósito], y creo que [él/ella] hizo un buen trabajo.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I will share my book report with the class, and I feel [emotion] about it.",
-      "translation": "Compartiré mi informe de libro con la clase, y me siento [emoción] al respecto."
+      "translation": "Compartiré mi informe de libro con la clase, y me siento [emoción] al respecto.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "When I read, I learned new words like [word 1] and [word 2], so I wrote them in my vocabulary journal.",
-      "translation": "Cuando leí, aprendí palabras nuevas como [palabra 1] y [palabra 2], así que las escribí en mi diario de vocabulario."
+      "translation": "Cuando leí, aprendí palabras nuevas como [palabra 1] y [palabra 2], así que las escribí en mi diario de vocabulario.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I chose this book because [reason], and I am glad I read it.",
-      "translation": "Elegí este libro porque [razón], y estoy contento/a de haberlo leído."
+      "translation": "Elegí este libro porque [razón], y estoy contento/a de haberlo leído.",
+      "icon_prompt": "A speech bubble icon"
     }
   ],
   "dialogue_strips": [

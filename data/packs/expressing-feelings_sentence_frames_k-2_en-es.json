@@ -11,43 +11,53 @@
   "sentence_frames": [
     {
       "frame": "I am happy.",
-      "translation": "Estoy feliz."
+      "translation": "Estoy feliz.",
+      "icon_prompt": "A smiling face with bright eyes"
     },
     {
       "frame": "I feel sad.",
-      "translation": "Me siento triste."
+      "translation": "Me siento triste.",
+      "icon_prompt": "A face with a tear"
     },
     {
       "frame": "I am mad.",
-      "translation": "Estoy enojado/a."
+      "translation": "Estoy enojado/a.",
+      "icon_prompt": "A face with furrowed brows"
     },
     {
       "frame": "I feel scared.",
-      "translation": "Me siento asustado/a."
+      "translation": "Me siento asustado/a.",
+      "icon_prompt": "A face with wide eyes and shaking lines"
     },
     {
       "frame": "I am excited.",
-      "translation": "Estoy emocionado/a."
+      "translation": "Estoy emocionado/a.",
+      "icon_prompt": "A smiling face with bright eyes"
     },
     {
       "frame": "I feel tired.",
-      "translation": "Me siento cansado/a."
+      "translation": "Me siento cansado/a.",
+      "icon_prompt": "A face with closed eyes and a yawn"
     },
     {
       "frame": "I am hungry.",
-      "translation": "Tengo hambre."
+      "translation": "Tengo hambre.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I feel shy.",
-      "translation": "Me siento tímido/a."
+      "translation": "Me siento tímido/a.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Are you okay?",
-      "translation": "¿Estás bien?"
+      "translation": "¿Estás bien?",
+      "icon_prompt": "A question mark in a speech bubble"
     },
     {
       "frame": "How do you feel?",
-      "translation": "¿Cómo te sientes?"
+      "translation": "¿Cómo te sientes?",
+      "icon_prompt": "A question mark in a speech bubble"
     }
   ],
   "dialogue_strips": [

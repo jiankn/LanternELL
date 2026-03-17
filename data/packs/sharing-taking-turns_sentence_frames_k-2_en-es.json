@@ -11,35 +11,43 @@
   "sentence_frames": [
     {
       "frame": "Can I play?",
-      "translation": "¿Puedo jugar?"
+      "translation": "¿Puedo jugar?",
+      "icon_prompt": "A question mark in a speech bubble"
     },
     {
       "frame": "My turn, please.",
-      "translation": "Mi turno, por favor."
+      "translation": "Mi turno, por favor.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Your turn now.",
-      "translation": "Tu turno ahora."
+      "translation": "Tu turno ahora.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Let's share.",
-      "translation": "Vamos a compartir."
+      "translation": "Vamos a compartir.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I can share.",
-      "translation": "Puedo compartir."
+      "translation": "Puedo compartir.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Wait for me.",
-      "translation": "Espérame."
+      "translation": "Espérame.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Thank you for sharing.",
-      "translation": "Gracias por compartir."
+      "translation": "Gracias por compartir.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Here you go.",
-      "translation": "Aquí tienes."
+      "translation": "Aquí tienes.",
+      "icon_prompt": "A speech bubble icon"
     }
   ],
   "dialogue_strips": [

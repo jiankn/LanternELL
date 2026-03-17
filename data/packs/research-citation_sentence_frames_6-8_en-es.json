@@ -11,43 +11,53 @@
   "sentence_frames": [
     {
       "frame": "I need to locate reliable sources for my research on _______________.",
-      "translation": "Necesito localizar fuentes confiables para mi investigación sobre _______________."
+      "translation": "Necesito localizar fuentes confiables para mi investigación sobre _______________.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "To avoid plagiarism, I must always cite the original source of information.",
-      "translation": "Para evitar el plagio, siempre debo citar la fuente original de información."
+      "translation": "Para evitar el plagio, siempre debo citar la fuente original de información.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "When evaluating a source, I consider its authority, accuracy, and purpose.",
-      "translation": "Al evaluar una fuente, considero su autoridad, precisión y propósito."
+      "translation": "Al evaluar una fuente, considero su autoridad, precisión y propósito.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "I will paraphrase this information in my own words to demonstrate understanding.",
-      "translation": "Parafrasearé esta información con mis propias palabras para demostrar comprensión."
+      "translation": "Parafrasearé esta información con mis propias palabras para demostrar comprensión.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "Can you explain the difference between a primary and secondary source?",
-      "translation": "¿Puedes explicar la diferencia entre una fuente primaria y una secundaria?"
+      "translation": "¿Puedes explicar la diferencia entre una fuente primaria y una secundaria?",
+      "icon_prompt": "A question mark in a speech bubble"
     },
     {
       "frame": "According to the article '_______________', the main argument is that _______________.",
-      "translation": "Según el artículo '_______________', el argumento principal es que _______________."
+      "translation": "Según el artículo '_______________', el argumento principal es que _______________.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "I am having difficulty understanding how to properly format a citation for _______________.",
-      "translation": "Estoy teniendo dificultades para entender cómo formatear correctamente una cita para _______________."
+      "translation": "Estoy teniendo dificultades para entender cómo formatear correctamente una cita para _______________.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "My research question is '_______________', and I hope to find evidence to support _______________.",
-      "translation": "Mi pregunta de investigación es '_______________', y espero encontrar evidencia que apoye _______________."
+      "translation": "Mi pregunta de investigación es '_______________', y espero encontrar evidencia que apoye _______________.",
+      "icon_prompt": "A pencil filling in a blank line"
     },
     {
       "frame": "It is crucial to credit authors for their intellectual property by using citations.",
-      "translation": "Es crucial dar crédito a los autores por su propiedad intelectual mediante el uso de citas."
+      "translation": "Es crucial dar crédito a los autores por su propiedad intelectual mediante el uso de citas.",
+      "icon_prompt": "A speech bubble icon"
     },
     {
       "frame": "The evidence from this source helps to strengthen my argument about _______________.",
-      "translation": "La evidencia de esta fuente ayuda a fortalecer mi argumento sobre _______________."
+      "translation": "La evidencia de esta fuente ayuda a fortalecer mi argumento sobre _______________.",
+      "icon_prompt": "A pencil filling in a blank line"
     }
   ],
   "dialogue_strips": [
