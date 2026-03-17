@@ -5,6 +5,8 @@ export type PackType = 'vocabulary_pack' | 'sentence_frames' | 'classroom_labels
 export type AgeBand = 'Pre-K' | 'K-2' | '3-5' | '6-8' | '9-12';
 export type LanguagePair = 'en-es' | 'en-zh' | 'en-fr' | 'en-vi' | 'en-ar' | 'en-pt';
 export type PackStatus = 'draft' | 'review' | 'published' | 'archived';
+export type ProficiencyLevel = 'entering' | 'emerging' | 'developing' | 'expanding';
+export type ScenarioTag = 'first_week' | 'new_student_arrival' | 'parent_conference' | 'daily_routine' | 'assessment_week' | 'classroom_setup' | 'ongoing_support';
 
 export interface VocabularyItem {
   en: string;
@@ -15,6 +17,7 @@ export interface VocabularyItem {
 export interface SentenceFrame {
   frame: string; // e.g., "This is a ___."
   translation?: string;
+  icon_prompt?: string; // Visual anchor for classroom wall display
 }
 
 export interface DialogueStrip {
@@ -33,7 +36,7 @@ export interface SpeakingPrompt {
 }
 
 export interface WorksheetItem {
-  type: 'matching' | 'tracing' | 'writing' | 'coloring' | 'cutting' | 'fill-blank';
+  type: 'matching' | 'tracing' | 'writing' | 'coloring' | 'cutting' | 'fill-blank' | 'categorizing' | 'context-clues';
   instructions_en: string;
   instructions_l2?: string;
   items: WorksheetItemData[];
@@ -101,6 +104,8 @@ export interface ParentNote {
   content_l2: string;
   signature_required: boolean;
   response_section?: boolean; // Parent can write back
+  response_prompt_en?: string; // e.g., "I have read and understood this letter."
+  response_prompt_l2?: string; // e.g., "He leído y entendido esta carta."
 }
 
 export interface PackContent {
@@ -110,6 +115,9 @@ export interface PackContent {
   age_band: AgeBand;
   language_pair: LanguagePair;
   target_user: string;
+  proficiency_level?: ProficiencyLevel; // WIDA-aligned ELP level
+  scenario_tags?: ScenarioTag[]; // Usage scenarios for filtering
+  estimated_pages?: number; // Estimated printed page count
   title: string;
   description: string;
   
