@@ -79,18 +79,83 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
     });
   }
   if (content.mini_book?.pages?.length) {
-    pageBodies.push({ title: 'Mini-Book', body: <PageSections.MiniBookPage miniBook={content.mini_book} /> });
+    const mbPages = content.mini_book.pages;
+    const MINIBOOK_PER_PAGE = 4;
+    for (let i = 0; i < mbPages.length; i += MINIBOOK_PER_PAGE) {
+      const pageSlice = mbPages.slice(i, i + MINIBOOK_PER_PAGE);
+      const pageNum = Math.floor(i / MINIBOOK_PER_PAGE) + 1;
+      const totalPages = Math.ceil(mbPages.length / MINIBOOK_PER_PAGE);
+      pageBodies.push({
+        title: `Mini-Book ${pageNum}/${totalPages}`,
+        body: <PageSections.MiniBookPage miniBook={{ ...content.mini_book, pages: pageSlice }} showHeader={i === 0} />,
+      });
+    }
   }
-  content.worksheets?.forEach((ws, i) => {
-    pageBodies.push({ title: `Worksheet ${i + 1}`, body: <PageSections.Worksheet worksheet={ws} index={i + 1} /> });
-  });
+  // Worksheets: 小 worksheet 两两合并到同一页
+  if (content.worksheets?.length) {
+    const WS_MERGE_THRESHOLD = 6; // items ≤ 6 的 worksheet 可以合并
+    const wsList = content.worksheets;
+    let wi = 0;
+    while (wi < wsList.length) {
+      const ws = wsList[wi];
+      const nextWs = wi + 1 < wsList.length ? wsList[wi + 1] : null;
+
+      // 如果当前和下一个都是小 worksheet，合并到同一页
+      if (nextWs && ws.items.length <= WS_MERGE_THRESHOLD && nextWs.items.length <= WS_MERGE_THRESHOLD) {
+        pageBodies.push({
+          title: `Worksheets ${wi + 1}-${wi + 2}`,
+          body: (
+            <div>
+              <PageSections.Worksheet worksheet={ws} index={wi + 1} />
+              <div style={{ marginTop: 20 }} />
+              <PageSections.Worksheet worksheet={nextWs} index={wi + 2} />
+            </div>
+          ),
+        });
+        wi += 2;
+      } else {
+        pageBodies.push({ title: `Worksheet ${wi + 1}`, body: <PageSections.Worksheet worksheet={ws} index={wi + 1} /> });
+        wi++;
+      }
+    }
+  }
   if (content.teacher_notes) {
     pageBodies.push({ title: 'Teacher Notes', body: <PageSections.TeacherNotesPage notes={content.teacher_notes} /> });
   }
   if (content.answer_key?.length) {
-    pageBodies.push({ title: 'Answer Key', body: <PageSections.AnswerKeyPage answerKeys={content.answer_key} /> });
+    pageBodies.push({ title: 'Answer Key', body: (
+      <div>
+        <PageSections.AnswerKeyPage answerKeys={content.answer_key} />
+        <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
+      </div>
+    ) });
+  } else {
+    // 没有 answer key 时，Terms 合并到 teacher notes 页
+    // 但如果也没有 teacher notes，才单独一页
+    if (pageBodies.length > 0 && pageBodies[pageBodies.length - 1].title.startsWith('Teacher Notes')) {
+      // 把 compact terms 追加到 teacher notes 页
+      const lastPage = pageBodies[pageBodies.length - 1];
+      const origBody = lastPage.body;
+      pageBodies[pageBodies.length - 1] = {
+        title: lastPage.title,
+        body: (
+          <div>
+            {origBody}
+            <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
+          </div>
+        ),
+      };
+    } else {
+      // fallback: 单独一页（极少情况）
+      pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
+    }
   }
-  pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
+
+  const ageBandClass = ageBand.includes('6') || ageBand.includes('7') || ageBand.includes('8')
+    ? 'age-68'
+    : ageBand.includes('3') || ageBand.includes('4') || ageBand.includes('5')
+      ? 'age-35'
+      : 'age-k2';
 
   const total = pageBodies.length;
   return (
@@ -101,7 +166,7 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
         <style>{cssVars}</style>
         <style>{PACK_STYLES}</style>
       </head>
-      <body className="pack-body">
+      <body className={`pack-body ${ageBandClass}`}>
         {pageBodies.map((page, i) => (
           <section key={`${page.title}-${i}`} className="pdf-page">
             <div className="brand-bar" />
