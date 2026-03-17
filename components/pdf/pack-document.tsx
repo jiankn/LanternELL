@@ -91,16 +91,16 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
       });
     }
   }
-  // Worksheets: 小 worksheet 两两合并到同一页
+  // Worksheets: 只有很小的 worksheet 才合并到同一页（避免溢出）
   if (content.worksheets?.length) {
-    const WS_MERGE_THRESHOLD = 6; // items ≤ 6 的 worksheet 可以合并
+    const WS_MERGE_THRESHOLD = 3; // items ≤ 3 的 worksheet 可以合并
     const wsList = content.worksheets;
     let wi = 0;
     while (wi < wsList.length) {
       const ws = wsList[wi];
       const nextWs = wi + 1 < wsList.length ? wsList[wi + 1] : null;
 
-      // 如果当前和下一个都是小 worksheet，合并到同一页
+      // 如果当前和下一个都是很小的 worksheet，合并到同一页
       if (nextWs && ws.items.length <= WS_MERGE_THRESHOLD && nextWs.items.length <= WS_MERGE_THRESHOLD) {
         pageBodies.push({
           title: `Worksheets ${wi + 1}-${wi + 2}`,
