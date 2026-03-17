@@ -80,7 +80,7 @@ export const PACK_STYLES = `
   .pdf-page {
     position: relative;
     width: 8.5in;
-    min-height: 11in;
+    height: 11in;
     background: var(--bg);
     page-break-after: always;
     display: flex;
