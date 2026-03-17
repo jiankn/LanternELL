@@ -27,6 +27,16 @@ const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
+// 这 6 个 pack 是 free sample（对应 free-samples 页面），用 sample 模式渲染
+const FREE_SAMPLE_PACKS = new Set([
+  'classroom-objects_vocabulary_pack_k-2_en-es',
+  'basic-greetings_sentence_frames_k-2_en-es',
+  'classroom-areas_classroom_labels_k-2_en-es',
+  'colors_vocabulary_pack_k-2_en-es',
+  'science-vocabulary_vocabulary_pack_3-5_en-es',
+  'welcome-letter_parent_communication_k-2_en-es',
+]);
+
 function parseArgs() {
   const args = process.argv.slice(2);
   const opts = { force: false, pack: null };
@@ -135,6 +145,8 @@ function injectImages(content) {
 
 async function renderOne(packFileName, browser) {
   const packFile = path.join(PACKS_DIR, packFileName + '.json');
+  const isSample = FREE_SAMPLE_PACKS.has(packFileName);
+  const mode = isSample ? 'sample' : 'final';
   const outputPath = path.join(OUT_DIR, packFileName + '.pdf');
   const htmlPath = path.join(OUT_DIR, packFileName + '.html');
 
@@ -145,7 +157,7 @@ async function renderOne(packFileName, browser) {
   const res = await fetch(DEV_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ packContent: enriched, mode: 'sample' }),
+    body: JSON.stringify({ packContent: enriched, mode }),
     signal: AbortSignal.timeout(30000),
   });
 
@@ -177,7 +189,7 @@ async function renderOne(packFileName, browser) {
   }
 
   const sizeMB = (fs.statSync(outputPath).size / 1024 / 1024).toFixed(2);
-  return { injected, sizeMB };
+  return { injected, sizeMB, mode };
 }
 
 async function main() {
@@ -226,9 +238,10 @@ async function main() {
     const packName = toRender[i];
     process.stdout.write(`  [${i + 1}/${toRender.length}] ${packName} ... `);
     try {
-      const { injected, sizeMB } = await renderOne(packName, browser);
+      const { injected, sizeMB, mode } = await renderOne(packName, browser);
       results.success++;
-      console.log(`✅ (${sizeMB}MB, ${injected} 张图)`);
+      const tag = mode === 'sample' ? '📎sample' : '📄final';
+      console.log(`✅ ${tag} (${sizeMB}MB, ${injected} 张图)`);
     } catch (err) {
       results.failed++;
       console.log(`❌ ${err.message}`);
