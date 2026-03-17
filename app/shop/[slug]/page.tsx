@@ -9,7 +9,6 @@ import {
   BookOpen,
   Globe,
   Heart,
-  Star,
   Download,
   CheckCircle,
   FileText,
@@ -148,11 +147,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       url: `${BASE_URL}/shop/${slug}`,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
     },
   }
 
@@ -328,7 +322,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   </div>
                   <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-text-primary">AI generated + human reviewed</span>
+                    <span className="text-sm text-text-primary">Professionally crafted bilingual content</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-primary" />
@@ -336,14 +330,17 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   </div>
                 </div>
 
-                <div className="border-t border-text-primary/10 pt-6 mt-6">
-                  <div className="flex items-center justify-center gap-1 mb-1">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
-                    ))}
+                {product.resources?.length > 0 && (
+                  <div className="border-t border-text-primary/10 pt-6 mt-6">
+                    <Link
+                      href={`/api/download/sample/${product.resources[0].id}`}
+                      className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl border-2 border-primary/20 text-primary hover:bg-primary/5 transition-colors text-sm font-medium"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download free sample
+                    </Link>
                   </div>
-                  <p className="text-center text-sm text-text-muted">Trusted by 10,000+ teachers</p>
-                </div>
+                )}
               </div>
             </div>
           </div>
