@@ -439,6 +439,8 @@ export const PACK_STYLES = `
     padding: 4px 12px;
     border-radius: 100px;
     margin-top: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
   }
   .ws-name-box {
     font-size: 14px;
