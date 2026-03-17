@@ -36,6 +36,11 @@ function makeSlug(topic, ageBand) {
     return topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '') + '-' + ageBand.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 }
 
+// 清理文件名：移除所有非法字符（/ \ : * ? " < > | 等），空格转连字符
+function safeFilename(str) {
+    return str.toLowerCase().replace(/[/\\:*?"<>|]+/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
+
 function extractImages(packData) {
     const images = [];
     const ageBand = packData.age_band || 'K-2';
@@ -49,7 +54,7 @@ function extractImages(packData) {
             if (item.image_prompt) {
                 idx++;
                 images.push({
-                    id: `${slug}/vocab_${String(idx).padStart(2, '0')}_${item.en.toLowerCase().replace(/\s+/g, '-')}`,
+                    id: `${slug}/vocab_${String(idx).padStart(2, '0')}_${safeFilename(item.en)}`,
                     pack_id: packData.pack_id,
                     pack_topic: packData.topic,
                     age_band: ageBand,
@@ -58,7 +63,7 @@ function extractImages(packData) {
                     l2: item.l2,
                     original_prompt: item.image_prompt,
                     full_prompt: `${item.image_prompt}, ${stylePrompt}`,
-                    output_filename: `vocab_${String(idx).padStart(2, '0')}_${item.en.toLowerCase().replace(/\s+/g, '-')}.png`,
+                    output_filename: `vocab_${String(idx).padStart(2, '0')}_${safeFilename(item.en)}.png`,
                     output_dir: `data/images/${slug}/`,
                 });
             }
@@ -77,7 +82,7 @@ function extractImages(packData) {
                     if (item.image_prompt) {
                         idx++;
                         images.push({
-                            id: `${slug}/ws${wi + 1}_${String(idx).padStart(2, '0')}_${(item.content || item.id).toLowerCase().replace(/\s+/g, '-')}`,
+                            id: `${slug}/ws${wi + 1}_${String(idx).padStart(2, '0')}_${safeFilename(item.content || item.id)}`,
                             pack_id: packData.pack_id,
                             pack_topic: packData.topic,
                             age_band: ageBand,
@@ -85,7 +90,7 @@ function extractImages(packData) {
                             en: item.content || '',
                             original_prompt: item.image_prompt,
                             full_prompt: `${item.image_prompt}, ${wsStyle}`,
-                            output_filename: `ws${wi + 1}_${String(idx).padStart(2, '0')}_${(item.content || item.id).toLowerCase().replace(/\s+/g, '-')}.png`,
+                            output_filename: `ws${wi + 1}_${String(idx).padStart(2, '0')}_${safeFilename(item.content || item.id)}.png`,
                             output_dir: `data/images/${slug}/`,
                         });
                     }

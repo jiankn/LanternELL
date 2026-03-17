@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-03-17T08:46:40.983Z",
+    "generated_at": "2026-03-17T14:38:39.794Z",
     "total_images": 757,
     "total_packs": 45,
     "raw_total": 791,
@@ -4987,7 +4987,7 @@
       "output_dir": "data/images/geography-maps-3-5/"
     },
     {
-      "id": "geography-maps-3-5/vocab_14_legend-/-key",
+      "id": "geography-maps-3-5/vocab_14_legend-key",
       "pack_id": "geo-maps-3-5-en-es-pk-001",
       "pack_topic": "Geography & Maps",
       "age_band": "3-5",
@@ -4996,7 +4996,7 @@
       "l2": "Leyenda / Clave",
       "original_prompt": "A small box on a map showing symbols and their meanings (e.g., tree for forest, airplane for airport).",
       "full_prompt": "A small box on a map showing symbols and their meanings (e.g., tree for forest, airplane for airport)., modern flat vector illustration, friendly subtle expression, thick clean outlines, vibrant saturated colors, geometric clean shapes, educational material style, white clean background, no text, no words, no letters, professional children's educational flashcard illustration, consistent art style",
-      "output_filename": "vocab_14_legend-/-key.png",
+      "output_filename": "vocab_14_legend-key.png",
       "output_dir": "data/images/geography-maps-3-5/"
     },
     {
