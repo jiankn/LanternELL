@@ -80,18 +80,18 @@ export const PACK_STYLES = `
   .pdf-page {
     position: relative;
     width: 8.5in;
-    height: 11in;
+    min-height: 11in;
     background: var(--bg);
     page-break-after: always;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
   .pdf-page:last-child { border-bottom: none; }
 
   /* Brand bar at top */
   .brand-bar {
     height: 6px;
+    flex-shrink: 0;
     background: linear-gradient(90deg, var(--primary) 0%, var(--secondary, var(--primary)) 50%, var(--accent, var(--primary)) 100%);
   }
 
@@ -106,6 +106,7 @@ export const PACK_STYLES = `
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
   }
   .page-header .brand-name {
     font-weight: 800;
@@ -119,6 +120,8 @@ export const PACK_STYLES = `
     padding: 0.2in 0.5in 0.15in;
     position: relative;
     z-index: 1;
+    max-height: 9.85in;
+    overflow: hidden;
   }
 
   .page-footer {
@@ -129,6 +132,7 @@ export const PACK_STYLES = `
     font-size: 10px;
     color: var(--text-secondary);
     border-top: 1px solid var(--border);
+    flex-shrink: 0;
   }
   .page-footer .site-url {
     font-weight: 600;
