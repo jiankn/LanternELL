@@ -16,7 +16,9 @@
       "content_en": "Dear Families,\n\nWelcome to a new school year! I am so excited to be your child's teacher this year. We are going to have a wonderful time learning and growing together in [Grade Level]! My goal is to create a positive and engaging learning environment where every child feels safe, valued, and excited to come to school. I look forward to partnering with you to make this a successful year for your child.\n\nSincerely,\n[Teacher's Name]\n[Grade Level] Teacher",
       "content_l2": "Estimadas familias,\n\n¡Bienvenidos a un nuevo año escolar! Estoy muy emocionada/o de ser la maestra/o de su hijo/a este año. ¡Vamos a pasar un tiempo maravilloso aprendiendo y creciendo juntos en [Nivel de Grado]! Mi objetivo es crear un ambiente de aprendizaje positivo y atractivo donde cada niño/a se sienta seguro/a, valorado/a y emocionado/a de venir a la escuela. Espero asociarme con ustedes para que este sea un año exitoso para su hijo/a.\n\nAtentamente,\n[Nombre del Maestro/a]\nMaestro/a de [Nivel de Grado]",
       "signature_required": true,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "homework",
@@ -25,7 +27,9 @@
       "content_en": "Dear Families,\n\nHomework in our classroom will be designed to reinforce learning and encourage a love for reading. It will be light and manageable, often involving reading together for a short period each night. Please encourage your child to read, or read to them, every day. More details about specific homework routines will be shared soon.\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nLa tarea en nuestra clase estará diseñada para reforzar el aprendizaje y fomentar el amor por la lectura. Será ligera y manejable, a menudo implicando leer juntos por un corto período cada noche. Por favor, anime a su hijo/a a leer, o léale a él/ella, todos los días. Próximamente se compartirán más detalles sobre las rutinas de tarea específicas.\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": true,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "behavior",
@@ -34,7 +38,9 @@
       "content_en": "Dear Families,\n\nWe will focus on building a positive classroom community where respect, kindness, and responsibility are key. Our classroom rules will be simple and clear, emphasizing safety and learning. I will communicate regularly about your child's behavior and celebrate their successes. If any concerns arise, I will contact you promptly.\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nNos centraremos en construir una comunidad de aula positiva donde el respeto, la amabilidad y la responsabilidad sean clave. Nuestras reglas de la clase serán simples y claras, enfatizando la seguridad y el aprendizaje. Me comunicaré regularmente sobre el comportamiento de su hijo/a y celebraremos sus éxitos. Si surge alguna preocupación, me pondré en contacto con usted de inmediato.\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": true,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "progress",
@@ -61,7 +67,9 @@
       "content_en": "Dear Families,\n\nRegular attendance is crucial for your child's success in school. Please ensure your child comes to school on time every day, ready to learn. If your child must be absent, please notify the school office as soon as possible. We want every child to be present and engaged in their learning!\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nLa asistencia regular es crucial para el éxito de su hijo/a en la escuela. Por favor, asegúrese de que su hijo/a llegue a la escuela a tiempo todos los días, listo/a para aprender. Si su hijo/a debe ausentarse, por favor notifique a la oficina de la escuela tan pronto como sea posible. ¡Queremos que cada niño/a esté presente y comprometido/a con su aprendizaje!\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": true,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "general",

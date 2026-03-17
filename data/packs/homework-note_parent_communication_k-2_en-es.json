@@ -16,7 +16,9 @@
       "content_en": "Dear Families,\n\nWelcome to our wonderful classroom! I am so excited to have your child in my class this year. We are going to learn so much and have a lot of fun together. I look forward to partnering with you to make this a successful year for your child. Please feel free to reach out with any questions or concerns you may have.\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\n¡Bienvenidos a nuestra maravillosa aula! Estoy muy emocionada de tener a su hijo/a en mi clase este año. Vamos a aprender mucho y a divertirnos juntos. Espero colaborar con usted para que este sea un año exitoso para su hijo/a. No dude en comunicarse si tiene alguna pregunta o inquietud.\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": false,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "homework",
@@ -25,7 +27,9 @@
       "content_en": "Dear Families,\n\nHomework is an important part of reinforcing what we learn in class. For K-2 students, homework will typically be short, engaging activities like reading for 15 minutes, practicing sight words, or simple math exercises. It's a great opportunity for your child to show you what they're learning!\n\nPlease help create a quiet space and time for homework, and encourage your child. Remember, the goal is to build good habits and reinforce skills, not to cause stress. If homework becomes a struggle, please let me know so we can work together to find a solution.\n\nThank you for your partnership in your child's education!\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nLa tarea es una parte importante para reforzar lo que aprendemos en clase. Para los estudiantes de K-2, la tarea será típicamente actividades cortas y atractivas como leer durante 15 minutos, practicar palabras de uso frecuente o ejercicios de matemáticas sencillos. ¡Es una gran oportunidad para que su hijo/a le muestre lo que está aprendiendo!\n\nPor favor, ayude a crear un espacio y un tiempo tranquilos para la tarea, y anime a su hijo/a. Recuerde, el objetivo es construir buenos hábitos y reforzar habilidades, no causar estrés. Si la tarea se convierte en una dificultad, por favor hágamelo saber para que podamos trabajar juntos en encontrar una solución.\n\n¡Gracias por su colaboración en la educación de su hijo/a!\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": false,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "behavior",

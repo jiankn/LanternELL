@@ -16,7 +16,9 @@
       "content_en": "Dear Families,\n\nWe are excited to share your child's progress report for this marking period. This report is a snapshot of their growth, achievements, and areas where we can continue to support them together. We celebrate their hard work and dedication!\n\nPlease take some time to review the report. We value our partnership with you in your child's educational journey.\n\nSincerely,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nNos complace compartir el informe de progreso de su hijo/a para este período. Este informe es una instantánea de su crecimiento, logros y áreas donde podemos seguir apoyándolos juntos. ¡Celebramos su arduo trabajo y dedicación!\n\nPor favor, tómense un tiempo para revisar el informe. Valoramos nuestra colaboración con ustedes en el camino educativo de su hijo/a.\n\nAtentamente,\n[Nombre del Maestro/a]",
       "signature_required": false,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "homework",
@@ -25,7 +27,9 @@
       "content_en": "Dear Families,\n\nHomework plays an important role in reinforcing what your child learns in class. We encourage you to create a quiet space and a consistent routine for homework time. If you have any questions or if your child is consistently struggling with assignments, please let us know. We are here to help!\n\nThank you for your support,\n[Teacher's Name]",
       "content_l2": "Estimadas familias,\n\nLa tarea juega un papel importante en el refuerzo de lo que su hijo/a aprende en clase. Les animamos a crear un espacio tranquilo y una rutina constante para la hora de la tarea. Si tienen alguna pregunta o si su hijo/a tiene dificultades constantes con las tareas, por favor háganoslo saber. ¡Estamos aquí para ayudar!\n\nGracias por su apoyo,\n[Nombre del Maestro/a]",
       "signature_required": true,
-      "response_section": false
+      "response_section": true,
+      "response_prompt_en": "I have read and understood this letter. / Parent/Guardian Signature: _______________ Date: ___/___/______",
+      "response_prompt_l2": "He leído y entendido esta carta. / Firma del padre/tutor: _______________ Fecha: ___/___/______"
     },
     {
       "type": "behavior",
