@@ -108,15 +108,22 @@ function SpeakingPrompts({ items, cardColors, cardBorders }: {
         <div>
             <h2 className="section-title">Speaking Prompt Cards</h2>
             <div className="prompt-grid">
-                {items.map((item, i) => (
-                    <article key={i} className="prompt-card"
-                        style={{ '--card-bg': cardColors[i % cardColors.length], '--card-border': cardBorders[i % cardBorders.length] } as any}>
-                        <div className="card-num">Prompt {i + 1}</div>
-                        <h3>{item.prompt_en}</h3>
-                        {item.prompt_l2 && <p>{item.prompt_l2}</p>}
-                        {item.visual_cue && <div className="visual-cue">{item.visual_cue}</div>}
-                    </article>
-                ))}
+                {items.map((item, i) => {
+                    const imgData = (item as any).image_data;
+                    return (
+                        <article key={i} className="prompt-card"
+                            style={{ '--card-bg': cardColors[i % cardColors.length], '--card-border': cardBorders[i % cardBorders.length] } as any}>
+                            <div className="card-num">Prompt {i + 1}</div>
+                            {imgData ? (
+                                <img className="vocab-img" src={imgData} alt={item.prompt_en} />
+                            ) : item.visual_cue ? (
+                                <div className="illust-area">{item.visual_cue}</div>
+                            ) : null}
+                            <h3>{item.prompt_en}</h3>
+                            {item.prompt_l2 && <p>{item.prompt_l2}</p>}
+                        </article>
+                    );
+                })}
             </div>
         </div>
     );
@@ -152,7 +159,13 @@ function VisualRoutineCards({ items }: { items: VisualRoutineCard[] }) {
                 {items.map((item, i) => (
                     <article key={i} className="routine-card-new">
                         {item.time_of_day && <div className="time-badge">{item.time_of_day}</div>}
-                        <div className="icon-area">{item.icon_prompt || '🕐'}</div>
+                        <div className="icon-area">
+                            {(item as any).image_data ? (
+                                <img className="vocab-img" src={(item as any).image_data} alt={item.routine_en} />
+                            ) : (
+                                item.icon_prompt || '🕐'
+                            )}
+                        </div>
                         <h3>{item.routine_en}</h3>
                         <p>{item.routine_l2}</p>
                     </article>
@@ -170,6 +183,9 @@ function ClassroomRules({ items }: { items: ClassroomRule[] }) {
                 {items.map((item, i) => (
                     <article key={i} className="rule-card">
                         <div className="rule-num">{i + 1}</div>
+                        {(item as any).image_data ? (
+                            <img className="vocab-img" src={(item as any).image_data} alt={item.rule_en} style={{ width: 48, height: 48 }} />
+                        ) : null}
                         <div>
                             <h3>{item.rule_en}</h3>
                             <p>{item.rule_l2}</p>
@@ -226,7 +242,13 @@ function MiniBookPage({ miniBook }: { miniBook: MiniBook }) {
                             <div className="text-en">{page.text_en}</div>
                             {page.text_l2 && <div className="text-l2">{page.text_l2}</div>}
                         </div>
-                        <div className="minibook-illust">{page.image_prompt || '🖼️ Illustration'}</div>
+                        <div className="minibook-illust">
+                            {(page as any).image_data ? (
+                                <img className="vocab-img" src={(page as any).image_data} alt={page.text_en} />
+                            ) : (
+                                page.image_prompt || '🖼️ Illustration'
+                            )}
+                        </div>
                     </article>
                 ))}
             </div>
