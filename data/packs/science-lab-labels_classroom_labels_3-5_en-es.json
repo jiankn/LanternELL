@@ -31,42 +31,42 @@
       "en": "Safety Goggles",
       "l2": "Gafas de Seguridad",
       "category": "Supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Goggle/Gafa"
     },
     {
       "en": "Lab Coats",
       "l2": "Batas de Laboratorio",
       "category": "Supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Lab Coat/Bata de Laboratorio"
     },
     {
       "en": "Microscopes",
       "l2": "Microscopios",
       "category": "Supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Microscope/Microscopio"
     },
     {
       "en": "Test Tubes",
       "l2": "Tubos de Ensayo",
       "category": "Supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Test Tube/Tubo de Ensayo"
     },
     {
       "en": "Beakers",
       "l2": "Vasos de Precipitados",
       "category": "Supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Beaker/Vaso de Precipitados"
     },
     {
       "en": "Sink",
       "l2": "Fregadero",
       "category": "Furniture",
-      "size": "full"
+      "size": "small"
     },
     {
       "en": "Exit",

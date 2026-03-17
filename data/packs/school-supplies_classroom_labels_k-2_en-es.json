@@ -13,70 +13,70 @@
       "en": "Pencil",
       "l2": "Lápiz",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Lápices"
     },
     {
       "en": "Crayon",
       "l2": "Crayola",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Crayolas"
     },
     {
       "en": "Marker",
       "l2": "Marcador",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Marcadores"
     },
     {
       "en": "Scissor",
       "l2": "Tijeras",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Tijeras"
     },
     {
       "en": "Glue Stick",
       "l2": "Pegamento en barra",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Pegamentos en barra"
     },
     {
       "en": "Paper",
       "l2": "Papel",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Papeles"
     },
     {
       "en": "Book",
       "l2": "Libro",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Libros"
     },
     {
       "en": "Backpack",
       "l2": "Mochila",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Mochilas"
     },
     {
       "en": "Notebook",
       "l2": "Cuaderno",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Cuadernos"
     },
     {
       "en": "Eraser",
       "l2": "Borrador",
       "category": "supplies",
-      "size": "full",
+      "size": "small",
       "plural_form": "Borradores"
     },
     {

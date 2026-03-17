@@ -13,70 +13,70 @@
       "en": "Table",
       "l2": "Mesa",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Tables / Mesas"
     },
     {
       "en": "Chair",
       "l2": "Silla",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Chairs / Sillas"
     },
     {
       "en": "Desk",
       "l2": "Escritorio",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Desks / Escritorios"
     },
     {
       "en": "Bookshelf",
       "l2": "Estante de libros",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Bookshelves / Estantes de libros"
     },
     {
       "en": "Carpet",
       "l2": "Alfombra",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Carpets / Alfombras"
     },
     {
       "en": "Whiteboard",
       "l2": "Pizarra",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Whiteboards / Pizarras"
     },
     {
       "en": "Door",
       "l2": "Puerta",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Doors / Puertas"
     },
     {
       "en": "Window",
       "l2": "Ventana",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Windows / Ventanas"
     },
     {
       "en": "Cubby",
       "l2": "Casillero",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Cubbies / Casilleros"
     },
     {
       "en": "Teacher's Desk",
       "l2": "Escritorio del maestro",
       "category": "furniture",
-      "size": "full",
+      "size": "small",
       "plural_form": "Teacher's Desks / Escritorios de los maestros"
     },
     {
