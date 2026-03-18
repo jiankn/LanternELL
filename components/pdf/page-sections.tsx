@@ -260,10 +260,114 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
     );
 }
 
+/**
+ * Extract word bank from instructions text.
+ * Patterns: "Word Bank: x, y, z", "from the box: (x, y, z)", "Words: x, y, z", "(Options: x, y, z)"
+ * Returns { cleanInstructions, wordBank: string[] | null }
+ */
+function extractWordBank(instructions: string): { clean: string; words: string[] | null } {
+    // Pattern 1: "Word Bank: word1, word2, ..." (may span to end)
+    const wbMatch = instructions.match(/\bWord [Bb]ank:\s*(.+)$/i);
+    if (wbMatch) {
+        const clean = instructions.slice(0, wbMatch.index).replace(/\s+$/, '');
+        const words = wbMatch[1].split(',').map(w => w.trim()).filter(Boolean);
+        return { clean, words };
+    }
+    // Pattern 2: "(Words: x, y, z)" or "(Options: x, y, z)" or "from the box: (x, y, z)"
+    const parenMatch = instructions.match(/\((?:Words|Options|Word Bank)?:?\s*([^)]+)\)\s*$/i);
+    if (parenMatch) {
+        const clean = instructions.slice(0, parenMatch.index).replace(/\s+$/, '');
+        const words = parenMatch[1].split(',').map(w => w.trim()).filter(Boolean);
+        return { clean, words };
+    }
+    // Pattern 3: "from the box. (x, y, z)" — words after last colon in parens
+    const boxMatch = instructions.match(/[:：]\s*\(([^)]+)\)\s*$/);
+    if (boxMatch) {
+        const clean = instructions.slice(0, boxMatch.index).replace(/\s+$/, '') + '.';
+        const words = boxMatch[1].split(',').map(w => w.trim()).filter(Boolean);
+        return { clean, words };
+    }
+    return { clean: instructions, words: null };
+}
+
+/**
+ * Shuffle array with a simple deterministic seed (based on first item content)
+ */
+function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
+    const result = [...arr];
+    let s = seed;
+    for (let i = result.length - 1; i > 0; i--) {
+        s = (s * 1103515245 + 12345) & 0x7fffffff;
+        const j = s % (i + 1);
+        [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+}
+
 function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: { worksheet: WorksheetItem; index: number; showHeader?: boolean; itemStartIndex?: number }) {
     const isMatching = worksheet.type === 'matching';
     const isColoring = worksheet.type === 'coloring';
     const isTracing = worksheet.type === 'tracing';
+    const isFillBlank = worksheet.type === 'fill-blank';
+    const isCategorizing = worksheet.type === 'categorizing';
+
+    // For fill-blank: extract word bank from instructions
+    const fillBlankData = isFillBlank ? extractWordBank(worksheet.instructions_en) : null;
+
+    // For matching: determine variant and build shuffled right column
+    let matchLeftItems: any[] = [];
+    let matchRightLabels: string[] = [];
+    let matchVariant: 'image' | 'translation' | 'definition' = 'translation';
+    if (isMatching) {
+        const items = worksheet.items;
+        const hasImages = items.some((it: any) => it.image_data || it.image_prompt);
+        const hasOptions = items.some((it: any) => it.options || it.options_en);
+        const hasMatchTarget = items.some((it: any) => it.match_target);
+
+        if (hasOptions) {
+            // Variant 3: word → definition (6-8 academic)
+            matchVariant = 'definition';
+            matchLeftItems = items;
+            // Collect all correct_answers as right column, shuffled
+            const answers = items.map((it: any) => it.correct_answer || '');
+            const seed = items.length * 7 + (items[0]?.content?.charCodeAt(0) || 0);
+            matchRightLabels = shuffleWithSeed(answers, seed);
+        } else if (hasMatchTarget && !hasImages) {
+            // Variant 2: English → Spanish translation
+            matchVariant = 'translation';
+            matchLeftItems = items;
+            const targets = items.map((it: any) => it.match_target || it.content_l2 || '');
+            const seed = items.length * 13 + (items[0]?.content?.charCodeAt(0) || 0);
+            matchRightLabels = shuffleWithSeed(targets, seed);
+        } else {
+            // Variant 1: word → image (K-2), or fallback
+            matchVariant = 'image';
+            matchLeftItems = items;
+        }
+    }
+
+    // For categorizing: parse structure
+    let catCategories: string[] = [];
+    let catWords: string[] = [];
+    let catSlots: { name: string }[] = [];
+    if (isCategorizing && worksheet.items.length >= 3) {
+        // item[0].content = 'Categories: "X" | "Y" | "Z"'
+        const catLine = worksheet.items[0].content;
+        const catMatch = catLine.match(/Categories:\s*(.+)/i);
+        if (catMatch) {
+            catCategories = catMatch[1].split('|').map(c => c.replace(/"/g, '').trim());
+        }
+        // item[1].content = 'Words to sort: word1, word2, ...'
+        const wordsLine = worksheet.items[1].content;
+        const wordsMatch = wordsLine.match(/Words to sort:\s*(.+)/i);
+        if (wordsMatch) {
+            catWords = wordsMatch[1].split(',').map(w => w.trim());
+        }
+        // item[2+] = category slots
+        catSlots = worksheet.items.slice(2).map(it => ({
+            name: it.content.replace(/:\s*___.*$/, '').trim(),
+        }));
+    }
 
     return (
         <div>
@@ -276,7 +380,23 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                         </div>
                         <div className="ws-name-box">Name: ____________________</div>
                     </div>
-                    <p className="ws-instructions">{worksheet.instructions_en}</p>
+                    {isFillBlank && fillBlankData ? (
+                        <>
+                            <p className="ws-instructions">{fillBlankData.clean}</p>
+                            {fillBlankData.words && (
+                                <div className="ws-word-bank">
+                                    <span className="ws-word-bank-label">Word Bank</span>
+                                    <div className="ws-word-bank-words">
+                                        {fillBlankData.words.map((w, i) => (
+                                            <span key={i} className="ws-word-bank-chip">{w}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </>
+                    ) : (
+                        <p className="ws-instructions">{worksheet.instructions_en}</p>
+                    )}
                     {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{worksheet.instructions_l2}</p> : null}
                 </>
             )}
@@ -284,22 +404,117 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                 <p className="ws-instructions" style={{ marginBottom: 12 }}>Worksheet {index} (continued)</p>
             )}
 
-            {isMatching ? (
-                <div className="ws-matching-grid">
-                    {worksheet.items.map((item, i) => {
-                        const imgData = (item as any).image_data;
-                        return (
-                            <article key={`${item.id}-${i}`} className="ws-matching-item">
-                                <div className="ws-item-num">{itemStartIndex + i + 1}</div>
-                                {imgData ? (
-                                    <img className="ws-matching-img" src={imgData} alt={item.content} />
-                                ) : null}
-                                <strong>{item.content}</strong>
-                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
-                                <div className="ws-write-line" />
-                            </article>
-                        );
-                    })}
+            {isMatching && matchVariant === 'image' ? (
+                /* Matching Variant 1: word + image (K-2) — two-column grid, left=word, right=shuffled images */
+                (() => {
+                    const items = matchLeftItems;
+                    const seed = items.length * 17 + (items[0]?.content?.charCodeAt(0) || 0);
+                    const shuffledItems = shuffleWithSeed([...items], seed);
+                    return (
+                        <div className="ws-match-columns">
+                            <div className="ws-match-col">
+                                <div className="ws-match-col-header">Words</div>
+                                {items.map((item: any, i: number) => (
+                                    <div key={`l-${i}`} className="ws-match-left-item">
+                                        <span className="ws-match-num">{itemStartIndex + i + 1}</span>
+                                        <span className="ws-match-word">{item.content}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="ws-match-line-area" />
+                            <div className="ws-match-col">
+                                <div className="ws-match-col-header">Pictures</div>
+                                {shuffledItems.map((item: any, i: number) => {
+                                    const imgData = item.image_data;
+                                    const letter = String.fromCharCode(65 + i);
+                                    return (
+                                        <div key={`r-${i}`} className="ws-match-right-item">
+                                            <span className="ws-match-letter">{letter}</span>
+                                            {imgData ? (
+                                                <img className="ws-match-img" src={imgData} alt="" />
+                                            ) : (
+                                                <div className="ws-match-img-placeholder">?</div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    );
+                })()
+            ) : isMatching && matchVariant === 'translation' ? (
+                /* Matching Variant 2: English → Spanish (3-5) — two columns with draw-line */
+                <div className="ws-match-columns">
+                    <div className="ws-match-col">
+                        <div className="ws-match-col-header">English</div>
+                        {matchLeftItems.map((item: any, i: number) => (
+                            <div key={`l-${i}`} className="ws-match-left-item">
+                                <span className="ws-match-num">{itemStartIndex + i + 1}</span>
+                                <span className="ws-match-word">{item.content}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="ws-match-line-area" />
+                    <div className="ws-match-col">
+                        <div className="ws-match-col-header">Español</div>
+                        {matchRightLabels.map((label, i) => {
+                            const letter = String.fromCharCode(65 + i);
+                            return (
+                                <div key={`r-${i}`} className="ws-match-right-item">
+                                    <span className="ws-match-letter">{letter}</span>
+                                    <span className="ws-match-word">{label}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            ) : isMatching && matchVariant === 'definition' ? (
+                /* Matching Variant 3: word → definition (6-8) — left words, right shuffled definitions */
+                <div className="ws-match-columns ws-match-def">
+                    <div className="ws-match-col">
+                        <div className="ws-match-col-header">Word</div>
+                        {matchLeftItems.map((item: any, i: number) => (
+                            <div key={`l-${i}`} className="ws-match-left-item">
+                                <span className="ws-match-num">{itemStartIndex + i + 1}</span>
+                                <span className="ws-match-word">{item.content}</span>
+                                <span className="ws-match-answer-blank">→ ___</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="ws-match-col">
+                        <div className="ws-match-col-header">Definition</div>
+                        {matchRightLabels.map((label, i) => {
+                            const letter = String.fromCharCode(65 + i);
+                            return (
+                                <div key={`r-${i}`} className="ws-match-def-item">
+                                    <span className="ws-match-letter">{letter}</span>
+                                    <span className="ws-match-def-text">{label}</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            ) : isCategorizing ? (
+                /* Categorizing: word pool on top, category boxes below */
+                <div className="ws-categorize">
+                    <div className="ws-cat-word-pool">
+                        <div className="ws-cat-pool-label">Words to Sort</div>
+                        <div className="ws-cat-pool-words">
+                            {catWords.map((w, i) => (
+                                <span key={i} className="ws-cat-chip">{w}</span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="ws-cat-boxes" style={{ gridTemplateColumns: `repeat(${Math.min(catSlots.length, 3)}, 1fr)` }}>
+                        {catSlots.map((slot, i) => (
+                            <div key={i} className="ws-cat-box">
+                                <div className="ws-cat-box-header">{slot.name}</div>
+                                <div className="ws-cat-box-lines">
+                                    {[0,1,2,3,4].map(j => <div key={j} className="ws-write-line" />)}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             ) : isColoring ? (
                 <div className="ws-coloring-grid">
