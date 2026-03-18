@@ -115,10 +115,10 @@ function LoginPageInner() {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h1 className="font-heading text-2xl font-bold text-text-primary mb-2">
-                    Sign In
+                    Get Started
                   </h1>
                   <p className="text-text-primary/70">
-                    Sign in with your Google account or email magic link.
+                    Access your teaching resources instantly — no password needed.
                   </p>
                 </div>
 
@@ -135,7 +135,7 @@ function LoginPageInner() {
                   className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-white border-2 border-gray-200 rounded-xl font-medium text-text-primary hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
                 >
                   <GoogleIcon className="w-5 h-5" />
-                  Sign in with Google
+                  Continue with Google
                 </button>
 
                 {/* Divider */}
@@ -180,10 +180,11 @@ function LoginPageInner() {
                 </form>
 
                 <p className="mt-6 text-center text-sm text-text-muted">
-                  Don't have an account?{' '}
+                  New here?{' '}
                   <Link href="/shop" className="text-primary hover:underline font-medium">
                     Browse our resources
-                  </Link>
+                  </Link>{' '}
+                  — your account is created automatically.
                 </p>
               </>
             )}

@@ -96,10 +96,10 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                                 <Mail className="w-8 h-8 text-white" />
                             </div>
                             <h1 className="font-heading text-2xl font-bold text-text-primary mb-4">
-                                Sign In to Your Account
+                                Access Your Resources
                             </h1>
                             <p className="text-text-primary/70 mb-6">
-                                Enter your email to receive a magic link for instant access.
+                                Continue with Google or enter your email for instant access.
                             </p>
                             <LoginForm />
                         </div>
