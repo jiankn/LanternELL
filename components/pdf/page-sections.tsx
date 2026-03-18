@@ -5,6 +5,13 @@ import type {
 } from '@/lib/content-schema';
 import { fmt } from './pack-document';
 
+/** Parse **bold** markdown into React nodes with <strong> tags */
+function renderBold(text: string): React.ReactNode {
+    if (!text.includes('**')) return text;
+    const parts = text.split(/\*\*(.+?)\*\*/g);
+    return parts.map((part, i) => i % 2 === 1 ? <strong key={i}>{part}</strong> : part);
+}
+
 function VocabularyCards({ items, cardColors, cardBorders, pageIndex }: {
     items: VocabularyItem[]; cardColors: string[]; cardBorders: string[]; pageIndex: number;
 }) {
@@ -250,8 +257,8 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
                             )}
                         </div>
                         <div className="minibook-text">
-                            <div className="text-en">{page.text_en}</div>
-                            {page.text_l2 && <div className="text-l2">{page.text_l2}</div>}
+                            <div className="text-en">{renderBold(page.text_en)}</div>
+                            {page.text_l2 && <div className="text-l2">{renderBold(page.text_l2)}</div>}
                         </div>
                     </article>
                 ))}
