@@ -166,11 +166,11 @@ function VisualRoutineCards({ items }: { items: VisualRoutineCard[] }) {
                 {items.map((item, i) => (
                     <article key={i} className="routine-card-new">
                         {item.time_of_day && <div className="time-badge">{item.time_of_day}</div>}
-                        <div className="icon-area">
+                        <div className="routine-img-area">
                             {(item as any).image_data ? (
-                                <img className="vocab-img" src={(item as any).image_data} alt={item.routine_en} />
+                                <img className="routine-img" src={(item as any).image_data} alt={item.routine_en} />
                             ) : (
-                                item.icon_prompt || '🕐'
+                                <div className="icon-area">{item.icon_prompt || '🕐'}</div>
                             )}
                         </div>
                         <h3>{item.routine_en}</h3>
@@ -191,9 +191,11 @@ function ClassroomRules({ items, startIndex = 0 }: { items: ClassroomRule[]; sta
                     <article key={i} className="rule-card">
                         <div className="rule-num">{startIndex + i + 1}</div>
                         {(item as any).image_data ? (
-                            <img className="vocab-img" src={(item as any).image_data} alt={item.rule_en} style={{ width: 48, height: 48 }} />
+                            <div className="rule-img-area">
+                                <img className="rule-img" src={(item as any).image_data} alt={item.rule_en} />
+                            </div>
                         ) : null}
-                        <div>
+                        <div className="rule-text">
                             <h3>{item.rule_en}</h3>
                             <p>{item.rule_l2}</p>
                         </div>

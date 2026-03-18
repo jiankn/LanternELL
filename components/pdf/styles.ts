@@ -830,19 +830,34 @@ export const PACK_STYLES = `
     display: flex; align-items: center; justify-content: center;
     font-size: 11px; color: var(--text-secondary);
   }
+  .routine-img-area {
+    width: 100%; display: flex; justify-content: center; margin-bottom: 10px;
+  }
+  .routine-img {
+    width: 90px; height: 90px; object-fit: contain; border-radius: 12px;
+  }
   .routine-card-new h3 { font-size: 17px; margin-bottom: 2px; }
   .routine-card-new p { font-size: 15px; color: var(--primary); }
 
-  .rules-list { display: grid; gap: 14px; }
+  .rules-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .rule-card {
-    display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: center;
-    border: 2px solid var(--border); border-radius: 20px; background: var(--bg); padding: 20px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg); padding: 18px;
+    min-height: 120px;
   }
   .rule-num {
-    width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
     border-radius: 50%; background: var(--primary); color: white;
-    font-weight: 900; font-size: 22px; font-family: 'Nunito', system-ui, sans-serif;
+    font-weight: 900; font-size: 18px; font-family: 'Nunito', system-ui, sans-serif;
+    margin-bottom: 8px;
   }
+  .rule-img-area {
+    width: 100%; display: flex; justify-content: center; margin-bottom: 10px;
+  }
+  .rule-img {
+    width: 80px; height: 80px; object-fit: contain; border-radius: 12px;
+  }
+  .rule-text { width: 100%; }
   .rule-card h3 { font-size: 17px; margin-bottom: 2px; }
   .rule-card p { font-size: 15px; color: var(--primary); }
 
