@@ -71,7 +71,7 @@ export const PACK_STYLES = `
 
   body.pack-body {
     margin: 0;
-    background: #F1F5F9;
+    background: var(--bg);
     color: var(--text);
     font-family: 'Inter', system-ui, sans-serif;
   }
@@ -85,6 +85,7 @@ export const PACK_STYLES = `
     page-break-after: always;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
   .pdf-page:last-child { border-bottom: none; }
 
@@ -663,24 +664,10 @@ export const PACK_STYLES = `
     text-align: right;
     margin-bottom: 6px;
   }
-  .minibook-text { flex: 1; }
-  .minibook-text .text-en {
-    font-family: 'Nunito', system-ui, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 6px;
-    line-height: 1.45;
-  }
-  .minibook-text .text-l2 {
-    font-size: 13px;
-    color: var(--primary);
-    line-height: 1.45;
-  }
   .minibook-illust {
-    margin-top: 8px;
-    min-height: 50px;
-    max-height: 140px;
+    flex: 1;
+    min-height: 120px;
+    max-height: 160px;
     border: 2px dashed var(--card-border, #ddd);
     border-radius: 10px;
     background: var(--primary-light);
@@ -691,12 +678,35 @@ export const PACK_STYLES = `
     color: var(--text-secondary);
     font-style: italic;
     overflow: hidden;
+    margin-bottom: 10px;
   }
   .minibook-illust img {
     width: auto;
-    height: 132px;
+    height: 152px;
     object-fit: contain;
     border-radius: 8px;
+  }
+  .minibook-text {
+    flex-shrink: 0;
+  }
+  .minibook-text .text-en {
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.45;
+  }
+  .minibook-text .text-l2 {
+    font-size: 13px;
+    color: var(--primary);
+    line-height: 1.45;
+  }
+  .minibook-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
   }
 
   /* === DIALOGUE STRIPS === */
@@ -1145,4 +1155,22 @@ export const PACK_STYLES = `
   body.age-68 .vocab-card .word-l2 { font-size: 18px; }
   body.age-68 .label-card-new .label-en { font-size: 26px; }
   body.age-68 .label-card-new .label-l2 { font-size: 20px; }
+
+  /* === BREAK-INSIDE AVOID: 防止卡片被截断跨页 === */
+  .vocab-card, .vocab-cell,
+  .frame-card,
+  .dialogue-card,
+  .prompt-card,
+  .label-card-new,
+  .routine-card-new,
+  .rule-card,
+  .pn-card,
+  .minibook-card,
+  .ws-item, .ws-matching-item, .ws-coloring-item, .ws-tracing-item,
+  .note-section,
+  .ak-section,
+  .terms-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 `;

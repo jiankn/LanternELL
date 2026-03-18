@@ -16,8 +16,13 @@ interface PackDocumentProps {
 }
 
 const VOCAB_PER_PAGE = 4;
-const FRAMES_PER_PAGE = 6;
+const FRAMES_PER_PAGE = 5;
 const LABELS_PER_PAGE = 8;
+const DIALOGUE_PER_PAGE = 4;
+const SPEAKING_PER_PAGE = 4;
+const ROUTINE_PER_PAGE = 4;
+const RULES_PER_PAGE = 5;
+const ANSWER_KEY_PER_PAGE = 4;
 
 export function PackDocument({ content, resource, mode, renderedAt, sampleWatermarkText }: PackDocumentProps) {
   const ageBand = content.age_band || resource.age_band || 'K-2';
@@ -51,10 +56,14 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
     });
   }
   if (content.dialogue_strips?.length) {
-    pageBodies.push({ title: 'Dialogue Strips', body: <PageSections.DialogueStrips items={content.dialogue_strips} /> });
+    chunk(content.dialogue_strips, DIALOGUE_PER_PAGE).forEach((items, i) => {
+      pageBodies.push({ title: `Dialogue Strips ${i + 1}`, body: <PageSections.DialogueStrips items={items} /> });
+    });
   }
   if (content.speaking_prompts?.length) {
-    pageBodies.push({ title: 'Speaking Prompts', body: <PageSections.SpeakingPrompts items={content.speaking_prompts} cardColors={theme.cardColors || []} cardBorders={theme.cardBorders || []} /> });
+    chunk(content.speaking_prompts, SPEAKING_PER_PAGE).forEach((items, i) => {
+      pageBodies.push({ title: `Speaking Prompts ${i + 1}`, body: <PageSections.SpeakingPrompts items={items} cardColors={theme.cardColors || []} cardBorders={theme.cardBorders || []} /> });
+    });
   }
   if (content.labels?.length) {
     const full = content.labels.filter(l => l.size === 'full' || !l.size);
@@ -68,10 +77,14 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
     });
   }
   if (content.visual_routine_cards?.length) {
-    pageBodies.push({ title: 'Visual Routine Cards', body: <PageSections.VisualRoutineCards items={content.visual_routine_cards} /> });
+    chunk(content.visual_routine_cards, ROUTINE_PER_PAGE).forEach((items, i) => {
+      pageBodies.push({ title: `Visual Routine Cards ${i + 1}`, body: <PageSections.VisualRoutineCards items={items} /> });
+    });
   }
   if (content.classroom_rules?.length) {
-    pageBodies.push({ title: 'Classroom Rules', body: <PageSections.ClassroomRules items={content.classroom_rules} /> });
+    chunk(content.classroom_rules, RULES_PER_PAGE).forEach((items, i) => {
+      pageBodies.push({ title: `Classroom Rules ${i + 1}`, body: <PageSections.ClassroomRules items={items} startIndex={i * RULES_PER_PAGE} /> });
+    });
   }
   if (content.parent_notes?.length) {
     chunk(content.parent_notes, 2).forEach((items, i) => {
@@ -91,31 +104,55 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
       });
     }
   }
-  // Worksheets: 只有很小的 worksheet 才合并到同一页（避免溢出）
+  // Worksheets: 大 worksheet 自动拆页，小 worksheet 可合并
   if (content.worksheets?.length) {
-    const WS_MERGE_THRESHOLD = 3; // items ≤ 3 的 worksheet 可以合并
+    const WS_MERGE_THRESHOLD = 3;
+    // 每页最大 items 数（按类型，保守估算确保不溢出）
+    const maxPerPage = (type: string) => {
+      if (type === 'matching') return 6;
+      if (type === 'coloring') return 4;
+      if (type === 'tracing') return 5;
+      return 6; // writing, fill-blank, 通用
+    };
+
     const wsList = content.worksheets;
     let wi = 0;
     while (wi < wsList.length) {
       const ws = wsList[wi];
-      const nextWs = wi + 1 < wsList.length ? wsList[wi + 1] : null;
+      const max = maxPerPage(ws.type);
 
-      // 如果当前和下一个都是很小的 worksheet，合并到同一页
-      if (nextWs && ws.items.length <= WS_MERGE_THRESHOLD && nextWs.items.length <= WS_MERGE_THRESHOLD) {
-        pageBodies.push({
-          title: `Worksheets ${wi + 1}-${wi + 2}`,
-          body: (
-            <div>
-              <PageSections.Worksheet worksheet={ws} index={wi + 1} />
-              <div style={{ marginTop: 20 }} />
-              <PageSections.Worksheet worksheet={nextWs} index={wi + 2} />
-            </div>
-          ),
-        });
-        wi += 2;
-      } else {
-        pageBodies.push({ title: `Worksheet ${wi + 1}`, body: <PageSections.Worksheet worksheet={ws} index={wi + 1} /> });
+      if (ws.items.length > max) {
+        // 拆分大 worksheet 为多页
+        const totalChunks = Math.ceil(ws.items.length / max);
+        for (let ci = 0; ci < totalChunks; ci++) {
+          const slicedItems = ws.items.slice(ci * max, (ci + 1) * max);
+          const slicedWs = { ...ws, items: slicedItems };
+          const showHeader = ci === 0;
+          pageBodies.push({
+            title: `Worksheet ${wi + 1}${totalChunks > 1 ? ` (${ci + 1}/${totalChunks})` : ''}`,
+            body: <PageSections.Worksheet worksheet={slicedWs} index={wi + 1} showHeader={showHeader} itemStartIndex={ci * max} />,
+          });
+        }
         wi++;
+      } else {
+        const nextWs = wi + 1 < wsList.length ? wsList[wi + 1] : null;
+        // 小 worksheet 合并
+        if (nextWs && ws.items.length <= WS_MERGE_THRESHOLD && nextWs.items.length <= WS_MERGE_THRESHOLD) {
+          pageBodies.push({
+            title: `Worksheets ${wi + 1}-${wi + 2}`,
+            body: (
+              <div>
+                <PageSections.Worksheet worksheet={ws} index={wi + 1} />
+                <div style={{ marginTop: 20 }} />
+                <PageSections.Worksheet worksheet={nextWs} index={wi + 2} />
+              </div>
+            ),
+          });
+          wi += 2;
+        } else {
+          pageBodies.push({ title: `Worksheet ${wi + 1}`, body: <PageSections.Worksheet worksheet={ws} index={wi + 1} /> });
+          wi++;
+        }
       }
     }
   }
@@ -123,12 +160,16 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
     pageBodies.push({ title: 'Teacher Notes', body: <PageSections.TeacherNotesPage notes={content.teacher_notes} /> });
   }
   if (content.answer_key?.length) {
-    pageBodies.push({ title: 'Answer Key', body: (
-      <div>
-        <PageSections.AnswerKeyPage answerKeys={content.answer_key} />
-        <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
-      </div>
-    ) });
+    const akChunks = chunk(content.answer_key, ANSWER_KEY_PER_PAGE);
+    akChunks.forEach((items, i) => {
+      const isLast = i === akChunks.length - 1;
+      pageBodies.push({ title: `Answer Key${akChunks.length > 1 ? ` ${i + 1}` : ''}`, body: (
+        <div>
+          <PageSections.AnswerKeyPage answerKeys={items} />
+          {isLast && <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />}
+        </div>
+      ) });
+    });
   } else {
     // 没有 answer key 时，Terms 合并到 teacher notes 页
     // 但如果也没有 teacher notes，才单独一页

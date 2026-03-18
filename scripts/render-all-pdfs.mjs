@@ -16,6 +16,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import puppeteer from 'puppeteer';
+import { OVERFLOW_HANDLER_FN } from './pdf-page-overflow.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -97,9 +98,8 @@ function injectImages(content) {
   // Mini book
   if (enriched.mini_book?.pages) {
     for (const page of enriched.mini_book.pages) {
-      if (page.image_prompt) {
-        tryInject(path.join(imgDir, `minibook_p${page.page_number}.png`), page, 'image_data');
-      }
+      // 无论是否有 image_prompt，只要图片文件存在就注入
+      tryInject(path.join(imgDir, `minibook_p${page.page_number}.png`), page, 'image_data');
     }
   }
 
@@ -178,6 +178,9 @@ async function renderOne(packFileName, browser) {
     });
     await new Promise(r => setTimeout(r, 1500));
 
+    // 溢出处理：检测并拆分超出页面高度的内容
+    const overflowResult = await page.evaluate(OVERFLOW_HANDLER_FN);
+
     await page.pdf({
       path: outputPath,
       format: 'Letter',
@@ -189,7 +192,7 @@ async function renderOne(packFileName, browser) {
   }
 
   const sizeMB = (fs.statSync(outputPath).size / 1024 / 1024).toFixed(2);
-  return { injected, sizeMB, mode };
+  return { injected, sizeMB, mode, overflowResult };
 }
 
 async function main() {
@@ -238,10 +241,11 @@ async function main() {
     const packName = toRender[i];
     process.stdout.write(`  [${i + 1}/${toRender.length}] ${packName} ... `);
     try {
-      const { injected, sizeMB, mode } = await renderOne(packName, browser);
+      const { injected, sizeMB, mode, overflowResult } = await renderOne(packName, browser);
       results.success++;
       const tag = mode === 'sample' ? '📎sample' : '📄final';
-      console.log(`✅ ${tag} (${sizeMB}MB, ${injected} 张图)`);
+      const overflow = overflowResult.overflowPages > 0 ? ` ⚠️${overflowResult.overflowPages}页溢出→${overflowResult.finalPages}页` : '';
+      console.log(`✅ ${tag} (${sizeMB}MB, ${injected} 张图${overflow})`);
     } catch (err) {
       results.failed++;
       console.log(`❌ ${err.message}`);

@@ -175,14 +175,14 @@ function VisualRoutineCards({ items }: { items: VisualRoutineCard[] }) {
     );
 }
 
-function ClassroomRules({ items }: { items: ClassroomRule[] }) {
+function ClassroomRules({ items, startIndex = 0 }: { items: ClassroomRule[]; startIndex?: number }) {
     return (
         <div>
             <h2 className="section-title">Classroom Rules</h2>
             <div className="rules-list">
                 {items.map((item, i) => (
                     <article key={i} className="rule-card">
-                        <div className="rule-num">{i + 1}</div>
+                        <div className="rule-num">{startIndex + i + 1}</div>
                         {(item as any).image_data ? (
                             <img className="vocab-img" src={(item as any).image_data} alt={item.rule_en} style={{ width: 48, height: 48 }} />
                         ) : null}
@@ -234,7 +234,7 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
         <div>
             {showHeader && (
                 <>
-                    <h2 className="section-title">Mini-Book: {miniBook.title}</h2>
+                    <h2 className="section-title minibook-title">Mini-Book: {miniBook.title}</h2>
                     <p className="ws-instructions">Print double-sided, fold in half, and staple to create a mini-book.</p>
                 </>
             )}
@@ -242,16 +242,16 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
                 {miniBook.pages.map(page => (
                     <article key={page.page_number} className="minibook-card">
                         <div className="minibook-num">{page.page_number}</div>
-                        <div className="minibook-text">
-                            <div className="text-en">{page.text_en}</div>
-                            {page.text_l2 && <div className="text-l2">{page.text_l2}</div>}
-                        </div>
                         <div className="minibook-illust">
                             {(page as any).image_data ? (
                                 <img className="vocab-img" src={(page as any).image_data} alt={page.text_en} />
                             ) : (
                                 page.image_prompt || '🖼️ Illustration'
                             )}
+                        </div>
+                        <div className="minibook-text">
+                            <div className="text-en">{page.text_en}</div>
+                            {page.text_l2 && <div className="text-l2">{page.text_l2}</div>}
                         </div>
                     </article>
                 ))}
@@ -260,22 +260,29 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
     );
 }
 
-function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: number }) {
+function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: { worksheet: WorksheetItem; index: number; showHeader?: boolean; itemStartIndex?: number }) {
     const isMatching = worksheet.type === 'matching';
     const isColoring = worksheet.type === 'coloring';
     const isTracing = worksheet.type === 'tracing';
 
     return (
         <div>
-            <div className="ws-header">
-                <div>
-                    <h2 className="section-title">Worksheet {index}</h2>
-                    <span className="ws-type-badge">{fmt(worksheet.type)}</span>
-                </div>
-                <div className="ws-name-box">Name: ____________________</div>
-            </div>
-            <p className="ws-instructions">{worksheet.instructions_en}</p>
-            {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{worksheet.instructions_l2}</p> : null}
+            {showHeader && (
+                <>
+                    <div className="ws-header">
+                        <div>
+                            <h2 className="section-title">Worksheet {index}</h2>
+                            <span className="ws-type-badge">{fmt(worksheet.type)}</span>
+                        </div>
+                        <div className="ws-name-box">Name: ____________________</div>
+                    </div>
+                    <p className="ws-instructions">{worksheet.instructions_en}</p>
+                    {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{worksheet.instructions_l2}</p> : null}
+                </>
+            )}
+            {!showHeader && (
+                <p className="ws-instructions" style={{ marginBottom: 12 }}>Worksheet {index} (continued)</p>
+            )}
 
             {isMatching ? (
                 <div className="ws-matching-grid">
@@ -283,7 +290,7 @@ function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: numb
                         const imgData = (item as any).image_data;
                         return (
                             <article key={`${item.id}-${i}`} className="ws-matching-item">
-                                <div className="ws-item-num">{i + 1}</div>
+                                <div className="ws-item-num">{itemStartIndex + i + 1}</div>
                                 {imgData ? (
                                     <img className="ws-matching-img" src={imgData} alt={item.content} />
                                 ) : null}
@@ -317,7 +324,7 @@ function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: numb
                 <div className="ws-items">
                     {worksheet.items.map((item, i) => (
                         <article key={`${item.id}-${i}`} className="ws-tracing-item">
-                            <div className="ws-item-num">{i + 1}</div>
+                            <div className="ws-item-num">{itemStartIndex + i + 1}</div>
                             <div className="ws-item-content">
                                 <div className="ws-tracing-word">{item.content}</div>
                                 <div className="ws-tracing-dotted">{item.content}</div>
@@ -331,7 +338,7 @@ function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: numb
                 <div className="ws-items">
                     {worksheet.items.map((item, i) => (
                         <article key={`${item.id}-${i}`} className="ws-item">
-                            <div className="ws-item-num">{i + 1}</div>
+                            <div className="ws-item-num">{itemStartIndex + i + 1}</div>
                             <div className="ws-item-content">
                                 <strong>{item.content}</strong>
                                 {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
