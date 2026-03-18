@@ -22,7 +22,7 @@ const DIALOGUE_PER_PAGE = 5;
 const SPEAKING_PER_PAGE = 6;
 const ROUTINE_PER_PAGE = 6;
 const RULES_PER_PAGE = 6;
-const ANSWER_KEY_PER_PAGE = 6;
+const ANSWER_KEY_PER_PAGE = 2;
 
 export function PackDocument({ content, resource, mode, renderedAt, sampleWatermarkText }: PackDocumentProps) {
   const ageBand = content.age_band || resource.age_band || 'K-2';
