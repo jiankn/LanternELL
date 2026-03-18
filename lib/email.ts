@@ -163,6 +163,30 @@ export function orderConfirmationEmail(params: {
   }
 }
 
+export function resetPasswordEmail(resetLink: string): { subject: string; html: string } {
+  return {
+    subject: 'Reset your LanternELL password',
+    html: `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#EEF2FF;font-family:Arial,Helvetica,sans-serif;">
+  <div style="max-width:480px;margin:40px auto;background:#fff;border-radius:20px;padding:40px;border:2px solid rgba(255,255,255,0.6);box-shadow:4px 4px 8px rgba(163,177,198,0.4),-4px -4px 8px rgba(255,255,255,0.6);">
+    <div style="text-align:center;margin-bottom:24px;">
+      <img src="https://lanternell.com/images/logo.webp" alt="LanternELL Logo" width="64" height="64" style="display:inline-block;border-radius:12px;">
+    </div>
+    <h1 style="font-family:Georgia,serif;font-size:24px;color:#1E1B4B;text-align:center;margin:0 0 8px;">Reset Your Password</h1>
+    <p style="color:#6366F1;text-align:center;margin:0 0 24px;font-size:14px;">Click the button below to set a new password.</p>
+    <div style="text-align:center;margin-bottom:24px;">
+      <a href="${resetLink}" style="display:inline-block;background:linear-gradient(135deg,#F97316,#ea580c);color:#fff;font-weight:bold;padding:14px 32px;border-radius:12px;text-decoration:none;font-size:16px;">Reset Password</a>
+    </div>
+    <p style="color:#6366F1;text-align:center;font-size:12px;margin:0;">This link expires in 30 minutes. If you didn't request this, you can safely ignore it.</p>
+  </div>
+</body>
+</html>`,
+  }
+}
+
 export function downloadReadyEmail(params: {
   resourceTitle: string
   downloadUrl: string

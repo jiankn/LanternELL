@@ -15,7 +15,6 @@ import {
     ChevronRight,
     Sparkles,
     Mail,
-    CheckCircle,
 } from 'lucide-react'
 import type { UserData } from './account-context'
 import { AccountContext } from './use-account'
@@ -272,40 +271,31 @@ function GoogleIcon({ className }: { className?: string }) {
 
 function LoginForm() {
     const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
-    const [sent, setSent] = useState(false)
+    const [error, setError] = useState<string | null>(null)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
+        setError(null)
         try {
-            const res = await fetch('/api/auth/request-link', {
+            const res = await fetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, redirectTo: '/account' }),
+                body: JSON.stringify({ email, password }),
             })
             const data = await res.json()
             if (data.ok) {
-                setSent(true)
+                window.location.href = '/account'
             } else {
-                alert(data.error?.message || 'Failed to send magic link')
+                setError(data.error?.message || 'Login failed.')
             }
         } catch {
-            alert('Login failed')
+            setError('Login failed.')
         } finally {
             setLoading(false)
         }
-    }
-
-    if (sent) {
-        return (
-            <div className="text-center">
-                <div className="flex items-center justify-center gap-2 text-green-600 font-medium py-4">
-                    <CheckCircle className="w-5 h-5" />
-                    Check your email for the magic link.
-                </div>
-            </div>
-        )
     }
 
     return (
@@ -316,7 +306,7 @@ function LoginForm() {
                 className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-white border-2 border-gray-200 rounded-xl font-medium text-text-primary hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
             >
                 <GoogleIcon className="w-5 h-5" />
-                Sign in with Google
+                Continue with Google
             </button>
 
             <div className="flex items-center gap-4">
@@ -325,23 +315,26 @@ function LoginForm() {
                 <div className="flex-1 h-px bg-gray-200" />
             </div>
 
+            {error && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700" role="alert">{error}</div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    required
-                    className="clay-input w-full"
-                />
-                <button
-                    type="submit"
-                    disabled={loading}
-                    className="clay-button-cta w-full cursor-pointer disabled:opacity-50"
-                >
-                    {loading ? 'Sending...' : 'Send Magic Link'}
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com" required className="clay-input w-full" autoComplete="email" />
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password" required className="clay-input w-full" autoComplete="current-password" />
+                <button type="submit" disabled={loading}
+                    className="clay-button-cta w-full cursor-pointer disabled:opacity-50">
+                    {loading ? 'Signing in...' : 'Sign In'}
                 </button>
             </form>
+
+            <div className="flex justify-between text-sm">
+                <Link href="/login?tab=register" className="text-primary hover:underline font-medium">Create account</Link>
+                <Link href="/login" className="text-text-muted hover:underline"
+                    onClick={(e) => { e.preventDefault(); window.location.href = '/login' }}>Forgot password?</Link>
+            </div>
         </div>
     )
 }

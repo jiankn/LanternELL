@@ -2,8 +2,8 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import { Mail, ArrowRight, CheckCircle } from 'lucide-react'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { ArrowRight, CheckCircle, Eye, EyeOff } from 'lucide-react'
 import { Navbar } from '@/components/ui/navbar'
 
 const GOOGLE_ERRORS: Record<string, string> = {
@@ -34,11 +34,22 @@ export default function LoginPage() {
 }
 
 function LoginPageInner() {
-  const [email, setEmail] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [sent, setSent] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
   const searchParams = useSearchParams()
+  const defaultTab = searchParams?.get('tab') === 'register' ? 'register' : 'login'
+
+  const [tab, setTab] = useState<'login' | 'register'>(defaultTab)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  // Forgot password state
+  const [forgotMode, setForgotMode] = useState(false)
+  const [forgotSent, setForgotSent] = useState(false)
+  const [forgotEmail, setForgotEmail] = useState('')
 
   useEffect(() => {
     const errCode = searchParams?.get('error')
@@ -47,23 +58,67 @@ function LoginPageInner() {
     }
   }, [searchParams])
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError(null)
-
     try {
-      const res = await fetch('/api/auth/request-link', {
+      const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, redirectTo: '/account/library' })
+        body: JSON.stringify({ email, password }),
       })
       const data = await res.json()
-
       if (data.ok) {
-        setSent(true)
+        router.push('/account/library')
       } else {
-        setError(data.error?.message || 'Failed to send magic link')
+        setError(data.error?.message || 'Login failed.')
+      }
+    } catch {
+      setError('Network error. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleRegister = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, name }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        router.push('/account/library')
+      } else {
+        setError(data.error?.message || 'Registration failed.')
+      }
+    } catch {
+      setError('Network error. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: forgotEmail }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        setForgotSent(true)
+      } else {
+        setError(data.error?.message || 'Failed to send reset email.')
       }
     } catch {
       setError('Network error. Please try again.')
@@ -76,118 +131,180 @@ function LoginPageInner() {
     window.location.href = '/api/auth/google?redirectTo=/account/library'
   }
 
+  // Forgot password view
+  if (forgotMode) {
+    return (
+      <main className="min-h-screen bg-background flex flex-col">
+        <Navbar static links={[{ href: '/shop', label: 'Browse Shop' }]} />
+        <div className="flex-1 flex items-center justify-center px-4 py-16">
+          <div className="w-full max-w-md">
+            <div className="clay-card p-8">
+              {forgotSent ? (
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h1 className="font-heading text-2xl font-bold text-text-primary mb-3">Check Your Email</h1>
+                  <p className="text-text-primary/70 mb-6">
+                    If an account exists for <strong>{forgotEmail}</strong>, we sent a password reset link.
+                  </p>
+                  <button
+                    onClick={() => { setForgotMode(false); setForgotSent(false); setError(null) }}
+                    className="text-primary hover:underline font-medium cursor-pointer"
+                  >
+                    Back to Sign In
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <div className="text-center mb-8">
+                    <h1 className="font-heading text-2xl font-bold text-text-primary mb-2">Forgot Password?</h1>
+                    <p className="text-text-primary/70">Enter your email and we'll send you a reset link.</p>
+                  </div>
+                  {error && (
+                    <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700" role="alert">{error}</div>
+                  )}
+                  <form onSubmit={handleForgotPassword} className="space-y-4">
+                    <div>
+                      <label htmlFor="forgot-email" className="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                      <input id="forgot-email" type="email" value={forgotEmail}
+                        onChange={(e) => setForgotEmail(e.target.value)}
+                        placeholder="teacher@school.edu" required className="clay-input w-full" autoFocus autoComplete="email" />
+                    </div>
+                    <button type="submit" disabled={loading}
+                      className="clay-button-cta w-full flex items-center justify-center gap-2 py-3 cursor-pointer">
+                      {loading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        : <>Send Reset Link <ArrowRight className="w-4 h-4" /></>}
+                    </button>
+                  </form>
+                  <p className="mt-6 text-center text-sm text-text-muted">
+                    Remember your password?{' '}
+                    <button onClick={() => { setForgotMode(false); setError(null) }}
+                      className="text-primary hover:underline font-medium cursor-pointer">Sign In</button>
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </main>
+    )
+  }
+
   return (
     <main className="min-h-screen bg-background flex flex-col">
-      <Navbar
-        static
-        links={[{ href: '/shop', label: 'Browse Shop' }]}
-      />
-
+      <Navbar static links={[{ href: '/shop', label: 'Browse Shop' }]} />
       <div className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="w-full max-w-md">
           <div className="clay-card p-8">
-            {sent ? (
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h1 className="font-heading text-2xl font-bold text-text-primary mb-3">
-                  Check Your Email
-                </h1>
-                <p className="text-text-primary/70 mb-6">
-                  We sent a magic link to <strong>{email}</strong>.
-                  Click the link to sign in — no password needed.
-                </p>
-                <p className="text-sm text-text-muted">
-                  Didn't receive it? Check your spam folder or{' '}
-                  <button
-                    onClick={() => { setSent(false); setError(null) }}
-                    className="text-primary hover:underline font-medium cursor-pointer"
-                  >
-                    try again
-                  </button>.
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-clay-button">
-                    <Mail className="w-8 h-8 text-white" />
-                  </div>
-                  <h1 className="font-heading text-2xl font-bold text-text-primary mb-2">
-                    Get Started
-                  </h1>
-                  <p className="text-text-primary/70">
-                    Access your teaching resources instantly — no password needed.
-                  </p>
-                </div>
+            <div className="text-center mb-6">
+              <h1 className="font-heading text-2xl font-bold text-text-primary mb-2">
+                {tab === 'login' ? 'Welcome Back' : 'Create Account'}
+              </h1>
+              <p className="text-text-primary/70">
+                {tab === 'login' ? 'Sign in to access your teaching resources.' : 'Join LanternELL to get started.'}
+              </p>
+            </div>
 
-                {error && (
-                  <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700" role="alert">
-                    {error}
-                  </div>
-                )}
+            {/* Tab switcher */}
+            <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+              <button onClick={() => { setTab('login'); setError(null) }}
+                className={`flex-1 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer ${tab === 'login' ? 'bg-white text-text-primary shadow-sm' : 'text-text-muted hover:text-text-primary'}`}>
+                Sign In
+              </button>
+              <button onClick={() => { setTab('register'); setError(null) }}
+                className={`flex-1 py-2 text-sm font-medium rounded-lg transition-colors cursor-pointer ${tab === 'register' ? 'bg-white text-text-primary shadow-sm' : 'text-text-muted hover:text-text-primary'}`}>
+                Sign Up
+              </button>
+            </div>
 
-                {/* Google Sign In */}
-                <button
-                  type="button"
-                  onClick={handleGoogleLogin}
-                  className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-white border-2 border-gray-200 rounded-xl font-medium text-text-primary hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer"
-                >
-                  <GoogleIcon className="w-5 h-5" />
-                  Continue with Google
-                </button>
-
-                {/* Divider */}
-                <div className="flex items-center gap-4 my-6">
-                  <div className="flex-1 h-px bg-gray-200" />
-                  <span className="text-sm text-text-muted">or</span>
-                  <div className="flex-1 h-px bg-gray-200" />
-                </div>
-
-                {/* Email Magic Link */}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="teacher@school.edu"
-                      required
-                      className="clay-input w-full"
-                      autoComplete="email"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="clay-button-cta w-full flex items-center justify-center gap-2 py-3 cursor-pointer"
-                  >
-                    {loading ? (
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    ) : (
-                      <>
-                        Send Magic Link
-                        <ArrowRight className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-                </form>
-
-                <p className="mt-6 text-center text-sm text-text-muted">
-                  New here?{' '}
-                  <Link href="/shop" className="text-primary hover:underline font-medium">
-                    Browse our resources
-                  </Link>{' '}
-                  — your account is created automatically.
-                </p>
-              </>
+            {error && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700" role="alert">{error}</div>
             )}
+
+            {/* Google */}
+            <button type="button" onClick={handleGoogleLogin}
+              className="w-full flex items-center justify-center gap-3 py-3 px-4 bg-white border-2 border-gray-200 rounded-xl font-medium text-text-primary hover:bg-gray-50 hover:border-gray-300 transition-colors cursor-pointer">
+              <GoogleIcon className="w-5 h-5" />
+              Continue with Google
+            </button>
+
+            <div className="flex items-center gap-4 my-6">
+              <div className="flex-1 h-px bg-gray-200" />
+              <span className="text-sm text-text-muted">or</span>
+              <div className="flex-1 h-px bg-gray-200" />
+            </div>
+
+            {/* Login form */}
+            {tab === 'login' && (
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">Email</label>
+                  <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    placeholder="teacher@school.edu" required className="clay-input w-full" autoComplete="email" />
+                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <label htmlFor="password" className="block text-sm font-medium text-text-primary">Password</label>
+                    <button type="button" onClick={() => { setForgotMode(true); setForgotEmail(email); setError(null) }}
+                      className="text-xs text-primary hover:underline cursor-pointer">Forgot password?</button>
+                  </div>
+                  <div className="relative">
+                    <input id="password" type={showPassword ? 'text' : 'password'} value={password}
+                      onChange={(e) => setPassword(e.target.value)} placeholder="Your password" required
+                      className="clay-input w-full pr-10" autoComplete="current-password" />
+                    <button type="button" onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-primary cursor-pointer"
+                      aria-label={showPassword ? 'Hide password' : 'Show password'}>
+                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+                <button type="submit" disabled={loading}
+                  className="clay-button-cta w-full flex items-center justify-center gap-2 py-3 cursor-pointer">
+                  {loading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    : <>Sign In <ArrowRight className="w-4 h-4" /></>}
+                </button>
+              </form>
+            )}
+
+            {/* Register form */}
+            {tab === 'register' && (
+              <form onSubmit={handleRegister} className="space-y-4">
+                <div>
+                  <label htmlFor="reg-name" className="block text-sm font-medium text-text-primary mb-2">Name (optional)</label>
+                  <input id="reg-name" type="text" value={name} onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name" className="clay-input w-full" autoComplete="name" />
+                </div>
+                <div>
+                  <label htmlFor="reg-email" className="block text-sm font-medium text-text-primary mb-2">Email</label>
+                  <input id="reg-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    placeholder="teacher@school.edu" required className="clay-input w-full" autoComplete="email" />
+                </div>
+                <div>
+                  <label htmlFor="reg-password" className="block text-sm font-medium text-text-primary mb-2">Password</label>
+                  <div className="relative">
+                    <input id="reg-password" type={showPassword ? 'text' : 'password'} value={password}
+                      onChange={(e) => setPassword(e.target.value)} placeholder="At least 8 characters"
+                      required minLength={8} className="clay-input w-full pr-10" autoComplete="new-password" />
+                    <button type="button" onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-primary cursor-pointer"
+                      aria-label={showPassword ? 'Hide password' : 'Show password'}>
+                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+                <button type="submit" disabled={loading}
+                  className="clay-button-cta w-full flex items-center justify-center gap-2 py-3 cursor-pointer">
+                  {loading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    : <>Create Account <ArrowRight className="w-4 h-4" /></>}
+                </button>
+              </form>
+            )}
+
+            <p className="mt-6 text-center text-sm text-text-muted">
+              <Link href="/shop" className="text-primary hover:underline font-medium">Browse our resources</Link>
+            </p>
           </div>
         </div>
       </div>
