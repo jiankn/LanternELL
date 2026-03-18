@@ -93,72 +93,86 @@
         {
           "id": "1",
           "content": "computer",
-          "content_l2": "computadora"
+          "content_l2": "computadora",
+          "match_target": "computadora"
         },
         {
           "id": "2",
           "content": "screen",
-          "content_l2": "pantalla"
+          "content_l2": "pantalla",
+          "match_target": "pantalla"
         },
         {
           "id": "3",
           "content": "keyboard",
-          "content_l2": "teclado"
+          "content_l2": "teclado",
+          "match_target": "teclado"
         },
         {
           "id": "4",
           "content": "mouse",
-          "content_l2": "ratón"
+          "content_l2": "ratón",
+          "match_target": "ratón"
         },
         {
           "id": "5",
           "content": "internet",
-          "content_l2": "internet"
+          "content_l2": "internet",
+          "match_target": "internet"
         },
         {
           "id": "6",
           "content": "tablet",
-          "content_l2": "tableta"
+          "content_l2": "tableta",
+          "match_target": "tableta"
         },
         {
           "id": "7",
           "content": "smartphone",
-          "content_l2": "teléfono inteligente"
+          "content_l2": "teléfono inteligente",
+          "match_target": "teléfono inteligente"
         },
         {
           "id": "8",
           "content": "printer",
-          "content_l2": "impresora"
+          "content_l2": "impresora",
+          "match_target": "impresora"
         },
         {
           "id": "9",
           "content": "speaker",
-          "content_l2": "altavoz"
+          "content_l2": "altavoz",
+          "match_target": "altavoz"
         },
         {
           "id": "10",
           "content": "headphones",
-          "content_l2": "auriculares"
+          "content_l2": "auriculares",
+          "match_target": "auriculares"
         },
         {
           "id": "11",
           "content": "camera",
-          "content_l2": "cámara"
+          "content_l2": "cámara",
+          "match_target": "cámara"
         },
         {
           "id": "12",
           "content": "website",
-          "content_l2": "sitio web"
+          "content_l2": "sitio web",
+          "match_target": "sitio web"
         },
         {
           "id": "13",
           "content": "email",
-          "content_l2": "correo electrónico"
+          "content_l2": "correo electrónico",
+          "match_target": "correo electrónico"
         },
         {
           "id": "14",
           "content": "robot",
-          "content_l2": "robot"
+          "content_l2": "robot",
+          "match_target": "robot"
         }
       ]
     },

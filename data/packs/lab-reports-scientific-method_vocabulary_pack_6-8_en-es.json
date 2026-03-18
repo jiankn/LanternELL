@@ -125,7 +125,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Método Científico"
         },
         {
           "id": "2",
@@ -140,7 +141,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Observación"
         },
         {
           "id": "3",
@@ -155,7 +157,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Hipótesis"
         },
         {
           "id": "4",
@@ -170,7 +173,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Experimento"
         },
         {
           "id": "5",
@@ -185,7 +189,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Datos"
         },
         {
           "id": "6",
@@ -200,7 +205,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Conclusión"
         },
         {
           "id": "7",
@@ -215,7 +221,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Informe de Laboratorio"
         },
         {
           "id": "8",
@@ -230,7 +237,8 @@
             "Conclusión",
             "Informe de Laboratorio",
             "Seguridad"
-          ]
+          ],
+          "match_target": "Seguridad"
         }
       ]
     },

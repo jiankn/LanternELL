@@ -136,7 +136,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To break down information into smaller parts to understand it better."
+          "correct_answer": "To break down information into smaller parts to understand it better.",
+          "match_target": "Analizar"
         },
         {
           "id": "2",
@@ -154,7 +155,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To combine different ideas or pieces of information to create something new."
+          "correct_answer": "To combine different ideas or pieces of information to create something new.",
+          "match_target": "Sintetizar"
         },
         {
           "id": "3",
@@ -172,7 +174,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To form an opinion or judgment about something."
+          "correct_answer": "To form an opinion or judgment about something.",
+          "match_target": "Evaluar"
         },
         {
           "id": "4",
@@ -190,7 +193,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To state the main points of something in a brief form."
+          "correct_answer": "To state the main points of something in a brief form.",
+          "match_target": "Resumir"
         },
         {
           "id": "5",
@@ -208,7 +212,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To find similarities between two or more things."
+          "correct_answer": "To find similarities between two or more things.",
+          "match_target": "Comparar"
         },
         {
           "id": "6",
@@ -226,7 +231,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To find differences between two or more things."
+          "correct_answer": "To find differences between two or more things.",
+          "match_target": "Contrastar"
         },
         {
           "id": "7",
@@ -244,7 +250,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To figure out something based on evidence and reasoning, not directly stated."
+          "correct_answer": "To figure out something based on evidence and reasoning, not directly stated.",
+          "match_target": "Inferir"
         },
         {
           "id": "8",
@@ -262,7 +269,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To explain with more details."
+          "correct_answer": "To explain with more details.",
+          "match_target": "Elaborar"
         },
         {
           "id": "9",
@@ -280,7 +288,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "To give reasons or evidence to support an answer or claim."
+          "correct_answer": "To give reasons or evidence to support an answer or claim.",
+          "match_target": "Justificar"
         },
         {
           "id": "10",
@@ -298,7 +307,8 @@
             "To figure out something based on evidence and reasoning, not directly stated.",
             "The circumstances or information surrounding an event or word that help to understand it."
           ],
-          "correct_answer": "The circumstances or information surrounding an event or word that help to understand it."
+          "correct_answer": "The circumstances or information surrounding an event or word that help to understand it.",
+          "match_target": "Contexto"
         }
       ]
     },

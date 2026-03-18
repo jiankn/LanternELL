@@ -16,92 +16,110 @@
     {
       "en": "sum",
       "l2": "suma",
-      "image_prompt": "Two numbers being added together to show their sum, e.g., 3 + 2 = 5 with '5' highlighted."
+      "image_prompt": "Two numbers being added together to show their sum, e.g., 3 + 2 = 5 with '5' highlighted.",
+      "html_visual": "<span class=\"math-expr\">3 <span class=\"math-op\">+</span> 2 <span class=\"math-eq\">=</span> <span class=\"math-result\">5</span></span>"
     },
     {
       "en": "difference",
       "l2": "diferencia",
-      "image_prompt": "Two numbers being subtracted to show their difference, e.g., 7 - 3 = 4 with '4' highlighted."
+      "image_prompt": "Two numbers being subtracted to show their difference, e.g., 7 - 3 = 4 with '4' highlighted.",
+      "html_visual": "<span class=\"math-expr\">7 <span class=\"math-op\">−</span> 3 <span class=\"math-eq\">=</span> <span class=\"math-result\">4</span></span>"
     },
     {
       "en": "product",
       "l2": "producto",
-      "image_prompt": "Two numbers being multiplied to show their product, e.g., 4 x 2 = 8 with '8' highlighted."
+      "image_prompt": "Two numbers being multiplied to show their product, e.g., 4 x 2 = 8 with '8' highlighted.",
+      "html_visual": "<span class=\"math-expr\">4 <span class=\"math-op\">×</span> 2 <span class=\"math-eq\">=</span> <span class=\"math-result\">8</span></span>"
     },
     {
       "en": "quotient",
       "l2": "cociente",
-      "image_prompt": "A division problem showing the quotient, e.g., 10 / 2 = 5 with '5' highlighted."
+      "image_prompt": "A division problem showing the quotient, e.g., 10 / 2 = 5 with '5' highlighted.",
+      "html_visual": "<span class=\"math-expr\">10 <span class=\"math-op\">÷</span> 2 <span class=\"math-eq\">=</span> <span class=\"math-result\">5</span></span>"
     },
     {
       "en": "add",
       "l2": "sumar",
-      "image_prompt": "A plus sign (+) and two groups of objects being combined, e.g., 3 apples + 2 apples."
+      "image_prompt": "A plus sign (+) and two groups of objects being combined, e.g., 3 apples + 2 apples.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\"><span class=\"math-group\">🍎🍎🍎</span><span class=\"math-op\" style=\"font-size:24px;font-weight:900;color:#e74c3c\">+</span><span class=\"math-group\">🍎🍎</span></div><div class=\"math-label\">3 + 2 = 5</div></div>"
     },
     {
       "en": "subtract",
       "l2": "restar",
-      "image_prompt": "A minus sign (-) and a group of objects with some being taken away, e.g., 5 cookies - 2 cookies."
+      "image_prompt": "A minus sign (-) and a group of objects with some being taken away, e.g., 5 cookies - 2 cookies.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\"><span class=\"math-group\">🍪🍪🍪🍪🍪</span><span class=\"math-op\" style=\"font-size:24px;font-weight:900;color:#e74c3c\">−</span><span class=\"math-group\" style=\"opacity:0.3\">🍪🍪</span></div><div class=\"math-label\">5 − 2 = 3</div></div>"
     },
     {
       "en": "multiply",
       "l2": "multiplicar",
-      "image_prompt": "An 'x' or multiplication sign and equal groups of objects, e.g., 3 groups of 4 stars."
+      "image_prompt": "An 'x' or multiplication sign and equal groups of objects, e.g., 3 groups of 4 stars.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\"><span class=\"math-group\">⭐⭐⭐⭐</span><span class=\"math-group\">⭐⭐⭐⭐</span><span class=\"math-group\">⭐⭐⭐⭐</span></div><div class=\"math-label\">3 groups of 4 = 12</div></div>"
     },
     {
       "en": "divide",
       "l2": "dividir",
-      "image_prompt": "A division sign (÷) and a set of objects being shared equally into groups, e.g., 12 candies shared among 3 kids."
+      "image_prompt": "A division sign (÷) and a set of objects being shared equally into groups, e.g., 12 candies shared among 3 kids.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\"><span class=\"math-group\">🍬🍬🍬🍬</span><span class=\"math-group\">🍬🍬🍬🍬</span><span class=\"math-group\">🍬🍬🍬🍬</span></div><div class=\"math-label\">12 ÷ 3 = 4 each</div></div>"
     },
     {
       "en": "equal",
       "l2": "igual",
-      "image_prompt": "An equal sign (=) with balanced scales or two identical sets of objects."
+      "image_prompt": "An equal sign (=) with balanced scales or two identical sets of objects.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\" style=\"gap:12px\"><span class=\"math-group\">🔵🔵🔵</span><span style=\"font-size:28px;font-weight:900;color:#3498db\">=</span><span class=\"math-group\">🔵🔵🔵</span></div><div class=\"math-label\">3 = 3 (balanced)</div></div>"
     },
     {
       "en": "equation",
       "l2": "ecuación",
-      "image_prompt": "A simple math sentence with an equal sign, e.g., 5 + x = 10, with a question mark for 'x'."
+      "image_prompt": "A simple math sentence with an equal sign, e.g., 5 + x = 10, with a question mark for 'x'.",
+      "html_visual": "<span class=\"math-expr\" style=\"font-size:24px\">5 <span class=\"math-op\">+</span> <span style=\"color:#9b59b6;font-style:italic\">x</span> <span class=\"math-eq\">=</span> 10</span>"
     },
     {
       "en": "fraction",
       "l2": "fracción",
-      "image_prompt": "A circle divided into parts, with one part shaded, representing 1/4 or 1/2."
+      "image_prompt": "A circle divided into parts, with one part shaded, representing 1/4 or 1/2.",
+      "html_visual": "<div class=\"math-diagram\" style=\"flex-direction:row;gap:16px\"><div style=\"width:60px;height:60px;border-radius:50%;background:conic-gradient(#3498db 0deg 90deg, #ecf0f1 90deg 360deg);border:2px solid #2c3e50\"></div><div class=\"math-fraction\"><span>1</span><span class=\"frac-line\"></span><span>4</span></div></div>"
     },
     {
       "en": "decimal",
       "l2": "decimal",
-      "image_prompt": "A number line showing numbers with decimal points, e.g., 0.5, 1.0, 1.5."
+      "image_prompt": "A number line showing numbers with decimal points, e.g., 0.5, 1.0, 1.5.",
+      "html_visual": "<div class=\"math-diagram\"><div style=\"display:flex;align-items:center;gap:4px;font-size:14px;font-weight:700\"><span style=\"width:60px;text-align:center\">0</span><span style=\"width:60px;text-align:center;color:#e74c3c;font-size:18px\">0.5</span><span style=\"width:60px;text-align:center\">1.0</span><span style=\"width:60px;text-align:center;color:#e74c3c;font-size:18px\">1.5</span></div><div style=\"width:240px;height:3px;background:#2c3e50;border-radius:2px;position:relative\"><div style=\"position:absolute;top:-4px;left:0;width:10px;height:10px;background:#2c3e50;border-radius:50%\"></div><div style=\"position:absolute;top:-4px;left:33%;width:10px;height:10px;background:#e74c3c;border-radius:50%\"></div><div style=\"position:absolute;top:-4px;left:66%;width:10px;height:10px;background:#2c3e50;border-radius:50%\"></div><div style=\"position:absolute;top:-4px;right:0;width:10px;height:10px;background:#e74c3c;border-radius:50%\"></div></div></div>"
     },
     {
       "en": "whole number",
       "l2": "número entero",
-      "image_prompt": "A group of distinct, complete objects, like 5 whole apples, with the number '5'."
+      "image_prompt": "A group of distinct, complete objects, like 5 whole apples, with the number '5'.",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-objects\" style=\"font-size:24px\">🍎🍎🍎🍎🍎</div><div style=\"font-size:32px;font-weight:900;color:#27ae60\">5</div></div>"
     },
     {
       "en": "pattern",
       "l2": "patrón",
-      "image_prompt": "A sequence of shapes or numbers that repeats, e.g., circle, square, circle, square..."
+      "image_prompt": "A sequence of shapes or numbers that repeats, e.g., circle, square, circle, square...",
+      "html_visual": "<div class=\"math-diagram\"><div class=\"math-shapes\"><div class=\"math-shape circle filled\"></div><div class=\"math-shape\" style=\"background:#e74c3c;border-color:#c0392b\"></div><div class=\"math-shape circle filled\"></div><div class=\"math-shape\" style=\"background:#e74c3c;border-color:#c0392b\"></div><div class=\"math-shape circle filled\"></div><div style=\"font-size:20px;font-weight:700\">…</div></div><div class=\"math-label\">circle, square, circle, square…</div></div>"
     },
     {
       "en": "estimate",
       "l2": "estimar",
-      "image_prompt": "A jar of candies with a thought bubble showing an approximate number, like 'about 50'."
+      "image_prompt": "A jar of candies with a thought bubble showing an approximate number, like 'about 50'.",
+      "html_visual": "<div class=\"math-diagram\"><div style=\"font-size:36px\">🫙</div><div style=\"background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:2px 10px;font-size:13px;font-weight:700;color:#856404\">≈ about 50</div></div>"
     },
     {
       "en": "measure",
       "l2": "medir",
-      "image_prompt": "A ruler next to an object, like a pencil, showing its length being measured."
+      "image_prompt": "A ruler next to an object, like a pencil, showing its length being measured.",
+      "html_visual": "<div class=\"math-diagram\" style=\"flex-direction:row;gap:8px;align-items:end\"><div style=\"font-size:32px\">✏️</div><div style=\"width:120px;height:18px;background:linear-gradient(90deg,#f1c40f,#f39c12);border:1px solid #e67e22;border-radius:2px;position:relative;display:flex;align-items:end\"><span style=\"position:absolute;top:-14px;left:0;font-size:9px\">0</span><span style=\"position:absolute;top:-14px;left:25%;font-size:9px\">2</span><span style=\"position:absolute;top:-14px;left:50%;font-size:9px\">4</span><span style=\"position:absolute;top:-14px;left:75%;font-size:9px\">6</span><span style=\"position:absolute;top:-14px;right:0;font-size:9px\">8cm</span></div></div>"
     },
     {
       "en": "geometry",
       "l2": "geometría",
-      "image_prompt": "A collection of basic 2D and 3D shapes: square, triangle, circle, cube, sphere."
+      "image_prompt": "A collection of basic 2D and 3D shapes: square, triangle, circle, cube, sphere.",
+      "html_visual": "<div class=\"math-shapes\" style=\"gap:10px\"><div class=\"math-shape\" style=\"background:#3498db;border-color:#2980b9\"></div><div style=\"width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:28px solid #e74c3c\"></div><div class=\"math-shape circle\" style=\"background:#f1c40f;border-color:#f39c12\"></div><div class=\"math-shape\" style=\"width:24px;height:24px;background:#9b59b6;border-color:#8e44ad;transform:perspective(60px) rotateY(-15deg)\"></div></div>"
     },
     {
       "en": "data",
       "l2": "datos",
-      "image_prompt": "A simple bar graph or tally chart showing collected information about favorite fruits."
+      "image_prompt": "A simple bar graph or tally chart showing collected information about favorite fruits.",
+      "html_visual": "<div class=\"math-diagram\"><div style=\"display:flex;align-items:end;gap:6px;height:50px\"><div style=\"width:20px;background:#3498db;height:40px;border-radius:3px 3px 0 0\"></div><div style=\"width:20px;background:#e74c3c;height:50px;border-radius:3px 3px 0 0\"></div><div style=\"width:20px;background:#f1c40f;height:25px;border-radius:3px 3px 0 0\"></div><div style=\"width:20px;background:#27ae60;height:35px;border-radius:3px 3px 0 0\"></div></div><div style=\"display:flex;gap:6px;font-size:9px;font-weight:600\"><span style=\"width:20px;text-align:center\">🍎</span><span style=\"width:20px;text-align:center\">🍌</span><span style=\"width:20px;text-align:center\">🍇</span><span style=\"width:20px;text-align:center\">🍊</span></div></div>"
     }
   ],
   "worksheets": [
@@ -115,61 +133,71 @@
           "id": "1",
           "content": "sum",
           "content_l2": "suma",
-          "correct_answer": "suma"
+          "correct_answer": "suma",
+          "match_target": "suma"
         },
         {
           "id": "2",
           "content": "difference",
           "content_l2": "diferencia",
-          "correct_answer": "diferencia"
+          "correct_answer": "diferencia",
+          "match_target": "diferencia"
         },
         {
           "id": "3",
           "content": "product",
           "content_l2": "producto",
-          "correct_answer": "producto"
+          "correct_answer": "producto",
+          "match_target": "producto"
         },
         {
           "id": "4",
           "content": "quotient",
           "content_l2": "cociente",
-          "correct_answer": "cociente"
+          "correct_answer": "cociente",
+          "match_target": "cociente"
         },
         {
           "id": "5",
           "content": "add",
           "content_l2": "sumar",
-          "correct_answer": "sumar"
+          "correct_answer": "sumar",
+          "match_target": "sumar"
         },
         {
           "id": "6",
           "content": "subtract",
           "content_l2": "restar",
-          "correct_answer": "restar"
+          "correct_answer": "restar",
+          "match_target": "restar"
         },
         {
           "id": "7",
           "content": "multiply",
           "content_l2": "multiplicar",
-          "correct_answer": "multiplicar"
+          "correct_answer": "multiplicar",
+          "match_target": "multiplicar"
         },
         {
           "id": "8",
           "content": "divide",
           "content_l2": "dividir",
-          "correct_answer": "dividir"
+          "correct_answer": "dividir",
+          "match_target": "dividir"
         },
         {
           "id": "9",
           "content": "equal",
           "content_l2": "igual",
-          "correct_answer": "igual"
+          "correct_answer": "igual",
+          "match_target": "igual"
         },
         {
           "id": "10",
           "content": "fraction",
           "content_l2": "fracción",
-          "correct_answer": "fracción"
+          "correct_answer": "fracción",
+          "match_target": "fracción"
         }
       ]
     },

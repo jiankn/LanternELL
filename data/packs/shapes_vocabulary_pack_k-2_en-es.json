@@ -75,31 +75,36 @@
           "id": "1",
           "content": "Circle",
           "content_l2": "Círculo",
-          "image_prompt": "A simple circle outline"
+          "image_prompt": "A simple circle outline",
+          "match_target": "Círculo"
         },
         {
           "id": "2",
           "content": "Square",
           "content_l2": "Cuadrado",
-          "image_prompt": "A simple square outline"
+          "image_prompt": "A simple square outline",
+          "match_target": "Cuadrado"
         },
         {
           "id": "3",
           "content": "Triangle",
           "content_l2": "Triángulo",
-          "image_prompt": "A simple triangle outline"
+          "image_prompt": "A simple triangle outline",
+          "match_target": "Triángulo"
         },
         {
           "id": "4",
           "content": "Rectangle",
           "content_l2": "Rectángulo",
-          "image_prompt": "A simple rectangle outline"
+          "image_prompt": "A simple rectangle outline",
+          "match_target": "Rectángulo"
         },
         {
           "id": "5",
           "content": "Star",
           "content_l2": "Estrella",
-          "image_prompt": "A simple star outline"
+          "image_prompt": "A simple star outline",
+          "match_target": "Estrella"
         }
       ]
     },

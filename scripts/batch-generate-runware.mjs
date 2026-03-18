@@ -71,8 +71,8 @@ async function callRunwareAPI(prompt) {
     {
       taskType: 'imageInference',
       numberResults: 1,
-      width: 1024,
-      height: 1024,
+      width: 512,
+      height: 512,
       steps: 9,
       CFGScale: 0,
       includeCost: true,

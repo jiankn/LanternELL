@@ -200,5 +200,26 @@
   "license": "personal-classroom-use",
   "version": "1.0",
   "created_at": "2024-07-30T10:00:00Z",
-  "updated_at": "2024-07-30T10:00:00Z"
+  "updated_at": "2024-07-30T10:00:00Z",
+  "answer_key": [
+    {
+      "worksheet_id": "ws-1",
+      "answers": {
+        "1": "Varies by student. Example: I need to locate reliable sources for my research on the history of video games.",
+        "2": "Varies by student. Example: To avoid plagiarism, I must always cite the original source of information, because it is important to give credit to the author.",
+        "3": "Varies by student. Example: When evaluating a source, I consider its authority, accuracy, and purpose to make sure it's trustworthy.",
+        "4": "Varies by student. Example: My research question is 'Do video games improve cognitive skills?', and I hope to find evidence to support that they do."
+      }
+    },
+    {
+      "worksheet_id": "ws-2",
+      "answers": {
+        "1": "reliable",
+        "2": "plagiarism",
+        "3": "paraphrase",
+        "4": "primary",
+        "5": "strengthen"
+      }
+    }
+  ]
 }

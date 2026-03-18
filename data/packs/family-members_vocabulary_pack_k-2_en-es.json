@@ -130,37 +130,43 @@
           "id": "1",
           "content": "Mom",
           "image_prompt": "A friendly woman with a warm smile.",
-          "correct_answer": "image_Mom"
+          "correct_answer": "image_Mom",
+          "match_target": "image_Mom"
         },
         {
           "id": "2",
           "content": "Dad",
           "image_prompt": "A kind man with a gentle smile.",
-          "correct_answer": "image_Dad"
+          "correct_answer": "image_Dad",
+          "match_target": "image_Dad"
         },
         {
           "id": "3",
           "content": "Sister",
           "image_prompt": "A young girl playing.",
-          "correct_answer": "image_Sister"
+          "correct_answer": "image_Sister",
+          "match_target": "image_Sister"
         },
         {
           "id": "4",
           "content": "Brother",
           "image_prompt": "A young boy playing.",
-          "correct_answer": "image_Brother"
+          "correct_answer": "image_Brother",
+          "match_target": "image_Brother"
         },
         {
           "id": "5",
           "content": "Aunt",
           "image_prompt": "A friendly woman standing next to a child.",
-          "correct_answer": "image_Aunt"
+          "correct_answer": "image_Aunt",
+          "match_target": "image_Aunt"
         },
         {
           "id": "6",
           "content": "Uncle",
           "image_prompt": "A friendly man standing next to a child.",
-          "correct_answer": "image_Uncle"
+          "correct_answer": "image_Uncle",
+          "match_target": "image_Uncle"
         }
       ]
     },

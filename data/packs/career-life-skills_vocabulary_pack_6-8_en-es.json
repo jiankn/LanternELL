@@ -104,7 +104,8 @@
             "C. Exchanging information effectively.",
             "D. Planning how to spend and save money."
           ],
-          "correct_answer": "B"
+          "correct_answer": "B",
+          "match_target": "B"
         },
         {
           "id": "2",
@@ -115,7 +116,8 @@
             "C. The sequence of jobs in a person's life.",
             "D. Organizing time between activities."
           ],
-          "correct_answer": "A"
+          "correct_answer": "A",
+          "match_target": "A"
         },
         {
           "id": "3",
@@ -126,7 +128,8 @@
             "C. Finding solutions to difficult or complex issues.",
             "D. A formal meeting for a job."
           ],
-          "correct_answer": "C"
+          "correct_answer": "C",
+          "match_target": "C"
         },
         {
           "id": "4",
@@ -137,7 +140,8 @@
             "C. Planning what you want to achieve and how to get there.",
             "D. Working together on a project."
           ],
-          "correct_answer": "C"
+          "correct_answer": "C",
+          "match_target": "C"
         },
         {
           "id": "5",
@@ -148,7 +152,8 @@
             "C. The activity of setting up a business.",
             "D. A brief summary of your work experience."
           ],
-          "correct_answer": "B"
+          "correct_answer": "B",
+          "match_target": "B"
         },
         {
           "id": "6",
@@ -159,7 +164,8 @@
             "C. Organizing your time.",
             "D. Understanding financial skills."
           ],
-          "correct_answer": "A"
+          "correct_answer": "A",
+          "match_target": "A"
         },
         {
           "id": "7",
@@ -170,7 +176,8 @@
             "C. Taking ownership of tasks.",
             "D. Working with others to create something."
           ],
-          "correct_answer": "B"
+          "correct_answer": "B",
+          "match_target": "B"
         },
         {
           "id": "8",
@@ -181,7 +188,8 @@
             "C. Analyzing information objectively and making reasoned judgments.",
             "D. Planning how to spend money."
           ],
-          "correct_answer": "C"
+          "correct_answer": "C",
+          "match_target": "C"
         },
         {
           "id": "9",
@@ -192,7 +200,8 @@
             "C. Finding solutions to issues.",
             "D. Organizing your time."
           ],
-          "correct_answer": "A"
+          "correct_answer": "A",
+          "match_target": "A"
         },
         {
           "id": "10",
@@ -203,7 +212,8 @@
             "C. Taking ownership of tasks.",
             "D. Working together on a project."
           ],
-          "correct_answer": "B"
+          "correct_answer": "B",
+          "match_target": "B"
         }
       ]
     },

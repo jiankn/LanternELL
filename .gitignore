@@ -39,3 +39,7 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated PDFs & HTML (stored in R2, not git)
+data/pdfs/*.pdf
+data/pdfs/*.html

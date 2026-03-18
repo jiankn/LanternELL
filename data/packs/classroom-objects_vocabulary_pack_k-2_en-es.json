@@ -125,31 +125,36 @@
           "id": "1",
           "content": "pencil",
           "content_l2": "lápiz",
-          "image_prompt": "A yellow pencil."
+          "image_prompt": "A yellow pencil.",
+          "match_target": "lápiz"
         },
         {
           "id": "2",
           "content": "book",
           "content_l2": "libro",
-          "image_prompt": "A closed red book."
+          "image_prompt": "A closed red book.",
+          "match_target": "libro"
         },
         {
           "id": "3",
           "content": "chair",
           "content_l2": "silla",
-          "image_prompt": "A blue classroom chair."
+          "image_prompt": "A blue classroom chair.",
+          "match_target": "silla"
         },
         {
           "id": "4",
           "content": "table",
           "content_l2": "mesa",
-          "image_prompt": "A small green table."
+          "image_prompt": "A small green table.",
+          "match_target": "mesa"
         },
         {
           "id": "5",
           "content": "crayon",
           "content_l2": "crayón",
-          "image_prompt": "A purple crayon."
+          "image_prompt": "A purple crayon.",
+          "match_target": "crayón"
         }
       ]
     },

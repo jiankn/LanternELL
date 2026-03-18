@@ -142,7 +142,8 @@
               "text_en": "Information collected during an experiment."
             }
           ],
-          "correct_answer": "A"
+          "correct_answer": "A",
+          "match_target": "Observar"
         },
         {
           "id": "2",
@@ -166,7 +167,8 @@
               "text_en": "Information collected during an experiment."
             }
           ],
-          "correct_answer": "B"
+          "correct_answer": "B",
+          "match_target": "Predecir"
         },
         {
           "id": "3",
@@ -190,7 +192,8 @@
               "text_en": "Information collected during an experiment."
             }
           ],
-          "correct_answer": "C"
+          "correct_answer": "C",
+          "match_target": "Laboratorio"
         },
         {
           "id": "4",
@@ -214,7 +217,8 @@
               "text_en": "Information collected during an experiment."
             }
           ],
-          "correct_answer": "D"
+          "correct_answer": "D",
+          "match_target": "Datos"
         },
         {
           "id": "5",
@@ -238,7 +242,8 @@
               "text_en": "The outcome or findings of a test."
             }
           ],
-          "correct_answer": "E"
+          "correct_answer": "E",
+          "match_target": "Científico/a"
         },
         {
           "id": "6",
@@ -262,7 +267,8 @@
               "text_en": "The outcome or findings of a test."
             }
           ],
-          "correct_answer": "F"
+          "correct_answer": "F",
+          "match_target": "Hipótesis"
         },
         {
           "id": "7",
@@ -286,7 +292,8 @@
               "text_en": "The outcome or findings of a test."
             }
           ],
-          "correct_answer": "G"
+          "correct_answer": "G",
+          "match_target": "Clasificar"
         },
         {
           "id": "8",
@@ -310,7 +317,8 @@
               "text_en": "The outcome or findings of a test."
             }
           ],
-          "correct_answer": "H"
+          "correct_answer": "H",
+          "match_target": "Resultados"
         }
       ]
     },
