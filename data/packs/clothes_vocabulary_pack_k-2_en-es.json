@@ -85,37 +85,43 @@
           "id": "1",
           "content": "shirt",
           "content_l2": "camisa",
-          "correct_answer": "a red t-shirt"
+          "correct_answer": "a red t-shirt",
+          "match_target": "camisa"
         },
         {
           "id": "2",
           "content": "pants",
           "content_l2": "pantalones",
-          "correct_answer": "blue denim pants"
+          "correct_answer": "blue denim pants",
+          "match_target": "pantalones"
         },
         {
           "id": "3",
           "content": "dress",
           "content_l2": "vestido",
-          "correct_answer": "a pink dress with short sleeves"
+          "correct_answer": "a pink dress with short sleeves",
+          "match_target": "vestido"
         },
         {
           "id": "4",
           "content": "shoes",
           "content_l2": "zapatos",
-          "correct_answer": "a pair of brown shoes"
+          "correct_answer": "a pair of brown shoes",
+          "match_target": "zapatos"
         },
         {
           "id": "5",
           "content": "hat",
           "content_l2": "sombrero",
-          "correct_answer": "a yellow baseball cap"
+          "correct_answer": "a yellow baseball cap",
+          "match_target": "sombrero"
         },
         {
           "id": "6",
           "content": "socks",
           "content_l2": "calcetines",
-          "correct_answer": "a pair of striped socks"
+          "correct_answer": "a pair of striped socks",
+          "match_target": "calcetines"
         }
       ]
     },

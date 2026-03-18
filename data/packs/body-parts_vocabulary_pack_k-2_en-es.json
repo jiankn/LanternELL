@@ -87,37 +87,43 @@
           "id": "1",
           "content": "head",
           "image_prompt": "A child's head",
-          "correct_answer": "A child's head"
+          "correct_answer": "A child's head",
+          "match_target": "A child's head"
         },
         {
           "id": "2",
           "content": "eye",
           "image_prompt": "A single child's eye",
-          "correct_answer": "A single child's eye"
+          "correct_answer": "A single child's eye",
+          "match_target": "A single child's eye"
         },
         {
           "id": "3",
           "content": "hand",
           "image_prompt": "A child's open hand",
-          "correct_answer": "A child's open hand"
+          "correct_answer": "A child's open hand",
+          "match_target": "A child's open hand"
         },
         {
           "id": "4",
           "content": "leg",
           "image_prompt": "A child's leg",
-          "correct_answer": "A child's leg"
+          "correct_answer": "A child's leg",
+          "match_target": "A child's leg"
         },
         {
           "id": "5",
           "content": "nose",
           "image_prompt": "A child's nose",
-          "correct_answer": "A child's nose"
+          "correct_answer": "A child's nose",
+          "match_target": "A child's nose"
         },
         {
           "id": "6",
           "content": "mouth",
           "image_prompt": "A child's smiling mouth",
-          "correct_answer": "A child's smiling mouth"
+          "correct_answer": "A child's smiling mouth",
+          "match_target": "A child's smiling mouth"
         }
       ]
     },

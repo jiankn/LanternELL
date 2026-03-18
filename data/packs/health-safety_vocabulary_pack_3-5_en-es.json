@@ -108,7 +108,8 @@
             "Un casco duro que se usa para protegerse.",
             "Una situación grave que requiere acción inmediata.",
             "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
-          ]
+          ],
+          "match_target": "Higiene"
         },
         {
           "id": "2",
@@ -127,7 +128,8 @@
             "Un casco duro que se usa para protegerse.",
             "Una situación grave que requiere acción inmediata.",
             "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
-          ]
+          ],
+          "match_target": "Gérmenes"
         },
         {
           "id": "3",
@@ -146,7 +148,8 @@
             "Un casco duro que se usa para protegerse.",
             "Una situación grave que requiere acción inmediata.",
             "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
-          ]
+          ],
+          "match_target": "Emergencia"
         },
         {
           "id": "4",
@@ -165,7 +168,8 @@
             "Un casco duro que se usa para protegerse.",
             "Una situación grave que requiere acción inmediata.",
             "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
-          ]
+          ],
+          "match_target": "Casco"
         },
         {
           "id": "5",
@@ -184,7 +188,8 @@
             "Un casco duro que se usa para protegerse.",
             "Una situación grave que requiere acción inmediata.",
             "El proceso de obtener alimentos necesarios para la salud y el crecimiento."
-          ]
+          ],
+          "match_target": "Nutrición"
         }
       ]
     },

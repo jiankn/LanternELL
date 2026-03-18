@@ -73,31 +73,36 @@
           "id": "m1",
           "content": "happy",
           "content_l2": "feliz",
-          "image_prompt": "A child smiling brightly."
+          "image_prompt": "A child smiling brightly.",
+          "match_target": "feliz"
         },
         {
           "id": "m2",
           "content": "sad",
           "content_l2": "triste",
-          "image_prompt": "A child with a frown and tears."
+          "image_prompt": "A child with a frown and tears.",
+          "match_target": "triste"
         },
         {
           "id": "m3",
           "content": "angry",
           "content_l2": "enojado/a",
-          "image_prompt": "A child with a red face and furrowed brows."
+          "image_prompt": "A child with a red face and furrowed brows.",
+          "match_target": "enojado/a"
         },
         {
           "id": "m4",
           "content": "scared",
           "content_l2": "asustado/a",
-          "image_prompt": "A child with wide eyes, hands near face."
+          "image_prompt": "A child with wide eyes, hands near face.",
+          "match_target": "asustado/a"
         },
         {
           "id": "m5",
           "content": "surprised",
           "content_l2": "sorprendido/a",
-          "image_prompt": "A child with an open mouth and wide eyes."
+          "image_prompt": "A child with an open mouth and wide eyes.",
+          "match_target": "sorprendido/a"
         }
       ]
     },

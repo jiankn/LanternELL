@@ -99,31 +99,36 @@
           "id": "1",
           "content": "run",
           "image_prompt": "a child running",
-          "correct_answer": "picture_of_child_running"
+          "correct_answer": "picture_of_child_running",
+          "match_target": "picture_of_child_running"
         },
         {
           "id": "2",
           "content": "jump",
           "image_prompt": "a child jumping",
-          "correct_answer": "picture_of_child_jumping"
+          "correct_answer": "picture_of_child_jumping",
+          "match_target": "picture_of_child_jumping"
         },
         {
           "id": "3",
           "content": "eat",
           "image_prompt": "a child eating",
-          "correct_answer": "picture_of_child_eating"
+          "correct_answer": "picture_of_child_eating",
+          "match_target": "picture_of_child_eating"
         },
         {
           "id": "4",
           "content": "drink",
           "image_prompt": "a child drinking",
-          "correct_answer": "picture_of_child_drinking"
+          "correct_answer": "picture_of_child_drinking",
+          "match_target": "picture_of_child_drinking"
         },
         {
           "id": "5",
           "content": "sleep",
           "image_prompt": "a child sleeping",
-          "correct_answer": "picture_of_child_sleeping"
+          "correct_answer": "picture_of_child_sleeping",
+          "match_target": "picture_of_child_sleeping"
         }
       ]
     },

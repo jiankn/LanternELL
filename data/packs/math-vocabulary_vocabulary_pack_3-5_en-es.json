@@ -115,61 +115,71 @@
           "id": "1",
           "content": "sum",
           "content_l2": "suma",
-          "correct_answer": "suma"
+          "correct_answer": "suma",
+          "match_target": "suma"
         },
         {
           "id": "2",
           "content": "difference",
           "content_l2": "diferencia",
-          "correct_answer": "diferencia"
+          "correct_answer": "diferencia",
+          "match_target": "diferencia"
         },
         {
           "id": "3",
           "content": "product",
           "content_l2": "producto",
-          "correct_answer": "producto"
+          "correct_answer": "producto",
+          "match_target": "producto"
         },
         {
           "id": "4",
           "content": "quotient",
           "content_l2": "cociente",
-          "correct_answer": "cociente"
+          "correct_answer": "cociente",
+          "match_target": "cociente"
         },
         {
           "id": "5",
           "content": "add",
           "content_l2": "sumar",
-          "correct_answer": "sumar"
+          "correct_answer": "sumar",
+          "match_target": "sumar"
         },
         {
           "id": "6",
           "content": "subtract",
           "content_l2": "restar",
-          "correct_answer": "restar"
+          "correct_answer": "restar",
+          "match_target": "restar"
         },
         {
           "id": "7",
           "content": "multiply",
           "content_l2": "multiplicar",
-          "correct_answer": "multiplicar"
+          "correct_answer": "multiplicar",
+          "match_target": "multiplicar"
         },
         {
           "id": "8",
           "content": "divide",
           "content_l2": "dividir",
-          "correct_answer": "dividir"
+          "correct_answer": "dividir",
+          "match_target": "dividir"
         },
         {
           "id": "9",
           "content": "equal",
           "content_l2": "igual",
-          "correct_answer": "igual"
+          "correct_answer": "igual",
+          "match_target": "igual"
         },
         {
           "id": "10",
           "content": "fraction",
           "content_l2": "fracción",
-          "correct_answer": "fracción"
+          "correct_answer": "fracción",
+          "match_target": "fracción"
         }
       ]
     },

@@ -86,42 +86,48 @@
           "content": "red",
           "content_l2": "rojo",
           "image_prompt": "A blank box to be matched with a red swatch option.",
-          "correct_answer": "red_swatch"
+          "correct_answer": "red_swatch",
+          "match_target": "rojo"
         },
         {
           "id": "2",
           "content": "blue",
           "content_l2": "azul",
           "image_prompt": "A blank box to be matched with a blue swatch option.",
-          "correct_answer": "blue_swatch"
+          "correct_answer": "blue_swatch",
+          "match_target": "azul"
         },
         {
           "id": "3",
           "content": "yellow",
           "content_l2": "amarillo",
           "image_prompt": "A blank box to be matched with a yellow swatch option.",
-          "correct_answer": "yellow_swatch"
+          "correct_answer": "yellow_swatch",
+          "match_target": "amarillo"
         },
         {
           "id": "4",
           "content": "green",
           "content_l2": "verde",
           "image_prompt": "A blank box to be matched with a green swatch option.",
-          "correct_answer": "green_swatch"
+          "correct_answer": "green_swatch",
+          "match_target": "verde"
         },
         {
           "id": "5",
           "content": "orange",
           "content_l2": "naranja",
           "image_prompt": "A blank box to be matched with an orange swatch option.",
-          "correct_answer": "orange_swatch"
+          "correct_answer": "orange_swatch",
+          "match_target": "naranja"
         },
         {
           "id": "6",
           "content": "purple",
           "content_l2": "morado",
           "image_prompt": "A blank box to be matched with a purple swatch option.",
-          "correct_answer": "purple_swatch"
+          "correct_answer": "purple_swatch",
+          "match_target": "morado"
         }
       ]
     },

@@ -98,37 +98,43 @@
           "id": "1",
           "content": "picture of a cat",
           "content_l2": "imagen de un gato",
-          "correct_answer": "cat"
+          "correct_answer": "cat",
+          "match_target": "imagen de un gato"
         },
         {
           "id": "2",
           "content": "picture of a dog",
           "content_l2": "imagen de un perro",
-          "correct_answer": "dog"
+          "correct_answer": "dog",
+          "match_target": "imagen de un perro"
         },
         {
           "id": "3",
           "content": "picture of a bird",
           "content_l2": "imagen de un pájaro",
-          "correct_answer": "bird"
+          "correct_answer": "bird",
+          "match_target": "imagen de un pájaro"
         },
         {
           "id": "4",
           "content": "picture of a fish",
           "content_l2": "imagen de un pez",
-          "correct_answer": "fish"
+          "correct_answer": "fish",
+          "match_target": "imagen de un pez"
         },
         {
           "id": "5",
           "content": "picture of a cow",
           "content_l2": "imagen de una vaca",
-          "correct_answer": "cow"
+          "correct_answer": "cow",
+          "match_target": "imagen de una vaca"
         },
         {
           "id": "6",
           "content": "picture of a pig",
           "content_l2": "imagen de un cerdo",
-          "correct_answer": "pig"
+          "correct_answer": "pig",
+          "match_target": "imagen de un cerdo"
         }
       ],
       "worksheet_id": "ws-1"

@@ -98,37 +98,44 @@
         {
           "id": "1",
           "content": "Map",
-          "content_l2": "Mapa"
+          "content_l2": "Mapa",
+          "match_target": "Mapa"
         },
         {
           "id": "2",
           "content": "Globe",
-          "content_l2": "Globo terráqueo"
+          "content_l2": "Globo terráqueo",
+          "match_target": "Globo terráqueo"
         },
         {
           "id": "3",
           "content": "Continent",
-          "content_l2": "Continente"
+          "content_l2": "Continente",
+          "match_target": "Continente"
         },
         {
           "id": "4",
           "content": "Ocean",
-          "content_l2": "Océano"
+          "content_l2": "Océano",
+          "match_target": "Océano"
         },
         {
           "id": "5",
           "content": "River",
-          "content_l2": "Río"
+          "content_l2": "Río",
+          "match_target": "Río"
         },
         {
           "id": "6",
           "content": "Mountain",
-          "content_l2": "Montaña"
+          "content_l2": "Montaña",
+          "match_target": "Montaña"
         },
         {
           "id": "7",
           "content": "City",
-          "content_l2": "Ciudad"
+          "content_l2": "Ciudad",
+          "match_target": "Ciudad"
         }
       ]
     },

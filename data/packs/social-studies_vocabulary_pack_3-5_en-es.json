@@ -104,97 +104,113 @@
           "id": "1",
           "content": "citizen",
           "content_l2": "ciudadano",
-          "correct_answer": "ciudadano"
+          "correct_answer": "ciudadano",
+          "match_target": "ciudadano"
         },
         {
           "id": "2",
           "content": "community",
           "content_l2": "comunidad",
-          "correct_answer": "comunidad"
+          "correct_answer": "comunidad",
+          "match_target": "comunidad"
         },
         {
           "id": "3",
           "content": "government",
           "content_l2": "gobierno",
-          "correct_answer": "gobierno"
+          "correct_answer": "gobierno",
+          "match_target": "gobierno"
         },
         {
           "id": "4",
           "content": "law",
           "content_l2": "ley",
-          "correct_answer": "ley"
+          "correct_answer": "ley",
+          "match_target": "ley"
         },
         {
           "id": "5",
           "content": "right",
           "content_l2": "derecho",
-          "correct_answer": "derecho"
+          "correct_answer": "derecho",
+          "match_target": "derecho"
         },
         {
           "id": "6",
           "content": "responsibility",
           "content_l2": "responsabilidad",
-          "correct_answer": "responsabilidad"
+          "correct_answer": "responsabilidad",
+          "match_target": "responsabilidad"
         },
         {
           "id": "7",
           "content": "map",
           "content_l2": "mapa",
-          "correct_answer": "mapa"
+          "correct_answer": "mapa",
+          "match_target": "mapa"
         },
         {
           "id": "8",
           "content": "globe",
           "content_l2": "globo terráqueo",
-          "correct_answer": "globo terráqueo"
+          "correct_answer": "globo terráqueo",
+          "match_target": "globo terráqueo"
         },
         {
           "id": "9",
           "content": "continent",
           "content_l2": "continente",
-          "correct_answer": "continente"
+          "correct_answer": "continente",
+          "match_target": "continente"
         },
         {
           "id": "10",
           "content": "country",
           "content_l2": "país",
-          "correct_answer": "país"
+          "correct_answer": "país",
+          "match_target": "país"
         },
         {
           "id": "11",
           "content": "state",
           "content_l2": "estado",
-          "correct_answer": "estado"
+          "correct_answer": "estado",
+          "match_target": "estado"
         },
         {
           "id": "12",
           "content": "city",
           "content_l2": "ciudad",
-          "correct_answer": "ciudad"
+          "correct_answer": "ciudad",
+          "match_target": "ciudad"
         },
         {
           "id": "13",
           "content": "history",
           "content_l2": "historia",
-          "correct_answer": "historia"
+          "correct_answer": "historia",
+          "match_target": "historia"
         },
         {
           "id": "14",
           "content": "culture",
           "content_l2": "cultura",
-          "correct_answer": "cultura"
+          "correct_answer": "cultura",
+          "match_target": "cultura"
         },
         {
           "id": "15",
           "content": "tradition",
           "content_l2": "tradición",
-          "correct_answer": "tradición"
+          "correct_answer": "tradición",
+          "match_target": "tradición"
         },
         {
           "id": "16",
           "content": "leader",
           "content_l2": "líder",
-          "correct_answer": "líder"
+          "correct_answer": "líder",
+          "match_target": "líder"
         }
       ]
     },

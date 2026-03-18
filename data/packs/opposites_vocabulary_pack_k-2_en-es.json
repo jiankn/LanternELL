@@ -87,7 +87,8 @@
             "Día",
             "Feliz"
           ],
-          "correct_answer": "Small"
+          "correct_answer": "Small",
+          "match_target": "Grande"
         },
         {
           "id": "2",
@@ -107,7 +108,8 @@
             "Noche",
             "Triste"
           ],
-          "correct_answer": "Cold"
+          "correct_answer": "Cold",
+          "match_target": "Caliente"
         },
         {
           "id": "3",
@@ -127,7 +129,8 @@
             "Día",
             "Feliz"
           ],
-          "correct_answer": "Down"
+          "correct_answer": "Down",
+          "match_target": "Arriba"
         },
         {
           "id": "4",
@@ -147,7 +150,8 @@
             "Grande",
             "Triste"
           ],
-          "correct_answer": "Night"
+          "correct_answer": "Night",
+          "match_target": "Día"
         },
         {
           "id": "5",
@@ -167,7 +171,8 @@
             "Pequeño",
             "Noche"
           ],
-          "correct_answer": "Sad"
+          "correct_answer": "Sad",
+          "match_target": "Feliz"
         }
       ]
     },

@@ -229,11 +229,15 @@ function ParentNotes({ items }: { items: ParentNote[] }) {
     );
 }
 
-function MiniBookPage({ miniBook }: { miniBook: MiniBook }) {
+function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; showHeader?: boolean }) {
     return (
         <div>
-            <h2 className="section-title">Mini-Book: {miniBook.title}</h2>
-            <p className="ws-instructions">Print double-sided, fold in half, and staple to create a mini-book.</p>
+            {showHeader && (
+                <>
+                    <h2 className="section-title">Mini-Book: {miniBook.title}</h2>
+                    <p className="ws-instructions">Print double-sided, fold in half, and staple to create a mini-book.</p>
+                </>
+            )}
             <div className="minibook-grid-new">
                 {miniBook.pages.map(page => (
                     <article key={page.page_number} className="minibook-card">
@@ -257,6 +261,10 @@ function MiniBookPage({ miniBook }: { miniBook: MiniBook }) {
 }
 
 function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: number }) {
+    const isMatching = worksheet.type === 'matching';
+    const isColoring = worksheet.type === 'coloring';
+    const isTracing = worksheet.type === 'tracing';
+
     return (
         <div>
             <div className="ws-header">
@@ -268,18 +276,71 @@ function Worksheet({ worksheet, index }: { worksheet: WorksheetItem; index: numb
             </div>
             <p className="ws-instructions">{worksheet.instructions_en}</p>
             {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{worksheet.instructions_l2}</p> : null}
-            <div className="ws-items">
-                {worksheet.items.map((item, i) => (
-                    <article key={`${item.id}-${i}`} className="ws-item">
-                        <div className="ws-item-num">{i + 1}</div>
-                        <div className="ws-item-content">
-                            <strong>{item.content}</strong>
-                            {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
-                            <div className="ws-write-line" />
-                        </div>
-                    </article>
-                ))}
-            </div>
+
+            {isMatching ? (
+                <div className="ws-matching-grid">
+                    {worksheet.items.map((item, i) => {
+                        const imgData = (item as any).image_data;
+                        return (
+                            <article key={`${item.id}-${i}`} className="ws-matching-item">
+                                <div className="ws-item-num">{i + 1}</div>
+                                {imgData ? (
+                                    <img className="ws-matching-img" src={imgData} alt={item.content} />
+                                ) : null}
+                                <strong>{item.content}</strong>
+                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
+                                <div className="ws-write-line" />
+                            </article>
+                        );
+                    })}
+                </div>
+            ) : isColoring ? (
+                <div className="ws-coloring-grid">
+                    {worksheet.items.map((item, i) => {
+                        const imgData = (item as any).image_data;
+                        return (
+                            <article key={`${item.id}-${i}`} className="ws-coloring-item">
+                                {imgData ? (
+                                    <img className="ws-coloring-img" src={imgData} alt={item.content} />
+                                ) : (
+                                    <div className="ws-coloring-placeholder">{item.content}</div>
+                                )}
+                                <div className="ws-coloring-label">
+                                    <strong>{item.content}</strong>
+                                    {item.content_l2 ? <span> / {item.content_l2}</span> : null}
+                                </div>
+                            </article>
+                        );
+                    })}
+                </div>
+            ) : isTracing ? (
+                <div className="ws-items">
+                    {worksheet.items.map((item, i) => (
+                        <article key={`${item.id}-${i}`} className="ws-tracing-item">
+                            <div className="ws-item-num">{i + 1}</div>
+                            <div className="ws-item-content">
+                                <div className="ws-tracing-word">{item.content}</div>
+                                <div className="ws-tracing-dotted">{item.content}</div>
+                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
+                                <div className="ws-write-line" />
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            ) : (
+                <div className="ws-items">
+                    {worksheet.items.map((item, i) => (
+                        <article key={`${item.id}-${i}`} className="ws-item">
+                            <div className="ws-item-num">{i + 1}</div>
+                            <div className="ws-item-content">
+                                <strong>{item.content}</strong>
+                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
+                                <div className="ws-write-line" />
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
@@ -313,11 +374,15 @@ function AnswerKeyPage({ answerKeys }: { answerKeys: AnswerKey[] }) {
                 {answerKeys.map(ak => (
                     <section key={ak.worksheet_id} className="ak-section">
                         <h3>{ak.worksheet_id}</h3>
-                        <div className="ak-grid">
-                            {Object.entries(ak.answers).map(([id, ans]) => (
-                                <div key={id} className="ak-item"><strong>{id}.</strong><span>{ans}</span></div>
-                            ))}
-                        </div>
+                        {typeof ak.answers === 'string' ? (
+                            <p className="ws-instructions-l2">{ak.answers}</p>
+                        ) : (
+                            <div className="ak-grid">
+                                {Object.entries(ak.answers).map(([id, ans]) => (
+                                    <div key={id} className="ak-item"><strong>{id}.</strong><span>{ans}</span></div>
+                                ))}
+                            </div>
+                        )}
                     </section>
                 ))}
             </div>
@@ -339,8 +404,23 @@ function TermsOfUsePage({ license }: { license: string }) {
     );
 }
 
+/** 紧凑版 Terms of Use，用于合并到其他页面底部，节省纸张 */
+function TermsOfUseCompact({ license }: { license: string }) {
+    return (
+        <div className="terms-compact">
+            <div className="terms-compact-title">📄 Terms of Use — {fmt(license)}</div>
+            <div className="terms-compact-body">
+                <span>✅ Print for your students & classroom use.</span>
+                <span>❌ Do not share, redistribute, or resell files.</span>
+                <span>🏫 School license: support@lanternell.com</span>
+            </div>
+        </div>
+    );
+}
+
 export const PageSections = {
     VocabularyCards, SentenceFrames, DialogueStrips, SpeakingPrompts,
     Labels, VisualRoutineCards, ClassroomRules, ParentNotes,
     MiniBookPage, Worksheet, TeacherNotesPage, AnswerKeyPage, TermsOfUsePage,
+    TermsOfUseCompact,
 };

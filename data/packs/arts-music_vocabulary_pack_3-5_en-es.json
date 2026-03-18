@@ -84,73 +84,85 @@
           "id": "1",
           "content": "artist",
           "content_l2": "artista",
-          "correct_answer": "artista"
+          "correct_answer": "artista",
+          "match_target": "artista"
         },
         {
           "id": "2",
           "content": "musician",
           "content_l2": "músico/a",
-          "correct_answer": "músico/a"
+          "correct_answer": "músico/a",
+          "match_target": "músico/a"
         },
         {
           "id": "3",
           "content": "paint",
           "content_l2": "pintar",
-          "correct_answer": "pintar"
+          "correct_answer": "pintar",
+          "match_target": "pintar"
         },
         {
           "id": "4",
           "content": "draw",
           "content_l2": "dibujar",
-          "correct_answer": "dibujar"
+          "correct_answer": "dibujar",
+          "match_target": "dibujar"
         },
         {
           "id": "5",
           "content": "sing",
           "content_l2": "cantar",
-          "correct_answer": "cantar"
+          "correct_answer": "cantar",
+          "match_target": "cantar"
         },
         {
           "id": "6",
           "content": "dance",
           "content_l2": "bailar",
-          "correct_answer": "bailar"
+          "correct_answer": "bailar",
+          "match_target": "bailar"
         },
         {
           "id": "7",
           "content": "instrument",
           "content_l2": "instrumento",
-          "correct_answer": "instrumento"
+          "correct_answer": "instrumento",
+          "match_target": "instrumento"
         },
         {
           "id": "8",
           "content": "sculpture",
           "content_l2": "escultura",
-          "correct_answer": "escultura"
+          "correct_answer": "escultura",
+          "match_target": "escultura"
         },
         {
           "id": "9",
           "content": "melody",
           "content_l2": "melodía",
-          "correct_answer": "melodía"
+          "correct_answer": "melodía",
+          "match_target": "melodía"
         },
         {
           "id": "10",
           "content": "rhythm",
           "content_l2": "ritmo",
-          "correct_answer": "ritmo"
+          "correct_answer": "ritmo",
+          "match_target": "ritmo"
         },
         {
           "id": "11",
           "content": "stage",
           "content_l2": "escenario",
-          "correct_answer": "escenario"
+          "correct_answer": "escenario",
+          "match_target": "escenario"
         },
         {
           "id": "12",
           "content": "audience",
           "content_l2": "audiencia",
-          "correct_answer": "audiencia"
+          "correct_answer": "audiencia",
+          "match_target": "audiencia"
         }
       ]
     },

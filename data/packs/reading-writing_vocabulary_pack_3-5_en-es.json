@@ -99,61 +99,71 @@
           "id": "1",
           "content": "Read",
           "content_l2": "Leer",
-          "correct_answer": "Leer"
+          "correct_answer": "Leer",
+          "match_target": "Leer"
         },
         {
           "id": "2",
           "content": "Write",
           "content_l2": "Escribir",
-          "correct_answer": "Escribir"
+          "correct_answer": "Escribir",
+          "match_target": "Escribir"
         },
         {
           "id": "3",
           "content": "Book",
           "content_l2": "Libro",
-          "correct_answer": "Libro"
+          "correct_answer": "Libro",
+          "match_target": "Libro"
         },
         {
           "id": "4",
           "content": "Story",
           "content_l2": "Historia",
-          "correct_answer": "Historia"
+          "correct_answer": "Historia",
+          "match_target": "Historia"
         },
         {
           "id": "5",
           "content": "Author",
           "content_l2": "Autor/a",
-          "correct_answer": "Autor/a"
+          "correct_answer": "Autor/a",
+          "match_target": "Autor/a"
         },
         {
           "id": "6",
           "content": "Illustrator",
           "content_l2": "Ilustrador/a",
-          "correct_answer": "Ilustrador/a"
+          "correct_answer": "Ilustrador/a",
+          "match_target": "Ilustrador/a"
         },
         {
           "id": "7",
           "content": "Sentence",
           "content_l2": "Oración",
-          "correct_answer": "Oración"
+          "correct_answer": "Oración",
+          "match_target": "Oración"
         },
         {
           "id": "8",
           "content": "Word",
           "content_l2": "Palabra",
-          "correct_answer": "Palabra"
+          "correct_answer": "Palabra",
+          "match_target": "Palabra"
         },
         {
           "id": "9",
           "content": "Paragraph",
           "content_l2": "Párrafo",
-          "correct_answer": "Párrafo"
+          "correct_answer": "Párrafo",
+          "match_target": "Párrafo"
         },
         {
           "id": "10",
           "content": "Edit",
           "content_l2": "Editar",
-          "correct_answer": "Editar"
+          "correct_answer": "Editar",
+          "match_target": "Editar"
         }
       ]
     },
