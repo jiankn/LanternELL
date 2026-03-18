@@ -1,0 +1,1489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        @page { size: letter; margin: 0; }
+        .page-break-after { page-break-after: always; }
+        .page-break-inside-avoid { page-break-inside: avoid; }
+    </style>
+</head>
+<body>
+    <html lang="en"><head><meta charSet="utf-8"/><title>K-2 Progress Report Parent Communication Templates</title><style>
+    :root {
+      --primary: #FF6B8A; --primary-light: #FFF0F3;
+      --secondary: #7DD3C0; --secondary-light: #EDFAF6;
+      --accent: #FFD166; --accent-light: #FFFDE8;
+      --text: #2D2D3F; --text-secondary: #6B7280;
+      --bg: #FFFDF7; --page-bg: #FFFDF7; --border: #F0E6E0;
+    }
+  </style><style>
+  @import url(&#x27;https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Baloo+2:wght@400;500;600;700;800&amp;family=Comic+Neue:wght@300;400;700&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap&#x27;);
+
+  @page { size: Letter; margin: 0; }
+  @media print { @page { size: Letter; margin: 0; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body.pack-body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: &#x27;Inter&#x27;, system-ui, sans-serif;
+  }
+
+  /* === PAGE FRAME === */
+  .pdf-page {
+    position: relative;
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--bg);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .pdf-page:last-child { border-bottom: none; }
+
+  /* Brand bar at top */
+  .brand-bar {
+    height: 6px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary, var(--primary)) 50%, var(--accent, var(--primary)) 100%);
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0.55in;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .page-header .brand-name {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .page-content {
+    flex: 1;
+    padding: 0.2in 0.5in 0.15in;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0.55in;
+    font-size: 10px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .page-footer .site-url {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* === WATERMARK (sample) === */
+  .watermark {
+    position: absolute;
+    bottom: 1.2in;
+    right: 0.4in;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.06);
+    transform: rotate(-12deg);
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0.05em;
+  }
+
+  /* Sample CTA banner */
+  .sample-cta {
+    background: linear-gradient(135deg, var(--primary), var(--secondary, var(--primary)));
+    color: white;
+    text-align: center;
+    padding: 14px 0.55in;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .sample-cta a { color: white; text-decoration: underline; }
+
+  /* === TYPOGRAPHY === */
+  h1 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  h2.section-title {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--text);
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+  }
+  h3 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  /* === COVER PAGE === */
+  .cover-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 9.2in;
+  }
+  .cover-hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light, var(--primary-light)) 100%);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    text-align: center;
+  }
+  .cover-hero .eyebrow {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .cover-hero h1 { font-size: 38px; margin-bottom: 14px; }
+  .cover-hero .lead {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .cover-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .meta-pill {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .meta-pill .meta-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .meta-pill .meta-value {
+    display: block;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .cover-includes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+  }
+  .cover-includes-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .cover-includes-box h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--primary);
+  }
+  .cover-includes-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .cover-includes-box li {
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-secondary);
+  }
+  .cover-includes-box li::before {
+    content: &#x27;✓&#x27;;
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .cover-includes-box p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* === VOCABULARY CARDS === */
+  .vocab-container {
+    width: 100%;
+  }
+  .vocab-row {
+    display: flex;
+    width: 100%;
+  }
+  .vocab-cell {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+  }
+
+  /* ✂️ Horizontal cut line between rows */
+  .cut-line-h {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    margin: 2px 0;
+  }
+  .cut-line-scissors {
+    font-size: 16px;
+    color: #999;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+  .cut-line-dash {
+    flex: 1;
+    height: 0;
+    border-top: 2px dashed #BBBBBB;
+  }
+
+  /* ✂️ Vertical cut line between columns */
+  .cut-line-v {
+    width: 0;
+    align-self: stretch;
+    border-left: 2px dashed #BBBBBB;
+    margin: 8px 2px;
+    flex-shrink: 0;
+  }
+
+  .vocab-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 18px;
+    background: var(--card-bg, #fff);
+    padding: 14px;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 180px;
+    flex: 1;
+  }
+  .vocab-card .card-num {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .vocab-card .illust-area {
+    width: 100%;
+    height: 100px;
+    border-radius: 14px;
+    background: var(--card-bg, #f8f8f8);
+    border: 2px dashed var(--card-border, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .vocab-card .word-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .vocab-card .word-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .vocab-img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  /* === SENTENCE FRAMES === */
+  .frames-list { display: grid; gap: 10px; }
+  .frame-card {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg);
+    padding: 14px;
+    border-left: 4px solid var(--primary);
+  }
+  .frame-num {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .frame-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .frame-card p { font-size: 15px; color: var(--primary); margin-top: 4px; }
+
+  /* === WORKSHEETS === */
+  .ws-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+  .ws-type-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-top: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .ws-name-box {
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 4px;
+    min-width: 200px;
+  }
+  .ws-instructions {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    page-break-after: avoid;
+  }
+  .ws-instructions-l2 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 20px;
+    page-break-after: avoid;
+  }
+  .ws-items { display: grid; gap: 12px; }
+  .ws-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--bg);
+  }
+  .ws-item-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 18px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  .ws-item-content strong {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 18px;
+    display: block;
+  }
+  .ws-item-content .ws-l2 {
+    font-size: 15px;
+    color: var(--primary);
+    margin: 4px 0 12px;
+  }
+  .ws-write-line {
+    height: 20px;
+    border-bottom: 2px dotted var(--border);
+    margin-top: 8px;
+  }
+
+  /* Matching worksheet: grid with images */
+  .ws-matching-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .ws-matching-item {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    background: var(--bg);
+    text-align: center;
+  }
+  .ws-matching-item .ws-item-num {
+    margin: 0 auto 8px;
+  }
+  .ws-matching-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .ws-matching-item strong {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    display: block;
+  }
+  .ws-matching-item .ws-write-line {
+    margin-top: 6px;
+  }
+
+  /* Coloring worksheet: large images */
+  .ws-coloring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .ws-coloring-item {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+  }
+  .ws-coloring-img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .ws-coloring-placeholder {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .ws-coloring-label {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .ws-coloring-label span {
+    font-weight: 400;
+    color: var(--primary);
+  }
+
+  /* Tracing worksheet: dotted text */
+  .ws-tracing-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--bg);
+  }
+  .ws-tracing-word {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .ws-tracing-dotted {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  /* === LABELS === */
+  .labels-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .label-card-new {
+    border: 3px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+  }
+  .label-card-new .label-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .label-card-new .label-l2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .label-card-new .label-cat {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+  }
+
+  /* === MINI BOOK === */
+  .minibook-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .minibook-card {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    background: var(--bg);
+    padding: 14px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+  }
+  .minibook-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: right;
+    margin-bottom: 6px;
+  }
+  .minibook-illust {
+    flex: 1;
+    min-height: 120px;
+    max-height: 160px;
+    border: 2px dashed var(--card-border, #ddd);
+    border-radius: 10px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-style: italic;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .minibook-illust img {
+    width: auto;
+    height: 152px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .minibook-text {
+    flex-shrink: 0;
+  }
+  .minibook-text .text-en {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.45;
+  }
+  .minibook-text .text-l2 {
+    font-size: 13px;
+    color: var(--primary);
+    line-height: 1.45;
+  }
+  .minibook-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  /* === DIALOGUE STRIPS === */
+  .dialogue-list { display: grid; gap: 14px; }
+  .dialogue-card {
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    padding: 16px;
+  }
+  .dialogue-ctx {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .dialogue-speakers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .spk { display: flex; gap: 10px; align-items: flex-start; }
+  .spk-badge {
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-weight: 800; font-size: 13px; flex-shrink: 0;
+  }
+  .spk-a .spk-badge { background: #E0D5F5; color: #5B3E9E; }
+  .spk-b .spk-badge { background: #D5EEE0; color: #2E7D4F; }
+  .spk strong { font-size: 15px; display: block; }
+  .spk p { font-size: 13px; color: var(--primary); margin-top: 2px; }
+
+  /* === TEACHER NOTES === */
+  .notes-grid { display: grid; gap: 14px; }
+  .note-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .note-section h3 {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .note-section p, .note-section li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .note-section ul { padding-left: 18px; }
+  .note-section li { margin-bottom: 4px; }
+
+  /* === ANSWER KEY === */
+  .answer-list { display: grid; gap: 14px; }
+  .ak-section {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: var(--bg);
+  }
+  .ak-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 12px; }
+  .ak-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .ak-item {
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .ak-item strong { color: var(--text); margin-right: 6px; }
+  .ak-item span { color: var(--text-secondary); }
+
+  /* === PARENT NOTES === */
+  .parent-notes-list { display: grid; gap: 16px; }
+  .pn-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    background: var(--bg);
+  }
+  .pn-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .pn-header strong { font-size: 16px; }
+  .pn-type-badge {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary);
+    background: var(--primary-light);
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .pn-card p { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .pn-translated {
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .pn-sig { margin-top: 14px; font-size: 13px; color: var(--text-secondary); }
+  .pn-response { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+
+  /* === SPEAKING PROMPTS / ROUTINE / RULES === */
+  .prompt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .prompt-card {
+    border: 2px solid var(--card-border, var(--border));
+    border-radius: 20px;
+    background: var(--card-bg, #fff);
+    padding: 18px;
+    min-height: 160px;
+  }
+  .prompt-card .card-num { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 8px; }
+  .prompt-card h3 { font-size: 17px; margin-bottom: 4px; }
+  .prompt-card p { font-size: 15px; color: var(--primary); margin-top: 2px; }
+  .prompt-card .visual-cue {
+    margin-top: 10px; font-size: 11px; font-style: italic; color: var(--text-secondary);
+    border-top: 1px dashed var(--border); padding-top: 8px;
+  }
+
+  .routine-grid-new { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .routine-card-new {
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg);
+    padding: 18px; text-align: center;
+  }
+  .routine-card-new .time-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 6px; }
+  .routine-card-new .icon-area {
+    width: 60px; height: 60px; margin: 0 auto 10px;
+    border-radius: 50%; background: var(--primary-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--text-secondary);
+  }
+  .routine-img-area {
+    width: 100%; display: flex; justify-content: center; margin-bottom: 10px;
+  }
+  .routine-img {
+    width: 90px; height: 90px; object-fit: contain; border-radius: 12px;
+  }
+  .routine-card-new h3 { font-size: 17px; margin-bottom: 2px; }
+  .routine-card-new p { font-size: 15px; color: var(--primary); }
+
+  .rules-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rule-card {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    border: 2px solid var(--border); border-radius: 20px; background: var(--bg); padding: 18px;
+    min-height: 120px;
+  }
+  .rule-num {
+    width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: var(--primary); color: white;
+    font-weight: 900; font-size: 18px; font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    margin-bottom: 8px;
+  }
+  .rule-img-area {
+    width: 100%; display: flex; justify-content: center; margin-bottom: 10px;
+  }
+  .rule-img {
+    width: 80px; height: 80px; object-fit: contain; border-radius: 12px;
+  }
+  .rule-text { width: 100%; }
+  .rule-card h3 { font-size: 17px; margin-bottom: 2px; }
+  .rule-card p { font-size: 15px; color: var(--primary); }
+
+  /* === TERMS OF USE === */
+  .terms-grid { display: grid; gap: 14px; }
+  .terms-section {
+    border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: var(--bg);
+  }
+  .terms-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 10px; }
+  .terms-section p, .terms-section li { font-size: 14px; line-height: 1.7; color: var(--text-secondary); }
+  .terms-section ul { padding-left: 18px; }
+  .terms-section li { margin-bottom: 4px; }
+
+  /* === COMPACT TERMS (合并到其他页面底部) === */
+  .terms-compact {
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 2px dashed var(--border);
+  }
+  .terms-compact-title {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .terms-compact-body {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .terms-compact-body span {
+    white-space: nowrap;
+  }
+
+  /* ============================================================
+     AGE-BAND SPECIFIC OVERRIDES
+     K-2: Claymorphism 粘土糖果风 (Fredoka + Nunito)
+     3-5: Neubrutalism 新野兽派 (Baloo 2 + Comic Neue)
+     6-8: Clean Modern 简约成熟风 (Inter + Nunito)
+     ============================================================ */
+
+  /* === K-2: CLAYMORPHISM === */
+  body.age-k2 {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  body.age-k2 h1,
+  body.age-k2 h2.section-title,
+  body.age-k2 h3,
+  body.age-k2 .vocab-card .word-en,
+  body.age-k2 .vocab-card .word-l2,
+  body.age-k2 .label-card-new .label-en,
+  body.age-k2 .label-card-new .label-l2,
+  body.age-k2 .meta-pill .meta-value,
+  body.age-k2 .frame-num,
+  body.age-k2 .ws-item-num,
+  body.age-k2 .rule-num {
+    font-family: &#x27;Fredoka&#x27;, &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+
+  body.age-k2 .brand-bar {
+    height: 8px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, #FF6B8A, #FFD166, #7DD3C0, #B8A9E8, #FFB5C8);
+  }
+
+  body.age-k2 .vocab-card {
+    border-width: 3px;
+    border-radius: 24px;
+    box-shadow:
+      inset -2px -2px 6px rgba(0,0,0,0.05),
+      4px 4px 12px rgba(0,0,0,0.07);
+  }
+  body.age-k2 .vocab-card .illust-area {
+    border-radius: 18px;
+  }
+  body.age-k2 .cover-hero { border-radius: 28px; }
+  body.age-k2 .meta-pill { border-radius: 20px; }
+  body.age-k2 .cover-includes-box { border-radius: 20px; }
+  body.age-k2 .frame-card { border-radius: 18px; border-left-width: 5px; }
+  body.age-k2 .ws-item { border-radius: 18px; }
+  body.age-k2 .label-card-new {
+    border-width: 3px;
+    border-radius: 24px;
+    box-shadow:
+      inset -2px -2px 6px rgba(0,0,0,0.05),
+      4px 4px 12px rgba(0,0,0,0.07);
+  }
+  body.age-k2 .prompt-card {
+    border-width: 3px;
+    border-radius: 24px;
+    box-shadow:
+      inset -2px -2px 6px rgba(0,0,0,0.05),
+      4px 4px 12px rgba(0,0,0,0.07);
+  }
+  body.age-k2 .minibook-card { border-radius: 18px; }
+  body.age-k2 .dialogue-card { border-radius: 20px; }
+  body.age-k2 .note-section { border-radius: 20px; }
+  body.age-k2 .ak-section { border-radius: 20px; }
+  body.age-k2 .terms-section { border-radius: 20px; }
+  body.age-k2 .routine-card-new { border-radius: 24px; }
+  body.age-k2 .rule-card { border-radius: 24px; }
+  body.age-k2 .pn-card { border-radius: 20px; }
+
+  body.age-k2 .ws-match-left-item, body.age-k2 .ws-match-right-item,
+  body.age-k2 .ws-match-def-item { border-radius: 16px; }
+  body.age-k2 .ws-word-bank { border-radius: 18px; }
+  body.age-k2 .ws-cat-word-pool { border-radius: 18px; }
+  body.age-k2 .ws-cat-box { border-radius: 18px; }
+
+  body.age-k2 .cut-line-dash { border-top-style: dotted; }
+
+  body.age-k2 .frame-num,
+  body.age-k2 .ws-item-num,
+  body.age-k2 .rule-num {
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
+  }
+
+  /* === 3-5: NEUBRUTALISM === */
+  body.age-35 {
+    font-family: &#x27;Comic Neue&#x27;, &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+  body.age-35 h1,
+  body.age-35 h2.section-title,
+  body.age-35 h3,
+  body.age-35 .vocab-card .word-en,
+  body.age-35 .vocab-card .word-l2,
+  body.age-35 .label-card-new .label-en,
+  body.age-35 .label-card-new .label-l2,
+  body.age-35 .meta-pill .meta-value,
+  body.age-35 .frame-num,
+  body.age-35 .ws-item-num,
+  body.age-35 .rule-num {
+    font-family: &#x27;Baloo 2&#x27;, &#x27;Nunito&#x27;, system-ui, sans-serif;
+  }
+
+  body.age-35 .brand-bar {
+    height: 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      #FF5252 0%, #FF5252 25%,
+      #2196F3 25%, #2196F3 50%,
+      #FFEB3B 50%, #FFEB3B 75%,
+      #4CAF50 75%, #4CAF50 100%
+    );
+  }
+
+  body.age-35 .vocab-card {
+    border: 3px solid #2D2D2D;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+  body.age-35 .vocab-card .illust-area {
+    border: 2px solid #2D2D2D;
+    border-radius: 12px;
+  }
+  body.age-35 .cover-hero {
+    border: 3px solid #2D2D2D;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #2D2D2D;
+  }
+  body.age-35 .meta-pill {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .cover-includes-box {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .frame-card {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    border-left: 5px solid var(--primary);
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .ws-item {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .label-card-new {
+    border: 3px solid #2D2D2D;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+  body.age-35 .prompt-card {
+    border: 3px solid #2D2D2D;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+  body.age-35 .minibook-card {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .dialogue-card {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .note-section {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .ak-section {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .terms-section {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .routine-card-new {
+    border: 2px solid #2D2D2D;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+  body.age-35 .rule-card {
+    border: 2px solid #2D2D2D;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px #2D2D2D;
+  }
+  body.age-35 .pn-card {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+
+  body.age-35 .ws-match-left-item, body.age-35 .ws-match-right-item,
+  body.age-35 .ws-match-def-item {
+    border: 2px solid #2D2D2D;
+    border-radius: 12px;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+  body.age-35 .ws-word-bank {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .ws-word-bank-chip, body.age-35 .ws-cat-chip {
+    border: 2px solid #2D2D2D;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+  body.age-35 .ws-cat-word-pool {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+  body.age-35 .ws-cat-box {
+    border: 2px solid #2D2D2D;
+    border-radius: 14px;
+    box-shadow: 3px 3px 0px #2D2D2D;
+  }
+
+  body.age-35 .cut-line-dash { border-top: 3px dashed #2D2D2D; }
+  body.age-35 .cut-line-v { border-left: 3px dashed #2D2D2D; }
+
+  body.age-35 .page-header { border-bottom: 2px solid #2D2D2D; }
+  body.age-35 .page-footer { border-top: 2px solid #2D2D2D; }
+
+  body.age-35 h2.section-title {
+    border-bottom: 4px solid var(--primary);
+  }
+
+  body.age-35 .frame-num,
+  body.age-35 .ws-item-num {
+    border: 2px solid #2D2D2D;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+  body.age-35 .rule-num {
+    border: 2px solid #2D2D2D;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+
+  body.age-35 .ws-type-badge {
+    border: 2px solid #2D2D2D;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+  body.age-35 .cover-hero .eyebrow {
+    border: 2px solid #2D2D2D;
+    box-shadow: 2px 2px 0px #2D2D2D;
+  }
+
+  /* === 6-8: CLEAN MODERN === */
+  body.age-68 {
+    font-family: &#x27;Inter&#x27;, system-ui, sans-serif;
+  }
+  body.age-68 h1,
+  body.age-68 h2.section-title,
+  body.age-68 h3 {
+    font-family: &#x27;Nunito&#x27;, &#x27;Inter&#x27;, system-ui, sans-serif;
+  }
+
+  body.age-68 .brand-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  }
+
+  body.age-68 .vocab-card {
+    border-width: 1.5px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  body.age-68 .vocab-card .illust-area {
+    border-radius: 10px;
+  }
+  body.age-68 .cover-hero { border-radius: 16px; border-width: 1.5px; }
+  body.age-68 .meta-pill { border-radius: 12px; }
+  body.age-68 .cover-includes-box { border-radius: 12px; }
+  body.age-68 .frame-card { border-radius: 10px; }
+  body.age-68 .ws-item { border-radius: 10px; }
+  body.age-68 .label-card-new {
+    border-width: 2px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  body.age-68 .prompt-card {
+    border-width: 2px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  body.age-68 .minibook-card { border-radius: 10px; }
+  body.age-68 .dialogue-card { border-radius: 12px; }
+  body.age-68 .note-section { border-radius: 12px; }
+  body.age-68 .ak-section { border-radius: 12px; }
+  body.age-68 .terms-section { border-radius: 12px; }
+  body.age-68 .routine-card-new { border-radius: 14px; }
+  body.age-68 .rule-card { border-radius: 14px; }
+  body.age-68 .pn-card { border-radius: 12px; }
+
+  body.age-68 .ws-match-left-item, body.age-68 .ws-match-right-item,
+  body.age-68 .ws-match-def-item { border-radius: 8px; }
+  body.age-68 .ws-word-bank { border-radius: 10px; }
+  body.age-68 .ws-cat-word-pool { border-radius: 10px; }
+  body.age-68 .ws-cat-box { border-radius: 10px; }
+
+  body.age-68 .vocab-card .word-en { font-size: 22px; }
+  body.age-68 .vocab-card .word-l2 { font-size: 18px; }
+  body.age-68 .label-card-new .label-en { font-size: 26px; }
+  body.age-68 .label-card-new .label-l2 { font-size: 20px; }
+
+  /* === MATCHING WORKSHEET: Two-column draw-line layout === */
+  .ws-match-columns {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .ws-match-col {
+    flex: 1;
+  }
+  .ws-match-line-area {
+    width: 60px;
+    flex-shrink: 0;
+  }
+  .ws-match-col-header {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-bottom: 2px solid var(--primary);
+  }
+  .ws-match-left-item, .ws-match-right-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    background: var(--bg);
+    min-height: 44px;
+  }
+  .ws-match-num {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 800; font-size: 14px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    flex-shrink: 0;
+  }
+  .ws-match-letter {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: var(--secondary-light, var(--primary-light));
+    color: var(--secondary, var(--primary));
+    font-weight: 800; font-size: 14px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    flex-shrink: 0;
+  }
+  .ws-match-word {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .ws-match-img {
+    width: 56px; height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .ws-match-img-placeholder {
+    width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    font-size: 18px; color: var(--text-secondary);
+  }
+  .ws-match-answer-blank {
+    margin-left: auto;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Matching definition variant (no line area, side by side) */
+  .ws-match-def {
+    gap: 16px;
+  }
+  .ws-match-def .ws-match-col:first-child {
+    flex: 0.8;
+  }
+  .ws-match-def .ws-match-col:last-child {
+    flex: 1.2;
+  }
+  .ws-match-def-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    background: var(--bg);
+  }
+  .ws-match-def-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  /* === FILL-BLANK WORD BANK === */
+  .ws-word-bank {
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .ws-word-bank-label {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+  .ws-word-bank-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ws-word-bank-chip {
+    display: inline-block;
+    background: white;
+    border: 1.5px solid var(--primary);
+    border-radius: 100px;
+    padding: 4px 14px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* === CATEGORIZING WORKSHEET === */
+  .ws-categorize {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ws-cat-word-pool {
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+    padding: 14px 16px;
+    background: var(--primary-light);
+  }
+  .ws-cat-pool-label {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .ws-cat-pool-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ws-cat-chip {
+    display: inline-block;
+    background: white;
+    border: 1.5px solid var(--primary);
+    border-radius: 100px;
+    padding: 4px 14px;
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .ws-cat-boxes {
+    display: grid;
+    gap: 12px;
+  }
+  .ws-cat-box {
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--bg);
+    min-height: 140px;
+  }
+  .ws-cat-box-header {
+    font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--primary);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 12px;
+  }
+  .ws-cat-box-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* === BREAK-INSIDE AVOID: 防止卡片被截断跨页 === */
+  .vocab-card, .vocab-cell,
+  .frame-card,
+  .dialogue-card,
+  .prompt-card,
+  .label-card-new,
+  .routine-card-new,
+  .rule-card,
+  .pn-card,
+  .minibook-card,
+  .ws-item, .ws-matching-item, .ws-coloring-item, .ws-tracing-item,
+  .ws-match-left-item, .ws-match-right-item, .ws-match-def-item,
+  .ws-word-bank, .ws-cat-word-pool, .ws-cat-box,
+  .note-section,
+  .ak-section,
+  .terms-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style></head><body class="pack-body age-k2"><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Cover</span><span>📄 Printable Pack</span></header><main class="page-content"><div class="cover-page"><div class="cover-hero"><div class="eyebrow">EN-ES Printable Resource</div><h1>K-2 Progress Report Parent Communication Templates</h1><p class="lead">A set of bilingual (English-Spanish) communication templates for K-2 teachers to use when sharing student progress reports with families. Includes notes for various common topics.</p></div><div class="cover-meta-grid"><div class="meta-pill"><span class="meta-label">Topic</span><span class="meta-value">Progress Report</span></div><div class="meta-pill"><span class="meta-label">Age Band</span><span class="meta-value">K-2</span></div><div class="meta-pill"><span class="meta-label">Pack Type</span><span class="meta-value">parent communication</span></div><div class="meta-pill"><span class="meta-label">Language</span><span class="meta-value">EN-ES</span></div></div><div class="cover-includes"><div class="cover-includes-box"><h3>✨ What&#x27;s Inside</h3><ul><li>7 parent notes</li><li>Teacher notes &amp; answer key</li></ul></div><div class="cover-includes-box"><h3>📖 How to Use</h3><p>These templates can be used as cover letters for progress reports, or as stand-alone notes to address specific topics with parents. Tailor the bracketed information ([...]) to individual student needs or classroom-wide announcements. For notes marked &#x27;response_section: true&#x27;, ensure to include a dedicated space for parent comments or signatures.</p></div></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 1 / 6</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Parent Notes 1</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Parent Communication</h2><div class="parent-notes-list"><article class="pn-card"><div class="pn-header"><strong>Welcome to Your Child&#x27;s Progress Report!</strong><span class="pn-type-badge">welcome</span></div><p>Dear Families,
+
+We are excited to share your child&#x27;s progress report for this marking period. This report is a snapshot of their growth, achievements, and areas where we can continue to support them together. We celebrate their hard work and dedication!
+
+Please take some time to review the report. We value our partnership with you in your child&#x27;s educational journey.
+
+Sincerely,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>¡Bienvenidos al Informe de Progreso de su Hijo/a!</strong><p>Estimadas familias,
+
+Nos complace compartir el informe de progreso de su hijo(a) para este período. Este informe es una instantánea de su crecimiento, logros y áreas donde podemos seguir apoyándolos juntos. ¡Celebramos su arduo trabajo y dedicación!
+
+Por favor, tómense un tiempo para revisar el informe. Valoramos nuestra colaboración con ustedes en el camino educativo de su hijo(a).
+
+Atentamente,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig"></div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article><article class="pn-card"><div class="pn-header"><strong>Homework and Learning at Home</strong><span class="pn-type-badge">homework</span></div><p>Dear Families,
+
+Homework plays an important role in reinforcing what your child learns in class. We encourage you to create a quiet space and a consistent routine for homework time. If you have any questions or if your child is consistently struggling with assignments, please let us know. We are here to help!
+
+Thank you for your support,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Tareas y Aprendizaje en Casa</strong><p>Estimadas familias,
+
+La tarea juega un papel importante en el refuerzo de lo que su hijo(a) aprende en clase. Les animamos a crear un espacio tranquilo y una rutina constante para la hora de la tarea. Si tienen alguna pregunta o si su hijo(a) tiene dificultades constantes con las tareas, por favor háganoslo saber. ¡Estamos aquí para ayudar!
+
+Gracias por su apoyo,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 2 / 6</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Parent Notes 2</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Parent Communication</h2><div class="parent-notes-list"><article class="pn-card"><div class="pn-header"><strong>Classroom Behavior Update</strong><span class="pn-type-badge">behavior</span></div><p>Dear Families,
+
+We are proud of the positive choices your child is making in the classroom. They are showing great progress in [mention a positive behavior, e.g., &#x27;sharing with friends&#x27; or &#x27;following instructions&#x27;]. We also want to work together on [mention an area for growth, e.g., &#x27;raising a hand before speaking&#x27; or &#x27;keeping hands to self&#x27;]. Your support at home in reinforcing these expectations is invaluable.
+
+Please feel free to reach out to discuss this further.
+
+Sincerely,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Actualización sobre el Comportamiento en Clase</strong><p>Estimadas familias,
+
+Estamos orgullosos de las decisiones positivas que su hijo(a) está tomando en el aula. Están mostrando un gran progreso en [mencione un comportamiento positivo, ej. &#x27;compartir con amigos&#x27; o &#x27;seguir instrucciones&#x27;]. También queremos trabajar juntos en [mencione un área de crecimiento, ej. &#x27;levantar la mano antes de hablar&#x27; o &#x27;mantener las manos quietas&#x27;]. Su apoyo en casa para reforzar estas expectativas es invaluable.
+
+No duden en comunicarse para discutir esto más a fondo.
+
+Atentamente,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article><article class="pn-card"><div class="pn-header"><strong>Academic Progress Report</strong><span class="pn-type-badge">progress</span></div><p>Dear Families,
+
+Your child continues to make wonderful progress in their learning journey! We&#x27;ve seen significant growth in [mention a subject or skill, e.g., &#x27;reading fluency&#x27; or &#x27;math problem-solving&#x27;]. We are so proud of their efforts and achievements. The attached report provides more details on their academic development.
+
+We look forward to continuing to nurture their love for learning.
+
+Sincerely,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Informe de Progreso Académico</strong><p>Estimadas familias,
+
+¡Su hijo(a) sigue haciendo un progreso maravilloso en su viaje de aprendizaje! Hemos visto un crecimiento significativo en [mencione una materia o habilidad, ej. &#x27;fluidez lectora&#x27; o &#x27;resolución de problemas matemáticos&#x27;]. Estamos muy orgullosos de sus esfuerzos y logros. El informe adjunto proporciona más detalles sobre su desarrollo académico.
+
+Esperamos seguir cultivando su amor por el aprendizaje.
+
+Atentamente,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 3 / 6</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Parent Notes 3</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Parent Communication</h2><div class="parent-notes-list"><article class="pn-card"><div class="pn-header"><strong>Classroom Supply Request</strong><span class="pn-type-badge">supply request</span></div><p>Dear Families,
+
+We are running low on some essential classroom supplies that help make our learning activities engaging and fun. We would greatly appreciate it if you could help by sending in [list specific items, e.g., &#x27;a box of tissues&#x27; or &#x27;glue sticks and markers&#x27;]. Your generosity helps ensure we have everything we need for a productive classroom. 
+
+Thank you for your support!
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Solicitud de Materiales para el Aula</strong><p>Estimadas familias,
+
+Nos estamos quedando sin algunos materiales esenciales en el aula que nos ayudan a que nuestras actividades de aprendizaje sean atractivas y divertidas. Agradeceríamos mucho si pudieran ayudar enviando [liste artículos específicos, ej. &#x27;una caja de pañuelos&#x27; o &#x27;barras de pegamento y marcadores&#x27;]. Su generosidad ayuda a asegurar que tengamos todo lo que necesitamos para un aula productiva.
+
+¡Gracias por su apoyo!
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article><article class="pn-card"><div class="pn-header"><strong>Important Message Regarding Attendance</strong><span class="pn-type-badge">attendance</span></div><p>Dear Families,
+
+Regular attendance is crucial for your child&#x27;s success in school. Every day in class brings new learning experiences and helps build a strong foundation. We&#x27;ve noticed [mention a pattern, e.g., &#x27;a few absences this month&#x27; or &#x27;some late arrivals&#x27;]. Please ensure your child arrives on time and attends school daily unless they are genuinely ill.
+
+If you are experiencing challenges with attendance, please contact us so we can offer support.
+
+Sincerely,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Mensaje Importante sobre la Asistencia</strong><p>Estimadas familias,
+
+La asistencia regular es crucial para el éxito escolar de su hijo(a). Cada día en clase trae nuevas experiencias de aprendizaje y ayuda a construir una base sólida. Hemos notado [mencione un patrón, ej. &#x27;algunas ausencias este mes&#x27; o &#x27;algunos retrasos&#x27;]. Por favor, asegúrense de que su hijo(a) llegue a tiempo y asista a la escuela diariamente a menos que esté realmente enfermo/a.
+
+Si tienen dificultades con la asistencia, por favor contáctennos para que podamos ofrecer apoyo.
+
+Atentamente,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div><div class="pn-response"><strong>Parent Response / Respuesta:</strong><div class="ws-write-line"></div><div class="ws-write-line"></div><div class="ws-write-line"></div></div></article></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 4 / 6</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Parent Notes 4</span><span>📄 Printable Pack</span></header><main class="page-content"><div><h2 class="section-title">Parent Communication</h2><div class="parent-notes-list"><article class="pn-card"><div class="pn-header"><strong>General Classroom Update</strong><span class="pn-type-badge">general</span></div><p>Dear Families,
+
+Just a friendly reminder about [mention general information, e.g., &#x27;our upcoming field trip on [Date]&#x27; or &#x27;the school&#x27;s annual book fair next week&#x27;]. We also want to thank you for your continued involvement and support in our classroom community. Your partnership makes a huge difference!
+
+Please let us know if you have any questions.
+
+Sincerely,
+[Teacher&#x27;s Name]</p><div class="pn-translated"><strong>Actualización General del Aula</strong><p>Estimadas familias,
+
+Solo un recordatorio amistoso sobre [mencione información general, ej. &#x27;nuestra próxima excursión el [Fecha]&#x27; o &#x27;la feria anual del libro de la escuela la próxima semana&#x27;]. También queremos agradecerles por su continua participación y apoyo en nuestra comunidad de aula. ¡Su colaboración marca una gran diferencia!
+
+Por favor, háganos saber si tienen alguna pregunta.
+
+Atentamente,
+[Nombre del Maestro(a)]</p></div><div class="pn-sig">Parent signature: ____________________</div></article></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 5 / 6</span></footer></section><section class="pdf-page"><div class="brand-bar"></div><header class="page-header"><span class="brand-name">LanternELL</span><span>Teacher Notes</span><span>📄 Printable Pack</span></header><main class="page-content"><div><div><h2 class="section-title">Teacher Notes</h2><div class="notes-grid"><section class="note-section"><h3>🎯 Objective</h3><p>To provide clear, warm, and professional bilingual communication with parents regarding student progress and important classroom information for K-2 students.</p></section><section class="note-section"><h3>💡 Suggested Use</h3><p>These templates can be used as cover letters for progress reports, or as stand-alone notes to address specific topics with parents. Tailor the bracketed information ([...]) to individual student needs or classroom-wide announcements. For notes marked &#x27;response_section: true&#x27;, ensure to include a dedicated space for parent comments or signatures.</p></section><section class="note-section"><h3>📦 Materials Needed</h3><ul><li>Progress report forms</li><li>Student work samples (optional, for context)</li><li>Parent contact information</li><li>Translator (if further specific or nuanced communication is needed beyond the provided templates)</li></ul></section><section class="note-section"><h3>🔀 Differentiation Tips</h3><ul><li>For parents with limited literacy, consider scheduling a brief phone call or in-person meeting to review the report together.</li><li>Provide specific examples of student work or behavior when discussing progress or areas for growth to make the communication more concrete.</li><li>Offer these notes in additional languages if your school community has a significant population speaking a language other than English or Spanish.</li><li>Encourage parents to share their insights from home, as their perspective is valuable for a holistic understanding of the child.</li></ul></section></div></div><div class="terms-compact"><div class="terms-compact-title">📄 Terms of Use — personal-classroom-use</div><div class="terms-compact-body"><span>✅ Print for your students &amp; classroom use.</span><span>❌ Do not share, redistribute, or resell files.</span><span>🏫 School license: support@lanternell.com</span></div></div></div></main><footer class="page-footer"><span>Mar 18, 2026</span><span class="site-url">lanternell.com</span><span>Page 6 / 6</span></footer></section></body></html>
+</body>
+</html>

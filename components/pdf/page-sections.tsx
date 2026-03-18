@@ -5,10 +5,11 @@ import type {
 } from '@/lib/content-schema';
 import { fmt } from './pack-document';
 
-/** Parse **bold** markdown into React nodes with <strong> tags */
+/** Parse **bold** markdown into React nodes with <strong> tags.
+ *  Uses [\s\S] instead of . to handle newlines within bold markers. */
 function renderBold(text: string): React.ReactNode {
     if (!text.includes('**')) return text;
-    const parts = text.split(/\*\*(.+?)\*\*/g);
+    const parts = text.split(/\*\*([\s\S]+?)\*\*/g);
     return parts.map((part, i) => i % 2 === 1 ? <strong key={i}>{part}</strong> : part);
 }
 
@@ -38,7 +39,9 @@ function VocabularyCards({ items, cardColors, cardBorders, pageIndex }: {
                                         <article className="vocab-card"
                                             style={{ '--card-bg': cardColors[cIdx], '--card-border': cardBorders[cIdx] } as any}>
                                             <div className="card-num">Card {idx + 1}</div>
-                                            {imgData ? (
+                                            {(item as any).html_visual ? (
+                                                <div className="math-visual" dangerouslySetInnerHTML={{ __html: (item as any).html_visual }} />
+                                            ) : imgData ? (
                                                 <img className="vocab-img" src={imgData} alt={item.en} />
                                             ) : (
                                                 <div className="illust-area">{item.image_prompt || '🖼️'}</div>
@@ -72,8 +75,8 @@ function SentenceFrames({ items }: { items: SentenceFrame[] }) {
                     <article key={`${item.frame}-${i}`} className="frame-card">
                         <div className="frame-num">{i + 1}</div>
                         <div>
-                            <h3>{item.frame}</h3>
-                            {item.translation ? <p>{item.translation}</p> : null}
+                            <h3>{renderBold(item.frame)}</h3>
+                            {item.translation ? <p>{renderBold(item.translation)}</p> : null}
                         </div>
                     </article>
                 ))}
@@ -90,15 +93,15 @@ function DialogueStrips({ items }: { items: DialogueStrip[] }) {
             <div className="dialogue-list">
                 {items.map((item, i) => (
                     <article key={i} className="dialogue-card">
-                        {item.context && <div className="dialogue-ctx">{item.context}</div>}
+                        {item.context && <div className="dialogue-ctx">{renderBold(item.context)}</div>}
                         <div className="dialogue-speakers">
                             <div className="spk spk-a">
                                 <div className="spk-badge">A</div>
-                                <div><strong>{item.speaker_a_en}</strong>{item.speaker_a_l2 && <p>{item.speaker_a_l2}</p>}</div>
+                                <div><strong>{renderBold(item.speaker_a_en)}</strong>{item.speaker_a_l2 && <p>{renderBold(item.speaker_a_l2)}</p>}</div>
                             </div>
                             <div className="spk spk-b">
                                 <div className="spk-badge">B</div>
-                                <div><strong>{item.speaker_b_en}</strong>{item.speaker_b_l2 && <p>{item.speaker_b_l2}</p>}</div>
+                                <div><strong>{renderBold(item.speaker_b_en)}</strong>{item.speaker_b_l2 && <p>{renderBold(item.speaker_b_l2)}</p>}</div>
                             </div>
                         </div>
                     </article>
@@ -126,8 +129,8 @@ function SpeakingPrompts({ items, cardColors, cardBorders }: {
                             ) : item.visual_cue ? (
                                 <div className="illust-area">{item.visual_cue}</div>
                             ) : null}
-                            <h3>{item.prompt_en}</h3>
-                            {item.prompt_l2 && <p>{item.prompt_l2}</p>}
+                            <h3>{renderBold(item.prompt_en)}</h3>
+                            {item.prompt_l2 && <p>{renderBold(item.prompt_l2)}</p>}
                         </article>
                     );
                 })}
@@ -173,8 +176,8 @@ function VisualRoutineCards({ items }: { items: VisualRoutineCard[] }) {
                                 <div className="icon-area">{item.icon_prompt || '🕐'}</div>
                             )}
                         </div>
-                        <h3>{item.routine_en}</h3>
-                        <p>{item.routine_l2}</p>
+                        <h3>{renderBold(item.routine_en)}</h3>
+                        <p>{renderBold(item.routine_l2)}</p>
                     </article>
                 ))}
             </div>
@@ -196,8 +199,8 @@ function ClassroomRules({ items, startIndex = 0 }: { items: ClassroomRule[]; sta
                             </div>
                         ) : null}
                         <div className="rule-text">
-                            <h3>{item.rule_en}</h3>
-                            <p>{item.rule_l2}</p>
+                            <h3>{renderBold(item.rule_en)}</h3>
+                            <p>{renderBold(item.rule_l2)}</p>
                         </div>
                     </article>
                 ))}
@@ -214,13 +217,13 @@ function ParentNotes({ items }: { items: ParentNote[] }) {
                 {items.map((item, i) => (
                     <article key={`${item.title_en}-${i}`} className="pn-card">
                         <div className="pn-header">
-                            <strong>{item.title_en}</strong>
+                            <strong>{renderBold(item.title_en)}</strong>
                             <span className="pn-type-badge">{fmt(item.type)}</span>
                         </div>
-                        <p>{item.content_en}</p>
+                        <p>{renderBold(item.content_en)}</p>
                         <div className="pn-translated">
-                            <strong>{item.title_l2}</strong>
-                            <p>{item.content_l2}</p>
+                            <strong>{renderBold(item.title_l2)}</strong>
+                            <p>{renderBold(item.content_l2)}</p>
                         </div>
                         <div className="pn-sig">
                             {item.signature_required ? 'Parent signature: ____________________' : ''}
@@ -398,7 +401,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                     </div>
                     {isFillBlank && fillBlankData ? (
                         <>
-                            <p className="ws-instructions">{fillBlankData.clean}</p>
+                            <p className="ws-instructions">{renderBold(fillBlankData.clean)}</p>
                             {fillBlankData.words && (
                                 <div className="ws-word-bank">
                                     <span className="ws-word-bank-label">Word Bank</span>
@@ -411,9 +414,9 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                             )}
                         </>
                     ) : (
-                        <p className="ws-instructions">{worksheet.instructions_en}</p>
+                        <p className="ws-instructions">{renderBold(worksheet.instructions_en)}</p>
                     )}
-                    {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{worksheet.instructions_l2}</p> : null}
+                    {worksheet.instructions_l2 ? <p className="ws-instructions-l2">{renderBold(worksheet.instructions_l2)}</p> : null}
                 </>
             )}
             {!showHeader && (
@@ -433,7 +436,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                                 {items.map((item: any, i: number) => (
                                     <div key={`l-${i}`} className="ws-match-left-item">
                                         <span className="ws-match-num">{itemStartIndex + i + 1}</span>
-                                        <span className="ws-match-word">{item.content}</span>
+                                        <span className="ws-match-word">{renderBold(item.content)}</span>
                                     </div>
                                 ))}
                             </div>
@@ -466,7 +469,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                         {matchLeftItems.map((item: any, i: number) => (
                             <div key={`l-${i}`} className="ws-match-left-item">
                                 <span className="ws-match-num">{itemStartIndex + i + 1}</span>
-                                <span className="ws-match-word">{item.content}</span>
+                                <span className="ws-match-word">{renderBold(item.content)}</span>
                             </div>
                         ))}
                     </div>
@@ -478,7 +481,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                             return (
                                 <div key={`r-${i}`} className="ws-match-right-item">
                                     <span className="ws-match-letter">{letter}</span>
-                                    <span className="ws-match-word">{label}</span>
+                                    <span className="ws-match-word">{renderBold(label)}</span>
                                 </div>
                             );
                         })}
@@ -492,7 +495,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                         {matchLeftItems.map((item: any, i: number) => (
                             <div key={`l-${i}`} className="ws-match-left-item">
                                 <span className="ws-match-num">{itemStartIndex + i + 1}</span>
-                                <span className="ws-match-word">{item.content}</span>
+                                <span className="ws-match-word">{renderBold(item.content)}</span>
                                 <span className="ws-match-answer-blank">→ ___</span>
                             </div>
                         ))}
@@ -504,7 +507,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                             return (
                                 <div key={`r-${i}`} className="ws-match-def-item">
                                     <span className="ws-match-letter">{letter}</span>
-                                    <span className="ws-match-def-text">{label}</span>
+                                    <span className="ws-match-def-text">{renderBold(label)}</span>
                                 </div>
                             );
                         })}
@@ -537,7 +540,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                     {worksheet.items.map((item, i) => {
                         const imgData = (item as any).image_data;
                         const label = item.content || (item as any).trace_text_en || '';
-                        const isLongContent = label.length > 60;
+                        const isLongContent = label.length > 100;
                         return (
                             <article key={`${item.id}-${i}`} className="ws-coloring-item">
                                 {imgData ? (
@@ -547,8 +550,8 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                                 )}
                                 {!isLongContent && label && (
                                     <div className="ws-coloring-label">
-                                        <strong>{label}</strong>
-                                        {item.content_l2 ? <span> / {item.content_l2}</span> : null}
+                                        <strong>{renderBold(label)}</strong>
+                                        {item.content_l2 ? <span> / {renderBold(item.content_l2)}</span> : null}
                                     </div>
                                 )}
                             </article>
@@ -561,9 +564,9 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                         <article key={`${item.id}-${i}`} className="ws-tracing-item">
                             <div className="ws-item-num">{itemStartIndex + i + 1}</div>
                             <div className="ws-item-content">
-                                <div className="ws-tracing-word">{item.content}</div>
+                                <div className="ws-tracing-word">{renderBold(item.content)}</div>
                                 <div className="ws-tracing-dotted">{item.content}</div>
-                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
+                                {item.content_l2 ? <div className="ws-l2">{renderBold(item.content_l2)}</div> : null}
                                 <div className="ws-write-line" />
                             </div>
                         </article>
@@ -575,8 +578,8 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                         <article key={`${item.id}-${i}`} className="ws-item">
                             <div className="ws-item-num">{itemStartIndex + i + 1}</div>
                             <div className="ws-item-content">
-                                <strong>{item.content}</strong>
-                                {item.content_l2 ? <div className="ws-l2">{item.content_l2}</div> : null}
+                                <strong>{renderBold(item.content)}</strong>
+                                {item.content_l2 ? <div className="ws-l2">{renderBold(item.content_l2)}</div> : null}
                                 <div className="ws-write-line" />
                             </div>
                         </article>
@@ -611,7 +614,22 @@ function TeacherNotesPage({ notes }: { notes: TeacherNotes }) {
 function AnswerKeyPage({ answerKeys }: { answerKeys: AnswerKey[] }) {
     // Filter out empty answer keys (e.g. tracing/coloring worksheets have no answers)
     const validKeys = answerKeys.filter(ak => {
-        if (typeof ak.answers === 'string') return (ak.answers as string).length > 0;
+        if (typeof ak.answers === 'string') {
+            const s = (ak.answers as string).trim();
+            if (!s) return false;
+            if (/no\s+(specific\s+)?answer\s+key\s+needed/i.test(s)) return false;
+            if (/creative\s+(coloring|drawing)\s+activity/i.test(s)) return false;
+            if (/focus\s+on\s+effort/i.test(s)) return false;
+            if (/answers\s+are\s+self[- ]evident/i.test(s)) return false;
+            if (/tracing\s+worksheet/i.test(s)) return false;
+            if (/answers\s+will\s+vary/i.test(s)) return false;
+            if (/completion\s+of\s+(tracing|coloring)/i.test(s)) return false;
+            if (/tracing\s+(is\s+subjective|words\s+are)/i.test(s)) return false;
+            if (/students\s+should\s+(have\s+)?(accurately\s+)?trac/i.test(s)) return false;
+            if (/students\s+should\s+(have\s+)?color/i.test(s)) return false;
+            if (/coloring\s+activity/i.test(s)) return false;
+            return true;
+        }
         return ak.answers && Object.keys(ak.answers).length > 0;
     });
     if (!validKeys.length) return null;

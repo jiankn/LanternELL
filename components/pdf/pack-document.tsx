@@ -22,7 +22,7 @@ const DIALOGUE_PER_PAGE = 5;
 const SPEAKING_PER_PAGE = 6;
 const ROUTINE_PER_PAGE = 6;
 const RULES_PER_PAGE = 6;
-const ANSWER_KEY_PER_PAGE = 2;
+const ANSWER_KEY_PER_PAGE = 3;
 
 export function PackDocument({ content, resource, mode, renderedAt, sampleWatermarkText }: PackDocumentProps) {
   const ageBand = content.age_band || resource.age_band || 'K-2';
@@ -159,54 +159,63 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
   if (content.teacher_notes) {
     pageBodies.push({ title: 'Teacher Notes', body: <PageSections.TeacherNotesPage notes={content.teacher_notes} /> });
   }
-  if (content.answer_key?.length) {
-    // Filter out empty answer keys (tracing/coloring have no answers)
-    const validAKs = content.answer_key.filter(ak => {
-      if (typeof ak.answers === 'string') return (ak.answers as string).length > 0;
-      return ak.answers && Object.keys(ak.answers).length > 0;
-    });
-    if (validAKs.length) {
-      const akChunks = chunk(validAKs, ANSWER_KEY_PER_PAGE);
+  // Answer Key + Terms of Use 处理
+  const validAKs = (content.answer_key || []).filter(ak => {
+    if (typeof ak.answers === 'string') {
+      const s = (ak.answers as string).trim();
+      // 过滤空字符串和"无需答案"类描述
+      if (!s) return false;
+      if (/no\s+(specific\s+)?answer\s+key\s+needed/i.test(s)) return false;
+      if (/creative\s+(coloring|drawing)\s+activity/i.test(s)) return false;
+      if (/focus\s+on\s+effort/i.test(s)) return false;
+      if (/answers\s+are\s+self[- ]evident/i.test(s)) return false;
+      if (/tracing\s+worksheet/i.test(s)) return false;
+      if (/answers\s+will\s+vary/i.test(s)) return false;
+      if (/completion\s+of\s+(tracing|coloring)/i.test(s)) return false;
+      if (/tracing\s+(is\s+subjective|words\s+are)/i.test(s)) return false;
+      if (/students\s+should\s+(have\s+)?(accurately\s+)?trac/i.test(s)) return false;
+      if (/students\s+should\s+(have\s+)?color/i.test(s)) return false;
+      if (/coloring\s+activity/i.test(s)) return false;
+      return true;
+    }
+    return ak.answers && Object.keys(ak.answers).length > 0;
+  });
+  const termsNode = <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />;
+
+  if (validAKs.length) {
+    const akChunks = chunk(validAKs, ANSWER_KEY_PER_PAGE);
+    // 计算总条目数
+    const totalAKEntries = validAKs.reduce((sum, ak) => {
+      if (typeof ak.answers === 'string') return sum + 1;
+      return sum + Object.keys(ak.answers).length;
+    }, 0);
+    // 少量 AK（单 chunk 且 ≤ 8 entries）：合并到 Teacher Notes 页底部，省一页纸
+    const lastIdx = pageBodies.length - 1;
+    if (akChunks.length === 1 && totalAKEntries <= 8 && lastIdx >= 0 && pageBodies[lastIdx].title.startsWith('Teacher Notes')) {
+      const origBody = pageBodies[lastIdx].body;
+      pageBodies[lastIdx] = {
+        title: pageBodies[lastIdx].title,
+        body: (<div>{origBody}<PageSections.AnswerKeyPage answerKeys={validAKs} />{termsNode}</div>),
+      };
+    } else {
       akChunks.forEach((items, i) => {
         const isLast = i === akChunks.length - 1;
         pageBodies.push({ title: `Answer Key${akChunks.length > 1 ? ` ${i + 1}` : ''}`, body: (
           <div>
             <PageSections.AnswerKeyPage answerKeys={items} />
-            {isLast && <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />}
+            {isLast && termsNode}
           </div>
         ) });
       });
-    } else {
-      // 没有有效 answer key，Terms 合并到 teacher notes 页
-      if (pageBodies.length > 0 && pageBodies[pageBodies.length - 1].title.startsWith('Teacher Notes')) {
-        const lastPage = pageBodies[pageBodies.length - 1];
-        const origBody = lastPage.body;
-        pageBodies[pageBodies.length - 1] = {
-          title: lastPage.title,
-          body: (
-            <div>
-              {origBody}
-              <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
-            </div>
-          ),
-        };
-      } else {
-        pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
-      }
     }
   } else {
-    // 没有 answer key 时，Terms 合并到 teacher notes 页
-    if (pageBodies.length > 0 && pageBodies[pageBodies.length - 1].title.startsWith('Teacher Notes')) {
-      const lastPage = pageBodies[pageBodies.length - 1];
-      const origBody = lastPage.body;
-      pageBodies[pageBodies.length - 1] = {
-        title: lastPage.title,
-        body: (
-          <div>
-            {origBody}
-            <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
-          </div>
-        ),
+    // 没有有效 AK：Terms 合并到最后一页
+    const lastIdx = pageBodies.length - 1;
+    if (lastIdx >= 0 && pageBodies[lastIdx].title.startsWith('Teacher Notes')) {
+      const origBody = pageBodies[lastIdx].body;
+      pageBodies[lastIdx] = {
+        title: pageBodies[lastIdx].title,
+        body: (<div>{origBody}{termsNode}</div>),
       };
     } else {
       pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
@@ -241,11 +250,11 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
             <main className="page-content">{page.body}</main>
             <footer className="page-footer">
               <span>{renderedAt}</span>
-              <span className="site-url">lanternell.com</span>
+              <a href="https://lanternell.com" className="site-url">lanternell.com</a>
               <span>Page {i + 1} / {total}</span>
             </footer>
             {mode === 'sample' && i === total - 2 ? (
-              <div className="sample-cta">💡 Love this sample? Get the full pack at lanternell.com/shop</div>
+              <div className="sample-cta">💡 Love this sample? Get the full pack at <a href="https://lanternell.com/shop">lanternell.com/shop</a></div>
             ) : null}
           </section>
         ))}

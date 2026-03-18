@@ -136,6 +136,10 @@ export const PACK_STYLES = `
   .page-footer .site-url {
     font-weight: 600;
     color: var(--primary);
+    text-decoration: none;
+  }
+  .page-footer .site-url:hover {
+    text-decoration: underline;
   }
 
   /* === WATERMARK (sample) === */
@@ -374,6 +378,93 @@ export const PACK_STYLES = `
     margin-bottom: 14px;
     font-style: italic;
   }
+  .vocab-card .math-visual {
+    width: 100%;
+    height: 100px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+    border: 2px solid var(--card-border, #ddd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .math-visual .math-expr {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: 2px;
+  }
+  .math-visual .math-expr .math-op {
+    color: #e74c3c;
+    font-weight: 900;
+    margin: 0 4px;
+  }
+  .math-visual .math-expr .math-eq {
+    color: #3498db;
+    font-weight: 900;
+    margin: 0 4px;
+  }
+  .math-visual .math-expr .math-result {
+    color: #27ae60;
+    font-weight: 900;
+    font-size: 32px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .math-visual .math-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .math-visual .math-diagram .math-label {
+    font-size: 11px;
+    color: #666;
+    font-weight: 600;
+  }
+  .math-visual .math-objects {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 20px;
+  }
+  .math-visual .math-group {
+    display: flex;
+    gap: 2px;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  .math-visual .math-fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .math-visual .math-fraction .frac-line {
+    width: 30px;
+    height: 2px;
+    background: #1a1a2e;
+  }
+  .math-visual .math-shapes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .math-visual .math-shape {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #333;
+  }
+  .math-visual .math-shape.circle { border-radius: 50%; }
+  .math-visual .math-shape.filled { background: #3498db; border-color: #2980b9; }
   .vocab-card .word-en {
     font-family: 'Nunito', system-ui, sans-serif;
     font-size: 24px;
