@@ -46,7 +46,7 @@ const freeSamples = [
         gradeLevel: 'K-2',
         packType: 'Vocabulary',
         pages: '4 pages',
-        image: '/images/products/classroom-objects-vocabulary-pack-k-2-en-es.webp',
+        image: '/images/products/classroom-objects-vocab-k2.webp',
         fullPackHref: '/shop/classroom-objects-vocabulary-pack-k-2-en-es',
     },
     {
@@ -56,8 +56,8 @@ const freeSamples = [
         gradeLevel: 'K-2',
         packType: 'Sentence Frames',
         pages: '3 pages',
-        image: '/images/products/greetings-introductions-sentence-frames-k-2-en-es.webp',
-        fullPackHref: '/shop/greetings-introductions-sentence-frames-k-2-en-es',
+        image: '/images/products/greetings-sentences-k2.webp',
+        fullPackHref: '/shop/basic-greetings-sentence-frames-k-2-en-es',
     },
     {
         id: 3,
@@ -66,8 +66,8 @@ const freeSamples = [
         gradeLevel: 'K-2',
         packType: 'Labels',
         pages: '2 pages',
-        image: '/images/products/classroom-areas-labels-k-2-en-es.webp',
-        fullPackHref: '/shop/classroom-areas-labels-k-2-en-es',
+        image: '/images/products/areas-labels-k2.webp',
+        fullPackHref: '/shop/classroom-areas-classroom-labels-k-2-en-es',
     },
     {
         id: 4,
@@ -76,7 +76,7 @@ const freeSamples = [
         gradeLevel: 'K-2',
         packType: 'Vocabulary',
         pages: '2 pages',
-        image: '/images/products/colors-vocabulary-pack-k-2-en-es.webp',
+        image: '/images/products/colors-vocab-k2.webp',
         fullPackHref: '/shop/colors-vocabulary-pack-k-2-en-es',
     },
     {
@@ -86,8 +86,8 @@ const freeSamples = [
         gradeLevel: '3-5',
         packType: 'Vocabulary',
         pages: '3 pages',
-        image: '/images/products/science-vocabulary-pack-3-5-en-es.webp',
-        fullPackHref: '/shop/science-vocabulary-pack-3-5-en-es',
+        image: '/images/products/science-vocab-35.webp',
+        fullPackHref: '/shop/science-vocabulary-vocabulary-pack-3-5-en-es',
     },
     {
         id: 6,
@@ -96,8 +96,8 @@ const freeSamples = [
         gradeLevel: 'K-8',
         packType: 'Parent Communication',
         pages: '2 pages',
-        image: '/images/products/welcome-letter-template-parent-communication-en-es.webp',
-        fullPackHref: '/shop/welcome-letter-template-parent-communication-en-es',
+        image: '/images/products/welcome-letter-parent.webp',
+        fullPackHref: '/shop/welcome-letter-parent-communication-k-2-en-es',
     },
 ]
 
