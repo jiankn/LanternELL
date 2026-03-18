@@ -274,7 +274,7 @@ function MiniBookPage({ miniBook, showHeader = true }: { miniBook: MiniBook; sho
  * Patterns: "Word Bank: x, y, z", "from the box: (x, y, z)", "Words: x, y, z", "(Options: x, y, z)"
  * Returns { cleanInstructions, wordBank: string[] | null }
  */
-function extractWordBank(instructions: string): { clean: string; words: string[] | null } {
+function extractWordBank(instructions: string, items?: any[]): { clean: string; words: string[] | null } {
     // Pattern 1: "Word Bank: word1, word2, ..." (may span to end)
     const wbMatch = instructions.match(/\bWord [Bb]ank:\s*(.+)$/i);
     if (wbMatch) {
@@ -295,6 +295,13 @@ function extractWordBank(instructions: string): { clean: string; words: string[]
         const clean = instructions.slice(0, boxMatch.index).replace(/\s+$/, '') + '.';
         const words = boxMatch[1].split(',').map(w => w.trim()).filter(Boolean);
         return { clean, words };
+    }
+    // Fallback: extract from items' correct_answer if available
+    if (items?.length) {
+        const answers = items.map(it => it.correct_answer).filter(Boolean);
+        if (answers.length > 0) {
+            return { clean: instructions, words: answers };
+        }
     }
     return { clean: instructions, words: null };
 }
@@ -321,7 +328,7 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
     const isCategorizing = worksheet.type === 'categorizing';
 
     // For fill-blank: extract word bank from instructions
-    const fillBlankData = isFillBlank ? extractWordBank(worksheet.instructions_en) : null;
+    const fillBlankData = isFillBlank ? extractWordBank(worksheet.instructions_en, worksheet.items as any[]) : null;
 
     // For matching: determine variant and build shuffled right column
     let matchLeftItems: any[] = [];
@@ -598,11 +605,17 @@ function TeacherNotesPage({ notes }: { notes: TeacherNotes }) {
 }
 
 function AnswerKeyPage({ answerKeys }: { answerKeys: AnswerKey[] }) {
+    // Filter out empty answer keys (e.g. tracing/coloring worksheets have no answers)
+    const validKeys = answerKeys.filter(ak => {
+        if (typeof ak.answers === 'string') return (ak.answers as string).length > 0;
+        return ak.answers && Object.keys(ak.answers).length > 0;
+    });
+    if (!validKeys.length) return null;
     return (
         <div>
             <h2 className="section-title">Answer Key</h2>
             <div className="answer-list">
-                {answerKeys.map(ak => (
+                {validKeys.map(ak => (
                     <section key={ak.worksheet_id} className="ak-section">
                         <h3>{ak.worksheet_id}</h3>
                         {typeof ak.answers === 'string' ? (
