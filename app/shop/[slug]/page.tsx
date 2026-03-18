@@ -330,17 +330,15 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   </div>
                 </div>
 
-                {product.resources?.length > 0 && (
-                  <div className="border-t border-text-primary/10 pt-6 mt-6">
-                    <Link
-                      href={`/api/download/sample/${product.resources[0].id}`}
-                      className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl border-2 border-primary/20 text-primary hover:bg-primary/5 transition-colors text-sm font-medium"
-                    >
-                      <Download className="w-4 h-4" />
-                      Download free sample
-                    </Link>
-                  </div>
-                )}
+                <div className="border-t border-text-primary/10 pt-6 mt-6">
+                  <Link
+                    href="/free-samples"
+                    className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl border-2 border-primary/20 text-primary hover:bg-primary/5 transition-colors text-sm font-medium cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download free sample
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
