@@ -592,16 +592,16 @@ function TeacherNotesPage({ notes }: { notes: TeacherNotes }) {
         <div>
             <h2 className="section-title">Teacher Notes</h2>
             <div className="notes-grid">
-                <section className="note-section"><h3>🎯 Objective</h3><p>{notes.objective}</p></section>
-                <section className="note-section"><h3>💡 Suggested Use</h3><p>{notes.suggested_use}</p></section>
+                <section className="note-section"><h3>🎯 Objective</h3><p>{renderBold(notes.objective)}</p></section>
+                <section className="note-section"><h3>💡 Suggested Use</h3><p>{renderBold(notes.suggested_use)}</p></section>
                 {notes.materials_needed?.length ? (
-                    <section className="note-section"><h3>📦 Materials Needed</h3><ul>{notes.materials_needed.map(m => <li key={m}>{m}</li>)}</ul></section>
+                    <section className="note-section"><h3>📦 Materials Needed</h3><ul>{notes.materials_needed.map(m => <li key={m}>{renderBold(m)}</li>)}</ul></section>
                 ) : null}
                 {notes.differentiation_tips?.length ? (
-                    <section className="note-section"><h3>🔀 Differentiation Tips</h3><ul>{notes.differentiation_tips.map(t => <li key={t}>{t}</li>)}</ul></section>
+                    <section className="note-section"><h3>🔀 Differentiation Tips</h3><ul>{notes.differentiation_tips.map(t => <li key={t}>{renderBold(t)}</li>)}</ul></section>
                 ) : null}
                 {notes.assessment_ideas?.length ? (
-                    <section className="note-section"><h3>📝 Assessment Ideas</h3><ul>{notes.assessment_ideas.map(a => <li key={a}>{a}</li>)}</ul></section>
+                    <section className="note-section"><h3>📝 Assessment Ideas</h3><ul>{notes.assessment_ideas.map(a => <li key={a}>{renderBold(a)}</li>)}</ul></section>
                 ) : null}
             </div>
         </div>
