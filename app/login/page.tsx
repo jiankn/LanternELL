@@ -33,7 +33,7 @@ export default function LoginPage() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    const errCode = searchParams.get('error')
+    const errCode = searchParams?.get('error')
     if (errCode && GOOGLE_ERRORS[errCode]) {
       setError(GOOGLE_ERRORS[errCode])
     }
