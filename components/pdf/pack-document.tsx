@@ -160,21 +160,43 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
     pageBodies.push({ title: 'Teacher Notes', body: <PageSections.TeacherNotesPage notes={content.teacher_notes} /> });
   }
   if (content.answer_key?.length) {
-    const akChunks = chunk(content.answer_key, ANSWER_KEY_PER_PAGE);
-    akChunks.forEach((items, i) => {
-      const isLast = i === akChunks.length - 1;
-      pageBodies.push({ title: `Answer Key${akChunks.length > 1 ? ` ${i + 1}` : ''}`, body: (
-        <div>
-          <PageSections.AnswerKeyPage answerKeys={items} />
-          {isLast && <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />}
-        </div>
-      ) });
+    // Filter out empty answer keys (tracing/coloring have no answers)
+    const validAKs = content.answer_key.filter(ak => {
+      if (typeof ak.answers === 'string') return (ak.answers as string).length > 0;
+      return ak.answers && Object.keys(ak.answers).length > 0;
     });
+    if (validAKs.length) {
+      const akChunks = chunk(validAKs, ANSWER_KEY_PER_PAGE);
+      akChunks.forEach((items, i) => {
+        const isLast = i === akChunks.length - 1;
+        pageBodies.push({ title: `Answer Key${akChunks.length > 1 ? ` ${i + 1}` : ''}`, body: (
+          <div>
+            <PageSections.AnswerKeyPage answerKeys={items} />
+            {isLast && <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />}
+          </div>
+        ) });
+      });
+    } else {
+      // 没有有效 answer key，Terms 合并到 teacher notes 页
+      if (pageBodies.length > 0 && pageBodies[pageBodies.length - 1].title.startsWith('Teacher Notes')) {
+        const lastPage = pageBodies[pageBodies.length - 1];
+        const origBody = lastPage.body;
+        pageBodies[pageBodies.length - 1] = {
+          title: lastPage.title,
+          body: (
+            <div>
+              {origBody}
+              <PageSections.TermsOfUseCompact license={content.license || 'personal-classroom-use'} />
+            </div>
+          ),
+        };
+      } else {
+        pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
+      }
+    }
   } else {
     // 没有 answer key 时，Terms 合并到 teacher notes 页
-    // 但如果也没有 teacher notes，才单独一页
     if (pageBodies.length > 0 && pageBodies[pageBodies.length - 1].title.startsWith('Teacher Notes')) {
-      // 把 compact terms 追加到 teacher notes 页
       const lastPage = pageBodies[pageBodies.length - 1];
       const origBody = lastPage.body;
       pageBodies[pageBodies.length - 1] = {
@@ -187,7 +209,6 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
         ),
       };
     } else {
-      // fallback: 单独一页（极少情况）
       pageBodies.push({ title: 'Terms of Use', body: <PageSections.TermsOfUsePage license={content.license || 'personal-classroom-use'} /> });
     }
   }
