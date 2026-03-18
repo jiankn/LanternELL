@@ -536,17 +536,20 @@ function Worksheet({ worksheet, index, showHeader = true, itemStartIndex = 0 }: 
                 <div className="ws-coloring-grid">
                     {worksheet.items.map((item, i) => {
                         const imgData = (item as any).image_data;
+                        const isLongContent = item.content.length > 60;
                         return (
                             <article key={`${item.id}-${i}`} className="ws-coloring-item">
                                 {imgData ? (
                                     <img className="ws-coloring-img" src={imgData} alt={item.content} />
                                 ) : (
-                                    <div className="ws-coloring-placeholder">{item.content}</div>
+                                    <div className="ws-coloring-placeholder">🖍️ Color this scene</div>
                                 )}
-                                <div className="ws-coloring-label">
-                                    <strong>{item.content}</strong>
-                                    {item.content_l2 ? <span> / {item.content_l2}</span> : null}
-                                </div>
+                                {!isLongContent && (
+                                    <div className="ws-coloring-label">
+                                        <strong>{item.content}</strong>
+                                        {item.content_l2 ? <span> / {item.content_l2}</span> : null}
+                                    </div>
+                                )}
                             </article>
                         );
                     })}
