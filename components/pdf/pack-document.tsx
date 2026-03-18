@@ -16,13 +16,13 @@ interface PackDocumentProps {
 }
 
 const VOCAB_PER_PAGE = 4;
-const FRAMES_PER_PAGE = 5;
+const FRAMES_PER_PAGE = 6;
 const LABELS_PER_PAGE = 8;
-const DIALOGUE_PER_PAGE = 4;
-const SPEAKING_PER_PAGE = 4;
-const ROUTINE_PER_PAGE = 4;
-const RULES_PER_PAGE = 5;
-const ANSWER_KEY_PER_PAGE = 4;
+const DIALOGUE_PER_PAGE = 5;
+const SPEAKING_PER_PAGE = 6;
+const ROUTINE_PER_PAGE = 6;
+const RULES_PER_PAGE = 6;
+const ANSWER_KEY_PER_PAGE = 6;
 
 export function PackDocument({ content, resource, mode, renderedAt, sampleWatermarkText }: PackDocumentProps) {
   const ageBand = content.age_band || resource.age_band || 'K-2';
@@ -107,12 +107,12 @@ export function PackDocument({ content, resource, mode, renderedAt, sampleWaterm
   // Worksheets: 大 worksheet 自动拆页，小 worksheet 可合并
   if (content.worksheets?.length) {
     const WS_MERGE_THRESHOLD = 3;
-    // 每页最大 items 数（按类型，保守估算确保不溢出）
+    // 每页最大 items 数（宽松设置，实际溢出由 Puppeteer 层自动处理）
     const maxPerPage = (type: string) => {
-      if (type === 'matching') return 6;
-      if (type === 'coloring') return 4;
-      if (type === 'tracing') return 5;
-      return 6; // writing, fill-blank, 通用
+      if (type === 'matching') return 8;
+      if (type === 'coloring') return 6;
+      if (type === 'tracing') return 8;
+      return 8; // writing, fill-blank, 通用
     };
 
     const wsList = content.worksheets;
