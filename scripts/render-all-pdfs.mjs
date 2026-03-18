@@ -171,6 +171,7 @@ async function renderOne(packFileName, browser) {
 
   // Puppeteer 渲染 PDF
   const page = await browser.newPage();
+  let overflowResult = { originalPages: 0, finalPages: 0, overflowPages: 0 };
   try {
     await page.goto('file:///' + htmlPath.replace(/\\/g, '/'), {
       waitUntil: 'networkidle2',
@@ -179,7 +180,7 @@ async function renderOne(packFileName, browser) {
     await new Promise(r => setTimeout(r, 1500));
 
     // 溢出处理：检测并拆分超出页面高度的内容
-    const overflowResult = await page.evaluate(OVERFLOW_HANDLER_FN);
+    overflowResult = await page.evaluate(OVERFLOW_HANDLER_FN);
 
     await page.pdf({
       path: outputPath,
