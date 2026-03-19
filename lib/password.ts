@@ -26,7 +26,7 @@ async function deriveKey(password: string, salt: Uint8Array): Promise<CryptoKey>
   const enc = new TextEncoder();
   const baseKey = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveBits', 'deriveKey']);
   return crypto.subtle.deriveKey(
-    { name: 'PBKDF2', salt, iterations: ITERATIONS, hash: 'SHA-256' },
+    { name: 'PBKDF2', salt: salt as BufferSource, iterations: ITERATIONS, hash: 'SHA-256' },
     baseKey,
     { name: 'AES-GCM', length: KEY_LENGTH * 8 },
     true,
