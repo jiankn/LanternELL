@@ -45,11 +45,26 @@ function LoginPageInner() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [checkingAuth, setCheckingAuth] = useState(true)
 
   // Forgot password state
   const [forgotMode, setForgotMode] = useState(false)
   const [forgotSent, setForgotSent] = useState(false)
   const [forgotEmail, setForgotEmail] = useState('')
+
+  // Redirect if already logged in
+  useEffect(() => {
+    fetch('/api/account/me')
+      .then(res => res.json())
+      .then(data => {
+        if (data.ok && data.data.authenticated) {
+          router.push('/account/library')
+        } else {
+          setCheckingAuth(false)
+        }
+      })
+      .catch(() => setCheckingAuth(false))
+  }, [router])
 
   useEffect(() => {
     const errCode = searchParams?.get('error')
@@ -129,6 +144,18 @@ function LoginPageInner() {
 
   const handleGoogleLogin = () => {
     window.location.href = '/api/auth/google?redirectTo=/account/library'
+  }
+
+  // Show loading while checking auth
+  if (checkingAuth) {
+    return (
+      <main className="min-h-screen bg-background flex flex-col">
+        <Navbar static links={[{ href: '/shop', label: 'Browse Shop' }]} />
+        <div className="flex-1 flex items-center justify-center">
+          <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+        </div>
+      </main>
+    )
   }
 
   // Forgot password view
