@@ -103,7 +103,8 @@ async function handleCheckoutComplete(session: any) {
   // Find or create user
   let userId = null;
   if (customer_email) {
-    let user = await queryOne<{ id: string }>(
+    let user = await queryOne<{ id: string }>
+(
       'SELECT id FROM users WHERE email = ?',
       [customer_email.toLowerCase()]
     );
@@ -126,16 +127,47 @@ async function handleCheckoutComplete(session: any) {
     }
   }
 
-  // Update order
+  // Update this order
   await execute(
     `UPDATE orders SET user_id = ?, status = ?, updated_at = ? WHERE stripe_checkout_session_id = ?`,
     [userId, 'paid', toISOString(new Date()), sessionId]
   );
 
+  // Also link all orphaned orders from this customer email
+  if (userId && customer_email) {
+    await execute(
+      `UPDATE orders SET user_id = ?, updated_at = ? WHERE customer_email = ? AND user_id IS NULL`,
+      [userId, toISOString(new Date()), customer_email.toLowerCase()]
+    );
+  }
+
   // Get product and create entitlements
   const productId = metadata?.app_product_id;
   if (productId && userId) {
     await createEntitlementsForProduct(userId, productId, 'purchase', sessionId);
+
+    // Ensure order_items exist (in case they were missed during checkout)
+    const orderId = await queryOne<{ id: string }>(
+      'SELECT id FROM orders WHERE stripe_checkout_session_id = ?',
+      [sessionId]
+    );
+    if (orderId) {
+      const existingItem = await queryOne<{ id: string }>(
+        'SELECT id FROM order_items WHERE order_id = ?',
+        [orderId.id]
+      );
+      if (!existingItem) {
+        const product = await queryOne<{ price_cents: number }>(
+          'SELECT price_cents FROM products WHERE id = ?',
+          [productId]
+        );
+        const itemId = generateId('oi');
+        await execute(
+          'INSERT INTO order_items (id, order_id, product_id, quantity, price_cents) VALUES (?, ?, ?, 1, ?)',
+          [itemId, orderId.id, productId, product?.price_cents || 0]
+        );
+      }
+    }
   }
 
   // Send order confirmation email

@@ -94,6 +94,13 @@ export async function POST(request: NextRequest) {
         ]
       );
 
+      // Link order to product
+      const itemId = generateId('oi');
+      await execute(
+        `INSERT INTO order_items (id, order_id, product_id, quantity, price_cents) VALUES (?, ?, ?, 1, ?)`,
+        [itemId, orderId, product.id, priceCents]
+      );
+
       return NextResponse.json({
         ok: true,
         data: {
@@ -124,6 +131,13 @@ export async function POST(request: NextRequest) {
         product.price_cents,
         user?.email || '',
       ]
+    );
+
+    // Link order to product
+    const itemId = generateId('oi');
+    await execute(
+      `INSERT INTO order_items (id, order_id, product_id, quantity, price_cents) VALUES (?, ?, ?, 1, ?)`,
+      [itemId, orderId, product.id, product.price_cents]
     );
 
     const checkoutUrl = `${baseUrl}/checkout/success?session_id=${mockSessionId}`;
