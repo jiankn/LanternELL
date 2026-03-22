@@ -150,7 +150,7 @@ export function PricingCards() {
   return (
     <>
       {/* Billing Toggle */}
-      <div className="mb-10 mt-8">
+      <div className="mb-10">
         <BillingToggle onChange={setIsAnnual} />
         {isAnnual && (
           <p className="text-center text-sm text-green-600 font-medium mt-3">
