@@ -10,7 +10,7 @@ import {
   ArrowRight,
   Download,
   Users,
-  CircleCheck,
+  CircleCheckBig,
 } from 'lucide-react'
 import { BillingToggle } from './billing-toggle'
 
@@ -192,7 +192,7 @@ export function PricingCards() {
             {isOwned && (
               <div className="absolute -top-3 right-4">
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full shadow-sm">
-                  <CircleCheck className="w-3 h-3" />
+                  <CircleCheckBig className="w-3 h-3" />
                   {isAllAccessActive ? 'Active' : isSingleOwned ? `${singleCount} purchased` : `${bundleCount} purchased`}
                 </span>
               </div>
