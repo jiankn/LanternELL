@@ -430,18 +430,31 @@ export default function LibraryPage() {
                                 )}
 
                                 <div className="mt-auto">
+                                    {resource.downloadable ? (
                                     <button
                                         onClick={() => handleDownload(resource.resourceId)}
-                                        disabled={downloadingId === resource.resourceId || !resource.downloadable}
-                                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled={downloadingId === resource.resourceId}
+                                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors cursor-pointer disabled:opacity-50"
                                     >
                                         {downloadingId === resource.resourceId ? (
                                             <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                                         ) : (
                                             <Download className="w-4 h-4" />
                                         )}
-                                        {resource.downloadable ? 'Download' : 'Unavailable'}
+                                        Download
                                     </button>
+                                    ) : (
+                                    <div>
+                                        <Link
+                                            href="/pricing"
+                                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cta/10 text-cta font-medium hover:bg-cta/20 transition-colors cursor-pointer"
+                                        >
+                                            <ArrowRight className="w-4 h-4" />
+                                            Upgrade to Download
+                                        </Link>
+                                        <p className="text-xs text-text-muted text-center mt-1.5">Available with All Access or single purchase</p>
+                                    </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -489,9 +502,10 @@ export default function LibraryPage() {
                                 </div>
                             </div>
 
+                            {resource.downloadable ? (
                             <button
                                 onClick={() => handleDownload(resource.resourceId)}
-                                disabled={downloadingId === resource.resourceId || !resource.downloadable}
+                                disabled={downloadingId === resource.resourceId}
                                 className="clay-button flex items-center gap-2 shrink-0 cursor-pointer w-full sm:w-auto justify-center"
                             >
                                 {downloadingId === resource.resourceId ? (
@@ -499,8 +513,17 @@ export default function LibraryPage() {
                                 ) : (
                                     <Download className="w-4 h-4" />
                                 )}
-                                {resource.downloadable ? 'Download' : 'Unavailable'}
+                                Download
                             </button>
+                            ) : (
+                            <Link
+                                href="/pricing"
+                                className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center px-4 py-2.5 rounded-xl bg-cta/10 text-cta font-medium hover:bg-cta/20 transition-colors cursor-pointer text-sm"
+                            >
+                                <ArrowRight className="w-4 h-4" />
+                                Upgrade
+                            </Link>
+                            )}
                         </div>
                     ))}
                 </div>
