@@ -268,18 +268,28 @@ export default function FavoritesPage() {
                                 </p>
 
                                 <div className="mt-auto flex gap-2">
+                                    {item.downloadable ? (
                                     <button
                                         onClick={() => handleDownload(item.resourceId)}
-                                        disabled={downloadingId === item.resourceId || !item.downloadable}
-                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled={downloadingId === item.resourceId}
+                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors cursor-pointer disabled:opacity-50"
                                     >
                                         {downloadingId === item.resourceId ? (
                                             <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                                         ) : (
                                             <Download className="w-4 h-4" />
                                         )}
-                                        {item.downloadable ? 'Download' : 'Unavailable'}
+                                        Download
                                     </button>
+                                    ) : (
+                                    <Link
+                                        href="/pricing"
+                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cta/10 text-cta font-medium hover:bg-cta/20 transition-colors cursor-pointer"
+                                    >
+                                        <ArrowRight className="w-4 h-4" />
+                                        Upgrade to Download
+                                    </Link>
+                                    )}
                                     <button
                                         onClick={() => handleRemove(item.resourceId)}
                                         disabled={removingId === item.resourceId}
