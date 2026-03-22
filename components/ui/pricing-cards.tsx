@@ -10,9 +10,11 @@ import {
   ArrowRight,
   Download,
   Users,
-  CircleCheckBig,
+  CheckCircle,
 } from 'lucide-react'
 import { BillingToggle } from './billing-toggle'
+
+const CircleCheckBig = CheckCircle
 
 function CheckIcon() {
   return <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
