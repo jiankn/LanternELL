@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Download,
   Users,
+  CircleCheck,
 } from 'lucide-react'
 import { BillingToggle } from './billing-toggle'
 
@@ -23,6 +24,33 @@ function XIcon() {
       <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
     </svg>
   )
+}
+
+interface UserStatus {
+  authenticated: boolean
+  subscription?: { status: string } | null
+  purchases?: Record<string, number>
+}
+
+function useUserStatus(): UserStatus | null {
+  const [status, setStatus] = useState<UserStatus | null>(null)
+  useEffect(() => {
+    fetch('/api/account/me')
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.ok && data.data?.authenticated) {
+          setStatus({
+            authenticated: true,
+            subscription: data.data.user?.subscription,
+            purchases: data.data.user?.purchases,
+          })
+        } else {
+          setStatus({ authenticated: false })
+        }
+      })
+      .catch(() => setStatus({ authenticated: false }))
+  }, [])
+  return status
 }
 
 const comparisonFeatures = [
@@ -43,6 +71,11 @@ const comparisonFeatures = [
 
 export function PricingCards() {
   const [isAnnual, setIsAnnual] = useState(false)
+  const userStatus = useUserStatus()
+
+  const hasSubscription = userStatus?.subscription?.status === 'active' || userStatus?.subscription?.status === 'past_due'
+  const singleCount = userStatus?.purchases?.single || 0
+  const bundleCount = userStatus?.purchases?.bundle || 0
 
   const allAccessPrice = isAnnual ? '$79' : '$9'
   const allAccessNote = isAnnual ? '/year' : '/mo'
@@ -140,16 +173,40 @@ export function PricingCards() {
 
       {/* Pricing Cards */}
       <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start mb-20">
-        {tiers.map((tier) => (
+        {tiers.map((tier) => {
+          // Determine purchase status for this tier
+          const isSingleOwned = tier.name === 'Single Packs' && singleCount > 0
+          const isBundleOwned = tier.name === 'Bundles' && bundleCount > 0
+          const isAllAccessActive = tier.name === 'All Access' && hasSubscription
+          const isOwned = isSingleOwned || isBundleOwned || isAllAccessActive
+
+          return (
           <div
             key={tier.name}
             className={`clay-card p-8 relative transition-all duration-200 ${tier.highlight
               ? 'ring-2 ring-cta md:-mt-4 md:pb-10'
               : ''
-              }`}
+              } ${isOwned ? 'ring-2 ring-green-400' : ''}`}
           >
-            {tier.badge && (
+            {/* Active badge for owned plans */}
+            {isOwned && (
+              <div className="absolute -top-3 right-4">
+                <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full shadow-sm">
+                  <CircleCheck className="w-3 h-3" />
+                  {isAllAccessActive ? 'Active' : isSingleOwned ? `${singleCount} purchased` : `${bundleCount} purchased`}
+                </span>
+              </div>
+            )}
+
+            {tier.badge && !isOwned && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="inline-flex items-center gap-1 px-4 py-1 bg-gradient-to-r from-cta to-[#ea580c] text-white text-xs font-bold rounded-full shadow-clay-sm">
+                  <Star className="w-3 h-3 fill-white" /> {tier.badge}
+                </span>
+              </div>
+            )}
+            {tier.badge && isOwned && (
+              <div className="absolute -top-3 left-4">
                 <span className="inline-flex items-center gap-1 px-4 py-1 bg-gradient-to-r from-cta to-[#ea580c] text-white text-xs font-bold rounded-full shadow-clay-sm">
                   <Star className="w-3 h-3 fill-white" /> {tier.badge}
                 </span>
@@ -179,6 +236,15 @@ export function PricingCards() {
               </div>
             )}
 
+            {/* CTA Button — changes based on ownership */}
+            {isAllAccessActive ? (
+              <Link
+                href="/account/library"
+                className="block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 bg-green-50 text-green-700 border-2 border-green-200 hover:bg-green-100 w-full"
+              >
+                Go to My Library <ArrowRight className="w-4 h-4 inline ml-1" />
+              </Link>
+            ) : (
             <Link
               href={tier.ctaHref}
               className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-8 ${tier.highlight
@@ -188,6 +254,7 @@ export function PricingCards() {
             >
               {tier.cta} <ArrowRight className="w-4 h-4 inline ml-1" />
             </Link>
+            )}
 
             <ul className="space-y-3">
               {tier.features.map((feature) => (
@@ -211,7 +278,8 @@ export function PricingCards() {
               )}
             </ul>
           </div>
-        ))}
+          )
+        })}
       </div>
 
       {/* Feature Comparison Table */}

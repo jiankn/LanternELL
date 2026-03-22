@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCurrentUser } from '@/lib/auth';
-import { queryOne, toISOString } from '@/lib/db';
+import { queryOne, query, toISOString } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,7 +10,12 @@ interface SubscriptionRow {
   cancel_at_period_end: number;
 }
 
-// GET /api/account/me - Get current user info + subscription status
+interface PurchaseCountRow {
+  order_type: string;
+  count: number;
+}
+
+// GET /api/account/me - Get current user info + subscription status + purchase counts
 export async function GET(request: NextRequest) {
   try {
     const user = await getCurrentUser(request);
@@ -42,6 +47,20 @@ export async function GET(request: NextRequest) {
       };
     }
 
+    // Count paid orders by type
+    const purchaseCounts = await query<PurchaseCountRow>(
+      `SELECT order_type, COUNT(*) as count
+       FROM orders
+       WHERE user_id = ? AND status IN ('paid', 'fulfilled')
+       GROUP BY order_type`,
+      [user.id]
+    );
+
+    const purchases: Record<string, number> = {};
+    for (const row of purchaseCounts) {
+      purchases[row.order_type] = Number(row.count);
+    }
+
     return NextResponse.json({
       ok: true,
       data: {
@@ -52,6 +71,7 @@ export async function GET(request: NextRequest) {
           name: user.name,
           role: user.role,
           subscription,
+          purchases,
         }
       },
       error: null
