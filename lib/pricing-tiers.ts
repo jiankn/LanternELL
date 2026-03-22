@@ -96,5 +96,21 @@ export function getStripePriceId(tier: PriceTier): string | null {
     return process.env[info.envKey] || null;
 }
 
+/**
+ * Resolve an app price tier from a Stripe Price ID.
+ * Useful when one product supports multiple billing cadences.
+ */
+export function getPriceTierByStripePriceId(priceId: string | null | undefined): PriceTier | null {
+    if (!priceId) return null;
+
+    for (const [tier, info] of Object.entries(PRICE_TIERS) as Array<[PriceTier, TierInfo]>) {
+        if (process.env[info.envKey] === priceId) {
+            return tier;
+        }
+    }
+
+    return null;
+}
+
 /** All valid price tier values (for DB CHECK constraint) */
 export const ALL_PRICE_TIERS: PriceTier[] = Object.keys(PRICE_TIERS) as PriceTier[];

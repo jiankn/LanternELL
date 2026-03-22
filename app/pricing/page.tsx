@@ -11,6 +11,8 @@ import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { FaqAccordion } from '@/components/ui/faq-accordion'
 import { PricingCards } from '@/components/ui/pricing-cards'
+import { MembershipCheckoutButton } from '@/components/ui/membership-checkout-button'
+import { queryOne } from '@/lib/db'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
@@ -65,7 +67,13 @@ const faqs = [
   },
 ]
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const membershipProduct = await queryOne<{ id: string }>(
+    `SELECT id FROM products WHERE slug = ? AND type = 'membership' AND active = 1 LIMIT 1`,
+    ['all-access-membership']
+  )
+  const membershipProductId = membershipProduct?.id ?? null
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -122,7 +130,7 @@ export default function PricingPage() {
       {/* Pricing Cards (client — billing toggle) */}
       <section className="px-4 sm:px-6 lg:px-8 pb-4">
         <div className="max-w-6xl mx-auto">
-          <PricingCards />
+          <PricingCards membershipProductId={membershipProductId} />
         </div>
       </section>
 
@@ -161,12 +169,22 @@ export default function PricingPage() {
                   Pay $79 once and get unlimited access for the entire school year. That's less than $6.60/month — 3+ months free compared to monthly billing. Perfect for teachers who use resources throughout the year.
                 </p>
               </div>
-              <Link
-                href="/shop?filter=membership"
-                className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
-              >
-                Get Annual — $79/yr
-              </Link>
+              {membershipProductId ? (
+                <MembershipCheckoutButton
+                  productId={membershipProductId}
+                  priceTier="annual"
+                  className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
+                >
+                  Get Annual — $79/yr
+                </MembershipCheckoutButton>
+              ) : (
+                <Link
+                  href="/shop?filter=membership"
+                  className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
+                >
+                  Get Annual — $79/yr
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -194,15 +212,38 @@ export default function PricingPage() {
               Built for the real needs of ESL teachers, bilingual educators, and homeschool families.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/shop?filter=membership" className="clay-button-cta text-lg cursor-pointer">
-                Start All Access — $9/mo
-              </Link>
+              {membershipProductId ? (
+                <MembershipCheckoutButton
+                  productId={membershipProductId}
+                  priceTier="monthly"
+                  className="clay-button-cta text-lg cursor-pointer"
+                >
+                  Start All Access — $9/mo
+                </MembershipCheckoutButton>
+              ) : (
+                <Link href="/shop?filter=membership" className="clay-button-cta text-lg cursor-pointer">
+                  Start All Access — $9/mo
+                </Link>
+              )}
               <Link href="/free-samples" className="clay-button text-lg cursor-pointer">
                 Browse Free Samples
               </Link>
             </div>
             <p className="text-xs text-text-muted mt-4">
-              Or save $29 with <Link href="/shop?filter=membership" className="text-primary hover:underline">annual billing at $79/year</Link>
+              Or save $29 with{' '}
+              {membershipProductId ? (
+                <MembershipCheckoutButton
+                  productId={membershipProductId}
+                  priceTier="annual"
+                  className="bg-transparent border-0 p-0 text-primary hover:underline cursor-pointer"
+                >
+                  annual billing at $79/year
+                </MembershipCheckoutButton>
+              ) : (
+                <Link href="/shop?filter=membership" className="text-primary hover:underline">
+                  annual billing at $79/year
+                </Link>
+              )}
             </p>
           </div>
         </div>

@@ -53,6 +53,7 @@ export interface CreateCheckoutParams {
   priceId: string;
   productType: 'single' | 'bundle' | 'membership' | 'license';
   appProductId: string;
+  appPriceTier?: string | null;
   appUserId: string | null;
   customerEmail: string | null;
   successUrl: string;
@@ -65,7 +66,7 @@ export async function createCheckoutSession(
   if (!isStripeConfigured()) return null;
 
   const {
-    priceId, productType, appProductId, appUserId,
+    priceId, productType, appProductId, appPriceTier, appUserId,
     customerEmail, successUrl, cancelUrl,
   } = params;
 
@@ -81,6 +82,7 @@ export async function createCheckoutSession(
     'automatic_tax[enabled]': 'true',
     'metadata[app_product_id]': appProductId,
     'metadata[app_product_type]': productType,
+    'metadata[app_price_tier]': appPriceTier || '',
     'metadata[app_user_id]': appUserId || '',
     'metadata[app_source]': 'web',
     'metadata[app_env]': process.env.APP_ENV || 'development',

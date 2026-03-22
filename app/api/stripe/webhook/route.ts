@@ -3,6 +3,7 @@ import { query, queryOne, execute, generateId, toISOString } from '@/lib/db';
 import { verifyWebhookSignature } from '@/lib/stripe';
 import { enqueueEmail } from '@/lib/queues';
 import { sendEmail, orderConfirmationEmail } from '@/lib/email';
+import { getStripePriceId, type PriceTier } from '@/lib/pricing-tiers';
 
 export const dynamic = 'force-dynamic';
 
@@ -97,8 +98,93 @@ export async function POST(request: NextRequest) {
   }
 }
 
+async function upsertSubscriptionRecord(params: {
+  userId: string;
+  productId: string;
+  stripeCustomerId: string | null;
+  stripeSubscriptionId: string;
+  stripePriceId?: string | null;
+  status: 'incomplete' | 'active' | 'past_due' | 'canceled' | 'unpaid' | 'expired';
+  currentPeriodStart?: string | null;
+  currentPeriodEnd?: string | null;
+}) {
+  const existingSub = await queryOne<{ id: string }>(
+    'SELECT id FROM subscriptions WHERE stripe_subscription_id = ?',
+    [params.stripeSubscriptionId]
+  );
+
+  if (existingSub) {
+    await execute(
+      `UPDATE subscriptions
+       SET user_id = ?,
+           product_id = ?,
+           stripe_customer_id = ?,
+           stripe_price_id = COALESCE(?, stripe_price_id),
+           status = ?,
+           current_period_start = COALESCE(?, current_period_start),
+           current_period_end = COALESCE(?, current_period_end),
+           updated_at = ?
+       WHERE stripe_subscription_id = ?`,
+      [
+        params.userId,
+        params.productId,
+        params.stripeCustomerId,
+        params.stripePriceId || null,
+        params.status,
+        params.currentPeriodStart || null,
+        params.currentPeriodEnd || null,
+        toISOString(new Date()),
+        params.stripeSubscriptionId,
+      ]
+    );
+    return;
+  }
+
+  await execute(
+    `INSERT INTO subscriptions (
+      id, user_id, product_id, stripe_customer_id, stripe_subscription_id, stripe_price_id,
+      status, current_period_start, current_period_end
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      generateId('sub'),
+      params.userId,
+      params.productId,
+      params.stripeCustomerId,
+      params.stripeSubscriptionId,
+      params.stripePriceId || null,
+      params.status,
+      params.currentPeriodStart || null,
+      params.currentPeriodEnd || null,
+    ]
+  );
+}
+
+async function getLatestMembershipProductIdForUser(userId: string): Promise<string | null> {
+  const recentOrder = await queryOne<{ product_id: string }>(
+    `SELECT oi.product_id
+     FROM orders o
+     JOIN order_items oi ON oi.order_id = o.id
+     JOIN products p ON p.id = oi.product_id
+     WHERE o.user_id = ?
+       AND p.type = 'membership'
+     ORDER BY o.created_at DESC
+     LIMIT 1`,
+    [userId]
+  );
+
+  if (recentOrder?.product_id) {
+    return recentOrder.product_id;
+  }
+
+  const fallbackMembership = await queryOne<{ id: string }>(
+    `SELECT id FROM products WHERE type = 'membership' AND active = 1 ORDER BY created_at DESC LIMIT 1`
+  );
+
+  return fallbackMembership?.id || null;
+}
+
 async function handleCheckoutComplete(session: any) {
-  const { id: sessionId, customer_email, customer, metadata } = session;
+  const { id: sessionId, customer_email, customer, subscription, metadata } = session;
 
   // Find or create user
   let userId = null;
@@ -146,25 +232,37 @@ async function handleCheckoutComplete(session: any) {
   if (productId && userId) {
     await createEntitlementsForProduct(userId, productId, 'purchase', sessionId);
 
+    if (subscription) {
+      const metadataPriceTier = typeof metadata?.app_price_tier === 'string'
+        ? metadata.app_price_tier as PriceTier
+        : null;
+      const stripePriceId = metadataPriceTier ? getStripePriceId(metadataPriceTier) : null;
+
+      await upsertSubscriptionRecord({
+        userId,
+        productId,
+        stripeCustomerId: customer || null,
+        stripeSubscriptionId: subscription,
+        stripePriceId,
+        status: 'active',
+      });
+    }
+
     // Ensure order_items exist (in case they were missed during checkout)
-    const orderId = await queryOne<{ id: string }>(
-      'SELECT id FROM orders WHERE stripe_checkout_session_id = ?',
+    const order = await queryOne<{ id: string; amount_total_cents: number }>(
+      'SELECT id, amount_total_cents FROM orders WHERE stripe_checkout_session_id = ?',
       [sessionId]
     );
-    if (orderId) {
+    if (order) {
       const existingItem = await queryOne<{ id: string }>(
         'SELECT id FROM order_items WHERE order_id = ?',
-        [orderId.id]
+        [order.id]
       );
       if (!existingItem) {
-        const product = await queryOne<{ price_cents: number }>(
-          'SELECT price_cents FROM products WHERE id = ?',
-          [productId]
-        );
         const itemId = generateId('oi');
         await execute(
           'INSERT INTO order_items (id, order_id, product_id, quantity, price_cents) VALUES (?, ?, ?, 1, ?)',
-          [itemId, orderId.id, productId, product?.price_cents || 0]
+          [itemId, order.id, productId, order.amount_total_cents || 0]
         );
       }
     }
@@ -172,18 +270,35 @@ async function handleCheckoutComplete(session: any) {
 
   // Send order confirmation email
   if (customer_email && productId) {
+    const orderSummary = await queryOne<{ amount_total_cents: number; product_name: string | null }>(
+      `SELECT
+         o.amount_total_cents,
+         (
+           SELECT p.name
+           FROM order_items oi
+           JOIN products p ON p.id = oi.product_id
+           WHERE oi.order_id = o.id
+           LIMIT 1
+         ) AS product_name
+       FROM orders o
+       WHERE o.stripe_checkout_session_id = ?`,
+      [sessionId]
+    );
     const product = await queryOne<{ name: string; price_cents: number }>(
       'SELECT name, price_cents FROM products WHERE id = ?',
       [productId]
     );
-    if (product) {
+
+    if (orderSummary || product) {
       const baseUrl = process.env.APP_URL || 'https://lanternell.com';
+      const amountCents = orderSummary?.amount_total_cents ?? product?.price_cents ?? 0;
+      const productName = orderSummary?.product_name || product?.name || 'LanternELL Order';
       const emailData = {
         type: 'order_confirmation' as const,
         to: customer_email.toLowerCase(),
         data: {
-          productName: product.name,
-          amountFormatted: `$${(product.price_cents / 100).toFixed(2)}`,
+          productName,
+          amountFormatted: `$${(amountCents / 100).toFixed(2)}`,
           libraryUrl: `${baseUrl}/account/library`,
         },
       };
@@ -231,6 +346,7 @@ async function handleRefund(charge: any) {
 
 async function handleSubscriptionPayment(invoice: any) {
   const { customer, subscription, lines } = invoice;
+  const stripePriceId = lines?.data?.[0]?.price?.id || null;
 
   // Find user
   const user = await queryOne<{ id: string }>(
@@ -240,23 +356,19 @@ async function handleSubscriptionPayment(invoice: any) {
 
   if (!user) return;
 
-  // Update or create subscription
-  const existingSub = await queryOne<{ id: string }>(
-    'SELECT id FROM subscriptions WHERE stripe_subscription_id = ?',
-    [subscription]
-  );
+  const productId = await getLatestMembershipProductIdForUser(user.id);
 
-  if (existingSub) {
-    await execute(
-      `UPDATE subscriptions SET status = 'active', current_period_start = ?, current_period_end = ?, updated_at = ?
-       WHERE stripe_subscription_id = ?`,
-      [
-        toISOString(new Date(invoice.period_start * 1000)),
-        toISOString(new Date(invoice.period_end * 1000)),
-        toISOString(new Date()),
-        subscription
-      ]
-    );
+  if (productId) {
+    await upsertSubscriptionRecord({
+      userId: user.id,
+      productId,
+      stripeCustomerId: customer || null,
+      stripeSubscriptionId: subscription,
+      stripePriceId,
+      status: 'active',
+      currentPeriodStart: toISOString(new Date(invoice.period_start * 1000)),
+      currentPeriodEnd: toISOString(new Date(invoice.period_end * 1000)),
+    });
   }
 
   // Create membership entitlement
@@ -281,6 +393,7 @@ async function handleSubscriptionPaymentFailed(invoice: any) {
 
 async function handleSubscriptionUpdate(subscription: any) {
   const { id: subId, status, cancel_at_period_end, current_period_end } = subscription;
+  const stripePriceId = subscription.items?.data?.[0]?.price?.id || null;
 
   let dbStatus = status;
   if (cancel_at_period_end && status === 'active') {
@@ -288,9 +401,21 @@ async function handleSubscriptionUpdate(subscription: any) {
   }
 
   await execute(
-    `UPDATE subscriptions SET status = ?, cancel_at_period_end = ?, current_period_end = ?, updated_at = ?
+    `UPDATE subscriptions
+     SET status = ?,
+         cancel_at_period_end = ?,
+         current_period_end = ?,
+         stripe_price_id = COALESCE(?, stripe_price_id),
+         updated_at = ?
      WHERE stripe_subscription_id = ?`,
-    [dbStatus, cancel_at_period_end ? 1 : 0, toISOString(new Date(current_period_end * 1000)), toISOString(new Date()), subId]
+    [
+      dbStatus,
+      cancel_at_period_end ? 1 : 0,
+      toISOString(new Date(current_period_end * 1000)),
+      stripePriceId,
+      toISOString(new Date()),
+      subId,
+    ]
   );
 }
 

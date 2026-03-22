@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { productId, successPath, cancelPath } = body;
+    const { productId, priceTier, successPath, cancelPath } = body;
 
     if (!productId) {
       return NextResponse.json({
@@ -43,27 +43,58 @@ export async function POST(request: NextRequest) {
       }, { status: 404 });
     }
 
+    const requestedPriceTier = typeof priceTier === 'string' ? priceTier as PriceTier : null;
+
+    if (requestedPriceTier) {
+      const requestedTierInfo = PRICE_TIERS[requestedPriceTier];
+
+      if (!requestedTierInfo) {
+        return NextResponse.json({
+          ok: false,
+          data: null,
+          error: { code: 'INVALID_PRICE_TIER', message: 'Invalid price tier' }
+        }, { status: 400 });
+      }
+
+      if (requestedTierInfo.productType !== product.type) {
+        return NextResponse.json({
+          ok: false,
+          data: null,
+          error: { code: 'INVALID_PRICE_TIER', message: 'Price tier does not match product type' }
+        }, { status: 400 });
+      }
+    }
+
     // Get current user (optional - can checkout as guest)
     const user = await getCurrentUser(request);
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'http://localhost:3000';
 
+    const effectivePriceTier = requestedPriceTier || product.price_tier;
+    const resolvedPriceId = requestedPriceTier
+      ? getStripePriceId(requestedPriceTier)
+      : product.stripe_price_id || (product.price_tier ? getStripePriceId(product.price_tier) : null);
+
+    const priceCents = effectivePriceTier && PRICE_TIERS[effectivePriceTier]
+      ? PRICE_TIERS[effectivePriceTier].priceCents
+      : product.price_cents;
+
     // ----------------------------
     // Real Stripe Integration
     // ----------------------------
-    // Resolve Stripe Price ID: prefer explicit stripe_price_id, then fall back to tier-based lookup
-    const resolvedPriceId = product.stripe_price_id
-      || (product.price_tier ? getStripePriceId(product.price_tier) : null);
+    if (isStripeConfigured()) {
+      if (!resolvedPriceId) {
+        return NextResponse.json({
+          ok: false,
+          data: null,
+          error: { code: 'STRIPE_PRICE_MISSING', message: 'Stripe price is not configured for this purchase option' }
+        }, { status: 500 });
+      }
 
-    // Determine product price from tier if available
-    const priceCents = product.price_tier && PRICE_TIERS[product.price_tier]
-      ? PRICE_TIERS[product.price_tier].priceCents
-      : product.price_cents;
-
-    if (isStripeConfigured() && resolvedPriceId) {
       const result = await createCheckoutSession({
         priceId: resolvedPriceId,
         productType: product.type,
         appProductId: product.id,
+        appPriceTier: effectivePriceTier,
         appUserId: user?.id || null,
         customerEmail: user?.email || null,
         successUrl: `${baseUrl}${successPath || '/checkout/success'}?session_id={CHECKOUT_SESSION_ID}`,
@@ -128,7 +159,7 @@ export async function POST(request: NextRequest) {
         mockSessionId,
         product.type,
         'checkout_created',
-        product.price_cents,
+        priceCents,
         user?.email || '',
       ]
     );
@@ -137,7 +168,7 @@ export async function POST(request: NextRequest) {
     const itemId = generateId('oi');
     await execute(
       `INSERT INTO order_items (id, order_id, product_id, quantity, price_cents) VALUES (?, ?, ?, 1, ?)`,
-      [itemId, orderId, product.id, product.price_cents]
+      [itemId, orderId, product.id, priceCents]
     );
 
     const checkoutUrl = `${baseUrl}/checkout/success?session_id=${mockSessionId}`;
@@ -147,7 +178,7 @@ export async function POST(request: NextRequest) {
       data: {
         checkoutUrl,
         sessionId: mockSessionId,
-        amount: product.price_cents,
+        amount: priceCents,
         currency: 'usd',
         mock: true,
       },
