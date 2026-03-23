@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Parent Communication", "Bilingual", "Newcomers", "K-8"]
 seoTitle: "ELL Parent Communication: Bilingual Templates & Tips"
 seoDescription: "How to communicate effectively with ELL families. Includes bilingual letter templates, conference tips, and strategies for engaging non-English-speaking parents."
+coverImageUrl: "/images/blog/cover-parent-comm.png"
 publishedAt: "2026-03-20"
 ---
 

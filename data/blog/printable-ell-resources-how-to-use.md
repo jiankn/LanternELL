@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Printables", "Teaching Tips", "General", "K-8"]
 seoTitle: "Printable ELL Resources: How to Choose and Use Them Effectively"
 seoDescription: "A practical guide to selecting, preparing, and using printable ELL resources effectively. Covers differentiation, lesson integration, and progress tracking."
+coverImageUrl: "/images/blog/cover-printables.png"
 publishedAt: "2026-03-19"
 ---
 

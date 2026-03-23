@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Sentence Frames", "Speaking", "Scaffolding", "K-8"]
 seoTitle: "How to Use Sentence Frames with ELL Students | Teaching Guide"
 seoDescription: "Step-by-step guide to using sentence frames with ELL students. Practical activities for K-8 classrooms with bilingual examples and differentiation tips."
+coverImageUrl: "/images/blog/cover-sentence-frames.png"
 publishedAt: "2026-03-23"
 ---
 

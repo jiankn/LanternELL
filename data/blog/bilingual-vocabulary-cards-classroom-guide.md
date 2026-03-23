@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Vocabulary", "Bilingual", "Visual Supports", "K-8"]
 seoTitle: "Bilingual Vocabulary Cards for ELL Classrooms | 5 Activity Ideas"
 seoDescription: "5 practical ways to use bilingual vocabulary cards with English Language Learners. Includes word wall tips, matching games, and differentiation by WIDA level."
+coverImageUrl: "/images/blog/cover-vocab-cards.png"
 publishedAt: "2026-03-22"
 ---
 

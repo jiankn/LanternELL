@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Classroom Labels", "Bilingual", "Setup", "K-5"]
 seoTitle: "Bilingual Classroom Labels Setup Guide | ELL Classroom Environment"
 seoDescription: "Complete guide to setting up bilingual classroom labels for ELL students. Includes 6 labeling zones, introduction activities, and tips for a print-rich environment."
+coverImageUrl: "/images/blog/cover-class-labels.png"
 publishedAt: "2026-03-21"
 ---
 
