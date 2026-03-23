@@ -66,12 +66,17 @@ export async function POST(request: NextRequest) {
         await handleRefund(event.data.object);
         break;
       }
-      case 'invoice.paid': {
+      case 'invoice.paid':
+      case 'invoice.payment_succeeded': {
         await handleSubscriptionPayment(event.data.object);
         break;
       }
       case 'invoice.payment_failed': {
         await handleSubscriptionPaymentFailed(event.data.object);
+        break;
+      }
+      case 'customer.subscription.created': {
+        await handleSubscriptionCreated(event.data.object);
         break;
       }
       case 'customer.subscription.updated': {
@@ -391,8 +396,52 @@ async function handleSubscriptionPaymentFailed(invoice: any) {
   );
 }
 
+async function handleSubscriptionCreated(subscription: any) {
+  const { id: subId, customer, status, current_period_start, current_period_end } = subscription;
+  const stripePriceId = subscription.items?.data?.[0]?.price?.id || null;
+
+  // Find user by stripe_customer_id
+  const user = await queryOne<{ id: string }>(
+    'SELECT id FROM users WHERE stripe_customer_id = ?',
+    [customer]
+  );
+
+  if (!user) return;
+
+  const productId = await getLatestMembershipProductIdForUser(user.id);
+  if (!productId) {
+    // Fallback: any active membership product
+    const membership = await queryOne<{ id: string }>(
+      `SELECT id FROM products WHERE type = 'membership' AND active = 1 LIMIT 1`
+    );
+    if (!membership) return;
+    await upsertSubscriptionRecord({
+      userId: user.id,
+      productId: membership.id,
+      stripeCustomerId: customer || null,
+      stripeSubscriptionId: subId,
+      stripePriceId,
+      status: status === 'active' ? 'active' : 'incomplete',
+      currentPeriodStart: current_period_start ? toISOString(new Date(current_period_start * 1000)) : null,
+      currentPeriodEnd: current_period_end ? toISOString(new Date(current_period_end * 1000)) : null,
+    });
+    return;
+  }
+
+  await upsertSubscriptionRecord({
+    userId: user.id,
+    productId,
+    stripeCustomerId: customer || null,
+    stripeSubscriptionId: subId,
+    stripePriceId,
+    status: status === 'active' ? 'active' : 'incomplete',
+    currentPeriodStart: current_period_start ? toISOString(new Date(current_period_start * 1000)) : null,
+    currentPeriodEnd: current_period_end ? toISOString(new Date(current_period_end * 1000)) : null,
+  });
+}
+
 async function handleSubscriptionUpdate(subscription: any) {
-  const { id: subId, status, cancel_at_period_end, current_period_end } = subscription;
+  const { id: subId, customer, status, cancel_at_period_end, current_period_start, current_period_end } = subscription;
   const stripePriceId = subscription.items?.data?.[0]?.price?.id || null;
 
   let dbStatus = status;
@@ -400,23 +449,53 @@ async function handleSubscriptionUpdate(subscription: any) {
     dbStatus = 'canceled';
   }
 
-  await execute(
-    `UPDATE subscriptions
-     SET status = ?,
-         cancel_at_period_end = ?,
-         current_period_end = ?,
-         stripe_price_id = COALESCE(?, stripe_price_id),
-         updated_at = ?
-     WHERE stripe_subscription_id = ?`,
-    [
-      dbStatus,
-      cancel_at_period_end ? 1 : 0,
-      toISOString(new Date(current_period_end * 1000)),
-      stripePriceId,
-      toISOString(new Date()),
-      subId,
-    ]
+  // First try to update existing record
+  const existingSub = await queryOne<{ id: string }>(
+    'SELECT id FROM subscriptions WHERE stripe_subscription_id = ?',
+    [subId]
   );
+
+  if (existingSub) {
+    await execute(
+      `UPDATE subscriptions
+       SET status = ?,
+           cancel_at_period_end = ?,
+           current_period_end = ?,
+           stripe_price_id = COALESCE(?, stripe_price_id),
+           updated_at = ?
+       WHERE stripe_subscription_id = ?`,
+      [
+        dbStatus,
+        cancel_at_period_end ? 1 : 0,
+        toISOString(new Date(current_period_end * 1000)),
+        stripePriceId,
+        toISOString(new Date()),
+        subId,
+      ]
+    );
+  } else {
+    // If no existing record, create one (handles case where subscription.created was missed)
+    const user = await queryOne<{ id: string }>(
+      'SELECT id FROM users WHERE stripe_customer_id = ?',
+      [customer]
+    );
+    if (!user) return;
+
+    const productId = await getLatestMembershipProductIdForUser(user.id)
+      || (await queryOne<{ id: string }>(`SELECT id FROM products WHERE type = 'membership' AND active = 1 LIMIT 1`))?.id;
+    if (!productId) return;
+
+    await upsertSubscriptionRecord({
+      userId: user.id,
+      productId,
+      stripeCustomerId: customer || null,
+      stripeSubscriptionId: subId,
+      stripePriceId,
+      status: dbStatus,
+      currentPeriodStart: current_period_start ? toISOString(new Date(current_period_start * 1000)) : null,
+      currentPeriodEnd: current_period_end ? toISOString(new Date(current_period_end * 1000)) : null,
+    });
+  }
 }
 
 async function handleSubscriptionDelete(subscription: any) {
