@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import {
   Check,
@@ -12,7 +12,13 @@ import {
   CheckCircle,
 } from 'lucide-react'
 import { BillingToggle } from './billing-toggle'
-import { MembershipCheckoutButton } from './membership-checkout-button'
+import { MembershipActionButton } from './membership-action-button'
+import {
+  getMembershipActionState,
+  type MembershipBadgeTone,
+  type PricingUserStatus,
+} from './pricing-membership-state'
+import { usePricingUserStatus } from './use-pricing-user-status'
 
 const CircleCheckBig = CheckCircle
 
@@ -28,34 +34,28 @@ function XIcon() {
   )
 }
 
-interface UserStatus {
-  authenticated: boolean
-  subscription?: {
-    status: string
-    priceTier?: string | null
-  } | null
-  purchases?: Record<string, number>
+function getBadgeClassName(tone: MembershipBadgeTone) {
+  switch (tone) {
+    case 'amber':
+      return 'bg-amber-500 text-white'
+    case 'orange':
+      return 'bg-orange-500 text-white'
+    case 'slate':
+      return 'bg-slate-500 text-white'
+    case 'green':
+    default:
+      return 'bg-green-500 text-white'
+  }
 }
 
-function useUserStatus(): UserStatus | null {
-  const [status, setStatus] = useState<UserStatus | null>(null)
-  useEffect(() => {
-    fetch('/api/account/me')
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.ok && data.data?.authenticated) {
-          setStatus({
-            authenticated: true,
-            subscription: data.data.user?.subscription,
-            purchases: data.data.user?.purchases,
-          })
-        } else {
-          setStatus({ authenticated: false })
-        }
-      })
-      .catch(() => setStatus({ authenticated: false }))
-  }, [])
-  return status
+function getActionButtonClassName(isPrimaryHighlight: boolean, actionKind: 'checkout' | 'manage' | 'link') {
+  const baseClassName = actionKind === 'checkout'
+    ? isPrimaryHighlight
+      ? 'clay-button-cta'
+      : 'clay-button'
+    : 'clay-button'
+
+  return `${baseClassName} block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer w-full`
 }
 
 const comparisonFeatures = [
@@ -76,14 +76,14 @@ const comparisonFeatures = [
 
 interface PricingCardsProps {
   membershipProductId: string | null
+  initialUserStatus: PricingUserStatus
 }
 
-export function PricingCards({ membershipProductId }: PricingCardsProps) {
-  const [isAnnual, setIsAnnual] = useState(false)
-  const userStatus = useUserStatus()
+export function PricingCards({ membershipProductId, initialUserStatus }: PricingCardsProps) {
+  const [isAnnual, setIsAnnual] = useState(initialUserStatus.subscription?.priceTier === 'annual')
+  const userStatus = usePricingUserStatus(initialUserStatus)
 
   const hasSubscription = userStatus?.subscription?.status === 'active' || userStatus?.subscription?.status === 'past_due'
-  const currentMembershipTier = userStatus?.subscription?.priceTier === 'annual' ? 'annual' : 'monthly'
   const singleCount = userStatus?.purchases?.single || 0
   const bundleCount = userStatus?.purchases?.bundle || 0
 
@@ -175,24 +175,18 @@ export function PricingCards({ membershipProductId }: PricingCardsProps) {
           const isSingleTier = tier.name === 'Single Packs'
           const isBundleTier = tier.name === 'Bundles'
           const isAllAccessTier = tier.name === 'All Access'
+          const membershipState = isAllAccessTier
+            ? getMembershipActionState(userStatus, isAnnual ? 'annual' : 'monthly')
+            : null
           const isSingleOwned = isSingleTier && singleCount > 0
           const isBundleOwned = isBundleTier && bundleCount > 0
-          const isAllAccessActive = isAllAccessTier && hasSubscription
+          const isAllAccessActive = Boolean(membershipState?.hasMembership)
           const isOwned = isSingleOwned || isBundleOwned || isAllAccessActive
           const isCoveredByCurrentPlan = hasSubscription && (isSingleTier || isBundleTier)
-          const isViewingCurrentMembershipTier =
-            isAllAccessActive &&
-            ((currentMembershipTier === 'annual' && isAnnual) ||
-              (currentMembershipTier === 'monthly' && !isAnnual))
-          const isAnnualUpgrade = isAllAccessActive && currentMembershipTier === 'monthly' && isAnnual
-          const statusBadge = isAllAccessActive
+          const statusBadge = membershipState?.badge
             ? {
-              label: isViewingCurrentMembershipTier ? 'Current Plan' : isAnnualUpgrade ? 'Upgrade Available' : 'Active Member',
-              className: isViewingCurrentMembershipTier
-                ? 'bg-green-500 text-white'
-                : isAnnualUpgrade
-                  ? 'bg-amber-500 text-white'
-                  : 'bg-green-500 text-white',
+              label: membershipState.badge.label,
+              className: getBadgeClassName(membershipState.badge.tone),
             }
             : isOwned
               ? {
@@ -200,26 +194,10 @@ export function PricingCards({ membershipProductId }: PricingCardsProps) {
                 className: 'bg-green-500 text-white',
               }
               : null
-          const ctaHref = isAllAccessActive
-            ? isAnnualUpgrade
-              ? '/shop?filter=membership'
-              : '/account/library'
-            : tier.ctaHref
-          const ctaLabel = isAllAccessActive
-            ? isAnnualUpgrade
-              ? 'Upgrade to Annual'
-              : 'Go to Library'
-            : tier.cta
-          const ctaClassName = isAllAccessActive && !isAnnualUpgrade
-            ? 'bg-green-50 text-green-700 border-2 border-green-200 hover:bg-green-100'
-            : tier.highlight
-              ? 'clay-button-cta w-full justify-center'
-              : 'clay-button w-full justify-center'
-
-          const shouldUseMembershipCheckout =
-            isAllAccessTier &&
-            !!membershipProductId &&
-            (!isAllAccessActive || isAnnualUpgrade)
+          const showAnnualSavingsCallout =
+            tier.highlight &&
+            isAnnual &&
+            (!membershipState || !membershipState.hasMembership || membershipState.isUpgradeOpportunity)
 
           return (
           <div
@@ -271,36 +249,50 @@ export function PricingCards({ membershipProductId }: PricingCardsProps) {
             <p className="text-xs text-text-muted mb-6">{tier.period}</p>
 
             {/* Annual savings callout */}
-            {tier.highlight && isAnnual && (
+            {showAnnualSavingsCallout && (
               <div className="mb-4 px-3 py-2 bg-green-50 border border-green-200 rounded-xl text-xs text-green-700 font-medium text-center">
                 3+ months free — save $29 vs monthly billing
               </div>
             )}
 
-            {shouldUseMembershipCheckout ? (
-              <MembershipCheckoutButton
-                productId={membershipProductId!}
-                priceTier={isAnnual ? 'annual' : 'monthly'}
-                className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-3 w-full ${ctaClassName}`}
-              >
-                {ctaLabel} <ArrowRight className="w-4 h-4 inline ml-1" />
-              </MembershipCheckoutButton>
+            {isAllAccessTier && membershipState ? (
+              <>
+                <MembershipActionButton
+                  action={membershipState.primaryAction}
+                  membershipProductId={membershipProductId}
+                  className={`${getActionButtonClassName(tier.highlight, membershipState.primaryAction.kind)} mb-3`}
+                >
+                  {membershipState.primaryAction.label} <ArrowRight className="w-4 h-4 inline ml-1" />
+                </MembershipActionButton>
+                {membershipState.secondaryAction && (
+                  <MembershipActionButton
+                    action={membershipState.secondaryAction}
+                    membershipProductId={membershipProductId}
+                    className="clay-button block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-3 w-full"
+                  >
+                    {membershipState.secondaryAction.label}
+                  </MembershipActionButton>
+                )}
+                <p className={`text-center text-xs font-medium mb-5 ${membershipState.isUpgradeOpportunity ? 'text-amber-700' : membershipState.isPaymentIssue ? 'text-orange-700' : 'text-green-700'}`}>
+                  {membershipState.helperCopy}
+                </p>
+              </>
             ) : (
               <Link
-                href={ctaHref}
-                className={`block text-center py-3 px-6 rounded-[12px] font-semibold transition-all duration-200 cursor-pointer mb-3 w-full ${ctaClassName}`}
+                href={tier.ctaHref}
+                className={`${getActionButtonClassName(tier.highlight, 'link')} mb-3`}
               >
-                {ctaLabel} <ArrowRight className="w-4 h-4 inline ml-1" />
+                {tier.cta} <ArrowRight className="w-4 h-4 inline ml-1" />
               </Link>
             )}
 
-            {isCoveredByCurrentPlan && (
+            {isCoveredByCurrentPlan && !isAllAccessTier && (
               <p className="text-center text-xs font-medium text-green-700 mb-5">
                 Included in your plan
               </p>
             )}
 
-            {!isCoveredByCurrentPlan && <div className="mb-5" />}
+            {!isCoveredByCurrentPlan && !isAllAccessTier && <div className="mb-5" />}
 
             <ul className="space-y-3">
               {tier.features.map((feature) => (

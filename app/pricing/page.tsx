@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
 import {
   Sparkles,
   Download,
@@ -11,7 +12,14 @@ import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { FaqAccordion } from '@/components/ui/faq-accordion'
 import { PricingCards } from '@/components/ui/pricing-cards'
-import { MembershipCheckoutButton } from '@/components/ui/membership-checkout-button'
+import {
+  PricingHeroStatusBar,
+  PricingAnnualCallout,
+  PricingFinalCta,
+} from '@/components/ui/pricing-membership-cta'
+import type { PricingUserStatus } from '@/components/ui/pricing-membership-state'
+import { getCurrentUserBySessionToken } from '@/lib/auth'
+import { getAccountSnapshot } from '@/lib/account-status'
 import { queryOne } from '@/lib/db'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
@@ -68,11 +76,27 @@ const faqs = [
 ]
 
 export default async function PricingPage() {
-  const membershipProduct = await queryOne<{ id: string }>(
-    `SELECT id FROM products WHERE slug = ? AND type = 'membership' AND active = 1 LIMIT 1`,
-    ['all-access-membership']
-  )
+  const sessionToken = cookies().get('__session')?.value ?? null
+  const [membershipProduct, user] = await Promise.all([
+    queryOne<{ id: string }>(
+      `SELECT id FROM products WHERE slug = ? AND type = 'membership' AND active = 1 LIMIT 1`,
+      ['all-access-membership']
+    ),
+    getCurrentUserBySessionToken(sessionToken),
+  ])
   const membershipProductId = membershipProduct?.id ?? null
+  const accountSnapshot = user ? await getAccountSnapshot(user.id) : null
+  const initialUserStatus: PricingUserStatus = user
+    ? {
+      authenticated: true,
+      subscription: accountSnapshot?.subscription ?? null,
+      purchases: accountSnapshot?.purchases ?? {},
+    }
+    : {
+      authenticated: false,
+      subscription: null,
+      purchases: {},
+    }
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -114,6 +138,10 @@ export default async function PricingPage() {
       {/* Hero */}
       <section className="pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+          <PricingHeroStatusBar
+            membershipProductId={membershipProductId}
+            initialUserStatus={initialUserStatus}
+          />
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-clay-sm mb-6">
             <Zap className="w-4 h-4 text-cta" />
             <span className="text-sm font-medium text-text-primary">Preview Packs Before You Buy</span>
@@ -130,7 +158,10 @@ export default async function PricingPage() {
       {/* Pricing Cards (client — billing toggle) */}
       <section className="px-4 sm:px-6 lg:px-8 pb-4">
         <div className="max-w-6xl mx-auto">
-          <PricingCards membershipProductId={membershipProductId} />
+          <PricingCards
+            membershipProductId={membershipProductId}
+            initialUserStatus={initialUserStatus}
+          />
         </div>
       </section>
 
@@ -156,37 +187,10 @@ export default async function PricingPage() {
       {/* Annual value callout */}
       <section className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-3xl mx-auto">
-          <div className="clay-card p-6 sm:p-8 bg-gradient-to-br from-primary/5 to-cta/5">
-            <div className="flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center shrink-0">
-                <Sparkles className="w-8 h-8 text-green-600" />
-              </div>
-              <div>
-                <h2 className="font-heading text-xl font-bold text-text-primary mb-2">
-                  Annual plan — the smart choice for full-year teachers
-                </h2>
-                <p className="text-text-primary/70 text-sm leading-relaxed">
-                  Pay $79 once and get unlimited access for the entire school year. That's less than $6.60/month — 3+ months free compared to monthly billing. Perfect for teachers who use resources throughout the year.
-                </p>
-              </div>
-              {membershipProductId ? (
-                <MembershipCheckoutButton
-                  productId={membershipProductId}
-                  priceTier="annual"
-                  className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
-                >
-                  Get Annual — $79/yr
-                </MembershipCheckoutButton>
-              ) : (
-                <Link
-                  href="/shop?filter=membership"
-                  className="clay-button-cta shrink-0 cursor-pointer whitespace-nowrap"
-                >
-                  Get Annual — $79/yr
-                </Link>
-              )}
-            </div>
-          </div>
+          <PricingAnnualCallout
+            membershipProductId={membershipProductId}
+            initialUserStatus={initialUserStatus}
+          />
         </div>
       </section>
 
@@ -203,49 +207,10 @@ export default async function PricingPage() {
       {/* Final CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="clay-card p-8 sm:p-12">
-            <Sparkles className="w-10 h-10 text-cta mx-auto mb-4" />
-            <h2 className="font-heading text-3xl font-bold text-text-primary mb-4">
-              Ready to Save Hours of Prep Time?
-            </h2>
-            <p className="text-text-primary/70 mb-8">
-              Built for the real needs of ESL teachers, bilingual educators, and homeschool families.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              {membershipProductId ? (
-                <MembershipCheckoutButton
-                  productId={membershipProductId}
-                  priceTier="monthly"
-                  className="clay-button-cta text-lg cursor-pointer"
-                >
-                  Start All Access — $9/mo
-                </MembershipCheckoutButton>
-              ) : (
-                <Link href="/shop?filter=membership" className="clay-button-cta text-lg cursor-pointer">
-                  Start All Access — $9/mo
-                </Link>
-              )}
-              <Link href="/free-samples" className="clay-button text-lg cursor-pointer">
-                Browse Free Samples
-              </Link>
-            </div>
-            <p className="text-xs text-text-muted mt-4">
-              Or save $29 with{' '}
-              {membershipProductId ? (
-                <MembershipCheckoutButton
-                  productId={membershipProductId}
-                  priceTier="annual"
-                  className="bg-transparent border-0 p-0 text-primary hover:underline cursor-pointer"
-                >
-                  annual billing at $79/year
-                </MembershipCheckoutButton>
-              ) : (
-                <Link href="/shop?filter=membership" className="text-primary hover:underline">
-                  annual billing at $79/year
-                </Link>
-              )}
-            </p>
-          </div>
+          <PricingFinalCta
+            membershipProductId={membershipProductId}
+            initialUserStatus={initialUserStatus}
+          />
         </div>
       </section>
 

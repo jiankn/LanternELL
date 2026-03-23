@@ -33,18 +33,26 @@ export async function getCurrentSession(request: NextRequest): Promise<SessionRe
   );
 }
 
-export async function getCurrentUser(request: NextRequest): Promise<AuthUser | null> {
-  const session = await getCurrentSession(request);
-  if (!session) {
+export async function getCurrentUserBySessionToken(sessionToken?: string | null): Promise<AuthUser | null> {
+  if (!sessionToken) {
     return null;
   }
 
+  const tokenHash = await hashToken(sessionToken);
+
   return queryOne<AuthUser>(
-    `SELECT id, email, name, role, stripe_customer_id
-     FROM users
-     WHERE id = ?`,
-    [session.user_id]
+    `SELECT u.id, u.email, u.name, u.role, u.stripe_customer_id
+     FROM sessions s
+     INNER JOIN users u ON u.id = s.user_id
+     WHERE s.session_token_hash = ?
+       AND s.expires_at > ?
+       AND s.revoked_at IS NULL`,
+    [tokenHash, toISOString(new Date())]
   );
+}
+
+export async function getCurrentUser(request: NextRequest): Promise<AuthUser | null> {
+  return getCurrentUserBySessionToken(request.cookies.get('__session')?.value ?? null);
 }
 
 export async function requireAdmin(request: NextRequest): Promise<AuthUser | null> {
