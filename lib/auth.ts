@@ -16,13 +16,13 @@ export interface AuthUser {
   stripe_customer_id?: string | null;
 }
 
-export async function getCurrentSession(request: NextRequest): Promise<SessionRecord | null> {
-  const sessionToken = request.cookies.get('__session')?.value;
+async function getCurrentSessionByToken(sessionToken?: string | null): Promise<SessionRecord | null> {
   if (!sessionToken) {
     return null;
   }
 
   const tokenHash = await hashToken(sessionToken);
+
   return queryOne<SessionRecord>(
     `SELECT id, user_id, expires_at, revoked_at
      FROM sessions
@@ -33,21 +33,21 @@ export async function getCurrentSession(request: NextRequest): Promise<SessionRe
   );
 }
 
+export async function getCurrentSession(request: NextRequest): Promise<SessionRecord | null> {
+  return getCurrentSessionByToken(request.cookies.get('__session')?.value ?? null);
+}
+
 export async function getCurrentUserBySessionToken(sessionToken?: string | null): Promise<AuthUser | null> {
-  if (!sessionToken) {
+  const session = await getCurrentSessionByToken(sessionToken);
+  if (!session) {
     return null;
   }
 
-  const tokenHash = await hashToken(sessionToken);
-
   return queryOne<AuthUser>(
-    `SELECT u.id, u.email, u.name, u.role, u.stripe_customer_id
-     FROM sessions s
-     INNER JOIN users u ON u.id = s.user_id
-     WHERE s.session_token_hash = ?
-       AND s.expires_at > ?
-       AND s.revoked_at IS NULL`,
-    [tokenHash, toISOString(new Date())]
+    `SELECT id, email, name, role, stripe_customer_id
+     FROM users
+     WHERE id = ?`,
+    [session.user_id]
   );
 }
 
