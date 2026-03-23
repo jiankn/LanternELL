@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { query } from '@/lib/db'
+import { getAllPosts } from '@/lib/blog'
 import { Navbar } from '@/components/ui/navbar'
 import { Footer } from '@/components/ui/footer'
 import { Calendar, ArrowRight } from 'lucide-react'
@@ -24,24 +24,8 @@ export const metadata: Metadata = {
   },
 }
 
-interface BlogPost {
-  id: string; slug: string; title: string; excerpt: string | null
-  cover_image_url: string | null; author: string; tags: string | null
-  published_at: string
-}
-
-// ISR: 静态生成，每 3600 秒（1小时）重新验证
-// Google 爬虫拿到的是预渲染的静态 HTML，加载更快，SEO 更好
-export const revalidate = 3600
-
-export default async function BlogPage() {
-  let posts: BlogPost[] = []
-  try {
-    posts = await query<BlogPost>(
-      `SELECT id, slug, title, excerpt, cover_image_url, author, tags, published_at
-       FROM blog_posts WHERE status = 'published' ORDER BY published_at DESC LIMIT 50`
-    )
-  } catch { /* DB may not be ready */ }
+export default function BlogPage() {
+  const posts = getAllPosts()
 
   return (
     <main className="min-h-screen bg-background">
@@ -63,26 +47,23 @@ export default async function BlogPage() {
             </div>
           ) : (
             <div className="space-y-6">
-              {posts.map(post => {
-                const tags: string[] = post.tags ? JSON.parse(post.tags) : []
-                return (
-                  <Link key={post.id} href={`/teaching-tips/${post.slug}`}
-                    className="clay-card p-6 flex flex-col sm:flex-row gap-6 group cursor-pointer hover:-translate-y-0.5 transition-all duration-200">
-                    {post.cover_image_url && (
-                      <img src={post.cover_image_url} alt={`${post.title} - ELL teaching tips and strategies`} className="w-full sm:w-48 h-32 object-cover rounded-xl shrink-0" />
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <h2 className="font-heading text-xl font-semibold text-text-primary group-hover:text-primary transition-colors mb-2">{post.title}</h2>
-                      {post.excerpt && <p className="text-text-muted text-sm mb-3 line-clamp-2">{post.excerpt}</p>}
-                      <div className="flex items-center gap-4 text-xs text-text-muted">
-                        <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />{new Date(post.published_at).toLocaleDateString()}</span>
-                        {tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-full bg-primary/10 text-primary">{t}</span>)}
-                      </div>
+              {posts.map(post => (
+                <Link key={post.slug} href={`/teaching-tips/${post.slug}`}
+                  className="clay-card p-6 flex flex-col sm:flex-row gap-6 group cursor-pointer hover:-translate-y-0.5 transition-all duration-200">
+                  {post.coverImageUrl && (
+                    <img src={post.coverImageUrl} alt={`${post.title} - ELL teaching tips and strategies`} className="w-full sm:w-48 h-32 object-cover rounded-xl shrink-0" />
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <h2 className="font-heading text-xl font-semibold text-text-primary group-hover:text-primary transition-colors mb-2">{post.title}</h2>
+                    {post.excerpt && <p className="text-text-muted text-sm mb-3 line-clamp-2">{post.excerpt}</p>}
+                    <div className="flex items-center gap-4 text-xs text-text-muted">
+                      <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />{new Date(post.publishedAt).toLocaleDateString()}</span>
+                      {post.tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-full bg-primary/10 text-primary">{t}</span>)}
                     </div>
-                    <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors shrink-0 self-center hidden sm:block" />
-                  </Link>
-                )
-              })}
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors shrink-0 self-center hidden sm:block" />
+                </Link>
+              ))}
             </div>
           )}
         </div>
