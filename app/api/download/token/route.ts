@@ -53,22 +53,37 @@ export async function POST(request: NextRequest) {
     if (resource.free_or_paid === 'paid') {
       const entitlement = await queryOne<{ id: string }>(
         `SELECT e.id FROM entitlements e
+         LEFT JOIN products p ON p.id = e.product_id
          WHERE e.user_id = ?
            AND e.status = 'active'
-           AND (e.resource_id = ? OR e.product_id IN (
-             SELECT pr.product_id FROM product_resources pr WHERE pr.resource_id = ?
-           ))
+           AND (
+             e.resource_id = ?
+             OR e.product_id IN (
+               SELECT pr.product_id FROM product_resources pr WHERE pr.resource_id = ?
+             )
+             OR p.type = 'membership'
+           )
            AND (e.ends_at IS NULL OR e.ends_at > datetime('now'))
          LIMIT 1`,
         [user.id, resourceId, resourceId]
       );
 
       if (!entitlement) {
-        return NextResponse.json({
-          ok: false,
-          data: null,
-          error: { code: 'NO_ACCESS', message: 'Please purchase this resource to download' }
-        }, { status: 403 });
+        // Fallback: check active subscription directly (in case entitlement record is missing)
+        const activeSub = await queryOne<{ id: string }>(
+          `SELECT id FROM subscriptions
+           WHERE user_id = ? AND status IN ('active', 'past_due')
+           LIMIT 1`,
+          [user.id]
+        );
+
+        if (!activeSub) {
+          return NextResponse.json({
+            ok: false,
+            data: null,
+            error: { code: 'NO_ACCESS', message: 'Please purchase this resource to download' }
+          }, { status: 403 });
+        }
       }
     }
 

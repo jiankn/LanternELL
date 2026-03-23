@@ -444,15 +444,9 @@ export default function LibraryPage() {
                                         Download
                                     </button>
                                     ) : (
-                                    <div>
-                                        <Link
-                                            href="/pricing"
-                                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cta/10 text-cta font-medium hover:bg-cta/20 transition-colors cursor-pointer"
-                                        >
-                                            <ArrowRight className="w-4 h-4" />
-                                            Upgrade to Download
-                                        </Link>
-                                        <p className="text-xs text-text-muted text-center mt-1.5">Available with All Access or single purchase</p>
+                                    <div className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 text-text-muted font-medium">
+                                        <FileText className="w-4 h-4" />
+                                        Coming Soon
                                     </div>
                                     )}
                                 </div>
@@ -516,13 +510,10 @@ export default function LibraryPage() {
                                 Download
                             </button>
                             ) : (
-                            <Link
-                                href="/pricing"
-                                className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center px-4 py-2.5 rounded-xl bg-cta/10 text-cta font-medium hover:bg-cta/20 transition-colors cursor-pointer text-sm"
-                            >
-                                <ArrowRight className="w-4 h-4" />
-                                Upgrade
-                            </Link>
+                            <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center px-4 py-2.5 rounded-xl bg-gray-100 text-text-muted font-medium text-sm">
+                                <FileText className="w-4 h-4" />
+                                Coming Soon
+                            </div>
                             )}
                         </div>
                     ))}
