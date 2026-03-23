@@ -3,20 +3,19 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import {
-    Bell,
+    Clock,
     Package,
     Download,
-    AlertCircle,
     Filter,
     ChevronRight,
-    Clock,
-    Info,
+    CreditCard,
+    Sparkles,
 } from 'lucide-react'
 import { useAccount } from '../use-account'
 
-interface Notification {
+interface ActivityItem {
     id: string
-    type: 'order' | 'resource' | 'system'
+    type: 'order' | 'download' | 'subscription' | 'system'
     title: string
     message: string
     createdAt: string
@@ -24,23 +23,25 @@ interface Notification {
     actionLabel?: string
 }
 
-const notificationIcons: Record<string, React.ReactNode> = {
+const activityIcons: Record<string, React.ReactNode> = {
     order: <Package className="w-5 h-5" />,
-    resource: <Download className="w-5 h-5" />,
-    system: <Info className="w-5 h-5" />,
+    download: <Download className="w-5 h-5" />,
+    subscription: <CreditCard className="w-5 h-5" />,
+    system: <Sparkles className="w-5 h-5" />,
 }
 
-const notificationColors: Record<string, string> = {
+const activityColors: Record<string, string> = {
     order: 'bg-blue-100 text-blue-600',
-    resource: 'bg-green-100 text-green-600',
+    download: 'bg-green-100 text-green-600',
+    subscription: 'bg-violet-100 text-violet-600',
     system: 'bg-amber-100 text-amber-600',
 }
 
 const filterOptions = [
     { value: '', label: 'All' },
-    { value: 'order', label: 'Orders' },
-    { value: 'resource', label: 'Resources' },
-    { value: 'system', label: 'System' },
+    { value: 'order', label: 'Purchases' },
+    { value: 'download', label: 'Downloads' },
+    { value: 'subscription', label: 'Subscription' },
 ]
 
 function formatRelativeTime(dateStr: string): string {
@@ -58,38 +59,38 @@ function formatRelativeTime(dateStr: string): string {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 }
 
-export default function NotificationsPage() {
+export default function ActivityPage() {
     const { user } = useAccount()
-    const [notifications, setNotifications] = useState<Notification[]>([])
+    const [activities, setActivities] = useState<ActivityItem[]>([])
     const [loading, setLoading] = useState(true)
     const [filter, setFilter] = useState('')
     const [showFilterMenu, setShowFilterMenu] = useState(false)
 
     useEffect(() => {
-        fetchNotifications()
+        fetchActivities()
     }, [])
 
-    const fetchNotifications = async () => {
+    const fetchActivities = async () => {
         try {
             const res = await fetch('/api/account/notifications')
             const data = await res.json()
             if (data.ok) {
-                setNotifications(data.data.notifications)
+                setActivities(data.data.notifications)
             }
         } catch (error) {
-            console.error('Failed to fetch notifications:', error)
+            console.error('Failed to fetch activity:', error)
         } finally {
             setLoading(false)
         }
     }
 
-    const filteredNotifications = useMemo(() => {
-        let result = [...notifications]
+    const filteredActivities = useMemo(() => {
+        let result = [...activities]
         if (filter) {
             result = result.filter((n) => n.type === filter)
         }
         return result
-    }, [notifications, filter])
+    }, [activities, filter])
 
     if (!user) return null
 
@@ -97,9 +98,9 @@ export default function NotificationsPage() {
         <div className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                    <h1 className="font-heading text-2xl font-bold text-text-primary">Notifications</h1>
+                    <h1 className="font-heading text-2xl font-bold text-text-primary">Recent Activity</h1>
                     <p className="text-text-muted mt-1">
-                        {notifications.length} {notifications.length === 1 ? 'update' : 'updates'}
+                        Your purchases, downloads, and account events
                     </p>
                 </div>
                 <div className="relative">
@@ -149,18 +150,18 @@ export default function NotificationsPage() {
                         </div>
                     ))}
                 </div>
-            ) : filteredNotifications.length === 0 ? (
+            ) : filteredActivities.length === 0 ? (
                 <div className="clay-card p-12 text-center">
                     <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <Bell className="w-8 h-8 text-text-muted" />
+                        <Clock className="w-8 h-8 text-text-muted" />
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-text-primary mb-2">
-                        {filter ? 'No matching notifications' : 'No notifications yet'}
+                        {filter ? 'No matching activity' : 'No activity yet'}
                     </h3>
                     <p className="text-text-muted mb-4">
                         {filter
-                            ? 'Try adjusting your filter settings.'
-                            : 'Notifications will appear here when you make purchases or get new resources.'}
+                            ? 'Try adjusting your filter.'
+                            : 'Your purchases, downloads, and account events will appear here.'}
                     </p>
                     {filter && (
                         <button
@@ -173,13 +174,13 @@ export default function NotificationsPage() {
                 </div>
             ) : (
                 <div className="space-y-3">
-                    {filteredNotifications.map((notification) => {
-                        const iconBg = notificationColors[notification.type]
-                        const icon = notificationIcons[notification.type]
+                    {filteredActivities.map((item) => {
+                        const iconBg = activityColors[item.type]
+                        const icon = activityIcons[item.type]
 
                         return (
                             <div
-                                key={notification.id}
+                                key={item.id}
                                 className="clay-card p-5 transition-all hover:shadow-clay-button"
                             >
                                 <div className="flex gap-4">
@@ -190,25 +191,25 @@ export default function NotificationsPage() {
                                         <div className="flex items-start justify-between gap-3">
                                             <div className="min-w-0">
                                                 <h3 className="font-semibold text-text-primary truncate">
-                                                    {notification.title}
+                                                    {item.title}
                                                 </h3>
                                                 <p className="text-sm text-text-muted mt-1 line-clamp-2">
-                                                    {notification.message}
+                                                    {item.message}
                                                 </p>
                                             </div>
                                             <span className="text-xs text-text-muted whitespace-nowrap shrink-0 flex items-center gap-1">
                                                 <Clock className="w-3 h-3" />
-                                                {formatRelativeTime(notification.createdAt)}
+                                                {formatRelativeTime(item.createdAt)}
                                             </span>
                                         </div>
 
-                                        {notification.actionUrl && (
+                                        {item.actionUrl && (
                                             <div className="mt-3">
                                                 <Link
-                                                    href={notification.actionUrl}
+                                                    href={item.actionUrl}
                                                     className="inline-flex items-center gap-1 text-sm text-primary hover:underline cursor-pointer"
                                                 >
-                                                    {notification.actionLabel || 'View'}
+                                                    {item.actionLabel || 'View'}
                                                     <ChevronRight className="w-4 h-4" />
                                                 </Link>
                                             </div>

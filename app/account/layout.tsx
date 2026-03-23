@@ -9,7 +9,7 @@ import {
     Library,
     Receipt,
     Bookmark,
-    Bell,
+    Clock,
     Settings,
     LogOut,
     Menu,
@@ -27,7 +27,7 @@ const sidebarNavItems = [
 ]
 
 const secondaryNavItems = [
-    { href: '/account/notifications', label: 'Notifications', icon: Bell, description: 'Updates & alerts' },
+    { href: '/account/notifications', label: 'Activity', icon: Clock, description: 'Recent activity' },
     { href: '/account/settings', label: 'Settings', icon: Settings, description: 'Preferences' },
 ]
 
@@ -35,7 +35,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
     const [user, setUser] = useState<UserData | null>(null)
     const [loading, setLoading] = useState(true)
     const [sidebarOpen, setSidebarOpen] = useState(false)
-    const [notificationsCount, setNotificationsCount] = useState(3)
+
     const pathname = usePathname()
 
     const fetchUser = async () => {
@@ -185,7 +185,6 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                                 {secondaryNavItems.map((item) => {
                                     const Icon = item.icon
                                     const isActive = pathname === item.href
-                                    const showBadge = item.href === '/account/notifications' && notificationsCount > 0
                                     return (
                                         <Link
                                             key={item.href}
@@ -198,14 +197,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                                                 }
                                             `}
                                         >
-                                            <div className="relative">
-                                                <Icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-text-muted group-hover:text-primary'}`} />
-                                                {showBadge && !isActive && (
-                                                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-cta text-white text-[10px] font-bold rounded-full flex items-center justify-center">
-                                                        {notificationsCount}
-                                                    </span>
-                                                )}
-                                            </div>
+                                            <Icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-text-muted group-hover:text-primary'}`} />
                                             <p className={`font-medium text-sm ${isActive ? 'text-white' : ''}`}>{item.label}</p>
                                         </Link>
                                     )
