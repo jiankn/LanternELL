@@ -290,7 +290,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   {product.type === 'membership' ? (
                     <div>
                       <span className="font-heading text-4xl font-bold text-cta">{priceFormatted}</span>
-                      <span className="text-lg text-text-muted">/month</span>
+                      <span className="text-lg text-text-muted">&#47;mo</span>
                     </div>
                   ) : (
                     <div>
