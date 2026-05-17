@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Bilingual Flashcards", "K-2", "ELL", "Vocabulary"]
 seoTitle: "50 Must-Have Bilingual Flashcards for K-2 — Real Teacher's List"
 seoDescription: "50 must-have bilingual flashcards for K-2 ELL and dual language classrooms. Organized by theme with picks for newcomers, centers, and assessment."
+coverImageUrl: "/images/blog/cover-50-bilingual-flashcards-k2.png"
 publishedAt: "2026-05-08"
 ---
 

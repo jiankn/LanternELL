@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Vocabulary", "WIDA", "Newcomer"]
 seoTitle: "100 Essential Vocabulary Words for ESL Students — Real Teacher's List"
 seoDescription: "100 most important vocabulary words for ESL students. Organized by theme and WIDA level. Tested in real ELL classrooms."
+coverImageUrl: "/images/blog/cover-100-essential-vocabulary-words-esl.png"
 publishedAt: "2026-05-01"
 ---
 

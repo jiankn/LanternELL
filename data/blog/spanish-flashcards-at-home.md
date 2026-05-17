@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish", "Homeschool", "Flashcards", "Family"]
 seoTitle: "How to Use Spanish Flashcards at Home — Real Family Guide"
 seoDescription: "Practical guide for homeschoolers and adult learners using Spanish flashcards at home. Daily routines, games, pitfalls."
+coverImageUrl: "/images/blog/cover-spanish-flashcards-at-home.png"
 publishedAt: "2026-04-09"
 ---
 

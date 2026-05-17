@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish", "Flashcards", "Beginner", "Vocabulary"]
 seoTitle: "Spanish Flashcards for Beginners — Real Learner's First 100 Cards"
 seoDescription: "First 100 Spanish flashcards every beginner needs. Organized by theme and frequency with implementation plan."
+coverImageUrl: "/images/blog/cover-spanish-flashcards-beginners.png"
 publishedAt: "2026-04-11"
 ---
 

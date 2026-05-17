@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Lesson Plans", "Newcomer"]
 seoTitle: "Kindergarten ESL Lesson Plan Templates — 3 Ready-to-Use Plans"
 seoDescription: "3 kindergarten ESL lesson plan templates: first-week newcomer plan, theme-week template, 30-min mini-lesson template. Print-ready and classroom-tested."
+coverImageUrl: "/images/blog/cover-kindergarten-esl-lesson-plan-templates.png"
 publishedAt: "2026-05-02"
 ---
 

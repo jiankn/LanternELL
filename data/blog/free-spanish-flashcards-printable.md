@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish", "Flashcards", "Free Resources", "Printable"]
 seoTitle: "Free Spanish Flashcards Printable — Real Teacher's Curated List"
 seoDescription: "Free Spanish flashcards you can print today. Curated by theme with quality ratings and native-Spanish reviewed picks."
+coverImageUrl: "/images/blog/cover-free-spanish-flashcards-printable.png"
 publishedAt: "2026-04-08"
 ---
 

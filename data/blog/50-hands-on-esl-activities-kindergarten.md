@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Activities", "Hands-On"]
 seoTitle: "50 Hands-On ESL Activities for Kindergarten — Real Teacher's List"
 seoDescription: "50 hands-on ESL activities for kindergarten ELL students. Organized by use case with no-prep picks for newcomers, centers, and whole-group."
+coverImageUrl: "/images/blog/cover-50-hands-on-esl-activities-kindergarten.png"
 publishedAt: "2026-04-27"
 ---
 

@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Reading", "K-8", "WIDA"]
 seoTitle: "50 ESL Reading Worksheets for K-8 — Real Teacher's List"
 seoDescription: "50 hand-picked ESL reading worksheets for K-8. Organized by grade band with WIDA levels and bilingual options."
+coverImageUrl: "/images/blog/cover-50-esl-reading-worksheets-k8.png"
 publishedAt: "2026-04-19"
 ---
 

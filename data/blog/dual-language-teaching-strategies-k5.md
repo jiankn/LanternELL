@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Dual Language", "Teaching Strategies", "K-5", "Bilingual"]
 seoTitle: "10 Best Dual Language Teaching Strategies for K-5 Bilingual Classrooms"
 seoDescription: "Ten proven dual language teaching strategies for K-5 teachers. Cognate hunts, bilingual word walls, sentence frames, language brokering, and more."
+coverImageUrl: "/images/blog/cover-dual-language-teaching-strategies-k5.png"
 publishedAt: "2026-05-14"
 ---
 

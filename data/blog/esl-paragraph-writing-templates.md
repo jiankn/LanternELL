@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Writing", "Paragraph", "Templates"]
 seoTitle: "ESL Paragraph Writing Templates — 5 Real Classroom Templates"
 seoDescription: "Print-ready ESL paragraph writing templates for WIDA Level 3-5. Narrative, descriptive, opinion, compare-contrast structures."
+coverImageUrl: "/images/blog/cover-esl-paragraph-writing-templates.png"
 publishedAt: "2026-04-12"
 ---
 

@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Vocabulary", "Free Resources", "Beginner"]
 seoTitle: "Free ESL Vocabulary Worksheets for Beginners — Print Today"
 seoDescription: "Free ESL vocabulary worksheets for beginners. Curated by theme with quality ratings and bilingual options for newcomer ELL students."
+coverImageUrl: "/images/blog/cover-esl-vocabulary-worksheets-beginners-free.png"
 publishedAt: "2026-04-28"
 ---
 

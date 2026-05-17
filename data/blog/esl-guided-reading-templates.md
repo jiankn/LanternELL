@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Guided Reading", "Templates", "K-8"]
 seoTitle: "ESL Guided Reading Templates — Real Teacher's 5-Day Cycle"
 seoDescription: "Print-ready ESL guided reading templates for K-8 ELL classrooms. 5-day cycle covering picture walk to comprehension assessment."
+coverImageUrl: "/images/blog/cover-esl-guided-reading-templates.png"
 publishedAt: "2026-04-16"
 ---
 

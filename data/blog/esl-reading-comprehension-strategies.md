@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Reading", "Comprehension", "WIDA", "Strategies"]
 seoTitle: "ESL Reading Comprehension Strategies — 8 Real Classroom Methods"
 seoDescription: "8 research-backed ESL reading comprehension strategies. Implementation steps for WIDA Levels 1-5 in K-8 classrooms."
+coverImageUrl: "/images/blog/cover-esl-reading-comprehension-strategies.png"
 publishedAt: "2026-04-18"
 ---
 

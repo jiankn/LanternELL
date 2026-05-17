@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Vocabulary", "Themes", "Curriculum"]
 seoTitle: "ESL Vocabulary Worksheets by Theme — Complete List of 25+ Topics"
 seoDescription: "Complete list of 25+ ESL vocabulary worksheet themes by grade band (K-2, 3-5, 6-8). Includes which themes to teach when, plus bilingual options."
+coverImageUrl: "/images/blog/cover-esl-vocabulary-worksheets-by-theme.png"
 publishedAt: "2026-04-30"
 ---
 

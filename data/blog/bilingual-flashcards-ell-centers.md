@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Bilingual Flashcards", "ELL Centers", "Teaching Strategies", "Stations"]
 seoTitle: "How to Use Bilingual Flashcards in ELL Centers — Real Teacher Guide"
 seoDescription: "Use bilingual flashcards in ELL centers with 6 station setups, weekly rotation schedules, and proficiency-level adaptations for newcomers."
+coverImageUrl: "/images/blog/cover-bilingual-flashcards-ell-centers.png"
 publishedAt: "2026-05-07"
 ---
 

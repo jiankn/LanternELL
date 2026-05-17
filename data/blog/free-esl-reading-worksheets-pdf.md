@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Reading", "Free Resources", "PDF"]
 seoTitle: "Free ESL Reading Worksheets PDF — Real Teacher's Curated List"
 seoDescription: "Free ESL reading worksheets in PDF format. Curated by grade band with WIDA level alignment and quality ratings."
+coverImageUrl: "/images/blog/cover-free-esl-reading-worksheets-pdf.png"
 publishedAt: "2026-04-17"
 ---
 

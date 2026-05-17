@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Circle Time", "Morning Meeting"]
 seoTitle: "ESL Circle Time Activities for Kindergarten — 12 Real Classroom Routines"
 seoDescription: "12 ESL circle time activities for kindergarten ELL students. Greeting routines to closing rituals, designed for K newcomers and dual language."
+coverImageUrl: "/images/blog/cover-esl-circle-time-activities-kindergarten.png"
 publishedAt: "2026-04-24"
 ---
 

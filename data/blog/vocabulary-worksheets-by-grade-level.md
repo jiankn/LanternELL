@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Vocabulary", "Grade Levels", "Worksheets", "K-8"]
 seoTitle: "Vocabulary Worksheets by Grade Level — K-8 Complete Guide for Teachers"
 seoDescription: "Complete guide to vocabulary worksheets by grade level (K-8). Tier 1 / 2 / 3 vocabulary, themed packs, ELL adaptations, and scope-and-sequence."
+coverImageUrl: "/images/blog/cover-vocabulary-worksheets-by-grade-level.png"
 publishedAt: "2026-05-11"
 ---
 

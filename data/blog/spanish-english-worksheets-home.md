@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Homeschool", "Bilingual", "Family", "Spanish-English"]
 seoTitle: "How to Use Spanish-English Worksheets at Home — Real Family Guide"
 seoDescription: "Practical guide on using Spanish-English worksheets at home. For bilingual families, homeschoolers, immigrant parents. Routines and pitfalls."
+coverImageUrl: "/images/blog/cover-spanish-english-worksheets-home.png"
 publishedAt: "2026-04-21"
 ---
 

@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish", "Flashcards", "Themes", "Vocabulary"]
 seoTitle: "Spanish Vocabulary Flashcards by Theme — Complete List"
 seoDescription: "Complete list of 12+ Spanish flashcard themes. Organized by use case and difficulty for K-8 and adult learners."
+coverImageUrl: "/images/blog/cover-spanish-flashcards-by-theme.png"
 publishedAt: "2026-04-10"
 ---
 

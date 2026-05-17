@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish-English", "Bilingual", "Curriculum", "Comparison"]
 seoTitle: "Spanish-English vs Bilingual Worksheets — Which Do You Need?"
 seoDescription: "Spanish-English vs bilingual worksheets compared. When to choose each for dual language, ELL, and homeschool. Real teacher's guide."
+coverImageUrl: "/images/blog/cover-spanish-english-vs-bilingual.png"
 publishedAt: "2026-04-20"
 ---
 

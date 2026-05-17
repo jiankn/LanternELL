@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Dual Language", "Free Resources", "Spanish-English", "Bilingual"]
 seoTitle: "Free Dual Language Resources for Spanish-English Classrooms (Updated 2026)"
 seoDescription: "Curated free dual language resources for Spanish-English K-8 classrooms. Printables, lesson plans, family communication templates, and online tools."
+coverImageUrl: "/images/blog/cover-free-dual-language-resources-spanish-english.png"
 publishedAt: "2026-05-13"
 ---
 

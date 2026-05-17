@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Vocabulary", "Teaching Strategies", "WIDA"]
 seoTitle: "How to Teach ESL Vocabulary Using Worksheets — Real Teacher's Guide"
 seoDescription: "Step-by-step guide on teaching ESL vocabulary with worksheets. 5-day cycle, WIDA-level adaptations, assessment formats. Tested in real classrooms."
+coverImageUrl: "/images/blog/cover-teach-esl-vocabulary-with-worksheets.png"
 publishedAt: "2026-04-29"
 ---
 

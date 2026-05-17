@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Writing", "Sentence Frames", "WIDA"]
 seoTitle: "Sentence Frames for ESL Writing — 50+ Real Classroom Frames"
 seoDescription: "50+ ESL sentence frames organized by purpose and WIDA level. Foundational scaffolds for ELL writing instruction."
+coverImageUrl: "/images/blog/cover-sentence-frames-esl-writing.png"
 publishedAt: "2026-04-14"
 ---
 

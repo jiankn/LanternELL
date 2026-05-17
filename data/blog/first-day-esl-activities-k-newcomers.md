@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Newcomer", "First Day"]
 seoTitle: "First-Day ESL Activities for K Newcomers — Real Teacher's Hour-by-Hour Plan"
 seoDescription: "Hour-by-hour first-day plan for kindergarten ELL newcomers. Activities, scripts, and what to avoid for a successful Day 1."
+coverImageUrl: "/images/blog/cover-first-day-esl-activities-k-newcomers.png"
 publishedAt: "2026-04-25"
 ---
 

@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Free Resources", "Printable"]
 seoTitle: "Free Kindergarten ESL Worksheets — Print Today (Real Teacher's List)"
 seoDescription: "Free kindergarten ESL worksheets to print today. Curated list by theme, with quality notes and bilingual options for K newcomer students."
+coverImageUrl: "/images/blog/cover-free-kindergarten-esl-worksheets.png"
 publishedAt: "2026-05-03"
 ---
 

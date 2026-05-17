@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Writing", "WIDA", "Prompts"]
 seoTitle: "ESL Writing Prompts by WIDA Level — Real Teacher's List"
 seoDescription: "30 ESL writing prompts organized by WIDA Level 1-5. Each prompt with appropriate scaffolding for newcomers through advanced ELLs."
+coverImageUrl: "/images/blog/cover-esl-writing-prompts-by-level.png"
 publishedAt: "2026-04-15"
 ---
 

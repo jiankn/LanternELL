@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Spanish-English", "Free Resources", "K-5", "Bilingual"]
 seoTitle: "Free Spanish-English Worksheets for K-5 — Print Today (Real Teacher's List)"
 seoDescription: "Free Spanish-English worksheets for K-5. Curated by theme with quality ratings, DL program suitability, and bilingual options."
+coverImageUrl: "/images/blog/cover-free-spanish-english-worksheets-k5.png"
 publishedAt: "2026-04-22"
 ---
 

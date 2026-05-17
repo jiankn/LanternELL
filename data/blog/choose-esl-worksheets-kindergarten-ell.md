@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "ELL", "Worksheets", "Evaluation"]
 seoTitle: "How to Choose ESL Worksheets for Kindergarten ELLs — Real Teacher Guide"
 seoDescription: "Practical guide for K teachers choosing ESL worksheets for kindergarten ELL students. 7-point checklist, common pitfalls, proficiency-level adaptations."
+coverImageUrl: "/images/blog/cover-choose-esl-worksheets-kindergarten-ell.png"
 publishedAt: "2026-05-04"
 ---
 

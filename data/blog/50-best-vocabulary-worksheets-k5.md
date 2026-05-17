@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Vocabulary", "K-5", "Worksheets", "Teaching Resources"]
 seoTitle: "50 Best Vocabulary Worksheets for K-5 — Hand-Picked by Real Teachers"
 seoDescription: "50 best vocabulary worksheets for K-5 teachers, organized by theme and grade band. Includes free download recommendations and center activity ideas."
+coverImageUrl: "/images/blog/cover-50-best-vocabulary-worksheets-k5.png"
 publishedAt: "2026-05-12"
 ---
 

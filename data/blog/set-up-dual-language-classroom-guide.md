@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Dual Language", "Bilingual", "Classroom Setup", "K-8"]
 seoTitle: "How to Set Up a Dual Language Classroom — Step-by-Step Guide for K-8 Teachers"
 seoDescription: "Step-by-step guide to setting up a dual language classroom in K-8. Covers physical setup, materials, schedule, language allocation, and family engagement."
+coverImageUrl: "/images/blog/cover-set-up-dual-language-classroom-guide.png"
 publishedAt: "2026-05-16"
 ---
 

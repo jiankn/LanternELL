@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Vocabulary", "Teaching Strategies", "Worksheets", "Centers"]
 seoTitle: "How to Use Vocabulary Worksheets Effectively — Real Teacher's Guide"
 seoDescription: "Step-by-step teacher's guide on how to use vocabulary worksheets effectively. 5-day rotation, center setups, ELL adaptations, and assessment ideas."
+coverImageUrl: "/images/blog/cover-how-to-use-vocabulary-worksheets.png"
 publishedAt: "2026-05-10"
 ---
 

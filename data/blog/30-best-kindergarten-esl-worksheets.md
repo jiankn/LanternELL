@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Newcomer", "Worksheets"]
 seoTitle: "30 Best Kindergarten ESL Worksheets for Newcomers — Real Teacher Guide"
 seoDescription: "30 best kindergarten ESL worksheets for newcomer students. Organized by theme with picks for the first week, centers, and assessment."
+coverImageUrl: "/images/blog/cover-30-best-kindergarten-esl-worksheets.png"
 publishedAt: "2026-05-05"
 ---
 

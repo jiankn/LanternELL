@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Dual Language", "Spanish-English", "Bilingual", "Two-Way Immersion"]
 seoTitle: "Spanish-English Worksheets for Dual Language Classrooms — Real Teacher Guide"
 seoDescription: "How dual language teachers use Spanish-English worksheets in 50/50 and 90/10 models. Bidirectional vocabulary, content delivery, and assessment."
+coverImageUrl: "/images/blog/cover-spanish-english-dual-language.png"
 publishedAt: "2026-04-23"
 ---
 

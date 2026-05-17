@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Vocabulary", "Free Resources", "Printable", "K-8"]
 seoTitle: "Free Vocabulary Worksheets — Print Today (K-8 Themes)"
 seoDescription: "Free vocabulary worksheets to print today. K-8 by theme and grade, including bilingual ELL options. Tested in real classrooms."
+coverImageUrl: "/images/blog/cover-free-vocabulary-worksheets-printable.png"
 publishedAt: "2026-05-09"
 ---
 

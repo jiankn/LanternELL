@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Bilingual Flashcards", "Games", "ELL", "K-2", "Newcomer"]
 seoTitle: "Bilingual Flashcard Games for Beginners — 12 Real Classroom Games"
 seoDescription: "12 bilingual flashcard games for ELL beginners and dual language K-2 classrooms. Quick warm-ups to whole-class challenges, all classroom-tested."
+coverImageUrl: "/images/blog/cover-bilingual-flashcard-games-beginners.png"
 publishedAt: "2026-05-06"
 ---
 

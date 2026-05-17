@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["ESL", "Writing", "Free Resources", "WIDA"]
 seoTitle: "Free ESL Writing Worksheets — Real Teacher's Curated List"
 seoDescription: "Free ESL writing worksheets curated by grade band and WIDA level. Quality notes and bilingual availability."
+coverImageUrl: "/images/blog/cover-free-esl-writing-worksheets.png"
 publishedAt: "2026-04-13"
 ---
 

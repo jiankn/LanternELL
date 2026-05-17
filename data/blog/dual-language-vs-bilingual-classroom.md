@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Dual Language", "Bilingual", "ESL", "Program Models"]
 seoTitle: "Dual Language vs Bilingual Classroom — Differences Every Teacher Should Know"
 seoDescription: "Clear comparison of dual language vs bilingual classroom models. Goals, language use, student populations, and how to choose the right resources for each."
+coverImageUrl: "/images/blog/cover-dual-language-vs-bilingual-classroom.png"
 publishedAt: "2026-05-15"
 ---
 

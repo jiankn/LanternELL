@@ -5,6 +5,7 @@ author: "LanternELL Team"
 tags: ["Kindergarten", "ESL", "Games", "ELL"]
 seoTitle: "ESL Games for Kindergarten ELL Students — 15 Real Classroom Games"
 seoDescription: "15 ESL games for kindergarten ELL students. Quick warm-ups to whole-class games, all classroom-tested for K vocabulary and engagement."
+coverImageUrl: "/images/blog/cover-esl-games-kindergarten-ell.png"
 publishedAt: "2026-04-26"
 ---
 
