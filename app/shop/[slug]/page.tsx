@@ -72,6 +72,59 @@ const features = [
   { icon: <Download className="w-5 h-5" />, text: 'Instant digital download' },
 ]
 
+function humanize(value?: string | null) {
+  if (!value) return 'classroom language'
+  return value.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
+function languagePairLabel(value?: string | null) {
+  const labels: Record<string, string> = {
+    'en-es': 'English-Spanish',
+    'en-zh': 'English-Chinese',
+    'en-ar': 'English-Arabic',
+    'en-vi': 'English-Vietnamese',
+    'en-fr': 'English-French',
+    'en-pt': 'English-Portuguese',
+  }
+  return labels[value || ''] || humanize(value || 'English-Spanish')
+}
+
+function getClassroomUseCases(resource?: Resource) {
+  const topic = humanize(resource?.topic)
+  const ageBand = resource?.age_band || 'K-5'
+  const packType = resource?.pack_type || 'vocabulary_pack'
+
+  if (packType === 'sentence_frames') {
+    return [
+      `Model ${topic} speaking and writing routines before independent practice.`,
+      `Give ${ageBand} English learners sentence starters they can use during partner talk, journals, and content lessons.`,
+      'Print a small reference set for desks, small-group tables, or newcomer folders.',
+    ]
+  }
+
+  if (packType === 'classroom_labels') {
+    return [
+      `Label ${topic} spaces or materials so students see the English and Spanish words during normal classroom routines.`,
+      `Use the labels for scavenger hunts, vocabulary review, and picture-supported classroom setup.`,
+      'Laminate high-use labels and keep extras for centers, folders, and take-home practice.',
+    ]
+  }
+
+  if (packType === 'parent_communication') {
+    return [
+      `Send ${topic} communication home in a bilingual format families can read quickly.`,
+      `Use the template during arrival, homework, progress updates, or first-week routines.`,
+      'Keep a printed copy in your family communication binder for repeat use.',
+    ]
+  }
+
+  return [
+    `Introduce ${topic} vocabulary with picture-supported cards before students complete worksheets.`,
+    `Use the matching, tracing, and review pages in small groups, centers, or newcomer folders for ${ageBand} learners.`,
+    'Send selected pages home so families can practice the same English-Spanish terms together.',
+  ]
+}
+
 async function getProduct(slug: string) {
   const product = await queryOne<Product>(
     'SELECT id, slug, name, description, type, price_cents, stripe_price_id FROM products WHERE slug = ? AND active = 1',
@@ -132,6 +185,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const priceFormatted = product.type === 'membership'
     ? `$${(product.price_cents / 100).toFixed(0)}`
     : `$${(product.price_cents / 100).toFixed(2)}`
+  const primaryResource = product.resources?.[0]
+  const topicLabel = humanize(primaryResource?.topic || product.name)
+  const ageBandLabel = primaryResource?.age_band || 'K-8'
+  const languageLabel = languagePairLabel(primaryResource?.language_pair || 'en-es')
+  const classroomUseCases = getClassroomUseCases(primaryResource)
 
   // JSON-LD Product
   const productJsonLd = {
@@ -169,7 +227,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <Navbar links={[
         { href: '/', label: 'Home' },
         { href: '/shop', label: 'Shop' },
-        { href: '/account/library', label: 'My Library' },
+        { href: '/free-samples', label: 'Free Samples' },
+        { href: '/teaching-tips', label: 'Teaching Tips' },
       ]} />
 
       {/* Breadcrumb */}
@@ -269,6 +328,42 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 </div>
               </div>
 
+              <div className="clay-card p-6">
+                <h2 className="font-heading text-xl font-semibold text-text-primary mb-4">How Teachers Use This Pack</h2>
+                <p className="text-sm text-text-primary/70 leading-relaxed mb-4">
+                  {product.name} supports {topicLabel} practice for {ageBandLabel} English learners with {languageLabel} scaffolding. It is built for quick print-and-use lessons, newcomer support, and bilingual classroom routines.
+                </p>
+                <ul className="space-y-3">
+                  {classroomUseCases.map((useCase) => (
+                    <li key={useCase} className="flex items-start gap-3 text-sm text-text-primary/80">
+                      <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                      <span>{useCase}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {product.resources?.length > 0 && (
+                <div className="clay-card p-6">
+                  <h2 className="font-heading text-xl font-semibold text-text-primary mb-4">Printable Skills Covered</h2>
+                  <div className="space-y-4">
+                    {product.resources.map((resource) => (
+                      <div key={resource.id} className="border-l-4 border-primary/30 pl-4">
+                        <h3 className="font-heading text-base font-semibold text-text-primary">
+                          {resource.title}
+                        </h3>
+                        <p className="text-sm text-text-primary/70 leading-relaxed mt-1">
+                          {resource.description || `${packTypeLabels[resource.pack_type] || 'Printable pack'} for ${humanize(resource.topic)} practice in ${resource.age_band || 'K-5'} classrooms.`}
+                        </p>
+                        <p className="text-xs text-text-muted mt-2">
+                          {packTypeLabels[resource.pack_type] || humanize(resource.pack_type)} · {resource.age_band || 'K-5'} · {languagePairLabel(resource.language_pair)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Perfect For + internal links */}
               <div className="clay-card p-6">
                 <h2 className="font-heading text-xl font-semibold text-text-primary mb-4">Perfect For</h2>
@@ -345,7 +440,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
-      <Footer minimal />
+      <Footer />
     </main>
   )
 }

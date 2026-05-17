@@ -156,7 +156,7 @@ export default function LandingPage() {
               Printable ELL Worksheets & Teaching Packs
             </h2>
             <p className="text-lg text-text-primary/70 max-w-2xl mx-auto">
-              Ready-to-use <Link href="/ell-worksheets" className="text-primary hover:underline">ELL worksheets</Link>, <Link href="/bilingual-classroom-labels" className="text-primary hover:underline">bilingual classroom labels</Link>, <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports</Link>, and <Link href="/english-spanish-printables" className="text-primary hover:underline">English-Spanish printables</Link> — designed for K-5 ESL teachers, bilingual educators, and homeschool families
+              Ready-to-use <Link href="/ell-worksheets" className="text-primary hover:underline">ELL worksheets</Link>, <Link href="/vocabulary-worksheets" className="text-primary hover:underline">vocabulary worksheets</Link>, <Link href="/bilingual-flashcards" className="text-primary hover:underline">bilingual flashcards</Link>, <Link href="/bilingual-classroom-labels" className="text-primary hover:underline">bilingual classroom labels</Link>, <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports</Link>, <Link href="/english-spanish-printables" className="text-primary hover:underline">English-Spanish printables</Link>, and <Link href="/dual-language-classroom" className="text-primary hover:underline">dual language classroom resources</Link> — designed for K-5 ESL teachers, bilingual educators, and homeschool families
             </p>
           </div>
 
@@ -195,7 +195,7 @@ export default function LandingPage() {
                 Visual Supports for ELL Newcomers & SPED Students
               </h2>
               <p className="text-lg text-text-primary/70 mb-8">
-                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for <Link href="/newcomer-activities" className="text-primary hover:underline">ELL newcomers</Link> in K-5 classrooms. Also used by SPED educators, paraprofessionals, and homeschool families across the US. Browse our <Link href="/esl-worksheets-beginners" className="text-primary hover:underline">ESL worksheets for beginners</Link> and <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports for ELL students</Link>.
+                Our printable packs include visual schedules, emotion cards, and progress tracking tools designed for <Link href="/newcomer-activities" className="text-primary hover:underline">ELL newcomers</Link> in K-5 classrooms. Also used by SPED educators, paraprofessionals, and homeschool families across the US. Browse our <Link href="/esl-worksheets-beginners" className="text-primary hover:underline">ESL worksheets for beginners</Link>, <Link href="/kindergarten-esl-worksheets" className="text-primary hover:underline">kindergarten ESL worksheets</Link>, and <Link href="/visual-supports-ell" className="text-primary hover:underline">visual supports for ELL students</Link>.
               </p>
               <div className="space-y-4">
                 {['Vocabulary checklists for each pack', 'Student self-assessment cards', 'Teacher observation guides', 'Progress report templates'].map((f, i) => (

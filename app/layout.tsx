@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
+const BASE_URL = 'https://lanternell.com'
 
 export const metadata: Metadata = {
   title: {

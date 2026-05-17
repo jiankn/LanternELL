@@ -22,7 +22,7 @@ import { getCurrentUserBySessionToken } from '@/lib/auth'
 import { getAccountSnapshot } from '@/lib/account-status'
 import { queryOne } from '@/lib/db'
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
+const BASE_URL = 'https://lanternell.com'
 
 export const metadata: Metadata = {
   title: 'Pricing — ELL Teaching Packs & Membership Plans',

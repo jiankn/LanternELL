@@ -6,6 +6,11 @@ const CANONICAL_HOST = 'lanternell.com'
 export function middleware(request: NextRequest) {
   const { hostname, pathname, search } = request.nextUrl
 
+  // Skip middleware in local development
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return NextResponse.next()
+  }
+
   // 1. Redirect www → non-www (301 permanent)
   if (hostname === `www.${CANONICAL_HOST}`) {
     return NextResponse.redirect(

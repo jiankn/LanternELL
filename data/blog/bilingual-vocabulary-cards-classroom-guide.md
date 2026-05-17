@@ -13,7 +13,7 @@ publishedAt: "2026-03-22"
 
 Vocabulary is the **foundation of language acquisition**. Research shows that ELL students need to encounter a new word **12-15 times** in meaningful contexts before it becomes part of their active vocabulary.
 
-Bilingual vocabulary cards accelerate this process by:
+Bilingual vocabulary cards — also called [bilingual flashcards](/bilingual-flashcards) in many ELL and dual language classrooms — accelerate this process by:
 
 - **Connecting new English words to known concepts** in the student's home language
 - **Providing visual reinforcement** — pictures create a mental image that transcends language
@@ -85,3 +85,10 @@ Our bilingual vocabulary packs include **themed word cards with vibrant visuals,
 Each pack covers a specific topic (colors, shapes, animals, classroom objects, science vocabulary, and more) with age-appropriate content for K-2, 3-5, or 6-8.
 
 [Browse Vocabulary Packs →](/shop?type=vocabulary_pack)
+
+## Recommended Reading
+
+- [Bilingual Flashcards for K-8 Classrooms](/bilingual-flashcards) — the complete library and research behind why bilingual flashcards work
+- [50 Must-Have Bilingual Flashcards for K-2 Classrooms](/teaching-tips/50-bilingual-flashcards-k2)
+- [How to Use Bilingual Flashcards in ELL Centers](/teaching-tips/bilingual-flashcards-ell-centers)
+- [Bilingual Flashcard Games for Beginners](/teaching-tips/bilingual-flashcard-games-beginners)

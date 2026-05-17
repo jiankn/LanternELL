@@ -389,7 +389,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     page-break-inside: avoid;
     page-break-after: avoid;
   }
@@ -401,48 +401,48 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 100px;
     margin-top: 4px;
     margin-left: 10px;
     vertical-align: middle;
   }
   .ws-name-box {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     border-bottom: 2px solid var(--text);
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     min-width: 200px;
   }
   .ws-instructions {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     page-break-after: avoid;
   }
   .ws-instructions-l2 {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.5;
     color: var(--primary);
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     page-break-after: avoid;
   }
-  .ws-items { display: grid; gap: 12px; }
+  .ws-items { display: grid; gap: 8px; }
   .ws-item {
     display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 10px;
+    grid-template-columns: 36px 1fr;
+    gap: 8px;
     align-items: start;
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px;
+    border-radius: 12px;
+    padding: 10px;
     background: var(--bg);
   }
   .ws-item-num {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -450,23 +450,23 @@
     background: var(--primary-light);
     color: var(--primary);
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
     font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
   }
   .ws-item-content strong {
     font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     display: block;
   }
   .ws-item-content .ws-l2 {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--primary);
-    margin: 4px 0 12px;
+    margin: 2px 0 8px;
   }
   .ws-write-line {
-    height: 20px;
+    height: 16px;
     border-bottom: 2px dotted var(--border);
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   /* Matching worksheet: grid with images */
@@ -719,22 +719,22 @@
   .note-section li { margin-bottom: 4px; }
 
   /* === ANSWER KEY === */
-  .answer-list { display: grid; gap: 14px; }
+  .answer-list { display: grid; gap: 8px; }
   .ak-section {
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px;
+    border-radius: 12px;
+    padding: 10px 14px;
     background: var(--bg);
   }
-  .ak-section h3 { font-size: 15px; color: var(--primary); margin-bottom: 12px; }
-  .ak-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .ak-section h3 { font-size: 13px; color: var(--primary); margin-bottom: 6px; }
+  .ak-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; }
   .ak-item {
     background: var(--primary-light);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 13px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 11px;
   }
-  .ak-item strong { color: var(--text); margin-right: 6px; }
+  .ak-item strong { color: var(--text); margin-right: 4px; }
   .ak-item span { color: var(--text-secondary); }
 
   /* === PARENT NOTES === */
@@ -833,26 +833,26 @@
 
   /* === COMPACT TERMS (合并到其他页面底部) === */
   .terms-compact {
-    margin-top: 24px;
-    padding-top: 14px;
+    margin-top: 12px;
+    padding-top: 8px;
     border-top: 2px dashed var(--border);
   }
   .terms-compact-title {
     font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 800;
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
   .terms-compact-body {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
-    font-size: 11px;
+    font-size: 9px;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.4;
   }
   .terms-compact-body span {
     white-space: nowrap;
@@ -1277,18 +1277,18 @@
   /* === FILL-BLANK WORD BANK === */
   .ws-word-bank {
     border: 2px solid var(--primary);
-    border-radius: 14px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
     background: var(--primary-light);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .ws-word-bank-label {
     font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1298,16 +1298,16 @@
   .ws-word-bank-words {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
   .ws-word-bank-chip {
     display: inline-block;
     background: white;
     border: 1.5px solid var(--primary);
     border-radius: 100px;
-    padding: 4px 14px;
+    padding: 3px 10px;
     font-family: &#x27;Nunito&#x27;, system-ui, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--text);
   }

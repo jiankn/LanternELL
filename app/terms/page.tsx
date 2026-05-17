@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Terms of Use',
-  description: 'Terms of Use for LanternELL printable teaching resources.',
+  description: 'LanternELL terms for printable ELL teaching resources, classroom-use licenses, account responsibilities, payments, intellectual property, and support contact details.',
   alternates: { canonical: '/terms' },
 }
 

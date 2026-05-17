@@ -11,6 +11,7 @@ export interface UserData {
         status: string
         currentPeriodEnd: string | null
         cancelAtPeriodEnd: boolean
+        priceTier?: string | null
     } | null
 }
 

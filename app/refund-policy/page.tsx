@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Refund Policy',
-  description: 'Refund Policy for LanternELL printable teaching resources.',
+  description: 'LanternELL refund policy for printable ELL teaching resources, including digital download rules, duplicate charge exceptions, corrupted file support, and subscription cancellation details.',
   alternates: { canonical: '/refund-policy' },
 }
 

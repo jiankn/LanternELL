@@ -1,5 +1,5 @@
 export default function robots() {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || 'https://lanternell.com'
+    const baseUrl = 'https://lanternell.com'
 
     return {
         rules: [
@@ -8,6 +8,7 @@ export default function robots() {
                 allow: '/',
                 disallow: [
                     '/api/',
+                    '/admin',
                     '/admin/',
                     '/account/',
                     '/checkout/',

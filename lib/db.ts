@@ -155,17 +155,25 @@ async function applyMigrations(client: any, url: string) {
       continue;
     }
 
+    if (file === 'seed_products.sql' && await hasSeedProducts(client)) {
+      await recordMigration(client, file);
+      continue;
+    }
+
     const migrationSql = await fs.readFile(path.join(migrationsDir, file), 'utf8');
     const statements = splitSqlStatements(migrationSql);
 
     if (statements.length > 0) {
-      await client.batch(statements, 'write');
+      if (hasExplicitTransaction(statements)) {
+        for (const statement of statements) {
+          await client.execute(statement);
+        }
+      } else {
+        await client.batch(statements, 'write');
+      }
     }
 
-    await client.execute({
-      sql: 'INSERT INTO _lanternell_migrations (name, applied_at) VALUES (?, ?)',
-      args: [file, new Date().toISOString()],
-    });
+    await recordMigration(client, file);
   }
 }
 
@@ -174,6 +182,26 @@ function splitSqlStatements(sql: string) {
     .split(/;\s*(?:\r?\n|$)/)
     .map((statement) => statement.replace(/^\s*--.*$/gm, '').trim())
     .filter(Boolean);
+}
+
+function hasExplicitTransaction(statements: string[]) {
+  return statements.some((statement) => /^(begin|commit|rollback)\b/i.test(statement.trim()));
+}
+
+async function hasSeedProducts(client: any) {
+  try {
+    const result = await client.execute('SELECT COUNT(*) AS count FROM products');
+    return Number(result.rows?.[0]?.count || 0) >= 51;
+  } catch {
+    return false;
+  }
+}
+
+async function recordMigration(client: any, file: string) {
+  await client.execute({
+    sql: 'INSERT OR IGNORE INTO _lanternell_migrations (name, applied_at) VALUES (?, ?)',
+    args: [file, new Date().toISOString()],
+  });
 }
 
 function isReadQuery(sql: string) {

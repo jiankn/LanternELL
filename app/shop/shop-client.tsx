@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
@@ -11,10 +11,17 @@ import {
 import { ProductGridSkeleton } from '@/components/ui/skeleton'
 import { getProductImage, PLACEHOLDER_IMAGE } from '@/lib/product-images'
 
-interface Product {
+export interface Product {
   id: string; slug: string; name: string; description: string
   type: string; price_cents: number; price_formatted: string
   resources?: Array<{ id: string; title: string; pack_type: string; age_band: string; language_pair: string }>
+}
+
+export interface ShopClientProps {
+  /** SSR-rendered initial product list. When provided, ShopClient skips the
+   *  first fetch and uses these as the initial state, preserving SEO link
+   *  weight while still allowing client-side filter/search to refetch. */
+  initialProducts?: Product[]
 }
 
 function ProductImage({ product }: { product: Product }) {
@@ -65,10 +72,11 @@ const languageOptions = [
   { value: 'en-pt', label: 'English-Portuguese' },
 ]
 
-export function ShopClient() {
+export function ShopClient({ initialProducts = [] }: ShopClientProps) {
   const searchParams = useSearchParams()
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
+  const hasSsrData = initialProducts.length > 0
+  const [products, setProducts] = useState<Product[]>(initialProducts)
+  const [loading, setLoading] = useState(!hasSsrData)
   const [filter, setFilter] = useState(searchParams?.get('filter') || 'all')
   const [searchQuery, setSearchQuery] = useState('')
   const [packType, setPackType] = useState(searchParams?.get('type') || '')
@@ -91,7 +99,16 @@ export function ShopClient() {
     }
   }, [searchQuery, packType, language])
 
-  useEffect(() => { fetchProducts() }, [fetchProducts])
+  // Skip the initial fetch when SSR data is already present. Filter/search
+  // changes will still trigger fetchProducts via its dependency list.
+  const skippedInitialFetchRef = useRef(false)
+  useEffect(() => {
+    if (hasSsrData && !skippedInitialFetchRef.current) {
+      skippedInitialFetchRef.current = true
+      return
+    }
+    fetchProducts()
+  }, [fetchProducts, hasSsrData])
 
   const filteredProducts = products.filter(p => {
     if (filter === 'all') return true

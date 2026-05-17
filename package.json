@@ -9,6 +9,7 @@
     "preview": "wrangler dev",
     "deploy": "node scripts/build-cf.cjs",
     "lint": "next lint",
+    "audit:indexing": "node scripts/audit-indexing.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run",
     "test:watch": "vitest"
