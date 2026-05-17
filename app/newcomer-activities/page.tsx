@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'Newcomer Activities — Free ELL Newcomer Resources for K-5 Teachers',
+  title: 'Newcomer Activities — Free ELL Resources K-5',
   description:
-    'Free printable newcomer activities for ELL students in K-5 classrooms. Download first-week survival packs, welcome materials, and orientation activities for newcomer English Language Learners. Bilingual English-Spanish resources included.',
+    'Free printable newcomer activities for K-5 ELL students. First-week survival packs, welcome materials & orientation activities — bilingual English-Spanish.',
   keywords: [
     'newcomer activities',
     'ELL newcomer activities',

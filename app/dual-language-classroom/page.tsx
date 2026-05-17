@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/dual-language-classroom'
 
 export const metadata: Metadata = {
-  title: 'Dual Language Classroom Resources — Spanish-English for K-8 Teachers | LanternELL',
+  title: 'Dual Language Classroom — Spanish-English K-8',
   description:
-    'Print-ready dual language classroom resources for Spanish-English K-8 programs. Bilingual labels, vocabulary cards, sentence frames, and parent communication templates designed for real classrooms.',
+    'Print-ready Spanish-English dual language classroom resources for K-8: bilingual labels, vocabulary cards, sentence frames & parent letters.',
   keywords: [
     'dual language classroom',
     'dual language resources',

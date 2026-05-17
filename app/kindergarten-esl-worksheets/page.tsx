@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/kindergarten-esl-worksheets'
 
 export const metadata: Metadata = {
-  title: 'Kindergarten ESL Worksheets — Print-Ready for K Teachers | LanternELL',
+  title: 'Kindergarten ESL Worksheets — Print-Ready',
   description:
-    'Print-ready kindergarten ESL worksheets for newcomer and ELL students. 12+ themed packs covering classroom, family, food, colors, numbers, and feelings. Bilingual English-Spanish editions included.',
+    'Print-ready kindergarten ESL worksheets for newcomers & ELLs. 12+ themed packs: classroom, family, food, colors, numbers — bilingual editions.',
   keywords: [
     'kindergarten esl worksheets',
     'esl worksheets kindergarten',

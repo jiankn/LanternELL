@@ -12,9 +12,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'ELL Teaching Packs & Resources — Printable Bilingual Materials | LanternELL',
+  title: 'ELL Teaching Packs — Bilingual Print Resources',
   description:
-    'Browse printable ELL teaching packs and bilingual classroom resources for K-5. Vocabulary packs, sentence frames, classroom labels, visual supports, and parent communication templates in English-Spanish.',
+    'Browse printable ELL teaching packs for K-5: vocabulary cards, sentence frames, classroom labels, visual supports & parent letters in English-Spanish.',
   alternates: { canonical: '/shop' },
   openGraph: {
     title: 'ELL Teaching Packs & Resources — LanternELL',

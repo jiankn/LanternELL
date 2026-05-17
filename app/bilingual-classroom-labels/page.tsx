@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'Bilingual Classroom Labels — Free English-Spanish Printable Labels for K-5',
+  title: 'Bilingual Classroom Labels — Free K-5 Printables',
   description:
-    'Free printable bilingual classroom labels in English-Spanish for K-5 dual language classrooms. Download ready-to-print classroom labels for furniture, supplies, and daily routines. Perfect for bilingual teachers and ESL educators.',
+    'Free printable bilingual classroom labels in English-Spanish for K-5. Door, supply, transition, calendar & subject labels for ELL & dual language rooms.',
   keywords: [
     'bilingual classroom labels',
     'English Spanish classroom labels',

@@ -21,9 +21,9 @@ import { FaqAccordion } from '@/components/ui/faq-accordion'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'ELL Worksheets — Printable Bilingual Resources for K-5 Teachers | LanternELL',
+  title: { absolute: 'Printable Bilingual ELL Resources for K-5 | LanternELL' },
   description:
-    'Free & premium ELL worksheets for newcomer students. Print-ready bilingual resources in English-Spanish for K-5 classrooms. Download ELL worksheets, classroom labels, visual supports & sentence frames today.',
+    'Print-ready bilingual ELL resources for K-5 teachers. English-Spanish worksheets, classroom labels, visual supports & sentence frames. Save hours of prep — print today.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'ELL Worksheets — Printable Bilingual Resources for K-5 Teachers',

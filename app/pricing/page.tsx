@@ -25,9 +25,9 @@ import { queryOne } from '@/lib/db'
 const BASE_URL = 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'Pricing — ELL Teaching Packs & Membership Plans',
+  title: 'Pricing — ELL Teaching Packs & Plans',
   description:
-    'Choose the right plan for your classroom. Single packs from $3.99, bundles from $14.99, or get unlimited access with All Access membership — $9/mo or $79/year.',
+    'Single packs from $3.99, bundles from $14.99, or unlimited access with All Access — $9/mo or $79/year. Affordable bilingual ELL teaching resources.',
   alternates: { canonical: `${BASE_URL}/pricing` },
   openGraph: {
     title: 'LanternELL Pricing — Plans for Every Teacher',

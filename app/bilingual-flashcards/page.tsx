@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/bilingual-flashcards'
 
 export const metadata: Metadata = {
-  title: 'Bilingual Flashcards — English-Spanish Printable for ELL & Dual Language | LanternELL',
+  title: 'Bilingual Flashcards — English-Spanish Printable',
   description:
-    'Print-ready bilingual flashcards in English-Spanish. 12+ themed sets for K-8 ELL and dual language classrooms. Picture-supported, with center activity ideas and free samples.',
+    'Print-ready bilingual flashcards in English-Spanish. 12+ themed sets for K-8 ELL & dual language classrooms. Picture-supported with free samples.',
   keywords: [
     'bilingual flashcards',
     'english spanish flashcards',

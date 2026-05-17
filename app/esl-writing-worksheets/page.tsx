@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/esl-writing-worksheets'
 
 export const metadata: Metadata = {
-  title: 'ESL Writing Worksheets — Print-Ready Prompts & Frames for K-8 ELLs | LanternELL',
+  title: 'ESL Writing Worksheets — K-8 Frames & Prompts',
   description:
-    'Print-ready ESL writing worksheets for K-8 ELL classrooms. Sentence frames, paragraph templates, and writing prompts WIDA-aligned for Levels 1-5.',
+    'Print-ready ESL writing worksheets for K-8 ELLs: sentence frames, paragraph templates & writing prompts, WIDA-aligned for Levels 1-5.',
   keywords: [
     'esl writing worksheets',
     'esl writing prompts',

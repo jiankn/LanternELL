@@ -42,3 +42,37 @@
 | 23 | 图片 Alt 属性包含关键词 | ✅ | 所有 img 已有 alt |
 | 24 | Contact/Support 页面 | ✅ | app/contact/page.tsx |
 | 25 | Stripe SDK 完全移除确认（同 #6） | ✅ | package.json 无 stripe 依赖 |
+
+## 持续质量门 — SEO 把关
+
+> 每次新增/修改 landing 页或 blog 文章后执行；月度对全站抽检。
+
+### 单页 SEO Lint（提交前）
+
+| # | 任务 | 工具 | 通过标准 |
+|---|------|------|----------|
+| L1 | 调用 `seo-audit` 技能审计当次改动的页面 | Cascade + seo-audit skill | `reports/<page>-audit.html` critical = 0 |
+| L2 | 验证 `<title>` 50-60 字符，主关键词靠前（非首页） | seo-audit · check-page.py | pass |
+| L3 | 验证 `<meta description>` 120-160 字符，包含关键词与具体卖点 | seo-audit · check-page.py | pass / warn |
+| L4 | 验证 H1 唯一 + 关键词语义覆盖 | seo-audit · LLM review | pass |
+| L5 | 验证 `<link rel="canonical">` 自指且与最终 URL 一致 | seo-audit · check-page.py | pass |
+| L6 | 验证 JSON-LD `@type` 与页面类型匹配（Product/Article/FAQPage） | seo-audit · check-schema.py | pass |
+| L7 | 验证所有 `<img>` 含 alt | seo-audit · check-page.py | pass |
+
+### 全站批量审计（每周一次或大版本发布前）
+
+| # | 任务 | 命令 | 通过标准 |
+|---|------|------|----------|
+| B1 | 跑核心 landing 全集批量审计 | `npm run audit:seo` | fail 数 = 0 |
+| B2 | 跑博客抽样（最近 5 篇） | `npm run audit:seo -- --preset blogs` | fail 数 = 0 |
+| B3 | 跑站点级配置（robots、sitemap、404、URL canonicalization、hreflang） | `npm run audit:seo -- --preset site` | 全 pass |
+| B4 | sitemap 与可达 URL 差集检查（已有） | `npm run audit:indexing` | 无错 |
+
+### 季度全站爬虫审计（人工）
+
+| # | 任务 | 工具 | 频率 |
+|---|------|------|------|
+| Q1 | 全站爬取 + 内链拓扑 + 重复内容 | Screaming Frog（免费版 500 URL） | 季度 |
+| Q2 | Core Web Vitals 真实数据 | PageSpeed Insights / Vercel Speed Insights | 持续监控 |
+| Q3 | 索引覆盖率 + 真实排名 + impression/CTR | Google Search Console | 周/月查看 |
+| Q4 | 关键词 gap / 竞品对标 | Ahrefs / SEMrush（按需） | 季度

@@ -18,9 +18,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-    title: 'Free ELL Worksheets & Sample Packs — Download Now | LanternELL',
+    title: 'Free ELL Worksheets & Sample Packs',
     description:
-        'Download free printable ELL worksheets and sample teaching packs. Bilingual English-Spanish vocabulary cards, classroom labels, and sentence frames for K-5 newcomer students. No account required.',
+        'Free printable ELL worksheets & sample teaching packs. Bilingual English-Spanish vocabulary cards, classroom labels & sentence frames for K-5 newcomers.',
     alternates: { canonical: '/free-samples' },
     openGraph: {
         title: 'Free ELL Worksheets & Sample Packs — LanternELL',

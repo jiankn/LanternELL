@@ -1,0 +1,115 @@
+name: SEO Audit
+
+# ─────────────────────────────────────────────────────────────
+# 触发条件：
+#   1. 手动触发（workflow_dispatch）— 可选择 preset
+#   2. 部署成功后自动触发（workflow_run）— 审计刚上线的版本
+#   3. 定时（schedule）— 每周一 UTC 09:00（北京时间周一 17:00）
+# ─────────────────────────────────────────────────────────────
+
+on:
+  workflow_dispatch:
+    inputs:
+      preset:
+        description: 'Audit preset (landings / blogs / all / site)'
+        required: false
+        default: 'landings'
+        type: choice
+        options:
+          - landings
+          - blogs
+          - all
+          - site
+      base_url:
+        description: 'Override base URL (optional)'
+        required: false
+        default: ''
+  workflow_run:
+    workflows: ['Deploy to Production']
+    types: [completed]
+  schedule:
+    # 每周一 UTC 09:00（北京时间周一 17:00）
+    - cron: '0 9 * * 1'
+
+# 同一时间只跑一个，避免重叠
+concurrency:
+  group: seo-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    name: Run SEO batch audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    # 仅当部署成功才在 workflow_run 触发时跑；其他触发方式（手动 / 定时）始终跑
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Node deps
+        run: npm ci --legacy-peer-deps
+
+      - name: Install Python deps
+        run: pip install requests
+
+      # 部署刚完成时，给 Cloudflare 一点时间传播缓存到边缘节点
+      - name: Wait for Cloudflare propagation
+        if: github.event_name == 'workflow_run'
+        run: sleep 90
+
+      - name: Run SEO audit
+        env:
+          PYTHON_BIN: python3
+          AUDIT_BASE_URL: ${{ github.event.inputs.base_url || 'https://lanternell.com' }}
+        run: |
+          PRESET="${{ github.event.inputs.preset || 'landings' }}"
+          echo "Running SEO audit with preset: $PRESET"
+          npm run audit:seo -- --preset "$PRESET"
+        # 即使有 fail 也继续执行（让 artifact 上传完成），workflow 状态由后面的 step 决定
+        continue-on-error: true
+        id: audit
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-${{ github.run_id }}
+          path: reports/seo-batch/
+          retention-days: 30
+          if-no-files-found: warn
+
+      # 把汇总报告内容贴进 GitHub Actions Summary（GUI 一眼可见）
+      - name: Publish summary to GitHub
+        if: always()
+        run: |
+          LATEST_DIR=$(ls -td reports/seo-batch/*/ 2>/dev/null | head -n 1)
+          if [ -n "$LATEST_DIR" ] && [ -f "$LATEST_DIR/SUMMARY.md" ]; then
+            echo "# 🔦 SEO Audit Report" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Trigger: \`${{ github.event_name }}\`  ·  Preset: \`${{ github.event.inputs.preset || 'landings' }}\`" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            cat "$LATEST_DIR/SUMMARY.md" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ No SUMMARY.md found in reports/seo-batch/" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # 如果审计步骤报错（有 fail 项），让整个 workflow 失败，触发 GitHub 通知
+      - name: Fail workflow if audit reported errors
+        if: steps.audit.outcome == 'failure'
+        run: |
+          echo "❌ SEO audit reported fail items. Check the artifact and step summary above."
+          exit 1

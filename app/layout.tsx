@@ -67,16 +67,41 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'LanternELL',
-    url: BASE_URL,
-    description:
-      'Print-ready bilingual & ELL resources for real classrooms.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${BASE_URL}/shop?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${BASE_URL}#website`,
+        name: 'LanternELL',
+        url: BASE_URL,
+        description:
+          'Print-ready bilingual & ELL resources for real classrooms.',
+        publisher: { '@id': `${BASE_URL}#organization` },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${BASE_URL}/shop?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${BASE_URL}#organization`,
+        name: 'LanternELL',
+        url: BASE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${BASE_URL}/images/logo.webp`,
+        },
+        description:
+          'Print-ready bilingual & ELL teaching resources designed for K-5 classrooms.',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: 'support@lanternell.com',
+          availableLanguage: ['English', 'Spanish'],
+        },
+        // sameAs: TODO — fill with social profiles (Pinterest / Twitter / Instagram) once accounts are set up
+      },
+    ],
   }
 
   return (

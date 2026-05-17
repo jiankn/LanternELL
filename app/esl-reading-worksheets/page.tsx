@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/esl-reading-worksheets'
 
 export const metadata: Metadata = {
-  title: 'ESL Reading Worksheets — Print-Ready Comprehension for K-8 ELLs | LanternELL',
+  title: 'ESL Reading Worksheets — K-8 Comprehension',
   description:
-    'Print-ready ESL reading worksheets for K-8 ELL classrooms. Comprehension passages, guided reading templates, and bilingual support — WIDA-aligned for Levels 1-5.',
+    'Print-ready ESL reading worksheets for K-8 ELLs: comprehension passages, guided reading templates & bilingual support, WIDA-aligned Levels 1-5.',
   keywords: [
     'esl reading worksheets',
     'esl reading comprehension worksheets',

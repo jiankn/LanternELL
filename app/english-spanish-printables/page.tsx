@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'English-Spanish Printables — Free Bilingual Worksheets for K-5 Classrooms',
+  title: 'English-Spanish Printables — Free K-5 Worksheets',
   description:
-    'Free English-Spanish printables for K-5 bilingual and ESL classrooms. Download bilingual vocabulary worksheets, sentence frames, classroom labels, and parent communication templates in English and Spanish.',
+    'Free English-Spanish bilingual printables for K-5 classrooms. Vocabulary cards, classroom labels, sentence frames & visual supports — print today.',
   keywords: [
     'English Spanish printables',
     'bilingual printables English Spanish',

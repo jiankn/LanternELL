@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'ESL Worksheets for Beginners — Free Printable ESL Activities for K-5',
+  title: 'ESL Worksheets for Beginners — K-5 Printables',
   description:
-    'Free printable ESL worksheets for beginners in K-5 classrooms. Download beginner ESL activities, vocabulary worksheets, and visual learning materials for students new to English. Bilingual English-Spanish support included.',
+    'Free printable ESL worksheets for beginners. K-5 newcomer-friendly activities: vocabulary, classroom labels, sentence frames & survival English with bilingual support.',
   keywords: [
     'ESL worksheets for beginners',
     'beginner ESL worksheets',

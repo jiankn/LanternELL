@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/vocabulary-worksheets'
 
 export const metadata: Metadata = {
-  title: 'Vocabulary Worksheets — Print-Ready for K-8 Bilingual & ELL Classrooms | LanternELL',
+  title: 'Vocabulary Worksheets — K-8 Print-Ready Themed',
   description:
-    'Print-ready vocabulary worksheets for K-8 teachers. 25+ themed sets covering classroom objects, animals, food, math, and science. English-Spanish bilingual editions for ELL classrooms.',
+    'Print-ready vocabulary worksheets for K-8: 25+ themed sets covering classroom, animals, food, math & science — English-Spanish bilingual.',
   keywords: [
     'vocabulary worksheets',
     'vocabulary worksheets pdf',

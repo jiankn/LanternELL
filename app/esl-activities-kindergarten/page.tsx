@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/esl-activities-kindergarten'
 
 export const metadata: Metadata = {
-  title: 'ESL Activities for Kindergarten — Hands-On & Print-Free Ideas | LanternELL',
+  title: 'ESL Activities for Kindergarten — 50+ Ideas',
   description:
-    'Hands-on ESL activities for kindergarten ELL students. 50+ no-prep & low-prep ideas: 5-min warm-ups, whole-group games, centers, TPR movement, newcomer routines.',
+    '50+ hands-on ESL activities for kindergarten ELLs. No-prep & low-prep: warm-ups, group games, centers, TPR movement & newcomer routines.',
   keywords: [
     'esl activities for kindergarten',
     'esl activities kindergarten',

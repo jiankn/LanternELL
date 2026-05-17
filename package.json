@@ -10,6 +10,7 @@
     "deploy": "node scripts/build-cf.cjs",
     "lint": "next lint",
     "audit:indexing": "node scripts/audit-indexing.mjs",
+    "audit:seo": "node scripts/seo-batch-audit.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest --run",
     "test:watch": "vitest"

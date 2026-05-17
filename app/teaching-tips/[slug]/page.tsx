@@ -36,17 +36,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const html = markdownToHtml(post.content)
 
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
+  const articleImage = post.coverImageUrl
+    ? (post.coverImageUrl.startsWith('http') ? post.coverImageUrl : `${SITE_URL}${post.coverImageUrl}`)
+    : `${SITE_URL}/images/logo-og.webp`
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
+    image: [articleImage],
     author: { '@type': 'Person', name: post.author },
     datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
     description: post.excerpt || '',
-    publisher: { '@type': 'Organization', name: 'LanternELL' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'LanternELL',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/logo.webp`,
+      },
+    },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'}/teaching-tips/${slug}`,
+      '@id': `${SITE_URL}/teaching-tips/${slug}`,
     },
   }
 

@@ -9,9 +9,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'ELL Newcomer Worksheets — Free Printable ESL Resources for K-5 Classrooms',
+  title: 'ELL Newcomer Worksheets — Free K-5 Printables',
   description:
-    'Free printable ELL newcomer worksheets for bilingual and ESL students in K-5 classrooms. Download vocabulary packs, visual supports, sentence frames, and classroom labels in English-Spanish. Resources for Pre-K through grade 8 also available.',
+    'Free printable ELL newcomer worksheets for K-5. Bilingual English-Spanish vocabulary, classroom labels, visual supports & sentence frames for newcomers. Resources for Pre-K through grade 8 also available.',
   keywords: [
     'ELL newcomer worksheets',
     'ELL worksheets',

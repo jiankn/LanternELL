@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/spanish-english-worksheets'
 
 export const metadata: Metadata = {
-  title: 'Spanish-English Worksheets — Bidirectional Print Packs for K-8 | LanternELL',
+  title: 'Spanish-English Worksheets — K-8 Print Packs',
   description:
-    'Print-ready Spanish-English worksheets for K-8 dual language, ELL, and homeschool families. Bidirectional learning: ELLs learn English, native English speakers learn Spanish.',
+    'Print-ready Spanish-English worksheets for K-8 dual language, ELL & homeschool. Bidirectional learning: ELLs build English, native speakers build Spanish.',
   keywords: [
     'spanish english worksheets',
     'spanish english worksheets pdf',

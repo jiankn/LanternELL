@@ -6,8 +6,8 @@ import { Calendar, ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Teaching Tips - ELL Strategies & Classroom Resources',
-  description: 'Practical teaching tips, strategies, and resources for ELL, bilingual, and SPED educators. From classroom management to language acquisition techniques for Pre-K–8.',
+  title: 'Teaching Tips — ELL Strategies & Resources',
+  description: 'Practical ELL teaching tips: WIDA-aligned strategies, classroom routines, scaffolding ideas & free printable resources for K-8 teachers.',
   alternates: { canonical: '/teaching-tips' },
   openGraph: {
     title: 'Teaching Tips - ELL Strategies & Classroom Resources',

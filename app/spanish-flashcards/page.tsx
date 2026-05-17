@@ -8,9 +8,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 const CANONICAL_PATH = '/spanish-flashcards'
 
 export const metadata: Metadata = {
-  title: 'Spanish Flashcards — Print-Ready for Beginners, Kids & Homeschool | LanternELL',
+  title: 'Spanish Flashcards — Print-Ready for Beginners',
   description:
-    'Print-ready Spanish flashcards for beginners, kids, and homeschool families. 12+ themed packs with picture support, native-Spanish reviewed, K-8 and adult-friendly.',
+    'Print-ready Spanish flashcards for beginners, kids & homeschool. 12+ themed packs with picture support, native-Spanish reviewed, K-8 friendly.',
   keywords: [
     'spanish flashcards',
     'spanish flashcards for beginners',

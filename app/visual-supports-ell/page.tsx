@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lanternell.com'
 
 export const metadata: Metadata = {
-  title: 'Visual Supports for ELL Students — Free Printable Visual Aids for K-5',
+  title: 'Visual Supports for ELL — Free K-5 Aids',
   description:
-    'Free printable visual supports for ELL students in K-5 classrooms. Download visual schedules, emotion cards, picture dictionaries, and graphic organizers designed for English Language Learners and newcomer students.',
+    'Free printable visual supports for ELL students K-5: visual schedules, emotion cards, picture dictionaries & graphic organizers for newcomers.',
   keywords: [
     'visual supports ELL',
     'visual supports for ELL students',
